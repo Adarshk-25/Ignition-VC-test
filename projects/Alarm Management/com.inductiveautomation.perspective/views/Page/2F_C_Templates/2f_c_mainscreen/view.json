@@ -1,0 +1,74 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "pvdfSpWeighingHopper"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/2F_C_Templates/pvdfSpWeighingHopper"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ceramicWeighingHopper"
+        },
+        "props": {
+          "path": "Page/2F_C_Templates/ceramicWeighingHopper"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "cmWeighingHopper"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/2F_C_Templates/cmWeighingHopper"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "cmPositiveSendingHopper"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/2F_C_Templates/cmPositiveSendingHopper"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 3,
+      "tabSize": {
+        "width": 200
+      },
+      "tabs": [
+        "Ceramic Weighing Hopper",
+        "PVDF, SP Weighing Hoppper",
+        "CM Weighing Hopper",
+        "CM Positive Sending System"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

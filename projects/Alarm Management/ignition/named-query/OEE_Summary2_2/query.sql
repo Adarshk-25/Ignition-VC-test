@@ -1,0 +1,1 @@
+select top 1 OEE,Status from OEE_Summary2 order by SNo desc;

@@ -1,0 +1,69 @@
+{
+  "custom": {},
+  "params": {
+    "items": {},
+    "path": "value"
+  },
+  "propConfig": {
+    "params.items": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 31,
+      "width": 698
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tsystem.perspective.openPopup(\n    id\u003d\"BreadcrumbMenu\",\n    view\u003d\"Common/Navigation/BreadcrumbMenu\"\n\t)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "HeaderTheme"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

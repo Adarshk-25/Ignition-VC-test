@@ -1,0 +1,52 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "StackingModule_Screen"
+        },
+        "props": {
+          "path": "Page/Cutting\u0026stacking_Templates/StackingModule_Screen"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 200
+      },
+      "tabs": [
+        "Stacking Module"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 200,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "color": "rgb(43, 47, 51)",
+                "fontFamily": "sans-serif",
+                "fontSize": "12px",
+                "fontWeight": "600"
+              },
+              "text": "ZONE A "
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "color": "rgb(31, 157, 85)",
+                "fontFamily": "sans-serif",
+                "fontSize": "12px",
+                "fontWeight": "600"
+              },
+              "text": "GATEWAY ONLINE"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_zoneLabel"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "props": {
+          "alignItems": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "85%"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_OEE"
+        },
+        "position": {
+          "basis": "45px",
+          "grow": 1
+        },
+        "props": {
+          "alignItems": "center",
+          "style": {
+            "color": "rgb(0, 82, 204)",
+            "fontFamily": "sans-serif",
+            "fontSize": "36px",
+            "fontWeight": "700"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "120px"
+            },
+            "props": {
+              "style": {
+                "fontFamily": "sans-serif",
+                "fontSize": "12px"
+              },
+              "text": "Lines : 5"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "fontFamily": "sans-serif",
+                "fontSize": "12px"
+              },
+              "text": "Running : 4"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_zoneLabel_0"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "props": {
+          "alignItems": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "120px"
+            },
+            "props": {
+              "style": {
+                "fontFamily": "sans-serif",
+                "fontSize": "12px"
+              },
+              "text": "Production : 5,400"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "fontFamily": "sans-serif",
+                "fontSize": "12px"
+              },
+              "text": "Target : 6,000"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_zoneLabel_1"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "props": {
+          "alignItems": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "120px"
+            },
+            "props": {
+              "style": {
+                "fontFamily": "sans-serif",
+                "fontSize": "12px"
+              },
+              "text": "Downtime : 9%"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "fontFamily": "sans-serif",
+                "fontSize": "12px"
+              },
+              "text": "Alarms : 2"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_zoneLabel_2"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "props": {
+          "alignItems": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "borderBottomLeftRadius": "6p",
+        "borderBottomRightRadius": "6p",
+        "borderColor": "rgb(224, 227, 231)",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": "6px",
+        "borderTopRightRadius": "6px",
+        "borderWidth": "1px",
+        "padding": "20px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

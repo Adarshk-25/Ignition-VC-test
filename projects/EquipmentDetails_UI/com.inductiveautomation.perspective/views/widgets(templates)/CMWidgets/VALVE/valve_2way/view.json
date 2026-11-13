@@ -1,0 +1,252 @@
+{
+  "custom": {},
+  "params": {
+    "isvertical": false,
+    "nameLabelPosition": "value",
+    "tagpath": "[default]agratas/sanand/zoneE/line1/mixing/Val101-59",
+    "valuePosition": "value",
+    "valveOrientation": "value",
+    "valveType": "p\u0026id"
+  },
+  "propConfig": {
+    "params.isvertical": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.nameLabelPosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.valuePosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.valveOrientation": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.valveType": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "props.defaultSize.width": {
+      "binding": {
+        "config": {
+          "path": "view.params.isvertical"
+        },
+        "transforms": [
+          {
+            "fallback": null,
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": 180
+              },
+              {
+                "input": false,
+                "output": 80
+              }
+            ],
+            "outputType": "scalar",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 60
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Valve"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "!{view.params.isvertical}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.appearance": {
+            "binding": {
+              "config": {
+                "path": "view.params.valveType"
+              },
+              "type": "property"
+            }
+          },
+          "props.label.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagpath": "{view.params.tagpath}"
+                },
+                "tagPath": "{tagpath}.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.value.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagpath": "{view.params.tagpath}"
+                },
+                "tagPath": "{tagpath}/openValue"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(round(value,2)) + \" %\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "location": "top",
+            "style": {
+              "fontSize": "100%"
+            }
+          },
+          "state": "open",
+          "value": {
+            "style": {
+              "fontSize": "100%"
+            }
+          },
+          "valve": "bottom"
+        },
+        "type": "ia.symbol.valve"
+      },
+      {
+        "meta": {
+          "name": "Valve_vertical"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.isvertical"
+              },
+              "type": "property"
+            }
+          },
+          "props.appearance": {
+            "binding": {
+              "config": {
+                "path": "view.params.valveType"
+              },
+              "type": "property"
+            }
+          },
+          "props.label.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagpath": "{view.params.tagpath}"
+                },
+                "tagPath": "{tagpath}.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.value.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagpath": "{view.params.tagpath}"
+                },
+                "tagPath": "{tagpath}/openValue"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(round(value,2)) + \" %\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "location": "left",
+            "style": {
+              "fontSize": "90%"
+            }
+          },
+          "state": "open",
+          "value": {
+            "location": "right",
+            "style": {
+              "fontSize": "100%"
+            }
+          },
+          "valve": "left"
+        },
+        "type": "ia.symbol.valve"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true,
+        "style": {
+          "borderColor": "#D5D5D5",
+          "borderStyle": "dashed",
+          "borderWidth": 0.1,
+          "classes": "General/textHover"
+        }
+      }
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "expression": "{./Valve.props.label.text}"
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": "#FFFFFF00"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "custom": {},
+  "params": {
+    "blue": "value",
+    "green": "value",
+    "red": "value",
+    "tagpath": "value",
+    "yellow": "value"
+  },
+  "propConfig": {
+    "params.blue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.green": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.red": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.yellow": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 255,
+      "width": 354
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "basis": "250px"
+        },
+        "propConfig": {
+          "props.options.labels[0]": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/oee/oeeCore/oee.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.options.labels[1]": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/oee/oeeCore/Availability.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.options.labels[2]": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/oee/oeeCore/Performance.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.options.labels[3]": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/oee/oeeCore/Quality.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.series[0]": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/oee/oeeCore/oee"
+              },
+              "type": "tag"
+            }
+          },
+          "props.series[1]": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/oee/oeeCore/Availability.value"
+              },
+              "type": "tag"
+            }
+          },
+          "props.series[2]": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/oee/oeeCore/Performance"
+              },
+              "type": "tag"
+            }
+          },
+          "props.series[3]": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/oee/oeeCore/Quality"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "events": {
+                "animationEnd": false,
+                "beforeMount": false,
+                "beforeResetZoom": false,
+                "beforeZoom": false,
+                "brushScrolled": false,
+                "click": false,
+                "dataPointMouseEnter": false,
+                "dataPointMouseLeave": false,
+                "dataPointSelection": false,
+                "legendClick": false,
+                "markerClick": false,
+                "mounted": false,
+                "mouseLeave": false,
+                "mouseMove": false,
+                "scrolled": false,
+                "selection": false,
+                "updated": false,
+                "xAxisLabelClick": false,
+                "zoomed": false
+              },
+              "type": "pie",
+              "width": 380
+            },
+            "labels": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "responsive": [
+              {
+                "breakpoint": 480,
+                "options": {
+                  "chart": {
+                    "width": 200
+                  },
+                  "legend": {
+                    "position": "bottom"
+                  }
+                }
+              }
+            ]
+          },
+          "series": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "style": {
+            "border": "1px solid #dcdcdc",
+            "borderBottomLeftRadius": 6,
+            "borderBottomRightRadius": 6,
+            "borderTopLeftRadius": 6,
+            "borderTopRightRadius": 6
+          },
+          "type": "pie"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

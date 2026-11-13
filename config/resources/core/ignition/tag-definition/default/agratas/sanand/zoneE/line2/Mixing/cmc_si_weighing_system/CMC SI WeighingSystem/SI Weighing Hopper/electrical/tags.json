@@ -1,0 +1,90 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.CMC SI WeighingSystem.SI Weighing Hopper.electrical.voltageY",
+    "dataType": "Float4",
+    "name": "voltageY",
+    "tagType": "AtomicTag",
+    "opcServer": "kep"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.CMC SI WeighingSystem.SI Weighing Hopper.electrical.frequency",
+    "dataType": "Float4",
+    "alarms": [
+      {
+        "setpointA": 20.0,
+        "notes": "hi jevalas ka",
+        "activePipeline": "EquipmentDetails_UI/notify_admin",
+        "timeOnDelaySeconds": 10.0,
+        "label": "frq",
+        "ackNotesReqd": true,
+        "enabled": false,
+        "mode": "AboveValue",
+        "ackPipeline": "EquipmentDetails_UI/notify_admin",
+        "tabValue": "0",
+        "name": "test alarm",
+        "clearPipeline": "EquipmentDetails_UI/notify_admin",
+        "deadband": 2.0,
+        "timeOffDelaySeconds": 2.0,
+        "displayPath": "",
+        "navPath": {
+          "bindType": "Expression",
+          "value": "\u0027/sanand/zone-e/mixing/anode-line-1\u0027"
+        }
+      }
+    ],
+    "name": "frequency",
+    "tagType": "AtomicTag",
+    "opcServer": "kep"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.CMC SI WeighingSystem.SI Weighing Hopper.electrical.voltageR",
+    "dataType": "Float4",
+    "name": "voltageR",
+    "tagType": "AtomicTag",
+    "opcServer": "kep"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.CMC SI WeighingSystem.SI Weighing Hopper.electrical.ScrewfeederCurrent",
+    "dataType": "Float4",
+    "name": "ScrewfeederCurrent",
+    "tagType": "AtomicTag",
+    "opcServer": "kep"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.CMC SI WeighingSystem.SI Weighing Hopper.electrical.power",
+    "dataType": "Float4",
+    "alarms": [
+      {
+        "mode": "AboveValue",
+        "setpointA": 50.0,
+        "name": "test2",
+        "ackNotesReqd": true,
+        "enabled": false
+      }
+    ],
+    "name": "power",
+    "tagType": "AtomicTag",
+    "opcServer": "kep"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.CMC SI WeighingSystem.SI Weighing Hopper.electrical.current",
+    "dataType": "Float4",
+    "name": "current",
+    "tagType": "AtomicTag",
+    "opcServer": "kep"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.CMC SI WeighingSystem.SI Weighing Hopper.electrical.voltageB",
+    "dataType": "Float4",
+    "name": "voltageB",
+    "tagType": "AtomicTag",
+    "opcServer": "kep"
+  }
+]

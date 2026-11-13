@@ -1,0 +1,145 @@
+{
+  "custom": {},
+  "params": {
+    "color": "#87AE73",
+    "lineId": "value",
+    "lineStatus": "value",
+    "textColor": "value"
+  },
+  "propConfig": {
+    "params.color": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.lineId": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.lineStatus": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.textColor": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 60,
+      "width": 403
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "height": 46,
+          "width": 401,
+          "y": 4.99
+        },
+        "propConfig": {
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "height": "36.83333206176758",
+              "name": "rect",
+              "rx": 6,
+              "ry": 6,
+              "stroke": {
+                "paint": "none"
+              },
+              "type": "rect",
+              "width": "395.7666931152344",
+              "x": 4,
+              "y": 4
+            }
+          ]
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 36,
+          "width": 65,
+          "x": 120.99,
+          "y": 10.1896
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.lineId"
+              },
+              "type": "property"
+            }
+          },
+          "props.textStyle.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.textColor"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "textAlign": "right"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 35,
+          "width": 185,
+          "x": 193.99,
+          "y": 10.6496
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.lineStatus"
+              },
+              "type": "property"
+            }
+          },
+          "props.textStyle.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.textColor"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

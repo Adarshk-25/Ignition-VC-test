@@ -1,0 +1,1372 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Drawing_5"
+            },
+            "position": {
+              "height": 0.5712,
+              "width": 0.4644,
+              "x": 0.0359,
+              "y": 0.0985
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "206.5",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "2px"
+                  },
+                  "type": "rect",
+                  "width": "334",
+                  "x": "88",
+                  "y": "142"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "87 141 336 208.5"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.375,
+              "x": 0.08,
+              "y": 0.0316
+            },
+            "props": {
+              "style": {
+                "classes": "Title/Text"
+              },
+              "text": "Equipment Screen : Pallet Assembly",
+              "textStyle": {
+                "classes": "Title/Text",
+                "fontSize": 20,
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "height": 0.8438,
+              "width": 0.4575,
+              "x": 0.5219,
+              "y": 0.1019
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "EquipmentName",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": "",
+                      "outlineStyle": "solid"
+                    },
+                    "title": "EquipmentName"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": "",
+                    "outlineStyle": "solid"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": 140
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "NominalValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "NominalValue"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": "",
+                    "outlineStyle": "solid"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "ActualValue"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "LTL",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "LTL"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": "",
+                    "outlineStyle": "solid"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "UTL",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "UTL"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": "",
+                    "outlineStyle": "none"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "ActualValue": "value",
+                  "EquipmentName": "Pallet Assembly",
+                  "LTL": "value",
+                  "NominalValue": "value",
+                  "Parameter": "Parameter 1",
+                  "UTL": "value"
+                },
+                {
+                  "ActualValue": "value",
+                  "EquipmentName": "Pallet Assembly",
+                  "LTL": "value",
+                  "NominalValue": "value",
+                  "Parameter": "Parameter 2",
+                  "UTL": "value"
+                },
+                {
+                  "ActualValue": "value",
+                  "EquipmentName": "Pallet Assembly",
+                  "LTL": "value",
+                  "NominalValue": "value",
+                  "Parameter": "Parameter 3",
+                  "UTL": "value"
+                },
+                {
+                  "ActualValue": "value",
+                  "EquipmentName": "Pallet Assembly",
+                  "LTL": "value",
+                  "NominalValue": "value",
+                  "Parameter": "Parameter 4",
+                  "UTL": "value"
+                },
+                {
+                  "ActualValue": "value",
+                  "EquipmentName": "Pallet Assembly",
+                  "LTL": "value",
+                  "NominalValue": "value",
+                  "Parameter": "Parameter 5",
+                  "UTL": "value"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "XYChart"
+            },
+            "position": {
+              "height": 0.2587,
+              "width": 0.4612,
+              "x": 0.0375,
+              "y": 0.6878
+            },
+            "props": {
+              "dataSources": {
+                "example": [
+                  {
+                    "Downtime": 63,
+                    "t_stamp": "Tue Aug 07 2018"
+                  },
+                  {
+                    "Downtime": 59,
+                    "t_stamp": "Tue Aug 08 2018"
+                  },
+                  {
+                    "Downtime": 43,
+                    "t_stamp": "Tue Aug 09 2018"
+                  },
+                  {
+                    "Downtime": 55,
+                    "t_stamp": "Tue Aug 10 2018"
+                  },
+                  {
+                    "Downtime": 56,
+                    "t_stamp": "Tue Aug 11 2018"
+                  },
+                  {
+                    "Downtime": 56,
+                    "t_stamp": "Tue Aug 12 2018"
+                  },
+                  {
+                    "Downtime": 65,
+                    "t_stamp": "Tue Aug 13 2018"
+                  },
+                  {
+                    "Downtime": 65,
+                    "t_stamp": "Tue Aug 14 2018"
+                  },
+                  {
+                    "Downtime": 72,
+                    "t_stamp": "Tue Aug 15 2018"
+                  }
+                ]
+              },
+              "legend": {
+                "enabled": false
+              },
+              "series": [
+                {
+                  "candlestick": {
+                    "appearance": {
+                      "deriveFieldsFromData": {
+                        "fill": {
+                          "color": "",
+                          "opacity": ""
+                        },
+                        "stroke": {
+                          "color": "",
+                          "opacity": "",
+                          "width": ""
+                        }
+                      },
+                      "fill": {
+                        "color": "",
+                        "opacity": 1
+                      },
+                      "heatRules": {
+                        "dataField": "",
+                        "enabled": false,
+                        "max": "",
+                        "min": ""
+                      },
+                      "stacked": false,
+                      "stroke": {
+                        "color": "",
+                        "opacity": 1,
+                        "width": 1
+                      }
+                    },
+                    "high": {
+                      "x": "",
+                      "y": ""
+                    },
+                    "low": {
+                      "x": "",
+                      "y": ""
+                    },
+                    "open": {
+                      "x": "",
+                      "y": ""
+                    }
+                  },
+                  "column": {
+                    "appearance": {
+                      "deriveFieldsFromData": {
+                        "fill": {
+                          "color": "",
+                          "opacity": ""
+                        },
+                        "stroke": {
+                          "color": "",
+                          "opacity": "",
+                          "width": ""
+                        }
+                      },
+                      "fill": {
+                        "color": "",
+                        "opacity": 1
+                      },
+                      "heatRules": {
+                        "dataField": "",
+                        "enabled": false,
+                        "max": "",
+                        "min": ""
+                      },
+                      "height": null,
+                      "stacked": false,
+                      "stroke": {
+                        "color": "",
+                        "opacity": 1,
+                        "width": 1
+                      },
+                      "width": null
+                    },
+                    "open": {
+                      "x": "",
+                      "y": ""
+                    }
+                  },
+                  "data": {
+                    "source": "example",
+                    "x": "t_stamp",
+                    "y": "Downtime"
+                  },
+                  "defaultState": {
+                    "visible": true
+                  },
+                  "hiddenInLegend": false,
+                  "label": {
+                    "text": "Downtime"
+                  },
+                  "line": {
+                    "appearance": {
+                      "bullets": [
+                        {
+                          "deriveFieldsFromData": {
+                            "fill": {
+                              "color": "",
+                              "opacity": ""
+                            },
+                            "rotation": "",
+                            "stroke": {
+                              "color": "",
+                              "opacity": "",
+                              "width": ""
+                            }
+                          },
+                          "enabled": false,
+                          "fill": {
+                            "color": "",
+                            "opacity": 1
+                          },
+                          "heatRules": {
+                            "dataField": "",
+                            "enabled": false,
+                            "max": 100,
+                            "min": 2
+                          },
+                          "height": 10,
+                          "label": {
+                            "position": {
+                              "dx": 0,
+                              "dy": 0
+                            },
+                            "text": "{value}"
+                          },
+                          "render": "circle",
+                          "rotation": 0,
+                          "stroke": {
+                            "color": "",
+                            "opacity": 1,
+                            "width": 1
+                          },
+                          "tooltip": {
+                            "background": {
+                              "color": "",
+                              "opacity": 1
+                            },
+                            "cornerRadius": 3,
+                            "enabled": true,
+                            "pointerLength": 4,
+                            "text": "{name}: [bold]{valueY}[/]"
+                          },
+                          "width": 10
+                        }
+                      ],
+                      "connect": true,
+                      "fill": {
+                        "color": "",
+                        "opacity": 0
+                      },
+                      "minDistance": 0.5,
+                      "stroke": {
+                        "color": "",
+                        "dashArray": "",
+                        "opacity": 1,
+                        "width": 3
+                      },
+                      "tensionX": 1,
+                      "tensionY": 1
+                    },
+                    "open": {
+                      "x": "",
+                      "y": ""
+                    }
+                  },
+                  "name": "Downtime",
+                  "render": "line",
+                  "stepLine": {
+                    "appearance": {
+                      "bullets": [
+                        {
+                          "deriveFieldsFromData": {
+                            "fill": {
+                              "color": "",
+                              "opacity": ""
+                            },
+                            "rotation": "",
+                            "stroke": {
+                              "color": "",
+                              "opacity": "",
+                              "width": ""
+                            }
+                          },
+                          "enabled": true,
+                          "fill": {
+                            "color": "",
+                            "opacity": 1
+                          },
+                          "heatRules": {
+                            "dataField": "",
+                            "enabled": false,
+                            "max": 100,
+                            "min": 2
+                          },
+                          "height": 10,
+                          "label": {
+                            "position": {
+                              "dx": 0,
+                              "dy": 0
+                            },
+                            "text": "{value}"
+                          },
+                          "render": "circle",
+                          "rotation": 0,
+                          "stroke": {
+                            "color": "",
+                            "opacity": 1,
+                            "width": 1
+                          },
+                          "tooltip": {
+                            "background": {
+                              "color": "",
+                              "opacity": 1
+                            },
+                            "cornerRadius": 3,
+                            "enabled": true,
+                            "pointerLength": 4,
+                            "text": "{name}: [bold]{valueY}[/]"
+                          },
+                          "width": 10
+                        }
+                      ],
+                      "connect": true,
+                      "fill": {
+                        "color": "",
+                        "opacity": 0
+                      },
+                      "minDistance": 0.5,
+                      "stroke": {
+                        "color": "",
+                        "dashArray": "",
+                        "opacity": 1,
+                        "width": 3
+                      },
+                      "tensionX": 1,
+                      "tensionY": 1
+                    },
+                    "open": {
+                      "x": "",
+                      "y": ""
+                    }
+                  },
+                  "tooltip": {
+                    "background": {
+                      "color": "",
+                      "opacity": 1
+                    },
+                    "cornerRadius": 3,
+                    "enabled": true,
+                    "pointerLength": 4,
+                    "text": "{name}: [bold]{valueY}[/]"
+                  },
+                  "visible": true,
+                  "xAxis": "time",
+                  "yAxis": "Downtime",
+                  "zIndex": 0
+                }
+              ],
+              "style": {
+                "classes": "Page/Label2",
+                "outlineStyle": "solid"
+              },
+              "xAxes": [
+                {
+                  "appearance": {
+                    "font": {
+                      "size": "",
+                      "weight": 500
+                    },
+                    "grid": {
+                      "color": "",
+                      "dashArray": "",
+                      "minDistance": 60,
+                      "opacity": 1,
+                      "position": 0.5
+                    },
+                    "inside": false,
+                    "labels": {
+                      "color": "",
+                      "horizontalCenter": "middle",
+                      "opacity": 1,
+                      "rotation": 0,
+                      "verticalCenter": "middle"
+                    },
+                    "opposite": false
+                  },
+                  "category": {
+                    "break": {
+                      "enabled": false,
+                      "endCategory": "",
+                      "size": 0.05,
+                      "startCategory": ""
+                    }
+                  },
+                  "date": {
+                    "baseInterval": {
+                      "count": 1,
+                      "enabled": false,
+                      "skipEmptyPeriods": false,
+                      "timeUnit": "hour"
+                    },
+                    "break": {
+                      "enabled": false,
+                      "endDate": "",
+                      "size": 0.05,
+                      "startDate": ""
+                    },
+                    "format": "M/d",
+                    "inputFormat": "yyyy-MM-dd kk:mm:ss",
+                    "range": {
+                      "max": "",
+                      "min": "",
+                      "useStrict": false
+                    }
+                  },
+                  "inversed": false,
+                  "label": {
+                    "color": "",
+                    "enabled": true,
+                    "text": "Time (hrs)"
+                  },
+                  "name": "time",
+                  "render": "date",
+                  "tooltip": {
+                    "background": {
+                      "color": "",
+                      "opacity": 1
+                    },
+                    "cornerRadius": 3,
+                    "enabled": true,
+                    "pointerLength": 4,
+                    "text": ""
+                  },
+                  "value": {
+                    "break": {
+                      "enabled": false,
+                      "endValue": 100,
+                      "size": 0.05,
+                      "startValue": 0
+                    },
+                    "format": "#,###.##",
+                    "logarithmic": false,
+                    "range": {
+                      "max": "",
+                      "min": "",
+                      "useStrict": false
+                    }
+                  },
+                  "visible": true
+                }
+              ],
+              "yAxes": [
+                {
+                  "appearance": {
+                    "font": {
+                      "size": "",
+                      "weight": 500
+                    },
+                    "grid": {
+                      "color": "",
+                      "dashArray": "",
+                      "minDistance": null,
+                      "opacity": 1,
+                      "position": 0.5
+                    },
+                    "inside": false,
+                    "labels": {
+                      "color": "",
+                      "horizontalCenter": "middle",
+                      "opacity": 1,
+                      "rotation": 0,
+                      "verticalCenter": "middle"
+                    },
+                    "opposite": false
+                  },
+                  "category": {
+                    "break": {
+                      "enabled": false,
+                      "endCategory": "",
+                      "size": 0.05,
+                      "startCategory": ""
+                    }
+                  },
+                  "date": {
+                    "baseInterval": {
+                      "count": 1,
+                      "enabled": false,
+                      "skipEmptyPeriods": false,
+                      "timeUnit": "hour"
+                    },
+                    "break": {
+                      "enabled": false,
+                      "endDate": "",
+                      "size": 0.05,
+                      "startDate": ""
+                    },
+                    "format": "M/d/yyyy HH:mm:ss",
+                    "inputFormat": "yyyy-MM-dd kk:mm:ss",
+                    "range": {
+                      "max": "",
+                      "min": "",
+                      "useStrict": false
+                    }
+                  },
+                  "inversed": false,
+                  "label": {
+                    "color": "",
+                    "enabled": true,
+                    "text": "Downtime (min)"
+                  },
+                  "name": "Downtime",
+                  "render": "value",
+                  "tooltip": {
+                    "background": {
+                      "color": "",
+                      "opacity": 1
+                    },
+                    "cornerRadius": 3,
+                    "enabled": true,
+                    "pointerLength": 4,
+                    "text": ""
+                  },
+                  "value": {
+                    "break": {
+                      "enabled": false,
+                      "endValue": 100,
+                      "size": 0.05,
+                      "startValue": 0
+                    },
+                    "format": "#,###.##",
+                    "logarithmic": false,
+                    "range": {
+                      "max": "",
+                      "min": "",
+                      "useStrict": false
+                    }
+                  },
+                  "visible": true
+                }
+              ]
+            },
+            "type": "ia.chart.xy"
+          },
+          {
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 0.0563,
+              "width": 0.095,
+              "x": 0.8848,
+              "y": 0.0202
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Button"
+              },
+              "text": "Process Screen"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_3"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.0973,
+              "x": 0.6764,
+              "y": 0.0143
+            },
+            "props": {
+              "params": {
+                "label": "Communication",
+                "value": "OK"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.1,
+              "x": 0.7749,
+              "y": 0.0138
+            },
+            "props": {
+              "params": {
+                "label": "STATUS",
+                "value": "RUNNING"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_0"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.0973,
+              "x": 0.5789,
+              "y": 0.0143
+            },
+            "props": {
+              "params": {
+                "label": "Mode",
+                "value": "AUTO"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_1"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.0973,
+              "x": 0.4807,
+              "y": 0.0143
+            },
+            "props": {
+              "params": {
+                "label": "Condition",
+                "value": "Healthy"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "UnwindingModule"
+            },
+            "position": {
+              "height": 0.5275,
+              "width": 0.2125,
+              "x": 0.1643,
+              "y": 0.1175
+            },
+            "props": {
+              "path": "widgets(templates)/Injection_Templates/Pallet Assembly"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0.0469,
+      "y": -0.0063
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

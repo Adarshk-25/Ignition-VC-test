@@ -1,0 +1,56 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DustCollectorAnode"
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/DustCollectorAnode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Housing_cooling_Anode"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Housing_cooling_Anode"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 1,
+      "tabSize": {
+        "width": 150
+      },
+      "tabs": [
+        "Dust Collector",
+        "Housing Cooling"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

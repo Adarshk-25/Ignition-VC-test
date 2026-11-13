@@ -1,0 +1,802 @@
+{
+  "custom": {},
+  "params": {
+    "tagPath": "[default]Valve"
+  },
+  "propConfig": {
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 861,
+      "width": 1000
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "props": {
+              "text": "VALVE",
+              "textStyle": {
+                "fontFamily": "sans-serif",
+                "fontSize": 25,
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "textTransform": "uppercase"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "height": 0.0612,
+          "width": 0.999,
+          "x": 0.001,
+          "y": 0.001
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EquipmentName"
+            },
+            "position": {
+              "basis": "647px"
+            },
+            "props": {
+              "text": "Electrical",
+              "textStyle": {
+                "fontFamily": "sans-serif",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Electrical"
+        },
+        "position": {
+          "height": 0.0499,
+          "width": 0.649,
+          "x": 0.001,
+          "y": 0.2289
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Position (Value)"
+            },
+            "position": {
+              "basis": "497px"
+            },
+            "props": {
+              "text": "Position ",
+              "textStyle": {
+                "fontFamily": "sans-serif",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Position "
+        },
+        "position": {
+          "height": 0.0499,
+          "width": 0.348,
+          "x": 0.653,
+          "y": 0.23
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Gauge"
+            },
+            "position": {
+              "basis": "168px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/Electrical/Power"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "backgroundColor": "",
+              "innerAxis": {
+                "data": "secondaryValue",
+                "maxValue": 80,
+                "percentRadius": 85,
+                "show": false,
+                "width": 1
+              },
+              "outerAxis": {
+                "data": "value",
+                "maxValue": 12,
+                "percentRadius": 90,
+                "ranges": [
+                  {
+                    "color": "#77B6D8",
+                    "end": 8,
+                    "start": 0,
+                    "width": 8
+                  },
+                  {
+                    "color": "#6E94D7",
+                    "end": 10,
+                    "start": 8,
+                    "width": 12
+                  },
+                  {
+                    "color": "#7A6BD5",
+                    "end": 12,
+                    "start": 10,
+                    "width": 16
+                  }
+                ],
+                "show": true,
+                "width": 1
+              }
+            },
+            "type": "ia.chart.gauge"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "34px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/Electrical/Voltage.Name"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "textStyle": {
+                "fontFamily": "sans-serif",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Voltage"
+        },
+        "position": {
+          "height": 0.2346,
+          "width": 0.321,
+          "x": 0.004,
+          "y": 0.2852
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "backgroundColor": "#FFFFFF",
+            "borderBottomLeftRadius": "10px",
+            "borderBottomRightRadius": "10px",
+            "borderTopLeftRadius": "10px",
+            "borderTopRightRadius": "10px",
+            "fontFamily": "sans-serif"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Gauge"
+            },
+            "position": {
+              "basis": "165px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/Electrical/Power"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "backgroundColor": "",
+              "innerAxis": {
+                "data": "secondaryValue",
+                "maxValue": 80,
+                "percentRadius": 85,
+                "show": false,
+                "width": 1
+              },
+              "outerAxis": {
+                "data": "value",
+                "maxValue": 12,
+                "percentRadius": 90,
+                "ranges": [
+                  {
+                    "color": "#77B6D8",
+                    "end": 8,
+                    "start": 0,
+                    "width": 8
+                  },
+                  {
+                    "color": "#6E94D7",
+                    "end": 10,
+                    "start": 8,
+                    "width": 12
+                  },
+                  {
+                    "color": "#7A6BD5",
+                    "end": 12,
+                    "start": 10,
+                    "width": 16
+                  }
+                ],
+                "show": true,
+                "width": 1
+              }
+            },
+            "type": "ia.chart.gauge"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/Electrical/Power.Name"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "textStyle": {
+                "fontFamily": "sans-serif",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Power"
+        },
+        "position": {
+          "height": 0.2358,
+          "width": 0.325,
+          "x": 0.329,
+          "y": 0.2859
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "backgroundColor": "#FFFFFF",
+            "borderBottomLeftRadius": "10px",
+            "borderBottomRightRadius": "10px",
+            "borderTopLeftRadius": "10px",
+            "borderTopRightRadius": "10px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Position"
+        },
+        "position": {
+          "height": 0.0639,
+          "width": 0.179,
+          "x": 0.665,
+          "y": 0.2932
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Position/Position.Name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 2,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Postion_Value"
+        },
+        "position": {
+          "height": 0.065,
+          "width": 0.128,
+          "x": 0.856,
+          "y": 0.2932
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tagPath"
+              },
+              "transforms": [
+                {
+                  "expression": "{[default]Valve/Position/Position}",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 2,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "PositionSetPoint_Value"
+        },
+        "position": {
+          "height": 0.065,
+          "width": 0.128,
+          "x": 0.856,
+          "y": 0.3709
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tagPath"
+              },
+              "transforms": [
+                {
+                  "expression": "{[default]Valve/Position/Position Setpoint}",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 2,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "PositionSetPoint"
+        },
+        "position": {
+          "height": 0.0639,
+          "width": 0.179,
+          "x": 0.664,
+          "y": 0.3709
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tagPath"
+              },
+              "transforms": [
+                {
+                  "expression": "{[default]Valve/Position/Position Setpoint.Name}\r\n",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 2,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "FeedbackSignal_Value"
+        },
+        "position": {
+          "height": 0.065,
+          "width": 0.094,
+          "x": 0.89,
+          "y": 0.4521
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tagPath"
+              },
+              "transforms": [
+                {
+                  "expression": "{[default]Valve/Position/Feedback Signal}",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 2,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "FeedbackSignal"
+        },
+        "position": {
+          "height": 0.0639,
+          "width": 0.213,
+          "x": 0.665,
+          "y": 0.4521
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tagPath"
+              },
+              "transforms": [
+                {
+                  "expression": "{[default]Valve/Position/Feedback Signal.Name}\r\n",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 2,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "height": 0.4681,
+          "width": 1,
+          "y": 0.5307
+        },
+        "type": "ia.display.alarmstatustable"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EquipmentName"
+            },
+            "position": {
+              "basis": "996px"
+            },
+            "props": {
+              "text": "Status",
+              "textStyle": {
+                "fontFamily": "sans-serif",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Header_1"
+        },
+        "position": {
+          "height": 0.0314,
+          "width": 0.999,
+          "x": 0.003,
+          "y": 0.056
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "cardDisplay"
+        },
+        "position": {
+          "height": 0.115,
+          "width": 0.299,
+          "x": 0.025,
+          "y": 0.0978
+        },
+        "propConfig": {
+          "props.params.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Status/Status.Name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Status/Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "NA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "Open"
+                    },
+                    {
+                      "input": false,
+                      "output": "Close"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "path": "widgets(templates)/cardDisplay"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "cardDisplay_0"
+        },
+        "position": {
+          "height": 0.115,
+          "width": 0.299,
+          "x": 0.343,
+          "y": 0.0967
+        },
+        "propConfig": {
+          "props.params.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Status/Moving.Name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Status/Moving"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "path": "widgets(templates)/cardDisplay"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "cardDisplay_1"
+        },
+        "position": {
+          "height": 0.115,
+          "width": 0.299,
+          "x": 0.677,
+          "y": 0.0977
+        },
+        "propConfig": {
+          "props.params.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Status/Fault.Name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Status/Fault"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "path": "widgets(templates)/cardDisplay"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0.015,
+      "y": 0.2393
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

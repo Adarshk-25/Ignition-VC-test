@@ -1,0 +1,177 @@
+{
+  "custom": {},
+  "events": {
+    "system": {
+      "onStartup": [
+        {
+          "config": {
+            "name": "light"
+          },
+          "scope": "C",
+          "type": "theme"
+        },
+        {
+          "config": {
+            "id": "{view.props.loading.mode}",
+            "type": "open"
+          },
+          "scope": "C",
+          "type": "dock"
+        }
+      ]
+    }
+  },
+  "params": {
+    "ackNote": "Hi, i am mike\n",
+    "selectedAlarms": []
+  },
+  "propConfig": {
+    "params.ackNote": {
+      "binding": {
+        "config": {
+          "path": "/root/TXt_AckNote.props.text"
+        },
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    },
+    "params.selectedAlarms": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 244,
+      "width": 305
+    },
+    "loading": {
+      "mode": "blocking"
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "text": "Please Enter Ackowled Note :",
+          "textStyle": {
+            "classes": "widgets/valueDisplay"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "TXt_AckNote"
+        },
+        "position": {
+          "basis": "126px"
+        },
+        "props": {
+          "text": "Hi, i am mike\n"
+        },
+        "type": "ia.input.text-area"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t\t\t\n\t# Get selected alarms from popup parameter\n\tselectedAlarms \u003d self.view.params.selectedAlarms\n\t\n\t# Get acknowledgment note from text area\n\tackNote \u003d self.parent.parent.getChild(\"TXt_AckNote\").props.text\n\t\n\tUserName \u003d username \u003d self.session.props.auth.user.userName\n\t\n\t# Create event id list\n\teventIds \u003d []\n\t\n\tfor alarm in selectedAlarms:\n\t    eventIds.append(alarm[\"eventId\"])\n\t\n\t# Acknowledge alarms with note\n\tsystem.alarm.acknowledge(\n\t    eventIds,\n\t    ackNote,\n\t    UserName\n\t)\n\t\n\t# Close popup\n\tsystem.perspective.closePopup(\"AckPopup\")"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Btn_Ack"
+            },
+            "position": {
+              "basis": "132px"
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "len({.../TXt_AckNote.props.text})\u003e0"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Acknowled"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "draggable": true,
+                    "id": "ExitApplication_logout",
+                    "modal": false,
+                    "overlayDismiss": false,
+                    "resizable": true,
+                    "showCloseIcon": true,
+                    "type": "close",
+                    "viewPath": "widgets(templates)/userAlertPopups/ExitApplication_logout",
+                    "viewportBound": false
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "Btn_Cancel"
+            },
+            "position": {
+              "basis": "129px"
+            },
+            "props": {
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "props": {
+          "style": {
+            "gap": "5px",
+            "margin": "2px",
+            "overflow": "hidden",
+            "padding": "2px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "widgets/spacing"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

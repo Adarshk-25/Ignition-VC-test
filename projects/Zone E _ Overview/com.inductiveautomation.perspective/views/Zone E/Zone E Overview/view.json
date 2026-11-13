@@ -1,0 +1,4026 @@
+{
+  "custom": {
+    "model": {
+      "steps": [
+        {
+          "step": 1,
+          "title": "Mixing",
+          "page": "/sanand/zone-e/mixing",
+          "connected": true,
+          "running": 0,
+          "total": 0,
+          "runningText": "–",
+          "planned": 0,
+          "countsText": "Waiting for data…",
+          "alarm": {
+            "count": 0,
+            "worst": "none"
+          },
+          "nocomm": 0,
+          "bar": {
+            "run": "0%",
+            "wait": "0%",
+            "stop": "0%",
+            "nocomm": "100%"
+          }
+        },
+        {
+          "step": 2,
+          "title": "Coating & Recovery",
+          "page": "",
+          "connected": true,
+          "running": 0,
+          "total": 0,
+          "runningText": "–",
+          "planned": 0,
+          "countsText": "Waiting for data…",
+          "alarm": {
+            "count": 0,
+            "worst": "none"
+          },
+          "nocomm": 0,
+          "bar": {
+            "run": "0%",
+            "wait": "0%",
+            "stop": "0%",
+            "nocomm": "100%"
+          }
+        },
+        {
+          "step": 3,
+          "title": "Calendering",
+          "page": "/sanand/zone-e/calendering",
+          "connected": true,
+          "running": 0,
+          "total": 0,
+          "runningText": "–",
+          "planned": 0,
+          "countsText": "Waiting for data…",
+          "alarm": {
+            "count": 0,
+            "worst": "none"
+          },
+          "nocomm": 0,
+          "bar": {
+            "run": "0%",
+            "wait": "0%",
+            "stop": "0%",
+            "nocomm": "100%"
+          }
+        },
+        {
+          "step": 4,
+          "title": "Notching & Slitting",
+          "page": "/sanand/zone-e/lasernotching/cathode-line-1/ntc11-overview",
+          "connected": true,
+          "running": 0,
+          "total": 0,
+          "runningText": "–",
+          "planned": 0,
+          "countsText": "Waiting for data…",
+          "alarm": {
+            "count": 0,
+            "worst": "none"
+          },
+          "nocomm": 0,
+          "bar": {
+            "run": "0%",
+            "wait": "0%",
+            "stop": "0%",
+            "nocomm": "100%"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "side": "ANODE",
+          "line": "Line 1",
+          "cells": [
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            }
+          ]
+        },
+        {
+          "side": "ANODE",
+          "line": "Line 2",
+          "cells": [
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            }
+          ]
+        },
+        {
+          "side": "CATHODE",
+          "line": "Line 1",
+          "cells": [
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            }
+          ]
+        },
+        {
+          "side": "CATHODE",
+          "line": "Line 2",
+          "cells": [
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            },
+            {
+              "tiles": [],
+              "tileCount": 0
+            }
+          ]
+        }
+      ],
+      "totals": {
+        "total": 24,
+        "running": 0,
+        "stopped": 0,
+        "starved": 0,
+        "blocked": 0,
+        "oos": 0,
+        "na": 0,
+        "nocomm": 24
+      },
+      "alarmRows": [],
+      "alarms": {
+        "active": 0,
+        "unacked": 0,
+        "worst": "none",
+        "bySeverity": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "shown": 0
+      },
+      "mesOn": 0,
+      "wide": true,
+      "ok": false
+    },
+    "plcComm": -1
+  },
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "position": {},
+    "props": {
+      "direction": "column",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "stretch",
+      "alignContent": "flex-start",
+      "style": {
+        "classes": "HPHMI/Root",
+        "minWidth": "1280px",
+        "overflow": "hidden"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "56px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "classes": "HPHMI/Header",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "TitleBlock"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "column",
+              "wrap": "nowrap",
+              "justify": "center",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Title"
+                },
+                "position": {
+                  "basis": "24px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Zone E — Electrode Command Centre",
+                  "style": {
+                    "classes": "HPHMI/Header/Title"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Context"
+                },
+                "position": {
+                  "basis": "18px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Agratas Sanand · Cathode & anode electrode lines",
+                  "style": {
+                    "classes": "HPHMI/Header/Sub"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Running",
+              "tooltip": {
+                "enabled": true,
+                "text": "PLC units in state Executing"
+              }
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Header/Item",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Text"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "color": "inherit",
+                    "fontWeight": "600"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "\"Running \" + toStr({view.custom.model.totals.running}) + \" / \" + toStr({view.custom.model.totals.total})"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Alarms"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Header/Item",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Text"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "color": "inherit",
+                    "fontWeight": "600"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "\"Alarms \" + toStr({view.custom.model.alarms.active})"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "propConfig": {
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"HPHMI/Header/Item\" + if({view.custom.model.alarms.worst} = \"Critical\", \" HPHMI/Comm/Bad\", \"\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Shift"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Header/Item"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if(getHour24(now(60000)) >= 6 && getHour24(now(60000)) < 14, \"Shift A · 06–14\", if(getHour24(now(60000)) >= 14 && getHour24(now(60000)) < 22, \"Shift B · 14–22\", \"Shift C · 22–06\"))"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Clock"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Header/Item"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "dateFormat(now(1000), \"dd-MMM-yyyy  HH:mm:ss\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Comm",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.icon",
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "20px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "material/link",
+                  "color": "#F2F4F6",
+                  "style": {
+                    "minWidth": "20px",
+                    "height": "20px"
+                  }
+                },
+                "propConfig": {
+                  "props.path": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "case({view.custom.plcComm}, 1,\"material/link\", 0,\"material/link_off\", \"material/help_outline\")"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Text"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "color": "inherit",
+                    "fontWeight": "600"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "case({view.custom.plcComm}, 1,\"PLC online\", 0,\"PLC COMM LOST\", \"PLC status ?\")"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "propConfig": {
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"HPHMI/Header/Item\" + case({view.custom.plcComm}, 1,\"\", 0,\" HPHMI/Comm/Bad\", \" HPHMI/Comm/Unknown\")"
+                  }
+                }
+              },
+              "meta.tooltip.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"OPC connection PLC (opc.tcp://192.168.0.1:4840) · [default]PLC_Communication\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Mes",
+              "tooltip": {
+                "enabled": true,
+                "text": "PLC units with AGStatus/MESRunning = true"
+              }
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Header/Item",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Text"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "color": "inherit",
+                    "fontWeight": "600"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "\"MES \" + toStr({view.custom.model.mesOn}) + \"/\" + toStr({view.custom.model.totals.total})"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Small"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "linked",
+                  "style": {
+                    "classes": "HPHMI/Header/Small"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "User"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Header/Item",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.icon",
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "20px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "material/person",
+                  "color": "#F2F4F6",
+                  "style": {
+                    "minWidth": "20px",
+                    "height": "20px"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Name"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "color": "inherit"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if(coalesce({session.props.auth.user.userName}, \"\") = \"\", \"Not signed in\", {session.props.auth.user.userName})"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Body"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "direction": "column",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "classes": "HPHMI/Body",
+            "minHeight": "0px",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Matrix"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "column",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "gap": "6px",
+                "minHeight": "0px",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "StepRow"
+                },
+                "position": {
+                  "basis": "56px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "row",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "stretch",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "overflow": "hidden"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "LaneSpacer"
+                    },
+                    "position": {
+                      "basis": "72px",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "flex-start",
+                      "alignItems": "stretch",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "marginRight": "6px",
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "type": "ia.display.view",
+                    "meta": {
+                      "name": "Step_mixing"
+                    },
+                    "position": {
+                      "basis": "0px",
+                      "grow": 5,
+                      "shrink": 1
+                    },
+                    "props": {
+                      "path": "Components/HPHMI/FlowStep",
+                      "params": {},
+                      "useDefaultViewWidth": false,
+                      "useDefaultViewHeight": false,
+                      "style": {
+                        "minWidth": "0px"
+                      }
+                    },
+                    "propConfig": {
+                      "props.params.step": {
+                        "binding": {
+                          "type": "property",
+                          "config": {
+                            "path": "view.custom.model.steps[0]"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Gap1"
+                    },
+                    "position": {
+                      "basis": "8px",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "center",
+                      "alignItems": "center",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.icon",
+                        "meta": {
+                          "name": "Icon"
+                        },
+                        "position": {
+                          "basis": "18px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "material/chevron_right",
+                          "color": "#555C64",
+                          "style": {
+                            "minWidth": "18px",
+                            "height": "18px"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.display.view",
+                    "meta": {
+                      "name": "Step_coating"
+                    },
+                    "position": {
+                      "basis": "0px",
+                      "grow": 4,
+                      "shrink": 1
+                    },
+                    "props": {
+                      "path": "Components/HPHMI/FlowStep",
+                      "params": {},
+                      "useDefaultViewWidth": false,
+                      "useDefaultViewHeight": false,
+                      "style": {
+                        "minWidth": "0px"
+                      }
+                    },
+                    "propConfig": {
+                      "props.params.step": {
+                        "binding": {
+                          "type": "property",
+                          "config": {
+                            "path": "view.custom.model.steps[1]"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Gap2"
+                    },
+                    "position": {
+                      "basis": "8px",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "center",
+                      "alignItems": "center",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.icon",
+                        "meta": {
+                          "name": "Icon"
+                        },
+                        "position": {
+                          "basis": "18px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "material/chevron_right",
+                          "color": "#555C64",
+                          "style": {
+                            "minWidth": "18px",
+                            "height": "18px"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.display.view",
+                    "meta": {
+                      "name": "Step_calendering"
+                    },
+                    "position": {
+                      "basis": "0px",
+                      "grow": 2,
+                      "shrink": 1
+                    },
+                    "props": {
+                      "path": "Components/HPHMI/FlowStep",
+                      "params": {},
+                      "useDefaultViewWidth": false,
+                      "useDefaultViewHeight": false,
+                      "style": {
+                        "minWidth": "0px"
+                      }
+                    },
+                    "propConfig": {
+                      "props.params.step": {
+                        "binding": {
+                          "type": "property",
+                          "config": {
+                            "path": "view.custom.model.steps[2]"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Gap3"
+                    },
+                    "position": {
+                      "basis": "8px",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "center",
+                      "alignItems": "center",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.icon",
+                        "meta": {
+                          "name": "Icon"
+                        },
+                        "position": {
+                          "basis": "18px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "material/chevron_right",
+                          "color": "#555C64",
+                          "style": {
+                            "minWidth": "18px",
+                            "height": "18px"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.display.view",
+                    "meta": {
+                      "name": "Step_notching"
+                    },
+                    "position": {
+                      "basis": "0px",
+                      "grow": 2,
+                      "shrink": 1
+                    },
+                    "props": {
+                      "path": "Components/HPHMI/FlowStep",
+                      "params": {},
+                      "useDefaultViewWidth": false,
+                      "useDefaultViewHeight": false,
+                      "style": {
+                        "minWidth": "0px"
+                      }
+                    },
+                    "propConfig": {
+                      "props.params.step": {
+                        "binding": {
+                          "type": "property",
+                          "config": {
+                            "path": "view.custom.model.steps[3]"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Rows"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "stretch",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "gap": "6px",
+                    "overflowY": "auto",
+                    "paddingRight": "2px"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Lane_AL1"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "flex-start",
+                      "alignItems": "stretch",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Lane"
+                        },
+                        "position": {
+                          "basis": "72px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Lane",
+                            "marginRight": "6px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.label",
+                            "meta": {
+                              "name": "Side"
+                            },
+                            "position": {
+                              "basis": "18px",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "ANODE",
+                              "style": {
+                                "classes": "HPHMI/Lane/Side"
+                              }
+                            }
+                          },
+                          {
+                            "type": "ia.display.label",
+                            "meta": {
+                              "name": "Line"
+                            },
+                            "position": {
+                              "basis": "18px",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "Line 1",
+                              "style": {
+                                "classes": "HPHMI/Lane/Line"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_0_0"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 5,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[0].cells[0].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap1"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_0_1"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 4,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[0].cells[1].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap2"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_0_2"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 2,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[0].cells[2].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap3"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_0_3"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 2,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[0].cells[3].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Lane_AL2"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "flex-start",
+                      "alignItems": "stretch",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Lane"
+                        },
+                        "position": {
+                          "basis": "72px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Lane",
+                            "marginRight": "6px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.label",
+                            "meta": {
+                              "name": "Side"
+                            },
+                            "position": {
+                              "basis": "18px",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "ANODE",
+                              "style": {
+                                "classes": "HPHMI/Lane/Side"
+                              }
+                            }
+                          },
+                          {
+                            "type": "ia.display.label",
+                            "meta": {
+                              "name": "Line"
+                            },
+                            "position": {
+                              "basis": "18px",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "Line 2",
+                              "style": {
+                                "classes": "HPHMI/Lane/Line"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_1_0"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 5,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[1].cells[0].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap1"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_1_1"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 4,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[1].cells[1].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap2"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_1_2"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 2,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[1].cells[2].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap3"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_1_3"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 2,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[1].cells[3].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Lane_CL1"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "flex-start",
+                      "alignItems": "stretch",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Lane"
+                        },
+                        "position": {
+                          "basis": "72px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Lane",
+                            "marginRight": "6px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.label",
+                            "meta": {
+                              "name": "Side"
+                            },
+                            "position": {
+                              "basis": "18px",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "CATHODE",
+                              "style": {
+                                "classes": "HPHMI/Lane/Side"
+                              }
+                            }
+                          },
+                          {
+                            "type": "ia.display.label",
+                            "meta": {
+                              "name": "Line"
+                            },
+                            "position": {
+                              "basis": "18px",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "Line 1",
+                              "style": {
+                                "classes": "HPHMI/Lane/Line"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_2_0"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 5,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[2].cells[0].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap1"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_2_1"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 4,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[2].cells[1].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap2"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_2_2"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 2,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[2].cells[2].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap3"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_2_3"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 2,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[2].cells[3].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Lane_CL2"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "flex-start",
+                      "alignItems": "stretch",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Lane"
+                        },
+                        "position": {
+                          "basis": "72px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Lane",
+                            "marginRight": "6px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.label",
+                            "meta": {
+                              "name": "Side"
+                            },
+                            "position": {
+                              "basis": "18px",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "CATHODE",
+                              "style": {
+                                "classes": "HPHMI/Lane/Side"
+                              }
+                            }
+                          },
+                          {
+                            "type": "ia.display.label",
+                            "meta": {
+                              "name": "Line"
+                            },
+                            "position": {
+                              "basis": "18px",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "text": "Line 2",
+                              "style": {
+                                "classes": "HPHMI/Lane/Line"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_3_0"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 5,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[3].cells[0].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap1"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_3_1"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 4,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[3].cells[1].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap2"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_3_2"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 2,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[3].cells[2].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Gap3"
+                        },
+                        "position": {
+                          "basis": "8px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "direction": "row",
+                          "wrap": "nowrap",
+                          "justify": "center",
+                          "alignItems": "center",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "type": "ia.container.flex",
+                        "meta": {
+                          "name": "Cell_3_3"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 2,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "style": {
+                            "classes": "HPHMI/Cell",
+                            "minWidth": "0px",
+                            "overflow": "hidden"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "ia.display.flex-repeater",
+                            "meta": {
+                              "name": "Tiles"
+                            },
+                            "position": {
+                              "basis": "auto",
+                              "grow": 0,
+                              "shrink": 0
+                            },
+                            "props": {
+                              "path": "Components/HPHMI/EquipmentTile",
+                              "instances": [],
+                              "direction": "row",
+                              "wrap": "wrap",
+                              "justify": "flex-start",
+                              "alignItems": "stretch",
+                              "alignContent": "flex-start",
+                              "useDefaultViewWidth": false,
+                              "useDefaultViewHeight": false,
+                              "elementPosition": {
+                                "basis": "124px",
+                                "grow": 1,
+                                "shrink": 0
+                              },
+                              "style": {
+                                "gap": "6px",
+                                "overflow": "hidden"
+                              }
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "type": "property",
+                                  "config": {
+                                    "path": "view.custom.model.rows[3].cells[3].tiles"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "AlarmPanel"
+            },
+            "position": {
+              "basis": "232px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Panel",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Header"
+                },
+                "position": {
+                  "basis": "46px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "row",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "center",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "classes": "HPHMI/Panel/HeaderStatic",
+                    "gap": "8px",
+                    "overflow": "hidden"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.display.icon",
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "basis": "22px",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "material/notifications",
+                      "color": "#1F2328",
+                      "style": {
+                        "minWidth": "22px",
+                        "height": "22px"
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.display.label",
+                    "meta": {
+                      "name": "Title"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "text": "",
+                      "style": {
+                        "classes": "HPHMI/Panel/Title"
+                      }
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "type": "expr",
+                          "config": {
+                            "expression": "\"Active alarms (\" + toStr({view.custom.model.alarms.active}) + \")\""
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.display.label",
+                    "meta": {
+                      "name": "Unacked"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "text": "",
+                      "style": {
+                        "classes": "HPHMI/Panel/Sub"
+                      }
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "type": "expr",
+                          "config": {
+                            "expression": "toStr({view.custom.model.alarms.unacked}) + \" unacknowledged · PLC + Ignition alarms\""
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Spacer"
+                    },
+                    "position": {
+                      "basis": "0px",
+                      "grow": 1,
+                      "shrink": 1
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "flex-start",
+                      "alignItems": "stretch",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": []
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Sev_5",
+                      "tooltip": {
+                        "enabled": true,
+                        "text": "Severity 5 – HSE hazard"
+                      }
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "center",
+                      "alignItems": "center",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "gap": "6px",
+                        "padding": "0 10px",
+                        "minWidth": "84px",
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.icon",
+                        "meta": {
+                          "name": "Icon"
+                        },
+                        "position": {
+                          "basis": "16px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "material/info",
+                          "color": "#868C94",
+                          "style": {
+                            "minWidth": "16px",
+                            "height": "16px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.path": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "case(\"Critical\", \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                              }
+                            }
+                          },
+                          "props.color": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "if({view.custom.model.alarms.bySeverity.5} > 0 && \"Critical\" != \"Info\", \"#FFFFFF\", \"#868C94\")"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "Text"
+                        },
+                        "position": {
+                          "basis": "auto",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "HSE",
+                          "style": {
+                            "classes": "HPHMI/Sev/Count",
+                            "fontSize": "14px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "\"HSE  \" + toStr({view.custom.model.alarms.bySeverity.5})"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "propConfig": {
+                      "props.style.classes": {
+                        "binding": {
+                          "type": "expr",
+                          "config": {
+                            "expression": "\"HPHMI/Sev\" + if({view.custom.model.alarms.bySeverity.5} > 0 && \"Critical\" != \"Info\", \" HPHMI/Sev/Critical\", \"\")"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Sev_4",
+                      "tooltip": {
+                        "enabled": true,
+                        "text": "Severity 4 – Trip"
+                      }
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "center",
+                      "alignItems": "center",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "gap": "6px",
+                        "padding": "0 10px",
+                        "minWidth": "84px",
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.icon",
+                        "meta": {
+                          "name": "Icon"
+                        },
+                        "position": {
+                          "basis": "16px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "material/info",
+                          "color": "#868C94",
+                          "style": {
+                            "minWidth": "16px",
+                            "height": "16px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.path": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "case(\"Critical\", \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                              }
+                            }
+                          },
+                          "props.color": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "if({view.custom.model.alarms.bySeverity.4} > 0 && \"Critical\" != \"Info\", \"#FFFFFF\", \"#868C94\")"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "Text"
+                        },
+                        "position": {
+                          "basis": "auto",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "Sev 4",
+                          "style": {
+                            "classes": "HPHMI/Sev/Count",
+                            "fontSize": "14px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "\"Sev 4  \" + toStr({view.custom.model.alarms.bySeverity.4})"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "propConfig": {
+                      "props.style.classes": {
+                        "binding": {
+                          "type": "expr",
+                          "config": {
+                            "expression": "\"HPHMI/Sev\" + if({view.custom.model.alarms.bySeverity.4} > 0 && \"Critical\" != \"Info\", \" HPHMI/Sev/Critical\", \"\")"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Sev_3",
+                      "tooltip": {
+                        "enabled": true,
+                        "text": "Severity 3 – Alarm"
+                      }
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "center",
+                      "alignItems": "center",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "gap": "6px",
+                        "padding": "0 10px",
+                        "minWidth": "84px",
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.icon",
+                        "meta": {
+                          "name": "Icon"
+                        },
+                        "position": {
+                          "basis": "16px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "material/info",
+                          "color": "#868C94",
+                          "style": {
+                            "minWidth": "16px",
+                            "height": "16px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.path": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "case(\"Warning\", \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                              }
+                            }
+                          },
+                          "props.color": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "if({view.custom.model.alarms.bySeverity.3} > 0 && \"Warning\" != \"Info\", \"#1F2328\", \"#868C94\")"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "Text"
+                        },
+                        "position": {
+                          "basis": "auto",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "Sev 3",
+                          "style": {
+                            "classes": "HPHMI/Sev/Count",
+                            "fontSize": "14px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "\"Sev 3  \" + toStr({view.custom.model.alarms.bySeverity.3})"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "propConfig": {
+                      "props.style.classes": {
+                        "binding": {
+                          "type": "expr",
+                          "config": {
+                            "expression": "\"HPHMI/Sev\" + if({view.custom.model.alarms.bySeverity.3} > 0 && \"Warning\" != \"Info\", \" HPHMI/Sev/Warning\", \"\")"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Sev_2",
+                      "tooltip": {
+                        "enabled": true,
+                        "text": "Severity 2 – Warning"
+                      }
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "center",
+                      "alignItems": "center",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "gap": "6px",
+                        "padding": "0 10px",
+                        "minWidth": "84px",
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.icon",
+                        "meta": {
+                          "name": "Icon"
+                        },
+                        "position": {
+                          "basis": "16px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "material/info",
+                          "color": "#868C94",
+                          "style": {
+                            "minWidth": "16px",
+                            "height": "16px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.path": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "case(\"Advisory\", \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                              }
+                            }
+                          },
+                          "props.color": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "if({view.custom.model.alarms.bySeverity.2} > 0 && \"Advisory\" != \"Info\", \"#1F2328\", \"#868C94\")"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "Text"
+                        },
+                        "position": {
+                          "basis": "auto",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "Sev 2",
+                          "style": {
+                            "classes": "HPHMI/Sev/Count",
+                            "fontSize": "14px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "\"Sev 2  \" + toStr({view.custom.model.alarms.bySeverity.2})"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "propConfig": {
+                      "props.style.classes": {
+                        "binding": {
+                          "type": "expr",
+                          "config": {
+                            "expression": "\"HPHMI/Sev\" + if({view.custom.model.alarms.bySeverity.2} > 0 && \"Advisory\" != \"Info\", \" HPHMI/Sev/Advisory\", \"\")"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Sev_1",
+                      "tooltip": {
+                        "enabled": true,
+                        "text": "Severity 1 – Event"
+                      }
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "center",
+                      "alignItems": "center",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "gap": "6px",
+                        "padding": "0 10px",
+                        "minWidth": "84px",
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.icon",
+                        "meta": {
+                          "name": "Icon"
+                        },
+                        "position": {
+                          "basis": "16px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "material/info",
+                          "color": "#868C94",
+                          "style": {
+                            "minWidth": "16px",
+                            "height": "16px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.path": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "case(\"Info\", \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                              }
+                            }
+                          },
+                          "props.color": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "if({view.custom.model.alarms.bySeverity.1} > 0 && \"Info\" != \"Info\", \"#1F2328\", \"#868C94\")"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "Text"
+                        },
+                        "position": {
+                          "basis": "auto",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "Sev 1",
+                          "style": {
+                            "classes": "HPHMI/Sev/Count",
+                            "fontSize": "14px"
+                          }
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "\"Sev 1  \" + toStr({view.custom.model.alarms.bySeverity.1})"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "propConfig": {
+                      "props.style.classes": {
+                        "binding": {
+                          "type": "expr",
+                          "config": {
+                            "expression": "\"HPHMI/Sev\" + if({view.custom.model.alarms.bySeverity.1} > 0 && \"Info\" != \"Info\", \" HPHMI/Sev/Info\", \"\")"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.input.button",
+                    "meta": {
+                      "name": "Equipment"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "text": "All equipment",
+                      "primary": false,
+                      "image": {
+                        "icon": {
+                          "path": "material/list",
+                          "color": "#1F2328"
+                        },
+                        "position": "right",
+                        "width": 18,
+                        "height": 18
+                      },
+                      "style": {
+                        "classes": "HPHMI/Button/Secondary"
+                      }
+                    },
+                    "events": {
+                      "component": {
+                        "onActionPerformed": {
+                          "type": "script",
+                          "scope": "G",
+                          "config": {
+                            "script": "\tHPHMI_ZoneE.openEquipmentList(\"all\")"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.input.button",
+                    "meta": {
+                      "name": "AlarmPage"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "text": "Alarm page",
+                      "primary": false,
+                      "image": {
+                        "icon": {
+                          "path": "material/open_in_new",
+                          "color": "#1F2328"
+                        },
+                        "position": "right",
+                        "width": 18,
+                        "height": 18
+                      },
+                      "style": {
+                        "classes": "HPHMI/Button/Secondary"
+                      }
+                    },
+                    "events": {
+                      "component": {
+                        "onActionPerformed": {
+                          "type": "nav",
+                          "scope": "C",
+                          "config": {
+                            "page": "/alarms"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "List"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "stretch",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "classes": "HPHMI/List/Box",
+                    "margin": "0 10px 10px 10px",
+                    "overflow": "hidden"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Header"
+                    },
+                    "position": {
+                      "basis": "32px",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "direction": "row",
+                      "wrap": "nowrap",
+                      "justify": "flex-start",
+                      "alignItems": "center",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "classes": "HPHMI/List/Header",
+                        "overflow": "hidden"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "H_Time"
+                        },
+                        "position": {
+                          "basis": "130px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "Time",
+                          "style": {
+                            "classes": "HPHMI/List/HeaderText"
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "H_Area"
+                        },
+                        "position": {
+                          "basis": "110px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "Area",
+                          "style": {
+                            "classes": "HPHMI/List/HeaderText"
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "H_Unit"
+                        },
+                        "position": {
+                          "basis": "90px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "Unit",
+                          "style": {
+                            "classes": "HPHMI/List/HeaderText"
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "H_Severity"
+                        },
+                        "position": {
+                          "basis": "100px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "Severity",
+                          "style": {
+                            "classes": "HPHMI/List/HeaderText"
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "H_Description"
+                        },
+                        "position": {
+                          "basis": "0px",
+                          "grow": 1,
+                          "shrink": 1
+                        },
+                        "props": {
+                          "text": "Description",
+                          "style": {
+                            "classes": "HPHMI/List/HeaderText"
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "H_Source"
+                        },
+                        "position": {
+                          "basis": "90px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "Source",
+                          "style": {
+                            "classes": "HPHMI/List/HeaderText"
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "H_State"
+                        },
+                        "position": {
+                          "basis": "150px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "State",
+                          "style": {
+                            "classes": "HPHMI/List/HeaderText"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ia.container.flex",
+                    "meta": {
+                      "name": "Scroll"
+                    },
+                    "position": {
+                      "basis": "0px",
+                      "grow": 1,
+                      "shrink": 1
+                    },
+                    "props": {
+                      "direction": "column",
+                      "wrap": "nowrap",
+                      "justify": "flex-start",
+                      "alignItems": "stretch",
+                      "alignContent": "flex-start",
+                      "style": {
+                        "overflowY": "auto"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "ia.display.flex-repeater",
+                        "meta": {
+                          "name": "Rows"
+                        },
+                        "position": {
+                          "basis": "auto",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "Components/HPHMI/AlarmRow",
+                          "instances": [],
+                          "direction": "column",
+                          "wrap": "nowrap",
+                          "justify": "flex-start",
+                          "alignItems": "stretch",
+                          "alignContent": "flex-start",
+                          "useDefaultViewWidth": false,
+                          "useDefaultViewHeight": true,
+                          "elementPosition": {
+                            "basis": "34px",
+                            "grow": 0,
+                            "shrink": 0
+                          },
+                          "style": {
+                            "overflow": "hidden"
+                          }
+                        },
+                        "propConfig": {
+                          "props.instances": {
+                            "binding": {
+                              "type": "property",
+                              "config": {
+                                "path": "view.custom.model.alarmRows"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "ia.display.label",
+                        "meta": {
+                          "name": "None"
+                        },
+                        "position": {
+                          "basis": "34px",
+                          "grow": 0,
+                          "shrink": 0
+                        },
+                        "props": {
+                          "text": "No active alarms",
+                          "style": {
+                            "classes": "HPHMI/Text/Label",
+                            "padding": "0 12px"
+                          }
+                        },
+                        "propConfig": {
+                          "position.display": {
+                            "binding": {
+                              "type": "expr",
+                              "config": {
+                                "expression": "{view.custom.model.alarms.active} = 0"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "NavBar"
+        },
+        "position": {
+          "basis": "48px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "classes": "HPHMI/Nav/Bar",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "Nav_0"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Zone E overview",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "material/dashboard",
+                  "color": "#B9C0C8"
+                },
+                "position": "left",
+                "width": 18,
+                "height": 18
+              },
+              "style": {
+                "classes": "HPHMI/Nav/Button HPHMI/Nav/Button/Active"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "nav",
+                  "scope": "C",
+                  "config": {
+                    "page": "/"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "Nav_1"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Mixing",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "material/blender",
+                  "color": "#B9C0C8"
+                },
+                "position": "left",
+                "width": 18,
+                "height": 18
+              },
+              "style": {
+                "classes": "HPHMI/Nav/Button"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "nav",
+                  "scope": "C",
+                  "config": {
+                    "page": "/sanand/zone-e/mixing"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "Nav_2"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Calendering",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "material/view_week",
+                  "color": "#B9C0C8"
+                },
+                "position": "left",
+                "width": 18,
+                "height": 18
+              },
+              "style": {
+                "classes": "HPHMI/Nav/Button"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "nav",
+                  "scope": "C",
+                  "config": {
+                    "page": "/sanand/zone-e/calendering"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "Nav_3"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Notching & Slitting",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "material/content_cut",
+                  "color": "#B9C0C8"
+                },
+                "position": "left",
+                "width": 18,
+                "height": 18
+              },
+              "style": {
+                "classes": "HPHMI/Nav/Button"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "nav",
+                  "scope": "C",
+                  "config": {
+                    "page": "/sanand/zone-e/lasernotching/cathode-line-1/ntc11-overview"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Spacer"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "NavR_0"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Alarms",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "material/notifications",
+                  "color": "#B9C0C8"
+                },
+                "position": "left",
+                "width": 18,
+                "height": 18
+              },
+              "style": {
+                "classes": "HPHMI/Nav/Button"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "nav",
+                  "scope": "C",
+                  "config": {
+                    "page": "/alarms"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "propConfig": {
+    "custom.model": {
+      "binding": {
+        "type": "expr",
+        "config": {
+          "expression": "try({page.props.dimensions.viewport.width}, 1920) + 0 * toMillis(now(3000))"
+        },
+        "transforms": [
+          {
+            "type": "script",
+            "code": "\t# value = viewport width; rebuilt every 3 s\n\treturn HPHMI_ZoneE.buildModel(value)"
+          }
+        ]
+      }
+    },
+    "custom.plcComm": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "direct",
+          "tagPath": "[default]PLC_Communication",
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), if(toBoolean({value}), 1, 0), -1)"
+          }
+        ]
+      }
+    }
+  }
+}

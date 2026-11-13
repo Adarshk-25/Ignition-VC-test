@@ -1,0 +1,59 @@
+{
+  "custom": {},
+  "params": {
+    "value": "value"
+  },
+  "propConfig": {
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 98,
+      "width": 99
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "SimpleGauge"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.params.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "arc": {
+            "width": 5
+          },
+          "label": {
+            "offsetX": 1,
+            "offsetY": 7,
+            "size": 15
+          }
+        },
+        "type": "ia.chart.simple-gauge"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

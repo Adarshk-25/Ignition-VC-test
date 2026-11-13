@@ -1,0 +1,5293 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Drawing_0"
+            },
+            "position": {
+              "height": 0.28,
+              "width": 0.5206,
+              "x": 0.1028,
+              "y": 0.0138
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "276",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "532",
+                  "x": 8,
+                  "y": 6
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "7 5 534 278"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Drawing_2"
+            },
+            "position": {
+              "height": 0.1737,
+              "width": 0.1781,
+              "x": 0.718,
+              "y": 0.0338
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "220",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "471",
+                  "x": "5",
+                  "y": "4.5"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 480 230"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 0.07,
+              "width": 0.08,
+              "x": 0.1166,
+              "y": 0.1041
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Unwinding Turret",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_1"
+            },
+            "position": {
+              "height": 0.07,
+              "width": 0.08,
+              "x": 0.4432,
+              "y": 0.1905
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Auto-Splicing After Unwinding\n",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_3"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "50% 75%"
+              },
+              "width": 0.06,
+              "x": 0.5406,
+              "y": 0.191
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Adjustable roller",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Drawing_7"
+            },
+            "position": {
+              "height": 0.2725,
+              "width": 0.3412,
+              "x": 0.2647,
+              "y": 0.6728
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "193",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "594",
+                  "x": 8,
+                  "y": 5
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 610 200"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "3"
+                    },
+                    "view": "Page/LaserNotching_Templates/AnodeLine1/LaserNotchingMainAnode"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_13"
+            },
+            "position": {
+              "height": 0.04,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.14,
+              "x": 0.2749,
+              "y": 0.6867
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#000000",
+                "borderStyle": "solid",
+                "borderWidth": 2
+              },
+              "text": "Rewinding Module",
+              "textStyle": {
+                "color": "#000000"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_45"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "50% 64%"
+              },
+              "width": 0.08,
+              "x": 0.0088,
+              "y": 0.4225
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF"
+              },
+              "text": "Process Position Control 2",
+              "textStyle": {
+                "classes": "Page/Button",
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_48"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "262% 186%"
+              },
+              "width": 0.08,
+              "x": 0.2763,
+              "y": 0.8441
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Rewinding Press Bar",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_50"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "262% 186%"
+              },
+              "width": 0.0619,
+              "x": 0.5262,
+              "y": 0.8618
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Rewinding",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_52"
+            },
+            "position": {
+              "height": 0.07,
+              "width": 0.06,
+              "x": 0.427,
+              "y": 0.8599
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Pressure Roller",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_53"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "262% 186%"
+              },
+              "width": 0.08,
+              "x": 0.5177,
+              "y": 0.7618
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Roll Diameter Inspection",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_40"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.895,
+              "y": 0.3487
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Tab Reinforcement",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "0"
+                    },
+                    "view": "Page/LaserNotching_Templates/AnodeLine1/LaserNotchingMainAnode"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_20"
+            },
+            "position": {
+              "height": 0.04,
+              "rotate": {
+                "anchor": "25% 25%"
+              },
+              "width": 0.14,
+              "x": 0.1091,
+              "y": 0.0255
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#000000",
+                "borderStyle": "solid",
+                "borderWidth": 2
+              },
+              "text": "Unwinding Module",
+              "textStyle": {
+                "color": "#000000"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Drawing_15"
+            },
+            "position": {
+              "height": 0.1288,
+              "width": 0.1406,
+              "x": 0.2917,
+              "y": 0.1618
+            },
+            "props": {
+              "elements": [
+                {
+                  "d": "M25.460425283002944 6.870453645579213L98.00001164821045 6.599999352239985 77.62624151121412 30.40000037939237 2.4000009127287663 29.994317004941834 25.460425283002944 6.735227143723497 25.460425283002944 6.735227143723497 25.23653787505453 6.735227143723497 25.23653787505453 6.735227143723497",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "pen-path",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "path"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 100 35"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "height": 0.0638,
+              "width": 0.0725,
+              "x": 0.1979,
+              "y": 0.198
+            },
+            "props": {
+              "text": "Roll Diameter Inspection",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Button_18"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "60% 25%"
+              },
+              "width": 0.08,
+              "x": 0.6324,
+              "y": 0.1235
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Manual Splicing Platform",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "2"
+                    },
+                    "view": "Page/Calendering_Templates/calendering_main"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_21"
+            },
+            "position": {
+              "height": 0.04,
+              "rotate": {
+                "anchor": "25% 25%"
+              },
+              "width": 0.14,
+              "x": 0.7234,
+              "y": 0.0449
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#000000",
+                "borderStyle": "solid",
+                "borderWidth": 2
+              },
+              "text": "Tension Control System",
+              "textStyle": {
+                "color": "#000000"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_19"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "60% 25%"
+              },
+              "width": "0.06\n",
+              "x": 0.7358,
+              "y": 0.1245
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Tension Controller",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_22"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "60% 25%"
+              },
+              "width": 0.06,
+              "x": 0.8204,
+              "y": 0.1245
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Dancing Roller",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_63"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "262% 186%"
+              },
+              "width": 0.0856,
+              "x": 0.9078,
+              "y": 0.1242
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Incoming Material NG Inspection",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_41"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.2799,
+              "y": 0.0498
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Pressure Roller",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_43"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.7561,
+              "y": 0.3488
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF"
+              },
+              "text": "Process Position Control 1",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_44"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.7561,
+              "y": 0.3488
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Process Position Control 1",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_47"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.6195,
+              "y": 0.3499
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Laser Notching",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_56"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.4612,
+              "y": 0.3499
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Main Drive",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_62"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.2793,
+              "y": 0.3501
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Air Knife Dust Removal",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_46"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "50% 64%"
+              },
+              "width": 0.0638,
+              "x": 0.014,
+              "y": 0.5262
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Pressing Bar",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_55"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "50% 64%"
+              },
+              "width": 0.05,
+              "x": 0.0991,
+              "y": 0.524
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Slitting",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_64"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.06,
+              "x": 0.3079,
+              "y": 0.4621
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Brush Dust Removal",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_66"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.4041,
+              "y": 0.4621
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Ultrasonic Dust Removal",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_67"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.5105,
+              "y": 0.4621
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Magnetic Dust Removal",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_68"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.6174,
+              "y": 0.4621
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF"
+              },
+              "text": "Rewinding Tension Control",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_69"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.7421,
+              "y": 0.4705
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "NG Marking",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_70"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.06,
+              "x": 0.3074,
+              "y": 0.5659
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Brush Dust Removal",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_71"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.4035,
+              "y": 0.566
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Ultrasonic Dust Removal",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_72"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.5105,
+              "y": 0.566
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Magnetic Dust Removal",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_2"
+            },
+            "position": {
+              "height": 0.07,
+              "width": 0.1075,
+              "x": 0.3813,
+              "y": 0.7646
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Auto Splicing Before Unwinding",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Drawing_8"
+            },
+            "position": {
+              "height": 0.2712,
+              "width": 0.3456,
+              "x": 0.63,
+              "y": 0.6716
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "193",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "594",
+                  "x": 8,
+                  "y": 5
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 610 200"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Button_54"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "262% 186%"
+              },
+              "width": 0.08,
+              "x": 0.8868,
+              "y": 0.7574
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Roll Diameter Inspection",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_51"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "262% 186%"
+              },
+              "width": 0.0694,
+              "x": 0.891,
+              "y": 0.8597
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Rewinding",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_57"
+            },
+            "position": {
+              "height": 0.07,
+              "width": 0.06,
+              "x": 0.7899,
+              "y": 0.8574
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Pressure Roller",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_4"
+            },
+            "position": {
+              "height": 0.07,
+              "width": 0.1075,
+              "x": 0.7544,
+              "y": 0.76
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Auto Splicing Before Unwinding",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "3"
+                    },
+                    "view": "Page/LaserNotching_Templates/AnodeLine1/LaserNotchingMainAnode"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_14"
+            },
+            "position": {
+              "height": 0.04,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.14,
+              "x": 0.6393,
+              "y": 0.6856
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#000000",
+                "borderStyle": "solid",
+                "borderWidth": 2
+              },
+              "text": "Rewinding Module",
+              "textStyle": {
+                "color": "#000000"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_49"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "262% 186%"
+              },
+              "width": 0.08,
+              "x": 0.6492,
+              "y": 0.821
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Rewinding Press Bar",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_73"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.6174,
+              "y": 0.4621
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Rewinding Tension Control",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_74"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.6167,
+              "y": 0.5672
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Rewinding Tension Control",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_75"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "25% 50%"
+              },
+              "width": 0.08,
+              "x": 0.7211,
+              "y": 0.5696
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "NG Marking",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "4"
+                    },
+                    "view": "Page/LaserNotching_Templates/AnodeLine1/LaserNotchingMainAnode"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_23"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "60% 25%"
+              },
+              "width": 0.08,
+              "x": 0.1716,
+              "y": 0.7478
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Dust Collector",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_24"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "60% 25%"
+              },
+              "width": 0.0794,
+              "x": 0.1794,
+              "y": 0.8552
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Scrap Collection ",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_26"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "60% 25%"
+              },
+              "width": 0.08,
+              "x": 0.0526,
+              "y": 0.6327
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Button"
+              },
+              "text": "Ultrasonic Dust Removal",
+              "textStyle": {
+                "color": "#000000",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Drawing_3"
+            },
+            "position": {
+              "height": 0.26,
+              "width": 0.16,
+              "x": 0.0044,
+              "y": 0.7331
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "220",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "471",
+                  "x": "5",
+                  "y": "4.5"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 480 230"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.1,
+              "x": 0.0615,
+              "y": 0.7848
+            },
+            "props": {
+              "text": "Electrode Flow",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.1006,
+              "x": 0.0609,
+              "y": 0.8386
+            },
+            "props": {
+              "text": "Dust Flow",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_4"
+            },
+            "position": {
+              "height": 0.0412,
+              "width": 0.1019,
+              "x": 0.0598,
+              "y": 0.8938
+            },
+            "props": {
+              "text": "Sensor Feedback Flow",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_5"
+            },
+            "position": {
+              "height": 0.0413,
+              "width": 0.1087,
+              "x": 0.0529,
+              "y": 0.9432
+            },
+            "props": {
+              "text": "Laser Cutting Scrap Flow",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Button_58"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "50% 64%"
+              },
+              "width": 0.08,
+              "x": 0.0094,
+              "y": 0.1079
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFF00",
+                "borderColor": "#000000",
+                "borderStyle": "solid",
+                "borderWidth": 2,
+                "textTransform": "capitalize"
+              },
+              "text": "Input Material loading by AGV",
+              "textStyle": {
+                "classes": "Page/Button",
+                "color": "#000000",
+                "fontSize": "14px",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_59"
+            },
+            "position": {
+              "height": 0.07,
+              "rotate": {
+                "anchor": "50% 64%"
+              },
+              "width": 0.0875,
+              "x": 0.8835,
+              "y": 0.4796
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFF00",
+                "borderColor": "#000000",
+                "borderStyle": "solid",
+                "borderWidth": 2,
+                "textTransform": "capitalize"
+              },
+              "text": "Output Material unloading by OHT",
+              "textStyle": {
+                "classes": "Page/Button",
+                "color": "#000000",
+                "fontSize": "14px",
+                "fontWeight": "normal",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Drawing_13"
+            },
+            "position": {
+              "height": 0.06,
+              "width": 0.0288,
+              "x": 0.6547,
+              "y": 0.0401
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "name": "perspective-arc",
+                  "specialPath": {
+                    "end": 0,
+                    "height": 46.533334219457174,
+                    "slice": true,
+                    "start": 0,
+                    "width": 45.06666846573353,
+                    "x": 2.400000330806506,
+                    "y": 6.866666364667253
+                  },
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "5px"
+                  },
+                  "type": "perspective-arc"
+                },
+                {
+                  "d": "M8.199999809265137 14.00000152587927C8.199999809265137 14.00000152587927 8.199999809265137 14.00000152587927 40.80261553936771 46.182105200854494L40.80261553936771 46.182105200854494 40.3736885239 46.600000000000364",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "pen-path",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "5"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M4.2986917823564 13.500001141429493C4.2986917823564 13.500001141429493 4.2986917823564 13.500001141429493 36.90130751245897 45.68210481640472L36.90130751245897 45.68210481640472 36.47238049699126 46.09999961555059",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "pen-path_0",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "5px"
+                  },
+                  "transform": "matrix(-1 0 0 1 45.599998474121094 0)",
+                  "type": "path"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "-7.599999904632568 -3.1334500312805176 65.06669998168945 66.53350067138672"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_7"
+            },
+            "position": {
+              "height": 0.0362,
+              "width": 0.0712,
+              "x": 0.685,
+              "y": 0.2174
+            },
+            "props": {
+              "text": "Butterfly Valve",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Drawing_16"
+            },
+            "position": {
+              "height": 0.1288,
+              "width": 0.0838,
+              "x": 0.0882,
+              "y": 0.325
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "name": "perspective-polygon",
+                  "specialPath": {
+                    "angle": 359,
+                    "corners": 4,
+                    "height": 46.210808906848044,
+                    "rounding": 0,
+                    "width": 69.21080938368519,
+                    "x": 107.79459549889262,
+                    "y": 22.39459549889208
+                  },
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "2px"
+                  },
+                  "transform": "matrix(0.9998477101325989 -0.017452405765652657 0.017452405765652657 0.9998477101325989 -0.7723962664604187 2.492152452468872)",
+                  "type": "perspective-star"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "97.40198516845703 11.79776382446289 89.99604034423828 67.40446853637695"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.1537,
+              "x": 0.0076,
+              "y": 0.7383
+            },
+            "props": {
+              "text": "Arrow Indicators",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_8"
+            },
+            "position": {
+              "height": 0.0362,
+              "width": 0.0262,
+              "x": 0.6848,
+              "y": 0.0543
+            },
+            "props": {
+              "text": "PG",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_9"
+            },
+            "position": {
+              "height": 0.03,
+              "width": 0.1631,
+              "x": 0.7995,
+              "y": 0.3169
+            },
+            "props": {
+              "text": "Laser cutting waste collection pipe",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabvalue": "5"
+                    },
+                    "view": "Page/2F_C_Templates/2f_c_mainscreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "3-D Butterfly valve or damper_22"
+            },
+            "position": {
+              "height": 0.03,
+              "rotate": {
+                "angle": "90deg"
+              },
+              "width": 0.0275,
+              "x": 0.6632,
+              "y": 0.2177
+            },
+            "props": {
+              "elements": [
+                {
+                  "name": "symbol",
+                  "type": "symbol"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "id": "SVGID_1_",
+                              "name": "SVGID_1_",
+                              "points": "89.781,51.088 95.643,39.961 22.002,1.974 16.141,13.099    ",
+                              "type": "polygon"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_1_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_2_",
+                          "name": "SVGID_2_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "name": "stop",
+                              "offset": "0",
+                              "stopColor": "#5C5D60",
+                              "style": {
+                                "stopColor": "#5C5D60"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.45",
+                              "stopColor": "#ECECED",
+                              "style": {
+                                "stopColor": "#ECECED"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.57",
+                              "stopColor": "#D9D9DB",
+                              "style": {
+                                "stopColor": "#D9D9DB"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.77",
+                              "stopColor": "#B1B3B6",
+                              "style": {
+                                "stopColor": "#B1B3B6"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "1",
+                              "stopColor": "#5C5D60",
+                              "style": {
+                                "stopColor": "#5C5D60"
+                              },
+                              "type": "stop"
+                            }
+                          ],
+                          "gradientTransform": "matrix(-6.194 11.7568 11.7568 6.194 -572.5233 -312.5809)",
+                          "gradientUnits": "userSpaceOnUse",
+                          "id": "SVGID_3_",
+                          "name": "SVGID_3_",
+                          "type": "linearGradient",
+                          "x1": "0.0342",
+                          "x2": "1.0342",
+                          "y1": "53.7329",
+                          "y2": "53.7329"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_2_)",
+                          "fill": {
+                            "url": "url(#SVGID_3_)"
+                          },
+                          "name": "polygon",
+                          "points": "115.897,12.644 78.37,83.874 -4.113,40.417 33.414,-30.812       ",
+                          "type": "polygon"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "id": "Group_Middle",
+                  "name": "Group_Middle",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "id": "SVGID_4_",
+                              "name": "SVGID_4_",
+                              "points": "4.484,4.189 3.469,5.314 2.727,6.526 1.936,7.785 1.289,9.063 0.777,10.433 0.371,11.852      0.15,13.258 0,14.675 0.028,16.152 0.168,17.607 0.463,19.008 12.93,16.813 12.913,15.817 12.895,14.932 13.185,14.121      13.53,13.329 5.656,3.111    ",
+                              "type": "polygon"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_4_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_5_",
+                          "name": "SVGID_5_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "cx": "0",
+                          "cy": "53.7104",
+                          "elements": [
+                            {
+                              "name": "stop",
+                              "offset": "0",
+                              "stopColor": "#4D4D4D",
+                              "style": {
+                                "stopColor": "#4D4D4D"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.02",
+                              "stopColor": "#4D4D4D",
+                              "style": {
+                                "stopColor": "#4D4D4D"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.08",
+                              "stopColor": "#6B6B6B",
+                              "style": {
+                                "stopColor": "#6B6B6B"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.16",
+                              "stopColor": "#959595",
+                              "style": {
+                                "stopColor": "#959595"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.2",
+                              "stopColor": "#A5A5A5",
+                              "style": {
+                                "stopColor": "#A5A5A5"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.35",
+                              "stopColor": "#D5D7D8",
+                              "style": {
+                                "stopColor": "#D5D7D8"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.45",
+                              "stopColor": "#DFE0E0",
+                              "style": {
+                                "stopColor": "#DFE0E0"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.56",
+                              "stopColor": "#E6E6E6",
+                              "style": {
+                                "stopColor": "#E6E6E6"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.67",
+                              "stopColor": "#C6C6C6",
+                              "style": {
+                                "stopColor": "#C6C6C6"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.89",
+                              "stopColor": "#757575",
+                              "style": {
+                                "stopColor": "#757575"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "1",
+                              "stopColor": "#4D4D4D",
+                              "style": {
+                                "stopColor": "#4D4D4D"
+                              },
+                              "type": "stop"
+                            }
+                          ],
+                          "gradientTransform": "matrix(-12.25 -5 -5 12.25 281.5562 -643.4037)",
+                          "gradientUnits": "userSpaceOnUse",
+                          "id": "SVGID_6_",
+                          "name": "SVGID_6_",
+                          "r": "0.9993",
+                          "type": "radialGradient"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_5_)",
+                          "fill": {
+                            "url": "url(#SVGID_6_)"
+                          },
+                          "name": "polygon",
+                          "points": "11.598,23.742 -5.562,16.738 1.932,-1.623 19.092,5.382   ",
+                          "type": "polygon"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "height": "36.888",
+                              "id": "SVGID_7_",
+                              "name": "SVGID_7_",
+                              "type": "rect",
+                              "width": "12.921",
+                              "x": "0.005",
+                              "y": "16.71"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_7_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_8_",
+                          "name": "SVGID_8_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "name": "stop",
+                              "offset": "0",
+                              "stopColor": "#5C5D60",
+                              "style": {
+                                "stopColor": "#5C5D60"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.45",
+                              "stopColor": "#ECECED",
+                              "style": {
+                                "stopColor": "#ECECED"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.57",
+                              "stopColor": "#D9D9DB",
+                              "style": {
+                                "stopColor": "#D9D9DB"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.77",
+                              "stopColor": "#B1B3B6",
+                              "style": {
+                                "stopColor": "#B1B3B6"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "1",
+                              "stopColor": "#5C5D60",
+                              "style": {
+                                "stopColor": "#5C5D60"
+                              },
+                              "type": "stop"
+                            }
+                          ],
+                          "gradientTransform": "matrix(12.9209 0 0 12.9209 0.0124 -658.8264)",
+                          "gradientUnits": "userSpaceOnUse",
+                          "id": "SVGID_9_",
+                          "name": "SVGID_9_",
+                          "type": "linearGradient",
+                          "x1": "-9.765625e-004",
+                          "x2": "0.999",
+                          "y1": "53.7095",
+                          "y2": "53.7095"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_8_)",
+                          "fill": {
+                            "url": "url(#SVGID_9_)"
+                          },
+                          "height": "36.888",
+                          "name": "rect",
+                          "type": "rect",
+                          "width": "12.921",
+                          "x": "0.005",
+                          "y": "16.71"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "id": "SVGID_10_",
+                              "name": "SVGID_10_",
+                              "points": "16.79,13.449 15.967,13.089 15.103,12.896 14.247,12.966 13.497,13.349 5.633,3.107 6.924,2.246      8.236,1.497 9.603,0.902 11.025,0.462 12.425,0.167 13.88,0.027 15.357,0 16.773,0.15 18.181,0.371 19.601,0.779 20.859,1.376      22.203,2.064    ",
+                              "type": "polygon"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_10_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_11_",
+                          "name": "SVGID_11_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "cx": "0.0034",
+                          "cy": "53.728",
+                          "elements": [
+                            {
+                              "name": "stop",
+                              "offset": "0",
+                              "stopColor": "#4D4D4D",
+                              "style": {
+                                "stopColor": "#4D4D4D"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.09",
+                              "stopColor": "#4D4D4D",
+                              "style": {
+                                "stopColor": "#4D4D4D"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.16",
+                              "stopColor": "#7B7B7B",
+                              "style": {
+                                "stopColor": "#7B7B7B"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.22",
+                              "stopColor": "#9A9A9A",
+                              "style": {
+                                "stopColor": "#9A9A9A"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.25",
+                              "stopColor": "#A5A5A5",
+                              "style": {
+                                "stopColor": "#A5A5A5"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.41",
+                              "stopColor": "#D5D7D8",
+                              "style": {
+                                "stopColor": "#D5D7D8"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.48",
+                              "stopColor": "#DEDFDF",
+                              "style": {
+                                "stopColor": "#DEDFDF"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.58",
+                              "stopColor": "#E6E6E6",
+                              "style": {
+                                "stopColor": "#E6E6E6"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.64",
+                              "stopColor": "#DADADA",
+                              "style": {
+                                "stopColor": "#DADADA"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.74",
+                              "stopColor": "#B9B9B9",
+                              "style": {
+                                "stopColor": "#B9B9B9"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.87",
+                              "stopColor": "#848484",
+                              "style": {
+                                "stopColor": "#848484"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "1",
+                              "stopColor": "#4D4D4D",
+                              "style": {
+                                "stopColor": "#4D4D4D"
+                              },
+                              "type": "stop"
+                            }
+                          ],
+                          "gradientTransform": "matrix(-2.5 -14 -14 2.5 767.9385 -120.2239)",
+                          "gradientUnits": "userSpaceOnUse",
+                          "id": "SVGID_12_",
+                          "name": "SVGID_12_",
+                          "r": "0.9996",
+                          "type": "radialGradient"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_11_)",
+                          "fill": {
+                            "url": "url(#SVGID_12_)"
+                          },
+                          "name": "polygon",
+                          "points": "6.145,16.317 3.306,0.416 21.691,-2.867 24.53,13.034   ",
+                          "type": "polygon"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "id": "Group_Pipe2",
+                  "name": "Group_Pipe2",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "height": "53.71",
+                              "id": "SVGID_13_",
+                              "name": "SVGID_13_",
+                              "type": "rect",
+                              "width": "112.5",
+                              "y": "0"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_13_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_14_",
+                          "name": "SVGID_14_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_14_)",
+                          "elements": [
+                            {
+                              "elements": [
+                                {
+                                  "id": "SVGID_15_",
+                                  "name": "SVGID_15_",
+                                  "points": "95.644,39.936 96.247,40.225 96.984,40.596 98.001,40.817 98.729,40.645 105.152,51.614       103.825,52.444 102.397,53.098 100.193,53.391 98.715,53.563 97.284,53.598 95.827,53.467 94.37,53.225 93.006,52.819       91.898,52.305 90.713,51.614 89.758,51.047     ",
+                                  "type": "polygon"
+                                }
+                              ],
+                              "name": "defs",
+                              "type": "defs"
+                            },
+                            {
+                              "elements": [
+                                {
+                                  "href": "#SVGID_15_",
+                                  "name": "use",
+                                  "overflow": "visible",
+                                  "type": "use"
+                                }
+                              ],
+                              "id": "SVGID_16_",
+                              "name": "SVGID_16_",
+                              "type": "clipPath"
+                            },
+                            {
+                              "cx": "0",
+                              "cy": "53.7104",
+                              "elements": [
+                                {
+                                  "name": "stop",
+                                  "offset": "0",
+                                  "stopColor": "#4D4D4D",
+                                  "style": {
+                                    "stopColor": "#4D4D4D"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.09",
+                                  "stopColor": "#4D4D4D",
+                                  "style": {
+                                    "stopColor": "#4D4D4D"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.13",
+                                  "stopColor": "#6B6B6B",
+                                  "style": {
+                                    "stopColor": "#6B6B6B"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.2",
+                                  "stopColor": "#959595",
+                                  "style": {
+                                    "stopColor": "#959595"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.23",
+                                  "stopColor": "#A5A5A5",
+                                  "style": {
+                                    "stopColor": "#A5A5A5"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.35",
+                                  "stopColor": "#C2C2C2",
+                                  "style": {
+                                    "stopColor": "#C2C2C2"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.36",
+                                  "stopColor": "#C7C7C7",
+                                  "style": {
+                                    "stopColor": "#C7C7C7"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.41",
+                                  "stopColor": "#D8D8D8",
+                                  "style": {
+                                    "stopColor": "#D8D8D8"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.47",
+                                  "stopColor": "#E3E3E3",
+                                  "style": {
+                                    "stopColor": "#E3E3E3"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.53",
+                                  "stopColor": "#E6E6E6",
+                                  "style": {
+                                    "stopColor": "#E6E6E6"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.6",
+                                  "stopColor": "#E1E1E1",
+                                  "style": {
+                                    "stopColor": "#E1E1E1"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.67",
+                                  "stopColor": "#D1D1D1",
+                                  "style": {
+                                    "stopColor": "#D1D1D1"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.76",
+                                  "stopColor": "#B7B7B7",
+                                  "style": {
+                                    "stopColor": "#B7B7B7"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.86",
+                                  "stopColor": "#939393",
+                                  "style": {
+                                    "stopColor": "#939393"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "0.95",
+                                  "stopColor": "#666666",
+                                  "style": {
+                                    "stopColor": "#666666"
+                                  },
+                                  "type": "stop"
+                                },
+                                {
+                                  "name": "stop",
+                                  "offset": "1",
+                                  "stopColor": "#4D4D4D",
+                                  "style": {
+                                    "stopColor": "#4D4D4D"
+                                  },
+                                  "type": "stop"
+                                }
+                              ],
+                              "gradientTransform": "matrix(3 13.75 13.75 -3 -641.5216 201.4316)",
+                              "gradientUnits": "userSpaceOnUse",
+                              "id": "SVGID_17_",
+                              "name": "SVGID_17_",
+                              "r": "1",
+                              "type": "radialGradient"
+                            },
+                            {
+                              "clipPath": "url(#SVGID_16_)",
+                              "fill": {
+                                "url": "url(#SVGID_17_)"
+                              },
+                              "name": "polygon",
+                              "points": "104.452,36.73 107.997,52.978 90.457,56.804 86.913,40.557         ",
+                              "type": "polygon"
+                            }
+                          ],
+                          "name": "group",
+                          "type": "group"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "id": "SVGID_18_",
+                              "name": "SVGID_18_",
+                              "points": "99.939,37.532 99.813,38.584 99.397,39.747 98.484,40.909 105.128,51.59 107.779,49.208      108.94,47.963 109.937,46.635 110.837,44.944 111.433,43.643 111.89,42.254 112.24,40.821 112.406,39.407 112.5,37.982    ",
+                              "type": "polygon"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_18_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_19_",
+                          "name": "SVGID_19_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "cx": "9.765625e-004",
+                          "cy": "53.7339",
+                          "elements": [
+                            {
+                              "name": "stop",
+                              "offset": "0",
+                              "stopColor": "#4D4D4D",
+                              "style": {
+                                "stopColor": "#4D4D4D"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.09",
+                              "stopColor": "#4D4D4D",
+                              "style": {
+                                "stopColor": "#4D4D4D"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.13",
+                              "stopColor": "#646464",
+                              "style": {
+                                "stopColor": "#646464"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.23",
+                              "stopColor": "#939393",
+                              "style": {
+                                "stopColor": "#939393"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.28",
+                              "stopColor": "#A5A5A5",
+                              "style": {
+                                "stopColor": "#A5A5A5"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.42",
+                              "stopColor": "#D5D7D8",
+                              "style": {
+                                "stopColor": "#D5D7D8"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.49",
+                              "stopColor": "#DCDDDE",
+                              "style": {
+                                "stopColor": "#DCDDDE"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.55",
+                              "stopColor": "#E6E6E6",
+                              "style": {
+                                "stopColor": "#E6E6E6"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.61",
+                              "stopColor": "#E1E1E1",
+                              "style": {
+                                "stopColor": "#E1E1E1"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.68",
+                              "stopColor": "#D1D1D1",
+                              "style": {
+                                "stopColor": "#D1D1D1"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.77",
+                              "stopColor": "#B8B8B8",
+                              "style": {
+                                "stopColor": "#B8B8B8"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.86",
+                              "stopColor": "#959595",
+                              "style": {
+                                "stopColor": "#959595"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.95",
+                              "stopColor": "#686868",
+                              "style": {
+                                "stopColor": "#686868"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "1",
+                              "stopColor": "#4D4D4D",
+                              "style": {
+                                "stopColor": "#4D4D4D"
+                              },
+                              "type": "stop"
+                            }
+                          ],
+                          "gradientTransform": "matrix(13.0435 5.4939 5.4939 -13.0435 -196.719 740.3613)",
+                          "gradientUnits": "userSpaceOnUse",
+                          "id": "SVGID_20_",
+                          "name": "SVGID_20_",
+                          "r": "0.9994",
+                          "type": "radialGradient"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_19_)",
+                          "fill": {
+                            "url": "url(#SVGID_20_)"
+                          },
+                          "name": "polygon",
+                          "points": "100.596,32.517 117.529,39.65 110.388,56.604 93.455,49.472       ",
+                          "type": "polygon"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "height": "38.025",
+                              "id": "SVGID_21_",
+                              "name": "SVGID_21_",
+                              "type": "rect",
+                              "width": "12.575",
+                              "x": "99.925",
+                              "y": "0"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_21_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_22_",
+                          "name": "SVGID_22_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "name": "stop",
+                              "offset": "0",
+                              "stopColor": "#5C5D60",
+                              "style": {
+                                "stopColor": "#5C5D60"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.45",
+                              "stopColor": "#ECECED",
+                              "style": {
+                                "stopColor": "#ECECED"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.57",
+                              "stopColor": "#D9D9DB",
+                              "style": {
+                                "stopColor": "#D9D9DB"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.77",
+                              "stopColor": "#B1B3B6",
+                              "style": {
+                                "stopColor": "#B1B3B6"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "1",
+                              "stopColor": "#5C5D60",
+                              "style": {
+                                "stopColor": "#5C5D60"
+                              },
+                              "type": "stop"
+                            }
+                          ],
+                          "gradientTransform": "matrix(12.5752 0 0 -12.5752 99.9668 694.4001)",
+                          "gradientUnits": "userSpaceOnUse",
+                          "id": "SVGID_23_",
+                          "name": "SVGID_23_",
+                          "type": "linearGradient",
+                          "x1": "-0.0024",
+                          "x2": "0.9976",
+                          "y1": "53.7085",
+                          "y2": "53.7085"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_22_)",
+                          "fill": {
+                            "url": "url(#SVGID_23_)"
+                          },
+                          "height": "38.025",
+                          "name": "rect",
+                          "type": "rect",
+                          "width": "12.575",
+                          "x": "99.925",
+                          "y": "0"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "id": "Group_Pipe1",
+                  "name": "Group_Pipe1",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "d": "M43.064,26.615c0,7.215,5.849,13.063,13.064,13.063c7.216,0,13.066-5.848,13.066-13.063     c0-7.216-5.851-13.065-13.066-13.065C48.913,13.55,43.064,19.399,43.064,26.615",
+                              "id": "SVGID_24_",
+                              "name": "SVGID_24_",
+                              "type": "path"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_24_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_25_",
+                          "name": "SVGID_25_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "cx": "0.0063",
+                          "cy": "53.7163",
+                          "elements": [
+                            {
+                              "name": "stop",
+                              "offset": "0",
+                              "stopColor": "#ECECED",
+                              "style": {
+                                "stopColor": "#ECECED"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.17",
+                              "stopColor": "#DEDEDF",
+                              "style": {
+                                "stopColor": "#DEDEDF"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.48",
+                              "stopColor": "#B8B8BA",
+                              "style": {
+                                "stopColor": "#B8B8BA"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.91",
+                              "stopColor": "#7B7C7F",
+                              "style": {
+                                "stopColor": "#7B7C7F"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "1",
+                              "stopColor": "#6D6E71",
+                              "style": {
+                                "stopColor": "#6D6E71"
+                              },
+                              "type": "stop"
+                            }
+                          ],
+                          "gradientTransform": "matrix(13.0642 0 0 -13.0642 56.052 728.3782)",
+                          "gradientUnits": "userSpaceOnUse",
+                          "id": "SVGID_26_",
+                          "name": "SVGID_26_",
+                          "r": "1",
+                          "type": "radialGradient"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_25_)",
+                          "fill": {
+                            "url": "url(#SVGID_26_)"
+                          },
+                          "height": "26.128",
+                          "name": "rect",
+                          "type": "rect",
+                          "width": "26.13",
+                          "x": "43.064",
+                          "y": "13.55"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "id": "Group_Center",
+                  "name": "Group_Center",
+                  "type": "group"
+                }
+              ],
+              "viewBox": "0 0 112.5 53.71"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.0712,
+              "width": 0.09,
+              "x": 0.32,
+              "y": 0.1935
+            },
+            "props": {
+              "text": "Tape Inspection (Splicing Tape)",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Drawing_19"
+            },
+            "position": {
+              "height": 0.1288,
+              "width": 0.1406,
+              "x": 0.1603,
+              "y": 0.1618
+            },
+            "props": {
+              "elements": [
+                {
+                  "d": "M25.460425283002944 6.870453645579213L98.00001164821045 6.599999352239985 77.62624151121412 30.40000037939237 2.4000009127287663 29.994317004941834 25.460425283002944 6.735227143723497 25.460425283002944 6.735227143723497 25.23653787505453 6.735227143723497 25.23653787505453 6.735227143723497",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "pen-path",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "path"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 100 35"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Drawing_20"
+            },
+            "position": {
+              "height": 0.12,
+              "width": 0.0894,
+              "x": 0.5292,
+              "y": 0.0406
+            },
+            "props": {
+              "elements": [
+                {
+                  "d": "M25.460425283002944 6.870453645579213L98.00001164821045 6.599999352239985 77.62624151121412 30.40000037939237 2.4000009127287663 29.994317004941834 25.460425283002944 6.735227143723497 25.460425283002944 6.735227143723497 25.23653787505453 6.735227143723497 25.23653787505453 6.735227143723497",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "pen-path",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "path"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 100 35"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_6"
+            },
+            "position": {
+              "height": 0.0725,
+              "width": 0.0475,
+              "x": 0.5519,
+              "y": 0.066
+            },
+            "props": {
+              "text": "CPC",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_10"
+            },
+            "position": {
+              "height": 0.0725,
+              "width": 0.0475,
+              "x": 0.1075,
+              "y": 0.3522
+            },
+            "props": {
+              "text": "CCD",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_11"
+            },
+            "position": {
+              "height": 0.0725,
+              "width": 0.0475,
+              "x": 0.2087,
+              "y": 0.4584
+            },
+            "props": {
+              "text": "CCD",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Drawing_17"
+            },
+            "position": {
+              "height": 0.1288,
+              "width": 0.0838,
+              "x": 0.1894,
+              "y": 0.4313
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "name": "perspective-polygon",
+                  "specialPath": {
+                    "angle": 359,
+                    "corners": 4,
+                    "height": 46.210808906848044,
+                    "rounding": 0,
+                    "width": 69.21080938368519,
+                    "x": 107.79459549889262,
+                    "y": 22.39459549889208
+                  },
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "2px"
+                  },
+                  "transform": "matrix(0.9998477101325989 -0.017452405765652657 0.017452405765652657 0.9998477101325989 -0.7723962664604187 2.492152452468872)",
+                  "type": "perspective-star"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "97.40198516845703 11.79776382446289 89.99604034423828 67.40446853637695"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_12"
+            },
+            "position": {
+              "height": 0.0725,
+              "width": 0.0475,
+              "x": 0.2112,
+              "y": 0.5696
+            },
+            "props": {
+              "text": "CCD",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Drawing_18"
+            },
+            "position": {
+              "height": 0.1288,
+              "width": 0.0838,
+              "x": 0.1919,
+              "y": 0.5425
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "name": "perspective-polygon",
+                  "specialPath": {
+                    "angle": 359,
+                    "corners": 4,
+                    "height": 46.210808906848044,
+                    "rounding": 0,
+                    "width": 69.21080938368519,
+                    "x": 107.79459549889262,
+                    "y": 22.39459549889208
+                  },
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "2px"
+                  },
+                  "transform": "matrix(0.9998477101325989 -0.017452405765652657 0.017452405765652657 0.9998477101325989 -0.7723962664604187 2.492152452468872)",
+                  "type": "perspective-star"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "97.40198516845703 11.79776382446289 89.99604034423828 67.40446853637695"
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "pipes": [
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_49",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [
+                                  {
+                                    "connections": [],
+                                    "x": 0.2184,
+                                    "y": 0.9208
+                                  }
+                                ],
+                                "x": 0.2184,
+                                "y": 0.9612
+                              }
+                            ],
+                            "x": 0.9791,
+                            "y": 0.9612
+                          }
+                        ],
+                        "x": 0.9791,
+                        "y": 0.3129
+                      }
+                    ],
+                    "x": 0.6756,
+                    "y": 0.3129
+                  }
+                ],
+                "x": 0.6756,
+                "y": 0.3624
+              },
+              "start": "none",
+              "stroke": "#D90000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_0",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.0455,
+                        "y": 0.4251
+                      }
+                    ],
+                    "x": 0.0455,
+                    "y": 0.3894
+                  }
+                ],
+                "x": 0.1007,
+                "y": 0.3894
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_2",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.2009,
+                                "y": 0.6082
+                              }
+                            ],
+                            "x": 0.1786,
+                            "y": 0.6082
+                          },
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.2009,
+                                "y": 0.4957
+                              }
+                            ],
+                            "x": 0.1786,
+                            "y": 0.4957
+                          }
+                        ],
+                        "x": 0.1786,
+                        "y": 0.5139
+                      }
+                    ],
+                    "x": 0.1249,
+                    "y": 0.5139
+                  }
+                ],
+                "x": 0.1249,
+                "y": 0.5294
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_31",
+              "origin": {
+                "connections": [
+                  {
+                    "x": 0.1173,
+                    "y": 0.1411
+                  }
+                ],
+                "x": 0.0669,
+                "y": 0.1411
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_35",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.3111,
+                    "y": 0.2311
+                  }
+                ],
+                "x": 0.2808,
+                "y": 0.2311
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_38",
+              "origin": {
+                "connections": [
+                  {
+                    "x": 0.8213,
+                    "y": 0.1609
+                  }
+                ],
+                "x": 0.7815,
+                "y": 0.1609
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "auto",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_63",
+              "origin": {
+                "connections": [],
+                "x": 0,
+                "y": 0
+              },
+              "start": "none",
+              "stroke": "",
+              "visible": true,
+              "width": 10
+            },
+            {
+              "appearance": "auto",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_64",
+              "origin": {
+                "connections": [],
+                "x": 0,
+                "y": 0
+              },
+              "start": "none",
+              "stroke": "",
+              "visible": true,
+              "width": 10
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_56",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.6336,
+                                "y": 0.1585
+                              }
+                            ],
+                            "x": 0.6152,
+                            "y": 0.1585
+                          }
+                        ],
+                        "x": 0.6152,
+                        "y": 0.1049
+                      }
+                    ],
+                    "x": 0.6084,
+                    "y": 0.1049
+                  }
+                ],
+                "x": 0.6084,
+                "y": 0.1049
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_52",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.4446,
+                    "y": 0.2282
+                  }
+                ],
+                "x": 0.4154,
+                "y": 0.2282
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_1",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.1007,
+                    "y": 0.5563
+                  }
+                ],
+                "x": 0.0741,
+                "y": 0.5563
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_11",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.5117,
+                    "y": 0.4952
+                  }
+                ],
+                "x": 0.4844,
+                "y": 0.4952
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_60",
+              "origin": {
+                "connections": [
+                  {
+                    "x": 0.308,
+                    "y": 0.6068
+                  }
+                ],
+                "x": 0.2648,
+                "y": 0.6068
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_34",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.9092,
+                    "y": 0.1595
+                  }
+                ],
+                "x": 0.8769,
+                "y": 0.1595
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_39",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.8361,
+                    "y": 0.3838
+                  }
+                ],
+                "x": 0.91,
+                "y": 0.3838
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_45",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.6977,
+                    "y": 0.3838
+                  }
+                ],
+                "x": 0.7943,
+                "y": 0.3838
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_22",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.1957,
+                            "y": 0.1247
+                          }
+                        ],
+                        "x": 0.2442,
+                        "y": 0.1247
+                      }
+                    ],
+                    "x": 0.2442,
+                    "y": 0.0893
+                  }
+                ],
+                "x": 0.2878,
+                "y": 0.0893
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_23",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.5412,
+                    "y": 0.2258
+                  }
+                ],
+                "x": 0.5213,
+                "y": 0.2258
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_25",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.5698,
+                    "y": 0.1447
+                  }
+                ],
+                "x": 0.5698,
+                "y": 0.2065
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.1957,
+                            "y": 0.1411
+                          }
+                        ],
+                        "x": 0.4498,
+                        "y": 0.1411
+                      }
+                    ],
+                    "x": 0.4498,
+                    "y": 0.1049
+                  }
+                ],
+                "x": 0.5413,
+                "y": 0.1049
+              },
+              "start": "none",
+              "stroke": "#FF8C00",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_17",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.737,
+                    "y": 0.1622
+                  }
+                ],
+                "x": 0.7118,
+                "y": 0.1622
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_21",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.7648,
+                            "y": 0.1273
+                          }
+                        ],
+                        "x": 0.7648,
+                        "y": 0.1047
+                      }
+                    ],
+                    "x": 0.8504,
+                    "y": 0.1047
+                  }
+                ],
+                "x": 0.8504,
+                "y": 0.1535
+              },
+              "start": "none",
+              "stroke": "#FF8C00",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_26",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.5413,
+                    "y": 0.3873
+                  }
+                ],
+                "x": 0.6195,
+                "y": 0.3873
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_27",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.3593,
+                    "y": 0.3873
+                  }
+                ],
+                "x": 0.4612,
+                "y": 0.3873
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_28",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.1627,
+                    "y": 0.3885
+                  }
+                ],
+                "x": 0.2902,
+                "y": 0.3885
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_24",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.0455,
+                    "y": 0.5294
+                  }
+                ],
+                "x": 0.0455,
+                "y": 0.4925
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_12",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.6195,
+                    "y": 0.4971
+                  }
+                ],
+                "x": 0.5868,
+                "y": 0.4971
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_13",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.7417,
+                    "y": 0.5072
+                  }
+                ],
+                "x": 0.6898,
+                "y": 0.5072
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_14",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.7217,
+                    "y": 0.6005
+                  }
+                ],
+                "x": 0.6898,
+                "y": 0.6005
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_15",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.6174,
+                    "y": 0.5998
+                  }
+                ],
+                "x": 0.5868,
+                "y": 0.5998
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_18",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.4044,
+                    "y": 0.602
+                  }
+                ],
+                "x": 0.3645,
+                "y": 0.602
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_20",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.4056,
+                    "y": 0.4952
+                  }
+                ],
+                "x": 0.3669,
+                "y": 0.4952
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_3",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.3087,
+                    "y": 0.4946
+                  }
+                ],
+                "x": 0.2605,
+                "y": 0.4946
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_4",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [
+                                  {
+                                    "connections": [],
+                                    "x": 0.3183,
+                                    "y": 0.8452
+                                  }
+                                ],
+                                "x": 0.3183,
+                                "y": 0.7487
+                              }
+                            ],
+                            "x": 0.3917,
+                            "y": 0.7487
+                          }
+                        ],
+                        "x": 0.5557,
+                        "y": 0.7487
+                      }
+                    ],
+                    "x": 0.5557,
+                    "y": 0.6481
+                  },
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.7615,
+                        "y": 0.6056
+                      }
+                    ],
+                    "x": 0.8104,
+                    "y": 0.6056
+                  }
+                ],
+                "x": 0.8104,
+                "y": 0.6481
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_5",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.6935,
+                                "y": 0.8239
+                              }
+                            ],
+                            "x": 0.6935,
+                            "y": 0.7487
+                          }
+                        ],
+                        "x": 0.8434,
+                        "y": 0.7487
+                      }
+                    ],
+                    "x": 0.8434,
+                    "y": 0.5072
+                  }
+                ],
+                "x": 0.7943,
+                "y": 0.5072
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_6",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.3825,
+                            "y": 0.8022
+                          }
+                        ],
+                        "x": 0.3688,
+                        "y": 0.8022
+                      }
+                    ],
+                    "x": 0.3688,
+                    "y": 0.8819
+                  }
+                ],
+                "x": 0.3512,
+                "y": 0.8819
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_7",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.5185,
+                    "y": 0.8006
+                  }
+                ],
+                "x": 0.4888,
+                "y": 0.8006
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_8",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.5577,
+                    "y": 0.8618
+                  }
+                ],
+                "x": 0.5577,
+                "y": 0.8318
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_10",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.5268,
+                    "y": 0.8949
+                  }
+                ],
+                "x": 0.487,
+                "y": 0.8949
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_19",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.7555,
+                            "y": 0.7977
+                          }
+                        ],
+                        "x": 0.7413,
+                        "y": 0.7977
+                      }
+                    ],
+                    "x": 0.7413,
+                    "y": 0.8567
+                  }
+                ],
+                "x": 0.7256,
+                "y": 0.8567
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_30",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.9256,
+                    "y": 0.861
+                  }
+                ],
+                "x": 0.9256,
+                "y": 0.8225
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_32",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.8915,
+                    "y": 0.8947
+                  }
+                ],
+                "x": 0.8474,
+                "y": 0.8947
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_36",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [
+                                  {
+                                    "connections": [],
+                                    "x": 0.3242,
+                                    "y": 0.5139
+                                  }
+                                ],
+                                "x": 0.3242,
+                                "y": 0.4411
+                              }
+                            ],
+                            "x": 0.1579,
+                            "y": 0.4411
+                          },
+                          {
+                            "connections": [
+                              {
+                                "connections": [
+                                  {
+                                    "connections": [
+                                      {
+                                        "connections": [
+                                          {
+                                            "connections": [],
+                                            "x": 0.2116,
+                                            "y": 0.7487
+                                          }
+                                        ],
+                                        "x": 0.2116,
+                                        "y": 0.7207
+                                      }
+                                    ],
+                                    "x": 0.0414,
+                                    "y": 0.7207
+                                  }
+                                ],
+                                "x": 0.0414,
+                                "y": 0.6165
+                              }
+                            ],
+                            "x": 0.1579,
+                            "y": 0.6165
+                          }
+                        ],
+                        "x": 0.1579,
+                        "y": 0.5563
+                      }
+                    ],
+                    "x": 0.3411,
+                    "y": 0.5563
+                  }
+                ],
+                "x": 0.3411,
+                "y": 0.6056
+              },
+              "start": "none",
+              "stroke": "#808080",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_36",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.3411,
+                                "y": 0.39
+                              }
+                            ],
+                            "x": 0.3411,
+                            "y": 0.4411
+                          },
+                          {
+                            "connections": [],
+                            "x": 0.6625,
+                            "y": 0.3873
+                          }
+                        ],
+                        "x": 0.6625,
+                        "y": 0.4411
+                      },
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [
+                                  {
+                                    "connections": [],
+                                    "x": 0.4844,
+                                    "y": 0.2282
+                                  }
+                                ],
+                                "x": 0.4844,
+                                "y": 0.2726
+                              },
+                              {
+                                "connections": [
+                                  {
+                                    "connections": [],
+                                    "x": 0.6781,
+                                    "y": 0.175
+                                  }
+                                ],
+                                "x": 0.6766,
+                                "y": 0.175
+                              }
+                            ],
+                            "x": 0.6766,
+                            "y": 0.2726
+                          }
+                        ],
+                        "x": 0.99,
+                        "y": 0.2726
+                      }
+                    ],
+                    "x": 0.99,
+                    "y": 0.4411
+                  },
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.7731,
+                        "y": 0.7996
+                      },
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [
+                                  {
+                                    "connections": [
+                                      {
+                                        "connections": [
+                                          {
+                                            "connections": [
+                                              {
+                                                "connections": [],
+                                                "x": 0.2118,
+                                                "y": 0.8152
+                                              }
+                                            ],
+                                            "x": 0.2118,
+                                            "y": 0.8452
+                                          }
+                                        ],
+                                        "x": 0.1714,
+                                        "y": 0.8452
+                                      }
+                                    ],
+                                    "x": 0.1714,
+                                    "y": 0.899
+                                  }
+                                ],
+                                "x": 0.1714,
+                                "y": 0.9849
+                              },
+                              {
+                                "connections": [],
+                                "x": 0.2009,
+                                "y": 0.899
+                              }
+                            ],
+                            "x": 0.2009,
+                            "y": 0.9849
+                          },
+                          {
+                            "connections": [],
+                            "x": 0.4069,
+                            "y": 0.7996
+                          }
+                        ],
+                        "x": 0.4069,
+                        "y": 0.9849
+                      }
+                    ],
+                    "x": 0.7731,
+                    "y": 0.9849
+                  }
+                ],
+                "x": 0.99,
+                "y": 0.9849
+              },
+              "start": "none",
+              "stroke": "#808080",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_43",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.7961,
+                                "y": 0.3511
+                              }
+                            ],
+                            "x": 0.7961,
+                            "y": 0.3288
+                          }
+                        ],
+                        "x": 0.6513,
+                        "y": 0.3288
+                      }
+                    ],
+                    "x": 0.1301,
+                    "y": 0.3288
+                  }
+                ],
+                "x": 0.1301,
+                "y": 0.3501
+              },
+              "start": "none",
+              "stroke": "#FF8C00",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_46",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.8915,
+                                "y": 0.9163
+                              }
+                            ],
+                            "x": 0.87,
+                            "y": 0.9163
+                          }
+                        ],
+                        "x": 0.87,
+                        "y": 0.4523
+                      }
+                    ],
+                    "x": 0.6519,
+                    "y": 0.4523
+                  }
+                ],
+                "x": 0.6519,
+                "y": 0.4947
+              },
+              "start": "none",
+              "stroke": "#FF8C00",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_48",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.764,
+                            "y": 0.5739
+                          }
+                        ],
+                        "x": 0.764,
+                        "y": 0.546
+                      }
+                    ],
+                    "x": 0.2333,
+                    "y": 0.546
+                  }
+                ],
+                "x": 0.2332,
+                "y": 0.5659
+              },
+              "start": "none",
+              "stroke": "#FF8C00",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_47",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.5868,
+                                "y": 0.8819
+                              }
+                            ],
+                            "x": 0.606,
+                            "y": 0.8819
+                          }
+                        ],
+                        "x": 0.606,
+                        "y": 0.6226
+                      }
+                    ],
+                    "x": 0.652,
+                    "y": 0.6226
+                  }
+                ],
+                "x": 0.652,
+                "y": 0.6226
+              },
+              "start": "none",
+              "stroke": "#FF8C00",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_50",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.1313,
+                            "y": 0.661
+                          }
+                        ],
+                        "x": 0.4919,
+                        "y": 0.661
+                      },
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.4723,
+                            "y": 0.5185
+                          }
+                        ],
+                        "x": 0.4919,
+                        "y": 0.5185
+                      }
+                    ],
+                    "x": 0.4919,
+                    "y": 0.6181
+                  }
+                ],
+                "x": 0.4769,
+                "y": 0.6181
+              },
+              "start": "none",
+              "stroke": "#808080",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_51",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.9267,
+                                "y": 0.5485
+                              }
+                            ],
+                            "x": 0.9267,
+                            "y": 0.661
+                          },
+                          {
+                            "connections": [
+                              {
+                                "connections": [
+                                  {
+                                    "connections": [],
+                                    "x": 0.5588,
+                                    "y": 0.9163
+                                  }
+                                ],
+                                "x": 0.6206,
+                                "y": 0.9163
+                              }
+                            ],
+                            "x": 0.6206,
+                            "y": 0.661
+                          }
+                        ],
+                        "x": 0.8764,
+                        "y": 0.661
+                      }
+                    ],
+                    "x": 0.8764,
+                    "y": 0.875
+                  }
+                ],
+                "x": 0.8921,
+                "y": 0.875
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_42",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.181,
+                        "y": 0.2274
+                      }
+                    ],
+                    "x": 0.1554,
+                    "y": 0.2274
+                  }
+                ],
+                "x": 0.1554,
+                "y": 0.1371
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_9",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.0445,
+                    "y": 0.9579
+                  }
+                ],
+                "x": 0.0169,
+                "y": 0.9579
+              },
+              "start": "none",
+              "stroke": "#D90000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_53",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.0444,
+                    "y": 0.9114
+                  }
+                ],
+                "x": 0.017,
+                "y": 0.9114
+              },
+              "start": "none",
+              "stroke": "#FF8C00",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_54",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.0439,
+                    "y": 0.8592
+                  }
+                ],
+                "x": 0.0163,
+                "y": 0.8592
+              },
+              "start": "none",
+              "stroke": "#808080",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_55",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.0439,
+                    "y": 0.8069
+                  }
+                ],
+                "x": 0.0165,
+                "y": 0.8069
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_29",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.8868,
+                    "y": 0.7968
+                  }
+                ],
+                "x": 0.8619,
+                "y": 0.7968
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_33",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.6523,
+                    "y": 0.6605
+                  }
+                ],
+                "x": 0.6206,
+                "y": 0.6605
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_57",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.9166,
+                    "y": 0.6606
+                  }
+                ],
+                "x": 0.885,
+                "y": 0.6606
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_58",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.7128,
+                    "y": 0.6475
+                  }
+                ],
+                "x": 0.7674,
+                "y": 0.6475
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_59",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.669,
+                    "y": 0.0897
+                  }
+                ],
+                "x": 0.669,
+                "y": 0.1399
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_44",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.7815,
+                            "y": 0.4709
+                          }
+                        ],
+                        "x": 0.7815,
+                        "y": 0.4312
+                      }
+                    ],
+                    "x": 0.2324,
+                    "y": 0.4312
+                  }
+                ],
+                "x": 0.2324,
+                "y": 0.4575
+              },
+              "start": "none",
+              "stroke": "#FF8C00",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_40",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.9664,
+                    "y": 0.3523
+                  }
+                ],
+                "x": 0.9663,
+                "y": 0.1915
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_37",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.8766,
+                    "y": 0.8609
+                  }
+                ],
+                "x": 0.8766,
+                "y": 0.8225
+              },
+              "start": "arrowOutward",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_41",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.9518,
+                                "y": 0.1622
+                              }
+                            ],
+                            "x": 0.9518,
+                            "y": 0.3028
+                          },
+                          {
+                            "connections": [],
+                            "x": 0.6636,
+                            "y": 0.3543
+                          }
+                        ],
+                        "x": 0.6636,
+                        "y": 0.3028
+                      }
+                    ],
+                    "x": 0.3648,
+                    "y": 0.3028
+                  }
+                ],
+                "x": 0.3648,
+                "y": 0.2726
+              },
+              "start": "none",
+              "stroke": "#FF8C00",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_16",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.5105,
+                    "y": 0.602
+                  }
+                ],
+                "x": 0.4832,
+                "y": 0.602
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "auto",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_61",
+              "origin": {
+                "connections": [],
+                "x": 0.6156,
+                "y": 0.8025
+              },
+              "start": "none",
+              "stroke": "",
+              "visible": true,
+              "width": 10
+            },
+            {
+              "appearance": "auto",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_62",
+              "origin": {
+                "connections": [],
+                "x": 0.3548,
+                "y": 0.3028
+              },
+              "start": "none",
+              "stroke": "",
+              "visible": true,
+              "width": 10
+            },
+            {
+              "appearance": "auto",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_65",
+              "origin": {
+                "connections": [],
+                "x": 0.6524,
+                "y": 0.3129
+              },
+              "start": "none",
+              "stroke": "",
+              "visible": true,
+              "width": 10
+            }
+          ],
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

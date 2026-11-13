@@ -1,0 +1,412 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 347,
+      "width": 1162
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "style": {
+            "fontSize": "20px",
+            "fontWeight": "bold"
+          },
+          "text": "LINES (4)"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontWeight": "bold"
+                  },
+                  "text": "CATHODE 1 LINE"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "text": "Status: RUN/STOP"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "props": {
+                  "text": "Output: ___ kg/hr"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_2"
+                },
+                "props": {
+                  "text": "Key Params: Visc, Temp, RPM"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_3"
+                },
+                "props": {
+                  "text": "Alarms: (count)"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "basis": "33%",
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#CCCCFF",
+                "borderRadius": "6px",
+                "borderStyle": "solid",
+                "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                "padding": "25px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontWeight": "bold"
+                  },
+                  "text": "ANODE 1 LINE"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "text": "Status: RUN/STOP"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "props": {
+                  "text": "Output: ___ kg/hr"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_2"
+                },
+                "props": {
+                  "text": "Key Params: Visc, Temp, RPM"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_3"
+                },
+                "props": {
+                  "text": "Alarms: (count)"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "basis": "33%",
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#8A8AFF",
+                "borderRadius": "6px",
+                "borderStyle": "solid",
+                "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                "padding": "25px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontWeight": "bold"
+                  },
+                  "text": "COMMON ACTIONS"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "text": "• Start Batch"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "props": {
+                  "text": "• Pause / Resume"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_2"
+                },
+                "props": {
+                  "text": "• End Batch"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_3"
+                },
+                "props": {
+                  "text": "• Change Recipe"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "props": {
+              "basis": "33%",
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#8AFFFF",
+                "borderRadius": "6px",
+                "borderStyle": "solid",
+                "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                "padding": "25px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "props": {
+          "gap": "50px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontWeight": "bold"
+                  },
+                  "text": "CATHODE 2 LINE"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "text": "Status: RUN/STOP"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "props": {
+                  "text": "Output: ___ kg/hr"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_2"
+                },
+                "props": {
+                  "text": "Key Params: Visc, Temp, RPM"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_3"
+                },
+                "props": {
+                  "text": "Alarms: (count)"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "basis": "50%",
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#CCCCFF",
+                "borderRadius": "6px",
+                "borderStyle": "solid",
+                "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontWeight": "bold"
+                  },
+                  "text": "ANODE 2 LINE"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "text": "Status: RUN/STOP"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "props": {
+                  "text": "Output: ___ kg/hr"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_2"
+                },
+                "props": {
+                  "text": "Key Params: Visc, Temp, RPM"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_3"
+                },
+                "props": {
+                  "text": "Alarms: (count)"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "basis": "50%",
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#8A8AFF",
+                "borderRadius": "6px",
+                "borderStyle": "solid",
+                "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "148px",
+          "grow": 1
+        },
+        "props": {
+          "gap": "50px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "gap": "15px",
+      "style": {
+        "backgroundColor": "#f5f7fb",
+        "padding": "20px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

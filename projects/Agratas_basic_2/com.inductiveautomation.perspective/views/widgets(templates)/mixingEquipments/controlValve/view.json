@@ -1,0 +1,96 @@
+{
+  "custom": {},
+  "params": {
+    "name": "[default]agratas/sanand/zoneE/line1/mixing/equipments/Control valve"
+  },
+  "propConfig": {
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 100,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "params": {
+                  "tabValue": "1"
+                },
+                "view": "Page/1F_Templates/1F_mainScreen"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Valve"
+        },
+        "position": {
+          "height": 0.74,
+          "width": 0.95,
+          "x": 0.0206,
+          "y": -0.0049
+        },
+        "props": {
+          "label": {
+            "location": "hidden"
+          },
+          "value": {
+            "location": "hidden"
+          }
+        },
+        "type": "ia.symbol.valve"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.2461,
+          "width": 0.8518,
+          "x": 0.0825,
+          "y": 0.7214
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "name": "{view.params.name}"
+                },
+                "tagPath": "{name}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "PipingAndInst/label"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "100:100",
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

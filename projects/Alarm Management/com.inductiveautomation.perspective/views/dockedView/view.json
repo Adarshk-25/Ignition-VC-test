@@ -1,0 +1,228 @@
+{
+  "custom": {},
+  "params": {
+    "equipmentType": "value"
+  },
+  "propConfig": {
+    "params.equipmentType": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 247,
+      "width": 365
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tsystem.perspective.closeDock(\"sideDock\")"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "path": "material/close"
+                }
+              },
+              "style": {
+                "backgroundColor": "#D83838"
+              },
+              "text": ""
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "39px"
+        },
+        "props": {
+          "justify": "flex-end"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "136px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.params.equipmentType}+\" Speed\""
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "TextField"
+                },
+                "position": {
+                  "basis": "150px"
+                },
+                "type": "ia.input.text-field"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "47px"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "136px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.params.equipmentType}+\" Pressure\""
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "TextField"
+                },
+                "position": {
+                  "basis": "150px"
+                },
+                "type": "ia.input.text-field"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "47px"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "155px"
+        },
+        "props": {
+          "alignItems": "center",
+          "direction": "column",
+          "justify": "space-around"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tif self.view.params.equipmentType\u003d\u003d\"Fan\":\n\t\tspeed \u003dself.parent.parent.getChild(\"FlexContainer\").getChild(\"FlexContainer_0\").getChild(\"TextField\").props.text\n\t\tpressure\u003dself.parent.parent.getChild(\"FlexContainer\").getChild(\"FlexContainer_1\").getChild(\"TextField\").props.text\n\t\tsystem.perspective.sendMessage(\u0027updateText\u0027, {\u0027speed\u0027: speed,\u0027pressure\u0027:pressure}, scope\u003d\u0027page\u0027)\n\telif self.view.params.equipmentType\u003d\u003d\"Pump\":\n\t\tspeed \u003dself.parent.parent.getChild(\"FlexContainer\").getChild(\"FlexContainer_0\").getChild(\"TextField\").props.text\n\t\tpressure\u003dself.parent.parent.getChild(\"FlexContainer\").getChild(\"FlexContainer_1\").getChild(\"TextField\").props.text\n\t\tsystem.perspective.sendMessage(\u0027updateText1\u0027, {\u0027speed\u0027: speed,\u0027pressure\u0027:pressure}, scope\u003d\u0027page\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "84px"
+            },
+            "props": {
+              "text": "Ok"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tsystem.perspective.closeDock(\"sideDock\")"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_0"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "42px"
+        },
+        "props": {
+          "justify": "space-evenly"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

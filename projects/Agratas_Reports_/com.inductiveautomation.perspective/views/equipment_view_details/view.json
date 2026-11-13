@@ -1,0 +1,940 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 518,
+      "width": 666
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "254px"
+            },
+            "props": {
+              "text": "ColdPress1- Detailed Parameters"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "70px"
+        },
+        "props": {
+          "alignItems": "center",
+          "direction": "column",
+          "justify": "space-between",
+          "style": {
+            "gap": "20px",
+            "padding": "20px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Average Thickness"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/averagethickness.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": "600",
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "thickness"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "CalCycle Time"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/calenderCycleTime.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": "600",
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "cycletime"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Defect"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/defect.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": "600",
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "defect"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Electrode Width"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/electrodeWidth.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": 600,
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "electrode width"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "StartTime"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/startTime.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": "600",
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "StartTime"
+            },
+            "position": {
+              "basis": "NaN%",
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Infeed Tension"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/infeedTension.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": 600,
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Infeed Tension"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Machine Fbs"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/machineFbs.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": 600,
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "machineFbs"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Main Roll Gap"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/mainRollGap.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": 600,
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "mainrollgap"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Main Roll Temp"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/mainRollTemperature.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": 600,
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "rolltemp"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Outfeed Tension"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/outfeedTension.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": "600",
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "outfeedtension"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "EndTime"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/endTime.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": "600",
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "EndTime"
+            },
+            "position": {
+              "basis": "NaN%",
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Process Step"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/processStep.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": "600",
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "process step"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "parameter"
+                },
+                "position": {
+                  "basis": "32px"
+                },
+                "props": {
+                  "style": {
+                    "color": "#2B2B2B",
+                    "fontSize": "12px"
+                  },
+                  "text": "Production Order"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "value"
+                },
+                "position": {
+                  "basis": "27px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/productionOrder.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#1E3A8A",
+                    "fontSize": "16px",
+                    "fontWeight": "600",
+                    "marginTop": "4px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "prodorder"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": "10px",
+                "boxShadow": "0px 1px 4px rgba(0,0,0,0.08)",
+                "minWidth": "120px",
+                "padding": "12px 16px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "460px",
+          "shrink": 0
+        },
+        "props": {
+          "alignItems": "flex-start",
+          "style": {
+            "gap": "16px",
+            "padding": "20px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#F8FAFC",
+        "borderRadius": "12px",
+        "height": 500,
+        "padding": "20px",
+        "width": 800
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

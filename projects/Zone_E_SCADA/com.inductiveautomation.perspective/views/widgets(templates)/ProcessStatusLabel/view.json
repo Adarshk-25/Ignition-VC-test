@@ -1,0 +1,104 @@
+{
+  "custom": {},
+  "params": {
+    "equipmentName": "value",
+    "status": "value"
+  },
+  "propConfig": {
+    "params.equipmentName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 62,
+      "width": 140
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.7097,
+          "width": 0.9,
+          "x": 0.067,
+          "y": 0.1724
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "code": "\n    return {\n        0: \"LightGray\",\n        1: \"#228B22\", \n        2:\"#AC0000\",\n        3: \"orange\"  \n    }.get(value, \"LightGray\")",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.style.borderColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "code": "    return {\n        0: \"LightGray\",\n        1: \"#228B22\", \n        2:\"red\",\n        3: \"orange\"  \n    }.get(value, \"LightGray\")",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.status} \u003d 2, \"Title/blink\", \"\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "color": "#FFFFFF",
+            "fontWeight": "bold",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

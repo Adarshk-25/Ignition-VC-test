@@ -1,0 +1,288 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": 0
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PlasticzerStorageSystem"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/1F_Templates/PlasticzerStorageSystem"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PaaDilutionSystem"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/1F_Templates/PaaDilutionSystem"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SwcntFeedingSys"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/1F_Templates/SwcntFeedingSys"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SWCNT Storage System"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/1F_Templates/SWCNT Storage System"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SBRstoragesystem"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "props": {
+          "path": "Page/1F_Templates/SBRstoragesystem"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Slurry_mixing"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "props": {
+          "path": "Page/1F_Templates/Slurry_mixing_1"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SlurryStorage"
+        },
+        "position": {
+          "tabIndex": 11
+        },
+        "props": {
+          "path": "Page/1F_Templates/SlurryStorage"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "WasteSystem1"
+        },
+        "position": {
+          "tabIndex": 12
+        },
+        "props": {
+          "path": "Page/1F_Templates/WasteSystem1"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "waste_system_2"
+        },
+        "position": {
+          "tabIndex": 13
+        },
+        "props": {
+          "path": "Page/1F_Templates/waste_system_2"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Vacuum Pump System"
+        },
+        "position": {
+          "tabIndex": 14
+        },
+        "props": {
+          "path": "Page/1F_Templates/Vacuum Pump System"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "slurry_coater_A"
+        },
+        "position": {
+          "tabIndex": 15
+        },
+        "props": {
+          "path": "Page/1F_Templates/slurry_coater_A"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "slurry_coater_B"
+        },
+        "position": {
+          "tabIndex": 16
+        },
+        "props": {
+          "path": "Page/1F_Templates/slurry_coater_B"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Slurry_mixing_0"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "props": {
+          "path": "Page/1F_Templates/Slurry_mixing_2"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Slurry_mixing_1"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "props": {
+          "path": "Page/1F_Templates/Slurry_mixing_3"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Slurry_mixing_2"
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "props": {
+          "path": "Page/1F_Templates/Slurry_mixing_4"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Exhaust System"
+        },
+        "position": {
+          "tabIndex": 17
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]agratas/sanand/zoneE/line1/mixing"
+          },
+          "path": "Page/1F_Templates/Exhaust System"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PaaMeteringSystem_0"
+        },
+        "props": {
+          "path": "Page/1F_Templates/PaaMeteringSystem"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DIW Storage System"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/1F_Templates/DIW Storage System"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 250
+      },
+      "tabStyle": {
+        "active": {
+          "color": "#000000",
+          "fontFamily": "sans-serif",
+          "fontSize": 9
+        },
+        "inactive": {
+          "color": "#464242",
+          "fontFamily": "sans-serif",
+          "fontSize": 8.2
+        }
+      },
+      "tabs": [
+        "PAA Metering System",
+        "PAA Dilution System",
+        "DIW Storage System",
+        "Plastcizer Storage System",
+        "SWCNT Feeding System",
+        "SWCNT Storage System",
+        "SBR Storage System",
+        "Slurry Mixing System- 1",
+        "Slurry Mixing System- 2",
+        "Slurry Mixing System- 3",
+        "Slurry Mixing System- 4",
+        "Slurry Storage System",
+        "Waste System- 1",
+        "Waste System- 2",
+        "Vacuum Pump System",
+        "Slurry Coater- A",
+        "Slurry Coater- B",
+        "Exhaust System"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "custom": {},
+  "params": {
+    "tagpath": "[default]Pump"
+  },
+  "propConfig": {
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px"
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}/current"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

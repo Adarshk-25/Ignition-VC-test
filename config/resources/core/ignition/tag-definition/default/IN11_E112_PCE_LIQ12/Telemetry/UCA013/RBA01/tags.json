@@ -1,0 +1,58 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E112.PCE.LIQ12/Telemetry/UCA013/RBA01/Fault",
+    "dataType": "Boolean",
+    "name": "Fault",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E112.PCE.LIQ12/Telemetry/UCA013/RBA01/Charging",
+    "dataType": "Boolean",
+    "name": "Charging",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E112.PCE.LIQ12/Telemetry/UCA013/RBA01/Discahrging",
+    "dataType": "Boolean",
+    "name": "Discahrging",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E112.PCE.LIQ12/Telemetry/UCA013/RBA01/Healthy",
+    "dataType": "Boolean",
+    "name": "Healthy",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E112.PCE.LIQ12/Telemetry/UCA013/RBA01/TimeRemaining",
+    "dataType": "DateTime",
+    "name": "TimeRemaining",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E112.PCE.LIQ12/Telemetry/UCA013/RBA01/ErrorCode",
+    "dataType": "Int4",
+    "name": "ErrorCode",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E112.PCE.LIQ12/Telemetry/UCA013/RBA01/Charge",
+    "dataType": "Float4",
+    "name": "Charge",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  }
+]

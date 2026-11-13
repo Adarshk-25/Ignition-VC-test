@@ -1,0 +1,788 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 812,
+      "width": 1094
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Alarm Icon"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "props": {
+              "color": "--neutral-10",
+              "path": "material/alarm",
+              "style": {
+                "marginLeft": "8px"
+              }
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "Title"
+            },
+            "position": {
+              "basis": "98%",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "exchange/alarm-configurator/font",
+                "fontSize": 25,
+                "paddingBottom": "0.5%",
+                "paddingLeft": "0.2%",
+                "paddingTop": "0.5%"
+              },
+              "text": "Alarm Tables"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "header"
+        },
+        "position": {
+          "basis": "100%",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "classes": "exchange/alarm-configurator/color",
+            "maxHeight": "50px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "alarmStatusDropDownSite"
+            },
+            "position": {
+              "basis": "109px"
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "expression": "1"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tnames\u003d[]\n\tresults\u003dsystem.tag.browse(\"[default]Structure/Agratas\")\n\tfor result in results.getResults():\n\t\tnames.append({\"value\":result[\u0027fullPath\u0027],\"label\":result[\u0027name\u0027]})\n\treturn names",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                },
+                "onChange": {
+                  "enabled": null,
+                  "script": "\tif currentValue!\u003dpreviousValue:\n\t\tself.view.getChild(\"root\").custom.changedName\u003dcurrentValue"
+                }
+              },
+              "props.value": {
+                "onChange": {
+                  "enabled": null,
+                  "script": "    if currentValue !\u003d previousValue:\n        # Enable the dropdown\n       self.getSibling(\"alarmStatusDropDownArea\").props.enabled \u003d True\n       self.getSibling(\"alarmStatusDropDownArea\").props.value\u003dNone\n    else:\n        self.getSibling(\"alarmStatusDropDownArea\").props.enabled \u003d False"
+                }
+              }
+            },
+            "props": {
+              "placeholder": {
+                "color": "#000000",
+                "text": "Select Site"
+              },
+              "style": {
+                "borderColor": "var(--qual-2)"
+              },
+              "value": "[default]Structure/Agratas/Sanand"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "contextMenu": {
+                "enabled": true
+              },
+              "name": "alarmStatusDropDownArea"
+            },
+            "position": {
+              "basis": "125px"
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "expression": "{../alarmStatusDropDownSite.props.value}"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tnames\u003d[]\n\tresults\u003dsystem.tag.browse(value)\n\tfor result in results.getResults():\n\t\tnames.append({\"value\":result[\u0027fullPath\u0027],\"label\":result[\u0027name\u0027]})\n\treturn names",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              },
+              "props.value": {
+                "onChange": {
+                  "enabled": null,
+                  "script": "\tif currentValue!\u003dpreviousValue:\n\t\tself.getSibling(\"alarmStatusDropDownPLine\").props.enabled\u003dTrue\n\t\tself.getSibling(\"alarmStatusDropDownPLine\").props.value\u003dNone\n\telse:\n\t\tself.getSibling(\"alarmStatusDropDownPLine\").props.enabled\u003dFalse"
+                }
+              }
+            },
+            "props": {
+              "placeholder": {
+                "text": "Select Area"
+              },
+              "style": {
+                "borderColor": "var(--qual-2)"
+              },
+              "value": "[default]Structure/Agratas/Sanand/zoneE"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "alarmStatusDropDownPLine"
+            },
+            "position": {
+              "basis": "177px"
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "expression": "{../alarmStatusDropDownArea.props.value}"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tnames\u003d[]\n\tresults\u003dsystem.tag.browse(value)\n\tfor result in results.getResults():\n\t\t#print(result[\u0027fullPath\u0027])\n\t\tnames.append({\"value\":result[\u0027fullPath\u0027],\"label\":result[\u0027name\u0027]})\n\treturn names",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              },
+              "props.value": {
+                "onChange": {
+                  "enabled": null,
+                  "script": "\tif currentValue!\u003dpreviousValue:\n\t\tself.getSibling(\"alarmStatusDropDownEName\").props.enabled\u003dTrue\n\t\tself.getSibling(\"alarmStatusDropDownEName\").props.value\u003dNone\n\telse:\n\t\tself.getSibling(\"alarmStatusDropDownEName\").props.enabled\u003dFalse"
+                }
+              }
+            },
+            "props": {
+              "placeholder": {
+                "color": "#000000",
+                "text": "Select Production Line"
+              },
+              "style": {
+                "borderColor": "var(--qual-2)"
+              },
+              "value": "[default]Structure/Agratas/Sanand/zoneE/Line2"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "alarmStatusDropDownEName"
+            },
+            "position": {
+              "basis": "177px"
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "expression": "{../alarmStatusDropDownPLine.props.value}"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tnames\u003d[]\n\tresults\u003dsystem.tag.browse(value)\n\tfor result in results.getResults():\n\t\t#print(result[\u0027fullPath\u0027])\n\t\tresult[\u0027fullPath\u0027]\u003dstr(result[\u0027fullPath\u0027]).replace(\"[default]\",\"\")\n\t\tnames.append({\"value\":\"*\"+result[\u0027fullPath\u0027]+\"*\",\"label\":result[\u0027name\u0027]})\n\treturn names",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "placeholder": {
+                "color": "#000000",
+                "text": "Select Production Line"
+              },
+              "style": {
+                "borderColor": "var(--qual-2)"
+              },
+              "value": "*Structure/Agratas/Sanand/zoneE/Line2/machine2*"
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "dropDownFlex"
+        },
+        "position": {
+          "basis": "90px"
+        },
+        "props": {
+          "justify": "space-around",
+          "style": {
+            "backgroundColor": "#FFFFFF",
+            "paddingBottom": "10px",
+            "paddingTop": "10px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "alarmStatusTable"
+                    },
+                    "position": {
+                      "basis": "441px"
+                    },
+                    "propConfig": {
+                      "props.filters.active.conditions.source": {
+                        "binding": {
+                          "config": {
+                            "path": "...../dropDownFlex/alarmStatusDropDownEName.props.value"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "columns": {
+                        "active": {
+                          "displayPath": {
+                            "order": 3
+                          },
+                          "eventId": {
+                            "enabled": true
+                          },
+                          "label": {
+                            "enabled": true,
+                            "order": 1
+                          },
+                          "name": {
+                            "order": 0
+                          },
+                          "source": {
+                            "enabled": false
+                          },
+                          "state": {
+                            "enabled": false
+                          }
+                        }
+                      },
+                      "filters": {
+                        "active": {
+                          "conditions": {},
+                          "priorities": {
+                            "diagnostic": true
+                          },
+                          "states": {
+                            "clearUnacked": false
+                          }
+                        }
+                      },
+                      "rowStyles": {
+                        "activeAcked": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "backgroundColor": "",
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "backgroundColor": "",
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "backgroundColor": "",
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "backgroundColor": "",
+                              "classes": "alarm/low",
+                              "color": "#000000"
+                            },
+                            "medium": {
+                              "backgroundColor": "",
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        },
+                        "activeUnacked": {
+                          "base": {
+                            "backgroundColor": "",
+                            "color": "#FFFFFF"
+                          },
+                          "priorities": {
+                            "critical": {
+                              "backgroundColor": "",
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "backgroundColor": "",
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "backgroundColor": "",
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "backgroundColor": "",
+                              "classes": "alarm/low",
+                              "color": "#000000"
+                            },
+                            "medium": {
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        }
+                      },
+                      "style": {
+                        "paddingTop": 2
+                      }
+                    },
+                    "scripts": {
+                      "customMethods": [],
+                      "extensionFunctions": [
+                        {
+                          "enabled": false,
+                          "name": "filterAlarm",
+                          "script": "\t#equipName\u003dalarmEvent.get(\"ParentName\")\n\tdispPath\u003dstr(alarmEvent.getDisplayPath())\n\t#if equipName\u003d\u003dself.view.params.equipmentID:\n\tif self.session.props.auth.user.roles[0]\u003d\u003d\"Operator\":\n\t\tself.parent.parent.parent.parent.getChild(\"FlexContainer\").meta.visible\u003dNone\n\t\tself.parent.parent.parent.parent.getChild(\"FlexContainer\").getChild(\"alarmStatusDropDownSite\").props.value\u003dNone\n\t\treturn True\n\treturn False\n\t\n"
+                        }
+                      ],
+                      "messageHandlers": []
+                    },
+                    "type": "ia.display.alarmstatustable"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "events": {
+                              "component": {
+                                "onActionPerformed": {
+                                  "config": {
+                                    "params": {},
+                                    "view": "Exchange/Alarm Configurator/Alarm Configurator"
+                                  },
+                                  "scope": "C",
+                                  "type": "nav"
+                                }
+                              }
+                            },
+                            "meta": {
+                              "name": "Button"
+                            },
+                            "position": {
+                              "basis": "31px"
+                            },
+                            "props": {
+                              "image": {
+                                "position": "center"
+                              },
+                              "text": "Back"
+                            },
+                            "type": "ia.input.button"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "68px"
+                        },
+                        "props": {
+                          "direction": "column",
+                          "justify": "center"
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "43px"
+                    },
+                    "props": {
+                      "alignContent": "space-around",
+                      "justify": "space-around"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "alarmStatusFlexContainer"
+                },
+                "position": {
+                  "basis": "838px"
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-around"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "alarmStatusTable"
+            },
+            "props": {
+              "justify": "space-around"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "AlarmJournalTable"
+                    },
+                    "position": {
+                      "basis": "423px"
+                    },
+                    "props": {
+                      "columns": {
+                        "displayPath": {
+                          "enabled": true,
+                          "order": 3
+                        },
+                        "eventId": {
+                          "enabled": false
+                        },
+                        "eventState": {
+                          "enabled": false
+                        },
+                        "label": {
+                          "enabled": true,
+                          "order": 4
+                        },
+                        "name": {
+                          "enabled": true,
+                          "order": 0
+                        },
+                        "priority": {
+                          "order": 2
+                        },
+                        "source": {
+                          "enabled": false
+                        }
+                      },
+                      "columnsAssociated": [
+                        {
+                          "enabled": true,
+                          "field": "ParentName",
+                          "order": 1,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        }
+                      ],
+                      "filter": {
+                        "events": {
+                          "cleared": false
+                        },
+                        "priorities": {
+                          "diagnostic": true
+                        }
+                      },
+                      "name": "Alarm DB Journal",
+                      "rowStyles": {
+                        "acked": {
+                          "priorities": {
+                            "critical": {
+                              "classes": "Alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "Alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "Alarm/high"
+                            },
+                            "low": {
+                              "classes": "low"
+                            },
+                            "medium": {
+                              "classes": "Alarm/medium"
+                            }
+                          }
+                        },
+                        "active": {
+                          "base": {
+                            "backgroundColor": "",
+                            "fontWeight": "normal"
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "Alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "Alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "Alarm/high"
+                            },
+                            "low": {
+                              "classes": "low"
+                            },
+                            "medium": {
+                              "classes": "Alarm/medium"
+                            }
+                          }
+                        },
+                        "cleared": {
+                          "priorities": {
+                            "critical": {
+                              "classes": "Alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "Alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "Alarm/high"
+                            },
+                            "low": {
+                              "classes": "Alarm/low"
+                            },
+                            "medium": {
+                              "classes": "Alarm/medium"
+                            }
+                          }
+                        },
+                        "disabled": {
+                          "priorities": {
+                            "critical": {
+                              "classes": "Alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "Alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "Alarm/high"
+                            },
+                            "low": {
+                              "classes": "Alarm/low"
+                            },
+                            "medium": {
+                              "classes": "Alarm/medium"
+                            }
+                          }
+                        },
+                        "enabled": {
+                          "priorities": {
+                            "critical": {
+                              "classes": "Alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "Alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "Alarm/high"
+                            },
+                            "low": {
+                              "classes": "Alarm/low"
+                            },
+                            "medium": {
+                              "classes": "Alarm/medium"
+                            }
+                          }
+                        },
+                        "system": {
+                          "priorities": {
+                            "critical": {
+                              "classes": "Alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "Alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "Alarm/high"
+                            },
+                            "low": {
+                              "classes": "Alarm/low"
+                            },
+                            "medium": {
+                              "classes": "Alarm/medium"
+                            }
+                          }
+                        }
+                      },
+                      "style": {
+                        "borderColor": "var(--qual-2)"
+                      }
+                    },
+                    "scripts": {
+                      "customMethods": [],
+                      "extensionFunctions": [
+                        {
+                          "enabled": false,
+                          "name": "filterAlarm",
+                          "script": "\t#equipName\u003dalarmEvent.get(\"ParentName\")\n\tdispPath\u003dstr(alarmEvent.getDisplayPath())\n\t#if equipName\u003d\u003dself.view.params.equipmentID:\n\tif self.session.props.auth.user.roles[0]\u003d\u003d\"Operator\":\n\t\treturn True\n\telif dispPath.startswith(str(self.view.params.equipmentID)):\n\t\treturn True\n\treturn False"
+                        }
+                      ],
+                      "messageHandlers": []
+                    },
+                    "type": "ia.display.alarmjournaltable"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "events": {
+                              "component": {
+                                "onActionPerformed": {
+                                  "config": {
+                                    "params": {},
+                                    "view": "Exchange/Alarm Configurator/Alarm Configurator"
+                                  },
+                                  "scope": "C",
+                                  "type": "nav"
+                                }
+                              }
+                            },
+                            "meta": {
+                              "name": "Back"
+                            },
+                            "position": {
+                              "basis": "32px"
+                            },
+                            "props": {
+                              "text": "Back"
+                            },
+                            "type": "ia.input.button"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "70px"
+                        },
+                        "props": {
+                          "direction": "column"
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "34px"
+                    },
+                    "props": {
+                      "alignItems": "center",
+                      "justify": "space-around"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "alarmJournalFlexContainer"
+                },
+                "position": {
+                  "basis": "836px"
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-around"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "alarmJournal"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "justify": "space-around"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "tabContainer"
+        },
+        "position": {
+          "basis": "408px",
+          "grow": 1
+        },
+        "props": {
+          "contentStyle": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "var(--qual-2)"
+          },
+          "style": {
+            "backgroundColor": "#FFFFFF"
+          },
+          "tabSize": {
+            "width": 120
+          },
+          "tabStyle": {
+            "active": {
+              "backgroundColor": "#FFFFFF"
+            }
+          },
+          "tabs": [
+            "Alarm Status",
+            "Alarm Journal"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "custom": {
+      "changedName": [],
+      "selectedDate": "value"
+    },
+    "events": {
+      "system": {
+        "onStartup": {
+          "config": {},
+          "enabled": false,
+          "scope": "C",
+          "type": "login"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

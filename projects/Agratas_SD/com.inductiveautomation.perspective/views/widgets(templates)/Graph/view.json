@@ -1,0 +1,356 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 652
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "84px"
+        },
+        "props": {
+          "text": "Real Time Trend",
+          "textStyle": {
+            "alignItems": "flex-start",
+            "alignSelf": "center",
+            "fontSize": "20px",
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "TimeSeriesChart"
+        },
+        "position": {
+          "basis": "411px"
+        },
+        "props": {
+          "autoGenerateSeriesNames": true,
+          "legend": {
+            "visible": true
+          },
+          "series": [
+            {
+              "data": [
+                {
+                  "Pressure": 12,
+                  "Temperature": 52,
+                  "time": 1560469431423
+                },
+                {
+                  "Pressure": 42,
+                  "Temperature": 18,
+                  "time": 1560469432423
+                },
+                {
+                  "Pressure": 81,
+                  "Temperature": 26,
+                  "time": 1560469433423
+                },
+                {
+                  "Pressure": 11,
+                  "Temperature": 63,
+                  "time": 1560469434423
+                },
+                {
+                  "Pressure": 23,
+                  "Temperature": 65,
+                  "time": 1560469435423
+                },
+                {
+                  "Pressure": 43,
+                  "Temperature": 12,
+                  "time": 1560469436423
+                },
+                {
+                  "Pressure": 71,
+                  "Temperature": 61,
+                  "time": 1560469437423
+                },
+                {
+                  "Pressure": 89,
+                  "Temperature": 60,
+                  "time": 1560469438423
+                },
+                {
+                  "Pressure": 66,
+                  "Temperature": 58,
+                  "time": 1560469439423
+                },
+                {
+                  "Pressure": 33,
+                  "Temperature": 1,
+                  "time": 1560469440423
+                }
+              ],
+              "name": "Boiler"
+            }
+          ],
+          "timeAxis": {
+            "tick": {
+              "label": {
+                "angled": true
+              }
+            }
+          },
+          "xTrace": {
+            "infoBox": {
+              "fill": {
+                "color": "#FFFF8A"
+              }
+            }
+          }
+        },
+        "type": "ia.chart.timeseries"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "DateTimeInput_0"
+            },
+            "position": {
+              "height": 0.6453,
+              "width": 0.2125,
+              "x": 0.1738,
+              "y": 0.1602
+            },
+            "props": {
+              "formattedValue": "May 7, 2026 12:00 AM",
+              "value": {
+                "$": [
+                  "ts",
+                  0,
+                  1779334249308
+                ],
+                "$ts": 1778112000000
+              }
+            },
+            "type": "ia.input.date-time-input"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.6453,
+              "width": 0.0625,
+              "x": 0.1061,
+              "y": 0.1599
+            },
+            "props": {
+              "text": "Start :",
+              "textStyle": {
+                "alignSelf": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 0.6453,
+              "width": 0.0625,
+              "x": 0.3986,
+              "y": 0.1602
+            },
+            "props": {
+              "text": "End :",
+              "textStyle": {
+                "alignSelf": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "DateTimeInput_1"
+            },
+            "position": {
+              "height": 0.6453,
+              "width": 0.2125,
+              "x": 0.4663,
+              "y": 0.1602
+            },
+            "props": {
+              "formattedValue": "May 7, 2026 12:00 AM",
+              "value": {
+                "$": [
+                  "ts",
+                  0,
+                  1779334249308
+                ],
+                "$ts": 1778112000000
+              }
+            },
+            "type": "ia.input.date-time-input"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.6453,
+              "width": 0.0625,
+              "x": 0.6998,
+              "y": 0.1602
+            },
+            "props": {
+              "text": "Span :",
+              "textStyle": {
+                "alignSelf": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "NumericEntryField"
+            },
+            "position": {
+              "height": 0.6453,
+              "width": 0.18,
+              "x": 0.7675,
+              "y": 0.1602
+            },
+            "type": "ia.input.numeric-entry-field"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "43px"
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "Label": "Fequency",
+                "Loc": "Electrical\\Frequency",
+                "Pv": 60,
+                "Unit": "Hz"
+              },
+              "path": "widgets(templates)/CMWidgets/Graph_Display_Templet",
+              "style": {
+                "backgroundColor": "#00FBFF",
+                "borderStyle": "ridge"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_0"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "Label": "Power",
+                "Loc": "Electrical\\Frequency",
+                "Pv": 100,
+                "Unit": "KVA"
+              },
+              "path": "widgets(templates)/CMWidgets/Graph_Display_Templet",
+              "style": {
+                "borderStyle": "ridge"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_3"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "Label": "Current",
+                "Loc": "Electrical\\Frequency",
+                "Pv": 5,
+                "Unit": "Amps"
+              },
+              "path": "widgets(templates)/CMWidgets/Graph_Display_Templet",
+              "style": {
+                "backgroundColor": "#00FBFF",
+                "borderStyle": "ridge"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_1"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "Label": "Voltage",
+                "Loc": "Electrical\\Frequency",
+                "Pv": 60,
+                "Unit": "V"
+              },
+              "path": "widgets(templates)/CMWidgets/Graph_Display_Templet",
+              "style": {
+                "borderStyle": "ridge"
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "155px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

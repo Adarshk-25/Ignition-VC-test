@@ -1,0 +1,181 @@
+{
+  "custom": {},
+  "params": {
+    "pumpId": "value"
+  },
+  "propConfig": {
+    "params.pumpId": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 229,
+      "width": 885
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Equipment name"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "alignItems": "center",
+                "fontWeight": "bold"
+              },
+              "text": "Mixing Tank",
+              "textStyle": {
+                "fontSize": 35
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Equipment Id"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignVertical": "bottom",
+              "style": {
+                "fontSize": "20px"
+              },
+              "text": "Equipment Id:MT-101"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Name"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignVertical": "bottom",
+              "style": {
+                "fontSize": "20px"
+              },
+              "text": "Equipment Name: Transfer Pump"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Type"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignVertical": "bottom",
+              "style": {
+                "fontSize": "20px"
+              },
+              "text": "Equipment Type: \n"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "MixingHeader"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "alignItems": "flex-start",
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Location"
+            },
+            "position": {
+              "basis": "18px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": "20px",
+                "fontWeight": "bold",
+                "height": "15px"
+              },
+              "text": "Location : Sanand"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Site"
+            },
+            "position": {
+              "basis": "18px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": "20px",
+                "fontWeight": "bold",
+                "height": "15px"
+              },
+              "text": "Zone E : Mixing"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Service"
+            },
+            "position": {
+              "basis": "18px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": "20px",
+                "fontWeight": "bold",
+                "height": "15px"
+              },
+              "text": "Service: Slurry"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "LocationContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "alignItems": "flex-start",
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

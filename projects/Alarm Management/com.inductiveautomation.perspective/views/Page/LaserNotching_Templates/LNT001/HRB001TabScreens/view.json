@@ -1,0 +1,458 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView_3"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HRB001/BED001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/laserNotchingNew",
+            "equipmentName": "BED001 : Front Magnetic Bar Forward Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_4"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HRB001/BED002/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/laserNotchingNew",
+            "equipmentName": "BED002 : Front Magnetic Bar Backward Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_5"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HRB001/BED003/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/laserNotchingNew",
+            "equipmentName": "BED003 : Rear Magnetic Bar Forward Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_6"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HRB001/BED004/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/laserNotchingNew",
+            "equipmentName": "BED004 : Rear Magnetic Bar Backward Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_7"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HRB001/BED005/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/laserNotchingNew",
+            "equipmentName": "BED005 : Magnetic Bar A Object Detection Sensor\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_8"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HRB001/BED006/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/laserNotchingNew",
+            "equipmentName": "BED006 : Magnetic Bar B Object Detection Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_15"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB001/Extended"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB001/Extending"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].Actualvalue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB001/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB001/Retracted"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB001/Retracting"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/laserNotchingNew",
+            "equipmentName": "MMB001 : Front Magnetic Bar Forward Solenoid Valve",
+            "parameterData": [
+              {
+                "Parameter": "Extended"
+              },
+              {
+                "Parameter": "Extending"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "Retracted"
+              },
+              {
+                "Parameter": "Retracting"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_16"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB002/Extended"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB002/Extending"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].Actualvalue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB002/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB002/Retracted"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HBR001/MMB002/Retracting"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/laserNotchingNew",
+            "equipmentName": "MMB002 : Rear Magnetic Bar Forward Solenoid Valve",
+            "parameterData": [
+              {
+                "Parameter": "Extended"
+              },
+              {
+                "Parameter": "Extending"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "Retracted"
+              },
+              {
+                "Parameter": "Retracting"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "tabs": [
+        "BED001",
+        "BED002",
+        "BED003",
+        "BED004",
+        "BED005",
+        "BED006",
+        "MMB001",
+        "MMB002"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

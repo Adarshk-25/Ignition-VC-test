@@ -1,0 +1,140 @@
+{
+  "custom": {},
+  "params": {
+    "Close_Fault": "value",
+    "Close_Fb": "value",
+    "Open_Fault": "value",
+    "Open_Fb": "value",
+    "Vlv_Name": "[default]agratas/sanand/zoneE/line1/mixing/Example/XV_665"
+  },
+  "propConfig": {
+    "params.Close_Fault": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Close_Fb": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Open_Fault": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Open_Fb": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Vlv_Name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 80,
+      "width": 80
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Valve"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.label.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagpath": "{view.params.Vlv_Name}"
+                },
+                "tagPath": "{tagpath}.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.state": {
+            "binding": {
+              "config": {
+                "path": "view.params.Open_Fb"
+              },
+              "transforms": [
+                {
+                  "fallback": "null",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "closed"
+                    },
+                    {
+                      "input": 1,
+                      "output": "open"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.value.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Open_Fb"
+              },
+              "transforms": [
+                {
+                  "fallback": "Fault",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "Close"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Open"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "appearance": "p\u0026id",
+          "label": {
+            "location": "top",
+            "style": {
+              "fontSize": "75%"
+            }
+          },
+          "value": {
+            "style": {
+              "fontSize": "75%"
+            }
+          }
+        },
+        "type": "ia.symbol.valve"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

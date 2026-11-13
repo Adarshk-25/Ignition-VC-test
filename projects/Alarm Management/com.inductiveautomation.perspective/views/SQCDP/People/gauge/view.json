@@ -1,0 +1,126 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Overall Skill: \"+ {../Gauge.props.value}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "sans-serif",
+            "fontSize": "0.7vw",
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "draggable": true,
+                "id": "toggle",
+                "modal": false,
+                "overlayDismiss": false,
+                "position": {
+                  "height": 500,
+                  "width": 500
+                },
+                "positionType": "exact",
+                "resizable": true,
+                "showCloseIcon": true,
+                "title": "Overall Skill Gauge",
+                "type": "open",
+                "viewPath": "SQCDP/People/gauge",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Gauge"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "backgroundColor": "",
+          "innerAxis": {
+            "data": "secondaryValue",
+            "maxValue": 80,
+            "percentRadius": 85,
+            "show": false,
+            "width": 1
+          },
+          "outerAxis": {
+            "data": "value",
+            "percentRadius": 100,
+            "ranges": [
+              {
+                "color": "#77D887",
+                "end": 100,
+                "start": 80,
+                "width": 8
+              },
+              {
+                "color": "#EAD728",
+                "end": 80,
+                "start": 40,
+                "width": 12
+              },
+              {
+                "color": "#FF7F7F",
+                "end": 40,
+                "start": 0,
+                "width": 12
+              }
+            ],
+            "show": true,
+            "width": 1
+          },
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "value": 58
+        },
+        "type": "ia.chart.gauge"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

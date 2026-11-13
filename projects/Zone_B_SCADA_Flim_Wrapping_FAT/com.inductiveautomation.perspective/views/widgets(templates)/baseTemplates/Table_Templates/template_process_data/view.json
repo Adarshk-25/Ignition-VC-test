@@ -1,0 +1,722 @@
+{
+  "custom": {},
+  "params": {
+    "tagpath": "[default]agratas/sanand/zoneE/line1/mixing/Diaphragm Pump/electrical"
+  },
+  "propConfig": {
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "props.data": {
+      "binding": {
+        "config": {
+          "path": "view.params.tagpath"
+        },
+        "transforms": [
+          {
+            "code": "\ttagPath \u003d \"[default]agratas/sanand/zoneE/line1/mixing/Diaphragm Pump/electrical\"\n\t\n\tresults \u003d []\n\t\n\tbrowse \u003d system.tag.browse(tagPath, {\"recursive\": False})\n\t\n\ttagPaths \u003d []\n\ttagMeta \u003d []\n\t\n\t# Collect paths\n\tfor tag in browse.getResults():\n\t    fullPath \u003d str(tag[\u0027fullPath\u0027])\n\t    name \u003d tag[\u0027name\u0027]\n\t    \n\t    tagPaths.extend([\n\t        fullPath,\n\t        fullPath + \".EngUnit\",\n\t        fullPath + \".EngHigh\",\n\t        fullPath + \".EngLow\"\n\t    ])\n\t    \n\t    tagMeta.append({\n\t        \"name\": name,\n\t        \"path\": fullPath\n\t    })\n\t\n\t# Batch read\n\tvalues \u003d system.tag.readBlocking(tagPaths)\n\t\n\t# 🔥 IMPORTANT: detect if first tag is JSON blob containing ALL params\n\tfirstRaw \u003d values[0].value\n\tglobalDict \u003d firstRaw if isinstance(firstRaw, dict) else None\n\t\n\t# Process\n\tfor i, meta in enumerate(tagMeta):\n\t    \n\t    baseIndex \u003d i * 4\n\t    \n\t    raw \u003d values[baseIndex].value\n\t    unit \u003d values[baseIndex + 1].value\n\t    high \u003d values[baseIndex + 2].value\n\t    low \u003d values[baseIndex + 3].value\n\t    \n\t    fullPath \u003d meta[\"path\"]\n\t    paramName \u003d meta[\"name\"]  # e.g., \"current\", \"power\", etc.\n\t    \n\t    # ✅ FIXED LOGIC\n\t    if globalDict:\n\t        # First tag had the full JSON blob - extract THIS parameter\u0027s value\n\t        actual \u003d globalDict.get(paramName, None)\n\t    elif isinstance(raw, dict):\n\t        # This individual tag is a dict (edge case)\n\t        actual \u003d raw.get(paramName, None)\n\t    else:\n\t        # Normal atomic tag\n\t        actual \u003d raw\n\t    \n\t    # Alarm\n\t    alarmState \u003d \"Inactive\"\n\t    alarmStyle \u003d \"alarm/Inactive\"\n\t    \n\t    try:\n\t        alarmQuery \u003d system.alarm.queryStatus(source\u003d[fullPath])\n\t        if len(alarmQuery) \u003e 0:\n\t            alarmState \u003d \"Active\"\n\t            alarmStyle \u003d \"alarm/Active\"\n\t    except:\n\t        pass\n\t    \n\t    results.append({\n\t        \"Parameter\": paramName,\n\t        \"Actual_Value\": actual,\n\t        \"Unit\": unit,\n\t        \"Upper_Limit\": high,\n\t        \"Lower_Limit\": low,\n\t        \"Alarm\": {\n\t            \"value\": alarmState,\n\t            \"style\": {\n\t                \"classes\": alarmStyle\n\t            }\n\t        }\n\t    })\n\t\n\treturn results",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 226
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "marginBottom": "10px"
+              },
+              "text": "Process Data"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "basis": "190px"
+            },
+            "propConfig": {
+              "props.data": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.tagpath}"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\ttagPath \u003d \"[default]agratas/sanand/zoneE/line1/mixing/Diaphragm Pump/electrical\"\n\t\n\tresults \u003d []\n\t\n\tbrowse \u003d system.tag.browse(tagPath, {\"recursive\": False})\n\t\n\ttagPaths \u003d []\n\ttagMeta \u003d []\n\t\n\t# Collect paths\n\tfor tag in browse.getResults():\n\t    fullPath \u003d str(tag[\u0027fullPath\u0027])\n\t    name \u003d tag[\u0027name\u0027]\n\t    \n\t    tagPaths.extend([\n\t        fullPath,\n\t        fullPath + \".EngUnit\",\n\t        fullPath + \".EngHigh\",\n\t        fullPath + \".EngLow\"\n\t    ])\n\t    \n\t    tagMeta.append({\n\t        \"name\": name,\n\t        \"path\": fullPath\n\t    })\n\t\n\t# Batch read\n\tvalues \u003d system.tag.readBlocking(tagPaths)\n\t\n\t# 🔥 IMPORTANT: detect if first tag is JSON blob containing ALL params\n\tfirstRaw \u003d values[0].value\n\tglobalDict \u003d firstRaw if isinstance(firstRaw, dict) else None\n\t\n\t# Process\n\tfor i, meta in enumerate(tagMeta):\n\t    \n\t    baseIndex \u003d i * 4\n\t    \n\t    raw \u003d values[baseIndex].value\n\t    unit \u003d values[baseIndex + 1].value\n\t    high \u003d values[baseIndex + 2].value\n\t    low \u003d values[baseIndex + 3].value\n\t    \n\t    fullPath \u003d meta[\"path\"]\n\t    paramName \u003d meta[\"name\"]  # e.g., \"current\", \"power\", etc.\n\t    \n\t    # ✅ FIXED LOGIC\n\t    if globalDict:\n\t        # First tag had the full JSON blob - extract THIS parameter\u0027s value\n\t        actual \u003d globalDict.get(paramName, None)\n\t    elif isinstance(raw, dict):\n\t        # This individual tag is a dict (edge case)\n\t        actual \u003d raw.get(paramName, None)\n\t    else:\n\t        # Normal atomic tag\n\t        actual \u003d raw\n\t    \n\t    # Alarm\n\t    alarmState \u003d \"Inactive\"\n\t    alarmStyle \u003d \"alarm/Inactive\"\n\t    \n\t    try:\n\t        alarmQuery \u003d system.alarm.queryStatus(source\u003d[fullPath])\n\t        if len(alarmQuery) \u003e 0:\n\t            alarmState \u003d \"Active\"\n\t            alarmStyle \u003d \"alarm/Active\"\n\t    except:\n\t        pass\n\t    \n\t    results.append({\n\t        \"Parameter\": paramName,\n\t        \"Actual Value\": actual,\n\t        \"Unit\": unit,\n\t        \"Upper Limit\": high,\n\t        \"Lower Limit\": low,\n\t        \"Alarm\": {\n\t            \"value\": alarmState,\n\t            \"style\": {\n\t                \"classes\": alarmStyle\n\t            }\n\t        }\n\t    })\n\t\n\treturn results",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "opacity": "1"
+              },
+              "cells": {
+                "style": {
+                  "borderColor": "#D5D5D5",
+                  "borderStyle": "solid",
+                  "borderWidth": 0.01
+                }
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": "",
+                      "fontFamily": "Arial",
+                      "fontWeight": "bold"
+                    },
+                    "title": ""
+                  },
+                  "justify": "left",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": false,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "fontFamily": "Arial",
+                    "fontSize": "1em",
+                    "paddingLeft": "2%",
+                    "textAlign": "start",
+                    "textTransform": "capitalize"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": 120
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Actual Value",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": "",
+                      "fontFamily": "Arial",
+                      "fontWeight": "bold"
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "fontWeight": "normal",
+                    "paddingLeft": 20,
+                    "textAlign": "center"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": 130
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Unit",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": "",
+                      "fontFamily": "Arial",
+                      "fontWeight": "bold"
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "fontWeight": "normal",
+                    "paddingLeft": 20,
+                    "textAlign": "center"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": 80
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Lower Limit",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "textAlign": "center"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Upper Limit",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "textAlign": "center"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Alarm",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "alignItems": "center",
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "filter": {
+                "style": {
+                  "backgroundColor": ""
+                }
+              },
+              "headerGroups": [
+                []
+              ],
+              "pager": {
+                "activeOption": 5,
+                "bottom": false
+              },
+              "rows": {
+                "highlight": {
+                  "color": "#FFAC47",
+                  "enabled": false
+                },
+                "striped": {
+                  "color": {
+                    "even": "#FF4747",
+                    "odd": "#D5D5D5"
+                  }
+                },
+                "subviewExpansionMode": "single"
+              },
+              "selection": {
+                "enableRowSelection": false
+              }
+            },
+            "type": "ia.display.table"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "241px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

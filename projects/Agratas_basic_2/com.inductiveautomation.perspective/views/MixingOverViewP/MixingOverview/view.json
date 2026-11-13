@@ -1,0 +1,86 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1125,
+      "width": 1224
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView_1"
+        },
+        "position": {
+          "basis": "428.3px"
+        },
+        "props": {
+          "path": "MixingOverViewP/MixOEE"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "basis": "402px"
+        },
+        "props": {
+          "path": "MixingOverViewP/StepsMixing"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_0"
+        },
+        "position": {
+          "basis": "190px"
+        },
+        "props": {
+          "path": "MixingOverViewP/Mixing"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "NaNpx"
+        },
+        "props": {
+          "columns": [
+            {
+              "field": "time",
+              "title": "Time"
+            },
+            {
+              "field": "area",
+              "title": "Area"
+            },
+            {
+              "field": "alarm",
+              "title": "Alarm"
+            },
+            {
+              "field": "ack",
+              "title": "Ack"
+            }
+          ]
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

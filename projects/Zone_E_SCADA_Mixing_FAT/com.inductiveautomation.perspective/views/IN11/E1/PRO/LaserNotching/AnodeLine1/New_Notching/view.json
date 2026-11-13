@@ -1,0 +1,74 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 2080,
+      "width": 3840
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "500px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "basis": "1920px"
+            },
+            "props": {
+              "path": "IN11/E1/PRO/LaserNotching/AnodeLine1/NotchingProcessFlow"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_0"
+            },
+            "position": {
+              "basis": "2000px"
+            },
+            "props": {
+              "path": "IN11/E1/PRO/LaserNotching/AnodeLine1/ProcessFlow2"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "1080PX"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "FlexContainer_2"
+        },
+        "position": {
+          "basis": "500px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 798
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "text": "Select Process:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "246px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Cutting \u0026 Stacking",
+                  "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneA/line1/cutting-stacking"
+                },
+                {
+                  "label": "Assembly",
+                  "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneA/line1/assembly"
+                }
+              ],
+              "placeholder": {
+                "text": "Select Process"
+              },
+              "value": "histprov:historian2:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/notching"
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "59px"
+        },
+        "props": {
+          "style": {
+            "classes": "widgets/spacing"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "PowerChart"
+            },
+            "position": {
+              "basis": "800px"
+            },
+            "propConfig": {
+              "props.config.tagBrowserStartPath": {
+                "binding": {
+                  "config": {
+                    "path": ".../FlexContainer/Dropdown.props.value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "config": {},
+              "interaction": {
+                "chartZoomLevel": 1,
+                "rangeZoomLevel": 1
+              },
+              "style": {
+                "paddingBottom": 30,
+                "paddingLeft": 30,
+                "paddingRight": 30,
+                "paddingTop": 30
+              }
+            },
+            "type": "ia.chart.powerchart"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "600px",
+          "grow": 1
+        },
+        "props": {
+          "alignContent": "center",
+          "alignItems": "center",
+          "direction": "column",
+          "justify": "center",
+          "style": {
+            "classes": "widgets/spacing"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

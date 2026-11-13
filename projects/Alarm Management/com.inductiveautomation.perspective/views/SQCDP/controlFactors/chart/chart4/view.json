@@ -1,0 +1,158 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.options": {
+            "persistent": true
+          },
+          "props.series": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "stacked": false,
+              "toolbar": {
+                "show": false
+              },
+              "type": "bar"
+            },
+            "colors": [
+              "#22C55E",
+              "#F59E0B",
+              "#EF4444"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#E5E7EB",
+              "padding": {
+                "bottom": 0,
+                "left": 10,
+                "right": 10,
+                "top": 0
+              },
+              "strokeDashArray": 4
+            },
+            "legend": {
+              "horizontalAlign": "center",
+              "markers": {
+                "radius": 15
+              },
+              "position": "bottom",
+              "show": true
+            },
+            "plotOptions": {
+              "bar": {
+                "borderRadius": 4,
+                "columnWidth": "45%"
+              }
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "color": "#111827",
+                "fontSize": "12px",
+                "fontWeight": "bold"
+              },
+              "text": "Day vs Value"
+            },
+            "xaxis": {
+              "categories": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+              ],
+              "labels": {
+                "style": {
+                  "colors": "#6B7280"
+                }
+              }
+            },
+            "yaxis": {
+              "labels": {
+                "style": {
+                  "colors": "#6B7280"
+                }
+              },
+              "max": 60,
+              "min": 0
+            }
+          },
+          "series": [
+            {
+              "data": [
+                45,
+                20,
+                35,
+                55,
+                10,
+                23,
+                12
+              ],
+              "name": "Downtime Stability"
+            },
+            {
+              "data": [
+                59,
+                33,
+                27,
+                37,
+                60,
+                10,
+                5
+              ],
+              "name": "Linespeed Stability"
+            },
+            {
+              "data": [
+                20,
+                52,
+                51,
+                32,
+                55,
+                56,
+                31
+              ],
+              "name": "Changeover Time"
+            }
+          ],
+          "type": "bar"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

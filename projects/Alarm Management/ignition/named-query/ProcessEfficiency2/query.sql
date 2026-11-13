@@ -1,0 +1,1 @@
+select top 1 ChangeoverTime_Min,Process from ProcessEfficiency order by SNo desc;

@@ -1,0 +1,182 @@
+{
+  "custom": {
+    "Cmd": true,
+    "Run_fb": true,
+    "Stp_fb": false
+  },
+  "params": {
+    "name": "[default]agratas/sanand/zoneE/line1/mixing/equipments/Rotary valve"
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "name": "{view.params.name}"
+          },
+          "tagPath": "{name}/Cmd"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "name": "{view.params.name}"
+          },
+          "tagPath": "{name}/Run_fb"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "name": "{view.params.name}"
+          },
+          "tagPath": "{name}/Stp_fb"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 100,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Rotary plug valve"
+        },
+        "position": {
+          "height": 69,
+          "width": 95,
+          "x": 4,
+          "y": 3
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M179,294 l0,-114",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M179,180 l-179,0 1,-18 3,-18 4,-17 6,-17 8,-16 9,-14 10,-14 11,-13 13,-12 14,-10 15,-9 15,-8 17,-6 17,-4 18,-3 18,-1 18,1 18,3 17,4 17,6 16,8 14,9 14,10 13,12 12,13 10,14 9,14 8,16 6,17 4,17 3,18 1,18 -180,0z",
+              "fill": {
+                "paint": "#c0c0c0"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "cx": "179",
+              "cy": "474",
+              "fill": {
+                "paint": "#c0c0c0"
+              },
+              "name": "circle",
+              "r": "179",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "circle"
+            },
+            {
+              "d": "M359,327 l0,294",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M0,327 l0,294",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            }
+          ],
+          "viewBox": "0 0 359 654"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 26,
+          "width": 97,
+          "y": 72
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "name": "{view.params.name}"
+                },
+                "tagPath": "{name}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "PipingAndInst/label"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

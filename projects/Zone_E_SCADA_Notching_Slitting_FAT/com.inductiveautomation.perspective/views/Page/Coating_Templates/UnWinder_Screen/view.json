@@ -1,0 +1,1470 @@
+{
+  "custom": {},
+  "params": {
+    "metadata": "value",
+    "tag": "",
+    "unwinder": "value"
+  },
+  "propConfig": {
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unwinder": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.2319,
+              "x": 0.1596,
+              "y": 0.0313
+            },
+            "props": {
+              "text": "Equipment Screen : Unwinder",
+              "textStyle": {
+                "classes": "Title/Text",
+                "fontSize": 20,
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Drawing_5"
+            },
+            "position": {
+              "height": 0.5375,
+              "width": 0.4581,
+              "x": 0.0386,
+              "y": 0.1053
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "181.75",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "2px"
+                  },
+                  "type": "rect",
+                  "width": "282.25",
+                  "x": "88",
+                  "y": "142"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "87 141 284.25 183.75"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Unwinder"
+            },
+            "position": {
+              "height": 0.5387,
+              "width": 0.2431,
+              "x": 0.1712,
+              "y": 0.0659
+            },
+            "props": {
+              "params": {
+                "isvertical": false,
+                "nameLabelPosition": "value",
+                "tagpath": "[default]agratas/sanand/zoneE/line1/mixing/Val101-59",
+                "valuePosition": "value",
+                "valveOrientation": "value",
+                "valveType": "p\u0026id"
+              },
+              "path": "widgets(templates)/CoatingWidgests/Unwinder"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "height": 0.4462,
+              "width": 0.4581,
+              "x": 0.5124,
+              "y": 0.1072
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\ActualMachineSpeed"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"RPM\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "None"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Maintenance"
+                        },
+                        {
+                          "input": 2,
+                          "output": "Setup"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Processing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "NotAvailable"
+                        },
+                        {
+                          "input": 1,
+                          "output": "OutOfService"
+                        },
+                        {
+                          "input": 2,
+                          "output": "NotExecuting"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Executing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentTransitionState"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\EquipmentBlocked"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": true,
+                          "output": "Blocked"
+                        },
+                        {
+                          "input": false,
+                          "output": "Not Blocked"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentStarved"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": true,
+                          "output": "Starved"
+                        },
+                        {
+                          "input": false,
+                          "output": "Not Starved"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[6].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MESRunning"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": true,
+                          "output": "MES Connected"
+                        },
+                        {
+                          "input": false,
+                          "output": "Not Connected"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[7].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/PLCHeartbeat"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[8].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/SetRecipeStatusCode"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "left",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "paddingLeft": "10px"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Actual Machine Speed"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Current Mode"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Current State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Current Transition State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Blocking Status"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Starving Status"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MES Connection Status"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "PLC Heartbeat"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Set Recipe Status Code"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_0"
+            },
+            "position": {
+              "height": 0.2838,
+              "width": 0.4581,
+              "x": 0.5124,
+              "y": 0.6031
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/UWD01/Active"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/UWD01/BRB01/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/UWD01/FLA01/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/UWD01/Status"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "left",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "paddingLeft": "10px"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "UWD01 Active"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "BRB01 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "FLA01 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "UWD01 Status"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_1"
+            },
+            "position": {
+              "height": 0.2875,
+              "width": 0.4581,
+              "x": 0.0386,
+              "y": 0.6898
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}\\NodesetVersion"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}\\PLC_Manufacturer"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}/PLC_Model"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}\\PLCFBS"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}\\SerialNumber"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}/Year_Of_Construction_of_the_machine"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "left",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "paddingLeft": "10px"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Nodeset Version"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "PLC Manufacturer"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "PLC Model"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "PLC FBS"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Serial Number"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Year Of Construction of the Machine"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "AGStatus"
+            },
+            "position": {
+              "height": 0.0792,
+              "width": 0.1281,
+              "x": 0.1646,
+              "y": 0.3886
+            },
+            "props": {
+              "params": {
+                "tag": "[default]IN11_E117_PCE_COT21_IN11_E117_PCE/COT21/AGStatus"
+              },
+              "path": "widgets(templates)/AGStatus"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_0"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.1263,
+              "x": 0.6476,
+              "y": 0.0143
+            },
+            "propConfig": {
+              "props.params.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "None"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Maintenance"
+                        },
+                        {
+                          "input": 2,
+                          "output": "SetUp"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Processing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "label": "Mode"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_4"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.0973,
+              "x": 0.7774,
+              "y": 0.0143
+            },
+            "props": {
+              "params": {
+                "label": "Communication",
+                "value": "OK"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_1"
+            },
+            "position": {
+              "height": 0.075,
+              "width": 0.105,
+              "x": 0.8794,
+              "y": 0.0138
+            },
+            "propConfig": {
+              "props.params.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "Not Available"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Out Of Service"
+                        },
+                        {
+                          "input": 2,
+                          "output": "Not Executing"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Executing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "label": "STATE"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "custom": {},
+  "params": {
+    "ms": 0,
+    "time": "",
+    "area": "",
+    "unit": "",
+    "tagRoot": "",
+    "sev": 0,
+    "cls": "Info",
+    "desc": "",
+    "source": "",
+    "unacked": false,
+    "state": ""
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1800,
+      "height": 34
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "position": {},
+    "props": {
+      "direction": "row",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "center",
+      "alignContent": "flex-start",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Time"
+        },
+        "position": {
+          "basis": "130px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.time"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Area"
+        },
+        "position": {
+          "basis": "110px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Text/Label"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.area"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Unit"
+        },
+        "position": {
+          "basis": "90px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Text/Strong"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.unit"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Severity"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "6px",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.icon",
+            "meta": {
+              "name": "Icon"
+            },
+            "position": {
+              "basis": "18px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "material/warning",
+              "color": "#E07B00",
+              "style": {
+                "minWidth": "18px",
+                "height": "18px"
+              }
+            },
+            "propConfig": {
+              "props.path": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "case({view.params.cls}, \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                  }
+                }
+              },
+              "props.color": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "case({view.params.cls}, \"Critical\",\"#C8102E\", \"Warning\",\"#E07B00\", \"Advisory\",\"#B89500\", \"#555C64\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Text"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Card/Text"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"Sev \" + toStr({view.params.sev})"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Desc"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/List/Wrap"
+          },
+          "textStyle": {
+            "whiteSpace": "normal"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.desc"
+              }
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.cls} = \"Critical\", \"HPHMI/Text/Critical\", \"HPHMI/List/Wrap\")"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Source"
+        },
+        "position": {
+          "basis": "90px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Text/Label"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.source"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "State"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.state"
+              }
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.unacked}, \"HPHMI/Text/Critical\", \"HPHMI/Card/Text\")"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "propConfig": {
+      "props.style.classes": {
+        "binding": {
+          "type": "expr",
+          "config": {
+            "expression": "\"HPHMI/List/Row \" + case({view.params.cls}, \"Critical\",\"HPHMI/Alarm/RowCritical\", \"Warning\",\"HPHMI/Alarm/RowWarning\", \"\")"
+          }
+        }
+      }
+    },
+    "events": {
+      "dom": {
+        "onClick": {
+          "type": "script",
+          "scope": "G",
+          "config": {
+            "script": "\tif self.view.params.tagRoot:\n\t\tHPHMI_ZoneE.openQuickView(self.view.params.tagRoot)"
+          }
+        }
+      }
+    }
+  },
+  "propConfig": {
+    "params.ms": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.time": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.area": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unit": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.sev": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.cls": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.desc": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.source": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unacked": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.state": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

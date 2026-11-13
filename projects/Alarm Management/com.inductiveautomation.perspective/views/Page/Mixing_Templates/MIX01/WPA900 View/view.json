@@ -1,0 +1,467 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView_0"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA039/Open"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA039/Closed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA039/Opening"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA039/Closing"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA039/Fault"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/pdMixer (1)",
+            "equipmentName": "QNA039:CPM1-1 Tank NMP Shower",
+            "parameterData": [
+              {
+                "Parameter": "Open"
+              },
+              {
+                "Parameter": "Closed"
+              },
+              {
+                "Parameter": "Opening"
+              },
+              {
+                "Parameter": "Closing"
+              },
+              {
+                "Parameter": "Fault"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_1"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA033/Open"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA033/Closed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA033/Opening"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA033/Closing"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA033/Fault"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/pdMixer (1)",
+            "equipmentName": "QNA033:CPM1-1 Tank NMP Inlet",
+            "parameterData": [
+              {
+                "Parameter": "Open"
+              },
+              {
+                "Parameter": "Closed"
+              },
+              {
+                "Parameter": "Opening"
+              },
+              {
+                "Parameter": "Closing"
+              },
+              {
+                "Parameter": "Fault"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_2"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA032/Open"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA032/Closed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA032/Opening"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA032/Closing"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA032/Fault"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/pdMixer (1)",
+            "equipmentName": "QNA032:CPM1-1 Tank NMP Shower",
+            "parameterData": [
+              {
+                "Parameter": "Open"
+              },
+              {
+                "Parameter": "Closed"
+              },
+              {
+                "Parameter": "Opening"
+              },
+              {
+                "Parameter": "Closing"
+              },
+              {
+                "Parameter": "Fault"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_3"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA013/Open"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA013/Closed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA013/Opening"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA013/Closing"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/QNA013/Fault"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/pdMixer (1)",
+            "equipmentName": "QNA013:CPM1-1 NMP inlet flowrate check",
+            "parameterData": [
+              {
+                "Parameter": "Open"
+              },
+              {
+                "Parameter": "Closed"
+              },
+              {
+                "Parameter": "Opening"
+              },
+              {
+                "Parameter": "Closing"
+              },
+              {
+                "Parameter": "Fault"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 3,
+      "tabs": [
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "QNA039",
+            "toolTipText": "IN11.E115.PCE.MIX01.WPA905.FIT005-Cathode Ceramic PD Mixer Chilled Water CPM1-1 CHR Flow"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "QNA033",
+            "toolTipText": "IN11.E115.PCE.MIX01.WPA905.PT009-Cathode Ceramic PD Mixer Chilled Water CPM1-1 CHR Pressure PV"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "QNA032",
+            "toolTipText": "IN11.E155.PAE.NTC11.LNT001.BGA001-LaserNotching Encoder Roll"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "QNA013",
+            "toolTipText": "IN11.E155.PAE.NTC11.LNT001.BGA001-LaserNotching Encoder Roll"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        }
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

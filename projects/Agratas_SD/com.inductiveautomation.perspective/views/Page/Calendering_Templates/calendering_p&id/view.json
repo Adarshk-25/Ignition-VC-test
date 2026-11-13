@@ -1,0 +1,117 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DustCollector"
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/DustCollector"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Cooling_Roll"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Cooling_Roll"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "IHA"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/IHA"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Press_Heating_Roll"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Press_Heating_Roll"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "HousingCooling"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/HousingCooling"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "HydrayulicHPU"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/HydrayulicHPU"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 150
+      },
+      "tabs": [
+        "Dust Collector",
+        "Cooling Roll",
+        "IHA",
+        "Press Heating Roll",
+        "Housing Cooling",
+        "Hydraulic HPU"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

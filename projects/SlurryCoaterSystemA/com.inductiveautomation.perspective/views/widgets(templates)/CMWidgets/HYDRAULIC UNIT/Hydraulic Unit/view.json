@@ -1,0 +1,1798 @@
+{
+  "custom": {},
+  "params": {
+    "FlowRate": "value",
+    "Status": 1,
+    "instName": "Hydraulic Unit"
+  },
+  "propConfig": {
+    "params.FlowRate": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Status": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.instName": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 145,
+      "width": 104
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Drawing_2"
+        },
+        "position": {
+          "height": 0.0428,
+          "width": 0.0546,
+          "x": 0.4287,
+          "y": 0.3295
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "d": "M44.40000089742583 61l126.59998980963567 0 0 38.49999885261059L44.40000089742583 99.49999885261059Z",
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "217",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "path",
+                  "width": "712",
+                  "x": 50,
+                  "y": 61
+                }
+              ],
+              "name": "group",
+              "type": "group"
+            }
+          ],
+          "viewBox": "34.400001525878906 51 146.5999984741211 58.5"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Pump Drawing"
+        },
+        "position": {
+          "height": 0.2603,
+          "width": 0.1152,
+          "x": 0.3276,
+          "y": 0.2273
+        },
+        "propConfig": {
+          "props.elements[0].elements[0].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[0].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[3].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[4].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[3].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[4].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[5].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[6].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[7].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[8].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].elements[9].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "d": "M60.2274,52.0004l5.47826,21h-9.69579l-9.46245,-21h13.68Zm-40.7142,0l-8.54941,21h-9.66945l5.47826,-21h12.7406Z",
+                          "fill": {
+                            "rule": "evenodd"
+                          },
+                          "name": "path",
+                          "stroke": {
+                            "width": "2"
+                          },
+                          "type": "path"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "name": "group",
+              "style": {
+                "classes": ""
+              },
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "d": "M32.2892,1.00424c10.6376,0.131299 17.2443,3.03595 22.8822,5.50653c6.9609,3.05037 12.5171,5.42502 21.8274,1.85802v0l0.0012087,-4.20724c0,-0.330355 0.118705,-0.632345 0.319886,-0.849838c0.174056,-0.188169 0.412302,-0.312325 0.680114,-0.312325v0h8v38h-8c-0.267812,0 -0.506058,-0.124156 -0.680114,-0.312325c-0.201181,-0.217492 -0.319886,-0.519483 -0.319886,-0.849955v0l-0.0006024,-5.11461c-7.7074,3.13483 -22.6969,0.547788 -44.9384,-7.5179c-0.107781,-6.60622 -0.0726416,-13.7889 0.10525,-21.5461v-8.88178e-16l0.0713678,-2.86091Z",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M56.481,10.5194c12.692,12.692 12.692,33.2699 0,45.9619c-12.692,12.692 -33.2699,12.692 -45.9619,0c-12.692,-12.692 -12.692,-33.2699 -3.55271e-15,-45.9619c12.692,-12.692 33.2699,-12.692 45.9619,-3.55271e-15",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        }
+                      ],
+                      "fill": {
+                        "rule": "evenodd"
+                      },
+                      "name": "group",
+                      "stroke": {
+                        "width": "2"
+                      },
+                      "type": "group"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                },
+                {
+                  "cx": "32",
+                  "cy": "1",
+                  "fill": {},
+                  "name": "circle",
+                  "r": "0",
+                  "style": {
+                    "classes": "ia_drawingComponent__pipingAnchor"
+                  },
+                  "type": "circle"
+                },
+                {
+                  "cx": "86",
+                  "cy": "23",
+                  "fill": {},
+                  "name": "circle",
+                  "r": "0",
+                  "style": {
+                    "classes": "ia_drawingComponent__pipingAnchor"
+                  },
+                  "type": "circle"
+                },
+                {
+                  "cx": "32",
+                  "cy": "63",
+                  "fill": {},
+                  "name": "circle",
+                  "r": "0",
+                  "style": {
+                    "classes": "ia_drawingComponent__pipingAnchor"
+                  },
+                  "type": "circle"
+                },
+                {
+                  "cx": "1",
+                  "cy": "32",
+                  "fill": {},
+                  "name": "circle",
+                  "r": "0",
+                  "style": {
+                    "classes": "ia_drawingComponent__pipingAnchor"
+                  },
+                  "type": "circle"
+                }
+              ],
+              "name": "group",
+              "style": {
+                "classes": ""
+              },
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "d": "M46.5815,20.4189c7.2247,7.2247 7.2247,18.9383 0,26.163c-7.2247,7.2247 -18.9383,7.2247 -26.163,0c-7.2247,-7.2247 -7.2247,-18.9383 -3.55271e-15,-26.163c7.2247,-7.2247 18.9383,-7.2247 26.163,-3.55271e-15",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M37.3891,29.6113c2.14788,2.14788 2.14788,5.63029 0,7.77817c-2.14788,2.14788 -5.63029,2.14788 -7.77817,0c-2.14788,-2.14788 -2.14788,-5.63029 0,-7.77817c2.14788,-2.14788 5.63029,-2.14788 7.77817,0",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M30.8314,28c-1.60713,-4.42003 -0.884264,-8.75336 2.1686,-13",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M35,28c2.03311,-4.46126 5.69978,-7.12793 11,-8",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M39,30.8314c4.42003,-1.60713 8.75336,-0.884264 13,2.1686",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M39,35c4.46126,2.03311 7.12793,5.69978 8,11",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M36.1686,39c1.60713,4.42003 0.884264,8.75336 -2.1686,13",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M32,39c-2.03311,4.46126 -5.69978,7.12793 -11,8",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M28,36.1686c-4.42003,1.60713 -8.75336,0.884264 -13,-2.1686",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "d": "M28,32c-4.46126,-2.03311 -7.12793,-5.69978 -8,-11",
+                          "fill": {},
+                          "name": "path",
+                          "type": "path"
+                        }
+                      ],
+                      "fill": {
+                        "rule": "evenodd"
+                      },
+                      "name": "group",
+                      "stroke": {
+                        "width": "2"
+                      },
+                      "type": "group"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "name": "group",
+              "style": {
+                "animationDuration": " 3s",
+                "classes": "ia_symbolComponent__animate--rotate ia_symbolComponent__animate--rotate--default",
+                "transformOrigin": " 36.0215% 41.8753%"
+              },
+              "type": "group"
+            }
+          ],
+          "style": {
+            "animationDuration": " 1.5s",
+            "classes": "ia_symbolComponent__symbol ia_symbolComponent--simple ia_symbolComponent-pump-centrifugal ia_symbolComponent-pump-feet-bottom ia_symbolComponent-pump-orientation-right ia_symbolComponent--default ia_symbolComponent ia_symbolComponent__column"
+          },
+          "viewBox": "-2.9998998641967773 -2.999598503112793 92.99990844726562 79.99999237060547"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Motor Drawing"
+        },
+        "position": {
+          "height": 0.2332,
+          "width": 0.1455,
+          "x": 0.4673,
+          "y": 0.2365
+        },
+        "propConfig": {
+          "props.elements[0].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#00AC00"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#D9D900"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#FF8C00"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#D90000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[3].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#00AC00"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#D9D900"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#FF8C00"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#D90000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#00AC00"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#D9D900"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#FF8C00"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#D90000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[3].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#00AC00"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#D9D900"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#FF8C00"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#D90000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[4].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[4].elements[0].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[4].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.Status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#00AC00"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#D9D900"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#FF8C00"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#D90000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "M61,55v5c0,1.65685 0.671573,3.15685 1.75736,4.24264c1.08579,1.08579 2.58579,1.75736 4.24264,1.75736v0h3c0.276142,0 0.526142,0.111929 0.707107,0.292893c0.180964,0.180964 0.292893,0.430964 0.292893,0.707107v0v3h-57v-3c0,-0.276142 0.111929,-0.526142 0.292893,-0.707107c0.180964,-0.180964 0.430964,-0.292893 0.707107,-0.292893v0h3c1.65685,0 3.15685,-0.671573 4.24264,-1.75736c1.08579,-1.08579 1.75736,-2.58579 1.75736,-4.24264v0v-5h37Z",
+                      "fill": {
+                        "rule": "evenodd"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "width": "2"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                },
+                {
+                  "cx": "42",
+                  "cy": "73",
+                  "fill": {},
+                  "name": "circle",
+                  "r": "0",
+                  "style": {
+                    "classes": "ia_drawingComponent__pipingAnchor"
+                  },
+                  "type": "circle"
+                }
+              ],
+              "name": "group",
+              "style": {
+                "classes": ""
+              },
+              "transform": "translate(0 0)",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "M74.8074,1l7.30675,2.9227c0.569488,0.227795 1.04094,0.617474 1.37003,1.10354c0.329085,0.48607 0.515798,1.06853 0.515798,1.68189v0v42.5837c0,0.613357 -0.186713,1.19582 -0.515798,1.68189c-0.329085,0.486069 -0.800542,0.875749 -1.37003,1.10354v0l-7.30675,2.9227h-65.8074c-2.20914,0 -4.20914,-0.895431 -5.65685,-2.34315c-1.44772,-1.44772 -2.34315,-3.44772 -2.34315,-5.65685v0v-38c0,-2.20914 0.895431,-4.20914 2.34315,-5.65685c1.44772,-1.44772 3.44772,-2.34315 5.65685,-2.34315v0h65.8074Z",
+                      "fill": {
+                        "rule": "evenodd"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "width": "2"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                },
+                {
+                  "cx": "42",
+                  "cy": "1",
+                  "fill": {},
+                  "name": "circle",
+                  "r": "0",
+                  "style": {
+                    "classes": "ia_drawingComponent__pipingAnchor"
+                  },
+                  "type": "circle"
+                },
+                {
+                  "cx": "101",
+                  "cy": "28",
+                  "fill": {},
+                  "name": "circle",
+                  "r": "0",
+                  "style": {
+                    "classes": "ia_drawingComponent__pipingAnchor"
+                  },
+                  "type": "circle"
+                },
+                {
+                  "cx": "1",
+                  "cy": "27",
+                  "fill": {},
+                  "name": "circle",
+                  "r": "0",
+                  "style": {
+                    "classes": "ia_drawingComponent__pipingAnchor"
+                  },
+                  "type": "circle"
+                }
+              ],
+              "name": "group",
+              "style": {
+                "classes": ""
+              },
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "M 24,1.5 V 54 h 2 v 0 h 47 v 0 h 2 V 1.5 c -51,0 -51,0 -51,0 z M 26,44 h 47 v 4 H 26 Z m 0,-12 h 47 v 4 H 26 Z m 0,-12 h 47 v 4 H 26 Z M 26,8 h 47 v 4 H 26 Z",
+                      "fill": {
+                        "rule": "evenodd"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "transparent"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "name": "group",
+              "style": {
+                "animationDuration": " 1s",
+                "classes": "ia_symbolComponent__animate--alternateFill ia_symbolComponent__animate--alternateFill--#00AC00"
+              },
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "M 73,1.5 V 6 H 26 V 1.5 H 24 V 54 h 2 v -4 h 47 v 4 h 2 V 1.5 Z M 26,38 h 47 v 4 H 26 Z m 0,-12 h 47 v 4 H 26 Z m 0,-12 h 47 v 4 H 26 Z",
+                      "fill": {
+                        "rule": "evenodd"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "transparent"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "name": "group",
+              "style": {
+                "animationDuration": " 1s",
+                "classes": "ia_symbolComponent__animate--alternateFillAlt ia_symbolComponent__animate--alternateFillAlt--#00AC00"
+              },
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "M102,23h-17v10h17Z",
+                      "fill": {
+                        "rule": "evenodd"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "transparent"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M73,1.5v4.5h-47v-4.5h-2v52.5h2v-4h47v4h2v-52.5h-2Zm-47,42.5h47v4h-47v-4Zm0,-6h47v4h-47v-4Zm0,-6h47v4h-47v-4Zm0,-6h47v4h-47v-4Zm0,-6h47v4h-47v-4Zm0,-6h47v4h-47v-4Zm0,-6h47v4h-47v-4Z",
+                      "fill": {
+                        "rule": "evenodd"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "transparent"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "name": "group",
+              "style": {
+                "classes": "ia_symbolComponent__altFill ia_symbolComponent__altFill--#00AC00"
+              },
+              "type": "group"
+            }
+          ],
+          "style": {
+            "animationDuration": " 1.5s",
+            "classes": "ia_symbolComponent__symbol ia_symbolComponent--simple ia_symbolComponent-motor ia_symbolComponent-motor-feet-bottom ia_symbolComponent-motor-orientation-right ia_symbolComponent--#00AC00 ia_symbolComponent ia_symbolComponent__column"
+          },
+          "viewBox": "-2.999999761581421 -3.0000455379486084 109 77.00004577636719"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Drawing_0"
+        },
+        "position": {
+          "height": 0.2799,
+          "width": 0.2911,
+          "x": 0.3054,
+          "y": 0.455
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M100.5 107q499.6392521679996-1 500.0000025305758-1",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pencil-path",
+              "stroke": {
+                "paint": "#000000",
+                "width": "2px"
+              },
+              "type": "path"
+            },
+            {
+              "fill": {
+                "paint": "none"
+              },
+              "height": "174",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "496",
+              "x": "103",
+              "y": 123
+            }
+          ],
+          "viewBox": "90.5 96 520 211"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Drawing_1"
+        },
+        "position": {
+          "height": 0.0428,
+          "width": 0.1697,
+          "x": 0.6009,
+          "y": 0.3256
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "d": "M23 61l644.9999947547913 0 0 38.49999885261059L23 99.49999885261059Z",
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "217",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "path",
+                  "width": "712",
+                  "x": 50,
+                  "y": 61
+                }
+              ],
+              "name": "group",
+              "type": "group"
+            }
+          ],
+          "viewBox": "13 51 665 58.5"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Drawing_3"
+        },
+        "position": {
+          "height": 0.0428,
+          "width": 0.1698,
+          "x": 0.1635,
+          "y": 0.3263
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "d": "M23 61l644.9999947547913 0 0 38.49999885261059L23 99.49999885261059Z",
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "217",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "path",
+                  "width": "712",
+                  "x": 50,
+                  "y": 61
+                }
+              ],
+              "name": "group",
+              "type": "group"
+            }
+          ],
+          "viewBox": "13 51 665 58.5"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "CylindricalTank"
+        },
+        "position": {
+          "height": 0.2449,
+          "width": 0.291,
+          "x": 0.3064,
+          "y": 0.4895
+        },
+        "props": {
+          "value": 70,
+          "valueDisplay": {
+            "enabled": false
+          }
+        },
+        "type": "ia.display.cylindrical-tank"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1616,
+          "width": 0.8144,
+          "x": 0.0978,
+          "y": 0.0305
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.instName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 0.2119,
+          "width": 0.5,
+          "x": 0.26,
+          "y": 0.7881
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.FlowRate"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

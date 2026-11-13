@@ -1,0 +1,265 @@
+{
+  "custom": {},
+  "params": {
+    "path": "/"
+  },
+  "propConfig": {
+    "params.path": {
+      "binding": {
+        "config": {
+          "path": "page.props.path"
+        },
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 99,
+      "width": 1409
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "contextMenu": {
+            "enabled": true,
+            "items": [
+              {
+                "children": [],
+                "icon": {
+                  "color": "",
+                  "path": "material/navigation",
+                  "style": {}
+                },
+                "link": {
+                  "target": "self",
+                  "url": "http://10.34.26.4:8088/data/perspective/client/Zone_E_SCADA/alarms-management"
+                },
+                "message": {
+                  "payload": {},
+                  "scope": "page",
+                  "type": ""
+                },
+                "method": {
+                  "name": "",
+                  "params": {}
+                },
+                "style": {
+                  "classes": "General/textHover"
+                },
+                "text": "Navigate To Alarm Page",
+                "type": "link"
+              }
+            ]
+          },
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.filters.active.conditions.source": {
+            "binding": {
+              "config": {
+                "expression": "\"*\"+\"agratas/sanand/zoneE/line1/mixing\"+\"*\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "columns": {
+            "active": {
+              "displayPath": {
+                "order": 11
+              },
+              "label": {
+                "order": 11
+              },
+              "name": {
+                "order": 1
+              },
+              "priority": {
+                "order": 9
+              },
+              "source": {
+                "enabled": false
+              },
+              "state": {
+                "order": 10
+              }
+            }
+          },
+          "columnsAssociated": {
+            "active": [
+              {
+                "enabled": true,
+                "field": "Index",
+                "order": 2,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Alarm Group Id",
+                "order": 4,
+                "sort": "none",
+                "strictWidth": true,
+                "width": "10px"
+              },
+              {
+                "enabled": true,
+                "field": "Alarm Code",
+                "order": 5,
+                "sort": "none",
+                "strictWidth": true,
+                "width": "10px"
+              },
+              {
+                "enabled": true,
+                "field": "Severity",
+                "order": 6,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "FBS Source",
+                "order": 7,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Operator Message",
+                "order": 8,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Navigate To",
+                "order": 0,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              }
+            ]
+          },
+          "enableDetails": false,
+          "filters": {
+            "active": {
+              "conditions": {},
+              "priorities": {
+                "diagnostic": true
+              },
+              "states": {
+                "clearUnacked": false
+              }
+            }
+          },
+          "pager": {
+            "enabled": false
+          },
+          "rowStyles": {
+            "activeAcked": {
+              "priorities": {
+                "critical": {
+                  "backgroundColor": "",
+                  "classes": "alarm/critical"
+                },
+                "diagnostic": {
+                  "backgroundColor": "",
+                  "classes": "alarm/diagnostic"
+                },
+                "high": {
+                  "backgroundColor": "",
+                  "classes": "alarm/high"
+                },
+                "low": {
+                  "backgroundColor": "",
+                  "classes": "alarm/low"
+                },
+                "medium": {
+                  "backgroundColor": "",
+                  "classes": "alarm/medium"
+                }
+              }
+            },
+            "activeUnacked": {
+              "base": {
+                "backgroundColor": "#000000"
+              },
+              "priorities": {
+                "critical": {
+                  "backgroundColor": "",
+                  "classes": "alarm/critical"
+                },
+                "diagnostic": {
+                  "backgroundColor": "",
+                  "classes": "alarm/diagnostic"
+                },
+                "high": {
+                  "backgroundColor": "",
+                  "classes": "alarm/high"
+                },
+                "low": {
+                  "backgroundColor": "",
+                  "classes": "alarm/low"
+                },
+                "medium": {
+                  "backgroundColor": "",
+                  "classes": "alarm/medium"
+                }
+              }
+            }
+          },
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSize": "0.7em",
+            "margin": "5px",
+            "padding": "5px"
+          },
+          "toolbar": {
+            "enableActiveTab": false,
+            "enableConfiguration": false,
+            "enableFilter": false,
+            "enableFilterResults": false,
+            "enablePreFilters": false,
+            "enableShelvedTab": false
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\tsystem.perspective.navigate(view\u003d\"Page/2F_Templates/2F_mainScreen\", params\u003d{\"tabvalue\":2})"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

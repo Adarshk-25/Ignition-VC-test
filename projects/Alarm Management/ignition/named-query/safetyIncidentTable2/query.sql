@@ -1,0 +1,1 @@
+select top 1 Total, Severity from SafetyIncidents order by SNo desc;

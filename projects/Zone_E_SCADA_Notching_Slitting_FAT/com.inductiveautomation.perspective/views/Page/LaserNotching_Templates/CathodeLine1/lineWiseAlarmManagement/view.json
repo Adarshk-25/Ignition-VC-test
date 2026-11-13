@@ -1,0 +1,636 @@
+{
+  "custom": {
+    "selectedRow": null
+  },
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "AlarmStatusTable"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.filters.active.conditions.source": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"*\"+\"IN11_E123_PCE_NTC11_IN11_E123_PCE/NTC11/AGAdmin\"+\"*\""
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "columns": {
+                        "active": {
+                          "ackTime": {
+                            "order": 9
+                          },
+                          "activeTime": {
+                            "enabled": false
+                          },
+                          "displayPath": {
+                            "enabled": false,
+                            "order": 10
+                          },
+                          "label": {
+                            "order": 6
+                          },
+                          "name": {
+                            "enabled": false,
+                            "order": 0
+                          },
+                          "priority": {
+                            "enabled": false,
+                            "order": 8
+                          },
+                          "source": {
+                            "enabled": false
+                          },
+                          "state": {
+                            "order": 9
+                          }
+                        }
+                      },
+                      "columnsAssociated": {
+                        "active": [
+                          {
+                            "enabled": true,
+                            "field": "Alarm Group Id",
+                            "order": 2,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Alarm Code",
+                            "order": 3,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Severity",
+                            "order": 4,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "FBS Source",
+                            "order": 5,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Troubleshoot",
+                            "order": 7,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Timestamp Active",
+                            "order": 0,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": false,
+                            "field": "Timestamp Reset",
+                            "order": 1,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Alarm Priority",
+                            "order": 4,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Alarm Description",
+                            "order": 0,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          }
+                        ]
+                      },
+                      "enableAcknowledge": false,
+                      "enableShelve": false,
+                      "enableUnshelve": false,
+                      "filters": {
+                        "active": {
+                          "conditions": {},
+                          "priorities": {
+                            "critical": false,
+                            "high": false,
+                            "low": false,
+                            "medium": false
+                          },
+                          "states": {
+                            "activeAcked": false,
+                            "activeUnacked": false,
+                            "clearUnacked": false
+                          }
+                        }
+                      },
+                      "refreshRate": 1000,
+                      "rowStyles": {
+                        "activeAcked": {
+                          "base": {
+                            "backgroundColor": "",
+                            "color": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "backgroundColor": "",
+                              "classes": "alarmAck/critical"
+                            },
+                            "diagnostic": {
+                              "backgroundColor": "",
+                              "classes": "alarmAck/diagnostic",
+                              "color": ""
+                            },
+                            "high": {
+                              "backgroundColor": "",
+                              "classes": "alarmAck/high"
+                            },
+                            "low": {
+                              "backgroundColor": "",
+                              "classes": "alarmAck/low"
+                            },
+                            "medium": {
+                              "backgroundColor": "",
+                              "classes": "alarmAck/medium"
+                            }
+                          }
+                        },
+                        "activeUnacked": {
+                          "base": {
+                            "backgroundColor": "",
+                            "color": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "backgroundColor": "",
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "backgroundColor": "",
+                              "classes": "alarm/diagnostic",
+                              "color": ""
+                            },
+                            "high": {
+                              "backgroundColor": "",
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "backgroundColor": "",
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "backgroundColor": "",
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        },
+                        "clearAcked": {
+                          "priorities": {
+                            "critical": {
+                              "classes": ""
+                            },
+                            "diagnostic": {
+                              "classes": ""
+                            },
+                            "high": {
+                              "classes": ""
+                            },
+                            "low": {
+                              "classes": ""
+                            },
+                            "medium": {
+                              "classes": ""
+                            }
+                          }
+                        },
+                        "clearUnacked": {
+                          "base": {
+                            "backgroundColor": "",
+                            "color": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "backgroundColor": "#DCDCDC"
+                            },
+                            "high": {
+                              "backgroundColor": "#E8E8E8"
+                            },
+                            "low": {
+                              "backgroundColor": "#F9F9F9"
+                            },
+                            "medium": {
+                              "backgroundColor": "#F2F2F2"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "scripts": {
+                      "customMethods": [],
+                      "extensionFunctions": [
+                        {
+                          "enabled": false,
+                          "name": "filterAlarm",
+                          "script": "\n    activeTime \u003d system.date.fromMillis(\n        alarmEvent.getActiveData().getTimestamp()\n    )\n\n    duration \u003d system.date.secondsBetween(\n        activeTime,\n        system.date.now()\n    )\n\n    system.perspective.print(\n        alarmEvent.getName() + \" : \" + str(duration)\n    )\n\n    return True"
+                        }
+                      ],
+                      "messageHandlers": []
+                    },
+                    "type": "ia.display.alarmstatustable"
+                  }
+                ],
+                "meta": {
+                  "name": "alarmStatusFlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-between",
+                  "style": {
+                    "classes": "widgets/spacing"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "alarmStatusTable"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "AlarmJournalTable"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.columnsAssociated[6].field": {
+                        "onChange": {
+                          "enabled": null,
+                          "script": "    system.perspective.print(\"Operator Message changed\")\n    system.perspective.print(currentValue.value)"
+                        }
+                      },
+                      "props.columnsAssociated[8].field": {
+                        "onChange": {
+                          "enabled": null,
+                          "script": "    system.perspective.print(\"ActiveDuration property changed\")\n    system.perspective.print(\"Origin \u003d \" + str(origin))\n    system.perspective.print(\"Value \u003d \" + str(currentValue.value))"
+                        }
+                      },
+                      "props.filter.conditions.source": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"*\"+\"IN11_E123_PCE_NTC11_IN11_E123_PCE/NTC11/AGAdmin\"+\"*\""
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "columns": {
+                        "displayPath": {
+                          "order": 9
+                        },
+                        "eventId": {
+                          "enabled": false
+                        },
+                        "eventState": {
+                          "order": 10
+                        },
+                        "eventTime": {
+                          "enabled": false,
+                          "order": 1
+                        },
+                        "label": {
+                          "order": 7
+                        },
+                        "priority": {
+                          "enabled": false,
+                          "order": 8
+                        },
+                        "source": {
+                          "enabled": false
+                        }
+                      },
+                      "columnsAssociated": [
+                        {
+                          "enabled": true,
+                          "field": "Alarm Group Id",
+                          "order": 2,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Alarm Code",
+                          "order": 3,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Severity",
+                          "order": 4,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "FBS Source",
+                          "order": 6,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Troubleshoot",
+                          "order": 9,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Timestamp Active",
+                          "order": 0,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Timestamp Reset",
+                          "order": 1,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Alarm Priority",
+                          "order": 5,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Alarm Description",
+                          "order": 0,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        }
+                      ],
+                      "filter": {
+                        "conditions": {},
+                        "events": {
+                          "acked": false,
+                          "active": false,
+                          "cleared": false
+                        },
+                        "priorities": {
+                          "critical": false,
+                          "high": false,
+                          "low": false,
+                          "medium": false
+                        },
+                        "results": {
+                          "enabled": true
+                        }
+                      },
+                      "name": "Alarm Management Journal",
+                      "rowStyles": {
+                        "acked": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        },
+                        "active": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarmAck/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarmAck/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarmAck/high"
+                            },
+                            "low": {
+                              "classes": "alarmAck/low"
+                            },
+                            "medium": {
+                              "classes": "alarmAck/medium"
+                            }
+                          }
+                        },
+                        "cleared": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        },
+                        "system": {
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarm/high"
+                            },
+                            "medium": {
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "scripts": {
+                      "customMethods": [],
+                      "extensionFunctions": [
+                        {
+                          "enabled": false,
+                          "name": "filterAlarm",
+                          "script": "\n    if alarmEvent.isCleared():\n        system.perspective.print(\n            \"CLEARED: \" + str(alarmEvent.getName())\n        )\n\n    return True"
+                        }
+                      ],
+                      "messageHandlers": []
+                    },
+                    "type": "ia.display.alarmjournaltable"
+                  }
+                ],
+                "meta": {
+                  "name": "alarmJournalFlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "classes": "widgets/spacing"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "alarmJournal"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "path": "Page/LaserNotching_Templates/CathodeLine1/Alarms/Alarm Configurator/Alarm Configurator"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "tabContainer"
+        },
+        "position": {
+          "basis": "600px",
+          "grow": 1
+        },
+        "props": {
+          "menuType": "modern",
+          "tabSize": {
+            "width": 200
+          },
+          "tabStyle": {
+            "active": {
+              "borderBottomColor": "#FFCA8A",
+              "borderBottomLeftRadius": 1,
+              "borderBottomRightRadius": 1,
+              "borderBottomStyle": "solid",
+              "borderTopRightRadius": 1,
+              "fontWeight": "bold"
+            }
+          },
+          "tabs": [
+            "Alarm Status Table",
+            "Alarm Journal",
+            "Alarm Configurator"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "custom": {
+      "changedName": []
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

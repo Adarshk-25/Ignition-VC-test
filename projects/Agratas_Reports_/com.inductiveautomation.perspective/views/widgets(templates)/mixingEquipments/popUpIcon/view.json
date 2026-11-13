@@ -1,0 +1,216 @@
+{
+  "custom": {},
+  "params": {
+    "Man_Data": [
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      }
+    ],
+    "Tag_Path": "value",
+    "Title": "value",
+    "equipmentGraphic": "value",
+    "machineFBS": "value",
+    "metadata": "value",
+    "tabNumber": "value",
+    "tag_SM": "value",
+    "tooltip": "value"
+  },
+  "propConfig": {
+    "params.Man_Data": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag_Path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Title": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.equipmentGraphic": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.machineFBS": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tabNumber": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_SM": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tooltip": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 12,
+      "width": 10
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Icon",
+          "tooltip": {
+            "text": null
+          }
+        },
+        "position": {
+          "height": 0.9091,
+          "width": 0.9375
+        },
+        "props": {
+          "path": "material/open_in_new",
+          "style": {
+            "cursor": "pointer"
+          }
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "draggable": true,
+            "id": "Wl9RilS-",
+            "modal": false,
+            "overlayDismiss": false,
+            "position": {
+              "height": 800,
+              "width": 1600
+            },
+            "positionType": "exact",
+            "resizable": true,
+            "showCloseIcon": true,
+            "title": "{view.params.Title}",
+            "type": "open",
+            "viewParams": {
+              "Man_Data": "{view.params.Man_Data}",
+              "Tag_Path_0": "{view.params.Tag_Path}",
+              "equipmentGraphic": "{view.params.equipmentGraphic}",
+              "machineFBS": "{view.params.machineFBS}",
+              "metadata": "{view.params.metadata}",
+              "tabNumber": "{view.params.tabNumber}",
+              "tag_SM": "{view.params.tag_SM}"
+            },
+            "viewPath": "Page/PopUpScreensTemplate/ProcessScreenTemplate",
+            "viewportBound": false
+          },
+          "scope": "C",
+          "type": "popup"
+        }
+      }
+    },
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "path": "view.params.tooltip"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

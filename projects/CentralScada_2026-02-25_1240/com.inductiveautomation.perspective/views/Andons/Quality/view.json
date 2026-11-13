@@ -1,0 +1,46 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#FFE8CC"
+          },
+          "text": "Quality"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "IFrame_0"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "src": "http://10.34.26.4:8088/system/webdev/CentralScada_2026-02-25_1240/AndonMockup/Quality.html",
+          "style": {
+            "classes": "widgets/spacing widgets/valueDisplay"
+          }
+        },
+        "type": "ia.display.iframe"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

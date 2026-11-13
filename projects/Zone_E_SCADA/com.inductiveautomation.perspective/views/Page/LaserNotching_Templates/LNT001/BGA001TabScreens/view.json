@@ -1,0 +1,735 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView_3"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/HRB001/BED001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingBGA001",
+            "equipmentName": "BGA001: Encoder Roll",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_0"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/MAA001/AxisPositionPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"mm\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/MAA001/AxisPositionSP"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"mm\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/MAA001/CurrentPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"A\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/MAA001/MotorFault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/MAA001/MotorRunning"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[5].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/MAA001/MotorSpeedPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"m/min\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[6].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/MAA001/MotorSpeedSP"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"m/min\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[7].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/MAA001/MotorStartCommand"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingBGA001",
+            "equipmentName": "MAA001: Encoder Roll Servo Motor (SM15)",
+            "parameterData": [
+              {
+                "Parameter": "AxisPositionPV"
+              },
+              {
+                "Parameter": "AxisPositionSP",
+                "key": "value"
+              },
+              {
+                "Parameter": "CurrentPV",
+                "key": "value"
+              },
+              {
+                "Parameter": "MotorFault",
+                "key": "value"
+              },
+              {
+                "Parameter": "MotorRunning"
+              },
+              {
+                "Parameter": "MotorSpeedPV"
+              },
+              {
+                "Parameter": "MotorSpeedSP"
+              },
+              {
+                "Parameter": "MotorStartCommand"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_12"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/AxisJigDownSettingPostion"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[10].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/ErrorCode"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[11].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[12].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/FollowingError"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[13].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/Idle"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[14].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/JogAcceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[15].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/JogDeceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[16].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/Running"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[17].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/Speed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[18].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/Status"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/TPD001/BGA001/AxisJigUpSettingPostion1"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/AxisJigUpSettingPostion2"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/AxisJigUpSettingPostion3"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/AxisJigUpSettingPostion4"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[5].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/AxisJigUpSettingPostion5"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[6].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/AxisJogVelocity"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[7].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/AxisPositioningAcceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[8].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/AxisPositioningDeceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[9].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/TAC001/AxisPositioningVelocity"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingBGA001",
+            "equipmentName": "TAC001: Encoder Roll Servo Drive (SD15)",
+            "parameterData": [
+              {
+                "Parameter": "AxisJigDownSettingPosition"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition1"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition2"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition3"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition4"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition5"
+              },
+              {
+                "Parameter": "AxisJogVelocity"
+              },
+              {
+                "Parameter": "AxisPositioningAcceleration"
+              },
+              {
+                "Parameter": "AxisPositioningDeceleration"
+              },
+              {
+                "Parameter": "AxisPositioningVelocity"
+              },
+              {
+                "Parameter": "ErrorCode"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "FollowingError"
+              },
+              {
+                "Parameter": "Idle"
+              },
+              {
+                "Parameter": "JogAcceleration"
+              },
+              {
+                "Parameter": "JogDeceleration"
+              },
+              {
+                "Parameter": "Running"
+              },
+              {
+                "Parameter": "Speed"
+              },
+              {
+                "Parameter": "Status"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_13"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/ZSC001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingBGA001",
+            "equipmentName": "ZSC001: Encoder Roll Servo Motor FLS Sensor (SM15)",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_14"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/ZSC002/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingBGA001",
+            "equipmentName": "ZSC002: Encoder Roll Servo Motor RLS Sensor (SM15)",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_17"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/BGA001/ZSO001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingBGA001",
+            "equipmentName": "ZSO001: Encoder Roll Servo Motor DOG Sensor (SM15)",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "custom": {
+      "tabConfig": [
+        {
+          "tabText": "BGA001",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "MAA001",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "TAC001",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "ZSC001",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "ZSC002",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "ZSO001",
+          "toolTipText": "value"
+        }
+      ]
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs": {
+        "binding": {
+          "config": {
+            "struct": {
+              "cfg": "{this.custom.tabConfig}",
+              "idx": "{this.props.currentTabIndex}",
+              "viewParams": {
+                "tabSelected": "\"value\"",
+                "tabText": "\"value\"",
+                "toolTipText": "\"value\""
+              },
+              "viewPath": "\"widgets(templates)/TabButton\""
+            },
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "    idx \u003d value[\u0027idx\u0027] if value[\u0027idx\u0027] is not None else 0\n    cfg \u003d value[\u0027cfg\u0027]\n    tabs \u003d []\n\n    for i in range(len(cfg)):\n        item \u003d cfg[i]\n\n        tabs.append({\n            \"viewPath\": \"widgets(templates)/TabButton\",\n\n            \"viewParams\": {\n                \"tabText\": item[\u0027tabText\u0027],\n                \"toolTipText\": item[\u0027toolTipText\u0027],\n                \"tabSelected\": (i \u003d\u003d idx)\n            },\n\n            \"runWhileHidden\": False\n        })\n\n    return tabs\n ",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      }
+    },
+    "props": {
+      "currentTabIndex": 5
+    },
+    "type": "ia.container.tab"
+  }
+}

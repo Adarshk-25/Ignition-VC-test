@@ -1,0 +1,87 @@
+{
+  "custom": {},
+  "params": {
+    "title": "string",
+    "value": "string"
+  },
+  "propConfig": {
+    "params.title": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 80,
+      "width": 462
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "title"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.title"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "#6b7280",
+            "fontSize": "13px"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "value"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "#111827",
+            "fontSize": "22px",
+            "fontWeight": "600"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "card"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "backgroundColor": "white",
+        "borderRadius": "8px",
+        "borderStyle": "outset",
+        "boxShadow": "0px 2px 6px rgba(0,0,0,0.08)",
+        "padding": "14px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

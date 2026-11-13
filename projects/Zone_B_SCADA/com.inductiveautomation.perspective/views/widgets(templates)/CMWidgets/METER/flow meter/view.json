@@ -1,0 +1,535 @@
+{
+  "custom": {},
+  "params": {
+    "Unit": "value",
+    "flowRate": 20.08,
+    "instName": "Flow Meter",
+    "state": 4
+  },
+  "propConfig": {
+    "params.Unit": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.flowRate": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.instName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.state": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 150,
+      "width": 95
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Flow totalizer"
+        },
+        "position": {
+          "height": 0.5867,
+          "width": 0.6211,
+          "x": 0.1474,
+          "y": 0.16
+        },
+        "propConfig": {
+          "props.elements[10].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.state"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[35].text": {
+            "binding": {
+              "config": {
+                "path": "view.params.flowRate"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn round(value,2)",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M874,717 l-874,0 0,188 874,0 0,-188z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7,858 l859,0 0,39 -859,0 0,-39z",
+              "fill": {
+                "paint": "#4c4c4c"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M124,0 l625,0 0,312 -625,0 0,-312z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M218,952 l-94,-16 0,-250 94,-15 0,281z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M218,624 l437,0 0,375 -437,0 0,-375z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M655,952 l94,-16 -1,-250 -93,-15 0,281z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M249,530 l375,0 0,-125 -375,0 0,125z",
+              "fill": {
+                "paint": "#000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M343,405 l187,0 0,-93 -187,0 0,93z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M312,624 l249,0 0,-94 -249,0 0,94z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M187,30 l499,0 0,250 -499,0 0,-250z",
+              "fill": {
+                "paint": "#333"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M249,109 l375,0 0,93 -375,0 0,-93z",
+              "fill": {},
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M631,109 l-7,-7 -375,0 0,14 375,0 -7,-7 14,0 0,-7 -7,0z",
+              "fill": {
+                "paint": "#000"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M624,209 l7,-7 0,-93 -14,0 0,93 7,-7 0,14 7,0 0,-7z",
+              "fill": {
+                "paint": "#000"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M242,202 l7,7 375,0 0,-14 -375,0 7,7 -14,0 0,7 7,0z",
+              "fill": {
+                "paint": "#000"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M249,102 l-7,7 0,93 14,0 0,-93 -7,7 0,-14 -7,0 0,7z",
+              "fill": {
+                "paint": "#000"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M327,624 l0,-16 47,-62 125,0 47,62 0,16 -219,0z",
+              "fill": {
+                "paint": "#ccc"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "cx": "717",
+              "cy": "30",
+              "fill": {
+                "paint": "#666"
+              },
+              "name": "circle",
+              "r": "15",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "circle"
+            },
+            {
+              "cx": "717",
+              "cy": "280",
+              "fill": {
+                "paint": "#666"
+              },
+              "name": "circle",
+              "r": "15",
+              "type": "circle"
+            },
+            {
+              "cx": "156",
+              "cy": "30",
+              "fill": {
+                "paint": "#666"
+              },
+              "name": "circle",
+              "r": "16",
+              "type": "circle"
+            },
+            {
+              "cx": "156",
+              "cy": "280",
+              "fill": {
+                "paint": "#666"
+              },
+              "name": "circle",
+              "r": "16",
+              "type": "circle"
+            },
+            {
+              "d": "M717,46 l0,-31",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M733,30 l-32,0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "cx": "717",
+              "cy": "280",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "circle",
+              "r": "15",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "circle"
+            },
+            {
+              "d": "M717,296 l0,-31",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M733,280 l-32,0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "cx": "156",
+              "cy": "30",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "circle",
+              "r": "16",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "circle"
+            },
+            {
+              "d": "M156,46 l0,-31",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M171,30 l-31,0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "cx": "156",
+              "cy": "280",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "circle",
+              "r": "16",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "circle"
+            },
+            {
+              "d": "M156,296 l0,-31",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M171,280 l-31,0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M249,421 l375,0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#7f7f7f",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M624,514 l-375,0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#7f7f7f",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M132,874 l78,0 0,70 -78,-16 0,-54z",
+              "fill": {
+                "paint": "#4c4c4c"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M741,874 l-78,0 0,70 78,-16 0,-54z",
+              "fill": {
+                "paint": "#4c4c4c"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "fontSize": "75px",
+              "name": "text",
+              "type": "text",
+              "x": "356",
+              "y": "184"
+            }
+          ],
+          "viewBox": "0 0 874 999"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1616,
+          "width": 0.8144,
+          "x": 0.0978,
+          "y": 0.0305
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.instName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

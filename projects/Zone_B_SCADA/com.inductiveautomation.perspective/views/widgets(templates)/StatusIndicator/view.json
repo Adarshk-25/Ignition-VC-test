@@ -1,0 +1,95 @@
+{
+  "custom": {},
+  "params": {
+    "Name": "ZS",
+    "status": 1
+  },
+  "propConfig": {
+    "params.Name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 23,
+      "width": 23
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Circles"
+        },
+        "position": {
+          "height": 0.7333,
+          "width": 0.92,
+          "x": -0.0004,
+          "y": 0.0197
+        },
+        "propConfig": {
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#969696"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "red"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "cx": "6.800000190734863",
+              "cy": "6.500000476837158",
+              "fill": {},
+              "name": "ellipse",
+              "r": 5,
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "0.5"
+              },
+              "type": "circle"
+            }
+          ],
+          "viewBox": "0 0 13 13"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

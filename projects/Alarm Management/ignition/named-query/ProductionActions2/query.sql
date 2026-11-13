@@ -1,0 +1,1 @@
+select top 1 Status,TargetDate from ProductionActions order by SNo desc;

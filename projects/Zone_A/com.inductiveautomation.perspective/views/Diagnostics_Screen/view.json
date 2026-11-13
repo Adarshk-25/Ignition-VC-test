@@ -1,0 +1,797 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 903,
+      "width": 1613
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ReportViewer"
+        },
+        "position": {
+          "height": 0.9435,
+          "width": 0.819,
+          "x": 0.1714,
+          "y": 0.0187
+        },
+        "propConfig": {
+          "props.params.EndDate": {
+            "binding": {
+              "config": {
+                "path": "../ColumnContainer_0/DateTimeInput_0.props.value"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          },
+          "props.params.StartDate": {
+            "binding": {
+              "config": {
+                "path": "../ColumnContainer_0/DateTimeInput.props.value"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          },
+          "props.params.equipmentId": {
+            "binding": {
+              "config": {
+                "path": "parent.custom.equipmentId"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          },
+          "props.params.shiftId": {
+            "binding": {
+              "config": {
+                "path": "parent.custom.shift_id"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          },
+          "props.params.unitId": {
+            "binding": {
+              "config": {
+                "path": "parent.custom.unit_id"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          },
+          "props.source": {
+            "binding": {
+              "config": {
+                "path": "../Dropdown.props.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "page": 1,
+          "pageCount": 1,
+          "params": {
+            "EndDate": {
+              "$": [
+                "ts",
+                201,
+                1771407964045
+              ],
+              "$ts": 1771698600000
+            },
+            "StartDate": {
+              "$": [
+                "ts",
+                201,
+                1771407937046
+              ],
+              "$ts": 1771353000000
+            },
+            "equipmentId": 1,
+            "shiftId": 1,
+            "unitId": 1
+          },
+          "style": {
+            "classes": "widgets/spacing widgets/valueDisplay"
+          },
+          "zoomLevel": 75
+        },
+        "type": "ia.reporting.report-viewer"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\n    # 1. FETCH \u0026 SYNC VALUES\n    # These names (Dropdown, Dropdown_0, etc.) match your Project Browser\n    equipment \u003d self.getSibling(\"Dropdown\").props.value      # Equipment Selection\n    unit \u003d self.getSibling(\"Dropdown_0\").props.value       # Unit Selection\n    shift \u003d self.getSibling(\"Dropdown_1\").props.value      # Shift Selection\n    start \u003d self.getSibling(\"Dropdown_2\").props.value      # Start Date Picker\n    end \u003d self.getSibling(\"Dropdown_3\").props.value        # End Date Picker\n    \n    # 2. UPDATE CUSTOM PROPERTIES\n    # These push the UI values to the root container for the ReportViewer to \u0027see\u0027\n    self.view.custom.equipment_id \u003d equipment\n    self.view.custom.unit_id \u003d unit\n    self.view.custom.shift_id \u003d shift\n    self.view.custom.start_date \u003d start\n    self.view.custom.end_date \u003d end\n    \n    # 3. VALIDATION LOGIC\n    # Prevents the \u0027Loading\u0027 hang seen in your video if a user forgets a selection\n    if None in [equipment, shift, start, end]:\n        # Log to the console for debugging\n        system.perspective.print(\"Validation Failed: One or more required filters are empty.\")\n    \n    elif start \u003e\u003d end:\n        # Prevents SQL errors from an invalid date range\n        system.perspective.print(\"Validation Failed: Start Date must be before End Date.\")\n        \n    else:\n        # 4. TRIGGER REPORT REFRESH\n        # This calls the 5-page report with the KPI Risk Summary\n        self.getSibling(\"ReportViewer\").refreshReport()\n        system.perspective.print(\"Report refreshed successfully.\")"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 1,
+                  "name": "sm",
+                  "order": 0,
+                  "rowIndex": 5,
+                  "span": 9
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 0,
+                  "span": 1
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 0,
+                  "span": 1
+                }
+              ],
+              "height": 45,
+              "width": 252,
+              "x": 22,
+              "y": 595
+            },
+            "props": {
+              "text": "Generate Report"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "DateTimeInput_0"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 0,
+                  "rowIndex": 4,
+                  "span": 11
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 1,
+                  "span": 1
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 1,
+                  "span": 1
+                }
+              ],
+              "height": 36,
+              "width": 258,
+              "x": 18,
+              "y": 529
+            },
+            "props": {
+              "formattedValue": "Feb 21, 2026 6:30 PM",
+              "value": {
+                "$": [
+                  "ts",
+                  0,
+                  1771407964045
+                ],
+                "$ts": 1771698600000
+              }
+            },
+            "type": "ia.input.date-time-input"
+          },
+          {
+            "meta": {
+              "name": "DateTimeInput"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 1,
+                  "rowIndex": 3,
+                  "span": 11
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 2,
+                  "span": 1
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 2,
+                  "span": 1
+                }
+              ],
+              "height": 37,
+              "width": 258,
+              "x": 18,
+              "y": 444
+            },
+            "props": {
+              "formattedValue": "Feb 17, 2026 6:30 PM",
+              "value": {
+                "$": [
+                  "ts",
+                  0,
+                  1771407937046
+                ],
+                "$ts": 1771353000000
+              }
+            },
+            "type": "ia.input.date-time-input"
+          },
+          {
+            "meta": {
+              "name": "Label_4"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 0,
+                  "rowIndex": 3,
+                  "span": 10
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 3,
+                  "span": 1
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 3,
+                  "span": 1
+                }
+              ],
+              "height": 33,
+              "width": 157,
+              "x": 18.5,
+              "y": 412
+            },
+            "props": {
+              "style": {
+                "fontFamily": "Arial",
+                "fontSize": 15
+              },
+              "text": "Start Date",
+              "textStyle": {
+                "color": "#ffa500",
+                "fontFamily": "Roboto",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "left"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_5"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 2,
+                  "rowIndex": 3,
+                  "span": 10
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 4,
+                  "span": 1
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 4,
+                  "span": 1
+                }
+              ],
+              "height": 33,
+              "width": 157,
+              "x": 24.5,
+              "y": 488
+            },
+            "props": {
+              "style": {
+                "fontFamily": "Arial",
+                "fontSize": 15
+              },
+              "text": "End Date",
+              "textStyle": {
+                "color": "#ffa500",
+                "fontFamily": "Roboto",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "left"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Shift_id_Dropdown"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 2,
+                  "rowIndex": 2,
+                  "span": 11
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 5,
+                  "span": 1
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 5,
+                  "span": 1
+                }
+              ],
+              "height": 36,
+              "width": 256,
+              "x": 18,
+              "y": 372
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Choose an option",
+                  "value": ""
+                },
+                {
+                  "label": "Morning Shift",
+                  "value": 1
+                },
+                {
+                  "label": "Afternoon Shift",
+                  "value": 2
+                }
+              ]
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Unit_id_Dropdown_"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 1,
+                  "rowIndex": 1,
+                  "span": 11
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 6,
+                  "span": 1
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 6,
+                  "span": 1
+                }
+              ],
+              "height": 36,
+              "width": 256,
+              "x": 18,
+              "y": 301
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Choose an option",
+                  "value": ""
+                },
+                {
+                  "label": 1,
+                  "value": 1
+                },
+                {
+                  "label": 2,
+                  "value": 2
+                },
+                {
+                  "label": 3,
+                  "value": 3
+                }
+              ],
+              "value": 2
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 0,
+                  "rowIndex": 2,
+                  "span": 11
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 7,
+                  "span": 1
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 7,
+                  "span": 1
+                }
+              ],
+              "height": 29,
+              "width": 157,
+              "x": 18.5,
+              "y": 338
+            },
+            "props": {
+              "style": {
+                "color": "#ffa500",
+                "fontFamily": "Roboto",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "left"
+              },
+              "text": "Shift"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 0,
+                  "rowIndex": 1,
+                  "span": 10
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 1,
+                  "rowIndex": 8,
+                  "span": 1
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 1,
+                  "rowIndex": 8,
+                  "span": 1
+                }
+              ],
+              "height": 31,
+              "width": 157,
+              "x": 18.5,
+              "y": 267
+            },
+            "props": {
+              "style": {
+                "color": "#ffa500",
+                "fontFamily": "Roboto",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "left"
+              },
+              "text": "Unit"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Equip_id_Dropdown"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": -0.5,
+                  "rowIndex": 1,
+                  "span": 11
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 2,
+                  "rowIndex": 0,
+                  "span": 11
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 2,
+                  "rowIndex": 0,
+                  "span": 11
+                }
+              ],
+              "height": 37,
+              "width": 256,
+              "x": 18,
+              "y": 229
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Choose an option",
+                  "value": ""
+                },
+                {
+                  "label": "Line 1",
+                  "value": 1
+                },
+                {
+                  "label": "Line 2",
+                  "value": 2
+                },
+                {
+                  "label": "line 3",
+                  "value": 3
+                },
+                {
+                  "label": "line 4",
+                  "value": 4
+                }
+              ],
+              "value": 1
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 0,
+                  "rowIndex": 0,
+                  "span": 11
+                },
+                {
+                  "colIndex": 0,
+                  "name": "md",
+                  "order": 0,
+                  "rowIndex": 0,
+                  "span": 11
+                },
+                {
+                  "colIndex": 0,
+                  "name": "lg",
+                  "order": 0,
+                  "rowIndex": 0,
+                  "span": 11
+                }
+              ],
+              "height": 60,
+              "width": "",
+              "x": 19.5,
+              "y": 162
+            },
+            "props": {
+              "style": {
+                "fontFamily": "Roboto",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center"
+              },
+              "text": "REPORT FILTERS",
+              "textStyle": {
+                "color": "#ffa500",
+                "fontFamily": "Roboto",
+                "fontSize": 25,
+                "fontWeight": "bold",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "breakpoints": [
+                {
+                  "colIndex": 0,
+                  "name": "sm",
+                  "order": 2,
+                  "rowIndex": 0,
+                  "span": 11
+                },
+                {
+                  "colIndex": 5,
+                  "name": "md",
+                  "order": 3,
+                  "rowIndex": 0,
+                  "span": 1
+                },
+                {
+                  "colIndex": 5,
+                  "name": "lg",
+                  "order": 3,
+                  "rowIndex": 0,
+                  "span": 1
+                }
+              ],
+              "height": 47
+            },
+            "props": {
+              "text": "Equipment",
+              "textStyle": {
+                "color": "#ffa500",
+                "fontFamily": "Roboto",
+                "fontSize": 18,
+                "fontWeight": "normal",
+                "textAlign": "left"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "ColumnContainer_0",
+          "visible": false
+        },
+        "position": {
+          "height": 0.9546,
+          "width": 0.1457,
+          "x": 0.0177,
+          "y": 0.0077
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#343474",
+            "classes": "widgets/spacing widgets/valueDisplay"
+          }
+        },
+        "type": "ia.container.column"
+      },
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "height": 0.0399,
+          "width": 0.1587,
+          "x": 0.005,
+          "y": 0.0443
+        },
+        "propConfig": {
+          "props.options": {
+            "binding": {
+              "config": {
+                "expression": "1"
+              },
+              "transforms": [
+                {
+                  "code": "\tds \u003d system.report.getReportNamesAsDataset()\n\t\n\toptions \u003d []\n\t\n\tfor row in range(ds.rowCount):\n\t    name \u003d ds.getValueAt(row, 0)\n\t    \n\t    options.append({\n\t        \"label\": name,\n\t        \"value\": name\n\t    })\n\t\n\treturn options",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "value": "KPI_Report"
+        },
+        "type": "ia.input.dropdown"
+      }
+    ],
+    "custom": {
+      "equipmentId": 1,
+      "shift_id": 1,
+      "unit_id": 1
+    },
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\t# 1. Sync the UI values to the Custom Properties manually\n\tself.view.custom.equipment_id \u003d self.getSibling(\"Dropdown_Equipment\").props.value\n\tself.view.custom.unit_id \u003d self.getSibling(\"Dropdown_Unit\").props.value\n\tself.view.custom.shift_id \u003d self.getSibling(\"Dropdown_Shift\").props.value\n\tself.view.custom.start_date \u003d self.getSibling(\"DateTime_Start\").props.value\n\tself.view.custom.end_date \u003d self.getSibling(\"DateTime_End\").props.value\n\t\n\t# 2. Validation: Don\u0027t refresh if critical IDs are missing\n\tif self.view.custom.equipment_id is None or self.view.custom.shift_id is None:\n\t\tsystem.perspective.print(\"Validation Failed: Equipment or Shift not selected\")\n\telse:\n\t\tself.getSibling(\"ReportViewer\").refreshReport()"
+          },
+          "enabled": false,
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0,
+      "y": 8
+    },
+    "propConfig": {
+      "custom.EndDate": {
+        "binding": {
+          "config": {
+            "path": "./ReportViewer.props.params.EndDate"
+          },
+          "type": "property"
+        }
+      },
+      "custom.StartDate": {
+        "binding": {
+          "config": {
+            "path": "./ReportViewer.props.params.StartDate"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

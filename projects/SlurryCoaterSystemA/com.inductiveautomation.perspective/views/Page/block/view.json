@@ -1,0 +1,69 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {
+                "paint": "none"
+              },
+              "height": "117",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "170",
+              "x": 3,
+              "y": 3
+            }
+          ]
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Label"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

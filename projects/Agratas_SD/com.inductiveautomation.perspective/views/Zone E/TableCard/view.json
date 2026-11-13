@@ -1,0 +1,1682 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "height": 0.0406,
+              "width": 0.3426,
+              "x": 0.0024,
+              "y": 0.0664
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "ActiveWorkID",
+                  "Value": 0
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "selection": {
+                "enableColumnSelection": true
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_0"
+            },
+            "position": {
+              "height": 0.2275,
+              "width": 0.3425,
+              "x": 0.0025,
+              "y": 0.1643
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "ParameterRef",
+                  "Value": "Inverter"
+                },
+                {
+                  "Parameters": "ParameterType",
+                  "Value": "RPM"
+                },
+                {
+                  "Parameters": "ParameterUOM",
+                  "Value": "rpm"
+                },
+                {
+                  "Parameters": "USL",
+                  "Value": 30
+                },
+                {
+                  "Parameters": "LSL",
+                  "Value": 20
+                },
+                {
+                  "Parameters": "Setpoint",
+                  "Value": 25
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "selection": {
+                "enableColumnSelection": true
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_1"
+            },
+            "position": {
+              "height": 0.2675,
+              "width": 0.3188,
+              "x": 0.3513,
+              "y": 0.1227
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "ParameterRef",
+                  "Value": "Loadcell"
+                },
+                {
+                  "Parameters": "ParameterType",
+                  "Value": "kg"
+                },
+                {
+                  "Parameters": "ParameterUOM",
+                  "Value": "kg"
+                },
+                {
+                  "Parameters": "USL",
+                  "Value": 20
+                },
+                {
+                  "Parameters": "LSL",
+                  "Value": 10
+                },
+                {
+                  "Parameters": "Setpoint",
+                  "Value": 15
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "selection": {
+                "enableColumnSelection": true
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "ProcessStatusLabel"
+            },
+            "position": {
+              "height": 0.0488,
+              "width": 0.6887,
+              "x": -0.0147,
+              "y": 0.0046
+            },
+            "props": {
+              "params": {
+                "equipmentName": "1. AGAdmin",
+                "status": ""
+              },
+              "path": "Zone E/TableTitle",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Table_2"
+            },
+            "position": {
+              "height": 0.0598,
+              "width": 0.3426,
+              "x": 0.0024,
+              "y": 0.1062
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameters",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": "",
+                    "textAlign": "center",
+                    "textTransform": "capitalize"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "Parameters": "Current Recipe ID"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "rows": {
+                "style": {
+                  "textAlign": "center"
+                },
+                "subviewExpansionMode": "single"
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "textAlign": "center",
+                  "textTransform": "capitalize"
+                }
+              },
+              "style": {
+                "classes": "Table/tableHeader",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_3"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.3187,
+              "x": 0.3511,
+              "y": 0.0654
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "Last Recipe ID"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "rows": {
+                "subviewExpansionMode": "single"
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "classes": "Table/tableHeader"
+                }
+              },
+              "style": {
+                "classes": "Table/tableHeader"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_4"
+            },
+            "position": {
+              "height": 0.061,
+              "width": 0.335,
+              "x": 0.0075,
+              "y": 0.47
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameters",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": "",
+                    "textAlign": "center",
+                    "textTransform": "capitalize"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "Parameters": "Request Mode\n"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "rows": {
+                "style": {
+                  "textAlign": "center"
+                },
+                "subviewExpansionMode": "single"
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "textAlign": "center",
+                  "textTransform": "capitalize"
+                }
+              },
+              "style": {
+                "classes": "Table/tableHeader",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_5"
+            },
+            "position": {
+              "height": 0.0788,
+              "width": 0.335,
+              "x": 0.0076,
+              "y": 0.5293
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "ReqMod",
+                  "Value": 0
+                },
+                {
+                  "Parameters": "ReqModelnprogress",
+                  "Value": false
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "selection": {
+                "enableColumnSelection": true
+              },
+              "style": {
+                "classes": "Table/tableValue"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "ProcessStatusLabel_0"
+            },
+            "position": {
+              "height": 0.0475,
+              "width": 0.65,
+              "x": 0.0065,
+              "y": 0.4171
+            },
+            "props": {
+              "params": {
+                "equipmentName": "3. AGCmd",
+                "status": ""
+              },
+              "path": "Zone E/TableTitle",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Table_6"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.3104,
+              "x": 0.3475,
+              "y": 0.4712
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameters",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": "",
+                    "textAlign": "center",
+                    "textTransform": "capitalize"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "Parameters": "Request State\n\n"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "rows": {
+                "style": {
+                  "textAlign": "center"
+                },
+                "subviewExpansionMode": "single"
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "textAlign": "center",
+                  "textTransform": "capitalize"
+                }
+              },
+              "style": {
+                "classes": "Table/tableHeader",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_7"
+            },
+            "position": {
+              "height": 0.0788,
+              "width": 0.3104,
+              "x": 0.3476,
+              "y": 0.5282
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "ReqMod",
+                  "Value": 0
+                },
+                {
+                  "Parameters": "ReqModelnprogress",
+                  "Value": false
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "selection": {
+                "enableColumnSelection": true
+              },
+              "style": {
+                "classes": "Table/tableValue"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "ProcessStatusLabel_1"
+            },
+            "position": {
+              "height": 0.0462,
+              "width": 0.3075,
+              "x": 0.6777,
+              "y": 0.3702
+            },
+            "props": {
+              "params": {
+                "equipmentName": "4. AGStatus",
+                "status": ""
+              },
+              "path": "Zone E/TableTitle",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "ProcessStatusLabel_2"
+            },
+            "position": {
+              "height": 0.0475,
+              "width": 1.01,
+              "x": -0.015,
+              "y": 0.6395
+            },
+            "props": {
+              "params": {
+                "equipmentName": "2. AGCalls - AGSetMaterialInfo",
+                "status": ""
+              },
+              "path": "Zone E/TableTitle",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Table_12"
+            },
+            "position": {
+              "height": 0.0415,
+              "width": 0.3775,
+              "x": 0.0034,
+              "y": 0.6951
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameters",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Value",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Stat",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "Parameters": "Handshake",
+                  "Stat": "Idle",
+                  "Value": 0
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_15"
+            },
+            "position": {
+              "height": 0.0634,
+              "width": 0.3775,
+              "x": 0.0034,
+              "y": 0.7746
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "Request Data"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "rows": {
+                "subviewExpansionMode": "single"
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "classes": "Table/tableHeader"
+                }
+              },
+              "style": {
+                "classes": "Table/tableHeader"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_16"
+            },
+            "position": {
+              "height": 0.1525,
+              "width": 0.3775,
+              "x": 0.0036,
+              "y": 0.833
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "Material QRCode",
+                  "Value": "Loadcell"
+                },
+                {
+                  "Parameters": "InputFBS",
+                  "Value": "IN11.E115.PCE.CER11"
+                },
+                {
+                  "Parameters": "Quantity",
+                  "Value": 50
+                },
+                {
+                  "Parameters": "RequestTimeStamp",
+                  "Value": "2026-06-07 02:03:05"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_17"
+            },
+            "position": {
+              "height": 0.0415,
+              "width": 0.3775,
+              "x": 0.0036,
+              "y": 0.7357
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "RequestAckNumber",
+                  "Value": 7
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_18"
+            },
+            "position": {
+              "height": 0.0415,
+              "width": 0.28,
+              "x": 0.7158,
+              "y": 0.695
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "SenderFBS\n",
+                  "Value": "IN11.E115.PCE.CER11"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_19"
+            },
+            "position": {
+              "height": 0.0415,
+              "width": 0.28,
+              "x": 0.7161,
+              "y": 0.7357
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "ResponseAckNumber",
+                  "Value": 7
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_20"
+            },
+            "position": {
+              "height": 0.0634,
+              "width": 0.3122,
+              "x": 0.3922,
+              "y": 0.6944
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "Responce Data"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "rows": {
+                "subviewExpansionMode": "single"
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "classes": "Table/tableHeader"
+                }
+              },
+              "style": {
+                "classes": "Table/tableHeader"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_21"
+            },
+            "position": {
+              "height": 0.235,
+              "width": 0.3125,
+              "x": 0.3924,
+              "y": 0.7505
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "Material QRCode",
+                  "Value": "TESTQRCODECHECK"
+                },
+                {
+                  "Parameters": "Batch ID",
+                  "Value": "TESTBATCHID\n"
+                },
+                {
+                  "Parameters": "Expiry Date",
+                  "Value": "2026-06-07 02:03:05"
+                },
+                {
+                  "Parameters": "QualityStatus",
+                  "Value": false
+                },
+                {
+                  "Parameters": "Authorized",
+                  "Value": true
+                },
+                {
+                  "Parameters": "StatusCode",
+                  "Value": 400
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "selection": {
+                "enableRowSelection": false
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_22"
+            },
+            "position": {
+              "height": 0.0488,
+              "width": 0.28,
+              "x": 0.7161,
+              "y": 0.7768
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "ResponseTime\n",
+                  "Value": "2026-06-07 02:03:05"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 0.0425,
+              "width": 0.2725,
+              "x": 0.7202,
+              "y": 0.833
+            },
+            "props": {
+              "text": "Trigger",
+              "textStyle": {
+                "classes": "Page/Button"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "ProcessStatusLabel_3"
+            },
+            "position": {
+              "height": 0.0512,
+              "width": 0.3113,
+              "x": 0.6772,
+              "y": 0.0036
+            },
+            "props": {
+              "params": {
+                "equipmentName": "5. AGRecipe",
+                "status": ""
+              },
+              "path": "Zone E/TableTitle",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Table_13"
+            },
+            "position": {
+              "height": 0.0622,
+              "width": 0.3037,
+              "x": 0.6842,
+              "y": 0.059
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameters",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": "",
+                    "textAlign": "center",
+                    "textTransform": "capitalize"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "Parameters": "Header"
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "rows": {
+                "style": {
+                  "textAlign": "center"
+                },
+                "subviewExpansionMode": "single"
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "textAlign": "center",
+                  "textTransform": "capitalize"
+                }
+              },
+              "style": {
+                "classes": "Table/tableHeader",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_14"
+            },
+            "position": {
+              "height": 0.2313,
+              "width": 0.3037,
+              "x": 0.6841,
+              "y": 0.1215
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "ProcessStep",
+                  "Value": "cERAMIC_Mixing"
+                },
+                {
+                  "Parameters": "ProductionOrder",
+                  "Value": "WO-3124123"
+                },
+                {
+                  "Parameters": "ProductID\n",
+                  "Value": "CERAMIC-A"
+                },
+                {
+                  "Parameters": "RecipeID",
+                  "Value": "RC-CER_PVDF"
+                },
+                {
+                  "Parameters": "MachineFBS",
+                  "Value": "IN11.E115.PCE"
+                },
+                {
+                  "Parameters": "OrderQuality",
+                  "Value": 70
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "selection": {
+                "enableColumnSelection": true
+              },
+              "style": {
+                "classes": "Table/tableValue"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Button_0"
+            },
+            "position": {
+              "height": 0.0425,
+              "width": 0.2725,
+              "x": 0.7202,
+              "y": 0.8829
+            },
+            "props": {
+              "text": "MetaData-CER11",
+              "textStyle": {
+                "classes": "Page/Button"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_1"
+            },
+            "position": {
+              "height": 0.0425,
+              "width": 0.2725,
+              "x": 0.7202,
+              "y": 0.9318
+            },
+            "props": {
+              "text": "MetaData-POW11",
+              "textStyle": {
+                "classes": "Page/Button"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Table_23"
+            },
+            "position": {
+              "height": 0.1902,
+              "width": 0.311,
+              "x": 0.6808,
+              "y": 0.4202
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "data": [
+                {
+                  "Parameters": "ActualMachineSpeed",
+                  "Value": 0
+                },
+                {
+                  "Parameters": "CurrentModeNumber",
+                  "Value": 1
+                },
+                {
+                  "Parameters": "CurrentStatNumber",
+                  "Value": 2
+                },
+                {
+                  "Parameters": "EquipmentBlocked",
+                  "Value": false
+                },
+                {
+                  "Parameters": "EquipmentStarved",
+                  "Value": false
+                }
+              ],
+              "enableHeader": false,
+              "pager": {
+                "bottom": false
+              },
+              "selection": {
+                "enableColumnSelection": true
+              },
+              "style": {
+                "classes": "Table/tableValue"
+              }
+            },
+            "type": "ia.display.table"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "aspectRatio": "800:800",
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,1612 @@
+{
+  "custom": {},
+  "params": {
+    "mode": "value",
+    "motor": "value"
+  },
+  "propConfig": {
+    "params.mode": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.motor": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 499,
+      "width": 412
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "params": {
+                  "tabValue": "7"
+                },
+                "view": "Page/1F_Templates/1F_mainScreen"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "height": 0.9699,
+          "width": 0.9636,
+          "x": 0.0046,
+          "y": 0.0021
+        },
+        "propConfig": {
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[10].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[11].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[12].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[14].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[15].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[16].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[17].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[3].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[4].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[5].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[6].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[7].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[8].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[9].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.mode}"
+                },
+                "tagPath": "{mode}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "height": "10.571426391601562",
+              "name": "rect_3",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "33.803977966308594",
+              "x": "44.22856903076172",
+              "y": "31"
+            },
+            {
+              "fill": {},
+              "height": "11.771430015563965",
+              "name": "rect_4",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "36.2039794921875",
+              "x": "78.03074645996094",
+              "y": "31.74285888671875"
+            },
+            {
+              "fill": {},
+              "height": "12.371430397033691",
+              "name": "rect_5",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "34.20396423339844",
+              "x": "113.96746063232422",
+              "y": "31.54285430908203"
+            },
+            {
+              "fill": {},
+              "height": "173.7142791748047",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "rect",
+              "width": "12",
+              "x": 5.142857142856883,
+              "y": "23.761905670166016"
+            },
+            {
+              "fill": {},
+              "height": "174.38095092773438",
+              "name": "rect_1",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "12",
+              "x": "183.99998474121094",
+              "y": "23.428571701049805"
+            },
+            {
+              "fill": {},
+              "height": "38.53571319580078",
+              "name": "rect_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "197.14285278320312",
+              "x": 1.714285714286234,
+              "y": "-9.85714340209961"
+            },
+            {
+              "fill": {},
+              "height": "2.857142925262451",
+              "name": "rect_2",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "114.85713958740234",
+              "x": "39.42856979370117",
+              "y": "28.71428680419922"
+            },
+            {
+              "fill": {},
+              "height": "42.28571319580078",
+              "name": "rect_6",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "104.57142639160156",
+              "x": "44",
+              "y": "41.14285659790039"
+            },
+            {
+              "fill": {},
+              "height": "17.14285659790039",
+              "name": "rect_7",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "104.56999969482422",
+              "x": "43.914283752441406",
+              "y": "84"
+            },
+            {
+              "fill": {},
+              "height": "17.200000762939453",
+              "name": "rect_8",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "10.199999809265137",
+              "x": "60.79999923706055",
+              "y": "84"
+            },
+            {
+              "fill": {},
+              "height": "17.19999885559082",
+              "name": "rect_9",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "9.399999618530273",
+              "x": "114.4000015258789",
+              "y": "84"
+            },
+            {
+              "fill": {},
+              "height": "33.19554901123047",
+              "name": "rect_11",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "3",
+              "x": "64.5999984741211",
+              "y": "103.4000015258789"
+            },
+            {
+              "fill": {},
+              "height": "3.799999952316284",
+              "name": "rect_10",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "7",
+              "x": "62.79999923706055",
+              "y": "101"
+            },
+            {
+              "fill": {
+                "paint": "#bdbdbd"
+              },
+              "height": "2.7377777099609375",
+              "name": "rect_12",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "5",
+              "x": "63.599998474121094",
+              "y": "136.59555053710938"
+            },
+            {
+              "fill": {},
+              "height": "2.2244415283203125",
+              "name": "rect_13",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "5.1999969482421875",
+              "x": "63.400001525878906",
+              "y": "128.67111206054688"
+            },
+            {
+              "fill": {},
+              "height": "46.364646911621094",
+              "name": "rect_14",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "3.1999969482421875",
+              "x": "111",
+              "y": "97.6353530883789"
+            },
+            {
+              "fill": {},
+              "height": "46.36463928222656",
+              "name": "rect_15",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "3.1999969482421875",
+              "x": "124.19998931884766",
+              "y": "97.39999389648438"
+            },
+            {
+              "fill": {},
+              "height": "57.666664123535156",
+              "name": "rect_16",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "108",
+              "x": 43,
+              "y": 140.66666666666697
+            },
+            {
+              "fill": {
+                "paint": "#bdbdbd"
+              },
+              "height": "1.6666667461395264",
+              "name": "rect_17",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "116.66666412353516",
+              "x": "39",
+              "y": "140"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0.7142857313156128 -10.85714340209961 199.14285278320312 210.19049072265625"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Motor 4"
+        },
+        "position": {
+          "height": 0.1804,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 0.2184,
+          "x": 0.2064,
+          "y": 0.0014
+        },
+        "propConfig": {
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "motor": "{view.params.motor}"
+                },
+                "tagPath": "{motor}/MAA1"
+              },
+              "transforms": [
+                {
+                  "code": "\tif (value[\u0027MotorFault\u0027])\u003d\u003dTrue:\n\t\tcolor\u003d \"#FF0000\"\n\telif (value[\u0027MotorRunning\u0027])\u003d\u003dTrue:\n\t\tcolor\u003d\"#00FF00\"\n\telif value[\u0027MotorStartCommand\u0027]\u003d\u003dTrue:\n\t\tcolor\u003d\"#000080\"\n\telse:\n\t\tcolor\u003d\"#0000FF\"\n\treturn color",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[5].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "motor": "{view.params.motor}"
+                },
+                "tagPath": "{motor}/MAA1"
+              },
+              "transforms": [
+                {
+                  "code": "\tif (value[\u0027MotorFault\u0027])\u003d\u003dTrue:\n\t\tcolor\u003d \"#FF0000\"\n\telif (value[\u0027MotorRunning\u0027])\u003d\u003dTrue:\n\t\tcolor\u003d\"#00FF00\"\n\telif value[\u0027MotorStartCommand\u0027]\u003d\u003dTrue:\n\t\tcolor\u003d\"#000080\"\n\telse:\n\t\tcolor\u003d\"#0000FF\"\n\t#tagPath\u003dsystem.tag.readBlocking(str(value))\n\treturn color",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "name": "perspective-arc",
+              "specialPath": {
+                "end": 0,
+                "height": 41.68,
+                "slice": true,
+                "start": 0,
+                "width": 31,
+                "x": 65,
+                "y": 0.5
+              },
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M112.499 19.482H96.07599984687566v4.505h16.42300015312433V19.482",
+                  "fill": {
+                    "paint": "#BDBDBD",
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.5"
+                  },
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#749697",
+                      "style": {
+                        "stopColor": "#749697"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#99E1E1",
+                      "style": {
+                        "stopColor": "#99E1E1"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#4C7F7F",
+                      "style": {
+                        "stopColor": "#4C7F7F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 42.9038)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "100.7871",
+                  "x2": "100.7871",
+                  "y1": "18.9167",
+                  "y2": "23.4221"
+                }
+              ],
+              "id": "Group_Inlet_Outlet_Pipe",
+              "name": "Group_Inlet_Outlet_Pipe",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#749697",
+                      "style": {
+                        "stopColor": "#749697"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#99E1E1",
+                      "style": {
+                        "stopColor": "#99E1E1"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#4C7F7F",
+                      "style": {
+                        "stopColor": "#4C7F7F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 42.9038)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "type": "linearGradient",
+                  "x1": "76.126",
+                  "x2": "76.126",
+                  "y1": "-0.0647",
+                  "y2": "42.4055"
+                }
+              ],
+              "id": "Group_Motor_Body",
+              "name": "Group_Motor_Body",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#749697",
+                      "style": {
+                        "stopColor": "#749697"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#99E1E1",
+                      "style": {
+                        "stopColor": "#99E1E1"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#4C7F7F",
+                      "style": {
+                        "stopColor": "#4C7F7F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 42.9038)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_3_",
+                  "name": "SVGID_3_",
+                  "type": "linearGradient",
+                  "x1": "14.3022",
+                  "x2": "14.3022",
+                  "y1": "0.2234",
+                  "y2": "42.9045"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#749697",
+                      "style": {
+                        "stopColor": "#749697"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#99E1E1",
+                      "style": {
+                        "stopColor": "#99E1E1"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#4C7F7F",
+                      "style": {
+                        "stopColor": "#4C7F7F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 42.9038)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_4_",
+                  "name": "SVGID_4_",
+                  "type": "linearGradient",
+                  "x1": "2.4219",
+                  "x2": "2.4219",
+                  "y1": "0.2234",
+                  "y2": "42.9045"
+                },
+                {
+                  "d": "M4.843,42.68l-4.842-4.73V4.504L4.843,0V42.68z",
+                  "fill": {
+                    "url": "url(#SVGID_4_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.5"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_",
+              "name": "Group_",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M5.095335103988646 0h77.47599464859614v42.67999775096461H5.095335103988646V0",
+                  "fill": {},
+                  "name": "path_0",
+                  "opacity": 1,
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.5"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Cooler_Fins",
+              "name": "Group_Cooler_Fins",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 112.5 42.904"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Motor 5"
+        },
+        "position": {
+          "height": 0.1804,
+          "rotate": {
+            "angle": "90deg"
+          },
+          "width": 0.2184,
+          "x": 0.4782,
+          "y": 0.0016
+        },
+        "propConfig": {
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "mode": "{view.params.motor}"
+                },
+                "tagPath": "{mode}/MAA2"
+              },
+              "transforms": [
+                {
+                  "code": "\tif (value[\u0027MotorFault\u0027])\u003d\u003dTrue:\n\t\tcolor\u003d \"#FF0000\"\n\telif (value[\u0027MotorRunning\u0027])\u003d\u003dTrue:\n\t\tcolor\u003d\"#00FF00\"\n\telif value[\u0027MotorStartCommand\u0027]\u003d\u003dTrue:\n\t\tcolor\u003d\"#000080\"\n\telse:\n\t\tcolor\u003d\"#0000FF\"\n\treturn color",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[5].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "motor": "{view.params.motor}"
+                },
+                "tagPath": "{motor}/MAA2"
+              },
+              "transforms": [
+                {
+                  "code": "\tif (value[\u0027MotorFault\u0027])\u003d\u003dTrue:\n\t\tcolor\u003d \"#FF0000\"\n\telif (value[\u0027MotorRunning\u0027])\u003d\u003dTrue:\n\t\tcolor\u003d\"#00FF00\"\n\telif value[\u0027MotorStartCommand\u0027]\u003d\u003dTrue:\n\t\tcolor\u003d\"#000080\"\n\telse:\n\t\tcolor\u003d\"#0000FF\"\n\treturn color",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "name": "perspective-arc",
+              "specialPath": {
+                "end": 0,
+                "height": 41.68,
+                "slice": true,
+                "start": 0,
+                "width": 31,
+                "x": 65,
+                "y": 0.5
+              },
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M112.499 19.482H96.07599984687566v4.505h16.42300015312433V19.482",
+                  "fill": {
+                    "paint": "#000000",
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.5"
+                  },
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#749697",
+                      "style": {
+                        "stopColor": "#749697"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#99E1E1",
+                      "style": {
+                        "stopColor": "#99E1E1"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#4C7F7F",
+                      "style": {
+                        "stopColor": "#4C7F7F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 42.9038)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "100.7871",
+                  "x2": "100.7871",
+                  "y1": "18.9167",
+                  "y2": "23.4221"
+                }
+              ],
+              "id": "Group_Inlet_Outlet_Pipe",
+              "name": "Group_Inlet_Outlet_Pipe",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#749697",
+                      "style": {
+                        "stopColor": "#749697"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#99E1E1",
+                      "style": {
+                        "stopColor": "#99E1E1"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#4C7F7F",
+                      "style": {
+                        "stopColor": "#4C7F7F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 42.9038)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "type": "linearGradient",
+                  "x1": "76.126",
+                  "x2": "76.126",
+                  "y1": "-0.0647",
+                  "y2": "42.4055"
+                }
+              ],
+              "id": "Group_Motor_Body",
+              "name": "Group_Motor_Body",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#749697",
+                      "style": {
+                        "stopColor": "#749697"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#99E1E1",
+                      "style": {
+                        "stopColor": "#99E1E1"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#4C7F7F",
+                      "style": {
+                        "stopColor": "#4C7F7F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 42.9038)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_3_",
+                  "name": "SVGID_3_",
+                  "type": "linearGradient",
+                  "x1": "14.3022",
+                  "x2": "14.3022",
+                  "y1": "0.2234",
+                  "y2": "42.9045"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#749697",
+                      "style": {
+                        "stopColor": "#749697"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#99E1E1",
+                      "style": {
+                        "stopColor": "#99E1E1"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#4C7F7F",
+                      "style": {
+                        "stopColor": "#4C7F7F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 42.9038)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_4_",
+                  "name": "SVGID_4_",
+                  "type": "linearGradient",
+                  "x1": "2.4219",
+                  "x2": "2.4219",
+                  "y1": "0.2234",
+                  "y2": "42.9045"
+                },
+                {
+                  "d": "M4.843,42.68l-4.842-4.73V4.504L4.843,0V42.68z",
+                  "fill": {
+                    "url": "url(#SVGID_4_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.5"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_",
+              "name": "Group_",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M5.095335103988646 0h77.47599464859614v42.67999775096461H5.095335103988646V0",
+                  "fill": {},
+                  "name": "path_0",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.5"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Cooler_Fins",
+              "name": "Group_Cooler_Fins",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 112.5 42.904"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "pipes": [
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe",
+          "origin": {
+            "connections": [],
+            "x": 0,
+            "y": 0
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 10
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

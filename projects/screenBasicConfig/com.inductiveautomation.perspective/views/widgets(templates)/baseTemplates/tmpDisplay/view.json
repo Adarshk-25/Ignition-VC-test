@@ -1,0 +1,146 @@
+{
+  "custom": {},
+  "params": {
+    "tagpath": "[default]agratas/sanand/zoneE/mixing/anode/plcTags/postiveHopperSpeed"
+  },
+  "propConfig": {
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 38,
+      "width": 847
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "196.2px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}.name"
+              },
+              "overlayOptOut": true,
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomStyle": "none",
+            "borderLeftStyle": "solid",
+            "borderLeftWidth": "0.5em",
+            "borderRightStyle": "none",
+            "borderTopStyle": "none",
+            "classes": "Page/Bold",
+            "fontSize": 16
+          },
+          "textStyle": {
+            "textTransform": "capitalize"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "150px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}"
+              },
+              "overlayOptOut": true,
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontSize": 16
+          },
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "basis": "60px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "1": "{view.params.tagpath}"
+                },
+                "tagPath": "{1}.ENGunit"
+              },
+              "overlayOptOut": true,
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontSize": 18
+          },
+          "textStyle": {
+            "fontSize": "16px",
+            "fontWeight": 600,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "space-evenly",
+      "style": {
+        "borderColor": "#AAAAAA",
+        "borderStyle": "ridge",
+        "borderWidth": "0.1em",
+        "classes": "Title/Title widgets/valueDisplay",
+        "fontFamily": "serif",
+        "fontSize": "0.75em"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

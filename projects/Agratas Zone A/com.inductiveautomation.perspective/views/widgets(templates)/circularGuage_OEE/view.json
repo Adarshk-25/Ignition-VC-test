@@ -1,0 +1,327 @@
+{
+  "custom": {},
+  "params": {
+    "AvailablilityValue": 90,
+    "OEEName": "value",
+    "OEEValue": "95%",
+    "PerformanceValue": 78,
+    "QualityValue": 91
+  },
+  "propConfig": {
+    "params.AvailablilityValue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.OEEName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.OEEValue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.PerformanceValue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.QualityValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 391,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label_lineName"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.OEEName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "widgets/valueDisplay"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "47px"
+                },
+                "props": {
+                  "text": "OEE"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "spacing"
+                },
+                "position": {
+                  "basis": "0.1em"
+                },
+                "props": {
+                  "text": "\n"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "position": {
+                  "basis": "119px"
+                },
+                "props": {
+                  "alignVertical": "bottom",
+                  "text": "Last 7 days",
+                  "textStyle": {
+                    "fontFamily": "Merriweather",
+                    "fontSize": "12px",
+                    "textAlign": "left"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "widgets/valueDisplay"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_lineDetails"
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "circularGuage"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.innerCircleValue": {
+            "binding": {
+              "config": {
+                "path": "view.params.AvailablilityValue"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.middleCircleValue": {
+            "binding": {
+              "config": {
+                "path": "view.params.QualityValue"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.outerCircleValue": {
+            "binding": {
+              "config": {
+                "path": "view.params.PerformanceValue"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.valueDisplay": {
+            "binding": {
+              "config": {
+                "path": "view.params.OEEValue"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "widgets(templates)/baseTemplates/circularGuage"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "labelValueDisplay_target"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.displayValue": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.OEEValue"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "color": "value",
+                    "displayName": "OEE"
+                  },
+                  "path": "widgets(templates)/baseTemplates/labelValueDisplay"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "borderBottomStyle": "none",
+                "borderLeftStyle": "none",
+                "borderRightStyle": "solid",
+                "borderRightWidth": "1px",
+                "borderTopStyle": "none"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "labelValueDisplay_availability"
+            },
+            "position": {
+              "grow": 1,
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.displayValue": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.AvailablilityValue"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "color": "orange",
+                "displayName": "Availability"
+              },
+              "path": "widgets(templates)/baseTemplates/labelValueDisplay"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "labelValueDisplay_performance"
+            },
+            "position": {
+              "grow": 1,
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.displayValue": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.PerformanceValue"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "color": "gold",
+                "displayName": "Performance"
+              },
+              "path": "widgets(templates)/baseTemplates/labelValueDisplay"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "labelValueDisplay_quality"
+            },
+            "position": {
+              "grow": 1,
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.displayValue": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.QualityValue"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "color": "var(--div-11)",
+                "displayName": "Quality"
+              },
+              "path": "widgets(templates)/baseTemplates/labelValueDisplay"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_target"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "widgets/spacing"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

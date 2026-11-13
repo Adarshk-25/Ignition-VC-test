@@ -1,0 +1,805 @@
+{
+  "custom": {},
+  "params": {
+    "ActualPositionPV": 1,
+    "ActualSpeedPV": 2,
+    "ActualVelocityPV": 3,
+    "Name": "MIX21_GMA20",
+    "OperationTime": 4,
+    "PositionReachedPV": 5,
+    "PowerPV": 6,
+    "TargetPositionPV": 7
+  },
+  "propConfig": {
+    "params.ActualPositionPV": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ActualSpeedPV": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ActualVelocityPV": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.OperationTime": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.PositionReachedPV": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.PowerPV": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TargetPositionPV": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "borderRadius": 10,
+    "defaultSize": {
+      "height": 466,
+      "width": 286
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label_13"
+        },
+        "position": {
+          "height": 53,
+          "width": 265,
+          "x": 10,
+          "y": 69.5
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#DCDCDC",
+            "borderRadius": 10,
+            "borderStyle": "ridge"
+          },
+          "textStyle": {
+            "backgroundColor": "#C0EBFF"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Image"
+        },
+        "position": {
+          "height": 56,
+          "width": 61,
+          "x": 47,
+          "y": 392
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 24,
+          "width": 143,
+          "x": 18,
+          "y": 84
+        },
+        "props": {
+          "style": {
+            "alignItems": "flex-end"
+          },
+          "text": "Actual Speed :"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_15"
+        },
+        "position": {
+          "height": 24,
+          "width": 58,
+          "x": 160,
+          "y": 84
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.ActualVelocityPV"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center",
+            "borderRadius": 5
+          },
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_16"
+        },
+        "position": {
+          "height": 24,
+          "width": 41,
+          "x": 210,
+          "y": 84
+        },
+        "props": {
+          "style": {
+            "borderRadius": 6
+          },
+          "text": "m/s",
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 15
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_14"
+        },
+        "position": {
+          "height": 53,
+          "width": 265,
+          "x": 10,
+          "y": 124.5
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#DCDCDC",
+            "borderRadius": 10,
+            "borderStyle": "ridge"
+          },
+          "textStyle": {
+            "backgroundColor": "#C0EBFF"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 24,
+          "width": 143,
+          "x": 18,
+          "y": 139
+        },
+        "props": {
+          "style": {
+            "alignItems": "flex-end"
+          },
+          "text": "Actual Velocity :"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_17"
+        },
+        "position": {
+          "height": 24,
+          "width": 58,
+          "x": 160,
+          "y": 139
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.ActualVelocityPV"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center",
+            "borderRadius": 5
+          },
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_18"
+        },
+        "position": {
+          "height": 24,
+          "width": 41,
+          "x": 210,
+          "y": 139
+        },
+        "props": {
+          "style": {
+            "borderRadius": 6
+          },
+          "text": "m/s",
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 15
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_19"
+        },
+        "position": {
+          "height": 53,
+          "width": 265,
+          "x": 10,
+          "y": 179.5
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#DCDCDC",
+            "borderRadius": 10,
+            "borderStyle": "ridge"
+          },
+          "textStyle": {
+            "backgroundColor": "#C0EBFF"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_20"
+        },
+        "position": {
+          "height": 24,
+          "width": 143,
+          "x": 18,
+          "y": 194
+        },
+        "props": {
+          "style": {
+            "alignItems": "flex-end"
+          },
+          "text": "Target Position :"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_21"
+        },
+        "position": {
+          "height": 24,
+          "width": 58,
+          "x": 160,
+          "y": 194
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.TargetPositionPV"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center",
+            "borderRadius": 5
+          },
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_22"
+        },
+        "position": {
+          "height": 24,
+          "width": 41,
+          "x": 210,
+          "y": 194
+        },
+        "props": {
+          "style": {
+            "borderRadius": 6
+          },
+          "text": "mtr",
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 15
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_23"
+        },
+        "position": {
+          "height": 53,
+          "width": 265,
+          "x": 10,
+          "y": 236.5
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#DCDCDC",
+            "borderRadius": 10,
+            "borderStyle": "ridge"
+          },
+          "textStyle": {
+            "backgroundColor": "#C0EBFF"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_24"
+        },
+        "position": {
+          "height": 24,
+          "width": 143,
+          "x": 18,
+          "y": 251
+        },
+        "props": {
+          "style": {
+            "alignItems": "flex-end"
+          },
+          "text": "Position Reached :"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_25"
+        },
+        "position": {
+          "height": 24,
+          "width": 58,
+          "x": 160,
+          "y": 251
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.PositionReachedPV"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center",
+            "borderRadius": 5
+          },
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_26"
+        },
+        "position": {
+          "height": 24,
+          "width": 41,
+          "x": 210,
+          "y": 251
+        },
+        "props": {
+          "style": {
+            "borderRadius": 6
+          },
+          "text": "mtr",
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 15
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_27"
+        },
+        "position": {
+          "height": 53,
+          "width": 265,
+          "x": 10,
+          "y": 291.5
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#DCDCDC",
+            "borderRadius": 10,
+            "borderStyle": "ridge"
+          },
+          "textStyle": {
+            "backgroundColor": "#C0EBFF"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_28"
+        },
+        "position": {
+          "height": 24,
+          "width": 143,
+          "x": 18,
+          "y": 306
+        },
+        "props": {
+          "style": {
+            "alignItems": "flex-end"
+          },
+          "text": "Actual Position :"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_29"
+        },
+        "position": {
+          "height": 24,
+          "width": 58,
+          "x": 160,
+          "y": 306
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.ActualPositionPV"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center",
+            "borderRadius": 5
+          },
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_30"
+        },
+        "position": {
+          "height": 24,
+          "width": 41,
+          "x": 210,
+          "y": 306
+        },
+        "props": {
+          "style": {
+            "borderRadius": 6
+          },
+          "text": "mtr",
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 15
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_31"
+        },
+        "position": {
+          "height": 53,
+          "width": 265,
+          "x": 10,
+          "y": 347.5
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#DCDCDC",
+            "borderRadius": 10,
+            "borderStyle": "ridge"
+          },
+          "textStyle": {
+            "backgroundColor": "#C0EBFF"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_32"
+        },
+        "position": {
+          "height": 24,
+          "width": 143,
+          "x": 18,
+          "y": 362
+        },
+        "props": {
+          "style": {
+            "alignItems": "flex-end"
+          },
+          "text": "Power :"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_33"
+        },
+        "position": {
+          "height": 24,
+          "width": 58,
+          "x": 160,
+          "y": 362
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.PowerPV"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center",
+            "borderRadius": 5
+          },
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_34"
+        },
+        "position": {
+          "height": 24,
+          "width": 41,
+          "x": 210,
+          "y": 362
+        },
+        "props": {
+          "style": {
+            "borderRadius": 6
+          },
+          "text": "KVA",
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 15
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_35"
+        },
+        "position": {
+          "height": 53,
+          "width": 265,
+          "x": 10,
+          "y": 405.5
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#DCDCDC",
+            "borderRadius": 10,
+            "borderStyle": "ridge"
+          },
+          "textStyle": {
+            "backgroundColor": "#C0EBFF"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_36"
+        },
+        "position": {
+          "height": 24,
+          "width": 143,
+          "x": 18,
+          "y": 420
+        },
+        "props": {
+          "style": {
+            "alignItems": "flex-end"
+          },
+          "text": "Operation Time :"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_37"
+        },
+        "position": {
+          "height": 24,
+          "width": 58,
+          "x": 160,
+          "y": 420
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.OperationTime"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center",
+            "borderRadius": 5
+          },
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_38"
+        },
+        "position": {
+          "height": 24,
+          "width": 41,
+          "x": 210,
+          "y": 420
+        },
+        "props": {
+          "style": {
+            "borderRadius": 6
+          },
+          "text": "Min",
+          "textStyle": {
+            "alignContent": "center",
+            "alignItems": "center",
+            "fontSize": 15
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_39"
+        },
+        "position": {
+          "height": 53,
+          "width": 265,
+          "x": 10,
+          "y": 10.5
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#DCDCDC",
+            "borderRadius": 10,
+            "borderStyle": "ridge"
+          },
+          "textStyle": {
+            "backgroundColor": "#C0EBFF"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 24,
+          "width": 203,
+          "x": 41,
+          "y": 25
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center"
+          },
+          "textStyle": {
+            "fontSize": 20,
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "backgroundColor": "#DCDCDC",
+        "borderRadius": 10
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

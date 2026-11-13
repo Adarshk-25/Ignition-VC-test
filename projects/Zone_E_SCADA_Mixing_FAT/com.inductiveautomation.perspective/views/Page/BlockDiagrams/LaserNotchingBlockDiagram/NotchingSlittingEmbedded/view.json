@@ -1,0 +1,109 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "height": 0.0537,
+              "width": 0.1631,
+              "x": 0.0066,
+              "y": 0.0083
+            },
+            "propConfig": {
+              "props.value": {
+                "onChange": {
+                  "enabled": null,
+                  "script": "\tif currentValue!\u003dpreviousValue:\n\t\tcurrentValue\u003dstr(currentValue)\n\t\tcurrentValue\u003dcurrentValue.replace(\"[\",\"\")\n\t\tcurrentValue\u003dcurrentValue.replace(\"]\",\"\")\n\t\tcurrentValue\u003dcurrentValue.split(\",\")\n\t\tself.getSibling(\"LaserBlockDiagram\").props.path\u003d\"Page/BlockDiagrams/LaserNotchingBlockDiagram/\"+currentValue[0]"
+                }
+              }
+            },
+            "props": {
+              "dropdownOptionStyle": {
+                "color": "#000000",
+                "fontFamily": "sans-serif",
+                "fontSize": "15px",
+                "textAlign": "center"
+              },
+              "options": [
+                {
+                  "label": "Anode Line 1",
+                  "value": "LaserBlockDiagramAnode"
+                },
+                {
+                  "label": "Cathode Line 1",
+                  "value": "LaserBlockDiagramCathode"
+                }
+              ],
+              "placeholder": {
+                "color": "#000000",
+                "text": "Select Line"
+              },
+              "style": {
+                "backgroundColor": "#F4F4F4",
+                "borderBottomLeftRadius": 8,
+                "borderBottomRightRadius": 8,
+                "borderColor": "#000000",
+                "borderStyle": "outset",
+                "borderTopLeftRadius": 8,
+                "borderTopRightRadius": 8,
+                "borderWidth": "1px",
+                "color": "#000000",
+                "fontFamily": "sans-serif",
+                "fontSize": "15px"
+              },
+              "textAlign": "center",
+              "value": "LaserBlockDiagramAnode"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "LaserBlockDiagram"
+            },
+            "position": {
+              "height": 0.9313,
+              "width": 0.9994,
+              "x": -0.0009,
+              "y": 0.0676
+            },
+            "props": {
+              "path": "Page/BlockDiagrams/LaserNotchingBlockDiagram/LaserBlockDiagramAnode"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

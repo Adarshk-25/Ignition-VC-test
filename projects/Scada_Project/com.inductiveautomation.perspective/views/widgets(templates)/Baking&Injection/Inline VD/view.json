@@ -1,0 +1,80 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 300,
+      "width": 500
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Drawing"
+            },
+            "position": {
+              "height": 228,
+              "width": 448,
+              "x": 16.5,
+              "y": 36
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "23.5",
+                  "name": "rect_83",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "24.5",
+                  "x": "15.5",
+                  "y": "6.5"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "8",
+                  "name": "rect_84",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "20.5",
+                  "x": "17.5",
+                  "y": "9.5"
+                }
+              ],
+              "viewBox": "0 0 800 300"
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "aspectRatio": "300:400"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 182,
+      "width": 1800
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "basis": "98px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "/overview",
+                      "output": "false"
+                    }
+                  ],
+                  "outputType": "expression",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "columns": {
+            "active": {
+              "source": {
+                "enabled": false
+              }
+            }
+          },
+          "enableAcknowledge": false,
+          "enableDetails": false,
+          "enableHeader": false,
+          "enableShelve": false,
+          "enableUnshelve": false,
+          "filters": {
+            "active": {
+              "states": {
+                "clearUnacked": false
+              }
+            }
+          },
+          "pager": {
+            "enabled": false
+          },
+          "toolbar": {
+            "enableActiveTab": false,
+            "enableConfiguration": false,
+            "enableFilter": false,
+            "enableFilterResults": false,
+            "enablePreFilters": false,
+            "enableShelvedTab": false,
+            "enabled": false
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "3.1px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

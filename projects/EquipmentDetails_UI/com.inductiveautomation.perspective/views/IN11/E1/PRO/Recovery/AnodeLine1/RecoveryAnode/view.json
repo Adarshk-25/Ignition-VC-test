@@ -1,0 +1,47 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DehumidifierCondensateAnode"
+        },
+        "props": {
+          "path": "IN11/E1/PRO/Recovery/AnodeLine1/DehumidifierCondensateAnode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "condensateTransferSystemAnode"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "IN11/E1/PRO/Recovery/AnodeLine1/condensateTransferSystemAnode"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "tabSize": {
+        "width": 210
+      },
+      "tabs": [
+        "Dehumidifier Condenser",
+        "Condensate Transfer System"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

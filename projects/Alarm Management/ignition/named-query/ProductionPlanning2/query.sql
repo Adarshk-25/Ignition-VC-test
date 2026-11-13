@@ -1,0 +1,1 @@
+select top 1 BatchCount,WorkOrderQuantity from ProductionPlanning order by SNo desc;

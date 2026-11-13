@@ -1,0 +1,212 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Filling hole cleaning _Screen"
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/Filling Hole Cleaning_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Rubber sealing  nail insert station_Screen"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/Rubber sealing  nail insert station_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Rubber sealing nail feeder_Screen"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/Rubber sealing nail feeder_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Rubber sealing nail height check_Screen"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/Rubber sealing nail height check_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ThicknessCheckScreen"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/ThicknessCheckScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "WeightCheckUnit"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/WeightCheckUnit"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "NGConveyorScreen"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/NGConveyorScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ReworkConveyorScreen"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/ReworkConveyorScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "BCRScreen"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/BCRScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Rubber sealing nail height check_Screen_0"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/Rubber sealing nail height check_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Pairing Station_Screen"
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/Pairing Station_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Rubber sealing  nail insert station_Screen_0"
+        },
+        "position": {
+          "tabIndex": 11
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/Rubber sealing  nail insert station_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TempPinInsertScreen"
+        },
+        "position": {
+          "tabIndex": 12
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection2B/TempPinInsertScreen"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        },
+        "onChange": {
+          "enabled": null,
+          "script": "\tif currentValue !\u003d previousValue :\n\t\tself.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 400
+      },
+      "tabs": [
+        "Filling Hole Cleaning",
+        "Seal Nail Feeder",
+        "Seal Pin 1st Insert",
+        "Seal Pin Height Check - 1",
+        "Thickness Check",
+        "Weight Check",
+        "BCR",
+        "NG Conveyor",
+        "Rework Conveyor",
+        "Seal Pin Height Check - 2",
+        "Pairing Station",
+        "Seal Pin 2nd Insert",
+        "Temp.Pin Remove \u0026 Seal Pin Check"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

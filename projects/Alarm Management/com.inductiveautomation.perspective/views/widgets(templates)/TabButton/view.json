@@ -1,0 +1,105 @@
+{
+  "custom": {},
+  "params": {
+    "tabSelected": false,
+    "tabText": "value",
+    "toolTipText": "value"
+  },
+  "propConfig": {
+    "params.tabSelected": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tabText": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.toolTipText": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 59,
+      "width": 136
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.8644,
+          "width": 0.9638,
+          "x": 0.0189,
+          "y": 0.0776
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.toolTipText"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.tabSelected}, \"#FFFFFF\", \"#F5F5F5\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tabText"
+              },
+              "type": "property"
+            }
+          },
+          "props.textStyle.color": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.tabSelected}, \"#000000\", \"#333333\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignHorizontal": "center",
+            "alignVertical": "center",
+            "borderColor": "#A1A1A1",
+            "borderStyle": "solid",
+            "borderWidth": "1px",
+            "height": "36px",
+            "width": "96px"
+          },
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": "14px",
+            "fontWeight": "normal",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

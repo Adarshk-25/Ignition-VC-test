@@ -1,0 +1,217 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "exitWidget"
+            },
+            "position": {
+              "height": 0.9463,
+              "width": 0.9544,
+              "x": 0.0175,
+              "y": 0.0169
+            },
+            "props": {
+              "path": "widgets(templates)/StackingWidgets/exitWidget"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {},
+                    "view": "Page/cuttingStacking2"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Icon_0"
+            },
+            "position": {
+              "height": 0.0737,
+              "width": 0.0187,
+              "x": 0.001,
+              "y": 0.4386
+            },
+            "props": {
+              "color": "#ffffff",
+              "path": "material/arrow_back_ios",
+              "style": {
+                "backgroundColor": "#AAAAAA"
+              }
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "EuipmentStatusLabel_26"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0731,
+              "x": 0.0352,
+              "y": 0.6933
+            },
+            "props": {
+              "params": {
+                "equipmentName": "Unwinder",
+                "status": 1
+              },
+              "path": "widgets(templates)/CALWidgets/EuipmentStatusLabel"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EuipmentStatusLabel_27"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0731,
+              "x": 0.1552,
+              "y": 0.6795
+            },
+            "props": {
+              "params": {
+                "equipmentName": "Unwinder",
+                "status": 1
+              },
+              "path": "widgets(templates)/CALWidgets/EuipmentStatusLabel"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EuipmentStatusLabel_28"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0731,
+              "x": 0.3246,
+              "y": 0.6502
+            },
+            "props": {
+              "params": {
+                "equipmentName": "Unwinder",
+                "status": 1
+              },
+              "path": "widgets(templates)/CALWidgets/EuipmentStatusLabel"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EuipmentStatusLabel_29"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0731,
+              "x": 0.5915,
+              "y": 0.6215
+            },
+            "props": {
+              "params": {
+                "equipmentName": "Unwinder",
+                "status": 1
+              },
+              "path": "widgets(templates)/CALWidgets/EuipmentStatusLabel"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EuipmentStatusLabel_30"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0731,
+              "x": 0.6846,
+              "y": 0.497
+            },
+            "props": {
+              "params": {
+                "equipmentName": "Unwinder",
+                "status": 1
+              },
+              "path": "widgets(templates)/CALWidgets/EuipmentStatusLabel"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EuipmentStatusLabel_31"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0731,
+              "x": 0.7765,
+              "y": 0.4008
+            },
+            "props": {
+              "params": {
+                "equipmentName": "Unwinder",
+                "status": 1
+              },
+              "path": "widgets(templates)/CALWidgets/EuipmentStatusLabel"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EuipmentStatusLabel_32"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0731,
+              "x": 0.8646,
+              "y": 0.5252
+            },
+            "props": {
+              "params": {
+                "equipmentName": "Unwinder",
+                "status": 1
+              },
+              "path": "widgets(templates)/CALWidgets/EuipmentStatusLabel"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "aspectRatio": "1600:800",
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

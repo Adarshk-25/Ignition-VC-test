@@ -1,0 +1,133 @@
+[
+  {
+    "name": "RWD002",
+    "typeId": "ZONE_UDT/LowerRewinder",
+    "parameters": {
+      "OPC_Path": {
+        "dataType": "String",
+        "value": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E123.PCE.NTC11/Telemetry/"
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "RWD001",
+    "typeId": "ZONE_UDT/LowerRewinder",
+    "parameters": {
+      "OPC_Path": {
+        "dataType": "String",
+        "value": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E123.PCE.NTC11/Telemetry/"
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "UWD001",
+    "typeId": "ZONE_UDT/Unwinder_old",
+    "parameters": {
+      "OPC_Path": {
+        "dataType": "String",
+        "value": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E123.PCE.NTC11/Telemetry/"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "name": "IFD001",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "enabled": false,
+            "name": "BWA001",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "enabled": false,
+        "name": "KEB001",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MAA001",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MAA002",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MAA003",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MAA004",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MAA005",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB001",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB002",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB003",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB004",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB005",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB006",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB007",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB008",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB009",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB010",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "MMB011",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

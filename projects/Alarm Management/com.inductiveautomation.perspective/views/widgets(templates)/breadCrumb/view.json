@@ -1,0 +1,64 @@
+{
+  "custom": {},
+  "params": {
+    "breadCrumbPaths": "value"
+  },
+  "propConfig": {
+    "params.breadCrumbPaths": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 15
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.params.breadCrumbPaths"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "widgets(templates)/baseTemplates/breadcrumbBase",
+          "useDefaultViewHeight": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "updatePath",
+          "pageScope": false,
+          "script": "\tself.view.params.breadCrumbPaths\u003d payload[\u0027breadCrumbPathsFinal\u0027]",
+          "sessionScope": true,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.flex"
+  }
+}

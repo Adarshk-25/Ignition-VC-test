@@ -1,0 +1,107 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "key": "value",
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DensityMeter_Screen"
+        },
+        "props": {
+          "path": "Page/Coating_Templates/DensityMeter_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CoatingWebPositionController_Screen"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Coating_Templates/CoatingWebPositionController_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DryingWebPositionController_Screen"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/Coating_Templates/DryingWebPositionController_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ThicknessGauge_Screen"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/Coating_Templates/ThicknessGauge_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "HalfSpliterWebPositionController_Screen"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Coating_Templates/HalfSpliterWebPositionController_Screen"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "onChange": {
+          "enabled": null,
+          "script": "\tif currentValue !\u003d previousValue :\n        \tself.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+        }
+      }
+    },
+    "props": {
+      "style": {
+        "classes": "Title/Text",
+        "fontWeight": "normal"
+      },
+      "tabSize": {
+        "width": 250
+      },
+      "tabs": [
+        "Density Meter",
+        "Coating Web Position Controller",
+        "Drying Web Position Controller",
+        "Thickness Gauge",
+        "Half Slitting Web Position Controller"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "height": 400,
+          "width": 800,
+          "x": 57,
+          "y": 35
+        },
+        "props": {
+          "filters": {
+            "active": {
+              "conditions": {
+                "source": "*sanand*"
+              },
+              "states": {
+                "activeAcked": false,
+                "activeUnacked": false,
+                "clearUnacked": false
+              }
+            }
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 122,
+      "y": 9
+    },
+    "type": "ia.container.coord"
+  }
+}

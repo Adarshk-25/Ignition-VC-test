@@ -1,0 +1,305 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 130,
+      "width": 301
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onEditCellCommit": {
+              "config": {
+                "script": "# 1. Extract the edit details from the built-in event object\n\trow_index   \u003d event.rowIndex  # fixed: was event.row\n\tcolumn_name \u003d event.column   # fixed: was event.column\n\tnew_value   \u003d event.value  # fixed: was event.value\n\n# 2. Get the unique identifier (Primary Key) for the database row\n# This assumes you have a hidden or visible column named \u0027id\u0027 in your table data\n\trow_id \u003d self.props.data[row_index][\u0027Hour\u0027]\n\n# 3. Build your SQL Update Statement dynamically\n# Using a prepared statement prevents SQL injection vulnerabilities\n\tquery \u003d \"UPDATE [process] SET [{}] \u003d ? WHERE [Hour] \u003d ?\".format(column_name)\n\targs  \u003d [new_value, row_id]\n\n# 4. Execute the update query\n\tsystem.db.runPrepUpdate(query, args, database\u003d\"Dev_MSSQL_Server\")\n\tself.getSibling(\"Label\").props.text\u003dnew_value\n\n# 5. Force the table UI component to fetch the fresh data immediately\n\tself.refreshBinding(\"props.data\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          },
+          "dom": {
+            "onDoubleClick": {
+              "config": {
+                "draggable": true,
+                "id": "OBiUEZCY",
+                "modal": false,
+                "overlayDismiss": false,
+                "position": {
+                  "height": 200,
+                  "width": 200
+                },
+                "positionType": "exact",
+                "resizable": true,
+                "showCloseIcon": true,
+                "title": "Process 5",
+                "type": "open",
+                "viewPath": "SQCDP/Process/process/process5",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "166px"
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "queryPath": "primarykey",
+                "returnFormat": "dataset"
+              },
+              "type": "query"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Hour",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Value_V",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "descending",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            }
+          ],
+          "pager": {
+            "bottom": false
+          },
+          "sortOrder": [
+            "Value_V"
+          ],
+          "style": {
+            "borderStyle": "none"
+          }
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "5"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttableData \u003d self.getChild(\"Table\").props.data\n\tif len(tableData) \u003e 0:\n\t\theaders \u003d list(tableData[0].keys())\n\telse:\n\t\theaders \u003d [col.field for col in self.getChild(\"Table\").props.columns]\n\t\n\tbigData \u003d [list(row.values()) for row in tableData]\n\t\n\tds\u003dsystem.dataset.toDataSet(headers,bigData)\n\texcel\u003dsystem.dataset.toExcel(True,[ds])\n\tsystem.perspective.download(filename\u003d\"process5.xlsx\",data\u003dexcel)"
+          },
+          "enabled": false,
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "borderColor": "#D5D5D5",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "borderWidth": "0.1px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,618 @@
+{
+  "custom": {},
+  "params": {
+    "instName": "Dust Collector",
+    "status": 4,
+    "value": "value"
+  },
+  "propConfig": {
+    "params.instName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 150,
+      "width": 99
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Dust collector 4"
+        },
+        "position": {
+          "height": 0.5867,
+          "width": 0.4646,
+          "x": 0.2062,
+          "y": 0.195
+        },
+        "propConfig": {
+          "props.elements[2].elements[7].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#555555",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M56.192,50.582v56.624h-9.234V74.773",
+                  "fill": {
+                    "paint": "#585858"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M19.031,74.773v32.432H9.797V67.793",
+                  "fill": {
+                    "paint": "#585858"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#D9CCBF",
+                      "style": {
+                        "stopColor": "#B3B3B3"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.3",
+                      "stopColor": "#D9CCBF",
+                      "style": {
+                        "stopColor": "#B3B3B3"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#F2E5D8",
+                      "style": {
+                        "stopColor": "#B3B3B3"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#F2E5D8",
+                      "style": {
+                        "stopColor": "#B3B3B3"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "43.5781",
+                  "x2": "3.8276",
+                  "y1": "113.165",
+                  "y2": "3.9515"
+                },
+                {
+                  "d": "M0.45,111.936V5.182h46.508v106.753h-9.347V79.391H9.797   v32.545H0.45z",
+                  "fill": {
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M9.797,81.193L20.27,98.535H34.12l3.491-5.856V79.391H9.797V81.193z",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M20.27,98.535l2.252-1.127L9.797,79.954v1.239L20.27,98.535z",
+                  "fill": {
+                    "paint": "#959292"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M31.868,97.408l2.252,1.127l3.491-5.856v-2.252L31.868,97.408z",
+                  "fill": {
+                    "paint": "#7a7979"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M20.27,98.535H34.12l-2.252-1.127h-9.347L20.27,98.535z",
+                  "fill": {
+                    "paint": "#878686"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#7F7265",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M46.958 111.9360042075579V5.182000178480497l9.234-4.729000178480497v106.07700400352627l-1.803 1.1270000425348954V75.11100281771981l-5.631 3.2660001232643907v32.4320012240388L46.958 111.9360042075579z",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M21.958,96.846h4.617V79.391",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#7F7265",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M27.702,96.846V79.391",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#CCBFB2",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M20.27,72.409h6.982v4.617H20.27V72.409z",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M20.833,72.973h5.743v3.49h-5.743V72.973z",
+                  "fill": {
+                    "paint": "#918e8e"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M0.45,26.015h46.508",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#BFB2A5",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M0.45,70.157h46.508l9.234-4.729",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Bottom_Collector",
+              "name": "Group_Bottom_Collector",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M9.797,7.434h27.814V23.65H9.797V7.434z",
+                  "fill": {
+                    "paint": "#8a8989"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M10.36,68.355v-0.563h27.251V46.96h0.563v21.396H10.36z",
+                  "fill": {
+                    "paint": "#7F7265"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M10.36,45.158v-0.563h27.251V28.379h0.563v16.779H10.36z",
+                  "fill": {
+                    "paint": "#7F7265"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M9.797,28.379h27.814v16.216H9.797V28.379z",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M9.797,46.96h27.814v20.833H9.797V46.96z",
+                  "fill": {
+                    "paint": "#b3b3b3"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M9.797,44.595V28.379h27.814",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#FFFFFF",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M9.797,67.793V46.96h27.814",
+                  "fill": {
+                    "paint": "hsl(0, 0%, 70%)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#FFFFFF",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M10.923,8.673h25.563v13.851H10.923V8.673z",
+                  "fill": {},
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M10.36,24.889V23.65h27.251V7.434h0.563v17.455H10.36z",
+                  "fill": {
+                    "paint": "#8a8989"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Display",
+              "name": "Group_Display",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M0.45,5.182h46.508l9.234-4.729H9.797L0.45,5.182z",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Top_Layer",
+              "name": "Group_Top_Layer",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M14.414,31.194l-4.617-0.563l-0.563-1.126l-0.563,1.126l-1.239,0.563l1.239,0.676l0.563,1.126l0.563-1.126L14.414,31.194z",
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M14.414,41.667l-4.617-0.563l-0.563-1.126l-0.563,1.126l-1.239,0.563l1.239,0.563l0.563,1.238l0.563-1.238L14.414,41.667z",
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M14.414,49.775l-4.617-0.563l-0.563-1.126l-0.563,1.126l-1.239,0.563l1.239,0.676l0.563,1.126l0.563-1.126L14.414,49.775z",
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M14.414,64.865l-4.617-0.563l-0.563-1.126l-0.563,1.126l-1.239,0.563l1.239,0.563l0.563,1.238l0.563-1.238L14.414,64.865z",
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M37.611,67.229v-2.364h0.563v2.364H37.611z",
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M37.611,49.888v-2.365h0.563v2.365H37.611z",
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M37.611,58.559v-2.365h0.563v2.365H37.611z",
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M37.611,31.307v-2.365h0.563v2.365H37.611z",
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M37.611,44.032v-2.365h0.563v2.365H37.611z",
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Door",
+              "name": "Group_Door",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M20.27,30.631h6.982v4.617H20.27V30.631z",
+                  "fill": {
+                    "paint": "#FFFFFF"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M20.833,31.194h5.743v3.491h-5.743V31.194z",
+                  "fill": {
+                    "paint": "#8CA0BF"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Reader",
+              "name": "Group_Reader",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M48.084,60.811l7.544-3.378v2.252l-7.544,3.491V60.811z",
+                  "fill": {
+                    "paint": "#4C3F32"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M48.084,50.451l7.544-3.491v2.252l-7.544,3.491V50.451z",
+                  "fill": {
+                    "paint": "#4C3F32"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M48.084,39.978l7.544-3.491v2.365l-7.544,3.378V39.978z",
+                  "fill": {
+                    "paint": "#4C3F32"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M48.084,39.978l7.544-3.491l1.689,1.126l-7.545,3.491L48.084,39.978z",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M48.084,50.451l7.544-3.491l1.689,1.126l-7.545,3.491L48.084,50.451z",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M48.084,60.811l7.544-3.378l1.689,1.126l-7.545,3.378L48.084,60.811z",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Vent",
+              "name": "Group_Vent",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M47.521,7.997v18.581l8.672-4.617V3.38L47.521,7.997z",
+                  "fill": {
+                    "paint": "#4C3F32"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M48.647,7.997v16.892l8.67-4.617V3.38L48.647,7.997z",
+                  "fill": {
+                    "paint": "#B3B3B3"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Collector",
+              "name": "Group_Collector",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 57.881 112.5"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1387,
+          "width": 0.8703,
+          "x": 0.0652,
+          "y": 0.0125
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.instName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 0.1819,
+          "width": 0.5343,
+          "x": 0.2582,
+          "y": 0.8028
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

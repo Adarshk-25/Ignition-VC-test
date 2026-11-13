@@ -1,0 +1,1 @@
+select top 1 FiveS_Category,Status from FiveS_Audit order by SNo desc;

@@ -1,0 +1,67 @@
+{
+  "custom": {},
+  "params": {
+    "text": "value"
+  },
+  "propConfig": {
+    "params.text": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 308,
+      "width": 340
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.8434,
+          "width": 0.9457,
+          "x": 0.0153,
+          "y": 0.02
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]NavTreeJSON"
+              },
+              "transforms": [
+                {
+                  "code": "\ttree\u003dsystem.util.jsonDecode(value)\n\treturn shared.nav.getChildren(tree,\"sanand\")",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontSize": 9
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "borderStyle": "solid"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

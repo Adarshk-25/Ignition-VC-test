@@ -1,0 +1,830 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 884,
+      "width": 1842
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "style": {
+            "borderBottom": "2px solid #dcdcdc",
+            "color": "#2c3e50",
+            "fontSize": "32px",
+            "fontWeight": "bold",
+            "paddingBottom": "3px",
+            "textAlign": "center"
+          },
+          "text": "BETA GAUGE SYSTEM"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "18px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Process Data"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "tmpDisplay_0"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "props": {
+                      "params": {
+                        "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/infeedTension"
+                      },
+                      "path": "widgets(templates)/baseTemplates/tmpDisplay"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "tmpDisplay"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "props": {
+                      "params": {
+                        "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/calenderCycleTime"
+                      },
+                      "path": "widgets(templates)/baseTemplates/tmpDisplay"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "tmpDisplay_1"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "props": {
+                      "params": {
+                        "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/electrodeWidth"
+                      },
+                      "path": "widgets(templates)/baseTemplates/tmpDisplay"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "tmpDisplay_2"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "props": {
+                      "params": {
+                        "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/electrodeWidth"
+                      },
+                      "path": "widgets(templates)/baseTemplates/tmpDisplay"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "tmpDisplay_3"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "props": {
+                      "params": {
+                        "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/electrodeWidth"
+                      },
+                      "path": "widgets(templates)/baseTemplates/tmpDisplay"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "tmpDisplay_4"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "props": {
+                      "params": {
+                        "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/electrodeWidth"
+                      },
+                      "path": "widgets(templates)/baseTemplates/tmpDisplay"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "tmpDisplay_5"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "props": {
+                      "params": {
+                        "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/calenderCycleTime"
+                      },
+                      "path": "widgets(templates)/baseTemplates/tmpDisplay"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "tmpDisplay_6"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "props": {
+                      "params": {
+                        "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/electrodeWidth"
+                      },
+                      "path": "widgets(templates)/baseTemplates/tmpDisplay"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "tmpDisplay_7"
+                    },
+                    "position": {
+                      "basis": "40px"
+                    },
+                    "props": {
+                      "params": {
+                        "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/electrodeWidth"
+                      },
+                      "path": "widgets(templates)/baseTemplates/tmpDisplay"
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "border": "1px solid #dcdcdc",
+                    "borderRadius": "6px",
+                    "padding": "15px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "633.8px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "gap": "0px",
+                "width": "50%"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "18px",
+                        "fontWeight": "bold",
+                        "marginBottom": "10px"
+                      },
+                      "text": "Critical Data"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Table"
+                    },
+                    "position": {
+                      "basis": "400px"
+                    },
+                    "props": {
+                      "data": [
+                        {
+                          "Alarm/Request": "Critical Stop | Machine ID : Coater01 , Web break (tension loss)",
+                          "Assigned": "Sharma/Singh",
+                          "Duration": "52 Mins",
+                          "PR": "material/beenhere",
+                          "Sl No": 1,
+                          "Status": "Technician ON-Site",
+                          "WO": 100451
+                        },
+                        {
+                          "Alarm/Request": "Caution | Machine ID Winder-03 ( Servo overheat)Flow Vibration",
+                          "Assigned": "J.Patel",
+                          "Duration": "18 mins",
+                          "PR": "",
+                          "Sl No": 2,
+                          "Status": "Technitian En-route",
+                          "WO": 100453
+                        },
+                        {
+                          "Alarm/Request": "Monitoring | Machine ID:Slurry MIX-2",
+                          "Assigned": "NA",
+                          "D": "5 Min",
+                          "Duration": {
+                            "align": "center",
+                            "editable": true,
+                            "justify": "left",
+                            "style": {
+                              "backgroundColor": "",
+                              "classes": ""
+                            },
+                            "value": "5 mins"
+                          },
+                          "PR": "",
+                          "S": "Unassigned",
+                          "Sl No": 3,
+                          "Status": {
+                            "align": "center",
+                            "editable": true,
+                            "justify": "left",
+                            "style": {
+                              "backgroundColor": "#F7901D",
+                              "classes": "idel"
+                            },
+                            "value": "Unassigned"
+                          },
+                          "WO": 100456
+                        }
+                      ]
+                    },
+                    "type": "ia.display.table"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "border": "1px solid #dcdcdc",
+                    "borderRadius": "6px",
+                    "padding": "15px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "611.8px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "gap": "0px",
+                "width": "50%"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Image"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "fit": "cover",
+                  "source": "/system/images/beta_gauge_600x400.png",
+                  "style": {
+                    "height": "100%",
+                    "paddingLeft": 0,
+                    "width": "100%"
+                  }
+                },
+                "type": "ia.display.image"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "450px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "alignItems": "center",
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "justifyContent": "center",
+                "padding": "0px",
+                "width": "50%"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "gap": "0px",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "button"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "#28A745",
+                "path": "[default]running",
+                "text": "Start"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "button_0"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "#DC3545",
+                "path": "[default]running",
+                "text": "Stop"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "button_1"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "#007BFF",
+                "path": "[default]running",
+                "text": "Alarm Reset"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "button_2"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "#FFA500",
+                "path": "[default]running",
+                "text": "Alarm Acknowledge"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "button_3"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "#FFC107",
+                "path": "[default]running",
+                "text": "Auto"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "57px"
+        },
+        "props": {
+          "style": {
+            "gap": "15px",
+            "justifyContent": "center"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "marginBottom": "10px"
+              },
+              "text": "TRENDS"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "apexchart"
+            },
+            "position": {
+              "basis": "500px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "dropShadow": {
+                    "blur": 10,
+                    "color": "#000",
+                    "enabled": true,
+                    "left": 7,
+                    "opacity": 0.2,
+                    "top": 18
+                  },
+                  "events": {
+                    "animationEnd": false,
+                    "beforeMount": false,
+                    "beforeResetZoom": false,
+                    "beforeZoom": false,
+                    "brushScrolled": false,
+                    "click": false,
+                    "dataPointMouseEnter": false,
+                    "dataPointMouseLeave": false,
+                    "dataPointSelection": false,
+                    "legendClick": false,
+                    "markerClick": false,
+                    "mounted": false,
+                    "mouseLeave": false,
+                    "mouseMove": false,
+                    "scrolled": false,
+                    "selection": false,
+                    "updated": false,
+                    "xAxisLabelClick": false,
+                    "zoomed": false
+                  },
+                  "height": 250,
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "line"
+                },
+                "colors": [
+                  "#77B6EA",
+                  "#545454"
+                ],
+                "dataLabels": {
+                  "enabled": true
+                },
+                "grid": {
+                  "borderColor": "#e7e7e7",
+                  "row": {
+                    "colors": [
+                      "#f3f3f3",
+                      "transparent"
+                    ],
+                    "opacity": 0.5
+                  }
+                },
+                "legend": {
+                  "floating": true,
+                  "horizontalAlign": "right",
+                  "offsetX": -5,
+                  "offsetY": -25,
+                  "position": "top"
+                },
+                "markers": {
+                  "size": 1
+                },
+                "stroke": {
+                  "curve": "smooth"
+                },
+                "title": {
+                  "align": "left",
+                  "text": "Thickness"
+                },
+                "xaxis": {
+                  "categories": [
+                    "Day 1",
+                    "Day 2",
+                    "Day 3",
+                    "Day 4",
+                    "Day 5",
+                    "Day 6",
+                    "Day 7"
+                  ],
+                  "title": {
+                    "text": "Days"
+                  }
+                },
+                "yaxis": {
+                  "max": 40,
+                  "min": 5,
+                  "title": {
+                    "text": "Thickness(µm)"
+                  }
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    28,
+                    29,
+                    33,
+                    36,
+                    32,
+                    32,
+                    33
+                  ],
+                  "name": "High - 2013"
+                }
+              ]
+            },
+            "type": "kyvislabs.display.apexchart"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "18px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px"
+                  },
+                  "text": "Oee"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "tmpDisplaysmall"
+                },
+                "position": {
+                  "basis": "40px"
+                },
+                "props": {
+                  "params": {
+                    "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/oeeCore/oee"
+                  },
+                  "path": "widgets(templates)/baseTemplates/tmpDisplaysmall"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "tmpDisplaysmall_0"
+                },
+                "position": {
+                  "basis": "40px"
+                },
+                "props": {
+                  "params": {
+                    "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/oeeCore/Availability"
+                  },
+                  "path": "widgets(templates)/baseTemplates/tmpDisplaysmall"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "tmpDisplaysmall_1"
+                },
+                "position": {
+                  "basis": "40px"
+                },
+                "props": {
+                  "params": {
+                    "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/oeeCore/quality"
+                  },
+                  "path": "widgets(templates)/baseTemplates/tmpDisplaysmall"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "tmpDisplaysmall_2"
+                },
+                "position": {
+                  "basis": "40px"
+                },
+                "props": {
+                  "params": {
+                    "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/oeeCore/performance"
+                  },
+                  "path": "widgets(templates)/baseTemplates/tmpDisplaysmall"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "justify": "center",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "circularGuage"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "innerCircleValue": 78,
+                "middleCircleValue": 61,
+                "outerCircleValue": 90,
+                "valueDisplay": "85%"
+              },
+              "path": "widgets(templates)/baseTemplates/circularGuage"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_2"
+        },
+        "position": {
+          "basis": "500px"
+        },
+        "props": {
+          "alignContent": "center",
+          "justify": "space-evenly",
+          "style": {
+            "border": "1px solid #dcdcdc",
+            "borderRadius": "6px",
+            "overflow": "hidden",
+            "padding": "15px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "marginBottom": "10px"
+              },
+              "text": "ALARMS"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "AlarmStatusTable"
+            },
+            "position": {
+              "basis": "250px"
+            },
+            "props": {
+              "enableAcknowledge": false,
+              "enableDetails": false,
+              "enableHeader": false,
+              "enableShelve": false,
+              "enableUnshelve": false,
+              "pager": {
+                "enabled": false
+              },
+              "toolbar": {
+                "enableShelvedTab": false,
+                "enabled": false
+              }
+            },
+            "type": "ia.display.alarmstatustable"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "border": "1px solid #dcdcdc",
+            "borderRadius": "6px",
+            "overflow": "hidden",
+            "padding": "15px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "betaGuage"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#ffffff",
+        "fontFamily": "Arial",
+        "gap": "20px",
+        "padding": "20px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

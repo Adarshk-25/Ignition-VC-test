@@ -1,0 +1,1415 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 526,
+      "width": 983
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onEditCellCommit": {
+              "config": {
+                "script": "    row_index   \u003d event.rowIndex\n    column_name \u003d event.column\n    new_value   \u003d event.value\n\n    # Get row_id from props.data (this should always be available \n    # regardless of data source since it\u0027s loaded into the table)\n    row_id \u003d self.props.data[row_index][\u0027Sn\u0027]\n\n    # Fetch old value directly from DB instead of relying on props.data\n    query      \u003d \"SELECT [{}] FROM [PeopleActions] WHERE [Sn] \u003d ?\".format(column_name)\n    result     \u003d system.db.runPrepQuery(query, [row_id], database\u003d\"Dev_MSSQL_Server\")\n    old_value  \u003d result.getValueAt(0, 0) if result.rowCount \u003e 0 else \"N/A\"\n\n    # Open confirmation popup with accurate old value from DB\n    system.perspective.openPopup(\n        id      \u003d \"confirmEditPopup\",\n        view    \u003d \"SQCDP/confirmEdit\",\n        params  \u003d {\n            \"rowId\"      : row_id,\n            \"columnName\" : column_name,\n            \"oldValue\"   : str(old_value),\n            \"newValue\"   : str(new_value)\n        },\n        title         \u003d \"Confirm Edit\",\n        showCloseIcon \u003d False,\n        modal         \u003d True\n    )\n\n    # Revert UI immediately until user confirms\n    self.refreshBinding(\"props.data\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "polling": {
+                  "enabled": true,
+                  "rate": "5"
+                },
+                "queryPath": "PeopleActions"
+              },
+              "type": "query"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Sn",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 15
+                },
+                "title": "SNo"
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 20
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 60
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Action_Creation_Date",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 5
+                },
+                "title": "Action Creation Date"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2"
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Source",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 4
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Category",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 4
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Problem",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 10,
+                "paddingRight": 10
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 200
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Action",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 10,
+                "paddingRight": 10
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 200
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Responsible",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 4
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Target_Date",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 15
+                },
+                "title": "Target Date"
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 20
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 100
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Status",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 4
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Remarks",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 4
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            }
+          ],
+          "pager": {
+            "bottom": false
+          },
+          "rows": {
+            "style": {
+              "paddingBottom": 4,
+              "paddingTop": 4
+            }
+          }
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.2455,
+              "x": 0.0539,
+              "y": 0.0106
+            },
+            "props": {
+              "text": "SNo",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.2455,
+              "x": 0.0542,
+              "y": 0.107
+            },
+            "props": {
+              "text": "Source",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.2455,
+              "x": 0.0542,
+              "y": 0.2034
+            },
+            "props": {
+              "text": "Category",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_4"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.2455,
+              "x": 0.0542,
+              "y": 0.2999
+            },
+            "props": {
+              "text": "Problem",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_7"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.2455,
+              "x": 0.0542,
+              "y": 0.4929
+            },
+            "props": {
+              "text": "Responsible",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_9"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.2455,
+              "x": 0.0542,
+              "y": 0.3964
+            },
+            "props": {
+              "text": "Action",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t# 1. Gather your input values from your Perspective UI components\n\tval1 \u003dself.getSibling(\"TextField\").props.text\n\tval2 \u003dself.getSibling(\"TextField_0\").props.text\n\tval3 \u003dself.getSibling(\"TextField_1\").props.text\n\tval4 \u003dself.getSibling(\"TextField_2\").props.text\n\tval5 \u003dself.getSibling(\"TextField_3\").props.text\n\tval6 \u003dself.getSibling(\"TextField_4\").props.text\n\tval7 \u003dself.getSibling(\"TextField_5\").props.text\n\tval8 \u003dself.getSibling(\"TextField_6\").props.text\n\tval9 \u003dself.getSibling(\"TextField_7\").props.text\n# 2. Define your parameterized SQL statement\n\tquery \u003d \"INSERT INTO PeopleActions (Sn, Source, Category, Problem, Action, Responsible,Target_Date,Status,Remarks) VALUES (?, ?,?,?,?,?,?,?,?)\"\n\n# 3. List the arguments in the exact order of the question marks\n\targs \u003d [val1, val2,val3,val4,val5,val6,val7,val8,val9]\n\n# 4. Execute the update query \n# (Omit the database argument if you want to use the project\u0027s default database)\n\tsystem.db.runPrepUpdate(query, args, database\u003d\"Dev_MSSQL_Server\")\n\n# 5. Tell the Perspective Table component to refresh its data binding\n\t\n\t#self.parent.getChild(\"Table\").refreshBinding(\"props.data\")\n\tself.parent.parent.getChild(\"Table\").refreshBinding(\"props.data\")\n\tself.parent.position.display\u003dFalse\n\tself.parent.parent.getChild(\"Table\").position.display\u003dTrue\n\tself.parent.parent.getChild(\"FlexContainer\").position.display\u003dTrue"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 0.085,
+              "width": 0.2888,
+              "x": 0.2888,
+              "y": 0.8925
+            },
+            "props": {
+              "primary": false,
+              "text": "Save",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "TextField"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.5,
+              "x": 0.4129,
+              "y": 0.0216
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_0"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.5,
+              "x": 0.4129,
+              "y": 0.1199
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_1"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.5,
+              "x": 0.4129,
+              "y": 0.2034
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_2"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.5,
+              "x": 0.4129,
+              "y": 0.3036
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_3"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.5,
+              "x": 0.4129,
+              "y": 0.3964
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_4"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.5,
+              "x": 0.4129,
+              "y": 0.4892
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_5"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.5,
+              "x": 0.4129,
+              "y": 0.6046
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "Label_8"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.2455,
+              "x": 0.0542,
+              "y": 0.6083
+            },
+            "props": {
+              "text": "Taregt Date",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_10"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.2455,
+              "x": 0.0543,
+              "y": 0.7027
+            },
+            "props": {
+              "text": "Status",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TextField_6"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.5,
+              "x": 0.4129,
+              "y": 0.699
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "Label_11"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.2455,
+              "x": 0.0543,
+              "y": 0.7987
+            },
+            "props": {
+              "text": "Remarks",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TextField_7"
+            },
+            "position": {
+              "height": 0.0585,
+              "width": 0.5,
+              "x": 0.4129,
+              "y": 0.795
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "root"
+        },
+        "position": {
+          "display": false,
+          "grow": 1
+        },
+        "props": {
+          "aspectRatio": "300:400",
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.parent.position.display\u003dFalse\n\tself.parent.parent.getChild(\"Table\").position.display\u003dFalse\n\tself.parent.parent.getChild(\"root\").position.display\u003dTrue"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "40px",
+              "grow": 1
+            },
+            "props": {
+              "primary": false,
+              "text": "Add Row",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "# 1. Locate the Table component relative to this button\n\ttable \u003d self.parent.parent.getChild(\"Table\")\n\n# 2. Identify the active selected row index\n\tselected_row_idx \u003d table.props.selection.selectedRow\n\n# 3. Ensure a row is actually selected before running\n\tif selected_row_idx is not None:\n    \n    # 4. Extract the primary key value (e.g., \u0027id\u0027) from the table data\n    # Note: Use table.props.data.getValueAt(selected_row_idx, \"id\") if data is a dataset type\n   \t\trow_id \u003d table.props.data[selected_row_idx][\"Sn\"] \n    \n    # 5. Define your raw SQL query string\n    \tsql_query \u003d \"DELETE FROM PeopleActions WHERE Sn \u003d ?\"\n    \n    # 6. Specify your database connection name as configured in your gateway\n    \tdb_connection \u003d \"Dev_MSSQL_Server\"\n    \n    # 7. Execute the query directly inside the script\n    \tsystem.db.runPrepUpdate(sql_query, [row_id], db_connection)\n    \n    # 8. Refresh the table binding so the UI updates instantly\n    \ttable.refreshBinding(\"props.data\")"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_0"
+            },
+            "position": {
+              "basis": "40px",
+              "grow": 1
+            },
+            "props": {
+              "primary": false,
+              "text": "Delete Row",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "justify": "space-around"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "borderColor": "#D5D5D5",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "borderWidth": "0.1px",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

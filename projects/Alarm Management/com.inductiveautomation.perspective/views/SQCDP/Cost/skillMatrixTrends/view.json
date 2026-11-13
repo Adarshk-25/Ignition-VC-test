@@ -1,0 +1,135 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.options": {
+            "persistent": true
+          },
+          "props.series": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "stacked": true,
+              "toolbar": {
+                "show": false
+              },
+              "type": "bar"
+            },
+            "colors": [
+              "#ADD8E6",
+              "#90EE90"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#E5E7EB",
+              "padding": {
+                "bottom": 0,
+                "left": 10,
+                "right": 10,
+                "top": 0
+              },
+              "strokeDashArray": 4
+            },
+            "legend": {
+              "horizontalAlign": "center",
+              "markers": {
+                "radius": 15
+              },
+              "position": "bottom",
+              "show": true
+            },
+            "plotOptions": {
+              "bar": {
+                "borderRadius": 4,
+                "columnWidth": "45%"
+              }
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "color": "#111827",
+                "fontSize": "12px",
+                "fontWeight": "bold"
+              },
+              "text": "Avrage Score of Skill Matrix"
+            },
+            "xaxis": {
+              "categories": [
+                "5S",
+                "Machine Operation",
+                "Quality Check",
+                "Data Entry",
+                "Safety SOP"
+              ],
+              "labels": {
+                "style": {
+                  "colors": "#6B7280"
+                }
+              }
+            },
+            "yaxis": {
+              "labels": {
+                "style": {
+                  "colors": "#6B7280"
+                }
+              },
+              "max": 4,
+              "min": 0
+            }
+          },
+          "series": [
+            {
+              "data": [
+                2.42,
+                2.92,
+                3.08,
+                2.08,
+                2.92
+              ],
+              "name": "Average Score"
+            }
+          ],
+          "type": "bar"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "borderColor": "#D5D5D5",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "borderWidth": "0.1px",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

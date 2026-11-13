@@ -1,0 +1,917 @@
+{
+  "custom": {},
+  "params": {
+    "Tag_Path_0": ""
+  },
+  "propConfig": {
+    "params.Tag_Path_0": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/Active"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[0].Parameter": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/Active.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/Status"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].Parameter": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/Status.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "COR001 : Description",
+            "parameterData": [
+              {},
+              {}
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_0"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/MAA001/AxisPositionPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"mm\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/AxisPositionSP"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"mm\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/CurrentPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"A\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].Actualvalue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/CurrentPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"A\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/MotorFault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/MotorRunning"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[5].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/MotorSpeedPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"m/min\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[6].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/MotorSpeedSP"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"m/min\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "MAA001 : Description",
+            "parameterData": [
+              {
+                "Parameter": "AxisPositionPV"
+              },
+              {
+                "Parameter": "AxisPositionSP"
+              },
+              {
+                "Parameter": "CurrentPV"
+              },
+              {
+                "Parameter": "MotorFault"
+              },
+              {
+                "Parameter": "MotorRunning"
+              },
+              {
+                "Parameter": "MotorSpeedPV"
+              },
+              {
+                "Parameter": "MotorSpeedSP"
+              }
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_1"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisJigDownSettingPostion"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[10].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/ErrorCode"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[11].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[12].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/FollowingError"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[13].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/Idle"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[14].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/JogAcceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[15].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/JogDeceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[16].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/Running"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[17].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/Speed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[18].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/Status"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisJigUpSettingPostion1"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisJigUpSettingPostion2"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisJigUpSettingPostion3"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisJigUpSettingPostion4"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[5].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisJigUpSettingPostion5"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[6].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisJogVelocity"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[7].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisPositioningAcceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[8].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisPositioningDeceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[9].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisPositioningVelocity"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "TAC001 : Description",
+            "parameterData": [
+              {
+                "Parameter": "AxisJigDownSettingPosition"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition1"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition2"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition3"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition4"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition5"
+              },
+              {
+                "Parameter": "AxisJogVelocity"
+              },
+              {
+                "Parameter": "AxisPositioningAcceleration"
+              },
+              {
+                "Parameter": "AxisPositioningDeceleration"
+              },
+              {
+                "Parameter": "AxisPositioningVelocity"
+              },
+              {
+                "Parameter": "ErrorCode"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "FollowingError"
+              },
+              {
+                "Parameter": "Idle"
+              },
+              {
+                "Parameter": "JogAcceleration"
+              },
+              {
+                "Parameter": "JogDeceleration"
+              },
+              {
+                "Parameter": "Running"
+              },
+              {
+                "Parameter": "Speed"
+              },
+              {
+                "Parameter": "Status"
+              }
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_2"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/ZSC001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "ZCS001 : Description",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_3"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/ZSC002/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "ZSC002 : Description",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_4"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/ZSO001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "ZSO001 : Description",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_5"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/BGB001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "BGB001 : Description",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_6"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/BGB002/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "BGB002 : Description",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_7"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/BGC001/PV"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/BGC001/Status"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "BGC001 : Description",
+            "parameterData": [
+              {
+                "Parameter": "PV"
+              },
+              {
+                "Parameter": "Status"
+              }
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_8"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/BGC002/PV"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/BGC002/Status"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "BGC002 : Description",
+            "parameterData": [
+              {
+                "Parameter": "PV"
+              },
+              {
+                "Parameter": "State"
+              }
+            ]
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "tabIndex": -1
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs": {
+        "binding": {
+          "config": {
+            "path": "view.params.Tag_Path_0"
+          },
+          "transforms": [
+            {
+              "code": "\n    if not value:\n        return []\n\n    tagPath \u003d str(value)\n\n    results \u003d system.tag.browse(\n        tagPath,\n        {\n            \"tagType\": \"UdtInstance\"\n        }\n    )\n\n    tabs \u003d []\n\n    for item in results.getResults():\n\n        tabs.append({\n            \"text\": str(item[\"name\"]),\n            \"viewPath\": \"Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView\",\n#            \"viewParams\": {\n#                \"Tag_Path_0\": str(item[\"fullPath\"])\n#            }\n        })\n\n    return tabs",
+              "type": "script"
+            }
+          ],
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "currentTabIndex": -1,
+      "tabSize": {
+        "width": 120
+      }
+    },
+    "type": "ia.container.tab"
+  }
+}

@@ -1,0 +1,1437 @@
+{
+  "custom": {},
+  "params": {
+    "tagPath": "[default]Mixing/Non Seal Pump"
+  },
+  "propConfig": {
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 152,
+      "width": 97
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Sealless pump"
+        },
+        "position": {
+          "height": 0.5855,
+          "width": 0.5567,
+          "x": 0.0697,
+          "y": 0.0994
+        },
+        "propConfig": {
+          "custom.alarm": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Alarm Metrics.activeAckCount"
+              },
+              "type": "tag"
+            }
+          },
+          "props.elements[8].elements[0].fill.opacity": {
+            "binding": {
+              "config": {
+                "expression": "if({this.custom.alarm}\u003e0,if(dateExtract(now(),\"second\")%2\u003d0,1,0.2),\r\n1) "
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[8].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/runStatus"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                },
+                {
+                  "code": "\tif self.custom.alarm\u003e0:\n\t\treturn \"rgb(202,51,51)\"\n\telse:\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.51",
+                      "stopColor": "#82E082",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 112.5)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "10.1448",
+                  "x2": "51.177",
+                  "y1": "94.6328",
+                  "y2": "94.6328"
+                },
+                {
+                  "d": "M10.145,0.001l2.593,30.661h2.594v5.073l33.253-5.073   l2.593-30.661H10.145",
+                  "fill": {
+                    "paint": {
+                      "gradientTransform": "matrix(1 0 0 -1 0 112.5)",
+                      "gradientUnits": "userSpaceOnUse",
+                      "stops": [
+                        {
+                          "offset": 0.01,
+                          "stopColor": "#424242"
+                        },
+                        {
+                          "offset": 0.51,
+                          "stopColor": "#8a8a8a"
+                        },
+                        {
+                          "offset": 1,
+                          "stopColor": "#4e4e4e"
+                        }
+                      ],
+                      "type": "linear",
+                      "x1": "10.1448",
+                      "x2": "51.177",
+                      "y1": "94.6328",
+                      "y2": "94.6328"
+                    },
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M15.331,30.662h5.071",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Storage",
+              "name": "Group_Storage",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M5.073,61.322v51.177h15.329v-5.072l15.33-10.258h20.517   l15.331,10.258v5.072h15.33V61.322H5.073z",
+                  "fill": {
+                    "paint": "#4a4a4a"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Support1",
+              "name": "Group_Support1",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M10.145,76.766v30.661h10.258l15.33-10.258h20.517l15.331,10.258   h10.258V76.766H10.145z",
+                  "fill": {
+                    "paint": "#606060"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Support2",
+              "name": "Group_Support2",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "28.0681",
+                  "cy": "92.3779",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#49A749",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "r": "10.0037",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M30.773,102.354l-7.776-1.127l-4.96-6.199l1.239-7.777   l6.087-4.848l7.777,1.128l4.96,6.198l-1.127,7.778L30.773,102.354z",
+                  "fill": {
+                    "url": "url(#SVGID_2_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "cx": "10.2014",
+                  "cy": "61.3789",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#49A749",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_3_",
+                  "name": "SVGID_3_",
+                  "r": "10.2012",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M2.818,68.648L0,61.322l2.817-7.327l7.327-2.818l7.327,2.818   l2.931,7.327l-2.931,7.326l-7.327,2.932L2.818,68.648z",
+                  "fill": {
+                    "url": "url(#SVGID_3_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "cx": "28.0681",
+                  "cy": "30.3232",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#49A749",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_4_",
+                  "name": "SVGID_4_",
+                  "r": "10.0322",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M18.036,27.618l4.96-6.087l7.776-1.24l6.2,4.96l1.127,7.778   l-4.96,6.2l-7.777,1.127l-6.087-4.96L18.036,27.618z",
+                  "fill": {
+                    "url": "url(#SVGID_4_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "cx": "63.9143",
+                  "cy": "30.3232",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#49A749",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_5_",
+                  "name": "SVGID_5_",
+                  "r": "10.0325",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M61.209,20.291l7.777,1.24l4.96,6.087l-1.128,7.778   l-6.198,4.96l-7.778-1.127l-4.96-6.2l1.128-7.778L61.209,20.291z",
+                  "fill": {
+                    "url": "url(#SVGID_5_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "cx": "81.8381",
+                  "cy": "61.3789",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#49A749",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_6_",
+                  "name": "SVGID_6_",
+                  "r": "10.23",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M89.165,53.996l2.931,7.327l-2.931,7.327l-7.327,2.931   l-7.327-2.931l-2.931-7.327l2.931-7.327l7.327-2.818L89.165,53.996z",
+                  "fill": {
+                    "url": "url(#SVGID_6_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "cx": "63.9143",
+                  "cy": "92.3779",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#49A749",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_7_",
+                  "name": "SVGID_7_",
+                  "r": "10.0039",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M73.947,95.027l-4.96,6.199l-7.777,1.127l-6.199-4.848   l-1.128-7.777l4.96-6.199l7.778-1.127l6.198,4.847L73.947,95.027z",
+                  "fill": {
+                    "url": "url(#SVGID_7_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Moulded_Volute",
+              "name": "Group_Moulded_Volute",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "45.991",
+                  "cy": "51.1768",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.7",
+                      "stopColor": "#217F21",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.83",
+                      "stopColor": "#82E082",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#217F21",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 112.5)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_8_",
+                  "name": "SVGID_8_",
+                  "r": "40.9192",
+                  "type": "radialGradient"
+                },
+                {
+                  "cx": "45.991",
+                  "cy": "61.323",
+                  "fill": {
+                    "paint": {
+                      "cx": "45.991",
+                      "cy": "51.1768",
+                      "gradientTransform": "matrix(1 0 0 -1 0 112.5)",
+                      "gradientUnits": "userSpaceOnUse",
+                      "r": "40.9192",
+                      "stops": [
+                        {
+                          "offset": 0.7,
+                          "stopColor": "#4e4e4e"
+                        },
+                        {
+                          "offset": 0.83,
+                          "stopColor": "#bfbfbf"
+                        },
+                        {
+                          "offset": 1,
+                          "stopColor": "#4E4E4E"
+                        }
+                      ],
+                      "type": "radial"
+                    },
+                    "url": "url(#SVGID_8_)"
+                  },
+                  "name": "circle",
+                  "r": "40.919",
+                  "type": "circle"
+                }
+              ],
+              "id": "Group_Volute_Chamber",
+              "name": "Group_Volute_Chamber",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "61.9993",
+                  "cy": "56.25",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#82E082",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 112.5)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_9_",
+                  "name": "SVGID_9_",
+                  "r": "37.055",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M46.104,102.354l4.171-0.225l4.059-0.677l3.833-1.015l3.72-1.354l3.606-1.689l3.382-2.029   l3.155-2.48l2.933-2.592l2.592-2.932l2.367-3.156l2.029-3.381l1.804-3.495l1.353-3.833l1.016-3.832l0.677-4.059l0.112-2.142v-2.028   V59.97l-0.338-4.509L85.67,51.29l-1.239-4.171l-1.804-3.945l-2.143-3.833l-2.366-3.494l-2.933-3.156L72.03,29.76l-3.493-2.592   l-3.833-2.254l-1.239-0.677l-7.215-3.833l-1.239-6.425v-3.833H37.086v5.185l1.24,8.905l6.426,7.666l13.978,7.327l2.817,1.804   l2.479,2.254l2.254,2.48l1.805,2.818l1.466,2.931l1.127,3.156l0.677,3.27l0.227,3.382l-0.451,5.186l-1.578,4.849l-2.367,4.283   l-3.044,3.832l-3.832,3.155l-4.396,2.367l-4.734,1.466l-5.186,0.45L46.104,102.354z",
+                  "fill": {
+                    "paint": {
+                      "cx": "61.9993",
+                      "cy": "56.25",
+                      "gradientTransform": "matrix(1 0 0 -1 0 112.5)",
+                      "gradientUnits": "userSpaceOnUse",
+                      "r": "37.055",
+                      "stops": [
+                        {
+                          "offset": 0,
+                          "stopColor": "#d6d6d6"
+                        },
+                        {
+                          "offset": 1,
+                          "stopColor": "#6d6d6d"
+                        }
+                      ],
+                      "type": "radial"
+                    },
+                    "url": "url(#SVGID_9_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Drivershaft_Flange",
+              "name": "Group_Drivershaft_Flange",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "45.991",
+                  "cy": "51.1777",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.51",
+                      "stopColor": "#82E082",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#258325",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 112.5)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_10_",
+                  "name": "SVGID_10_",
+                  "r": "25.5881",
+                  "type": "radialGradient"
+                },
+                {
+                  "cx": "45.991",
+                  "cy": "61.322",
+                  "fill": {
+                    "paint": "#00FF00",
+                    "url": "url(#SVGID_10_)"
+                  },
+                  "name": "circle",
+                  "r": "25.588",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.25"
+                  },
+                  "type": "circle"
+                }
+              ],
+              "id": "Group_Pump_Casing",
+              "name": "Group_Pump_Casing",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "45.991",
+                  "cy": "61.323",
+                  "fill": {},
+                  "name": "circle",
+                  "r": "12.738",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "circle"
+                }
+              ],
+              "id": "Group_Core",
+              "name": "Group_Core",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "26.0388",
+                  "cy": "61.3789",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#404040",
+                      "style": {
+                        "stopColor": "#404040"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_11_",
+                  "name": "SVGID_11_",
+                  "r": "2.5366",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M24.178,59.52l1.804-0.677l1.804,0.677l0.789,1.804l-0.789,1.804l-1.804,0.789l-1.804-0.789   l-0.676-1.804L24.178,59.52z",
+                  "fill": {
+                    "url": "url(#SVGID_11_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "cx": "32.0129",
+                  "cy": "75.8076",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#404040",
+                      "style": {
+                        "stopColor": "#404040"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_12_",
+                  "name": "SVGID_12_",
+                  "r": "2.5364",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M29.476,75.863l0.789-1.803l1.803-0.789l1.805,0.789l0.677,1.803l-0.677,1.805l-1.805,0.676   l-1.803-0.676L29.476,75.863z",
+                  "fill": {
+                    "url": "url(#SVGID_12_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "cx": "46.554",
+                  "cy": "81.8945",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#404040",
+                      "style": {
+                        "stopColor": "#404040"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_13_",
+                  "name": "SVGID_13_",
+                  "r": "2.5371",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M44.693,83.643l-0.676-1.805l0.676-1.803l1.805-0.678l1.804,0.678l0.789,1.803l-0.789,1.805   l-1.804,0.789L44.693,83.643z",
+                  "fill": {
+                    "url": "url(#SVGID_13_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "cx": "60.4758",
+                  "cy": "75.8076",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#404040",
+                      "style": {
+                        "stopColor": "#404040"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_14_",
+                  "name": "SVGID_14_",
+                  "r": "2.5366",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M60.533,78.344l-1.805-0.676l-0.789-1.805l0.789-1.803l1.805-0.789l1.803,0.789l0.677,1.803   l-0.677,1.805L60.533,78.344z",
+                  "fill": {
+                    "url": "url(#SVGID_14_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "cx": "66.4504",
+                  "cy": "61.3789",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#404040",
+                      "style": {
+                        "stopColor": "#404040"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_15_",
+                  "name": "SVGID_15_",
+                  "r": "2.5371",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M64.703,59.52l1.804-0.677l1.804,0.677l0.677,1.804l-0.677,1.804l-1.804,0.789l-1.804-0.789   l-0.789-1.804L64.703,59.52z",
+                  "fill": {
+                    "url": "url(#SVGID_15_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "cx": "60.9827",
+                  "cy": "46.8374",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#404040",
+                      "style": {
+                        "stopColor": "#404040"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_16_",
+                  "name": "SVGID_16_",
+                  "r": "2.5364",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M58.447,46.781l0.789-1.691l1.805-0.789l1.689,0.789l0.789,1.691l-0.789,1.804l-1.689,0.789   l-1.805-0.789L58.447,46.781z",
+                  "fill": {
+                    "url": "url(#SVGID_16_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "cx": "46.554",
+                  "cy": "40.8633",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#404040",
+                      "style": {
+                        "stopColor": "#404040"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_17_",
+                  "name": "SVGID_17_",
+                  "r": "2.5364",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M44.693,42.61l-0.676-1.804l0.676-1.803l1.805-0.676l1.804,0.676l0.789,1.803l-0.789,1.804   l-1.804,0.789L44.693,42.61z",
+                  "fill": {
+                    "url": "url(#SVGID_17_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "cx": "32.0129",
+                  "cy": "46.8374",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#999999",
+                      "style": {
+                        "stopColor": "#999999"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#404040",
+                      "style": {
+                        "stopColor": "#404040"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_18_",
+                  "name": "SVGID_18_",
+                  "r": "2.5366",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M32.068,49.374l-1.803-0.789l-0.789-1.804l0.789-1.691l1.803-0.789l1.805,0.789l0.677,1.691   l-0.677,1.804L32.068,49.374z",
+                  "fill": {
+                    "url": "url(#SVGID_18_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Bolts",
+              "name": "Group_Bolts",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.51",
+                      "stopColor": "#82E082",
+                      "style": {
+                        "stopColor": "#e7e7e7"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#005E00",
+                      "style": {
+                        "stopColor": "#3b3b3b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientTransform": "matrix(1 0 0 -1 0 112.5)",
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_19_",
+                  "name": "SVGID_19_",
+                  "type": "linearGradient",
+                  "x1": "20.4026",
+                  "x2": "71.4661",
+                  "y1": "106.2422",
+                  "y2": "106.2422"
+                },
+                {
+                  "d": "M20.403,2.368h51.063v7.778H20.403V2.368",
+                  "fill": {
+                    "url": "url(#SVGID_19_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Inlet_Oulet_Pipe",
+              "name": "Group_Inlet_Oulet_Pipe",
+              "type": "group"
+            }
+          ],
+          "style": {
+            "backgroundColor": "#FFFFFF00"
+          },
+          "viewBox": "0 0 92.096 112.5"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1387,
+          "width": 0.8703,
+          "x": 0.0652,
+          "y": 0.0338
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 0.0743,
+          "width": 0.3663,
+          "x": 0.6337,
+          "y": 0.3582
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/mode"
+              },
+              "transforms": [
+                {
+                  "fallback": "NA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "Auto"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Manual"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderStyle": "ridge",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 1
+          },
+          "textStyle": {
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 1,
+            "paddingLeft": 1,
+            "paddingRight": 1,
+            "paddingTop": 1
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Status :"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/status/runStatus"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "NA",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "Running"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Stopped"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "0.2rem",
+                "borderBottomRightRadius": "0.2rem",
+                "borderStyle": "ridge",
+                "borderTopLeftRadius": "0.2rem",
+                "borderTopRightRadius": "0.2rem",
+                "borderWidth": 1
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "height": 0.1544,
+          "width": 0.9703,
+          "x": 0.0148,
+          "y": 0.6793
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderColor": "#808080",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 0.1,
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 2,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 2
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Flow Rate:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/plcTags/flowRate"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn round(value,2)",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "0.2rem",
+                "borderBottomRightRadius": "0.2rem",
+                "borderStyle": "ridge",
+                "borderTopLeftRadius": "0.2rem",
+                "borderTopRightRadius": "0.2rem",
+                "borderWidth": 1
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "height": 0.1543,
+          "width": 0.9703,
+          "x": 0.0148,
+          "y": 0.838
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderColor": "#808080",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 0.1,
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 2,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 2
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "params": {
+              "tagpath": "{view.params.tagPath}"
+            },
+            "view": "templates/Pump_Screen"
+          },
+          "scope": "C",
+          "type": "nav"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": "#FFFFFF00",
+        "cursor": "pointer"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

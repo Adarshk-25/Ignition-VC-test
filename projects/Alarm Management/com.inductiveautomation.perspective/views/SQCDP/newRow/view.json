@@ -1,0 +1,232 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 400,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.2455,
+          "x": 0.054,
+          "y": 0.0626
+        },
+        "props": {
+          "text": "SNo",
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.2455,
+          "x": 0.0542,
+          "y": 0.1925
+        },
+        "props": {
+          "text": "Category",
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.2455,
+          "x": 0.0542,
+          "y": 0.3225
+        },
+        "props": {
+          "text": "Audit Creation",
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.2455,
+          "x": 0.0542,
+          "y": 0.4525
+        },
+        "props": {
+          "text": "Rating",
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_7"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.2455,
+          "x": 0.0542,
+          "y": 0.7125
+        },
+        "props": {
+          "text": "Evidence",
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_9"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.2455,
+          "x": 0.0542,
+          "y": 0.5825
+        },
+        "props": {
+          "text": "Observation",
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\t# 1. Gather your input values from your Perspective UI components\n\tval1 \u003dself.getSibling(\"TextField\").props.text\n\tval2 \u003dself.getSibling(\"TextField_0\").props.text\n\tval3 \u003dself.getSibling(\"TextField_1\").props.text\n\tval4 \u003dself.getSibling(\"TextField_2\").props.text\n\tval5 \u003dself.getSibling(\"TextField_3\").props.text\n\tval6 \u003dself.getSibling(\"TextField_4\").props.text\n# 2. Define your parameterized SQL statement\n\tquery \u003d \"INSERT INTO saftey_audit (SNo, Category, Audit_Creation, Observation, Evidence, Rating) VALUES (?, ?,?,?,?,?)\"\n\n# 3. List the arguments in the exact order of the question marks\n\targs \u003d [val1, val2,val3,val4,val5,val6]\n\n# 4. Execute the update query \n# (Omit the database argument if you want to use the project\u0027s default database)\n\tsystem.db.runPrepUpdate(query, args, database\u003d\"Dev_MSSQL_Server\")\n\n# 5. Tell the Perspective Table component to refresh its data binding\n\t\n\t#self.parent.getChild(\"Table\").refreshBinding(\"props.data\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 0.085,
+          "width": 0.2888,
+          "x": 0.2888,
+          "y": 0.8925
+        },
+        "props": {
+          "primary": false,
+          "text": "Save",
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "TextField"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.5,
+          "x": 0.42,
+          "y": 0.0775
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "TextField_0"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.5,
+          "x": 0.4167,
+          "y": 0.21
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "TextField_1"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.5,
+          "x": 0.4133,
+          "y": 0.3225
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "TextField_2"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.5,
+          "x": 0.4199,
+          "y": 0.4575
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "TextField_3"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.5,
+          "x": 0.4132,
+          "y": 0.5825
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "TextField_4"
+        },
+        "position": {
+          "height": 0.08,
+          "width": 0.5,
+          "x": 0.4132,
+          "y": 0.7075
+        },
+        "type": "ia.input.text-field"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "300:400",
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

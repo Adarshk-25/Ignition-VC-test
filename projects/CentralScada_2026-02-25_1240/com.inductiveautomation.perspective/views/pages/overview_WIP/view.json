@@ -1,0 +1,254 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1650
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.instances": {
+                "binding": {
+                  "config": {
+                    "expression": "1"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tdef getColor(label, value):\n\t    \n\t    # Remove % if present\n\t    try:\n\t        num \u003d float(str(value).replace(\"%\",\"\").replace(\",\",\"\"))\n\t    except:\n\t        return \"#2C2C2C\"\n\t    \n\t    if label in [\"PLANT OEE\", \"AVAILABILITY\", \"PERFORMANCE\", \"QUALITY\"]:\n\t        if num \u003e\u003d 90:\n\t            return \"#2E7D32\"   # Green\n\t        elif num \u003e\u003d 75:\n\t            return \"#F9A825\"   # Amber\n\t        else:\n\t            return \"#C62828\"   # Red\n\t    \n\t    if label \u003d\u003d \"REJECTION %\":\n\t        if num \u003c\u003d 2:\n\t            return \"#2E7D32\"\n\t        elif num \u003c\u003d 5:\n\t            return \"#F9A825\"\n\t        else:\n\t            return \"#C62828\"\n\t    \n\t    if label \u003d\u003d \"TARGET GAP\":\n\t        if num \u003e\u003d 0:\n\t            return \"#2E7D32\"\n\t        elif num \u003e\u003d -500:\n\t            return \"#F9A825\"\n\t        else:\n\t            return \"#C62828\"\n\t    \n\t    return \"#2C2C2C\"\n\t\n\t\n\tdata \u003d [\n\t    (\"PLANT OEE\", \"82%\"),\n\t    (\"AVAILABILITY\", \"88%\"),\n\t    (\"PERFORMANCE\", \"79%\"),\n\t    (\"QUALITY\", \"95%\"),\n\t    (\"PRODUCTION TODAY\", \"14,250\"),\n\t    (\"TARGET GAP\", \"-1,200\"),\n\t    (\"REJECTION %\", \"3.2%\"),\n\t    (\"ENERGY (MW)\", \"1.2\")\n\t]\n\t\n\tinstances \u003d []\n\t\n\tfor label, value in data:\n\t    instances.append({\n\t        \"instanceStyle\": {\"classes\": \"\"},\n\t        \"instancePosition\": {},\n\t        \"label\": label,\n\t        \"value\": value,\n\t        \"color\": getColor(label, value)\n\t    })\n\t\n\treturn instances",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "alignItems": "center",
+              "justify": "space-around",
+              "path": "widgets(templates)/cardDisplay"
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "height": 110,
+          "width": 1645,
+          "x": 2
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "alignItems": "baseline",
+              "elementStyle": {
+                "margin": "2em"
+              },
+              "instances": [
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  }
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  }
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  }
+                }
+              ],
+              "justify": "space-around",
+              "path": "widgets(templates)/OEEZoneCard",
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "height": 291,
+          "width": 1645,
+          "x": 2.49,
+          "y": 91
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "height": 314,
+          "width": 956,
+          "x": 2,
+          "y": 450
+        },
+        "propConfig": {
+          "props.options": {
+            "persistent": true
+          },
+          "props.series": {
+            "binding": {
+              "config": {
+                "expression": "1"
+              },
+              "transforms": [
+                {
+                  "code": "\t# Raw downtime minutes (same as your HTML)\n\trawData \u003d {\n\t    \"Zone A\": [120, 95, 60, 40, 25],\n\t    \"Zone B\": [150, 80, 75, 30, 20],\n\t    \"Zone E\": [100, 70, 55, 35, 18]\n\t}\n\t\n\treasons \u003d [\n\t    \"Material Jam\",\n\t    \"Power Trip\",\n\t    \"Sensor Fault\",\n\t    \"No Material\",\n\t    \"Maintenance\"\n\t]\n\t\n\tzones \u003d [\"Zone A\", \"Zone B\", \"Zone E\"]\n\t\n\t# Convert minutes to percentage\n\tdef convertToPercent(data):\n\t    total \u003d sum(data)\n\t    return [(v / float(total)) * 100 for v in data]\n\t\n\t# Build percent data per zone\n\tzonePercents \u003d {}\n\tfor zone in zones:\n\t    zonePercents[zone] \u003d convertToPercent(rawData[zone])\n\t\n\t# Build series structure for Apex\n\tseries \u003d []\n\t\n\tfor i in range(len(reasons)):\n\t    series.append({\n\t        \"name\": reasons[i],\n\t        \"data\": [\n\t            round(zonePercents[\"Zone A\"][i], 1),\n\t            round(zonePercents[\"Zone B\"][i], 1),\n\t            round(zonePercents[\"Zone E\"][i], 1)\n\t        ]\n\t    })\n\t\n\treturn series",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "height": 320,
+              "stacked": true,
+              "toolbar": {
+                "show": false
+              },
+              "type": "bar"
+            },
+            "colors": [
+              "#DC2626",
+              "#F59E0B",
+              "#0052CC",
+              "#7C3AED",
+              "#1F9D55"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#E0E3E7"
+            },
+            "legend": {
+              "horizontalAlign": "left",
+              "position": "top"
+            },
+            "plotOptions": {
+              "bar": {
+                "barHeight": "60%",
+                "horizontal": true
+              }
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "fontSize": "14px",
+                "fontWeight": "600"
+              },
+              "text": "Top 5 Downtime Contribution (%)"
+            },
+            "xaxis": {
+              "categories": [
+                "Zone A",
+                "Zone B",
+                "Zone E"
+              ],
+              "max": 100,
+              "title": {
+                "text": "Downtime Contribution (%)"
+              }
+            },
+            "yaxis": {
+              "title": {
+                "text": "Zone"
+              }
+            }
+          },
+          "series": [
+            {
+              "data": [
+                35.3,
+                42.3,
+                36
+              ],
+              "name": "Material Jam"
+            },
+            {
+              "data": [
+                27.9,
+                22.5,
+                25.2
+              ],
+              "name": "Power Trip"
+            },
+            {
+              "data": [
+                17.6,
+                21.1,
+                19.8
+              ],
+              "name": "Sensor Fault"
+            },
+            {
+              "data": [
+                11.8,
+                8.5,
+                12.6
+              ],
+              "name": "No Material"
+            },
+            {
+              "data": [
+                7.4,
+                5.6,
+                6.5
+              ],
+              "name": "Maintenance"
+            }
+          ],
+          "type": "bar"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

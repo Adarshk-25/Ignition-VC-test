@@ -1,0 +1,220 @@
+{
+  "custom": {},
+  "params": {
+    "parameterData": [
+      {
+        "ActualValue": "value",
+        "Parameter": "value",
+        "SubEquipmentName": "value"
+      }
+    ],
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.parameterData": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MergedEquipmentTemplate"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "props.params.parameterData[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSO001/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSO002/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSO003/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSO004/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSO005/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSO006/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[6].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSO007/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[7].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSO008/State"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "EquipmentHeader": "ZSO001-ZSO008",
+                "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingLNT001",
+                "parameterData": [
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSO001",
+                    "equipmentDescription": "DS X Axis Servo Motor FLS Sensor (SM11)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSO002",
+                    "equipmentDescription": "DS Y Axis Servo Motor DOG Sensor (SM12) "
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSO003",
+                    "equipmentDescription": "OS X Axis Servo Motor DOG Sensor (SM13) "
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSO004",
+                    "equipmentDescription": "OS Y Axis Servo Motor DOG Sensor (SM14)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSO005",
+                    "equipmentDescription": "Scrap DS Y Axis Servo Motor DOG Sensor (SM19)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSO006",
+                    "equipmentDescription": "Scrap OS Y Axis Servo Motor DOG Sensor (SM20)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSO007",
+                    "equipmentDescription": "Scrap Suction DS Motor DOG Sensor (SM21)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSO008",
+                    "equipmentDescription": "Scrap Suction OS Motor DOG Sensor (SM22)"
+                  }
+                ],
+                "tableHeader": "Process Parameters"
+              },
+              "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/MergedEquipmentTemplate"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

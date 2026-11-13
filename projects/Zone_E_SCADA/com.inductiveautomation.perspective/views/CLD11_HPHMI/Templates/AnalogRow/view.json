@@ -1,0 +1,500 @@
+{
+  "custom": {},
+  "params": {
+    "tagRoot": "[default]IN11_E122_PCE_CLD11",
+    "path": "",
+    "code": "",
+    "desc": "",
+    "unit": "",
+    "pv": "PV",
+    "sp": "",
+    "out": "",
+    "st": "",
+    "flt": ""
+  },
+  "propConfig": {
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.code": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.desc": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unit": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.pv": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.sp": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.out": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.st": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.flt": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1240,
+      "height": 32
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "row",
+      "alignItems": "stretch",
+      "style": {
+        "borderBottom": "1px solid #D2D2D2",
+        "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Code"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "6px",
+            "fontWeight": "bold"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.code"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Desc"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "12px",
+            "color": "#333333",
+            "paddingLeft": "6px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.desc"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "PV"
+        },
+        "position": {
+          "basis": "120px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Consolas, 'Roboto Mono', monospace",
+            "fontSize": "13px",
+            "color": "#0B2D57",
+            "paddingLeft": "6px",
+            "justifyContent": "flex-end",
+            "textAlign": "right",
+            "paddingRight": "8px",
+            "fontWeight": "bold",
+            "backgroundColor": "#F8F8F8",
+            "border": "1px solid #B4B4B4",
+            "margin": "4px 4px",
+            "borderRadius": "2px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.pv}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), try(numberFormat(toDouble({value}), \"#,##0.00\"), toStr({value})), \"---\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Unit"
+        },
+        "position": {
+          "basis": "60px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "12px",
+            "color": "#7A7A7A",
+            "paddingLeft": "6px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.unit"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "SP"
+        },
+        "position": {
+          "basis": "104px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Consolas, 'Roboto Mono', monospace",
+            "fontSize": "13px",
+            "color": "#0B2D57",
+            "paddingLeft": "6px",
+            "justifyContent": "flex-end",
+            "textAlign": "right",
+            "paddingRight": "8px",
+            "fontWeight": "bold",
+            "backgroundColor": "#F8F8F8",
+            "border": "1px solid #B4B4B4",
+            "margin": "4px 4px",
+            "borderRadius": "2px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.sp}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if({view.params.sp} = \"\", \"\", if(isGood({value}), try(numberFormat(toDouble({value}), \"#,##0.00\"), toStr({value})), \"---\"))"
+                }
+              ]
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.sp} = \"\", \"transparent\", \"#F8F8F8\")"
+              }
+            }
+          },
+          "props.style.borderColor": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.sp} = \"\", \"transparent\", \"#B4B4B4\")"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Out"
+        },
+        "position": {
+          "basis": "104px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Consolas, 'Roboto Mono', monospace",
+            "fontSize": "13px",
+            "color": "#0B2D57",
+            "paddingLeft": "6px",
+            "justifyContent": "flex-end",
+            "textAlign": "right",
+            "paddingRight": "8px",
+            "fontWeight": "bold",
+            "backgroundColor": "#F8F8F8",
+            "border": "1px solid #B4B4B4",
+            "margin": "4px 4px",
+            "borderRadius": "2px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.out}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if({view.params.out} = \"\", \"\", if(isGood({value}), try(numberFormat(toDouble({value}), \"#,##0.00\"), toStr({value})), \"---\"))"
+                }
+              ]
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.out} = \"\", \"transparent\", \"#F8F8F8\")"
+              }
+            }
+          },
+          "props.style.borderColor": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.out} = \"\", \"transparent\", \"#B4B4B4\")"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "80px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Consolas, 'Roboto Mono', monospace",
+            "fontSize": "13px",
+            "color": "#0B2D57",
+            "paddingLeft": "6px",
+            "justifyContent": "flex-end",
+            "textAlign": "right",
+            "paddingRight": "8px",
+            "fontWeight": "bold"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.st}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if({view.params.st} = \"\", \"\", if(isGood({value}), try(numberFormat(toDouble({value}), \"#0\"), toStr({value})), \"---\"))"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Fault"
+        },
+        "position": {
+          "basis": "90px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "0px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center",
+            "borderRadius": "2px",
+            "margin": "5px 4px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.flt}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if({view.params.flt} = \"\", \"\", if(isGood({value}), if(toBoolean({value}), \"FAULT\", \"OK\"), \"?\"))"
+                }
+              ]
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.flt}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if({view.params.flt} = \"\", \"transparent\", if(isGood({value}), if(toBoolean({value}), \"#D7262E\", \"#E8E8E8\"), \"#CFCFCF\"))"
+                }
+              ]
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.flt}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"#FFFFFF\", \"#4A4A4A\"), \"#8A8A8A\")"
+                }
+              ]
+            }
+          },
+          "props.style.border": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.flt} = \"\", \"none\", \"1px solid #9C9C9C\")"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

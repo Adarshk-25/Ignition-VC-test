@@ -1,0 +1,515 @@
+{
+  "custom": {},
+  "params": {
+    "Label": "value"
+  },
+  "propConfig": {
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 230,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Tank2"
+        },
+        "position": {
+          "height": 0.7739,
+          "width": 0.528,
+          "x": 0.4631,
+          "y": 0.2217
+        },
+        "props": {
+          "path": "widgets(templates)/mixingEquipments/Tank2"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 0.0877,
+          "width": 0.2059,
+          "x": 0.0591,
+          "y": 0.5126
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.path}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center"
+          },
+          "textStyle": {
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "custom": {
+          "key": "value"
+        },
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 0.0877,
+          "width": 0.2059,
+          "x": 0.258,
+          "y": 0.5133
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "path": "{view.params.path}"
+                },
+                "tagPath": "{path}/PV"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}+\u0027 \u0027+{view.params.unit}",
+                  "type": "expression"
+                },
+                {
+                  "formatType": "numeric",
+                  "formatValue": "##.00",
+                  "type": "format"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "borderColor": "black",
+            "borderStyle": "solid",
+            "borderWidth": "1.5px"
+          },
+          "textStyle": {
+            "alignSelf": "center",
+            "color": "#000000",
+            "fontFamily": "sans-serif",
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "custom": {
+          "key": "value"
+        },
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 0.0877,
+          "width": 0.2059,
+          "x": 0.258,
+          "y": 0.5991
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "path": "{view.params.path}"
+                },
+                "tagPath": "{path}/PV"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}+\u0027 \u0027+{view.params.unit}",
+                  "type": "expression"
+                },
+                {
+                  "formatType": "numeric",
+                  "formatValue": "##.00",
+                  "type": "format"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "borderColor": "black",
+            "borderStyle": "solid",
+            "borderWidth": "1.5px"
+          },
+          "textStyle": {
+            "alignSelf": "center",
+            "color": "#000000",
+            "fontFamily": "sans-serif",
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_5"
+        },
+        "position": {
+          "height": 0.0877,
+          "width": 0.2059,
+          "x": 0.0591,
+          "y": 0.5987
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.path}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center"
+          },
+          "textStyle": {
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "custom": {
+          "key": "value"
+        },
+        "meta": {
+          "name": "Label_6"
+        },
+        "position": {
+          "height": 0.0877,
+          "width": 0.2059,
+          "x": 0.258,
+          "y": 0.4273
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "path": "{view.params.path}"
+                },
+                "tagPath": "{path}/PV"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}+\u0027 \u0027+{view.params.unit}",
+                  "type": "expression"
+                },
+                {
+                  "formatType": "numeric",
+                  "formatValue": "##.00",
+                  "type": "format"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "borderColor": "black",
+            "borderStyle": "solid",
+            "borderWidth": "1.5px"
+          },
+          "textStyle": {
+            "alignSelf": "center",
+            "color": "#000000",
+            "fontFamily": "sans-serif",
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_7"
+        },
+        "position": {
+          "height": 0.0877,
+          "width": 0.2059,
+          "x": 0.0591,
+          "y": 0.4266
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.path}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center"
+          },
+          "textStyle": {
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "ISA Agitator"
+        },
+        "position": {
+          "height": 0.7043,
+          "width": 0.2556,
+          "x": 0.5901,
+          "y": 0.1056
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M226,298 l0,-284 -20,-6 -24,-4 -27,-3 -14,-1 -29,0 -28,2 -26,4 -22,5 -9,3 0,284 20,6 24,4 27,3 14,1 29,0 27,-2 26,-4 22,-5 10,-3z",
+              "fill": {
+                "paint": "#808080"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M335.066678695638 1441l-417.01177592618336-56-13.149019961636412 5-9.39215711545458 6-5.635294269272748 8-1.878431423090916 9 1.878431423090916 8 5.635294269272748 8 9.39215711545458 7 11.270588538545496 5 418.8902073492743-56 13.149019961636412 5 9.39215711545458 6 7.513725692363664 8 1.878431423090916 9-1.878431423090916 8-7.513725692363664 8-9.39215711545458 7-13.149019961636412 5z",
+              "fill": {
+                "paint": "#808080"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M127 312l0 1102.60007299551",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            }
+          ],
+          "viewBox": "-113 -1 481 1443"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "EuipmentStatusLabel_0"
+        },
+        "position": {
+          "height": 0.1783,
+          "width": 0.4406,
+          "x": 0.4946,
+          "y": 0.5795
+        },
+        "propConfig": {
+          "props.params.status": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {},
+                "tagPath": "[default]agratas/sanand/zoneE/line1/mixing/cmc_si_weighing_system/CMC SI WeighingSystem/CMC Weighing Hopper/status/machineStatus"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "path": "widgets(templates)/CALWidgets/EuipmentStatusLabel",
+          "style": {
+            "color": "white"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 0.2391,
+          "width": 0.404,
+          "x": 0.5141,
+          "y": 0.303
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "custom": {
+          "key": "value"
+        },
+        "meta": {
+          "name": "Label_8"
+        },
+        "position": {
+          "height": 0.0877,
+          "width": 0.2059,
+          "x": 0.3092,
+          "y": 0.8639
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "path": "{view.params.path}"
+                },
+                "tagPath": "{path}/PV"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}+\u0027 \u0027+{view.params.unit}",
+                  "type": "expression"
+                },
+                {
+                  "formatType": "numeric",
+                  "formatValue": "##.00",
+                  "type": "format"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "borderColor": "black",
+            "borderStyle": "solid",
+            "borderWidth": "1.5px"
+          },
+          "textStyle": {
+            "alignSelf": "center",
+            "color": "#000000",
+            "fontFamily": "sans-serif",
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_9"
+        },
+        "position": {
+          "height": 0.0877,
+          "width": 0.2059,
+          "x": 0.1106,
+          "y": 0.8633
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.path}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center"
+          },
+          "textStyle": {
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

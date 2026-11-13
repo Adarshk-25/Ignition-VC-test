@@ -1,0 +1,661 @@
+{
+  "custom": {},
+  "params": {
+    "machineFBS": "value",
+    "path": "value",
+    "tableHeader": "value"
+  },
+  "propConfig": {
+    "params.machineFBS": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tableHeader": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 455,
+      "width": 672
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.0796,
+              "width": 0.9034,
+              "x": 0.0096,
+              "y": 0.0308
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.machineFBS"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Title/Text"
+              },
+              "textStyle": {
+                "classes": "Title/Text",
+                "fontSize": 20,
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "height": 0.6747,
+              "width": 0.9524,
+              "x": 0.0263,
+              "y": 0.2627
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.path}"
+                    },
+                    "tagPath": "{Tag}/ActualMachineSpeed"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"RPM\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.path}"
+                    },
+                    "tagPath": "{Tag}/CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "Not Valid",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "None"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Maintenance"
+                        },
+                        {
+                          "input": 2,
+                          "output": "Setup"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Processing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.path}"
+                    },
+                    "tagPath": "{Tag}/CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "Not Valid",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "Not Available"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Out Of Service"
+                        },
+                        {
+                          "input": 2,
+                          "output": "Not Executing"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Executing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.path}"
+                    },
+                    "tagPath": "{Tag}/CurrentTransitionState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "Not Valid",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "From Not Available to Out Of Service"
+                        },
+                        {
+                          "input": 3,
+                          "output": "From Out Of Service to Not Available"
+                        },
+                        {
+                          "input": 5,
+                          "output": "From Out OF Service to Not Executing"
+                        },
+                        {
+                          "input": 6,
+                          "output": "From Executing to Not Available"
+                        },
+                        {
+                          "input": 7,
+                          "output": "From Executing to Out Of Service"
+                        },
+                        {
+                          "input": 8,
+                          "output": "From Executing to Not Executing"
+                        },
+                        {
+                          "input": 9,
+                          "output": "From Not Executing to Not Available"
+                        },
+                        {
+                          "input": 10,
+                          "output": "From Not Executing to Out Of Service"
+                        },
+                        {
+                          "input": 11,
+                          "output": "From Not Executing to Executing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.path}"
+                    },
+                    "tagPath": "{Tag}/EquipmentBlocked"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "Not Valid",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": true,
+                          "output": "Blocked"
+                        },
+                        {
+                          "input": false,
+                          "output": "Not Blocked"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.path}"
+                    },
+                    "tagPath": "{Tag}/EquipmentStarved"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "Not Valid",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": true,
+                          "output": "Starved"
+                        },
+                        {
+                          "input": false,
+                          "output": "Not Starved"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[6].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.path}"
+                    },
+                    "tagPath": "{Tag}/MESRunning"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "Not Valid",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": true,
+                          "output": "MES Connected"
+                        },
+                        {
+                          "input": false,
+                          "output": "Not Connected"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[7].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.path}"
+                    },
+                    "tagPath": "{Tag}/PLCHeartbeat"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[8].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]SCADAHeartbeat"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "Parameter": "Actual Machine Speed"
+                },
+                {
+                  "Parameter": "Current Mode"
+                },
+                {
+                  "Parameter": "Current State"
+                },
+                {
+                  "Parameter": "Current Transition State"
+                },
+                {
+                  "Parameter": "Blocking Status"
+                },
+                {
+                  "Parameter": "Starving Status"
+                },
+                {
+                  "Parameter": "MES Running"
+                },
+                {
+                  "Parameter": "PLC Heartbeat"
+                },
+                {
+                  "Parameter": "SCADA Heartbeat"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "classes": "Table/tableValue",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.066,
+              "width": 0.6355,
+              "x": 0.1613,
+              "y": 0.1538
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.tableHeader"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "alignItems": "center"
+              },
+              "textStyle": {
+                "classes": "Title/Text"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "500px"
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

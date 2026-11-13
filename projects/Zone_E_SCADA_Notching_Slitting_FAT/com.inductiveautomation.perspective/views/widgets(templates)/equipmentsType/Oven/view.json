@@ -1,0 +1,1240 @@
+{
+  "custom": {},
+  "params": {
+    "tagPath": ""
+  },
+  "propConfig": {
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 813,
+      "width": 1638
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "18px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px",
+                    "textAlign": "center"
+                  },
+                  "text": "Status"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_4"
+        },
+        "position": {
+          "height": 765,
+          "width": 235.93,
+          "x": 22.95,
+          "y": 35.21
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "18px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px"
+                  },
+                  "text": "Trend"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "PowerChart"
+                },
+                "position": {
+                  "basis": "600px"
+                },
+                "props": {
+                  "config": {
+                    "measureOfTime": "minutes",
+                    "rangeEndDate": {
+                      "$": [
+                        "ts",
+                        0,
+                        1774260480817
+                      ],
+                      "$ts": 1774260479749
+                    },
+                    "rangeStartDate": {
+                      "$": [
+                        "ts",
+                        0,
+                        1774260480817
+                      ],
+                      "$ts": 1774259881749
+                    },
+                    "unitOfTime": 10
+                  },
+                  "interaction": {
+                    "chartZoomLevel": 1,
+                    "rangeZoomLevel": 1
+                  },
+                  "legend": {
+                    "visible": true
+                  },
+                  "pens": [
+                    {
+                      "axis": "",
+                      "data": {
+                        "aggregateMode": "default",
+                        "source": "histprov:historian2:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating/anode/betagauge1/plctags/thickness"
+                      },
+                      "display": {
+                        "breakLine": true,
+                        "interpolation": "curveLinear",
+                        "radius": 3,
+                        "styles": {
+                          "highlighted": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          },
+                          "muted": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 0.4
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 0.4,
+                              "width": 1
+                            }
+                          },
+                          "normal": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 0.8
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 0.8,
+                              "width": 1
+                            }
+                          },
+                          "selected": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          }
+                        },
+                        "type": "line"
+                      },
+                      "enabled": true,
+                      "name": "thickness",
+                      "plot": 0,
+                      "selectable": true,
+                      "visible": true
+                    },
+                    {
+                      "axis": "",
+                      "data": {
+                        "aggregateMode": "default",
+                        "source": "histprov:historian2:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating/anode/sideovensa/plctags/pressure"
+                      },
+                      "display": {
+                        "breakLine": true,
+                        "interpolation": "curveLinear",
+                        "radius": 3,
+                        "styles": {
+                          "highlighted": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#FC8D62",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          },
+                          "muted": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 0.4
+                            },
+                            "stroke": {
+                              "color": "#FC8D62",
+                              "dashArray": 0,
+                              "opacity": 0.4,
+                              "width": 1
+                            }
+                          },
+                          "normal": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 0.8
+                            },
+                            "stroke": {
+                              "color": "#FC8D62",
+                              "dashArray": 0,
+                              "opacity": 0.8,
+                              "width": 1
+                            }
+                          },
+                          "selected": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#FC8D62",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          }
+                        },
+                        "type": "line"
+                      },
+                      "enabled": true,
+                      "name": "pressure",
+                      "plot": 0,
+                      "selectable": true,
+                      "visible": true
+                    },
+                    {
+                      "axis": "",
+                      "data": {
+                        "aggregateMode": "default",
+                        "source": "histprov:historian2:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating/anode/sideovensa/plctags/humidity"
+                      },
+                      "display": {
+                        "breakLine": true,
+                        "interpolation": "curveLinear",
+                        "radius": 3,
+                        "styles": {
+                          "highlighted": {
+                            "fill": {
+                              "color": "#8DA0CB",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#8DA0CB",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          },
+                          "muted": {
+                            "fill": {
+                              "color": "#8DA0CB",
+                              "opacity": 0.4
+                            },
+                            "stroke": {
+                              "color": "#8DA0CB",
+                              "dashArray": 0,
+                              "opacity": 0.4,
+                              "width": 1
+                            }
+                          },
+                          "normal": {
+                            "fill": {
+                              "color": "#8DA0CB",
+                              "opacity": 0.8
+                            },
+                            "stroke": {
+                              "color": "#8DA0CB",
+                              "dashArray": 0,
+                              "opacity": 0.8,
+                              "width": 1
+                            }
+                          },
+                          "selected": {
+                            "fill": {
+                              "color": "#8DA0CB",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#8DA0CB",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          }
+                        },
+                        "type": "line"
+                      },
+                      "enabled": true,
+                      "name": "humidity",
+                      "plot": 0,
+                      "selectable": true,
+                      "visible": true
+                    }
+                  ]
+                },
+                "type": "ia.chart.powerchart"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_0"
+        },
+        "position": {
+          "height": 262,
+          "width": 786,
+          "x": 835.39,
+          "y": 539.51
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_1"
+        },
+        "position": {
+          "height": 496,
+          "width": 652,
+          "x": 276.62,
+          "y": 31.95
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Oven"
+            },
+            "position": {
+              "height": 0.8424,
+              "width": 0.8505,
+              "x": 0.0748,
+              "y": 0.0923
+            },
+            "props": {
+              "path": "widgets(templates)/baseTemplates/TestTemplate/Oven"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_2"
+        },
+        "position": {
+          "height": 183.98,
+          "width": 214.05,
+          "x": 33.66,
+          "y": 134.31
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "button_0"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "#DC3545",
+                "path": "[default]running",
+                "text": "Stopped"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "height": 29.92,
+          "width": 205.02,
+          "x": 37.94,
+          "y": 93.41
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 20,
+            "borderBottomRightRadius": 20,
+            "borderTopLeftRadius": 20,
+            "borderTopRightRadius": 20,
+            "gap": "15px",
+            "justifyContent": "center"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "348px"
+            },
+            "props": {
+              "style": {
+                "alignItems": "center",
+                "fontWeight": "bold"
+              },
+              "text": "Side Oven A",
+              "textStyle": {
+                "fontSize": 18
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "height": 34.63,
+          "width": 1470.02,
+          "x": 143.97,
+          "y": -2.36
+        },
+        "props": {
+          "justify": "space-evenly",
+          "style": {
+            "gap": "15px",
+            "justifyContent": "center"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "gaugeCard_4"
+        },
+        "position": {
+          "height": 249.02,
+          "width": 274.91,
+          "x": 627.05,
+          "y": 283.98
+        },
+        "propConfig": {
+          "props.params.tagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.tagPath}+\u0027plcTags/Position Signal\u0027"
+              },
+              "enabled": false,
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "greenEnd": 50,
+            "greenStart": 30,
+            "max": 100,
+            "min": 0,
+            "tagPath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Exhaust Solvent Concentration"
+          },
+          "path": "widgets(templates)/baseTemplates/gaugeCard"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "gaugeCard_6"
+        },
+        "position": {
+          "height": 249.02,
+          "width": 274.9,
+          "x": 624.89,
+          "y": 34.06
+        },
+        "propConfig": {
+          "props.params.tagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.tagPath}+\u0027plcTags/Position Signal\u0027"
+              },
+              "enabled": false,
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "greenEnd": 50,
+            "greenStart": 30,
+            "max": 200,
+            "min": 0,
+            "tagPath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Humidity"
+          },
+          "path": "widgets(templates)/baseTemplates/gaugeCard"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "gaugeCard_5"
+        },
+        "position": {
+          "height": 249.02,
+          "width": 274.91,
+          "x": 294.98,
+          "y": 286.01
+        },
+        "propConfig": {
+          "props.params.tagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.tagPath}+\u0027plcTags/Position Signal\u0027"
+              },
+              "enabled": false,
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "greenEnd": 1000,
+            "greenStart": 30,
+            "max": 2500,
+            "min": 0,
+            "tagPath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Oven Energy Consumption"
+          },
+          "path": "widgets(templates)/baseTemplates/gaugeCard"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "gaugeCard_7"
+        },
+        "position": {
+          "height": 249,
+          "width": 274.91,
+          "x": 303.73,
+          "y": 35.34
+        },
+        "props": {
+          "params": {
+            "greenEnd": 100,
+            "greenStart": 80,
+            "max": 100,
+            "min": 0,
+            "tagPath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Drying Efficiency"
+          },
+          "path": "widgets(templates)/baseTemplates/gaugeCard"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "template_process_data"
+        },
+        "position": {
+          "height": 507.07,
+          "width": 677.94,
+          "x": 943.86,
+          "y": 31.95
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Airflow Velocity",
+            "tagpath1": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Oven Energy Consumption",
+            "tagpath2": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Humidity",
+            "tagpath3": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Pressure",
+            "tagpath4": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Residual Solvent",
+            "tagpath5": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Temperature",
+            "tagpath6": "value",
+            "tagpath7": "value",
+            "tagpath8": "value",
+            "tagpath9": "value"
+          },
+          "path": "widgets(templates)/baseTemplates/Table_Templates/template_process_data"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "tmpDisplaysmall"
+        },
+        "position": {
+          "height": 38,
+          "width": 514,
+          "x": 291.19,
+          "y": 622
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Oven Availability"
+          },
+          "path": "widgets(templates)/baseTemplates/tmpDisplaysmall"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "tmpDisplaysmall_0"
+        },
+        "position": {
+          "height": 38,
+          "width": 514,
+          "x": 291.828,
+          "y": 661.973
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Exhaust Solvent Concentration"
+          },
+          "path": "widgets(templates)/baseTemplates/tmpDisplaysmall"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "tmpDisplaysmall_1"
+        },
+        "position": {
+          "height": 38,
+          "width": 514,
+          "x": 291.468,
+          "y": 741.948
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Drying Efficiency"
+          },
+          "path": "widgets(templates)/baseTemplates/tmpDisplaysmall"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "tmpDisplaysmall_2"
+        },
+        "position": {
+          "height": 38,
+          "width": 514,
+          "x": 292,
+          "y": 702
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Temperature Deviation"
+          },
+          "path": "widgets(templates)/baseTemplates/tmpDisplaysmall"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 120,
+          "x": 36,
+          "y": 339.3675
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "Alarm Active"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 87,
+          "x": 160.703125,
+          "y": 339.4375
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": 3,
+          "textStyle": {
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 120,
+          "x": 36,
+          "y": 419.9535
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "Mode"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 87,
+          "x": 159.414125,
+          "y": 419.9535
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "Auto",
+          "textStyle": {
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 32.46,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 120,
+          "x": 35.41,
+          "y": 668.98
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "Current Recipe"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 32.45,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 87,
+          "x": 159.41,
+          "y": 668.95
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": 12,
+          "textStyle": {
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_5"
+        },
+        "position": {
+          "height": 32.45,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 120,
+          "x": 35.41,
+          "y": 708.04
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "Batch id"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_6"
+        },
+        "position": {
+          "height": 32.45,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 87,
+          "x": 159.41,
+          "y": 708.04
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": 21,
+          "textStyle": {
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_7"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 120,
+          "x": 36,
+          "y": 380.9195
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "Critical"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_8"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 87,
+          "x": 159.412125,
+          "y": 380.9195
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": 1,
+          "textStyle": {
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_9"
+        },
+        "position": {
+          "height": 32,
+          "width": 78,
+          "x": 354.813875,
+          "y": 583
+        },
+        "props": {
+          "style": {
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center"
+          },
+          "text": "KPI"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_10"
+        },
+        "position": {
+          "height": 32,
+          "width": 78,
+          "x": 534,
+          "y": 583
+        },
+        "props": {
+          "style": {
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center"
+          },
+          "text": "Value"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_11"
+        },
+        "position": {
+          "height": 32,
+          "width": 78,
+          "x": 680,
+          "y": 583
+        },
+        "props": {
+          "style": {
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center"
+          },
+          "text": "Unit"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_12"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 87,
+          "x": 160.41,
+          "y": 630.94
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "Healthy",
+          "textStyle": {
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_13"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 120,
+          "x": 36,
+          "y": 630.94
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "Interlock"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_14"
+        },
+        "position": {
+          "height": 65,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 120,
+          "x": 36,
+          "y": 459.95
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "Last Event"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_15"
+        },
+        "position": {
+          "height": 66,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 87,
+          "x": 160.41,
+          "y": 459.95
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "High Temp at 16:12",
+          "textStyle": {
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 168,
+      "y": 158.53125
+    },
+    "type": "ia.container.coord"
+  }
+}

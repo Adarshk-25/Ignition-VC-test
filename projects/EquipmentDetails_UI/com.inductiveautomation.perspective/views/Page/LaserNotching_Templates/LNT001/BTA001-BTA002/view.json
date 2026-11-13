@@ -1,0 +1,137 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MergedEquipmentTemplate"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "props.params.parameterData[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/BTA001/PV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/BTA001/Status"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[2].Parameter": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/BTA002/PV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/BTA002/Status"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "EquipmentHeader": "BTA001-BTA002",
+                "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingLNT001",
+                "parameterData": [
+                  {
+                    "Parameter": "PV",
+                    "SubEquipmentName": "BTA001",
+                    "equipmentDescription": "Laser Temperature Meter DS"
+                  },
+                  {
+                    "Paramter": "Status",
+                    "SubEquipmentName": "BTA001",
+                    "equipmentDescription": "Laser Temperature Meter DS"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "SubEquipmentName": "BTA002",
+                    "equipmentDescription": "Laser Temperature Meter OS"
+                  },
+                  {
+                    "Parameter": "Status",
+                    "SubEquipmentName": "BTA002",
+                    "equipmentDescription": "Laser Temperature Meter OS"
+                  }
+                ],
+                "tableHeader": "Process Parameters"
+              },
+              "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/MergedEquipmentTemplate"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "custom": {},
+  "params": {
+    "parameterData": [
+      {
+        "ActualValue": "value",
+        "Parameter": "value",
+        "SubEquipmentName": "value"
+      }
+    ]
+  },
+  "propConfig": {
+    "params.parameterData": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MergedEquipmentTemplate"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "params": {
+                "EquipmentHeader": "ZSC001-ZSC016",
+                "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingLNT001",
+                "parameterData": [
+                  {
+                    "ActualValue": null,
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC001",
+                    "equipmentDescription": "DS X Axis Servo Motor FLS Sensor (SM11)"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC002",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC003",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC004",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC005",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC006",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC007",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC008",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC009",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC010",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC011",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC012",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC013",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC014",
+                    "equipmentDescription": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC015",
+                    "equipmentName": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value",
+                    "SubEquipmentName": "ZSC016",
+                    "equipmentDescription": "value"
+                  }
+                ],
+                "tableHeader": "Process Parameters"
+              },
+              "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/MergedEquipmentTemplate"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "UnWinder_Screen_Anode"
+        },
+        "props": {
+          "path": "Page/Coating_Templates/UnWinder_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CPC_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Coating_Templates/CPC_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Infeeder_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/Coating_Templates/Infeeder_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VisionInspectionUnit_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/Coating_Templates/VisionInspectionUnit_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CoatingPart_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Coating_Templates/CoatingPart_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DryingUnit_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/Coating_Templates/DryingUnit_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CoolingUnit_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "props": {
+          "path": "Page/Coating_Templates/CoolingUnit_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "LaserMarkingUnit_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "props": {
+          "path": "Page/Coating_Templates/LaserMarkingUnit_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "HalfSpliter_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "props": {
+          "path": "Page/Coating_Templates/HalfSpliter_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Outfeeder_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "props": {
+          "path": "Page/Coating_Templates/Outfeeder_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Rewinder1 \u0026 2_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "props": {
+          "path": "Page/Coating_Templates/Rewinder1 \u0026 2_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        },
+        "onChange": {
+          "enabled": null,
+          "script": "\tif currentValue !\u003d previousValue :\n\t        self.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 300
+      },
+      "tabs": [
+        "Unwinder",
+        "CPC",
+        "Infeeder",
+        "Vision Inspection Unit",
+        "Coating Station",
+        "Drying Chamber",
+        "Cooling Unit",
+        "Laser Marking Unit",
+        "Half Slitter",
+        "Outfeeder",
+        "Rewinder"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

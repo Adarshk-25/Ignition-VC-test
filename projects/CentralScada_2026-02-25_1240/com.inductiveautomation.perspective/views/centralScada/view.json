@@ -1,0 +1,34 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "contextMenu": {
+            "style": {
+              "classes": "widgets/spacing"
+            }
+          },
+          "name": "centralPlant3D"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "allowFullScreen": true,
+          "src": "http://10.34.26.4:8088/system/webdev/Zone_E_SCADA/central_scada_plant.html"
+        },
+        "type": "ia.display.iframe"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

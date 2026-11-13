@@ -1,0 +1,1305 @@
+{
+  "custom": {},
+  "params": {
+    "tagpath": "value",
+    "tagpath1": "value",
+    "tagpath2": "value",
+    "tagpath3": "value",
+    "tagpath4": "value",
+    "tagpath5": "value",
+    "tagpath6": "value",
+    "tagpath7": "value",
+    "tagpath8": "value",
+    "tagpath9": "value"
+  },
+  "propConfig": {
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath1": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath2": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath3": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath4": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath5": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath6": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath7": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath8": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath9": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 498
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "marginBottom": "10px"
+              },
+              "text": "Process Data"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "custom": {
+              "low": "value"
+            },
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "basis": "500px"
+            },
+            "propConfig": {
+              "custom.High": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]agratas/sanand/zoneE/coating/anode/sideOvensA/plcTags/Air flow.EngHigh"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[0].Actual_Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath}"
+                    },
+                    "tagPath": "{1}"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[0].Alarm.style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[0].Actual_Value"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[0].Upper_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telif value  \u003c self.props.data[0].Lower_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telse:\n\t\treturn \"alarm/Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[0].Alarm.value": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[0].Actual_Value"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[0].Upper_Limit:\n\t\treturn \"Active High\"\n\telif value  \u003c self.props.data[0].Lower_Limit:\n\t\treturn \"Active Low\"\n\telse:\n\t\treturn \"Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[0].Lower_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath}"
+                    },
+                    "tagPath": "{1}.EngLow"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[0].Parameter": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath}"
+                    },
+                    "tagPath": "{1}.name"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[0].Unit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath}"
+                    },
+                    "tagPath": "{1}.ENGunit"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[0].Upper_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath}"
+                    },
+                    "tagPath": "{1}.EngHigh"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[1].Actual_Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath1}"
+                    },
+                    "tagPath": "{1}"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[1].Alarm.style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[1].Actual_Value"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[1].Upper_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telif value  \u003c self.props.data[1].Lower_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telse:\n\t\treturn \"alarm/Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[1].Alarm.value": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[1].Actual_Value"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[1].Upper_Limit:\n\t\treturn \"Active High\"\n\telif value  \u003c self.props.data[1].Lower_Limit:\n\t\treturn \"Active Low\"\n\telse:\n\t\treturn \"Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[1].Lower_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath2}"
+                    },
+                    "tagPath": "{1}.EngLow"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].Parameter": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath1}"
+                    },
+                    "tagPath": "{1}.name"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[1].Unit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath1}"
+                    },
+                    "tagPath": "{1}.ENGunit"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[1].Upper_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath1}"
+                    },
+                    "tagPath": "{1}.EngHigh"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].Actual_Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath2}"
+                    },
+                    "tagPath": "{1}"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[2].Alarm.style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[2].Actual_Value"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[2].Upper_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telif value  \u003c self.props.data[2].Lower_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telse:\n\t\treturn \"alarm/Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[2].Alarm.value": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[2].Actual_Value"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[2].Upper_Limit:\n\t\treturn \"Active High\"\n\telif value  \u003c self.props.data[2].Lower_Limit:\n\t\treturn \"Active Low\"\n\telse:\n\t\treturn \"Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[2].Lower_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath2}"
+                    },
+                    "tagPath": "{1}.EngLow"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[2].Parameter": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath2}"
+                    },
+                    "tagPath": "{1}.name"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[2].Unit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath2}"
+                    },
+                    "tagPath": "{1}.ENGunit"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[2].Upper_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath2}"
+                    },
+                    "tagPath": "{1}.EngHigh"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[3].Actual_Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath3}"
+                    },
+                    "tagPath": "{1}"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[3].Alarm.style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[3].Actual_Value"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[3].Upper_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telif value  \u003c self.props.data[3].Lower_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telse:\n\t\treturn \"alarm/Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[3].Alarm.value": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[3].Actual_Value"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[3].Upper_Limit:\n\t\treturn \"Active High\"\n\telif value  \u003c self.props.data[3].Lower_Limit:\n\t\treturn \"Active Low\"\n\telse:\n\t\treturn \"Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[3].Lower_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath3}"
+                    },
+                    "tagPath": "{1}.EngLow"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[3].Parameter": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath3}"
+                    },
+                    "tagPath": "{1}.name"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[3].Unit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath3}"
+                    },
+                    "tagPath": "{1}.ENGunit"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[3].Upper_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath3}"
+                    },
+                    "tagPath": "{1}.EngHigh"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[4].Actual_Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath4}"
+                    },
+                    "tagPath": "{1}"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[4].Alarm.style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[4].Actual_Value"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[4].Upper_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telif value  \u003c self.props.data[4].Lower_Limit:\n\t\treturn \"alarm/HighHigh\"\n\telse:\n\t\treturn \"alarm/Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[4].Alarm.value": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.data[4].Actual_Value"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003e self.props.data[4].Upper_Limit:\n\t\treturn \"Active High\"\n\telif value  \u003c self.props.data[4].Lower_Limit:\n\t\treturn \"Active Low\"\n\telse:\n\t\treturn \"Inactive\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.data[4].Lower_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath4}"
+                    },
+                    "tagPath": "{1}.EngLow"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[4].Parameter": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath4}"
+                    },
+                    "tagPath": "{1}.name"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[4].Unit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath4}"
+                    },
+                    "tagPath": "{1}.ENGunit"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              },
+              "props.data[4].Upper_Limit": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath4}"
+                    },
+                    "tagPath": "{1}.EngHigh"
+                  },
+                  "overlayOptOut": true,
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "opacity": "1"
+              },
+              "cells": {
+                "style": {
+                  "borderColor": "#AAAAAA",
+                  "borderStyle": "solid",
+                  "borderWidth": 0.01
+                }
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": "",
+                      "fontFamily": "Arial",
+                      "fontWeight": "bold"
+                    },
+                    "title": ""
+                  },
+                  "justify": "left",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "fontWeight": "normal",
+                    "paddingLeft": 20
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Actual_Value",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": "",
+                      "fontFamily": "Arial",
+                      "fontWeight": "bold"
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "fontWeight": "normal",
+                    "paddingLeft": 20
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Unit",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": "",
+                      "fontFamily": "Arial",
+                      "fontWeight": "bold"
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "fontFamily": "Arial",
+                    "fontSize": 14,
+                    "fontWeight": "normal",
+                    "paddingLeft": 20
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Lower_Limit",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Upper_Limit",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Alarm",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "Alarm": {
+                    "align": "center",
+                    "editable": true,
+                    "justify": "left",
+                    "style": {
+                      "backgroundColor": ""
+                    }
+                  }
+                },
+                {
+                  "Alarm": {
+                    "align": "center",
+                    "editable": true,
+                    "justify": "left",
+                    "style": {
+                      "backgroundColor": ""
+                    }
+                  }
+                },
+                {
+                  "Alarm": {
+                    "align": "center",
+                    "editable": true,
+                    "justify": "left",
+                    "style": {
+                      "backgroundColor": ""
+                    }
+                  }
+                },
+                {
+                  "Alarm": {
+                    "align": "center",
+                    "editable": true,
+                    "justify": "left",
+                    "style": {
+                      "backgroundColor": ""
+                    }
+                  }
+                },
+                {
+                  "Alarm": {
+                    "align": "center",
+                    "editable": true,
+                    "justify": "left",
+                    "style": {
+                      "backgroundColor": ""
+                    }
+                  }
+                }
+              ],
+              "filter": {
+                "style": {
+                  "backgroundColor": ""
+                }
+              },
+              "headerGroups": [
+                []
+              ],
+              "pager": {
+                "activeOption": 5,
+                "bottom": false
+              },
+              "rows": {
+                "height": "70px",
+                "highlight": {
+                  "color": "#AAAAAA"
+                },
+                "striped": {
+                  "color": {
+                    "even": "#AAAAAA",
+                    "odd": "#D5D5D5"
+                  }
+                },
+                "style": {
+                  "backgroundColor": "#FFFFFF"
+                },
+                "subviewExpansionMode": "single"
+              },
+              "selection": {
+                "enableRowSelection": false
+              },
+              "style": {
+                "borderBottomLeftRadius": 6,
+                "borderBottomRightRadius": 6,
+                "borderColor": "#000000",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": 6,
+                "borderTopRightRadius": 6,
+                "borderWidth": 1
+              }
+            },
+            "type": "ia.display.table"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "497px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "border": "1px solid #dcdcdc",
+            "borderRadius": "6px",
+            "overflow": "hidden",
+            "padding": "15px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "custom": {},
+  "params": {
+    "fontSize": "0.5vw"
+  },
+  "propConfig": {
+    "params.fontSize": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "draggable": true,
+                "id": "toggle",
+                "modal": false,
+                "overlayDismiss": false,
+                "position": {
+                  "height": 1000,
+                  "width": 1000
+                },
+                "positionType": "exact",
+                "resizable": false,
+                "showCloseIcon": true,
+                "title": "DWM Adherence Trends",
+                "type": "open",
+                "viewParams": {
+                  "fontSize": "0.8vw"
+                },
+                "viewPath": "SQCDP/Safety/dwmAdherenceReportTrends",
+                "viewportBound": true
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.options": {
+            "persistent": true
+          },
+          "props.options.xaxis.labels.style.fontSize": {
+            "binding": {
+              "config": {
+                "path": "view.params.fontSize"
+              },
+              "type": "property"
+            }
+          },
+          "props.options.yaxis.labels.style.fontSize": {
+            "binding": {
+              "config": {
+                "path": "view.params.fontSize"
+              },
+              "type": "property"
+            }
+          },
+          "props.options.yaxis.max": {
+            "binding": {
+              "config": {
+                "expression": "{this.props.series[0].data}"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn max(value)",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          },
+          "props.series": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "stacked": true,
+              "toolbar": {
+                "show": false
+              },
+              "type": "bar"
+            },
+            "colors": [
+              "#ADD8E6"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#E5E7EB",
+              "padding": {
+                "bottom": 0,
+                "left": 10,
+                "right": 10,
+                "top": 0
+              },
+              "strokeDashArray": 4
+            },
+            "legend": {
+              "horizontalAlign": "center",
+              "markers": {
+                "radius": 15
+              },
+              "position": "bottom",
+              "show": true
+            },
+            "plotOptions": {
+              "bar": {
+                "borderRadius": 4,
+                "columnWidth": "45%"
+              }
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "color": "#000000",
+                "fontSize": "15px",
+                "fontWeight": "bold"
+              },
+              "text": "Overall Adherence %"
+            },
+            "xaxis": {
+              "categories": [
+                "11-Jun-26",
+                "12-Jun-26",
+                "13-Jun-26",
+                "14-Jun-26",
+                "15-Jun-26"
+              ],
+              "labels": {
+                "style": {
+                  "colors": ""
+                }
+              }
+            },
+            "yaxis": {
+              "labels": {
+                "style": {
+                  "colors": ""
+                }
+              },
+              "min": 0
+            }
+          },
+          "series": [
+            {
+              "data": [
+                85.7,
+                100,
+                100,
+                85.7,
+                71.4
+              ],
+              "name": "Adherence %"
+            }
+          ],
+          "type": "bar"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "borderColor": "#D5D5D5",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "borderWidth": "0.1px",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

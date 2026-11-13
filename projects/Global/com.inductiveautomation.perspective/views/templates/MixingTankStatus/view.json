@@ -1,0 +1,141 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 537,
+      "width": 398
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Title"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "color": "#111827",
+                    "fontSize": "22px",
+                    "fontWeight": "600"
+                  },
+                  "text": "Status"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "HeaderContainer"
+            },
+            "position": {
+              "basis": "NaN%",
+              "shrink": 0
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "alignItems": "flex-start",
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "marginBottom": "20px",
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "FlexRepeater"
+                },
+                "position": {
+                  "basis": "399px"
+                },
+                "props": {
+                  "instances": [
+                    {
+                      "title": "Status",
+                      "value": "Running"
+                    },
+                    {
+                      "title": "Mode",
+                      "value": "Auto"
+                    },
+                    {
+                      "title": "Ready Status",
+                      "value": "True"
+                    },
+                    {
+                      "title": "Interlock Active",
+                      "value": "False"
+                    }
+                  ],
+                  "path": "templates/innerTile",
+                  "style": {
+                    "color": "#C4C7CC"
+                  },
+                  "wrap": "wrap"
+                },
+                "type": "ia.display.flex-repeater"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "330.1px"
+            },
+            "props": {
+              "alignContent": "space-between",
+              "justify": "space-between",
+              "style": {
+                "backgroundColor": "#F8FAFC",
+                "borderRadius": "12px",
+                "boxShadow": "0px 2px 8px rgba(0,0,0,0.25)",
+                "overflow": "hidden",
+                "width": 370
+              },
+              "wrap": "wrap"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "MainContainer"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "16px",
+            "boxShadow": "0px 6px 24px rgba(15,23,42,0.08)\n",
+            "gap": "15px",
+            "margin": "15px",
+            "padding": "15px",
+            "width": "350px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

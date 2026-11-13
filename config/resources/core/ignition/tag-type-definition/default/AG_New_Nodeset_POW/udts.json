@@ -1,0 +1,473 @@
+[
+  {
+    "name": "AGSetItemInfo",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "name": "Handshake",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "RequestAckNumber",
+        "tagType": "AtomicTag"
+      },
+      {
+        "name": "RequestData",
+        "typeId": "AG_New_Nodeset_POW/RequestData",
+        "tagType": "UdtInstance"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "RequestTimestamp",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "ResponseAckNumber",
+        "tagType": "AtomicTag"
+      },
+      {
+        "name": "ResponseData",
+        "typeId": "AG_New_Nodeset_POW/ResponseData",
+        "tagType": "UdtInstance"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "ResponseTimestamp",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "SenderFBS",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "StatusCode",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "RequestData",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"ItemID\")",
+        "dataType": "String",
+        "name": "ItemId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{Mid_Path2}/{ParentInstanceName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Document",
+        "name": "Raw_Data",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"RecipeId\")",
+        "dataType": "String",
+        "name": "RecipeId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"WorkOrderID\")",
+        "dataType": "String",
+        "name": "WorkOrderId",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "ResponseData",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"Authorized\")",
+        "dataType": "Boolean",
+        "name": "Authorized",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"BatchID\")",
+        "dataType": "String",
+        "name": "BatchId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"ExpiryDate\")",
+        "dataType": "String",
+        "name": "ExpiryDate",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"ItemID\")",
+        "dataType": "String",
+        "name": "ItemId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"QualityStatus\")",
+        "dataType": "Boolean",
+        "name": "QualityStatus",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{Mid_Path2}/{ParentInstanceName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Document",
+        "name": "Raw_Data",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "AGCalls",
+    "typeId": null,
+    "parameters": {
+      "Mid_Path2": {
+        "dataType": "String",
+        "value": "AGSetItemInfo"
+      },
+      "Mid_Path": {
+        "dataType": "String",
+        "value": "AGCalls"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "AGSetItemInfo",
+        "typeId": "AG_New_Nodeset_POW/AGSetItemInfo",
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "POW",
+    "typeId": null,
+    "parameters": {
+      "ServerName": {
+        "dataType": "String",
+        "value": "PLC"
+      },
+      "OPC_Path": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "AGAdmin",
+        "typeId": "AG_New_Nodeset/Admin",
+        "parameters": {
+          "Mid_Path": {
+            "dataType": "String",
+            "value": "AGAdmin"
+          }
+        },
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "LastRecipeID",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentRecipeID",
+            "tagType": "AtomicTag"
+          },
+          {
+            "name": "CurrentAlarms",
+            "tagType": "UdtInstance",
+            "tags": [
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "Raw_Data",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "ActiveWorkOrderID",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "AGCalls",
+        "typeId": "AG_New_Nodeset_POW/AGCalls",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "name": "AGSetItemInfo",
+            "tagType": "UdtInstance",
+            "tags": [
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "ResponseAckNumber",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "SenderFBS",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "Handshake",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "ResponseTimestamp",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "RequestAckNumber",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "StatusCode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "RequestTimestamp",
+                "tagType": "AtomicTag"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "AGStatus",
+        "typeId": "AG_New_Nodeset/Status",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentTransitionState",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentState",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "EquipmentBlocked",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "ActualMachineSpeed",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MESRunning",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "PLCHeartbeat",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "EquipmentStarved",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentMode",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "SCADAHeartbeat",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  }
+]

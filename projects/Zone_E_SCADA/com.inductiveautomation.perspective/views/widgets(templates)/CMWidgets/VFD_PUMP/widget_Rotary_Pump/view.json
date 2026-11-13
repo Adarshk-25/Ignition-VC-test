@@ -1,0 +1,1127 @@
+{
+  "custom": {},
+  "params": {
+    "tagPath": "[default]Mixing/Rotary Pump"
+  },
+  "propConfig": {
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 150,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Contamination-free positive displacement pump"
+        },
+        "position": {
+          "height": 0.4503,
+          "width": 0.48,
+          "x": 0.1468,
+          "y": 0.1858
+        },
+        "propConfig": {
+          "custom.alarm": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Alarm Metrics.activeAckCount"
+              },
+              "type": "tag"
+            }
+          },
+          "props.elements[6].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/runStatus"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[7].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/runStatus"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[7].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/runStatus"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[7].elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/runStatus"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#E0E0E0",
+                      "style": {
+                        "stopColor": "#E0E0E0"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "97.2412",
+                  "x2": "97.2412",
+                  "y1": "93.2444",
+                  "y2": "71.1721"
+                },
+                {
+                  "d": "M87.613,93.244h19.256V71.172H93.243L87.613,93.244",
+                  "fill": {
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#E0E0E0",
+                      "style": {
+                        "stopColor": "#E0E0E0"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "type": "linearGradient",
+                  "x1": "98.7051",
+                  "x2": "98.7051",
+                  "y1": "27.2542",
+                  "y2": "5.4065"
+                },
+                {
+                  "d": "M106.869,8.11H93.243V5.406h-2.702v21.848h2.702v-2.703   h13.626V8.11",
+                  "fill": {
+                    "url": "url(#SVGID_2_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Inlet_Oulet_Pipes",
+              "name": "Group_Inlet_Oulet_Pipes",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M5.405,73.875h87.838l-5.63,27.478H84.91v-5.405l-30.181-2.703H40.991l-27.252,2.703v5.405h-2.928   L5.405,73.875z",
+                  "fill": {
+                    "paint": "#808080"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Rear_Support",
+              "name": "Group_Rear_Support",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M73.874,8.11h13.739V5.406h2.702v21.848h-2.702v-2.703H73.874V8.11z",
+                  "fill": {
+                    "opacity": "1",
+                    "paint": "#808080",
+                    "rule": "nonzero"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M5.405,71.172h87.838l-5.63,27.478H84.91v-5.405l-30.181-2.928   H40.991l-27.252,2.928v5.405h-2.928L5.405,71.172z",
+                  "fill": {
+                    "paint": "#696868"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Support_Steels",
+              "name": "Group_Support_Steels",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#994C4C",
+                      "style": {
+                        "stopColor": "#808080"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#D94C4C",
+                      "style": {
+                        "stopColor": "#6d6d6d"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#994C4C",
+                      "style": {
+                        "stopColor": "#5c5b5b"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_3_",
+                  "name": "SVGID_3_",
+                  "type": "linearGradient",
+                  "x1": "81.7705",
+                  "x2": "13.9801",
+                  "y1": "81.8928",
+                  "y2": "14.1024"
+                },
+                {
+                  "d": "M0,48.001C0,21.49,21.435,0,47.875,0s47.875,21.49,47.875,48   c0,26.502-21.435,47.992-47.875,47.992S0,74.503,0,48.001z",
+                  "fill": {
+                    "paint": "#AAAAAA",
+                    "url": "url(#SVGID_3_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Pump_Main",
+              "name": "Group_Pump_Main",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M39.189,8.11l-0.901-0.788V6.308l0.901-0.901h1.126l0.676,0.901v1.014L40.315,8.11H39.189z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M55.631,8.11l-0.901-0.788V6.308l0.901-0.901h1.126l0.676,0.901v1.014L56.757,8.11H55.631z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M13.514,25.903h-1.126l-0.675-0.676v-1.126l0.675-0.901h1.126l0.901,0.901v1.126L13.514,25.903z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M25.225,14.416h-1.126l-0.901-0.901v-1.126l0.901-0.676h1.126l0.901,0.676v1.126L25.225,14.416z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M8.108,56.758L7.32,57.434H6.306l-0.901-0.676v-1.126l0.901-0.901H7.32l0.788,0.901V56.758z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M8.108,40.317L7.32,40.992H6.306l-0.901-0.676v-1.126l0.901-0.901H7.32l0.788,0.901V40.317z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M25.901,82.208v1.127l-0.676,0.9h-1.126l-0.901-0.9v-1.127l0.901-0.9h1.126L25.901,82.208z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M14.415,70.722v1.126l-0.901,0.676h-1.126l-0.675-0.676v-1.126l0.675-0.9h1.126L14.415,70.722z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M56.757,87.615l0.676,0.9v1.126l-0.676,0.676h-1.352l-0.676-0.676v-1.126l0.676-0.9H56.757z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M40.315,87.615l0.676,0.9v1.126l-0.676,0.676h-1.126l-0.901-0.676v-1.126l0.901-0.9H40.315z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M82.207,69.822h1.127l0.9,0.9v1.126l-0.9,0.676h-1.127l-0.9-0.676v-1.126L82.207,69.822z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M70.496,81.533h1.351l0.676,0.675v1.127l-0.676,0.9h-1.351l-0.676-0.9v-1.127L70.496,81.533z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M87.613,39.191l0.9-0.901h1.126l0.676,0.901v1.126l-0.676,0.901h-1.126l-0.9-0.901V39.191z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M87.613,55.632l0.9-0.901h1.126l0.676,0.901v1.126l-0.676,0.676h-1.126l-0.9-0.676V55.632z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M69.82,13.515v-1.126l0.9-0.676h1.126l0.676,0.676v1.126l-0.676,0.901h-1.126L69.82,13.515z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M81.307,25.227v-1.126l0.9-0.901h1.127l0.9,0.901v1.126l-0.9,0.9h-1.127L81.307,25.227z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Bolts",
+              "name": "Group_Bolts",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M60.36,63.065l-5.631-16.441l5.631-16.441h10.812l5.63,16.441l-5.63,16.441H60.36z",
+                  "fill": {
+                    "paint": "#989898"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M61.712,60.362l-4.279-13.738l4.279-13.739h8.108l4.054,13.739L69.82,60.362H61.712z",
+                  "fill": {},
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Display",
+              "name": "Group_Display",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M19.144,39.641h10.135V53.38H19.144V39.641z",
+                  "fill": {},
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M30.405,39.641h10.135V53.38H30.405V39.641z",
+                  "fill": {},
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M41.892,39.641h10.135V53.38H41.892V39.641",
+                  "fill": {},
+                  "name": "path",
+                  "stroke": {
+                    "paint": "none",
+                    "width": "0"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Indicators",
+              "name": "Group_Indicators",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "86.2617",
+                  "cy": "12.3884",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#E0E0E0",
+                      "style": {
+                        "stopColor": "#E0E0E0"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#E0E0E0",
+                      "style": {
+                        "stopColor": "#E0E0E0"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_4_",
+                  "name": "SVGID_4_",
+                  "r": "2.7024",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M83.559,11.263l1.576-1.577h2.252l1.577,1.577v2.252l-1.577,1.576h-2.252l-1.576-1.576V11.263z",
+                  "fill": {
+                    "url": "url(#SVGID_4_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "cx": "86.2617",
+                  "cy": "83.5608",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#E0E0E0",
+                      "style": {
+                        "stopColor": "#E0E0E0"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#E0E0E0",
+                      "style": {
+                        "stopColor": "#E0E0E0"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_5_",
+                  "name": "SVGID_5_",
+                  "r": "2.7021",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M83.559,82.434l1.576-1.576h2.252l1.577,1.576v2.252l-1.577,1.577h-2.252l-1.576-1.577V82.434z",
+                  "fill": {
+                    "url": "url(#SVGID_5_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Fittings",
+              "name": "Group_Fittings",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M15.09 106.984H2.703v-2.815h9.685l1.352-1.464V90.317h2.703v15.203L15.09 106.984z",
+                  "fill": {
+                    "paint": "#808080"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M83.559 106.984h12.387v-2.815h-9.684l-1.352-1.464V90.317h-2.703v15.203L83.559 106.984z",
+                  "fill": {
+                    "paint": "#808080"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Base_Support",
+              "name": "Group_Base_Support",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#998C73",
+                      "style": {
+                        "stopColor": "#434343"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#F2E5CC",
+                      "style": {
+                        "stopColor": "#808080"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#998C73",
+                      "style": {
+                        "stopColor": "#808080"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_6_",
+                  "name": "SVGID_6_",
+                  "type": "linearGradient",
+                  "x1": "109.6846",
+                  "x2": "109.6846",
+                  "y1": "95.9475",
+                  "y2": "68.47"
+                },
+                {
+                  "d": "M106.869,68.47h5.631v27.478h-5.631V68.47",
+                  "fill": {
+                    "url": "url(#SVGID_6_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#998C73",
+                      "style": {
+                        "stopColor": "#808080"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#F2E5CC",
+                      "style": {
+                        "stopColor": "#808080"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#998C73",
+                      "style": {
+                        "stopColor": "#808080"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_7_",
+                  "name": "SVGID_7_",
+                  "type": "linearGradient",
+                  "x1": "109.6846",
+                  "x2": "109.6846",
+                  "y1": "30.1819",
+                  "y2": "2.7043"
+                },
+                {
+                  "d": "M106.869,2.704h5.631v27.478h-5.631V2.704",
+                  "fill": {
+                    "url": "url(#SVGID_7_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Brass_Ends",
+              "name": "Group_Brass_Ends",
+              "type": "group"
+            }
+          ],
+          "style": {
+            "backgroundColor": "#D8D8D800"
+          },
+          "viewBox": "0 0 112.5 106.984"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1343,
+          "width": 0.75,
+          "x": 0.1373,
+          "y": 0.0383
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 0.0743,
+          "width": 0.3663,
+          "x": 0.6337,
+          "y": 0.3582
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/mode"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "Auto"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Manual"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderStyle": "ridge",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 1
+          },
+          "textStyle": {
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 1,
+            "paddingLeft": 1,
+            "paddingRight": 1,
+            "paddingTop": 1
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Status :"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/status/runStatus"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "NA",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "Running"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Stopped"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "0.2rem",
+                "borderBottomRightRadius": "0.2rem",
+                "borderStyle": "ridge",
+                "borderTopLeftRadius": "0.2rem",
+                "borderTopRightRadius": "0.2rem",
+                "borderWidth": 1
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "height": 0.1351,
+          "width": 0.9703,
+          "x": 0.0149,
+          "y": 0.6133
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderColor": "#808080",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 0.1,
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 2,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 2
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Flow Rate:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/plcTags/flowRate"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn round(value,2)",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "0.2rem",
+                "borderBottomRightRadius": "0.2rem",
+                "borderStyle": "ridge",
+                "borderTopLeftRadius": "0.2rem",
+                "borderTopRightRadius": "0.2rem",
+                "borderWidth": 1
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "height": 0.1351,
+          "width": 0.9703,
+          "x": 0.0149,
+          "y": 0.7552
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderColor": "#808080",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 0.1,
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 2,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 2
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "params": {
+              "tagpath": "{view.params.tagPath}"
+            },
+            "view": "templates/Pump_Screen"
+          },
+          "scope": "C",
+          "type": "nav"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": "#DADCE000",
+        "cursor": "pointer"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

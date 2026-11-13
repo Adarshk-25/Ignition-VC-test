@@ -1,0 +1,199 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "CoatingWebPositionController_Screen"
+        },
+        "props": {
+          "path": "Page/Coating_Templates/CoatingWebPositionController_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CoatingPart_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Coating_Templates/CoatingPart_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VisionInspectionUnit_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/Coating_Templates/VisionInspectionUnit_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DensityMeter_Screen"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/Coating_Templates/DensityMeter_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DryingWebPositionController_Screen"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/Coating_Templates/DryingWebPositionController_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CoolingUnit_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "props": {
+          "path": "Page/Coating_Templates/CoolingUnit_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DensityMeter_Screen_0"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "props": {
+          "path": "Page/Coating_Templates/DensityMeter_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ThicknessGauge_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "props": {
+          "path": "Page/Coating_Templates/ThicknessGauge_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VisionInspectionUnit_Screen_Anode_0"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "props": {
+          "path": "Page/Coating_Templates/VisionInspectionUnit_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VisionInspectionUnit_Screen_Anode_1"
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "props": {
+          "path": "Page/Coating_Templates/VisionInspectionUnit_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "LaserMarkingUnit_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 11
+        },
+        "props": {
+          "path": "Page/Coating_Templates/LaserMarkingUnit_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DryingChamberUnit_Aside_Anode"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Coating_Templates/DryingChamberUnit_Aside_Anode"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        },
+        "onChange": {
+          "enabled": null,
+          "script": "\tif currentValue !\u003d previousValue :\n\t        self.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 320
+      },
+      "tabs": [
+        "B-Coating Web Position Controller",
+        "B Coating Station",
+        "3rd Inspection Unit",
+        "4th Density Meter",
+        "B Drying Chamber",
+        "B Drying Web Position Controller",
+        "B-Cooling Station",
+        "5th Density Meter",
+        "Thickness Gauge",
+        "4th Inspection Unit",
+        "5th Inspection Unit",
+        "Laser Marking Unit"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

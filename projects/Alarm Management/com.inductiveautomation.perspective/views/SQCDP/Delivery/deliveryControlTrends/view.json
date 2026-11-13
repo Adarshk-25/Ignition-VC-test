@@ -1,0 +1,185 @@
+{
+  "custom": {},
+  "params": {
+    "fontSize": "0.4vw"
+  },
+  "propConfig": {
+    "params.fontSize": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "draggable": true,
+                "id": "toggle",
+                "modal": false,
+                "overlayDismiss": false,
+                "position": {
+                  "height": 1000,
+                  "width": 1000
+                },
+                "positionType": "exact",
+                "resizable": false,
+                "showCloseIcon": true,
+                "title": "Delivery Control Factors",
+                "type": "open",
+                "viewParams": {
+                  "fontSize": "0.8vw"
+                },
+                "viewPath": "SQCDP/Delivery/deliveryControlTrends",
+                "viewportBound": true
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.options": {
+            "persistent": true
+          },
+          "props.options.xaxis.labels.style.fontSize": {
+            "binding": {
+              "config": {
+                "path": "view.params.fontSize"
+              },
+              "type": "property"
+            }
+          },
+          "props.options.yaxis.labels.style.fontSize": {
+            "binding": {
+              "config": {
+                "path": "view.params.fontSize"
+              },
+              "type": "property"
+            }
+          },
+          "props.options.yaxis.max": {
+            "binding": {
+              "config": {
+                "expression": "max({this.props.series[0].data})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.series": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "stacked": true,
+              "toolbar": {
+                "show": false
+              },
+              "type": "bar"
+            },
+            "colors": [
+              "#ADD8E6",
+              "#90EE90"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#E5E7EB",
+              "padding": {
+                "bottom": 0,
+                "left": 10,
+                "right": 10,
+                "top": 0
+              },
+              "strokeDashArray": 4
+            },
+            "legend": {
+              "horizontalAlign": "center",
+              "markers": {
+                "radius": 15
+              },
+              "position": "bottom",
+              "show": true
+            },
+            "plotOptions": {
+              "bar": {
+                "borderRadius": 4,
+                "columnWidth": "45%"
+              }
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "color": "#000000",
+                "fontSize": "15px",
+                "fontWeight": "bold"
+              },
+              "text": "Average of Production Factors"
+            },
+            "xaxis": {
+              "categories": [
+                "Downtime",
+                "Line Speed Stability",
+                "Changeover Time"
+              ],
+              "labels": {
+                "style": {
+                  "colors": ""
+                }
+              }
+            },
+            "yaxis": {
+              "labels": {
+                "style": {
+                  "colors": ""
+                }
+              },
+              "min": 0
+            }
+          },
+          "series": [
+            {
+              "data": [
+                42.2,
+                89.2,
+                23.8
+              ],
+              "name": "Average Value"
+            }
+          ],
+          "type": "bar"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "borderColor": "#D5D5D5",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "borderWidth": "0.1px",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

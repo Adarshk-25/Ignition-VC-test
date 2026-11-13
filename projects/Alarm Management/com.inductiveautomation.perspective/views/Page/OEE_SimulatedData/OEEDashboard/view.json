@@ -1,0 +1,619 @@
+{
+  "custom": {},
+  "params": {
+    "endDate": "",
+    "machineID": "",
+    "shift": "",
+    "startDate": ""
+  },
+  "propConfig": {
+    "params.endDate": {
+      "binding": {
+        "config": {
+          "path": "/root/FlexContainer_filter/inputEndDate.props.params.selectedDate"
+        },
+        "type": "property"
+      },
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.machineID": {
+      "binding": {
+        "config": {
+          "path": "/root/FlexContainer_filter/inputValuesMachineCode.props.params.selectedDropDownValue"
+        },
+        "type": "property"
+      },
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.shift": {
+      "binding": {
+        "config": {
+          "path": "/root/FlexContainer_filter/inputValuesShift.props.params.selectedDropDownValue"
+        },
+        "type": "property"
+      },
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.startDate": {
+      "binding": {
+        "config": {
+          "path": "/root/FlexContainer_filter/inputStartDate.props.params.selectedDate"
+        },
+        "type": "property"
+      },
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 998,
+      "width": 1226
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "text": "Screen Name "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "inputStartDate"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "dropDownOptions": "value",
+                "isDropdown": false,
+                "selectedDate": "",
+                "selectedDropDownValue": "",
+                "title": "Start Date"
+              },
+              "path": "widgets(templates)/baseTemplates/inputValues"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "inputEndDate"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "dropDownOptions": "value",
+                "isDropdown": false,
+                "selectedDate": "",
+                "selectedDropDownValue": "",
+                "title": "End Date"
+              },
+              "path": "widgets(templates)/baseTemplates/inputValues"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "inputValuesMachineCode"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "propConfig": {
+              "props.params.dropDownOptions": {
+                "binding": {
+                  "config": {
+                    "expression": "1"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tmachines \u003d [\n\t    \"A1-M1\",\"A1-M2\",\"A1-M3\",\n\t    \"A2-M1\",\"A2-M2\",\"A2-M3\",\n\t    \"B1-M1\",\"B1-M2\",\"B1-M3\",\n\t    \"B2-M1\",\"B2-M2\",\"B2-M3\",\n\t    \"E1-M1\",\"E1-M2\",\"E1-M3\",\n\t    \"E2-M1\",\"E2-M2\",\"E2-M3\"\n\t]\n\t\n\tresult \u003d []\n\t\n\tfor m in machines:\n\t    result.append({\n\t        \"value\": m,\n\t        \"label\": m\n\t    })\n\t\n\t# return result (for transform / script)\n\treturn result",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "isDropdown": true,
+                "selectedDate": "",
+                "selectedDropDownValue": "",
+                "title": "Machine Code"
+              },
+              "path": "widgets(templates)/baseTemplates/inputValues"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "inputValuesShift"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "dropDownOptions": [
+                  {
+                    "label": "A",
+                    "value": "A"
+                  },
+                  {
+                    "label": "B",
+                    "value": "B"
+                  },
+                  {
+                    "label": "C",
+                    "value": "C"
+                  }
+                ],
+                "isDropdown": true,
+                "selectedDate": "",
+                "selectedDropDownValue": "",
+                "title": "Shift"
+              },
+              "path": "widgets(templates)/baseTemplates/inputValues"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_filter"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-around",
+          "style": {
+            "classes": "widgets/spacing widgets/valueDisplay"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "circularGuage_OEE"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "params": {
+                    "AvailablilityValue": 76,
+                    "OEEName": "Machine 1",
+                    "OEEValue": "95%",
+                    "PerformanceValue": 78,
+                    "QualityValue": 91
+                  },
+                  "path": "widgets(templates)/circularGuage_OEE"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Table"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.data": {
+                    "binding": {
+                      "config": {
+                        "parameters": {
+                          "Machine_ID": "{view.params.machineID}",
+                          "Shift": "{view.params.shift}",
+                          "endDate": "{view.params.endDate}",
+                          "startDate": "{view.params.startDate}"
+                        },
+                        "queryPath": "OEE/getDowntime",
+                        "returnFormat": "json"
+                      },
+                      "type": "query"
+                    }
+                  }
+                },
+                "props": {
+                  "columns": [
+                    {
+                      "align": "center",
+                      "boolean": "checkbox",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "Downtime_Reason",
+                      "filter": {
+                        "boolean": {
+                          "condition": ""
+                        },
+                        "date": {
+                          "condition": "",
+                          "value": ""
+                        },
+                        "enabled": false,
+                        "number": {
+                          "condition": "",
+                          "value": ""
+                        },
+                        "string": {
+                          "condition": "",
+                          "value": ""
+                        },
+                        "visible": "on-hover"
+                      },
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "justify": "auto",
+                      "nullFormat": {
+                        "includeNullStrings": false,
+                        "nullFormatValue": "",
+                        "strict": false
+                      },
+                      "number": "value",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 100,
+                        "min": 0,
+                        "track": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "auto",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": false,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    },
+                    {
+                      "align": "center",
+                      "boolean": "value",
+                      "dateFormat": "MM/DD/YYYY",
+                      "editable": false,
+                      "field": "Total_Downtime_Min",
+                      "filter": {
+                        "boolean": {
+                          "condition": ""
+                        },
+                        "date": {
+                          "condition": "",
+                          "value": ""
+                        },
+                        "enabled": false,
+                        "number": {
+                          "condition": "",
+                          "value": ""
+                        },
+                        "string": {
+                          "condition": "",
+                          "value": ""
+                        },
+                        "visible": "on-hover"
+                      },
+                      "footer": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "header": {
+                        "align": "center",
+                        "justify": "left",
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "justify": "auto",
+                      "nullFormat": {
+                        "includeNullStrings": false,
+                        "nullFormatValue": "",
+                        "strict": false
+                      },
+                      "number": "progress",
+                      "numberFormat": "0,0.##",
+                      "progressBar": {
+                        "bar": {
+                          "color": "",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "max": 500,
+                        "min": 0,
+                        "track": {
+                          "color": "#AAAAAA",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "value": {
+                          "enabled": true,
+                          "format": "0,0.##",
+                          "justify": "center",
+                          "style": {
+                            "classes": ""
+                          }
+                        }
+                      },
+                      "render": "number",
+                      "resizable": true,
+                      "sort": "none",
+                      "sortable": true,
+                      "strictWidth": false,
+                      "style": {
+                        "classes": ""
+                      },
+                      "toggleSwitch": {
+                        "color": {
+                          "selected": "",
+                          "unselected": ""
+                        }
+                      },
+                      "viewParams": {},
+                      "viewPath": "",
+                      "visible": true,
+                      "width": ""
+                    }
+                  ],
+                  "dragOrderable": false,
+                  "enableHeader": false,
+                  "pager": {
+                    "bottom": false
+                  },
+                  "style": {
+                    "classes": "widgets/spacing"
+                  }
+                },
+                "type": "ia.display.table"
+              },
+              {
+                "meta": {
+                  "name": "FlexRepeater"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "instances": [
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    }
+                  ],
+                  "justify": "space-evenly",
+                  "path": "widgets(templates)/cardDisplay",
+                  "wrap": "wrap"
+                },
+                "type": "ia.display.flex-repeater"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "justify": "space-between"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "380px",
+          "grow": 1
+        },
+        "props": {
+          "justify": "space-evenly"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "props": {
+          "text": "A / P / Q Trend"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "TimeSeriesChart"
+        },
+        "position": {
+          "basis": "153.5px",
+          "grow": 1
+        },
+        "props": {
+          "series": [
+            {
+              "data": [
+                {
+                  "Pressure": 12,
+                  "Temperature": 52,
+                  "time": 1560469431423
+                },
+                {
+                  "Pressure": 42,
+                  "Temperature": 18,
+                  "time": 1560469432423
+                },
+                {
+                  "Pressure": 81,
+                  "Temperature": 26,
+                  "time": 1560469433423
+                },
+                {
+                  "Pressure": 11,
+                  "Temperature": 63,
+                  "time": 1560469434423
+                },
+                {
+                  "Pressure": 23,
+                  "Temperature": 65,
+                  "time": 1560469435423
+                },
+                {
+                  "Pressure": 43,
+                  "Temperature": 12,
+                  "time": 1560469436423
+                },
+                {
+                  "Pressure": 71,
+                  "Temperature": 61,
+                  "time": 1560469437423
+                },
+                {
+                  "Pressure": 89,
+                  "Temperature": 60,
+                  "time": 1560469438423
+                },
+                {
+                  "Pressure": 66,
+                  "Temperature": 58,
+                  "time": 1560469439423
+                },
+                {
+                  "Pressure": 33,
+                  "Temperature": 1,
+                  "time": 1560469440423
+                }
+              ],
+              "name": "Boiler"
+            }
+          ]
+        },
+        "type": "ia.chart.timeseries"
+      },
+      {
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

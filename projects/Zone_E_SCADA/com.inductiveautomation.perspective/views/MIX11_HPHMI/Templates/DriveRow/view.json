@@ -1,0 +1,604 @@
+{
+  "custom": {},
+  "params": {
+    "tagRoot": "[default]IN11_E115_PCE_MIX11",
+    "path": "",
+    "code": "",
+    "desc": ""
+  },
+  "propConfig": {
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.code": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.desc": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1240,
+      "height": 32
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "row",
+      "alignItems": "stretch",
+      "style": {
+        "borderBottom": "1px solid #D2D2D2",
+        "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Code"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "6px",
+            "fontWeight": "bold"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.code"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Desc"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "12px",
+            "color": "#333333",
+            "paddingLeft": "6px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.desc"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Run"
+        },
+        "position": {
+          "basis": "92px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "0px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center",
+            "border": "1px solid #9C9C9C",
+            "borderRadius": "2px",
+            "margin": "5px 4px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Running",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"RUNNING\", \"STOPPED\"), \"?\")"
+                }
+              ]
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Running",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"#4E4E4E\", \"#E8E8E8\"), \"#CFCFCF\")"
+                }
+              ]
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Running",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"#FFFFFF\", \"#4A4A4A\"), \"#8A8A8A\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Idle"
+        },
+        "position": {
+          "basis": "80px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "0px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center",
+            "border": "1px solid #9C9C9C",
+            "borderRadius": "2px",
+            "margin": "5px 4px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Idle",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"IDLE\", \"—\"), \"?\")"
+                }
+              ]
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Idle",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"#3C86C6\", \"#E8E8E8\"), \"#CFCFCF\")"
+                }
+              ]
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Idle",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"#FFFFFF\", \"#4A4A4A\"), \"#8A8A8A\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Speed"
+        },
+        "position": {
+          "basis": "104px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Consolas, 'Roboto Mono', monospace",
+            "fontSize": "13px",
+            "color": "#0B2D57",
+            "paddingLeft": "6px",
+            "justifyContent": "flex-end",
+            "textAlign": "right",
+            "paddingRight": "8px",
+            "fontWeight": "bold",
+            "backgroundColor": "#F8F8F8",
+            "border": "1px solid #B4B4B4",
+            "margin": "4px 4px",
+            "borderRadius": "2px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Speed",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), try(numberFormat(toDouble({value}), \"#,##0.0\"), toStr({value})), \"---\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "76px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Consolas, 'Roboto Mono', monospace",
+            "fontSize": "13px",
+            "color": "#0B2D57",
+            "paddingLeft": "6px",
+            "justifyContent": "flex-end",
+            "textAlign": "right",
+            "paddingRight": "8px",
+            "fontWeight": "bold"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Status",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), try(numberFormat(toDouble({value}), \"#0\"), toStr({value})), \"---\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Fault"
+        },
+        "position": {
+          "basis": "84px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "0px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center",
+            "border": "1px solid #9C9C9C",
+            "borderRadius": "2px",
+            "margin": "5px 4px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Fault",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"FAULT\", \"OK\"), \"?\")"
+                }
+              ]
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Fault",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"#D7262E\", \"#E8E8E8\"), \"#CFCFCF\")"
+                }
+              ]
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/Fault",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"#FFFFFF\", \"#4A4A4A\"), \"#8A8A8A\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Err"
+        },
+        "position": {
+          "basis": "80px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Consolas, 'Roboto Mono', monospace",
+            "fontSize": "13px",
+            "color": "#0B2D57",
+            "paddingLeft": "6px",
+            "justifyContent": "flex-end",
+            "textAlign": "right",
+            "paddingRight": "8px",
+            "fontWeight": "bold"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/ErrorCode",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), try(numberFormat(toDouble({value}), \"#0\"), toStr({value})), \"---\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Follow"
+        },
+        "position": {
+          "basis": "88px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "0px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center",
+            "border": "1px solid #9C9C9C",
+            "borderRadius": "2px",
+            "margin": "5px 4px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/FollowingError",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"FOLLOW\", \"OK\"), \"?\")"
+                }
+              ]
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/FollowingError",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"#EE7D1A\", \"#E8E8E8\"), \"#CFCFCF\")"
+                }
+              ]
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/FollowingError",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), \"#FFFFFF\", \"#4A4A4A\"), \"#8A8A8A\")"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

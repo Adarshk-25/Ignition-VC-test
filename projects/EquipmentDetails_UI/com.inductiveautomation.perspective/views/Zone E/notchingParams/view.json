@@ -1,0 +1,1147 @@
+{
+  "custom": {},
+  "params": {
+    "line": "value",
+    "notching": "value"
+  },
+  "propConfig": {
+    "params.line": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.notching": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 340,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "height": 0.0765,
+          "width": 0.9975
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {
+                "opacity": "1",
+                "paint": "#343474",
+                "rule": "nonzero"
+              },
+              "height": "75",
+              "name": "rect",
+              "stroke": {
+                "paint": "hsl(245, 83%, 23%)"
+              },
+              "type": "rect",
+              "width": "430",
+              "x": 6,
+              "y": 48
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "5 47 432 77"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label_18"
+        },
+        "position": {
+          "height": 0.0531,
+          "width": 0.196,
+          "x": 0.3959,
+          "y": 0.0169
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Parameters",
+          "textStyle": {
+            "color": "#E5AD57",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_19"
+        },
+        "position": {
+          "height": 0.0531,
+          "width": 0.196,
+          "x": 0.0544,
+          "y": 0.0875
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Machine ID:",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_20"
+        },
+        "position": {
+          "height": 0.0531,
+          "width": 0.196,
+          "x": 0.0544,
+          "y": 0.1406
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Line",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_21"
+        },
+        "position": {
+          "height": 0.0529,
+          "width": 0.216,
+          "x": 0.7282,
+          "y": 0.0875
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Notching: \"+{view.params.notching}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_22"
+        },
+        "position": {
+          "height": 0.0529,
+          "width": 0.216,
+          "x": 0.7282,
+          "y": 0.1406
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.line"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_62"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.3958,
+          "x": 0.0573,
+          "y": 0.2554
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Slit Width Acc. ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_63"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.3958,
+          "x": 0.0573,
+          "y": 0.3061
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Notch Accuracy ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_65"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.3958,
+          "x": 0.0573,
+          "y": 0.3548
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Notch Tab Defect ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_61"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.6162,
+          "x": 0.029,
+          "y": 0.2046
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Process Paramenter",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_66"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.3958,
+          "x": 0.0573,
+          "y": 0.4008
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Surface Defects Detection",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_67"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.6701,
+          "x": 0.037,
+          "y": 0.481
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Operational Paramenter",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_68"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.4633,
+          "x": 0.0573,
+          "y": 0.5321
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Average Batch Time ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_69"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.6701,
+          "x": 0.0596,
+          "y": 0.5751
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "No. Of Batches Completed ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_70"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.6342,
+          "x": 0.0573,
+          "y": 0.6314
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Batch Start Time ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_71"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.6027,
+          "x": 0.0573,
+          "y": 0.689
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Batch End Time",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_128"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1394,
+          "x": 0.7375,
+          "y": 0.5741
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "1 ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_132"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1394,
+          "x": 0.7282,
+          "y": 0.5304
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "4 hr ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_133"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1394,
+          "x": 0.7173,
+          "y": 0.6327
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "08:30",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_134"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1394,
+          "x": 0.7186,
+          "y": 0.6847
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "16:30",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_144"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1214,
+          "x": 0.7359,
+          "y": 0.3992
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "2   ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_145"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1214,
+          "x": 0.7359,
+          "y": 0.3474
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": 1,
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_146"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1394,
+          "x": 0.7284,
+          "y": 0.2524
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "74 % ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bolder",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_147"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1214,
+          "x": 0.7264,
+          "y": 0.3032
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "68 μm ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_72"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.5847,
+          "x": 0.0573,
+          "y": 0.7443
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Batch Duration",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_135"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1394,
+          "x": 0.7362,
+          "y": 0.7428
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "8 hrs",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_73"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.6522,
+          "x": 0.0573,
+          "y": 0.7946
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "TOTAL BATCH PER MIXER",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_129"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1394,
+          "x": 0.7513,
+          "y": 0.8007
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": 2,
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_74"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.5847,
+          "x": 0.0573,
+          "y": 0.8493
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Downtime ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_130"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1394,
+          "x": 0.7319,
+          "y": 0.8507
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "1 hr",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_131"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.1394,
+          "x": 0.7314,
+          "y": 0.9034
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "74 % ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bolder",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_75"
+        },
+        "position": {
+          "height": 0.0668,
+          "width": 0.6522,
+          "x": 0.0588,
+          "y": 0.9019
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "OEE ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bolder",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Drawing_0"
+        },
+        "position": {
+          "height": 0.2618,
+          "rotate": {
+            "angle": 0
+          },
+          "width": 0.976,
+          "x": 0.001,
+          "y": 0.2059
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M8 6.485057391437042L445 6.970114782874084 446 216.99996527511342 5 216.5149078836764 7 6",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5px"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M8.000013105622067 45L447 46",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M228 44.666656992288786L228 213.6349241543481",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_1",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 84L445 85",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_2",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 127L448 128",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_5",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 172L447 172",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_6",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M3 216L443 216",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_7",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M200,624L200,624",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_13",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M-102 387L-102 433",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_17",
+              "stroke": {
+                "paint": "#000000",
+                "width": "2px"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 450 220"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Drawing_1"
+        },
+        "position": {
+          "height": 0.4853,
+          "rotate": {
+            "angle": 0
+          },
+          "width": 0.968,
+          "x": 0.0052,
+          "y": 0.4848
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M8 6.894252775737088L445 7.7885055514741754 446 394.99995744563324 5 394.10570466989617 7 6",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5px"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M8.000013105622067 45L447 46",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M228 44.666656992288786L228 393.634923696303",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_1",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 84L445 85",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_2",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 127L448 128",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_5",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 172L447 172",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_6",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M5.999982317471677 216L447.0000211426896 216",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_7",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M200,624L200,624",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_13",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M-102 387L-102 433",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_17",
+              "stroke": {
+                "paint": "#000000",
+                "width": "2px"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 259L446 259",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_8",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 304L447 304",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_9",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 347L446 347",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_10",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 450 400"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "pipes": [
+        {
+          "appearance": "p\u0026id",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.979,
+                "y": 0.2029
+              }
+            ],
+            "x": 0.0135,
+            "y": 0.2029
+          },
+          "start": "none",
+          "stroke": "#000000",
+          "width": 1
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_0",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.9831,
+                "y": 0.4796
+              }
+            ],
+            "x": 0.0135,
+            "y": 0.4796
+          },
+          "start": "none",
+          "stroke": "#000000",
+          "width": 1
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

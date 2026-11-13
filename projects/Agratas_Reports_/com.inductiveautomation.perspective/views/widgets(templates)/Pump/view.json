@@ -1,0 +1,107 @@
+{
+  "custom": {
+    "Cmd": 0,
+    "Run_fb": 0,
+    "Stp_fb": 0
+  },
+  "params": {
+    "Pump_Name": ""
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Pump_Name": "{view.params.Pump_Name}"
+          },
+          "tagPath": "{Pump_Name}\\CMD"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Pump_Name": "{view.params.Pump_Name}"
+          },
+          "tagPath": "{Pump_Name}\\Run_FB"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Pump_Name": "{view.params.Pump_Name}"
+          },
+          "tagPath": "{Pump_Name}\\Stp_FB"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.Pump_Name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 114,
+      "width": 106
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Pump"
+        },
+        "position": {
+          "height": 100,
+          "rotate": {
+            "anchor": "0% 0%"
+          },
+          "width": 100,
+          "y": 7
+        },
+        "propConfig": {
+          "props.state": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.Cmd} \u0026\u0026 {view.custom.Run_fb}, \"running\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.Stp_fb}, \"stopped\",\r\nif({view.custom.Cmd} \u0026\u0026 {view.custom.Run_fb}\u003d0, \"faulted\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.Stp_fb}, \"faulted\",\r\n\"default\"))))"
+              },
+              "type": "expr"
+            }
+          },
+          "props.value.text": {
+            "binding": {
+              "config": {
+                "path": "this.props.state"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "value": {}
+        },
+        "type": "ia.symbol.pump"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

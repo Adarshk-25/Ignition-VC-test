@@ -1,0 +1,133 @@
+{
+  "custom": {},
+  "params": {
+    "backgroundColor": "value",
+    "border": "value",
+    "imgSource": "value",
+    "label": "value",
+    "navigationPath": "value"
+  },
+  "propConfig": {
+    "params.backgroundColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.border": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.imgSource": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.navigationPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 249,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "page": "{view.params.source}"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "198px"
+        },
+        "propConfig": {
+          "props.image.source": {
+            "binding": {
+              "config": {
+                "path": "view.params.imgSource"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.backgroundColor"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.borderStyle": {
+            "binding": {
+              "config": {
+                "path": "view.params.border"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "image": {
+            "height": 150,
+            "style": {
+              "fontSize": 25
+            },
+            "width": 150
+          },
+          "style": {
+            "fontSize": 25
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "47px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center",
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 397,
+      "width": 400
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DateInput"
+        },
+        "position": {
+          "height": 32,
+          "width": 170,
+          "x": 197,
+          "y": 21
+        },
+        "props": {
+          "pickerType": "date",
+          "style": {
+            "borderBottomLeftRadius": "8px",
+            "borderBottomRightRadius": "8px",
+            "borderColor": "#D5D5D5",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "8px",
+            "borderTopRightRadius": "8px",
+            "borderWidth": "0.02px",
+            "gap": "2px",
+            "marginRight": 5
+          }
+        },
+        "type": "ia.input.date-time-input"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 138,
+          "x": 26,
+          "y": 21
+        },
+        "props": {
+          "text": "Issue Raised On"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 152,
+          "x": 26,
+          "y": 58
+        },
+        "props": {
+          "text": "Line Number"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "LineDropdown"
+        },
+        "position": {
+          "height": 36,
+          "width": 170,
+          "x": 197,
+          "y": 58
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Line 1",
+              "value": "Line 1"
+            },
+            {
+              "label": "Line 2",
+              "value": "Line 2"
+            }
+          ],
+          "style": {
+            "borderBottomLeftRadius": "8px",
+            "borderBottomRightRadius": "8px",
+            "borderColor": "#D5D5D5",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "8px",
+            "borderTopRightRadius": "8px",
+            "borderWidth": "0.02px",
+            "gap": "2px",
+            "marginRight": 5
+          },
+          "value": "Line 2"
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\n    container \u003d self.parent\n\n    date \u003d container.getChild(\"DateInput\").props.value\n    line \u003d container.getChild(\"LineDropdown\").props.value\n    category \u003d container.getChild(\"CategoryDropdown\").props.value\n    due_date \u003d container.getChild(\"DueDateInput\").props.value\n    person \u003d container.getChild(\"PersonName\").props.text\n    issue \u003d container.getChild(\"CommentInput\").props.text\n    action \u003d container.getChild(\"ActionInput\").props.text\n\n    # 🔹 Category mapping\n    category_map \u003d {\n        \"Safety\": \"S\",\n        \"Quality\": \"Q\",\n        \"Cost\": \"C\",\n        \"Delivery\": \"D\",\n        \"People\": \"P\"\n    }\n\n    # 🔹 Get current year + month\n    now \u003d system.date.now()\n    year \u003d system.date.format(now, \"yyyy\")\n    month \u003d system.date.format(now, \"MM\")\n\n    # 🔹 Count existing entries\n    count_query \u003d \"\"\"\n    SELECT COUNT(*) FROM issues_log\n    WHERE \n        FORMAT(event_date, \u0027yyyyMM\u0027) \u003d ?\n        AND category \u003d ?\n    \"\"\"\n\n    count \u003d system.db.runScalarPrepQuery(\n        count_query,\n        [year + month, category],\n        \"Dev_MSSQL_Server\"\n    )\n\n    # 🔹 Generate sequence\n    sequence \u003d str(count + 1).zfill(3)\n\n    # 🔹 Generate reference number\n    ref_number \u003d year + month + category_map[category] + sequence\n\n    # 🔹 Insert with reference_number\n    query \u003d \"\"\"\n    INSERT INTO issues_log \n    (event_date, line_number, category, due_date, issue, action, person_responsible, reference_number)\n    VALUES (?, ?, ?, ?, ?, ?, ?, ?)\n    \"\"\"\n\n    system.db.runPrepUpdate(\n        query, \n        [date, line, category, due_date, issue,action, person, ref_number], \n        \"Dev_MSSQL_Server\"\n    )"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "RaiseButton"
+        },
+        "position": {
+          "height": 34,
+          "rotate": {
+            "anchor": "50% 0%"
+          },
+          "width": 256,
+          "x": 59,
+          "y": 353
+        },
+        "props": {
+          "image": {
+            "position": "center"
+          },
+          "text": "Raise"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 32,
+          "width": 152,
+          "x": 25,
+          "y": 95
+        },
+        "props": {
+          "text": "Category"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "CategoryDropdown"
+        },
+        "position": {
+          "height": 36,
+          "width": 170,
+          "x": 197,
+          "y": 99
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Safety",
+              "value": "Safety"
+            },
+            {
+              "label": "Quality",
+              "value": "Quality"
+            },
+            {
+              "label": "Cost",
+              "value": "Cost"
+            },
+            {
+              "label": "Delivery",
+              "value": "Delivery"
+            },
+            {
+              "label": "People",
+              "value": "People"
+            }
+          ],
+          "style": {
+            "borderBottomLeftRadius": "8px",
+            "borderBottomRightRadius": "8px",
+            "borderColor": "#D5D5D5",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "8px",
+            "borderTopRightRadius": "8px",
+            "borderWidth": "0.02px",
+            "gap": "2px",
+            "marginRight": 5
+          },
+          "value": "Cost(C)"
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 32,
+          "width": 59,
+          "x": 25,
+          "y": 204
+        },
+        "props": {
+          "text": "Issue"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "CommentInput"
+        },
+        "position": {
+          "height": 44,
+          "width": 361,
+          "x": 25,
+          "y": 233
+        },
+        "type": "ia.input.text-area"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 32,
+          "width": 138,
+          "x": 27,
+          "y": 139
+        },
+        "props": {
+          "text": "Due Date"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "DueDateInput"
+        },
+        "position": {
+          "height": 32,
+          "width": 170,
+          "x": 197,
+          "y": 140
+        },
+        "props": {
+          "pickerType": "date",
+          "style": {
+            "borderBottomLeftRadius": "8px",
+            "borderBottomRightRadius": "8px",
+            "borderColor": "#D5D5D5",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "8px",
+            "borderTopRightRadius": "8px",
+            "borderWidth": "0.02px",
+            "gap": "2px",
+            "marginRight": 5
+          }
+        },
+        "type": "ia.input.date-time-input"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 32,
+          "width": 148,
+          "x": 26,
+          "y": 180
+        },
+        "props": {
+          "text": "Person Responsible"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "PersonName"
+        },
+        "position": {
+          "height": 32,
+          "width": 167,
+          "x": 198,
+          "y": 182
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "Label_5"
+        },
+        "position": {
+          "height": 32,
+          "width": 59,
+          "x": 25,
+          "y": 279
+        },
+        "props": {
+          "text": "Action"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "ActionInput"
+        },
+        "position": {
+          "height": 42,
+          "width": 361,
+          "x": 25,
+          "y": 306
+        },
+        "type": "ia.input.text-area"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": -2,
+      "y": -14.5
+    },
+    "type": "ia.container.coord"
+  }
+}

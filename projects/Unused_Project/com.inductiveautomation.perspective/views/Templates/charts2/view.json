@@ -1,0 +1,186 @@
+{
+  "custom": {},
+  "params": {
+    "name": "value"
+  },
+  "propConfig": {
+    "params.name": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 338,
+      "width": 593
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "51px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "marginLeft": 10
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "apexchart_0"
+        },
+        "position": {
+          "basis": "259px"
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "dropShadow": {
+                "blur": 10,
+                "color": "#000",
+                "enabled": true,
+                "left": 7,
+                "opacity": 0.2,
+                "top": 18
+              },
+              "events": {
+                "animationEnd": false,
+                "beforeMount": false,
+                "beforeResetZoom": false,
+                "beforeZoom": false,
+                "brushScrolled": false,
+                "click": false,
+                "dataPointMouseEnter": false,
+                "dataPointMouseLeave": false,
+                "dataPointSelection": false,
+                "legendClick": false,
+                "markerClick": false,
+                "mounted": false,
+                "mouseLeave": false,
+                "mouseMove": false,
+                "scrolled": false,
+                "selection": false,
+                "updated": false,
+                "xAxisLabelClick": false,
+                "zoomed": false
+              },
+              "height": 350,
+              "toolbar": {
+                "show": false
+              },
+              "type": "line"
+            },
+            "colors": [
+              "#77B6EA",
+              "#545454"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#e7e7e7",
+              "row": {
+                "colors": [
+                  "#f3f3f3",
+                  "transparent"
+                ],
+                "opacity": 0.5
+              }
+            },
+            "legend": {
+              "floating": true,
+              "horizontalAlign": "right",
+              "offsetX": -5,
+              "offsetY": -25,
+              "position": "top"
+            },
+            "markers": {
+              "size": 1
+            },
+            "stroke": {
+              "curve": "smooth"
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "fontSize": 13
+              },
+              "text": "."
+            },
+            "xaxis": {
+              "categories": [
+                "Line 1",
+                "Line 2",
+                "Line 3"
+              ],
+              "title": {
+                "text": "Month"
+              }
+            },
+            "yaxis": {
+              "max": 100,
+              "min": 0,
+              "title": {
+                "text": "OEE%"
+              }
+            }
+          },
+          "series": [
+            {
+              "data": [
+                88,
+                75,
+                68
+              ],
+              "name": "Line OEE",
+              "type": "bar"
+            },
+            {
+              "data": [
+                80.7,
+                80.7,
+                80.7
+              ],
+              "name": "Zone Avg OEE"
+            }
+          ],
+          "style": {
+            "backgroundColor": "#FFFFFF"
+          }
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFFFFF",
+        "borderBottomLeftRadius": 6,
+        "borderBottomRightRadius": 6,
+        "borderTopLeftRadius": 6,
+        "borderTopRightRadius": 6
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

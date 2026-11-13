@@ -1,0 +1,329 @@
+{
+  "custom": {},
+  "params": {
+    "Man_Data": [
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      }
+    ],
+    "Tag_Path": "value",
+    "Title": "value",
+    "equipmentGraphic": "value",
+    "label": "value",
+    "machineFBS": "value",
+    "metadata": "value",
+    "tabNumber": "value",
+    "tag_SM": "value",
+    "tooltip": "value"
+  },
+  "propConfig": {
+    "params.Man_Data": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag_Path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Title": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.equipmentGraphic": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.machineFBS": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tabNumber": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_SM": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tooltip": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 72,
+      "width": 52
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1641,
+          "width": 0.92,
+          "x": 0.0504,
+          "y": 0.7826
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Drawing",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.5362,
+          "width": 0.6802,
+          "x": 0.1497,
+          "y": 0.0717
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tooltip"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {
+                "paint": "none"
+              },
+              "height": "111.42857360839844",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.20000000298023224px"
+              },
+              "type": "rect",
+              "width": "62",
+              "x": "4.3333330154418945",
+              "y": "4.3333330154418945"
+            },
+            {
+              "fill": {
+                "paint": "none"
+              },
+              "height": "105.75",
+              "name": "rect_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.20000000298023224"
+              },
+              "type": "rect",
+              "width": "57",
+              "x": 7.25,
+              "y": 7.25
+            },
+            {
+              "fill": {
+                "paint": "none"
+              },
+              "height": "61.5",
+              "name": "rect_1",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.20000000298023224"
+              },
+              "type": "rect",
+              "width": "52.5",
+              "x": 9.75,
+              "y": 11.25
+            },
+            {
+              "fill": {
+                "paint": "none"
+              },
+              "height": "30.75",
+              "name": "rect_2",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.20000000298023224"
+              },
+              "type": "rect",
+              "width": "53.5",
+              "x": "9",
+              "y": "79.75"
+            },
+            {
+              "fill": {
+                "paint": "none"
+              },
+              "name": "perspective-arc",
+              "specialPath": {
+                "end": 0,
+                "height": 4,
+                "slice": true,
+                "start": 0,
+                "width": 4,
+                "x": 57.5,
+                "y": 74.25
+              },
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.699999988079071"
+              },
+              "type": "perspective-arc"
+            }
+          ],
+          "style": {
+            "cursor": "pointer"
+          },
+          "viewBox": "0 0 70 120"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "draggable": true,
+            "id": "AODqw8vZ",
+            "modal": false,
+            "overlayDismiss": false,
+            "position": {
+              "height": 800,
+              "width": 1600
+            },
+            "positionType": "exact",
+            "resizable": true,
+            "showCloseIcon": true,
+            "title": "{view.params.Title}",
+            "type": "open",
+            "viewParams": {
+              "Man_Data": "{view.params.Man_Data}",
+              "Tag_Path_0": "{view.params.Tag_Path}",
+              "equipmentGraphic": "{view.params.equipmentGraphic}",
+              "machineFBS": "{view.params.machineFBS}",
+              "metadata": "{view.params.metadata}",
+              "tabNumber": "{view.params.tabNumber}",
+              "tag_SM": "{view.params.tag_SM}"
+            },
+            "viewPath": "Page/PopUpScreensTemplate/ProcessScreenTemplate",
+            "viewportBound": false
+          },
+          "scope": "C",
+          "type": "popup"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

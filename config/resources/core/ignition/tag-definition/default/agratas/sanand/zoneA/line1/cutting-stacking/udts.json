@@ -1,0 +1,63 @@
+[
+  {
+    "name": "unwinding",
+    "typeId": "AG_alarm",
+    "parameters": {
+      "Severity": {
+        "dataType": "Integer",
+        "value": 4
+      },
+      "Label": {
+        "dataType": "String",
+        "value": "Unwinding"
+      },
+      "alaramId": {
+        "dataType": "Integer",
+        "value": 30
+      },
+      "alarmCode": {
+        "dataType": "Integer",
+        "value": 11
+      },
+      "Operator_Message": {
+        "dataType": "String",
+        "value": "Assembly cell safety door open."
+      }
+    },
+    "tagType": "UdtInstance"
+  },
+  {
+    "name": "Taping",
+    "typeId": "AG_alarm",
+    "parameters": {
+      "Severity": {
+        "dataType": "Integer",
+        "value": 5
+      },
+      "Label": {
+        "dataType": "String",
+        "value": "Trig_Alarm"
+      },
+      "alaramId": {
+        "dataType": "Integer",
+        "value": 4
+      },
+      "alarmCode": {
+        "dataType": "Integer",
+        "value": 31
+      },
+      "Operator_Message": {
+        "dataType": "String",
+        "value": "Assembly cell safety door open."
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "historyProvider": "historian2",
+        "name": "trig",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

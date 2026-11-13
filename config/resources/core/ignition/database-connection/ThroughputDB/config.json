@@ -1,0 +1,36 @@
+{
+  "connectURL": "jdbc:sqlserver://10.34.26.6",
+  "connectionProps": "databaseName\u003dThroughputDB",
+  "connectionResetParams": "",
+  "defaultTransactionLevel": "DEFAULT",
+  "driver": "Microsoft SQLServer",
+  "evictionRate": -1,
+  "evictionTests": 3,
+  "evictionTime": 1800000,
+  "failoverMode": "STANDARD",
+  "failoverProfile": "",
+  "includeSchemaInTableName": false,
+  "password": {
+    "data": {
+      "ciphertext": "wbxx4pKu9yVYeABA61PDlg",
+      "encrypted_key": "6OnbVExxKmUdOUvk5fZ1xr5Ws0hGq69Nfov-uTA3C9T1sXiuLH6pQg",
+      "iv": "YfVMyUJS9FHkP90x",
+      "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzgzNTc1NTczLCJ6aXAiOiJERUYifQ",
+      "tag": "IPBHqTCndMtlTjg3i2Znsg"
+    },
+    "type": "Embedded"
+  },
+  "poolInitSize": 0,
+  "poolMaxActive": 8,
+  "poolMaxIdle": 8,
+  "poolMaxWait": 5000,
+  "poolMinIdle": 0,
+  "slowQueryLogThreshold": 60000,
+  "testOnBorrow": true,
+  "testOnReturn": false,
+  "testWhileIdle": false,
+  "translator": "MSSQL",
+  "username": "throughputuser",
+  "validationQuery": "SELECT 1",
+  "validationSleepTime": 10000
+}

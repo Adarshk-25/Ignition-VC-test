@@ -1,0 +1,1 @@
+select top 1 Absent,Designation from AttendanceRegister order by SNo desc;

@@ -1,0 +1,147 @@
+{
+  "custom": {},
+  "params": {
+    "status": 0
+  },
+  "propConfig": {
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 33,
+      "width": 22
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "height": 0.8924,
+          "width": 0.7225
+        },
+        "propConfig": {
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#00AC00"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#D9D900"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#FF8C00"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#D90000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#00AC00"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#D9D900"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#FF8C00"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#D90000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "height": "4.599999904632568",
+              "name": "rect",
+              "opacity": "#00AC00",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.10000000149011612px"
+              },
+              "type": "rect",
+              "width": "1.2000000476837158",
+              "x": "1.9332032203674316",
+              "y": "4.066601753234863"
+            },
+            {
+              "fill": {},
+              "name": "perspective-polygon",
+              "opacity": "#00AC00",
+              "specialPath": {
+                "angle": 60,
+                "corners": 3,
+                "height": 5.556977760532765,
+                "rounding": 0,
+                "width": 5.556977760532765,
+                "x": -0.2452857552663823,
+                "y": 0.08811268223352675
+              },
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.10000000149011612px"
+              },
+              "type": "perspective-star"
+            }
+          ],
+          "viewBox": "0 0 5 9"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

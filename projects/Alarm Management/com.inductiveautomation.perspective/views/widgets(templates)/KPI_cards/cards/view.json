@@ -1,0 +1,225 @@
+{
+  "custom": {},
+  "params": {
+    "Impact": "value",
+    "alertColor": "value",
+    "alertmessage": "value",
+    "message": "value",
+    "rootCause": "value"
+  },
+  "propConfig": {
+    "params.Impact": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.alertColor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.alertmessage": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.message": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.rootCause": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 150,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "96px"
+            },
+            "props": {
+              "enabled": false,
+              "image": {
+                "icon": {
+                  "color": "#FF8C00",
+                  "path": "material/fiber_manual_record"
+                },
+                "style": {
+                  "backgroundColor": "#AC5F00"
+                },
+                "width": 12
+              },
+              "primary": false,
+              "style": {
+                "backgroundColor": "#FFCA8A",
+                "borderBottomLeftRadius": "10px",
+                "borderBottomRightRadius": "10px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "10px",
+                "borderTopRightRadius": "10px",
+                "borderWidth": 1
+              },
+              "text": "RISK",
+              "textStyle": {
+                "color": "#FF8C00",
+                "fontFamily": "sans-serif",
+                "fontSize": 10
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "75px"
+            },
+            "props": {
+              "text": "4 issues",
+              "textStyle": {
+                "color": "#FF0000",
+                "fontFamily": "sans-serif",
+                "fontSize": "12px",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "justify": "space-between",
+          "style": {
+            "padding": "2px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "41px"
+        },
+        "props": {
+          "style": {
+            "padding": "2px"
+          },
+          "text": "FPY dropped to 90.3% (Target: 95%) — behind by 5%",
+          "textStyle": {
+            "fontFamily": "sans-serif",
+            "fontSize": "80%",
+            "fontWeight": "bolder",
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Root Cause",
+              "textStyle": {
+                "fontFamily": "sans-serif",
+                "fontSize": "10px",
+                "textAlign": "left"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Top: Assembly Error",
+              "textStyle": {
+                "fontFamily": "sans-serif",
+                "fontSize": "75%",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "61.6px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "borderBottomLeftRadius": "10px",
+            "borderBottomRightRadius": "10px",
+            "borderTopLeftRadius": "10px",
+            "borderTopRightRadius": "10px",
+            "padding": "2px",
+            "paddingLeft": "5px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "basis": "21px"
+        },
+        "props": {
+          "style": {
+            "fontFamily": "sans-serif",
+            "fontSize": "12px",
+            "padding": "2px",
+            "textAlign": "left"
+          },
+          "text": "Impact: 5% deviation from target"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-around",
+      "style": {
+        "borderColor": "#FF8C00",
+        "classes": "widgets/spacing",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

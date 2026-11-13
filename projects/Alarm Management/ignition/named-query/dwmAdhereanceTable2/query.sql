@@ -1,0 +1,1 @@
+select TOP 1 Activity,Done from DWMAdherence order by SNo desc;

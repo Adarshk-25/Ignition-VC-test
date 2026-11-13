@@ -1,0 +1,131 @@
+{
+  "custom": {
+    "Cmd": "value",
+    "Run_fb": "value",
+    "Stp_fb": "value"
+  },
+  "params": {
+    "header": "value",
+    "label": "",
+    "metadata": "value",
+    "screenPath": "value",
+    "tag_TM": "value",
+    "tooltip": "value"
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "persistent": true
+    },
+    "params.header": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.screenPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_TM": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tooltip": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 60,
+      "width": 64
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Valve",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.5714,
+          "width": 0.9796,
+          "x": -0.0096,
+          "y": 0.0777
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tooltip"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "location": "hidden"
+          },
+          "style": {
+            "cursor": "pointer"
+          },
+          "value": {
+            "location": "hidden"
+          }
+        },
+        "type": "ia.symbol.valve"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1857,
+          "width": 0.8367,
+          "x": 0.081,
+          "y": 0.771
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "70:70",
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

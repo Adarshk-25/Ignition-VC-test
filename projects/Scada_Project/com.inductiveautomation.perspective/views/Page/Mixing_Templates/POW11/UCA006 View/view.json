@@ -1,0 +1,573 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/Closed"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "UCA006:SP Inlet Hopper#1-1 LCP - PNL-904-006",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_1",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/FCB02/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB02:AX-02 HUB CONTROL POWER ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_2",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/FCB03/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB03:AX-03 CC-LINK CONTROL POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_3",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/FCB04/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB04:AX-04 DIGITAL DC POWER ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_4",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/FCB05/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB05:AX-05 SOL CONTROL POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_5",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/FCB06/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB06:AX-06 Service Port Power ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_6",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/SJB01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SJB01:EQ START_SW",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_7",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/SJB02/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SJB02:EQ STOP_SW ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_8",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/PSL01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "PSL01:Main Air Pressure Low S/W \u0027",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_9",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/SGC01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SGC01:LCP E-Stop S/W ON ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_10",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA006/FCB01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB01:AX-01 HMI (GOT2000) DC POWER ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "text": "COR001"
+      }
+    },
+    "props": {
+      "currentTabIndex": 8,
+      "tabSize": {
+        "width": 120
+      },
+      "tabs": [
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "UCA006",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006  Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006 \n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "FCB01",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 FCB01 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006 AX-01 HMI (GOT2000) DC POWER\n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "FCB02",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 FCB02 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006 AX-02 HUB CONTROL POWER\n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "FCB03",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 FCB03 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006 AX-03 CC-LINK CONTROL POWER\n\n\n\n\n\n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "FCB04",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 FCB04 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006 AX-04 DIGITAL DC POWER\n\n\n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "FCB05",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 FCB05 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006AX-05 SOL CONTROL POWER\n\t\t\n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "FCB06",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 FCB06 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006M  AX-06 Service Port Power\n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "SJB01",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 SJB01 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006 EQ START_SW\n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "SJB02",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 SJB01 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006 EQ STOP_SW\n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": true,
+            "tabSelected": false,
+            "tabText": "PSL01",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 PSL01 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006 Main Air Pressure Low S/W\n"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "SGC01",
+            "toolTipText": "IN11.E305.PCE.PVS11 UCA006 SGC01 Cathode Powder #1 PVDF/SP SP Inlet Hopper#1-1 LCP - PNL-904-006 SGC01 LCP E-Stop S/W ON"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        }
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

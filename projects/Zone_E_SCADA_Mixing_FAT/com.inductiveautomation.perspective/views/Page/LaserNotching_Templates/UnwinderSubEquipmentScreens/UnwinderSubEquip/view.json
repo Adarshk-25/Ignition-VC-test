@@ -1,0 +1,140 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ACoreScreen"
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/UnwinderSubEquipmentScreens/ACoreScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ACoreChuckingScreen"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/UnwinderSubEquipmentScreens/ACoreChuckingScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "BCoreScreen"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/UnwinderSubEquipmentScreens/BCoreScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "BCoreChuckingScreen"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/UnwinderSubEquipmentScreens/BCoreChuckingScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TurretScreen"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/UnwinderSubEquipmentScreens/TurretScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CPC1Screen"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/UnwinderSubEquipmentScreens/CPC1Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CuttingUnitScreen"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/UnwinderSubEquipmentScreens/CuttingUnitScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TensionControlScreen"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/UnwinderSubEquipmentScreens/TensionControlScreen"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "tabs": [
+        "COR001",
+        "UAH001",
+        "COR002",
+        "UAH002",
+        "GME001",
+        "CPM001",
+        "HUA001",
+        "IFD001"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

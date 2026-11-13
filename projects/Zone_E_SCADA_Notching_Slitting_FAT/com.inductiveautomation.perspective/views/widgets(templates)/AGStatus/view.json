@@ -1,0 +1,370 @@
+{
+  "custom": {},
+  "params": {
+    "tag": ""
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 88,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.2834,
+              "width": 0.448,
+              "x": 0.032,
+              "y": 0.0905
+            },
+            "propConfig": {
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "#000000",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "#BDBDBD"
+                        },
+                        {
+                          "input": 1,
+                          "output": "#FF0000"
+                        },
+                        {
+                          "input": 2,
+                          "output": "#FAA700"
+                        },
+                        {
+                          "input": 3,
+                          "output": "#00FF00"
+                        }
+                      ],
+                      "outputType": "color",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "None"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Maintenance"
+                        },
+                        {
+                          "input": 2,
+                          "output": "Setup"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Processing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "textStyle": {
+                "classes": "Page/Label2",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 0.2874,
+              "width": 0.452,
+              "x": 0.5277,
+              "y": 0.0901
+            },
+            "propConfig": {
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "#000000",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "#BDBDBD"
+                        },
+                        {
+                          "input": 1,
+                          "output": "#FF0000"
+                        },
+                        {
+                          "input": 2,
+                          "output": "#FFAA00"
+                        },
+                        {
+                          "input": 3,
+                          "output": "#00FF00"
+                        }
+                      ],
+                      "outputType": "color",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "NotAvailable"
+                        },
+                        {
+                          "input": 1,
+                          "output": "OutOfService"
+                        },
+                        {
+                          "input": 2,
+                          "output": "NotExecuting"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Executing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "textStyle": {
+                "classes": "Page/Label2",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.2834,
+              "width": 0.448,
+              "x": 0.032,
+              "y": 0.5559
+            },
+            "propConfig": {
+              "custom.blink": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentStarved"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if({value},dateExtract(now(),\u0027second\u0027)%2\u003d0, False)",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentStarved"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.blink},\r\n\"#FF0000\",\r\n\"#FFFFFF00\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Starved",
+              "textStyle": {
+                "classes": "Page/Label2",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "height": 0.2834,
+              "width": 0.448,
+              "x": 0.5277,
+              "y": 0.5554
+            },
+            "propConfig": {
+              "custom.blink": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentBlocked"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if({value},dateExtract(now(),\u0027second\u0027)%2\u003d0, False)",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentBlocked"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.blink},\r\n\"#FF0000\",\r\n\"#FFFFFF00\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Blocked",
+              "textStyle": {
+                "classes": "Page/Label2",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "custom": {
+          "blink": null
+        },
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "classes": "PipingAndInst/label"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFFFFF00"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

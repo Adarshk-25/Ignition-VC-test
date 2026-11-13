@@ -1,0 +1,1 @@
+select top 1 Status,TargetDate from QualityActions order by SNo desc;

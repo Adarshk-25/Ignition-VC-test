@@ -1,0 +1,111 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 69,
+      "width": 79
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "height": 0.923,
+          "width": 0.8696,
+          "x": 0.0616,
+          "y": 0.0575
+        },
+        "propConfig": {
+          "props.color": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]agratas/Alarm Metrics.hasActiveUnackedCritical"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#FF4747"
+                    },
+                    {
+                      "input": false,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "path": "sample-components/display-alarmStatusTable"
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.4638,
+          "width": 0.5443,
+          "x": 0.4557,
+          "y": -0.0726
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "now(1000)"
+              },
+              "transforms": [
+                {
+                  "code": "\t\t\n\talarms \u003d system.alarm.queryStatus()\n\tactive \u003d [a for a in alarms \n\t          if \"Active\" in str(a.state) \n\t          and \"prov:default:/tag:agratas/sanand\" in str(a.source)]\n\treturn  len(active)",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "alignVertical": "top",
+          "textStyle": {
+            "alignSelf": "flex-end"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "page": "/alarmsManagement"
+          },
+          "scope": "C",
+          "type": "nav"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

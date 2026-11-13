@@ -1,0 +1,1 @@
+select top 1 Process,RejectionPer from RejectionSummary order by SNo desc;

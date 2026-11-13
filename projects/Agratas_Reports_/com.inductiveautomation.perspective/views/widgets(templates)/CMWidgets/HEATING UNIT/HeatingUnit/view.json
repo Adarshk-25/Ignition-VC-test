@@ -1,0 +1,397 @@
+{
+  "custom": {},
+  "params": {
+    "instName": "Heating Unit",
+    "pressure": "value",
+    "status": 0,
+    "tempProcessValue": "value",
+    "tempSetpoint": "value"
+  },
+  "propConfig": {
+    "params.instName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.pressure": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tempProcessValue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tempSetpoint": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 149,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "height": 0.6913,
+          "width": 0.7,
+          "x": 0.15,
+          "y": 0.1409
+        },
+        "propConfig": {
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[16].text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tempProcessValue"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "height": "500",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "239",
+              "x": "431",
+              "y": "101"
+            },
+            {
+              "fill": {
+                "paint": "#37e22e"
+              },
+              "name": "perspective-arc",
+              "specialPath": {
+                "end": 0,
+                "height": 12.928253173828125,
+                "slice": true,
+                "start": 0,
+                "width": 12.05877685546875,
+                "x": 509,
+                "y": 272.0358581542969
+              },
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "fill": {
+                "paint": "#e2c627"
+              },
+              "name": "perspective-arc_0",
+              "specialPath": {
+                "end": 0,
+                "height": 13,
+                "slice": true,
+                "start": 0,
+                "width": 12.05877685546875,
+                "x": 545.176513671875,
+                "y": 272
+              },
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "fill": {
+                "paint": "#e2453c"
+              },
+              "name": "perspective-arc_1",
+              "specialPath": {
+                "end": 0,
+                "height": 12.928253173828125,
+                "slice": true,
+                "start": 0,
+                "width": 12.05877685546875,
+                "x": 578.9412231445312,
+                "y": 272.0358581542969
+              },
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "fill": {
+                "paint": "#9a9c9d"
+              },
+              "height": "103",
+              "name": "rect_0",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "171",
+              "x": "466",
+              "y": "152"
+            },
+            {
+              "fill": {
+                "paint": "#2d2d2e"
+              },
+              "height": "76.17707824707031",
+              "name": "rect_1",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "135.1451416015625",
+              "x": "483.92742919921875",
+              "y": "165.9479217529297"
+            },
+            {
+              "fill": {
+                "paint": "#666769"
+              },
+              "height": "49",
+              "name": "rect_2",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "10",
+              "x": "643",
+              "y": "332"
+            },
+            {
+              "fill": {
+                "paint": "#d8d8da"
+              },
+              "height": "36",
+              "name": "rect_4",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "14",
+              "x": "670",
+              "y": "490.5"
+            },
+            {
+              "fill": {
+                "paint": "#d8d8da"
+              },
+              "height": "36",
+              "name": "rect_5",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "14",
+              "x": "417",
+              "y": "390"
+            },
+            {
+              "fill": {
+                "paint": "#dadddf"
+              },
+              "height": "85",
+              "name": "rect_3",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "159",
+              "x": "471",
+              "y": "466"
+            },
+            {
+              "d": "M470 478c23.401163518428802 2.249999893938792 155.17779552340508 0 161.00000500679016 0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M470.5 490.5c23.401163518428802 2.249999893938792 155.17779552340508 0 161.00000500679016 0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_0",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M469.5 504.5c23.401163518428802 2.249999893938792 155.17779552340508 0 161.00000500679016 0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_1",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M469.5 527.5c23.401163518428802 2.249999893938792 155.17779552340508 0 161.00000500679016 0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_3",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M470.5 516.5c23.401163518428802 2.249999893938792 155.17779552340508 0 161.00000500679016 0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_2",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M471.5 538.5c23.401163518428802 2.249999893938792 155.17779552340508 0 161.00000500679016 0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_4",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "fill": {
+                "paint": "#02B527"
+              },
+              "fontSize": "25px",
+              "name": "text",
+              "type": "text",
+              "x": "526",
+              "y": "212"
+            }
+          ],
+          "viewBox": "407 91 287 520"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1387,
+          "width": 0.8703,
+          "x": 0.0652,
+          "y": 0.0125
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.instName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 0.1819,
+          "width": 0.5343,
+          "x": 0.2582,
+          "y": 0.8028
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.pressure"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

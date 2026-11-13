@@ -1,0 +1,41 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "COR001TabScreens"
+        },
+        "props": {
+          "params": {
+            "tag": "[default]IN11_E155_PAE_NTC11_IN11_E155_PAE_Telemetry"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreens/COR001TabScreens"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 2,
+      "tabSize": {
+        "width": 120
+      },
+      "tabs": [
+        "Process Data",
+        "Trends",
+        "Alarms",
+        "Metadata"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

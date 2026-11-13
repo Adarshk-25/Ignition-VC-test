@@ -1,0 +1,1 @@
+select top 1 M_Type, Responsibility from ChangeManagement order by SNo desc;

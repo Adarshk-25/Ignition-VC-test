@@ -1,0 +1,491 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 845,
+      "width": 274
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onItemClicked": {
+              "config": {
+                "script": "\tselected \u003d self.props.selectionData[0].value.path\n\tsystem.perspective.navigate(page\u003d\"/{}\".format(selected))"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Tree"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.selectionData[0].value.path": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "page.props.path"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "appearance": {
+            "defaultNodeIcons": {
+              "collapsed": {
+                "path": "material/folder"
+              },
+              "empty": {
+                "path": "material/stop"
+              },
+              "expanded": {
+                "path": "material/crop_16_9"
+              }
+            },
+            "expandIcons": {
+              "collapsed": {
+                "path": "material/arrow_right"
+              },
+              "expanded": {
+                "path": "material/arrow_drop_down"
+              }
+            }
+          },
+          "items": [
+            {
+              "data": {
+                "level": "Site",
+                "path": "Sanand/"
+              },
+              "expanded": true,
+              "icon": {
+                "color": "",
+                "path": "material/business",
+                "style": {}
+              },
+              "items": [
+                {
+                  "data": {
+                    "level": "Area",
+                    "path": "Sanand/zoneE"
+                  },
+                  "expanded": true,
+                  "items": [
+                    {
+                      "data": {
+                        "level": "method",
+                        "path": "Sanand/zoneE/calendering"
+                      },
+                      "expanded": false,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "anode",
+                            "path": "Sanand/zoneE/calendering/anode"
+                          },
+                          "expanded": true,
+                          "items": [
+                            {
+                              "data": {
+                                "level": "instance",
+                                "path": "Sanand/zoneE/calendering/anode/coldPress1"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "level": "oee",
+                                    "path": "Sanand/zoneE/calendering/anode/coldPress1/oee"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "OEE"
+                                },
+                                {
+                                  "data": {
+                                    "level": "status",
+                                    "path": "Sanand/zoneE/calendering/anode/coldPress1/status"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "Status"
+                                }
+                              ],
+                              "label": "ColdPress1"
+                            },
+                            {
+                              "data": {
+                                "level": "instance",
+                                "path": "Sanand/zoneE/calendering/anode/coldPress2"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "level": "oee",
+                                    "path": "Sanand/zoneE/calendering/anode/coldPress2/oee"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "OEE"
+                                },
+                                {
+                                  "data": {
+                                    "level": "status",
+                                    "path": "Sanand/zoneE/calendering/anode/coldPress2/status"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "Status"
+                                }
+                              ],
+                              "label": "ColdPress2"
+                            }
+                          ],
+                          "label": "Anode"
+                        },
+                        {
+                          "data": {
+                            "level": "cathode",
+                            "path": "Sanand/zoneE/calendering/cathode"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "level": "instance",
+                                "path": "Sanand/zoneE/calendering/cathode/hotPress"
+                              },
+                              "expanded": true,
+                              "items": [
+                                {
+                                  "data": {
+                                    "level": "oee",
+                                    "path": "Sanand/zoneE/calendering/cathode/hotPress/oee"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "OEE"
+                                },
+                                {
+                                  "data": {
+                                    "level": "status",
+                                    "path": "Sanand/zoneE/calendering/cathode/hotPress/status"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "Status"
+                                }
+                              ],
+                              "label": "Hot Press"
+                            }
+                          ],
+                          "label": "Cathode"
+                        }
+                      ],
+                      "label": "Calendering"
+                    },
+                    {
+                      "data": {
+                        "level": "notching",
+                        "path": "Sanand/zoneE/notching"
+                      },
+                      "expanded": false,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "anode",
+                            "path": "Sanand/zoneE/notching/anode"
+                          },
+                          "expanded": true,
+                          "items": [
+                            {
+                              "data": {
+                                "level": "slitting",
+                                "path": "Sanand/zoneE/notching/anode/slitting"
+                              },
+                              "expanded": true,
+                              "items": [
+                                {
+                                  "data": {
+                                    "level": "oee",
+                                    "path": "Sanand/zoneE/notching/anode/slitting/oee"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "OEE"
+                                },
+                                {
+                                  "data": {
+                                    "level": "status",
+                                    "path": "Sanand/zoneE/notching/anode/slitting/status"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "status"
+                                }
+                              ],
+                              "label": "Slitting"
+                            }
+                          ],
+                          "label": "Anode"
+                        },
+                        {
+                          "data": {
+                            "level": "anode",
+                            "path": "Sanand/zoneE/notching/cathode"
+                          },
+                          "expanded": true,
+                          "items": [
+                            {
+                              "data": {
+                                "level": "slitting",
+                                "path": "Sanand/zoneE/notching/cathode/slitting"
+                              },
+                              "expanded": true,
+                              "items": [
+                                {
+                                  "data": {
+                                    "level": "oee",
+                                    "path": "Sanand/zoneE/notching/cathode/slitting/oee"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "OEE"
+                                },
+                                {
+                                  "data": {
+                                    "level": "status",
+                                    "path": "Sanand/zoneE/notching/cathode/slitting/status"
+                                  },
+                                  "expanded": true,
+                                  "items": [],
+                                  "label": "status"
+                                }
+                              ],
+                              "label": "Slitting"
+                            }
+                          ],
+                          "label": "Cathode"
+                        }
+                      ],
+                      "label": "Notching"
+                    },
+                    {
+                      "data": {
+                        "level": "mixing",
+                        "path": "Sanand/zoneE/mixing"
+                      },
+                      "expanded": false,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "mixingOverview",
+                            "path": "Sanand/zoneE/mixing/mixingOverview"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Mixing Overview"
+                        },
+                        {
+                          "data": {
+                            "level": "mixingTankA\u0026B",
+                            "path": "Sanand/zoneE/mixing/mixingTankA\u0026B"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Mixing Tank A\u0026B"
+                        },
+                        {
+                          "data": {
+                            "level": "slurryPumpA\u0026B",
+                            "path": "Sanand/zoneE/mixing/mixingPumpA\u0026B"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Slurry Pump A\u0026B"
+                        }
+                      ],
+                      "label": "Mixing"
+                    }
+                  ],
+                  "label": "Zone E"
+                },
+                {
+                  "data": {
+                    "path": "analytics"
+                  },
+                  "expanded": false,
+                  "icon": {
+                    "color": "",
+                    "path": "material/analytics",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "analytics/trends"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Trends"
+                    },
+                    {
+                      "data": {
+                        "path": "analytics/reports"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Reports"
+                    }
+                  ],
+                  "label": "ANALYTICS"
+                },
+                {
+                  "data": {
+                    "path": "operations"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/dashboard",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "alarmsManagement"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/notification_important",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Alarms"
+                    },
+                    {
+                      "data": {
+                        "path": "operations/recipes"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/menu_book",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Recipes"
+                    }
+                  ],
+                  "label": "OPERATIONS"
+                },
+                {
+                  "data": {
+                    "path": "system"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/settings_applications",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "userManagement"
+                      },
+                      "expanded": true,
+                      "icon": {
+                        "color": "",
+                        "path": "material/admin_panel_settings",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Security \u0026 Roles"
+                    },
+                    {
+                      "data": {
+                        "path": "auditLogs"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/history",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Audit Logs"
+                    },
+                    {
+                      "data": {
+                        "path": "system/help"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/help_outline",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Help"
+                    }
+                  ],
+                  "label": "Setting"
+                }
+              ],
+              "label": "Sanand"
+            }
+          ],
+          "selection": [
+            "0/0/0/0/0"
+          ],
+          "selectionData": [
+            {
+              "itemPath": "0/0/0/0/0",
+              "value": {
+                "level": "instance"
+              }
+            }
+          ],
+          "style": {
+            "classes": "alarmStyles/highPriority Menu/Item_Vertical Menu/Menu_Vertical"
+          }
+        },
+        "type": "ia.display.tree"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "text": "Label"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "margin": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

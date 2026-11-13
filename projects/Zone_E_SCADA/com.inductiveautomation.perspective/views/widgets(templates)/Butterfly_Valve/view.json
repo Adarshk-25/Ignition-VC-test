@@ -1,0 +1,132 @@
+{
+  "custom": {
+    "Cmd": false,
+    "cl_fb": false,
+    "op_fb": false
+  },
+  "params": {
+    "Vlv_Name": "[default]agratas/sanand/zoneE/line1/mixing/904/XV_516"
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "parameter": "{view.params.Vlv_Name}"
+          },
+          "tagPath": "{parameter}/CMD"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.cl_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "parameter": "{view.params.Vlv_Name}"
+          },
+          "tagPath": "{parameter}/CLs_fb"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.op_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "parameter": "{view.params.Vlv_Name}"
+          },
+          "tagPath": "{parameter}/Opn_fb"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.Vlv_Name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 80,
+      "width": 80
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Valve"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.label.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagpath": "{view.params.Vlv_Name}"
+                },
+                "tagPath": "{tagpath}.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.state": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.Cmd} \u0026\u0026 {view.custom.op_fb}, \"open\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.cl_fb}, \"closed\",\r\nif({view.custom.Cmd} \u0026\u0026 {view.custom.op_fb}\u003d0, \"failedToOpen\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.cl_fb}, \"failedToClose\",\r\n\"default\"))))\r\n"
+              },
+              "type": "expr"
+            }
+          },
+          "props.value.text": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.op_fb} \u003d 1 \u0026\u0026 {view.custom.cl_fb} \u003d 0, \"Open\",\r\n(if({view.custom.op_fb} \u003d 0 \u0026\u0026 {view.custom.cl_fb} \u003d 1,\"Closed\",\r\n(if(({view.custom.op_fb} \u003d 1 \u0026\u0026 {view.custom.cl_fb} \u003d 1)|| ({view.custom.op_fb} \u003d 0 \u0026\u0026 {view.custom.cl_fb} \u003d 0),\"Fault\",\u0027Default\u0027)\r\n))))\r\n"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "appearance": "p\u0026id",
+          "label": {
+            "location": "hidden",
+            "style": {
+              "fontSize": "75%"
+            }
+          },
+          "value": {
+            "location": "hidden",
+            "style": {
+              "fontSize": "75%"
+            }
+          },
+          "valve": "left"
+        },
+        "type": "ia.symbol.valve"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

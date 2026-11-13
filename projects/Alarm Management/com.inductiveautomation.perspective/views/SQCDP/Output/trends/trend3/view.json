@@ -1,0 +1,164 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.options": {
+            "persistent": true
+          },
+          "props.series": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "stacked": false,
+              "toolbar": {
+                "show": false
+              },
+              "type": "bar"
+            },
+            "colors": [
+              "#22C55E",
+              "#F59E0B",
+              "#EF4444",
+              "#87CEFA"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#E5E7EB",
+              "padding": {
+                "bottom": 0,
+                "left": 10,
+                "right": 10,
+                "top": 0
+              },
+              "strokeDashArray": 4
+            },
+            "legend": {
+              "horizontalAlign": "center",
+              "markers": {
+                "radius": 15
+              },
+              "position": "bottom",
+              "show": true
+            },
+            "plotOptions": {
+              "bar": {
+                "borderRadius": 4,
+                "columnWidth": "45%"
+              }
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "color": "#111827",
+                "fontSize": "12px",
+                "fontWeight": "bold"
+              },
+              "text": "."
+            },
+            "xaxis": {
+              "categories": [
+                "Shift1",
+                "Shift2",
+                "Shift3",
+                "Shift4",
+                "Shift5",
+                "Shift6"
+              ],
+              "labels": {
+                "style": {
+                  "colors": "#6B7280"
+                }
+              }
+            },
+            "yaxis": {
+              "labels": {
+                "style": {
+                  "colors": "#6B7280"
+                }
+              },
+              "max": 100,
+              "min": 0
+            }
+          },
+          "series": [
+            {
+              "data": [
+                80,
+                70,
+                85,
+                53,
+                60,
+                44
+              ],
+              "name": "Availability"
+            },
+            {
+              "data": [
+                50,
+                45,
+                65,
+                77,
+                83,
+                22
+              ],
+              "name": "OEE"
+            },
+            {
+              "data": [
+                10,
+                20,
+                40,
+                20,
+                10,
+                20
+              ],
+              "name": "Downtime"
+            },
+            {
+              "data": [
+                90,
+                87,
+                77,
+                96,
+                88,
+                97
+              ],
+              "name": "Performance"
+            }
+          ]
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

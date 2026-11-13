@@ -1,0 +1,233 @@
+{
+  "custom": {},
+  "params": {
+    "id_name": "value",
+    "isActive": true,
+    "name": "value",
+    "uom": "value",
+    "value": "tr"
+  },
+  "propConfig": {
+    "params.id_name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.isActive": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.uom": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 100,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "AlarmCount_5"
+        },
+        "position": {
+          "height": 0.2548,
+          "width": 0.4529,
+          "x": 0.0254,
+          "y": 0.6839
+        },
+        "propConfig": {
+          "props.style.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.isActive"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#00AC00"
+                    },
+                    {
+                      "input": false,
+                      "output": "#FF4747"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#CCFFCC",
+            "border": "1px solid rgba(245,64,64,0.27)",
+            "borderRadius": "10px",
+            "fontFamily": "Barlow Condensed, sans-serif",
+            "fontSize": "15px",
+            "fontWeight": "bolder",
+            "padding": "7px",
+            "textAlign": "center"
+          },
+          "text": "ACTIVE"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_73"
+        },
+        "position": {
+          "height": 0.2408,
+          "width": 0.2585,
+          "x": 0.7186,
+          "y": 0.689
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.uom"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "color": "#000000",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_74"
+        },
+        "position": {
+          "height": 0.2408,
+          "rotate": {
+            "anchor": "50% 25%"
+          },
+          "width": 0.2259,
+          "x": 0.5233,
+          "y": 0.689
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontWeight": "bold",
+            "textAlign": "right",
+            "textTransform": "capitalize"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_72"
+        },
+        "position": {
+          "height": 0.1765,
+          "width": 0.504,
+          "x": 0.0254,
+          "y": 0.3378
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.id_name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Roboto",
+            "fontSize": 12,
+            "fontWeight": "lighter"
+          },
+          "viewBox": "93\n"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_71"
+        },
+        "position": {
+          "height": 0.1765,
+          "width": 0.6099,
+          "x": 0.0254,
+          "y": 0.0833
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "color": "#000000",
+            "fontFamily": "Roboto",
+            "fontSize": 20,
+            "fontWeight": "normal",
+            "textAlign": "start",
+            "textTransform": "capitalize"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "borderBottomLeftRadius": "1em",
+        "borderBottomRightRadius": "1em",
+        "borderColor": "#D5D5D5",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": "1em",
+        "borderTopRightRadius": "1em",
+        "borderWidth": 0.01
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

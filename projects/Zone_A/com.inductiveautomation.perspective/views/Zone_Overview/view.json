@@ -1,0 +1,61 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1056
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "IFrame"
+            },
+            "props": {
+              "src": "http://10.34.26.4:8088/system/webdev/Zone_E_SCADA/mockupScreens/CentralScada_Overview_EZone"
+            },
+            "type": "ia.display.iframe"
+          },
+          {
+            "meta": {
+              "name": "IFrame_0"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "src": "http://10.34.26.4:8088/system/webdev/Zone_E_SCADA/overview_3d_Cal_Coat/ezone_scada_v2_old.html"
+            },
+            "type": "ia.display.iframe"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "tabSize": {
+            "width": "auto"
+          },
+          "tabs": [
+            "Overview",
+            "Area Process status"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "custom": {},
+  "params": {
+    "parameterData": [
+      {
+        "ActualValue": "value",
+        "Parameter": "value",
+        "SubEquipmentName": "value"
+      }
+    ],
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.parameterData": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MergedEquipmentTemplate"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "props.params.parameterData[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC001/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[10].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC011/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[11].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC012/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[12].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC012/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[13].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC014/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[14].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC015/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[15].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC016/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC002/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC003/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC004/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC005/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC005/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[6].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC007/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[7].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC008/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[8].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC009/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[9].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/LNT001/ZSC010/State"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "EquipmentHeader": "ZSC001-ZSC016",
+                "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingLNT001",
+                "parameterData": [
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC001",
+                    "equipmentDescription": "DS X Axis Servo Motor FLS Sensor (SM11)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC002",
+                    "equipmentDescription": "DS X Axis Servo Motor RLS Sensor (SM11)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC003",
+                    "equipmentDescription": "DS Y Axis Servo Motor FLS Sensor (SM12)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC004",
+                    "equipmentDescription": "DS Y Axis Servo Motor RLS Sensor (SM12)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC005",
+                    "equipmentDescription": "OS X Axis Servo Motor FLS Sensor (SM13)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC006",
+                    "equipmentDescription": "OS X Axis Servo Motor RLS Sensor (SM13)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC007",
+                    "equipmentDescription": "OS Y Axis Servo Motor FLS Sensor (SM14)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC008",
+                    "equipmentDescription": "OS Y Axis Servo Motor RLS Sensor (SM14)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC009",
+                    "equipmentDescription": "Scrap DS Y Axis Servo Motor FLS Sensor (SM19)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC010",
+                    "equipmentDescription": "Scrap DS Y Axis Servo Motor RLS Sensor (SM19)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC011",
+                    "equipmentDescription": "Scrap OS Y Axis Servo Motor FLS Sensor (SM20)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC012",
+                    "equipmentDescription": "Scrap OS Y Axis Servo Motor RLS Sensor (SM20)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC013",
+                    "equipmentDescription": "Scrap Suction DS Motor FLS Sensor (SM21)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC014",
+                    "equipmentDescription": "Scrap Suction DS Motor RLS Sensor (SM21)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC015",
+                    "equipmentName": "Scrap Suction OS Motor FLS Sensor (SM22)"
+                  },
+                  {
+                    "Parameter": "State",
+                    "SubEquipmentName": "ZSC016",
+                    "equipmentDescription": "Scrap Suction OS Motor RLS Sensor (SM22)"
+                  }
+                ],
+                "tableHeader": "Process Parameters"
+              },
+              "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/MergedEquipmentTemplate"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

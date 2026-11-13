@@ -1,0 +1,196 @@
+{
+  "custom": {},
+  "params": {
+    "innerCircleValue": 78,
+    "middleCircleValue": 61,
+    "outerCircleValue": 90,
+    "valueDisplay": "85%"
+  },
+  "propConfig": {
+    "params.innerCircleValue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.middleCircleValue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.outerCircleValue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.valueDisplay": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 200,
+      "width": 197
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "SimpleGauge_outtermost"
+        },
+        "position": {
+          "height": 0.974,
+          "width": 0.9867
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.params.outerCircleValue"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "arc": {
+            "color": "#63F8A0",
+            "cornerRadius": 4,
+            "width": 14
+          },
+          "arcBackground": {
+            "color": "#7B7B7B"
+          },
+          "endAngle": 625,
+          "label": {
+            "offsetY": 20,
+            "visible": false
+          },
+          "startAngle": 270
+        },
+        "type": "ia.chart.simple-gauge"
+      },
+      {
+        "meta": {
+          "name": "SimpleGauge_middle"
+        },
+        "position": {
+          "height": 0.85,
+          "width": 0.8625,
+          "x": 0.062,
+          "y": 0.062
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.params.middleCircleValue"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "animate": true,
+          "arc": {
+            "color": "#E6E36D",
+            "cornerRadius": 4,
+            "width": 14
+          },
+          "arcBackground": {
+            "color": "#7B7B7B"
+          },
+          "endAngle": 625,
+          "label": {
+            "offsetY": 20,
+            "visible": false
+          },
+          "startAngle": 270
+        },
+        "type": "ia.chart.simple-gauge"
+      },
+      {
+        "meta": {
+          "name": "SimpleGauge_innermost"
+        },
+        "position": {
+          "height": 0.716,
+          "width": 0.727,
+          "x": 0.1297,
+          "y": 0.1291
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.params.innerCircleValue"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "arc": {
+            "color": "orange",
+            "cornerRadius": 4,
+            "width": 14
+          },
+          "arcBackground": {
+            "color": "#7B7B7B"
+          },
+          "endAngle": 625,
+          "label": {
+            "color": "#2B2B2B",
+            "maxDecimal": 1,
+            "offsetX": 10,
+            "offsetY": 20,
+            "size": 30,
+            "units": "%",
+            "visible": false
+          },
+          "startAngle": 270
+        },
+        "type": "ia.chart.simple-gauge"
+      },
+      {
+        "meta": {
+          "name": "Label_valueDisplay"
+        },
+        "position": {
+          "height": 0.17,
+          "width": 0.4222,
+          "x": 0.2831,
+          "y": 0.4018
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.valueDisplay"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "widgets/valueDisplay"
+          },
+          "textStyle": {
+            "fontSize": "220%",
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "classes": "widgets/valueDisplay"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

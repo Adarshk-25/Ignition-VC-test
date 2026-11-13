@@ -1,0 +1,201 @@
+[
+  {
+    "name": "OvenTempHigh",
+    "typeId": "AG_alarm",
+    "parameters": {
+      "Severity": {
+        "dataType": "Integer",
+        "value": 3
+      },
+      "Label": {
+        "dataType": "String",
+        "value": "OvenTempHigh"
+      },
+      "alaramId": {
+        "dataType": "Integer",
+        "value": 269
+      },
+      "alarmCode": {
+        "dataType": "Integer",
+        "value": 2
+      },
+      "Operator_Message": {
+        "dataType": "String",
+        "value": "Oven temperature above high limit – check heating system"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.Calendering.Outfeeder1.ovenTempHigh",
+        "opcServer": "kep",
+        "name": "trig",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "Speed",
+    "typeId": "Tx_Dis",
+    "parameters": {
+      "path": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.calendering.outfeeder1"
+      },
+      "name": {
+        "dataType": "String",
+        "value": "actualMachineSpeed"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "value": 135.0,
+        "name": "PV",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "SafetyDoor",
+    "typeId": "AG_alarm",
+    "parameters": {
+      "Severity": {
+        "dataType": "Integer",
+        "value": 4
+      },
+      "Troubleshoot": {
+        "dataType": "String",
+        "value": "Close the door"
+      },
+      "Label": {
+        "dataType": "String",
+        "value": "DoorAssemblyCellOpen"
+      },
+      "alaramId": {
+        "dataType": "Integer",
+        "value": 6
+      },
+      "alarmCode": {
+        "dataType": "Integer",
+        "value": 1
+      },
+      "Operator_Message": {
+        "dataType": "String",
+        "value": " Assembly cell safety door open"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.Calendering.Outfeeder1.safetyDoor",
+        "value": false,
+        "opcServer": "kep",
+        "name": "trig",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "TempHighWarning",
+    "typeId": "AG_alarm",
+    "parameters": {
+      "Severity": {
+        "dataType": "Integer",
+        "value": 2
+      },
+      "Label": {
+        "dataType": "String",
+        "value": "TemperatureHighWarning"
+      },
+      "alaramId": {
+        "dataType": "Integer",
+        "value": 121
+      },
+      "alarmCode": {
+        "dataType": "Integer",
+        "value": 1
+      },
+      "Operator_Message": {
+        "dataType": "String",
+        "value": "Temperature approaching high operating limit"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.Calendering.Outfeeder1.tempHighWarning",
+        "opcServer": "kep",
+        "name": "trig",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "Fire Hazard",
+    "typeId": "AG_alarm",
+    "parameters": {
+      "Severity": {
+        "dataType": "Integer",
+        "value": 5
+      },
+      "Label": {
+        "dataType": "String",
+        "value": "FireDetectionActive"
+      },
+      "Operator_Message": {
+        "dataType": "String",
+        "value": "Fire detection system activated evacuate area immediately"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.Calendering.Outfeeder1.fireHazard",
+        "opcServer": "kep",
+        "name": "trig",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "Maintenance Mode Selected",
+    "typeId": "AG_alarm",
+    "parameters": {
+      "Severity": {
+        "dataType": "Integer",
+        "value": 1
+      },
+      "Label": {
+        "dataType": "String",
+        "value": "MaintenanceModeSelected"
+      },
+      "alaramId": {
+        "dataType": "Integer",
+        "value": 37
+      },
+      "alarmCode": {
+        "dataType": "Integer",
+        "value": 1
+      },
+      "Operator_Message": {
+        "dataType": "String",
+        "value": "Machine has been switched to Maintenance Mode"
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.Calendering.Outfeeder1.maintenanceModeSelected",
+        "opcServer": "kep",
+        "name": "trig",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

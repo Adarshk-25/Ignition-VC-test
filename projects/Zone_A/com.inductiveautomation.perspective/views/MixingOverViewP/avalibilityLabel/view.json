@@ -1,0 +1,73 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 52,
+      "width": 823
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "38px"
+            },
+            "props": {
+              "text": "AVAILABILITY"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "132px"
+        },
+        "props": {
+          "alignItems": "flex-start",
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "75px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "round({[default]Structure/Agratas/Sanand/zoneA/Line1/machine1/oeeCore/Quality},2)+\"%\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "Unit": "%",
+          "textStyle": {
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "custom": {},
+  "params": {
+    "tagRoot": "[default]IN11_E122_PCE_CLD11",
+    "pza": "Telemetry/PZA001",
+    "code": "PZA001"
+  },
+  "propConfig": {
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.pza": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.code": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 40,
+      "height": 52
+    }
+  },
+  "root": {
+    "type": "ia.container.coord",
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "aspectRatio": "40:52",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Cap",
+          "tooltip": {
+            "enabled": true,
+            "text": "Stack light"
+          }
+        },
+        "position": {
+          "x": 0.325,
+          "y": 0.0,
+          "width": 0.35,
+          "height": 0.0385
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "backgroundColor": "#6A6A6A",
+            "borderRadius": "2px 2px 0 0"
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Base",
+          "tooltip": {
+            "enabled": true,
+            "text": "Stack light"
+          }
+        },
+        "position": {
+          "x": 0.25,
+          "y": 0.7308,
+          "width": 0.5,
+          "height": 0.0577
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "backgroundColor": "#5E5E5E",
+            "borderRadius": "1px"
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Lamp1",
+          "tooltip": {
+            "enabled": true,
+            "text": "Stack light"
+          }
+        },
+        "position": {
+          "x": 0.325,
+          "y": 0.0385,
+          "width": 0.35,
+          "height": 0.1731
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "border": "1px solid #6E6E6E",
+            "transition": "background-image .3s"
+          }
+        },
+        "propConfig": {
+          "props.style.backgroundImage": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/RedLamp",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.pza}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}) && toBoolean({value}), \"radial-gradient(circle at 35% 35%, #FFFFFF 0%, #E3262E 50%, #E3262E 100%)\", \"linear-gradient(90deg, #BDBDBD 0%, #E8E8E8 45%, #A9A9A9 100%)\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Lamp2",
+          "tooltip": {
+            "enabled": true,
+            "text": "Stack light"
+          }
+        },
+        "position": {
+          "x": 0.325,
+          "y": 0.2115,
+          "width": 0.35,
+          "height": 0.1731
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "border": "1px solid #6E6E6E",
+            "transition": "background-image .3s"
+          }
+        },
+        "propConfig": {
+          "props.style.backgroundImage": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/YellowLamp",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.pza}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}) && toBoolean({value}), \"radial-gradient(circle at 35% 35%, #FFFFFF 0%, #F2B800 50%, #F2B800 100%)\", \"linear-gradient(90deg, #BDBDBD 0%, #E8E8E8 45%, #A9A9A9 100%)\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Lamp3",
+          "tooltip": {
+            "enabled": true,
+            "text": "Stack light"
+          }
+        },
+        "position": {
+          "x": 0.325,
+          "y": 0.3846,
+          "width": 0.35,
+          "height": 0.1731
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "border": "1px solid #6E6E6E",
+            "transition": "background-image .3s"
+          }
+        },
+        "propConfig": {
+          "props.style.backgroundImage": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/GreenLamp",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.pza}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}) && toBoolean({value}), \"radial-gradient(circle at 35% 35%, #FFFFFF 0%, #2E9E4F 50%, #2E9E4F 100%)\", \"linear-gradient(90deg, #BDBDBD 0%, #E8E8E8 45%, #A9A9A9 100%)\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Lamp4",
+          "tooltip": {
+            "enabled": true,
+            "text": "Stack light"
+          }
+        },
+        "position": {
+          "x": 0.325,
+          "y": 0.5577,
+          "width": 0.35,
+          "height": 0.1731
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "border": "1px solid #6E6E6E",
+            "transition": "background-image .3s"
+          }
+        },
+        "propConfig": {
+          "props.style.backgroundImage": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/BlueLamp",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.pza}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}) && toBoolean({value}), \"radial-gradient(circle at 35% 35%, #FFFFFF 0%, #2F74D0 50%, #2F74D0 100%)\", \"linear-gradient(90deg, #BDBDBD 0%, #E8E8E8 45%, #A9A9A9 100%)\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Code",
+          "tooltip": {
+            "enabled": true,
+            "text": "Stack light"
+          }
+        },
+        "position": {
+          "x": 0.0,
+          "y": 0.7885,
+          "width": 1.0,
+          "height": 0.2115
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "8px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center",
+            "color": "#4F4F4F"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.code"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

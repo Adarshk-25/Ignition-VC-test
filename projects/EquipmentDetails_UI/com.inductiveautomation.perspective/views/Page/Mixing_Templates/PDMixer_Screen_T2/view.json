@@ -1,0 +1,71 @@
+{
+  "custom": {},
+  "params": {
+    "Metadata": "value",
+    "Motor": "value",
+    "Tag": "value"
+  },
+  "propConfig": {
+    "params.Metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Motor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "PowerChart"
+            },
+            "position": {
+              "height": 800,
+              "width": 1600,
+              "x": 6,
+              "y": 6
+            },
+            "props": {
+              "interaction": {
+                "chartZoomLevel": 1,
+                "rangeZoomLevel": 1
+              }
+            },
+            "type": "ia.chart.powerchart"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "800px"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0.0469,
+      "y": -0.0063
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

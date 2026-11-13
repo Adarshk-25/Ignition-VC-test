@@ -1,0 +1,97 @@
+{
+  "custom": {},
+  "params": {
+    "message": "value",
+    "username": "value"
+  },
+  "propConfig": {
+    "params.message": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.username": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 185,
+      "width": 542
+    },
+    "loading": {
+      "mode": "blocking"
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "text": "Access Denied",
+          "textStyle": {
+            "classes": "widgets/valueDisplay"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "#\tredirectTo \u003d self.view.params.redirectTo\n#\n#\tsystem.perspective.closePopup(\"accessDenied\")\n#\tsystem.perspective.navigate(redirectTo)\n\n\tsystem.perspective.closePopup(\"accessDenied\")\n\t\n#\tsystem.perspective.navigateBack()"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_Exit"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Ok"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "props": {
+          "style": {
+            "gap": "5px",
+            "margin": "2px",
+            "overflow": "hidden",
+            "padding": "2px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "widgets/spacing"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "custom": {},
+  "params": {
+    "label": "value",
+    "path": 0
+  },
+  "propConfig": {
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 78
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label_42"
+        },
+        "position": {
+          "height": 0.3143,
+          "width": 0.8077,
+          "x": 0.0962,
+          "y": 0.6721
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "borderStyle": "none",
+            "borderWidth": 2,
+            "classes": "Page/Label3"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Door with crashbar, closed_1"
+        },
+        "position": {
+          "height": 0.5577,
+          "width": 0.5,
+          "x": 0.25,
+          "y": 0.0496
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M0,0 l520,0 0,999 -520,0 0,-999z",
+              "fill": {
+                "paint": "#333"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M41,41 l479,0 0,958 -479,0 0,-958z",
+              "fill": {
+                "paint": "#919191"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M41,541 l437,0 0,41 -437,0 0,-41z",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M41,541 l21,-21 437,0 -21,21 -437,0z",
+              "fill": {
+                "paint": "#f2f2f2"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M478,582 l21,-20 0,-42 -21,21 0,41z",
+              "fill": {
+                "paint": "#8c8c8c"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            }
+          ],
+          "viewBox": "0 0 520 999"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "78:70",
+      "mode": "percent",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

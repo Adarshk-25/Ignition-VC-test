@@ -1,0 +1,277 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Cell Loading into Fixture_Screen"
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Cell Loading into Fixture_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Cell Unloading into Fixture_Screen"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Cell Unloading into Fixture_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Injection Pump_Screen"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Injection Pump_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Lower Conveyor Unit_Screen"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Lower Conveyor Unit_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Moving Unit and Cleaning_Screen"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Moving Unit and Cleaning_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Pallet Assembly_Screen"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Pallet Assembly_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Pallet Disassembly_Screen"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Pallet Disassembly_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RGV Unit_Screen"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/RGV Unit_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Assembly Rework_Screen"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Assembly Rework_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Vaccum Chamber_Screen"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Vaccum Chamber_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "6AxisRobotModule_Screen"
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/6AxisRobotModule_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "WeightCheckUnit"
+        },
+        "position": {
+          "tabIndex": 11
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/WeightCheckUnit"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Hi-pot Check_Screen"
+        },
+        "position": {
+          "tabIndex": 12
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Hi-pot Check_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Pallet Leak Unit"
+        },
+        "position": {
+          "tabIndex": 13
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Pallet Leak Unit"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Dummy Cell_Screen"
+        },
+        "position": {
+          "tabIndex": 14
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Dummy Cell_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Lift_Screen"
+        },
+        "position": {
+          "tabIndex": 15
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/Lift_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "NGConveyorScreen"
+        },
+        "position": {
+          "tabIndex": 16
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/NGConveyorScreen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PressureChamber_Screen"
+        },
+        "position": {
+          "tabIndex": 17
+        },
+        "props": {
+          "path": "Page/Injection_Templates/Injection1/PressureChamber_Screen"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        },
+        "onChange": {
+          "enabled": null,
+          "script": "\tif currentValue !\u003d previousValue :\n\t\tself.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 450
+      },
+      "tabs": [
+        "Cell Loading into Fixture",
+        "Cell Unloading into Fixture",
+        "Injection Pump",
+        "Lower Conveyor Unit",
+        "Moving Unit and Cleaning Unit",
+        "Pallet Assembly",
+        "Pallet Disassembly",
+        "RGV Unit",
+        "Assembly Rework",
+        "Vacuum Chamber",
+        "6 Axis Robot",
+        "Weight Check",
+        "Hi-Pot Check",
+        "Pallet Leak Check Unit",
+        "Dummy Cell",
+        "Lift",
+        "NG Conveyor",
+        "Pressure Chamber"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

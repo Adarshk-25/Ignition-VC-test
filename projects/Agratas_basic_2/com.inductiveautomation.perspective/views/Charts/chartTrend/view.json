@@ -1,0 +1,165 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 838,
+      "width": 851
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "basis": "812px"
+        },
+        "propConfig": {
+          "props.series": {
+            "binding": {
+              "config": {
+                "aggregate": "MinMax",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "endDate": "now(0)",
+                  "startDate": "dateArithmetic(now(),-7,\u0027day\u0027)"
+                },
+                "enableValueCache": true,
+                "ignoreBadQuality": false,
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "7",
+                  "type": "FIXED"
+                },
+                "tags": [
+                  {
+                    "aggregate": "LastValue",
+                    "path": "[Sample_SQLite_Database/ignition-ag-win-ig-dev:default]structure/agratas/sanand/zonea/line1/machine1/goodcount"
+                  },
+                  {
+                    "aggregate": "LastValue",
+                    "path": "[Sample_SQLite_Database/ignition-ag-win-ig-dev:default]structure/agratas/sanand/zonea/line1/machine1/rejectcount"
+                  }
+                ],
+                "valueFormat": "DATASET"
+              },
+              "transforms": [
+                {
+                  "code": "\n\n    if not value or value.getRowCount() \u003d\u003d 0:\n        return []\n\n    good_data \u003d []\n    reject_data \u003d []\n\n    \n    for row in range(value.getRowCount()):\n\n        t_stamp \u003d value.getValueAt(row, 0)\n        goodCount \u003d value.getValueAt(row, 1)\n        rejectCount \u003d value.getValueAt(row, 2)\n\n        if goodCount is None:\n            goodCount \u003d 0\n\n        if rejectCount is None:\n            rejectCount \u003d 0\n\n        good_data.append({\n            \"x\": t_stamp,\n            \"y\": float(goodCount)\n        })\n\n        reject_data.append({\n            \"x\": t_stamp,\n            \"y\": float(rejectCount)\n        })\n\n    return [\n        {\n            \"name\": \"Good Count\",\n            \"data\": good_data\n        },\n        {\n            \"name\": \"Reject Count\",\n            \"data\": reject_data\n        }\n    ]",
+                  "type": "script"
+                }
+              ],
+              "type": "tag-history"
+            }
+          }
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "dropShadow": {
+                "blur": 10,
+                "color": "#000",
+                "enabled": true,
+                "left": 7,
+                "opacity": 0.2,
+                "top": 18
+              },
+              "events": {
+                "animationEnd": false,
+                "beforeMount": false,
+                "beforeResetZoom": false,
+                "beforeZoom": false,
+                "brushScrolled": false,
+                "click": false,
+                "dataPointMouseEnter": false,
+                "dataPointMouseLeave": false,
+                "dataPointSelection": false,
+                "legendClick": false,
+                "markerClick": false,
+                "mounted": false,
+                "mouseLeave": false,
+                "mouseMove": false,
+                "scrolled": false,
+                "selection": false,
+                "updated": false,
+                "xAxisLabelClick": false,
+                "zoomed": false
+              },
+              "height": 350,
+              "toolbar": {
+                "show": false
+              },
+              "type": "line"
+            },
+            "colors": [
+              "#77B6EA",
+              "#545454"
+            ],
+            "dataLabels": {
+              "enabled": true
+            },
+            "grid": {
+              "borderColor": "#e7e7e7",
+              "row": {
+                "colors": [
+                  "#f3f3f3",
+                  "transparent"
+                ],
+                "opacity": 0.5
+              }
+            },
+            "legend": {
+              "floating": true,
+              "horizontalAlign": "right",
+              "offsetX": -5,
+              "offsetY": -25,
+              "position": "top"
+            },
+            "markers": {
+              "size": 4
+            },
+            "stroke": {
+              "curve": "smooth"
+            },
+            "title": {
+              "align": "left",
+              "text": "Good Count  \u0026 Reject Count"
+            },
+            "xaxis": {
+              "categories": [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul"
+              ],
+              "title": {
+                "text": "DAY"
+              }
+            },
+            "yaxis": {
+              "max": 1200,
+              "min": 1,
+              "title": {
+                "text": "COUNT"
+              }
+            }
+          }
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

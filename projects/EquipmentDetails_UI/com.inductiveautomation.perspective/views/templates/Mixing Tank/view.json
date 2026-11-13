@@ -1,0 +1,519 @@
+{
+  "custom": {},
+  "params": {
+    "parameter": "value",
+    "value": "value"
+  },
+  "propConfig": {
+    "params.parameter": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1615,
+      "width": 2293
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "path": "templates/Mixing Tank Equipment",
+              "useDefaultViewHeight": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "instances": [
+                {
+                  "greenEnd": 50,
+                  "greenStart": 30,
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "parameter": "Voltage(V)",
+                  "value": 5
+                },
+                {
+                  "greenEnd": 45,
+                  "greenStart": 20,
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "parameter": "Power(kW)",
+                  "value": 47
+                },
+                {
+                  "greenEnd": 70,
+                  "greenStart": 40,
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "max": 150,
+                  "min": 0,
+                  "parameter": "Energy(kWh)",
+                  "value": 110
+                }
+              ],
+              "justify": "center",
+              "path": "templates/Gauge Card Static",
+              "style": {
+                "overflow": "hidden",
+                "width": "value"
+              },
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false,
+              "wrap": "wrap"
+            },
+            "type": "ia.display.flex-repeater"
+          },
+          {
+            "meta": {
+              "name": "Trend"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "marginBottom": "10px",
+                "width": "200px"
+              },
+              "text": "Trend"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "PowerChart"
+            },
+            "position": {
+              "basis": "410px"
+            },
+            "props": {
+              "config": {
+                "rangeEndDate": {
+                  "$": [
+                    "ts",
+                    0,
+                    1774441764892
+                  ],
+                  "$ts": 1774441666855
+                },
+                "rangeStartDate": {
+                  "$": [
+                    "ts",
+                    0,
+                    1774441764891
+                  ],
+                  "$ts": 1774412962855
+                },
+                "visibility": {
+                  "showTagBrowser": true
+                }
+              },
+              "interaction": {
+                "chartZoomLevel": 1,
+                "rangeZoomLevel": 1
+              },
+              "legend": {
+                "visible": true
+              },
+              "pens": [
+                {
+                  "axis": "",
+                  "data": {
+                    "aggregateMode": "default",
+                    "source": "histprov:historian2:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating/anode/betagauge1/plctags/thickness"
+                  },
+                  "display": {
+                    "breakLine": true,
+                    "interpolation": "curveLinear",
+                    "radius": 3,
+                    "styles": {
+                      "highlighted": {
+                        "fill": {
+                          "color": "#63BEA2",
+                          "opacity": 1
+                        },
+                        "stroke": {
+                          "color": "#63BEA2",
+                          "dashArray": 0,
+                          "opacity": 1,
+                          "width": 1
+                        }
+                      },
+                      "muted": {
+                        "fill": {
+                          "color": "#63BEA2",
+                          "opacity": 0.4
+                        },
+                        "stroke": {
+                          "color": "#63BEA2",
+                          "dashArray": 0,
+                          "opacity": 0.4,
+                          "width": 1
+                        }
+                      },
+                      "normal": {
+                        "fill": {
+                          "color": "#63BEA2",
+                          "opacity": 0.8
+                        },
+                        "stroke": {
+                          "color": "#63BEA2",
+                          "dashArray": 0,
+                          "opacity": 0.8,
+                          "width": 1
+                        }
+                      },
+                      "selected": {
+                        "fill": {
+                          "color": "#63BEA2",
+                          "opacity": 1
+                        },
+                        "stroke": {
+                          "color": "#63BEA2",
+                          "dashArray": 0,
+                          "opacity": 1,
+                          "width": 1
+                        }
+                      }
+                    },
+                    "type": "line"
+                  },
+                  "enabled": true,
+                  "name": "thickness",
+                  "plot": 0,
+                  "selectable": true,
+                  "visible": true
+                }
+              ]
+            },
+            "type": "ia.chart.powerchart"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "AlarmStatusTable"
+                },
+                "position": {
+                  "basis": "800px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.filters.active.conditions.source": {
+                    "binding": {
+                      "config": {
+                        "expression": "\"*\"+ \"agratas/sanand/zoneE/coating/anode/\" + {view.params.equipment} + \"*\""
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "columns": {
+                    "active": {
+                      "displayPath": {
+                        "enabled": false,
+                        "order": 4
+                      },
+                      "name": {
+                        "order": 2
+                      },
+                      "priority": {
+                        "order": 8
+                      },
+                      "source": {
+                        "enabled": false
+                      },
+                      "state": {
+                        "order": 9
+                      }
+                    }
+                  },
+                  "columnsAssociated": {
+                    "active": [
+                      {
+                        "enabled": true,
+                        "field": "severity",
+                        "order": 3,
+                        "sort": "none",
+                        "strictWidth": false,
+                        "width": ""
+                      },
+                      {
+                        "enabled": true,
+                        "field": "alarmGroupId",
+                        "order": 4,
+                        "sort": "none",
+                        "strictWidth": false,
+                        "width": ""
+                      },
+                      {
+                        "enabled": true,
+                        "field": "alarmCode",
+                        "order": 5,
+                        "sort": "none",
+                        "strictWidth": false,
+                        "width": ""
+                      },
+                      {
+                        "enabled": true,
+                        "field": "fbsSource",
+                        "order": 6,
+                        "sort": "none",
+                        "strictWidth": false,
+                        "width": ""
+                      },
+                      {
+                        "enabled": true,
+                        "field": "operatorMessage",
+                        "order": 7,
+                        "sort": "none",
+                        "strictWidth": false,
+                        "width": ""
+                      },
+                      {
+                        "enabled": true,
+                        "field": "index",
+                        "order": 1,
+                        "sort": "none",
+                        "strictWidth": false,
+                        "width": ""
+                      }
+                    ]
+                  },
+                  "filters": {
+                    "active": {
+                      "conditions": {}
+                    }
+                  },
+                  "rowStyles": {
+                    "activeAcked": {
+                      "base": {
+                        "backgroundColor": ""
+                      },
+                      "priorities": {
+                        "critical": {
+                          "backgroundColor": "",
+                          "classes": "alarm/critical"
+                        },
+                        "diagnostic": {
+                          "backgroundColor": "",
+                          "classes": "alarm/diagnostic"
+                        },
+                        "high": {
+                          "backgroundColor": "",
+                          "classes": "alarm/high"
+                        },
+                        "low": {
+                          "backgroundColor": "",
+                          "classes": "alarm/low"
+                        },
+                        "medium": {
+                          "backgroundColor": "",
+                          "classes": "alarm/medium"
+                        }
+                      }
+                    },
+                    "activeUnacked": {
+                      "base": {
+                        "backgroundColor": ""
+                      },
+                      "priorities": {
+                        "critical": {
+                          "backgroundColor": "",
+                          "classes": "alarm/critical"
+                        },
+                        "diagnostic": {
+                          "backgroundColor": "",
+                          "classes": "alarm/diagnostic"
+                        },
+                        "high": {
+                          "backgroundColor": "",
+                          "classes": "alarm/high"
+                        },
+                        "low": {
+                          "backgroundColor": "",
+                          "classes": "alarm/low"
+                        },
+                        "medium": {
+                          "backgroundColor": "",
+                          "classes": "alarm/medium"
+                        }
+                      }
+                    },
+                    "clearAcked": {
+                      "base": {
+                        "backgroundColor": ""
+                      },
+                      "priorities": {
+                        "critical": {
+                          "backgroundColor": "",
+                          "classes": "alarm/critical"
+                        },
+                        "diagnostic": {
+                          "backgroundColor": "",
+                          "classes": "alarm/diagnostic"
+                        },
+                        "high": {
+                          "backgroundColor": "",
+                          "classes": "alarm/high"
+                        },
+                        "low": {
+                          "backgroundColor": "",
+                          "classes": "alarm/low"
+                        },
+                        "medium": {
+                          "backgroundColor": "",
+                          "classes": "alarm/medium"
+                        }
+                      }
+                    },
+                    "clearUnacked": {
+                      "base": {
+                        "backgroundColor": ""
+                      },
+                      "priorities": {
+                        "critical": {
+                          "backgroundColor": "",
+                          "classes": "alarm/critical"
+                        },
+                        "diagnostic": {
+                          "backgroundColor": "",
+                          "classes": "alarm/diagnostic"
+                        },
+                        "high": {
+                          "backgroundColor": "",
+                          "classes": "alarm/high"
+                        },
+                        "low": {
+                          "backgroundColor": "",
+                          "classes": "alarm/low"
+                        },
+                        "medium": {
+                          "backgroundColor": "",
+                          "classes": "alarm/medium"
+                        }
+                      }
+                    }
+                  }
+                },
+                "type": "ia.display.alarmstatustable"
+              }
+            ],
+            "meta": {
+              "name": "alarmStatusTable"
+            },
+            "props": {
+              "style": {
+                "classes": "widgets/spacing widgets/valueDisplay"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Process View Embedded"
+            },
+            "position": {
+              "basis": "612px"
+            },
+            "props": {
+              "params": {
+                "tagpath1": "value",
+                "tagpath10": "value",
+                "tagpath2": "value",
+                "tagpath3": "value",
+                "tagpath4": "value",
+                "tagpath5": "value",
+                "tagpath6": "value",
+                "tagpath7": "value",
+                "tagpath8": "value",
+                "tagpath9": "value"
+              },
+              "path": "templates/template_process_data"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "2468px"
+        },
+        "props": {
+          "direction": "column",
+          "justify": "flex-end"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "props": {
+              "path": "templates/MixingTankStatus",
+              "useDefaultViewHeight": true
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Status Container"
+        },
+        "position": {
+          "basis": "500px",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "height": "600px",
+            "marginTop": "200px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

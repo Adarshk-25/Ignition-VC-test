@@ -1,0 +1,1420 @@
+{
+  "custom": {
+    "wo": "",
+    "recipe": "",
+    "mes": false,
+    "alarms": {
+      "rows": [],
+      "count": 0,
+      "worst": "none"
+    },
+    "drives": {
+      "text": "",
+      "count": 0,
+      "on": 0
+    },
+    "stateCode": -9,
+    "modeCode": -9,
+    "starved": false,
+    "blocked": false,
+    "key": "NoComm"
+  },
+  "params": {
+    "tagRoot": "",
+    "unitId": "",
+    "description": "",
+    "areaTitle": "",
+    "keyValues": [],
+    "kvRows": 0,
+    "hasDrives": false,
+    "areaPage": "",
+    "sim": false,
+    "hasFaceplate": true
+  },
+  "props": {
+    "defaultSize": {
+      "width": 840,
+      "height": 640
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "position": {},
+    "props": {
+      "direction": "column",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "stretch",
+      "alignContent": "flex-start",
+      "style": {
+        "classes": "HPHMI/Popup/Root",
+        "overflowY": "auto"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Banner"
+        },
+        "position": {
+          "basis": "48px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.icon",
+            "meta": {
+              "name": "StateIcon"
+            },
+            "position": {
+              "basis": "28px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "material/help_outline",
+              "color": "#555C64",
+              "style": {
+                "minWidth": "28px",
+                "height": "28px"
+              }
+            },
+            "propConfig": {
+              "props.path": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "case({view.custom.key}, \"Running\",\"material/play_arrow\", \"Stopped\",\"material/stop\", \"Starved\",\"material/hourglass_empty\", \"Blocked\",\"material/block\", \"OutOfService\",\"material/build\", \"NotAvailable\",\"material/remove_circle_outline\", \"material/help_outline\")"
+                  }
+                }
+              },
+              "props.color": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "case({view.custom.key}, \"Running\",\"#1F2328\", \"Starved\",\"#1F5FA8\", \"Blocked\",\"#1F5FA8\", \"NotAvailable\",\"#868C94\", \"#555C64\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "State"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Popup/StateText"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "case({view.custom.key}, \"Running\",\"Running\", \"Stopped\",\"Stopped\", \"Starved\",\"Starved – no input\", \"Blocked\",\"Blocked – output\", \"OutOfService\",\"Out of service\", \"NotAvailable\",\"Not available\", \"No comm · bad quality\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Mode"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Text/Label"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"Mode \" + case({view.custom.modeCode}, 0,\"None\", 1,\"Maintenance\", 2,\"Setup\", 3,\"Processing\", \"—\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Sim"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "SIMULATED",
+              "style": {
+                "classes": "HPHMI/Chip/Sim"
+              }
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.sim"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Spacer"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "AlarmBadge"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.icon",
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "18px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "material/warning",
+                  "color": "#1F2328",
+                  "style": {
+                    "minWidth": "18px",
+                    "height": "18px"
+                  }
+                },
+                "propConfig": {
+                  "props.path": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "case({view.custom.alarms.worst}, \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                      }
+                    }
+                  },
+                  "props.color": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.custom.alarms.worst} = \"Critical\", \"#FFFFFF\", \"#1F2328\")"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Count"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "0",
+                  "style": {
+                    "fontWeight": "700",
+                    "fontSize": "14px"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "toStr({view.custom.alarms.count})"
+                      }
+                    }
+                  },
+                  "props.style.color": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.custom.alarms.worst} = \"Critical\", \"#FFFFFF\", \"#1F2328\")"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "propConfig": {
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"HPHMI/Badge/\" + if({view.custom.alarms.worst} = \"none\", \"Info\", {view.custom.alarms.worst})"
+                  }
+                }
+              },
+              "position.display": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.custom.alarms.count} > 0"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "NoAlarms"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "No active alarms",
+              "style": {
+                "classes": "HPHMI/Badge/Neutral"
+              }
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.custom.alarms.count} = 0"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "\"HPHMI/Popup/Banner HPHMI/State/\" + {view.custom.key}"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Info"
+        },
+        "position": {
+          "basis": "54px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "8px",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "WorkOrder"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "column",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Popup/Box",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "18px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Work order",
+                  "style": {
+                    "classes": "HPHMI/Popup/BoxLabel"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "22px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "classes": "HPHMI/Popup/BoxValue"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.custom.wo} = \"\", \"—\", {view.custom.wo})"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Recipe"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "column",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Popup/Box",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "18px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Recipe",
+                  "style": {
+                    "classes": "HPHMI/Popup/BoxLabel"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "22px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "classes": "HPHMI/Popup/BoxValue"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.custom.recipe} = \"\", \"—\", {view.custom.recipe})"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Mes"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "column",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Popup/Box",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "18px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "MES link",
+                  "style": {
+                    "classes": "HPHMI/Popup/BoxLabel"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "22px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "classes": "HPHMI/Popup/BoxValue"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.custom.key} = \"NoComm\", \"—\", if({view.custom.mes}, \"Running\", \"Not running\"))"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Waiting"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "column",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Popup/Box",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "18px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Starved / blocked",
+                  "style": {
+                    "classes": "HPHMI/Popup/BoxLabel"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "22px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "classes": "HPHMI/Popup/BoxValue"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.custom.key} = \"NoComm\", \"—\", if({view.custom.blocked}, \"Blocked\", if({view.custom.starved}, \"Starved\", \"No\")))"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "PvTitle"
+        },
+        "position": {
+          "basis": "18px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "Process values",
+          "style": {
+            "classes": "HPHMI/Text/Section"
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "PvBox"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "classes": "HPHMI/Popup/Box",
+            "padding": "8px 12px",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.flex-repeater",
+            "meta": {
+              "name": "Values"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "path": "Components/HPHMI/KeyValueRow",
+              "instances": [],
+              "direction": "row",
+              "wrap": "wrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "useDefaultViewWidth": false,
+              "useDefaultViewHeight": true,
+              "elementPosition": {
+                "basis": "45%",
+                "grow": 1,
+                "shrink": 0
+              },
+              "style": {
+                "columnGap": "24px",
+                "rowGap": "4px",
+                "overflow": "hidden"
+              }
+            },
+            "propConfig": {
+              "props.instances": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.keyValues"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "propConfig": {
+          "position.basis": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "toStr(max(1, {view.params.kvRows}) * 25 + 18) + \"px\""
+              }
+            }
+          },
+          "position.display": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "{view.params.kvRows} > 0"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "DrivesTitle"
+        },
+        "position": {
+          "basis": "18px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Text/Section"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "\"Drives  \" + toStr({view.custom.drives.on}) + \" of \" + toStr({view.custom.drives.count}) + \" running\""
+              }
+            }
+          },
+          "position.display": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.hasDrives"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Drives"
+        },
+        "position": {
+          "basis": "auto",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Popup/Box"
+          },
+          "textStyle": {
+            "whiteSpace": "normal"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.custom.drives.text"
+              }
+            }
+          },
+          "position.display": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.hasDrives"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "AlarmTitle"
+        },
+        "position": {
+          "basis": "18px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "Active alarms",
+          "style": {
+            "classes": "HPHMI/Text/Section"
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "AlarmBox"
+        },
+        "position": {
+          "basis": "auto",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "classes": "HPHMI/List/Box",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.flex-repeater",
+            "meta": {
+              "name": "Alarms"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "Components/HPHMI/UnitAlarmRow",
+              "instances": [],
+              "direction": "column",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "useDefaultViewWidth": false,
+              "useDefaultViewHeight": true,
+              "elementPosition": {
+                "basis": "34px",
+                "grow": 0,
+                "shrink": 0
+              },
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "propConfig": {
+              "props.instances": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.custom.alarms.rows"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "None"
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "No active alarms on this unit.",
+              "style": {
+                "classes": "HPHMI/Text/Label",
+                "padding": "0 12px"
+              }
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.custom.alarms.count} = 0"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "SimNote"
+        },
+        "position": {
+          "basis": "auto",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Note"
+          },
+          "textStyle": {
+            "whiteSpace": "normal"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "\"Simulated unit – no PLC signals for this area yet. Values come from \" + {view.params.tagRoot} + \"; repoint the unit in zoneE_model.js to the real PLC folder when the nodeset is deployed.\""
+              }
+            }
+          },
+          "position.display": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.sim"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Spacer"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "direction": "column",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "children": []
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Footer"
+        },
+        "position": {
+          "basis": "56px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "classes": "HPHMI/Popup/Footer",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "TagRoot"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Text/Muted"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.tagRoot"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "OpenArea"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Open area screen",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "material/open_in_new",
+                  "color": "#1F2328"
+                },
+                "position": "right",
+                "width": 18,
+                "height": 18
+              },
+              "style": {
+                "classes": "HPHMI/Button/Secondary HPHMI/Button/Big"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "script",
+                  "scope": "G",
+                  "config": {
+                    "script": "\tHPHMI_ZoneE.openAreaScreen(self.view.params.areaPage)"
+                  }
+                }
+              }
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.areaPage} != \"\""
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "OpenFaceplate"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Open faceplate",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "material/launch",
+                  "color": "#FFFFFF"
+                },
+                "position": "right",
+                "width": 18,
+                "height": 18
+              },
+              "style": {
+                "classes": "HPHMI/Button/Primary"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "script",
+                  "scope": "G",
+                  "config": {
+                    "script": "\tHPHMI_ZoneE.openFaceplate(self.view.params.tagRoot)"
+                  }
+                }
+              }
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.hasFaceplate"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "Close"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Close",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "",
+                  "color": "#FFFFFF"
+                },
+                "position": "right",
+                "width": 0,
+                "height": 0
+              },
+              "style": {
+                "classes": "HPHMI/Button/Primary"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "script",
+                  "scope": "G",
+                  "config": {
+                    "script": "\tsystem.perspective.closePopup(\"hphmiQuickView\")"
+                  }
+                }
+              }
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "!{view.params.hasFaceplate}"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "propConfig": {
+    "custom.stateCode": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/CurrentState",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toInt({value}, -9), -9)"
+          }
+        ]
+      }
+    },
+    "custom.modeCode": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/CurrentMode",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toInt({value}, -9), -9)"
+          }
+        ]
+      }
+    },
+    "custom.starved": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/EquipmentStarved",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toBoolean({value}), false)"
+          }
+        ]
+      }
+    },
+    "custom.blocked": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/EquipmentBlocked",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toBoolean({value}), false)"
+          }
+        ]
+      }
+    },
+    "custom.key": {
+      "binding": {
+        "type": "expr",
+        "config": {
+          "expression": "if({view.params.tagRoot} = \"\", \"NoComm\",\n case({view.custom.stateCode},\n  3, if({view.custom.blocked}, \"Blocked\", if({view.custom.starved}, \"Starved\", \"Running\")),\n  2, if({view.custom.blocked}, \"Blocked\", if({view.custom.starved}, \"Starved\", \"Stopped\")),\n  1, \"OutOfService\", 0, \"NotAvailable\", \"NoComm\"))"
+        }
+      }
+    },
+    "custom.wo": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGAdmin/ActiveWorkOrderID",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toStr({value}), \"\")"
+          }
+        ]
+      }
+    },
+    "custom.recipe": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGAdmin/CurrentRecipeID",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toStr({value}), \"\")"
+          }
+        ]
+      }
+    },
+    "custom.mes": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/MESRunning",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toBoolean({value}), false)"
+          }
+        ]
+      }
+    },
+    "custom.alarms": {
+      "binding": {
+        "type": "expr",
+        "config": {
+          "expression": "now(3000)"
+        },
+        "transforms": [
+          {
+            "type": "script",
+            "code": "\t# active alarms whose source is inside this unit\n\treturn HPHMI_ZoneE.unitAlarms(self.view.params.tagRoot)"
+          }
+        ]
+      }
+    },
+    "custom.drives": {
+      "binding": {
+        "type": "expr",
+        "config": {
+          "expression": "now(2000)"
+        },
+        "transforms": [
+          {
+            "type": "script",
+            "code": "\treturn HPHMI_ZoneE.driveStates(self.view.params.tagRoot)"
+          }
+        ]
+      }
+    },
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unitId": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.description": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.areaTitle": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.keyValues": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.kvRows": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.hasDrives": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.areaPage": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.sim": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.hasFaceplate": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "CoatingBlockDiagram"
+            },
+            "position": {
+              "height": 0.9125,
+              "width": 1,
+              "y": 0.0874
+            },
+            "props": {
+              "path": "Page/BlockDiagrams/CoatingBlockDiagram/MPFD-2"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "height": 0.0537,
+              "width": 0.1019,
+              "x": 0.0145,
+              "y": 0.0145
+            },
+            "propConfig": {
+              "props.value": {
+                "onChange": {
+                  "enabled": null,
+                  "script": "\tif currentValue!\u003dpreviousValue:\n\t\tcurrentValue\u003dstr(currentValue)\n\t\tcurrentValue\u003dcurrentValue.replace(\"[\",\"\")\n\t\tcurrentValue\u003dcurrentValue.replace(\"]\",\"\")\n\t\tcurrentValue\u003dcurrentValue.split(\",\")\t\t\n\t\tself.getSibling(\"CoatingBlockDiagram\").props.path\u003d\"Page/BlockDiagrams/CoatingBlockDiagram/\"+currentValue[0]\n\t\t"
+                }
+              }
+            },
+            "props": {
+              "dropdownOptionStyle": {
+                "color": "#000000",
+                "fontFamily": "sans-serif",
+                "fontSize": "15px",
+                "textAlign": "center"
+              },
+              "options": [
+                {
+                  "label": "Anode Line 1",
+                  "value": "MPFD-2"
+                },
+                {
+                  "label": "Anode Line 2",
+                  "value": "Anode Line 2"
+                },
+                {
+                  "label": "Cathode Line 1",
+                  "value": "MPFD-1"
+                },
+                {
+                  "label": "Cathode Line 2",
+                  "value": "Cathode Line 2"
+                }
+              ],
+              "placeholder": {
+                "color": "#000000",
+                "text": "Select Line"
+              },
+              "style": {
+                "backgroundColor": "#F4F4F4",
+                "borderBottomLeftRadius": 8,
+                "borderBottomRightRadius": 8,
+                "borderColor": "#000000",
+                "borderStyle": "outset",
+                "borderTopLeftRadius": 8,
+                "borderTopRightRadius": 8,
+                "borderWidth": "1px",
+                "color": "#000000",
+                "fontFamily": "sans-serif",
+                "fontSize": "15px"
+              },
+              "textAlign": "center",
+              "value": "MPFD-2"
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "backgroundColor": "rgb(240,240,240)"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

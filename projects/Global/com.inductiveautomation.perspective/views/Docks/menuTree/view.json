@@ -1,0 +1,165 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 249
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Tree"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "appearance": {
+            "defaultNodeIcons": {
+              "collapsed": {
+                "path": "material/folder"
+              },
+              "empty": {
+                "path": "material/stop"
+              },
+              "expanded": {
+                "path": "material/crop_16_9"
+              }
+            },
+            "expandIcons": {
+              "collapsed": {
+                "path": "material/arrow_right"
+              },
+              "expanded": {
+                "path": "material/arrow_drop_down"
+              }
+            },
+            "selectedStyle": {
+              "classes": "Menu/Menu_Selected"
+            }
+          },
+          "items": [
+            {
+              "data": {
+                "level": "Site",
+                "path": "Sanand"
+              },
+              "expanded": true,
+              "items": [
+                {
+                  "data": {
+                    "level": "Area",
+                    "path": "Sanand/zoneA"
+                  },
+                  "expanded": true,
+                  "items": [
+                    {
+                      "data": {
+                        "level": "Line",
+                        "path": "Sanand/zoneA/Line1"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "Machine",
+                            "path": "Sanand/zoneA/Line1/machine1"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Machine 1"
+                        },
+                        {
+                          "data": {
+                            "level": "Machine",
+                            "path": "Sanand/zoneA/Line1/machine2"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Machine 2"
+                        }
+                      ],
+                      "label": "Line 1"
+                    },
+                    {
+                      "data": {
+                        "level": "Line",
+                        "path": "Sanand/zoneA/Line2"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "Machine",
+                            "path": "Sanand/zoneA/Line2/machine1"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Machine 1"
+                        },
+                        {
+                          "data": {
+                            "level": "Machine",
+                            "path": "Sanand/zoneA/Line2/machine2"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Machine 2"
+                        }
+                      ],
+                      "label": "Line 2"
+                    }
+                  ],
+                  "label": "Zone A"
+                },
+                {
+                  "data": {
+                    "level": "Area",
+                    "path": "Sanand/zoneB"
+                  },
+                  "expanded": false,
+                  "items": [],
+                  "label": "Zone B"
+                },
+                {
+                  "data": {
+                    "level": "Area",
+                    "path": "Sanand/zoneE"
+                  },
+                  "expanded": false,
+                  "items": [],
+                  "label": "Zone E"
+                }
+              ],
+              "label": "Sanand"
+            }
+          ],
+          "selection": [
+            "0/2"
+          ],
+          "selectionData": [
+            {
+              "itemPath": "0/2",
+              "value": {
+                "level": "Area",
+                "path": "Sanand/zoneE"
+              }
+            }
+          ]
+        },
+        "type": "ia.display.tree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "margin": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

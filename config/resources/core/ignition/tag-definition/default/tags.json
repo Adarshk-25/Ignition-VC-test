@@ -1,0 +1,39 @@
+[
+  {
+    "valueSource": "expr",
+    "expression": "dateExtract(now(1000), \u0027hour\u0027) * 3600 + dateExtract(now(1000), \u0027minute\u0027) * 60 + dateExtract(now(1000), \u0027second\u0027)",
+    "dataType": "Int4",
+    "name": "SCADAHeartbeat",
+    "executionMode": "EventDriven",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "expr",
+    "expression": "{[System]Gateway/OPC/Connections/PLC/Connected}",
+    "dataType": "Boolean",
+    "alarms": [
+      {
+        "setpointA": 0.0,
+        "Troubleshoot": "Check PLC connection",
+        "Severity": "4",
+        "name": "PLC Comm Status",
+        "label": "PLC Communication Lost",
+        "priority": "High",
+        "Alarm Description": "PLC Communication Lost",
+        "enabled": true,
+        "Timestamp Reset": {
+          "bindType": "Tag",
+          "value": "[~]PLC_Communication/Alarms/PLC Comm Status.ClearTime"
+        },
+        "Timestamp Active": {
+          "bindType": "Expression",
+          "value": "{Timestamp}"
+        }
+      }
+    ],
+    "name": "PLC_Communication",
+    "executionMode": "FixedRate",
+    "tagType": "AtomicTag",
+    "enabled": true
+  }
+]

@@ -1,0 +1,801 @@
+{
+  "custom": {},
+  "params": {
+    "machine": "/"
+  },
+  "propConfig": {
+    "params.machine": {
+      "binding": {
+        "config": {
+          "path": "page.props.path"
+        },
+        "type": "property"
+      },
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1168,
+      "width": 1603
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "mainBreadcrumb"
+        },
+        "position": {
+          "display": false
+        },
+        "propConfig": {
+          "props.params.path": {
+            "binding": {
+              "config": {
+                "path": "view.params.machine"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "sharedViews/mainBreadcrumb",
+          "useDefaultViewWidth": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "inputValuesMachineCode"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "propConfig": {
+              "props.params.dropDownOptions": {
+                "binding": {
+                  "config": {
+                    "expression": "1"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tmachines \u003d [\n\t    \"Last Week\",\"Last Shift\",\"Last 15 Days\"\n\t]\n\t\n\tresult \u003d []\n\t\n\tfor m in machines:\n\t    result.append({\n\t        \"value\": m,\n\t        \"label\": m\n\t    })\n\t\n\t# return result (for transform / script)\n\treturn result",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "isDropdown": true,
+                "selectedDate": "",
+                "selectedDropDownValue": "",
+                "title": "Selection"
+              },
+              "path": "widgets(templates)/baseTemplates/inputValues"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "inputStartDate"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "dropDownOptions": "value",
+                "isDropdown": false,
+                "selectedDate": "",
+                "selectedDropDownValue": "",
+                "title": "Start Date"
+              },
+              "path": "widgets(templates)/baseTemplates/inputValues"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "inputEndDate"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "dropDownOptions": "value",
+                "isDropdown": false,
+                "selectedDate": "",
+                "selectedDropDownValue": "",
+                "title": "End Date"
+              },
+              "path": "widgets(templates)/baseTemplates/inputValues"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_filter"
+        },
+        "position": {
+          "display": false
+        },
+        "props": {
+          "style": {
+            "classes": "widgets/spacing widgets/valueDisplay"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "circularGuage_OEE"
+            },
+            "position": {
+              "basis": "450px"
+            },
+            "props": {
+              "params": {
+                "AvailablilityValue": 76,
+                "OEEName": "Live OEE ",
+                "OEEValue": "53%",
+                "PerformanceValue": 78,
+                "QualityValue": 91
+              },
+              "path": "widgets(templates)/circularGuage_OEE"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "grow": 1
+                        },
+                        "props": {
+                          "alignItems": "center",
+                          "elementPosition": {
+                            "basis": 1
+                          },
+                          "instances": [
+                            {
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "label": "Units Produced",
+                              "value": 2847
+                            },
+                            {
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "label": "Target (shift)",
+                              "value": 3600
+                            },
+                            {
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "label": "Rejected",
+                              "value": 262
+                            },
+                            {
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "label": "Scrap Rate",
+                              "value": "9.2%"
+                            },
+                            {
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "label": "Cycle Time (avg)",
+                              "value": "8.7s"
+                            },
+                            {
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "label": "MTBF (Hrs.)",
+                              "value": 110.1
+                            },
+                            {
+                              "instancePosition": {},
+                              "instanceStyle": {
+                                "classes": ""
+                              },
+                              "label": "MTTR (Hrs.)",
+                              "value": 1.7
+                            }
+                          ],
+                          "justify": "space-around",
+                          "path": "widgets(templates)/cardDisplay",
+                          "style": {
+                            "overflow": "hidden"
+                          },
+                          "useDefaultViewWidth": false
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "justify": "space-between",
+                      "style": {
+                        "classes": "widgets/spacing",
+                        "overflow": "hidden"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "center",
+                  "style": {
+                    "overflow": "hidden"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "apexchart"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.options": {
+                        "persistent": true
+                      },
+                      "props.series": {
+                        "persistent": true
+                      }
+                    },
+                    "props": {
+                      "options": {
+                        "chart": {
+                          "parentHeightOffset": 0,
+                          "stacked": true,
+                          "toolbar": {
+                            "show": false
+                          },
+                          "type": "bar"
+                        },
+                        "colors": [
+                          "#FF4560",
+                          "#FEB019",
+                          "#008FFB"
+                        ],
+                        "dataLabels": {
+                          "enabled": false
+                        },
+                        "fill": {
+                          "opacity": 1
+                        },
+                        "grid": {
+                          "padding": {
+                            "bottom": 0,
+                            "left": 60,
+                            "right": 10,
+                            "top": 0
+                          }
+                        },
+                        "legend": {
+                          "fontSize": "14px",
+                          "horizontalAlign": "left",
+                          "position": "top"
+                        },
+                        "plotOptions": {
+                          "bar": {
+                            "horizontal": true
+                          }
+                        },
+                        "stroke": {
+                          "colors": [
+                            "#ffffff"
+                          ],
+                          "width": 1
+                        },
+                        "title": {
+                          "align": "left",
+                          "style": {
+                            "fontSize": "20px",
+                            "fontWeight": 600
+                          },
+                          "text": "Top OEE Loss Contributors"
+                        },
+                        "xaxis": {
+                          "categories": [
+                            "Changeover Loss",
+                            "Formation Trip",
+                            "Equipment Breakdown",
+                            "Welding Failure",
+                            "Coating Defect"
+                          ],
+                          "labels": {
+                            "style": {
+                              "fontSize": "12px"
+                            }
+                          },
+                          "title": {
+                            "style": {
+                              "fontSize": "12px"
+                            },
+                            "text": "Impact (Minutes / Units)"
+                          }
+                        },
+                        "yaxis": {
+                          "labels": {
+                            "maxWidth": 320,
+                            "style": {
+                              "fontSize": "14px",
+                              "fontWeight": 500
+                            }
+                          }
+                        }
+                      },
+                      "series": [
+                        {
+                          "data": [
+                            175,
+                            120,
+                            210,
+                            60,
+                            0
+                          ],
+                          "name": "Availability Loss"
+                        },
+                        {
+                          "data": [
+                            40,
+                            30,
+                            15,
+                            50,
+                            10
+                          ],
+                          "name": "Performance Loss"
+                        },
+                        {
+                          "data": [
+                            0,
+                            10,
+                            0,
+                            25,
+                            80
+                          ],
+                          "name": "Quality Loss"
+                        }
+                      ],
+                      "type": "bar"
+                    },
+                    "type": "kyvislabs.display.apexchart"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "350px",
+                  "grow": 1
+                },
+                "props": {
+                  "justify": "space-between",
+                  "style": {
+                    "classes": "widgets/spacing",
+                    "overflow": "hidden"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "350px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "center",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "55%",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "apexchart"
+            },
+            "position": {
+              "basis": "300px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.options": {
+                "persistent": true
+              },
+              "props.series": {
+                "binding": {
+                  "config": {
+                    "expression": "1"
+                  },
+                  "enabled": false,
+                  "transforms": [
+                    {
+                      "code": "\treturn[\n  {\n    \"name\": \"OEE\",\n    \"data\": [64.6, 70.1, 66.3, 74.2, 78.4, 80.2, 83.8]\n  },\n  {\n    \"name\": \"Availability\",\n    \"data\": [85, 88, 86, 90, 92, 93, 94]\n  },\n  {\n    \"name\": \"Performance\",\n    \"data\": [80, 83, 82, 85, 87, 88, 90]\n  },\n  {\n    \"name\": \"Quality\",\n    \"data\": [95, 96, 94, 97, 98, 98, 99]\n  }\n]",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "line"
+                },
+                "colors": [
+                  "#000000",
+                  "#F97316",
+                  "#E6E36D",
+                  "#63F8A0"
+                ],
+                "grid": {
+                  "borderColor": "#e0e0e0",
+                  "strokeDashArray": 3
+                },
+                "legend": {
+                  "fontSize": "14px",
+                  "horizontalAlign": "left",
+                  "position": "top"
+                },
+                "markers": {
+                  "size": 4
+                },
+                "stroke": {
+                  "curve": "smooth",
+                  "width": 3
+                },
+                "title": {
+                  "align": "left",
+                  "style": {
+                    "fontSize": "20px",
+                    "fontWeight": 600
+                  },
+                  "text": "OEE Trend - Last 7 Days"
+                },
+                "tooltip": {
+                  "y": {
+                    "formatter": "function(val){ return val + \u0027%\u0027; }"
+                  }
+                },
+                "xaxis": {
+                  "categories": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                    "Sun"
+                  ],
+                  "labels": {
+                    "style": {
+                      "fontSize": "14px"
+                    }
+                  }
+                },
+                "yaxis": {
+                  "labels": {
+                    "formatter": "function(val){ return val + \u0027%\u0027; }"
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "tickAmount": 5,
+                  "title": {
+                    "text": "Percentage (%)"
+                  }
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    64.6,
+                    70.1,
+                    66.3,
+                    74.2,
+                    78.4,
+                    80.2,
+                    83.8
+                  ],
+                  "name": "OEE"
+                },
+                {
+                  "data": [
+                    85,
+                    88,
+                    86,
+                    90,
+                    92,
+                    93,
+                    94
+                  ],
+                  "name": "Availability"
+                },
+                {
+                  "data": [
+                    80,
+                    83,
+                    82,
+                    85,
+                    87,
+                    88,
+                    90
+                  ],
+                  "name": "Performance"
+                },
+                {
+                  "data": [
+                    95,
+                    96,
+                    94,
+                    97,
+                    98,
+                    98,
+                    99
+                  ],
+                  "name": "Quality"
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": "0.75em",
+                "borderBottomRightRadius": "0.75em",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "0.75em",
+                "borderTopRightRadius": "0.75em",
+                "borderWidth": 0.01,
+                "margin": "1em",
+                "outlineColor": "#AAAAAA",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.01"
+              }
+            },
+            "type": "kyvislabs.display.apexchart"
+          },
+          {
+            "custom": {
+              "key": "#FF4560"
+            },
+            "meta": {
+              "name": "apexchart_0"
+            },
+            "position": {
+              "basis": "50%"
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "expression": "1"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn{\n  \"chart\": {\n    \"type\": \"bar\",\n    \"stacked\": True,\n    \"toolbar\": {\n      \"show\": False\n    }\n  },\n  \"plotOptions\": {\n    \"bar\": {\n      \"horizontal\": True,\n      \"dataLabels\": {\n        \"total\": {\n          \"enabled\": True,\n          \"style\": {\n            \"fontSize\": \"13px\",\n            \"fontWeight\": 900\n          }\n        }\n      }\n    }\n  },\n  \"stroke\": {\n    \"width\": 1,\n    \"colors\": [\"#ffffff\"]\n  },\n  \"title\": {\n    \"text\": \"Production by Category\",\n    \"align\": \"left\"\n  },\n  \"xaxis\": {\n    \"categories\": [\"Line 1\", \"Line 2\", \"Line 3\", \"Line 4\", \"Line 5\"],\n    \"title\": {\n      \"text\": \"Units\"\n    }\n  },\n  \"legend\": {\n    \"position\": \"top\",\n    \"horizontalAlign\": \"left\"\n  },\n  \"fill\": {\n    \"opacity\": 1\n  },\n  \"colors\": [\n    \"#22C55E\",\n    \"#EF4444\",\n    \"#F97316\"\n  ]\n}",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                },
+                "persistent": true
+              },
+              "props.series": {
+                "binding": {
+                  "config": {
+                    "expression": "1"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn [\n  {\n    \"name\": \"Run\",\n    \"data\": [44, 55, 41, 37, 22]\n  },\n  {\n    \"name\": \"Breakdown\",\n    \"data\": [11, 17, 15, 15, 21]\n  },\n  {\n    \"name\": \"Planned Stop\",\n    \"data\": [21, 7, 25, 13, 22]\n  }\n]",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "stacked": true,
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "bar"
+                },
+                "colors": [
+                  "#22C55E",
+                  "#EF4444",
+                  "#F97316"
+                ],
+                "fill": {
+                  "opacity": 1
+                },
+                "legend": {
+                  "horizontalAlign": "left",
+                  "position": "top"
+                },
+                "plotOptions": {
+                  "bar": {
+                    "dataLabels": {
+                      "total": {
+                        "enabled": true,
+                        "style": {
+                          "fontSize": "13px",
+                          "fontWeight": 900
+                        }
+                      }
+                    },
+                    "horizontal": true
+                  }
+                },
+                "stroke": {
+                  "colors": [
+                    "#ffffff"
+                  ],
+                  "width": 1
+                },
+                "title": {
+                  "align": "left",
+                  "text": "Production by Category"
+                },
+                "xaxis": {
+                  "categories": [
+                    "Line 1",
+                    "Line 2",
+                    "Line 3",
+                    "Line 4",
+                    "Line 5"
+                  ],
+                  "title": {
+                    "text": "Units"
+                  }
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    44,
+                    55,
+                    41,
+                    37,
+                    22
+                  ],
+                  "name": "Run"
+                },
+                {
+                  "data": [
+                    11,
+                    17,
+                    15,
+                    15,
+                    21
+                  ],
+                  "name": "Breakdown"
+                },
+                {
+                  "data": [
+                    21,
+                    7,
+                    25,
+                    13,
+                    22
+                  ],
+                  "name": "Planned Stop"
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": "0.75em",
+                "borderBottomRightRadius": "0.75em",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "0.75em",
+                "borderTopRightRadius": "0.75em",
+                "borderWidth": 0.01,
+                "margin": "1em",
+                "outlineColor": "#AAAAAA",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.01"
+              },
+              "type": "bar"
+            },
+            "type": "kyvislabs.display.apexchart"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "40%",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "margin": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

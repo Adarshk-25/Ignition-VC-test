@@ -1,0 +1,476 @@
+{
+  "custom": {},
+  "params": {
+    "label": "value",
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 262,
+      "width": 305
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "draggable": true,
+                "id": "gACazC7k",
+                "modal": false,
+                "overlayDismiss": false,
+                "position": {
+                  "height": 1050,
+                  "width": 1700
+                },
+                "positionType": "exact",
+                "resizable": false,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "Motor": "[default]IN11_E305_PCE_POW22_MetaData_IN11_E305_PCE/CMS21",
+                  "Tag": "[default]IN11_E305_PCE_POW22_IN11_E305_PCE/CMS21/AGStatus",
+                  "screenName": "CM Weighing Hopper"
+                },
+                "viewPath": "Page/Mixing_Templates/POW_Screen",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Hopper_3"
+        },
+        "position": {
+          "height": 231,
+          "width": 238,
+          "x": 58.45,
+          "y": 0.39000000000000057
+        },
+        "propConfig": {
+          "custom.color": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "CM Weighing Hopper"
+          },
+          "path": "widgets(templates)/mixingEquipments/Hopper"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Drawing_4",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 29,
+          "rotate": {
+            "anchor": "-17% 75%"
+          },
+          "width": 30,
+          "x": 14.01,
+          "y": 17.47
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.Tag}"
+                },
+                "tagPath": "{Tag}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "Not Available",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "NA"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Out of Service"
+                    },
+                    {
+                      "input": 2,
+                      "output": "Not Executing"
+                    },
+                    {
+                      "input": 3,
+                      "output": "Executing"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.Tag}"
+                },
+                "tagPath": "{Tag}/CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[1].text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "NA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "NA"
+                    },
+                    {
+                      "input": 1,
+                      "output": "OS"
+                    },
+                    {
+                      "input": 2,
+                      "output": "NE"
+                    },
+                    {
+                      "input": 3,
+                      "output": "E"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "height": 22,
+              "name": "rect",
+              "rx": 5,
+              "ry": 5,
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "22",
+              "x": "3",
+              "y": "2"
+            },
+            {
+              "fontSize": "12px",
+              "name": "text",
+              "type": "text",
+              "x": "6.000001907348633",
+              "y": "18.000017166137695"
+            }
+          ]
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Drawing_1",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 29,
+          "rotate": {
+            "anchor": "298% 122%"
+          },
+          "width": 31,
+          "x": 257.668,
+          "y": 17.40745
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.Tag}"
+                },
+                "tagPath": "{Tag}\\CurrentMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "None",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "None"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Maintenance"
+                    },
+                    {
+                      "input": 2,
+                      "output": "Set Up"
+                    },
+                    {
+                      "input": 3,
+                      "output": "Processing"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[1].text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/CurrentMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "N",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "N"
+                    },
+                    {
+                      "input": 1,
+                      "output": "M"
+                    },
+                    {
+                      "input": 2,
+                      "output": "S"
+                    },
+                    {
+                      "input": 3,
+                      "output": "P"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.Tag}"
+                },
+                "tagPath": "{Tag}\\CurrentMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {
+                "paint": "#BDBDBD"
+              },
+              "name": "perspective-arc",
+              "specialPath": {
+                "end": 0,
+                "height": 22,
+                "slice": true,
+                "start": 0,
+                "width": 22,
+                "x": 3,
+                "y": 3
+              },
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "fontSize": "13px",
+              "name": "text",
+              "stroke": {
+                "width": "3px"
+              },
+              "type": "text",
+              "x": "8.800013542175293",
+              "y": "18.60003089904785"
+            }
+          ]
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "rotate": {
+            "anchor": "100% 50%"
+          },
+          "width": 50,
+          "x": 123,
+          "y": 207
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

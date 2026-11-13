@@ -1,0 +1,221 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 230
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "MenuTree"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.items": {
+            "persistent": true
+          },
+          "props.items[0].style.classes": {
+            "binding": {
+              "config": {
+                "expression": "{page.props.path}"
+              },
+              "transforms": [
+                {
+                  "expression": "if ({value}\u003d{this.props.items[0].target},\"Menu/selected_menu\",\"\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "expr"
+            },
+            "persistent": true
+          },
+          "props.items[1].items[0].style.classes": {
+            "binding": {
+              "config": {
+                "expression": "{page.props.path}"
+              },
+              "transforms": [
+                {
+                  "expression": "if ({value}\u003d{this.props.items[1].items[0].target},\"Menu/selected_menu\",\"\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "expr"
+            }
+          },
+          "props.items[1].items[1].style.classes": {
+            "binding": {
+              "config": {
+                "expression": "{page.props.path}"
+              },
+              "transforms": [
+                {
+                  "expression": "if ({value}\u003d{this.props.items[1].items[1].target},\"Menu/selected_menu\",\"\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "itemStyle": {
+            "borderStyle": "none"
+          },
+          "items": [
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "text": "Plant Overview"
+              },
+              "style": {
+                "classes": ""
+              },
+              "target": "/plant-overview",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [
+                {
+                  "backActionText": "",
+                  "enabled": true,
+                  "items": [],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Zone A Overview"
+                  },
+                  "navIcon": {
+                    "path": ""
+                  },
+                  "resetOnClick": false,
+                  "showHeader": true,
+                  "style": {},
+                  "target": "/zone-a",
+                  "visible": true
+                },
+                {
+                  "backActionText": "Main Menu",
+                  "enabled": true,
+                  "items": [],
+                  "label": {
+                    "icon": {
+                      "path": ""
+                    },
+                    "text": "Line 1"
+                  },
+                  "navIcon": {
+                    "path": ""
+                  },
+                  "resetOnClick": false,
+                  "showHeader": true,
+                  "style": {},
+                  "target": "/zoneA_Line1",
+                  "visible": true
+                }
+              ],
+              "label": {
+                "text": "Zone A"
+              },
+              "navIcon": {
+                "color": "",
+                "path": "material/chevron_right"
+              },
+              "target": "/zone-a",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "text": "Zone B"
+              },
+              "target": "/zone-b",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "text": "Zone E"
+              },
+              "target": "/zone-e",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "text": "Utilities"
+              },
+              "target": "/utilities",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "text": "Alarm Center"
+              },
+              "target": "/alarm-center",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "text": "Analytics"
+              },
+              "target": "/analytics",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "text": "Maintenance"
+              },
+              "target": "/userManagement",
+              "visible": true
+            },
+            {
+              "enabled": true,
+              "items": [],
+              "label": {
+                "text": "System Health"
+              },
+              "target": "/system-health",
+              "visible": true
+            }
+          ],
+          "style": {
+            "backgroundColor": "rgb(244, 244, 244)",
+            "borderColor": "rgb(244, 244, 244)",
+            "borderStyle": "solid",
+            "borderWidth": "0.666667px",
+            "fontFamily": "Segoe UI",
+            "fontSize": "0.875em",
+            "paddingLeft": "0.25em",
+            "paddingTop": "1em"
+          }
+        },
+        "type": "ia.navigation.menutree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

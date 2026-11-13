@@ -1,0 +1,695 @@
+{
+  "custom": {
+    "wo": "",
+    "recipe": "",
+    "stateCode": -9,
+    "modeCode": -9,
+    "starved": false,
+    "blocked": false,
+    "key": "NoComm"
+  },
+  "params": {
+    "tagRoot": "",
+    "area": "",
+    "line": "",
+    "unitId": "",
+    "description": "",
+    "alarmCount": 0,
+    "sim": false,
+    "planned": false
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1180,
+      "height": 34
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "position": {},
+    "props": {
+      "direction": "row",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "center",
+      "alignContent": "flex-start",
+      "style": {
+        "classes": "HPHMI/List/Row",
+        "overflow": "hidden"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Area"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Text/Label"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.area"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Line"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Text/Label"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.line"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Unit"
+        },
+        "position": {
+          "basis": "120px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "6px",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Id"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Text/Strong"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.unitId"
+                  }
+                }
+              },
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.planned}, \"HPHMI/Text/Muted\", \"HPHMI/Text/Strong\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Sim"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "SIM",
+              "style": {
+                "classes": "HPHMI/Chip/Sim"
+              }
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.sim"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Description"
+        },
+        "position": {
+          "basis": "260px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.description"
+              }
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.planned}, \"HPHMI/Text/Muted\", \"HPHMI/Card/Text\")"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "State"
+        },
+        "position": {
+          "basis": "210px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "6px",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.icon",
+            "meta": {
+              "name": "Icon"
+            },
+            "position": {
+              "basis": "18px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "material/help_outline",
+              "color": "#555C64",
+              "style": {
+                "minWidth": "18px",
+                "height": "18px"
+              }
+            },
+            "propConfig": {
+              "props.path": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.planned}, \"material/link_off\", case({view.custom.key}, \"Running\",\"material/play_arrow\", \"Stopped\",\"material/stop\", \"Starved\",\"material/hourglass_empty\", \"Blocked\",\"material/block\", \"OutOfService\",\"material/build\", \"NotAvailable\",\"material/remove_circle_outline\", \"material/help_outline\"))"
+                  }
+                }
+              },
+              "props.color": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.planned}, \"#868C94\", case({view.custom.key}, \"Running\",\"#1F2328\", \"Starved\",\"#1F5FA8\", \"Blocked\",\"#1F5FA8\", \"NotAvailable\",\"#868C94\", \"#555C64\"))"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Text"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Card/Text"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.planned}, \"Not connected\", case({view.custom.key}, \"Running\",\"Running\", \"Stopped\",\"Stopped\", \"Starved\",\"Starved – no input\", \"Blocked\",\"Blocked – output\", \"OutOfService\",\"Out of service\", \"NotAvailable\",\"Not available\", \"No comm · bad quality\"))"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Mode"
+        },
+        "position": {
+          "basis": "120px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.planned}, \"—\", case({view.custom.modeCode}, 0,\"None\", 1,\"Maintenance\", 2,\"Setup\", 3,\"Processing\", \"—\"))"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "WO"
+        },
+        "position": {
+          "basis": "140px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.custom.wo} = \"\", \"—\", {view.custom.wo})"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Recipe"
+        },
+        "position": {
+          "basis": "130px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.custom.recipe} = \"\", \"—\", {view.custom.recipe})"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Alarms"
+        },
+        "position": {
+          "basis": "60px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Badge"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.icon",
+                "meta": {
+                  "name": "Icon"
+                },
+                "position": {
+                  "basis": "16px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "material/warning",
+                  "color": "#1F2328",
+                  "style": {
+                    "minWidth": "16px",
+                    "height": "16px"
+                  }
+                },
+                "propConfig": {
+                  "props.path": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "case(\"Warning\", \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                      }
+                    }
+                  },
+                  "props.color": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if(\"Warning\" = \"Critical\", \"#FFFFFF\", \"#1F2328\")"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Count"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "0",
+                  "style": {
+                    "fontWeight": "700",
+                    "fontSize": "14px"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "toStr({view.params.alarmCount})"
+                      }
+                    }
+                  },
+                  "props.style.color": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if(\"Warning\" = \"Critical\", \"#FFFFFF\", \"#1F2328\")"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "propConfig": {
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"HPHMI/Badge/\" + if(\"Warning\" = \"none\", \"Info\", \"Warning\")"
+                  }
+                }
+              },
+              "position.display": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.alarmCount} > 0"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "type": "script",
+          "scope": "G",
+          "config": {
+            "script": "\tif not self.view.params.planned:\n\t\tHPHMI_ZoneE.openQuickView(self.view.params.tagRoot)"
+          }
+        }
+      }
+    }
+  },
+  "propConfig": {
+    "custom.stateCode": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/CurrentState",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toInt({value}, -9), -9)"
+          }
+        ]
+      }
+    },
+    "custom.modeCode": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/CurrentMode",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toInt({value}, -9), -9)"
+          }
+        ]
+      }
+    },
+    "custom.starved": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/EquipmentStarved",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toBoolean({value}), false)"
+          }
+        ]
+      }
+    },
+    "custom.blocked": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/EquipmentBlocked",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toBoolean({value}), false)"
+          }
+        ]
+      }
+    },
+    "custom.key": {
+      "binding": {
+        "type": "expr",
+        "config": {
+          "expression": "if({view.params.tagRoot} = \"\", \"NoComm\",\n case({view.custom.stateCode},\n  3, if({view.custom.blocked}, \"Blocked\", if({view.custom.starved}, \"Starved\", \"Running\")),\n  2, if({view.custom.blocked}, \"Blocked\", if({view.custom.starved}, \"Starved\", \"Stopped\")),\n  1, \"OutOfService\", 0, \"NotAvailable\", \"NoComm\"))"
+        }
+      }
+    },
+    "custom.wo": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGAdmin/ActiveWorkOrderID",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toStr({value}), \"\")"
+          }
+        ]
+      }
+    },
+    "custom.recipe": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGAdmin/CurrentRecipeID",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toStr({value}), \"\")"
+          }
+        ]
+      }
+    },
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.area": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.line": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unitId": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.description": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.alarmCount": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.sim": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.planned": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

@@ -1,0 +1,418 @@
+{
+  "custom": {
+    "popupOpen": false
+  },
+  "params": {
+    "Man_Data": [
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      }
+    ],
+    "Tag_Path": 0,
+    "Title": 0,
+    "ToolTip": 0,
+    "activetag": "value",
+    "equipmentGraphic": "Value",
+    "statustag": "value"
+  },
+  "propConfig": {
+    "custom.popupOpen": {
+      "persistent": true
+    },
+    "params.Man_Data": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag_Path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Title": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ToolTip": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.activetag": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.equipmentGraphic": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.statustag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 51,
+      "width": 86
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.view.custom.popupOpen \u003d True"
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onMouseOut": {
+              "config": {
+                "script": "\tself.props.style.backgroundColor \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onMouseOver": {
+              "config": {
+                "script": "\tself.props.style.backgroundColor \u003d \"#D3D3D3\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Label",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.5561,
+          "width": 0.4941,
+          "x": 0.2355,
+          "y": 0.1943
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.ToolTip"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag_Path": "{view.params.Tag_Path}"
+                },
+                "tagPath": "{Tag_Path}.Name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.textStyle.backgroundColor": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.popupOpen}, \"#D3D3D3\", \"transparent\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": ""
+          },
+          "textStyle": {
+            "borderStyle": "outset",
+            "borderWidth": 1,
+            "classes": "Page/Label3",
+            "paddingBottom": 9,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 9,
+            "resize": "both",
+            "whiteSpace": "normal"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "activeButton (pressed)",
+          "tooltip": {
+            "enabled": true,
+            "text": "Active"
+          }
+        },
+        "position": {
+          "height": 0.3241,
+          "width": 0.2697,
+          "x": -0.01,
+          "y": 0.3433
+        },
+        "propConfig": {
+          "props.elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "expression": "if(tag({view.params.activetag}), \"#00FF00\", \"#808080\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M689,965 l-123,34 -134,0 -123,-34 -114,-66 -96,-96 -66,-114 -33,-123 0,-134 33,-123 66,-114 96,-96 114,-66 123,-33 134,0 123,33 114,66 96,96 66,114 34,123 0,134 -34,123 -66,114 -96,96 -114,66z",
+              "fill": {
+                "paint": "#999"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M648,864 l-99,26 -102,0 -99,-26 -88,-53 -73,-71 -53,-90 -26,-99 0,-102 26,-99 53,-90 71,-71 90,-53 99,-26 102,0 99,26 90,53 71,71 53,90 26,99 0,102 -26,99 -53,90 -71,71 -90,53z",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M809,260 l53,90 26,99 0,102 -26,99 -53,90 -71,71 -90,53 -99,26 -102,0 -99,-26 -88,-53 -73,-71",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#fff",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "fontSize": "500px",
+              "name": "text",
+              "text": "A",
+              "type": "text",
+              "x": "344",
+              "y": "648"
+            }
+          ],
+          "viewBox": "0 0 999 999"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "statusButton (pressed)",
+          "tooltip": {
+            "enabled": true,
+            "text": "Status"
+          }
+        },
+        "position": {
+          "height": 0.3241,
+          "width": 0.2697,
+          "x": 0.7122,
+          "y": 0.3435
+        },
+        "propConfig": {
+          "props.elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "expression": "tag({view.params.statustag})"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#808080"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#00FF00"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FF0000"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M689,965 l-123,34 -134,0 -123,-34 -114,-66 -96,-96 -66,-114 -33,-123 0,-134 33,-123 66,-114 96,-96 114,-66 123,-33 134,0 123,33 114,66 96,96 66,114 34,123 0,134 -34,123 -66,114 -96,96 -114,66z",
+              "fill": {
+                "paint": "#999"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M648,864 l-99,26 -102,0 -99,-26 -88,-53 -73,-71 -53,-90 -26,-99 0,-102 26,-99 53,-90 71,-71 90,-53 99,-26 102,0 99,26 90,53 71,71 53,90 26,99 0,102 -26,99 -53,90 -71,71 -90,53z",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M809,260 l53,90 26,99 0,102 -26,99 -53,90 -71,71 -90,53 -99,26 -102,0 -99,-26 -88,-53 -73,-71",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#fff",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "fontSize": "500px",
+              "name": "text",
+              "text": "S",
+              "type": "text",
+              "x": "360",
+              "y": "683"
+            }
+          ],
+          "viewBox": "0 0 999 999"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "86:51",
+      "mode": "percent",
+      "style": {
+        "alignItems": "stretch",
+        "overflow": "hidden"
+      }
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "PopupClosed",
+          "pageScope": true,
+          "script": "\t# implement your handler here\n\tself.view.custom.popupOpen \u003d False",
+          "sessionScope": false,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

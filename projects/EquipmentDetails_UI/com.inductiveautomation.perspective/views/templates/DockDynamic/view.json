@@ -1,0 +1,108 @@
+{
+  "custom": {},
+  "params": {
+    "equipment": "value",
+    "height": "value",
+    "width": "value"
+  },
+  "propConfig": {
+    "params.equipment": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.height": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.width": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1040,
+      "width": 1693
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "dockView"
+        },
+        "propConfig": {
+          "props.params.equipment": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipment"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "greenEnd": "value",
+            "greenStart": "value",
+            "height": "value",
+            "max": "value",
+            "min": "value",
+            "width": "value"
+          },
+          "path": "Docks/dockView",
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Oven Dock"
+        },
+        "position": {
+          "size": "large"
+        },
+        "propConfig": {
+          "props.params.equipment": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipment"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "view.params.height"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "view.params.width"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tagPath": "[default]agratas/sanand/zoneE/coating/anode/cpc1/"
+          },
+          "path": "templates/Oven Dock"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoint": 800
+    },
+    "type": "ia.container.breakpt"
+  }
+}

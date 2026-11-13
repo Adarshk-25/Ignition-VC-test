@@ -1,0 +1,169 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_9"
+            },
+            "position": {
+              "height": 0.1396,
+              "width": 0.4319,
+              "x": 0.3767,
+              "y": 0.3002
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "Main Flow"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_10"
+            },
+            "position": {
+              "height": 0.1396,
+              "width": 0.4319,
+              "x": 0.3767,
+              "y": 0.4776
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "Sensor Backup Flow"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.1397,
+              "width": 0.6811,
+              "x": 0.1334,
+              "y": 0.1394
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "Arrow Indicator"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Drawing_1"
+            },
+            "position": {
+              "height": 0.584,
+              "width": 0.6867,
+              "x": 0.1281,
+              "y": 0.1315
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "169.3333282470703",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "2px"
+                  },
+                  "type": "rect",
+                  "width": "328.3333435058594",
+                  "x": 291.33333333333303,
+                  "y": 136.33333333333303
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "290.3333435058594 135.3333282470703 330.3333435058594 171.3333282470703"
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "800px"
+        },
+        "props": {
+          "aspectRatio": "300:250",
+          "mode": "percent",
+          "pipes": [
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_39",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.3156,
+                    "y": 0.3861
+                  }
+                ],
+                "x": 0.2161,
+                "y": 0.3861
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_12",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.3156,
+                    "y": 0.5541
+                  }
+                ],
+                "x": 0.2161,
+                "y": 0.5541
+              },
+              "start": "none",
+              "stroke": "#4747FF",
+              "width": 2
+            }
+          ]
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

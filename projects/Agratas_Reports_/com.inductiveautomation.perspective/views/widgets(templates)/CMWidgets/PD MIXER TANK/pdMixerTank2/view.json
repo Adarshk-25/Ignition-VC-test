@@ -1,0 +1,380 @@
+{
+  "custom": {},
+  "params": {
+    "tagPath": "Mixing/pdMixer"
+  },
+  "propConfig": {
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 185,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Vessel"
+        },
+        "position": {
+          "height": 0.7182,
+          "shrink": 0,
+          "width": 0.64,
+          "x": 0.0252
+        },
+        "propConfig": {
+          "custom.alarm": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[default]Mixing/pdMixer/Alarm Metrics.activeUnackCount"
+              },
+              "type": "tag"
+            }
+          },
+          "props.label.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.liquidColor": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/plcTags/level"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "max": 30,
+                        "min": 0
+                      },
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": {
+                        "max": 55,
+                        "min": 31
+                      },
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": {
+                        "max": 80,
+                        "min": 56
+                      },
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": {
+                        "max": 100,
+                        "min": 81
+                      },
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.state": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "0": "{view.params.tagPath}"
+                },
+                "tagPath": "{0}/status/status"
+              },
+              "transforms": [
+                {
+                  "fallback": "NA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "default"
+                    },
+                    {
+                      "input": 1,
+                      "output": "default"
+                    },
+                    {
+                      "input": 2,
+                      "output": "running"
+                    },
+                    {
+                      "input": 3,
+                      "output": "stopped"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                },
+                {
+                  "code": "\tif self.custom.alarm\u003e0:\n\t\treturn \"faulted\"\n\telse:\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.value.value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/plcTags/level"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "appearance": "p\u0026id",
+          "bottom": "rounded",
+          "label": {
+            "justify": "right",
+            "location": "top",
+            "style": {
+              "fontFamily": "sans-serif",
+              "fontSize": 12
+            }
+          },
+          "value": {
+            "justify": "right",
+            "style": {
+              "fontFamily": "sans-serif",
+              "fontSize": 12
+            }
+          }
+        },
+        "type": "ia.symbol.vessel"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Status :"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/status/status"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "NA",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "Idle"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Filling"
+                        },
+                        {
+                          "input": 2,
+                          "output": "Mixing"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Discharge"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "0.2rem",
+                "borderBottomRightRadius": "0.2rem",
+                "borderStyle": "ridge",
+                "borderTopLeftRadius": "0.2rem",
+                "borderTopRightRadius": "0.2rem",
+                "borderWidth": 1
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "height": 0.1081,
+          "width": 0.98,
+          "x": 0.015,
+          "y": 0.7579
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderColor": "#808080",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 0.1,
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 2,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 2
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.0595,
+          "width": 0.22,
+          "x": 0.6568,
+          "y": 0.2811
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/mode"
+              },
+              "transforms": [
+                {
+                  "fallback": "NA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "Auto"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Manual"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderStyle": "ridge",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 1
+          },
+          "textStyle": {
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 1,
+            "paddingLeft": 1,
+            "paddingRight": 1,
+            "paddingTop": 1
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true,
+        "style": {
+          "classes": "widgets/spacing"
+        }
+      }
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "expression": "\"Status : \" + {./FlexContainer/Label_0.props.text}"
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "margin": "2px"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

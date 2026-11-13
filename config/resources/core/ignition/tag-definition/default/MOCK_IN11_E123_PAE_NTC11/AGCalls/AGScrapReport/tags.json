@@ -1,0 +1,93 @@
+[
+  {
+    "valueSource": "memory",
+    "dataType": "Int4",
+    "name": "StatusCode",
+    "defaultValue": 200,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "Int4",
+    "name": "Handshake",
+    "defaultValue": 1,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "DateTime",
+    "name": "RequestTimestamp",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "String",
+    "name": "OprSequenceNo",
+    "defaultValue": "2369",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "Int8",
+    "name": "ResponseAckNumber",
+    "defaultValue": 1,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "name": "WorkOrderType",
+    "defaultValue": 1,
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "Int8",
+    "name": "RequestAckNumber",
+    "defaultValue": 1,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "String",
+    "name": "SenderFBS",
+    "defaultValue": "IN11.E115.PCE.MIX11",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "Document",
+    "name": "RequestData",
+    "defaultValue": {
+      "BatchID": "BATCH-1001",
+      "ItemID": "CELL-SN-1001",
+      "Quantity": 10.5,
+      "ReasonCode": "SCRAP-001",
+      "ReportTime": "2026-09-11T17:30:00Z",
+      "SourceFBS": "IN11.E115.PCE.MIX11",
+      "UoM": "PCS",
+      "WorkOrderID": "WO-100001"
+    },
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "dataType": "DateTime",
+    "name": "ResponseTimeStamp",
+    "defaultValue": 1789120570710,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "name": "WorkOrderID",
+    "defaultValue": 1,
+    "tagType": "AtomicTag"
+  }
+]

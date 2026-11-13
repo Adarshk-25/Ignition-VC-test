@@ -1,0 +1,41 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.Calendering.pls",
+    "dataType": "Int4",
+    "name": "pls",
+    "tagType": "AtomicTag",
+    "opcServer": "kep"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.Calendering.Rotate",
+    "dataType": "Int4",
+    "historyProvider": "MS SQL Historian",
+    "alarms": [
+      {
+        "mode": "BelowValue",
+        "setpointA": 400.0,
+        "name": "cal_test_alarm",
+        "ackNotesReqd": false,
+        "enabled": false
+      }
+    ],
+    "name": "Rotate",
+    "historyEnabled": true,
+    "alarmEvalEnabled": true,
+    "tagType": "AtomicTag",
+    "enabled": true,
+    "opcServer": "kep"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.Calendering.RotateCCW",
+    "dataType": "Int4",
+    "historyProvider": "MS SQL Historian",
+    "name": "RotateCCW",
+    "historyEnabled": true,
+    "tagType": "AtomicTag",
+    "opcServer": "kep"
+  }
+]

@@ -1,0 +1,602 @@
+{
+  "custom": {
+    "stateCode": -9,
+    "modeCode": -9,
+    "starved": false,
+    "blocked": false,
+    "speed": null,
+    "key": "NoComm"
+  },
+  "params": {
+    "tagRoot": "",
+    "unitId": "UNIT",
+    "description": "",
+    "showSpeed": false,
+    "speedUnit": "m/min",
+    "alarmCount": 0,
+    "alarmClass": "none",
+    "actionType": "none",
+    "actionTarget": "",
+    "lookupTag": "[default]SCADA_Config/AlarmLookup"
+  },
+  "props": {
+    "defaultSize": {
+      "width": 150,
+      "height": 84
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true,
+        "delay": 600
+      }
+    },
+    "position": {},
+    "props": {
+      "direction": "column",
+      "wrap": "nowrap",
+      "justify": "center",
+      "alignItems": "stretch",
+      "alignContent": "flex-start"
+    },
+    "children": [
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Row_Title"
+        },
+        "position": {
+          "basis": "24px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "6px"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.icon",
+            "meta": {
+              "name": "StateIcon"
+            },
+            "position": {
+              "basis": "20px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "material/help_outline",
+              "color": "#555C64",
+              "style": {
+                "minWidth": "20px",
+                "height": "20px"
+              }
+            },
+            "propConfig": {
+              "props.path": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "case({view.custom.key}, \"Running\",\"material/play_arrow\", \"Stopped\",\"material/stop\", \"Starved\",\"material/hourglass_empty\", \"Blocked\",\"material/block\", \"OutOfService\",\"material/build\", \"NotAvailable\",\"material/remove_circle_outline\", \"NotMapped\",\"material/link_off\", \"material/help_outline\")"
+                  }
+                }
+              },
+              "props.color": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "case({view.custom.key}, \"Running\",\"#1F2328\", \"Starved\",\"#1F5FA8\", \"Blocked\",\"#1F5FA8\", \"NotAvailable\",\"#8A9099\", \"NotMapped\",\"#8A9099\", \"#555C64\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "UnitId"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "text": "UNIT",
+              "style": {
+                "classes": "HPHMI/Card/Title"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.unitId"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "ModeChip"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "MAINT",
+              "style": {
+                "classes": "HPHMI/Chip/Manual"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.custom.modeCode} = 1 || {view.custom.modeCode} = 2"
+                  }
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.custom.modeCode} = 1, \"MAINT\", \"SETUP\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "AlarmBadge",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start"
+            },
+            "children": [
+              {
+                "type": "ia.display.icon",
+                "meta": {
+                  "name": "BadgeIcon"
+                },
+                "position": {
+                  "basis": "16px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "material/warning",
+                  "color": "#1F2328",
+                  "style": {
+                    "minWidth": "16px",
+                    "height": "16px"
+                  }
+                },
+                "propConfig": {
+                  "props.path": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "case({view.params.alarmClass}, \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                      }
+                    }
+                  },
+                  "props.color": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.params.alarmClass} = \"Critical\", \"#FFFFFF\", \"#1F2328\")"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "BadgeCount"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "0",
+                  "style": {
+                    "fontWeight": "700",
+                    "fontSize": "14px"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "toStr({view.params.alarmCount})"
+                      }
+                    }
+                  },
+                  "props.style.color": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.params.alarmClass} = \"Critical\", \"#FFFFFF\", \"#1F2328\")"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.alarmCount} > 0 && {view.params.alarmClass} != \"none\""
+                  }
+                }
+              },
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"HPHMI/Badge/\" + {view.params.alarmClass}"
+                  }
+                }
+              },
+              "meta.tooltip.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "toStr({view.params.alarmCount}) + \" active alarm(s) on \" + {view.params.unitId}"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "StateText"
+        },
+        "position": {
+          "basis": "20px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "case({view.custom.key}, \"Running\",\"Running\", \"Stopped\",\"Stopped\", \"Starved\",\"Starved (no input)\", \"Blocked\",\"Blocked (output)\", \"OutOfService\",\"Out of service\", \"NotAvailable\",\"Not available\", \"NotMapped\",\"Not mapped\", \"No comm · bad quality\")"
+              }
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "case({view.custom.key}, \"Starved\",\"HPHMI/Text/Attention\", \"Blocked\",\"HPHMI/Text/Attention\", \"NoComm\",\"HPHMI/Text/Muted\", \"NotMapped\",\"HPHMI/Text/Muted\", \"HPHMI/Card/Text\")"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Row_Values"
+        },
+        "position": {
+          "basis": "20px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "6px"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "ModeText"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Text/Label"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"Mode \" + case({view.custom.modeCode}, 0,\"None\", 1,\"Maintenance\", 2,\"Setup\", 3,\"Processing\", \"—\")"
+                  }
+                }
+              },
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.custom.modeCode} = 1 || {view.custom.modeCode} = 2, \"HPHMI/Text/Attention\", \"HPHMI/Text/Label\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "SpeedValue"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Card/Value"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.showSpeed"
+                  }
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if(isNull({view.custom.speed}), \"— \", numberFormat({view.custom.speed}, \"#,##0.0\") + \" \") + {view.params.speedUnit}"
+                  }
+                }
+              },
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if(isNull({view.custom.speed}), \"HPHMI/Text/Muted\", \"HPHMI/Card/Value\")"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "propConfig": {
+      "props.style.classes": {
+        "binding": {
+          "type": "expr",
+          "config": {
+            "expression": "\"HPHMI/Card HPHMI/State/\" + {view.custom.key} + if({view.params.alarmCount} > 0 && {view.params.alarmClass} != \"none\", \" HPHMI/Alarm/\" + {view.params.alarmClass}, \"\")"
+          }
+        }
+      },
+      "meta.tooltip.text": {
+        "binding": {
+          "type": "expr",
+          "config": {
+            "expression": "{view.params.unitId} + \" · \" + {view.params.description} + \" — \" + case({view.custom.key}, \"Running\",\"Running\", \"Stopped\",\"Stopped\", \"Starved\",\"Starved (no input)\", \"Blocked\",\"Blocked (output)\", \"OutOfService\",\"Out of service\", \"NotAvailable\",\"Not available\", \"NotMapped\",\"Not mapped\", \"No comm · bad quality\") + if({view.params.tagRoot} != \"\", \"  [\" + {view.params.tagRoot} + \"]\", \"\")"
+          }
+        }
+      }
+    },
+    "events": {
+      "dom": {
+        "onClick": {
+          "type": "script",
+          "scope": "G",
+          "config": {
+            "script": "\t# Open the unit's faceplate (popup) or its area screen (page); configured per unit in HPHMI_ZoneE.AREAS\n\tkind = self.view.params.actionType\n\ttarget = self.view.params.actionTarget\n\tif not target or self.view.params.tagRoot == \"\":\n\t\treturn\n\tif kind == \"page\":\n\t\tsystem.perspective.navigate(page=target)\n\telif kind == \"popup\":\n\t\tsystem.perspective.openPopup(\"hphmiFaceplate\", target,\n\t\t\tparams={\"tagRoot\": self.view.params.tagRoot, \"provider\": \"[default]\", \"lookupTag\": self.view.params.lookupTag},\n\t\t\ttitle=self.view.params.unitId + \" · \" + self.view.params.description,\n\t\t\tshowCloseIcon=True, draggable=True, resizable=True, modal=False, viewportBound=True)"
+          }
+        }
+      }
+    }
+  },
+  "propConfig": {
+    "custom.stateCode": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/CurrentState",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toInt({value}, -9), -9)"
+          }
+        ]
+      }
+    },
+    "custom.modeCode": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/CurrentMode",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toInt({value}, -9), -9)"
+          }
+        ]
+      }
+    },
+    "custom.starved": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/EquipmentStarved",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toBoolean({value}), false)"
+          }
+        ]
+      }
+    },
+    "custom.blocked": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/EquipmentBlocked",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toBoolean({value}), false)"
+          }
+        ]
+      }
+    },
+    "custom.key": {
+      "binding": {
+        "type": "expr",
+        "config": {
+          "expression": "if({view.params.tagRoot} = \"\", \"NotMapped\",\n case({view.custom.stateCode},\n  3, if({view.custom.blocked}, \"Blocked\", if({view.custom.starved}, \"Starved\", \"Running\")),\n  2, if({view.custom.blocked}, \"Blocked\", if({view.custom.starved}, \"Starved\", \"Stopped\")),\n  1, \"OutOfService\",\n  0, \"NotAvailable\",\n  \"NoComm\"))"
+        }
+      }
+    },
+    "custom.speed": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/AGStatus/ActualMachineSpeed",
+          "references": {
+            "root": "{view.params.tagRoot}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), {value}, null)"
+          }
+        ]
+      }
+    },
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unitId": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.description": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.showSpeed": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.speedUnit": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.alarmCount": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.alarmClass": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.actionType": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.actionTarget": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.lookupTag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

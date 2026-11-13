@@ -1,0 +1,83 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 40,
+      "width": 480
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "MultiStateButton"
+        },
+        "position": {
+          "height": 35,
+          "width": 478
+        },
+        "props": {
+          "controlValue": 0,
+          "indicatorValue": 0,
+          "orientation": "row",
+          "states": [
+            {
+              "selectedStyle": {
+                "backgroundColor": "#C6C6C6",
+                "classes": ""
+              },
+              "text": "On",
+              "unselectedStyle": {
+                "backgroundColor": "#C6C6C6",
+                "classes": ""
+              },
+              "value": 2
+            },
+            {
+              "selectedStyle": {
+                "backgroundColor": "#C6C6C6",
+                "classes": ""
+              },
+              "text": "Off",
+              "unselectedStyle": {
+                "backgroundColor": "#C6C6C6",
+                "classes": ""
+              },
+              "value": 0
+            },
+            {
+              "selectedStyle": {
+                "backgroundColor": "#C6C6C6",
+                "classes": ""
+              },
+              "text": "Auto",
+              "unselectedStyle": {
+                "backgroundColor": "#C6C6C6",
+                "classes": ""
+              },
+              "value": 1
+            },
+            {
+              "selectedStyle": {
+                "backgroundColor": "#C6C6C6",
+                "classes": ""
+              },
+              "text": "Manual",
+              "unselectedStyle": {
+                "backgroundColor": "#C6C6C6",
+                "classes": ""
+              },
+              "value": 3
+            }
+          ]
+        },
+        "type": "ia.input.multi-state-button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

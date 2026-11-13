@@ -1,0 +1,105 @@
+{
+  "custom": {},
+  "params": {
+    "parameterData": [
+      {
+        "ActualValue": "value",
+        "Parameter": "value",
+        "SubEquipmentName": "value"
+      }
+    ]
+  },
+  "propConfig": {
+    "params.parameterData": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MergedEquipmentTemplate"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "params": {
+                "EquipmentHeader": "BFA001-BFA003",
+                "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingLNT001",
+                "parameterData": [
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "PV",
+                    "SubEquipmentName": "BFA001",
+                    "equipmentDescription": "Main Laser Fume Wind Speed Meter"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Paramter": "Status",
+                    "SubEquipmentName": "BFA001",
+                    "equipmentDescription": "Main Laser Fume Wind Speed Meter"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "PV",
+                    "SubEquipmentName": "BFA002",
+                    "equipmentDescription": "Laser Fume Wind Speed Meter"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "Status",
+                    "SubEquipmentName": "BFA002",
+                    "equipmentDescription": "Laser Fume Wind Speed Meter"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "PV",
+                    "SubEquipmentName": "BFA003",
+                    "equipmentDescription": "Belt Suction Wind Speed Meter"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "Status",
+                    "SubEquipmentName": "BFA003",
+                    "equipmentDescription": "Belt Suction Wind Speed Meter"
+                  }
+                ],
+                "tableHeader": "Process Parameters"
+              },
+              "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/MergedEquipmentTemplate"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

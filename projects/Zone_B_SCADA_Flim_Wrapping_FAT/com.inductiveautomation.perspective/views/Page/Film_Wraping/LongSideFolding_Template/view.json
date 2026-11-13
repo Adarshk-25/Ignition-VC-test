@@ -1,0 +1,1352 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Drawing_5"
+            },
+            "position": {
+              "height": 0.7863,
+              "width": 0.4644,
+              "x": 0.0359,
+              "y": 0.0985
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "206.5",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "2px"
+                  },
+                  "type": "rect",
+                  "width": "334",
+                  "x": "88",
+                  "y": "142"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "87 141 336 208.5"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.375,
+              "x": 0.08,
+              "y": 0.0316
+            },
+            "props": {
+              "style": {
+                "classes": "Title/Text"
+              },
+              "text": "Equipment Screen : Long Side Folding",
+              "textStyle": {
+                "classes": "Title/Text",
+                "fontSize": 20,
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "UnwindingModule"
+            },
+            "position": {
+              "height": 0.7738,
+              "width": 0.455,
+              "x": 0.0412,
+              "y": 0.1075
+            },
+            "props": {
+              "path": "widgets(templates)/Filmwrapping_Templates/LongSideFolding"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.1125,
+              "x": 0.8553,
+              "y": 0.0138
+            },
+            "props": {
+              "params": {
+                "label": "STATE",
+                "value": "EXECUTING"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_3"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.0973,
+              "x": 0.7568,
+              "y": 0.0143
+            },
+            "props": {
+              "params": {
+                "label": "Communication",
+                "value": "OK"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_0"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.1169,
+              "x": 0.6363,
+              "y": 0.0143
+            },
+            "props": {
+              "params": {
+                "label": "Mode",
+                "value": "PROCESSING"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "height": 0.89,
+              "width": 0.4656,
+              "x": 0.5119,
+              "y": 0.095
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA301/ActualPositionPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"mm\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[10].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA302/OperationTime"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"sec\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[11].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA302/PositionReachedPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"mm\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[12].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA302/PowerPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"W\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[13].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA302/TargetPositionPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"mm\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[14].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MAA803/AxisPositionPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"mm\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[15].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MAA803/AxisPositionSP"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"mm\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[16].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MAA803/CurrentPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"A\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[17].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MAA803/MotorFault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[18].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MAA803/MotorRunning"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[19].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MAA803/MotorSpeedPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA301/ActualSpeedPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"m/min\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[20].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MAA803/MotorSpeedSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[21].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MAA803/MotorStartCommand"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[22].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB307/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[23].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB307/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[24].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB307/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[25].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB307/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[26].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB307/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[27].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB308/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[28].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB308/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[29].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB308/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA301/ActualVelocityPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"m/min\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[30].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB308/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[31].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB308/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[32].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB309/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[33].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB309/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[34].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB309/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[35].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB309/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[36].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MMB309/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[37].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS423/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[38].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": ""
+                    },
+                    "tagPath": "{Tag}/ZS424/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[39].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS425/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA301/OperationTime"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"sec\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[40].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS426/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[41].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS427/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[42].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS428/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[43].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS429/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[44].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS430/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[45].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS431/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[46].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS432/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[47].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ZS433/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA301/PositionReachedPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"mm\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA301/PowerPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"W\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[6].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA301/TargetPositionPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"mm\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[7].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA302/ActualPositionPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"mm\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[8].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA302/ActualSpeedPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"m/min\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[9].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/GMA302/ActualVelocityPV"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"m/min\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "left",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "paddingLeft": "10px"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "left",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA301 Actual Position PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA301 Actual Speed PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA301 Actual Velocity PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA301 Operation Time"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA301 Position Reached PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA301 Power PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA301 Target Position PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 Actual Position PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 Actual Speed PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 Actual Velocity PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 Operation Time"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 Position Reached PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 Power PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 Target Position PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MAA803 Axis Position PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MAA803 Axis Position SP"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MAA803 Current PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MAA803 Motor Fault"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MAA803 Motor Running"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MAA803 Motor Speed PV"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MAA803 Motor Speed SP"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MAA803 Motor Start Command"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB307 Extended"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB307 Extending"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB307 Fault"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB307 Retracted"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB307 Retracting"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB308 Extended"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB307 Extending"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB307 Fault"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB307 Retracted"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB307 Retracting"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB309 Extended"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB309 Extending"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB309 Fault"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB309 Retracted"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 MMB309 Retracting"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS423 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS424 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS425 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS426 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS427 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS428 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS429 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS430 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS431 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS432 State"
+                },
+                {
+                  "EquipmentName": "Wagon",
+                  "Parameter": "GMA302 ZS433 State"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0.0063,
+      "y": 0.0525
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

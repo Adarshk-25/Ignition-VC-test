@@ -1,0 +1,81 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "height": 1.0286,
+              "width": 0.1886,
+              "x": 0.0002,
+              "y": -0.0003
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Anode Line 1",
+                  "value": ""
+                },
+                {
+                  "label": "Anode Line 2",
+                  "value": ""
+                },
+                {
+                  "label": "Cathode Line 1",
+                  "value": ""
+                },
+                {
+                  "label": "Cathode Line 2",
+                  "value": ""
+                }
+              ],
+              "style": {
+                "classes": "Page/Text"
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "CoordinateContainer_0"
+        },
+        "position": {
+          "basis": "752px"
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

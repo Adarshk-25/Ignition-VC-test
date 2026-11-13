@@ -1,0 +1,183 @@
+{
+  "custom": {
+    "Cmd": true,
+    "Run_fb": true,
+    "Stp_fb": false
+  },
+  "params": {
+    "name": "[default]agratas/sanand/zoneE/line1/mixing/equipments/Diverter valve"
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "name": "{view.params.name}"
+          },
+          "tagPath": "{name}/Cmd"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "name": "{view.params.name}"
+          },
+          "tagPath": "{name}/Run_fb"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "name": "{view.params.name}"
+          },
+          "tagPath": "{name}/Stp_fb"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 100,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Three way valve"
+        },
+        "position": {
+          "height": 0.69,
+          "width": 0.99
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M486 286l79.6666616499424 0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M-0.6666655540466309 287l51.66666555404663 0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M53 364l0-433 216 217 217-217 0 433-433 0z",
+              "fill": {
+                "paint": "#c0c0c0"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "transform": "matrix(1 0 0 -1 0 433)",
+              "type": "path"
+            },
+            {
+              "d": "M53 364l216-216 217 215",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "transform": "matrix(1 0 0 -1 0 433)",
+              "type": "path"
+            },
+            {
+              "d": "M266 66.66666412353516L266 2.6666667461395264",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path",
+              "stroke": {
+                "paint": "#000000",
+                "width": "2px"
+              },
+              "type": "path"
+            }
+          ],
+          "viewBox": "0 0 566 500"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.26,
+          "width": 0.97,
+          "y": 0.72
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "name": "{view.params.name}"
+                },
+                "tagPath": "{name}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "PipingAndInst/label"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

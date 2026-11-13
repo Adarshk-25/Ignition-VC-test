@@ -1,0 +1,255 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 815,
+      "width": 251
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onItemClicked": {
+              "config": {
+                "script": "\tselected \u003d self.props.selectionData[0].value.path\n\tsystem.perspective.navigate(page\u003d\"/{}\".format(selected))\n\tif self.page.props.path \u003d\u003d \u0027/alarmsManagement\u0027:\n\t\tsystem.perspective.closeDock(\"footerDock\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Tree"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.selectionData[0].value.path": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "page.props.path"
+              },
+              "type": "property"
+            }
+          },
+          "props.selection[0]": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "code": "\ttargetPath \u003d value.lstrip(\"/\")\n\t\n\tdef findPath(items, parent\u003d\"\"):\n\t    for i, item in enumerate(items):\n\t        indexPath \u003d parent + str(i)\n\t\n\t        if \"data\" in item and item[\"data\"].get(\"path\", \"\") \u003d\u003d targetPath:\n\t            return indexPath\n\t\n\t        if item.get(\"items\"):\n\t            result \u003d findPath(item[\"items\"], indexPath + \"/\")\n\t            if result:\n\t                return result\n\t\n\t    return None\n\t\n\ttreeItems \u003d self.props.items\n\tfound \u003d findPath(treeItems)\n\t\n\tif found:\n\t    return found\n\t\n\treturn None",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "appearance": {
+            "defaultNodeIcons": {
+              "collapsed": {
+                "path": "material/folder"
+              },
+              "empty": {
+                "path": "material/stop"
+              },
+              "expanded": {
+                "path": "material/crop_16_9"
+              }
+            },
+            "expandIcons": {
+              "collapsed": {
+                "path": "material/arrow_right"
+              },
+              "expanded": {
+                "path": "material/arrow_drop_down"
+              }
+            },
+            "selectedStyle": {
+              "classes": "Menu/Menu_Selected"
+            }
+          },
+          "items": [
+            {
+              "data": {
+                "level": "site",
+                "path": "/"
+              },
+              "expanded": true,
+              "icon": {
+                "color": "",
+                "path": "material/business",
+                "style": {}
+              },
+              "items": [
+                {
+                  "data": {
+                    "level": "area",
+                    "path": "sanand/zone A"
+                  },
+                  "expanded": true,
+                  "items": [
+                    {
+                      "data": {
+                        "level": "area",
+                        "path": "sanand/zone A/assembly"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Assembly"
+                    }
+                  ],
+                  "label": "Zone A"
+                },
+                {
+                  "data": {
+                    "path": "analytics"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/analytics",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "analytics/trends"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Trends"
+                    },
+                    {
+                      "data": {
+                        "path": "analytics/reports"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Reports"
+                    }
+                  ],
+                  "label": "ANALYTICS"
+                },
+                {
+                  "data": {
+                    "path": "operations"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/dashboard",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "alarmsManagement"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/notification_important",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Alarms"
+                    }
+                  ],
+                  "label": "OPERATIONS"
+                },
+                {
+                  "data": {
+                    "path": "system"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/settings_applications",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "system/userManagement"
+                      },
+                      "expanded": true,
+                      "icon": {
+                        "color": "",
+                        "path": "material/admin_panel_settings",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Security \u0026 Roles"
+                    },
+                    {
+                      "data": {
+                        "path": "system/auditLogs"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/history",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Audit Logs"
+                    },
+                    {
+                      "data": {
+                        "path": "system/help"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/help_outline",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Help"
+                    }
+                  ],
+                  "label": "Setting"
+                }
+              ],
+              "label": "Sanand"
+            }
+          ],
+          "selection": [
+            null
+          ],
+          "selectionData": [
+            {
+              "itemPath": "0/0/0",
+              "value": {
+                "level": "process"
+              }
+            }
+          ],
+          "style": {
+            "classes": "Item_Vertical Menu"
+          }
+        },
+        "type": "ia.display.tree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "margin": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

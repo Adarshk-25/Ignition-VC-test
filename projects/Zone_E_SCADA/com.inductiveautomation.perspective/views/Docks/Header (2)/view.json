@@ -1,0 +1,1134 @@
+{
+  "custom": {},
+  "params": {
+    "Lang1": "value"
+  },
+  "propConfig": {
+    "params.Lang1": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": "auto"
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "180px",
+                  "display": false,
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "session.props.locale"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "English",
+                      "value": "English"
+                    },
+                    {
+                      "label": "ગુજરાતી",
+                      "value": "Gujarati"
+                    },
+                    {
+                      "label": "हिंदी",
+                      "value": "Hindi"
+                    },
+                    {
+                      "label": "ಕನ್ನಡ",
+                      "value": "Telgu"
+                    }
+                  ],
+                  "placeholder": {
+                    "icon": {
+                      "path": "material/language"
+                    },
+                    "text": "Select language"
+                  },
+                  "search": {
+                    "enabled": false,
+                    "marginLeft": "8px"
+                  },
+                  "style": {
+                    "alignItems": "flex-end"
+                  }
+                },
+                "type": "ia.input.dropdown"
+              },
+              {
+                "meta": {
+                  "name": "Label_date_0"
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "52px",
+                    "marginRight": "4px"
+                  },
+                  "textStyle": {
+                    "marginRight": "48px",
+                    "paddingLeft": "0px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_date_1"
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "52px",
+                    "marginRight": "4px"
+                  },
+                  "textStyle": {
+                    "marginRight": "48px",
+                    "paddingLeft": "0px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_date_2"
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "52px",
+                    "marginRight": "4px"
+                  },
+                  "textStyle": {
+                    "marginRight": "48px",
+                    "paddingLeft": "0px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_date_3"
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "52px",
+                    "marginRight": "4px"
+                  },
+                  "textStyle": {
+                    "marginRight": "48px",
+                    "paddingLeft": "0px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Title"
+                },
+                "position": {
+                  "align": "center",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "session.custom.nav.currentPath"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "Zone E",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "/sanand/zone-e/mixing/cathode-line-1/mix11-overview-3d",
+                              "output": "Mixing - Cathode Line 1 (MIX11) - 3D"
+                            },
+                            {
+                              "input": "/sanand/zone-e/mixing/cathode-line-1/mix11-overview",
+                              "output": "Mixing - Cathode Line 1 (CMIX1)"
+                            },
+                            {
+                              "input": "/sanand/zone-e/calendering/cathode-line-1/cld11-overview-3d",
+                              "output": "Calendering - Cathode Line 1 (CLD11) - 3D"
+                            },
+                            {
+                              "input": "/sanand/zone-e/calendering/cathode-line-1/cld11-overview",
+                              "output": "Calendering - Cathode Line 1 (CLD11)"
+                            },
+                            {
+                              "input": "/sanand/zone-e/lasernotching/cathode-line-1/ntc11-overview",
+                              "output": "Notching & Slitting - Cathode Line 1 (NTC11)"
+                            },
+                            {
+                              "input": "/sanand/zone-e/mixing",
+                              "output": "Mixing Block Diagram"
+                            },
+                            {
+                              "input": "/sanand/zone-e/mixing/anode-line-1",
+                              "output": "Mixing Process Flow - Anode Line 1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/calendering",
+                              "output": "Calendering Block Screen"
+                            },
+                            {
+                              "input": "/",
+                              "output": "Mixing Block Screen"
+                            },
+                            {
+                              "input": "/3f_mainscreen",
+                              "output": "Inlet System"
+                            },
+                            {
+                              "input": "Inlet System",
+                              "output": "Inlet System"
+                            },
+                            {
+                              "input": "Unpacking Stations",
+                              "output": "Unpacking Stations"
+                            },
+                            {
+                              "input": "Dust Collectors",
+                              "output": "Dust Collectors"
+                            },
+                            {
+                              "input": "Plasticzer Feeding System",
+                              "output": "Plasticzer Feeding System"
+                            },
+                            {
+                              "input": "SBR Feeding System",
+                              "output": "SBR Feeding System"
+                            },
+                            {
+                              "input": "CMC SI Weighing System",
+                              "output": "CMC SI Weighing System"
+                            },
+                            {
+                              "input": "SI CMC Sending System",
+                              "output": "SI CMC Sending System"
+                            },
+                            {
+                              "input": "AM Weighing Hopper",
+                              "output": "AM Weighing Hopper"
+                            },
+                            {
+                              "input": "AM Positive Sending System",
+                              "output": "AM Positive Sending System"
+                            },
+                            {
+                              "input": "PAA Feeding System",
+                              "output": "PAA Feeding System"
+                            },
+                            {
+                              "input": "PAA Metering System",
+                              "output": "PAA Metering System"
+                            },
+                            {
+                              "input": "PAA Dilution System",
+                              "output": "PAA Dilution System"
+                            },
+                            {
+                              "input": "DIW Storage System",
+                              "output": "DIW Storage System"
+                            },
+                            {
+                              "input": "Plastcizer Storage System",
+                              "output": "Plastcizer Storage System"
+                            },
+                            {
+                              "input": "SWCNT Feeding System",
+                              "output": "SWCNT Feeding System"
+                            },
+                            {
+                              "input": "SWCNT Storage System",
+                              "output": "SWCNT Storage System"
+                            },
+                            {
+                              "input": "SBR Storage System",
+                              "output": "SBR Storage System"
+                            },
+                            {
+                              "input": "Slurry Mixing System- 1",
+                              "output": "Slurry Mixing System- 1"
+                            },
+                            {
+                              "input": "Slurry Mixing System- 2",
+                              "output": "Slurry Mixing System- 2"
+                            },
+                            {
+                              "input": "Slurry Mixing System- 3",
+                              "output": "Slurry Mixing System- 3"
+                            },
+                            {
+                              "input": "Slurry Mixing System- 4",
+                              "output": "Slurry Mixing System- 4"
+                            },
+                            {
+                              "input": "Slurry Storage System",
+                              "output": "Slurry Storage System"
+                            },
+                            {
+                              "input": "Waste System- 1",
+                              "output": "Waste System- 1"
+                            },
+                            {
+                              "input": "Waste System- 2",
+                              "output": "Waste System- 2"
+                            },
+                            {
+                              "input": "Vacuum Pump System",
+                              "output": "Vacuum Pump System"
+                            },
+                            {
+                              "input": "Slurry Coater- A",
+                              "output": "Slurry Coater- A"
+                            },
+                            {
+                              "input": "Slurry Coater- B",
+                              "output": "Slurry Coater- B"
+                            },
+                            {
+                              "input": "Exhaust System",
+                              "output": "Exhaust System"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery",
+                              "output": "Recovery Block Diagram"
+                            },
+                            {
+                              "input": "Dehumidifier Condenser",
+                              "output": "Dehumidifier Condenser"
+                            },
+                            {
+                              "input": "Condensate Transfer System",
+                              "output": "Condensate Transfer System"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery/anodeline",
+                              "output": "Recovery - Anode Line 1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/lasernotching",
+                              "output": "Notching and Slitting Block Diagram"
+                            },
+                            {
+                              "input": "/sanand/zone-e/coating",
+                              "output": " Coating Block Diagram "
+                            },
+                            {
+                              "input": "/sanand/zone-e/coating/anode-line-1",
+                              "output": "Coating Process Flow - Anode Line 1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/coating/cathode-line-1",
+                              "output": "Coating Process Flow - Cathode Line 1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/calendering/anodeline",
+                              "output": "Calendering Process Flow - Anode Line 1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/calendering/cathodeline1",
+                              "output": "Calendering Process Flow - Cathode Line 1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/mixing/cathode-line-1",
+                              "output": "Mixing Process Flow - Cathode Line 1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/lasernotching/anodeline1",
+                              "output": "Notching and Slitting Process Flow - Anode Line 1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/lasernotching/cathodeline1",
+                              "output": "Notching and Slitting Process Flow - Cathode Line 1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery/cathodeline",
+                              "output": "Recovery - Cathode Line 1"
+                            },
+                            {
+                              "input": "Air Pollution Control System",
+                              "output": "Air Pollution Control System"
+                            },
+                            {
+                              "input": "Unwinder",
+                              "output": "Unwinder"
+                            },
+                            {
+                              "input": "Rewinder",
+                              "output": "Rewinder"
+                            },
+                            {
+                              "input": "CPC",
+                              "output": "CPC"
+                            },
+                            {
+                              "input": "Infeeder",
+                              "output": "Infeeder"
+                            },
+                            {
+                              "input": "1st Inspection Unit",
+                              "output": "1st Inspection Unit"
+                            },
+                            {
+                              "input": "A-Coating Station",
+                              "output": "A-Coating Station"
+                            },
+                            {
+                              "input": "Drying Chamber",
+                              "output": "Drying Chamber"
+                            },
+                            {
+                              "input": "Cooling Unit",
+                              "output": "Cooling Unit"
+                            },
+                            {
+                              "input": "Half Slitter",
+                              "output": "Half Slitter"
+                            },
+                            {
+                              "input": "Outfeeder",
+                              "output": "Outfeeder"
+                            },
+                            {
+                              "input": "Laser Marking Unit",
+                              "output": "Laser Marking Unit"
+                            },
+                            {
+                              "input": "1st Density Meter",
+                              "output": "1st Density Meter"
+                            },
+                            {
+                              "input": "A - Web Position Controller",
+                              "output": "A-Coating Web Position Controller"
+                            },
+                            {
+                              "input": "Drying Web Position Controller",
+                              "output": "Drying Web Position Controller"
+                            },
+                            {
+                              "input": "Thickness Gauge",
+                              "output": "Thickness Gauge"
+                            },
+                            {
+                              "input": "Half Slitting Web Position Controller",
+                              "output": "Half Slitting Web Position Controller"
+                            },
+                            {
+                              "input": "Outfeeder I",
+                              "output": "Outfeeder I"
+                            },
+                            {
+                              "input": "Outfeeder II",
+                              "output": "Outfeeder II"
+                            },
+                            {
+                              "input": "Transport",
+                              "output": "Transport"
+                            },
+                            {
+                              "input": "Unwinder",
+                              "output": "Unwinder"
+                            },
+                            {
+                              "input": "Rewinder",
+                              "output": "Rewinder"
+                            },
+                            {
+                              "input": "Thickness Guage",
+                              "output": "Thickness Guage"
+                            },
+                            {
+                              "input": "Press",
+                              "output": "Press"
+                            },
+                            {
+                              "input": "Solvent Recovery Condenser",
+                              "output": "Solvent Recovery Condenser"
+                            },
+                            {
+                              "input": "Purge System",
+                              "output": "Purge System"
+                            },
+                            {
+                              "input": "Condensate Transfer System",
+                              "output": "Condensate Transfer System"
+                            },
+                            {
+                              "input": "Notching",
+                              "output": "Notching"
+                            },
+                            {
+                              "input": "Slitting",
+                              "output": "Slitting"
+                            },
+                            {
+                              "input": "Dust Collector",
+                              "output": "Dust Collector"
+                            },
+                            {
+                              "input": "/analytics/trends",
+                              "output": "Trends"
+                            },
+                            {
+                              "input": "/alarms-management",
+                              "output": "Alarm Management"
+                            },
+                            {
+                              "input": "/analytics",
+                              "output": "Analytics"
+                            },
+                            {
+                              "input": "/analytics/reports",
+                              "output": "Reports"
+                            },
+                            {
+                              "input": "/system/auditLogs",
+                              "output": "Audit Logs"
+                            },
+                            {
+                              "input": "/operations",
+                              "output": "Operations"
+                            },
+                            {
+                              "input": "/operations/recipes",
+                              "output": "Recipes"
+                            },
+                            {
+                              "input": "/system/help",
+                              "output": "Help"
+                            },
+                            {
+                              "input": "/system/userManagement",
+                              "output": "Security & Roles"
+                            },
+                            {
+                              "input": "/system",
+                              "output": "Settings"
+                            },
+                            {
+                              "input": "/sanand/zone-e/mixing/anode-line-2",
+                              "output": "Mixing Process Flow - Anode Line 2"
+                            },
+                            {
+                              "input": "/sanand/zone-e/mixing/cathode-line-2",
+                              "output": "Mixing Process Flow - Cathode Line 2"
+                            },
+                            {
+                              "input": "/sanand/zone-e/coating/anode-line-2",
+                              "output": "Coating Process Flow - Anode Line 2"
+                            },
+                            {
+                              "input": "/sanand/zone-e/coating/cathode-line-2",
+                              "output": "Coating Process Flow - Cathode Line 2"
+                            },
+                            {
+                              "input": "/sanand/zone-e/calendering/anodeline2",
+                              "output": "Calendering Process Flow - Anode Line 2"
+                            },
+                            {
+                              "input": "/sanand/zone-e/calendering/cathodeline2",
+                              "output": "Calendering Process Flow - Cathode Line 2"
+                            },
+                            {
+                              "input": "/sanand/zone-e/lasernotching/anodecathode:",
+                              "output": "Notching and Slitting Process Flow - Anode Line 2"
+                            },
+                            {
+                              "input": "/sanand/zone-e/lasernotching/cathodeline2",
+                              "output": "Notching and Slitting Process Flow - Cathode Line 2"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery/anodeline-2",
+                              "output": "Recovery - Anode Line 2"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery/cathodeline-2",
+                              "output": "Recovery - Cathode Line 2"
+                            },
+                            {
+                              "input": "/sanand",
+                              "output": "Sanand"
+                            },
+                            {
+                              "input": "/sanand/zone-e",
+                              "output": "Zone E"
+                            },
+                            {
+                              "input": "2nd Density Meter",
+                              "output": "2nd Density Meter"
+                            },
+                            {
+                              "input": "A-Drying Chamber",
+                              "output": "Drying Chamber - A Side"
+                            },
+                            {
+                              "input": "A-Drying Web Position Controller",
+                              "output": "A-Drying Web Position Controller"
+                            },
+                            {
+                              "input": "2nd Inspection Unit",
+                              "output": "2nd Inspection Unit"
+                            },
+                            {
+                              "input": "A-Cooling Unit",
+                              "output": "A -Cooling Unit"
+                            },
+                            {
+                              "input": "3rd Density Meter",
+                              "output": "3rd Density Meter"
+                            },
+                            {
+                              "input": "B-Coating Web Position Controller",
+                              "output": "B-Coating Web Position Controller"
+                            },
+                            {
+                              "input": "B Coating Station",
+                              "output": "B Coating Station"
+                            },
+                            {
+                              "input": "3rd Inspection Unit",
+                              "output": "3rd Inspection Unit"
+                            },
+                            {
+                              "input": "4th Density Meter",
+                              "output": "4th Density Meter"
+                            },
+                            {
+                              "input": "B Drying Chamber",
+                              "output": "Drying Chamber - B Side"
+                            },
+                            {
+                              "input": "B Drying Web Position Controller",
+                              "output": "B Drying Web Position Controller"
+                            },
+                            {
+                              "input": "B-Cooling Station",
+                              "output": "B-Cooling Station"
+                            },
+                            {
+                              "input": "5th Density Meter",
+                              "output": "5th Density Meter"
+                            },
+                            {
+                              "input": "4th Inspection Unit",
+                              "output": "4th Inspection Unit"
+                            },
+                            {
+                              "input": "5th Inspection Unit",
+                              "output": "5th Inspection Unit"
+                            },
+                            {
+                              "input": "Laser Marking Unit",
+                              "output": "Laser Marking Unit"
+                            },
+                            {
+                              "input": "Half Slitting Web Position Controller",
+                              "output": "Half Slitting Web Position Controller"
+                            },
+                            {
+                              "input": "Half Slitter",
+                              "output": "Half Slitter"
+                            },
+                            {
+                              "input": "Outfeeder",
+                              "output": "Outfeeder"
+                            },
+                            {
+                              "input": "6th Inspection Unit",
+                              "output": "6th Inspection Unit"
+                            },
+                            {
+                              "input": "Rewinder 1",
+                              "output": "Rewinder 1"
+                            },
+                            {
+                              "input": "Rewinder 2",
+                              "output": "Rewinder 2"
+                            },
+                            {
+                              "input": "A-Web Position Controller",
+                              "output": "A-Web Position Controller"
+                            },
+                            {
+                              "input": "6th Inspection Unit",
+                              "output": "6th Inspection Unit"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery",
+                              "output": "Recovery Block Diagram"
+                            },
+                            {
+                              "input": "Notching",
+                              "output": "Notching"
+                            },
+                            {
+                              "input": "Press Cathode",
+                              "output": "Press Cathode"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery/anode-line-1",
+                              "output": "Recovery Anode Line-1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery/cathode-line-1",
+                              "output": "Recovery Cathode Line-1"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery/anode-line-1/process-flow",
+                              "output": "Recovery Anode Line-1 Process Flow"
+                            },
+                            {
+                              "input": "/sanand/zone-e/recovery/cathode-line-1/process-flow",
+                              "output": "Recovery Cathode Line-1 Process Flow"
+                            },
+                            {
+                              "input": "Condenser",
+                              "output": "Condenser"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    },
+                    "persistent": true
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "1.25em",
+                    "fontWeight": "bolder"
+                  },
+                  "text": "Zone E",
+                  "textStyle": {
+                    "textTransform": "capitalize"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_date"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "now()"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\treturn system.date.format(value,\"dd-MM-YYYY\")",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "0.875em",
+                    "marginRight": "10px"
+                  },
+                  "textStyle": {
+                    "marginRight": "5px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_time"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "addMinutes(addHours(now(), 5), 30)"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\treturn system.date.format(value,\"HH:mm:ss\")",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "0.875em",
+                    "marginRight": "10px"
+                  },
+                  "textStyle": {
+                    "marginRight": "5px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_user"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "session.props.auth.user.roles[0]"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "\"User : \"+{session.props.auth.user.firstName}",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "0.875em",
+                    "marginRight": "10px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "shift"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "\"SHIFT - A\""
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "0.875em",
+                    "marginRight": "10px"
+                  },
+                  "textStyle": {
+                    "marginRight": "5px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "events": {
+                  "dom": {
+                    "onClick": {
+                      "config": {
+                        "page": "/alarms-management"
+                      },
+                      "scope": "C",
+                      "type": "nav"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "alarmIndicator"
+                },
+                "position": {
+                  "basis": "40px"
+                },
+                "props": {
+                  "path": "widgets(templates)/alarmIndicator"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "events": {
+                  "dom": {
+                    "onClick": {
+                      "config": {
+                        "draggable": false,
+                        "id": "ExitApplication_logout",
+                        "modal": true,
+                        "overlayDismiss": true,
+                        "resizable": false,
+                        "showCloseIcon": false,
+                        "type": "open",
+                        "viewParams": {
+                          "username": "{session.props.auth.user.userName}"
+                        },
+                        "viewPath": "widgets(templates)/userAlertPopups/ExitApplication_logout",
+                        "viewportBound": false
+                      },
+                      "scope": "C",
+                      "type": "popup"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Icon",
+                  "tooltip": {
+                    "enabled": true,
+                    "text": "Logout"
+                  }
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "props": {
+                  "color": "#FDAD41",
+                  "path": "material/login",
+                  "style": {
+                    "backgroundColor": "#FF000000",
+                    "margin": "5px"
+                  }
+                },
+                "type": "ia.display.icon"
+              }
+            ],
+            "meta": {
+              "name": "mainContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "HeaderTheme",
+                "margin": "0.5em",
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "custom": {
+                  "key": null
+                },
+                "meta": {
+                  "name": "breadcrumb"
+                },
+                "position": {
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "custom.key": {
+                    "binding": {
+                      "config": {
+                        "path": "session.custom.nav"
+                      },
+                      "enabled": false,
+                      "type": "property"
+                    }
+                  },
+                  "props.params.breadCrumbPaths": {
+                    "binding": {
+                      "config": {
+                        "path": "session.custom.nav.breadcrumb"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "widgets(templates)/breadCrumb"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "custom": {
+                  "Status": "Connected"
+                },
+                "meta": {
+                  "name": "status"
+                },
+                "propConfig": {
+                  "props.textStyle.color": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]PLC_Communication"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "#000000",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": "#00D900"
+                            },
+                            {
+                              "input": false,
+                              "output": "#FF0000"
+                            }
+                          ],
+                          "outputType": "color",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "0.875em",
+                    "marginRight": "10px"
+                  },
+                  "text": "PLC",
+                  "textStyle": {
+                    "marginRight": "5px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "custom": {
+                  "Status": "Connected"
+                },
+                "meta": {
+                  "name": "status_0"
+                },
+                "propConfig": {
+                  "props.textStyle.color": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[System]Gateway/OPC/Connections/kep/Connected"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "#000000",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": "#00D900"
+                            },
+                            {
+                              "input": false,
+                              "output": "#FF0000"
+                            }
+                          ],
+                          "outputType": "color",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "0.875em",
+                    "marginRight": "10px"
+                  },
+                  "text": "MES",
+                  "textStyle": {
+                    "marginRight": "5px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "mainContainer_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "alignItems": "center",
+              "style": {
+                "classes": "HeaderTheme",
+                "margin": "0.5em",
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "976px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "color": "#FDAD41",
+            "marginLeft": "50px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignContent": "flex-start",
+      "style": {
+        "backgroundImage": "linear-gradient(90deg, rgba(52, 52, 116, 1) 0%, rgba(34, 34, 84, 1) 100%)",
+        "margin": "2px",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

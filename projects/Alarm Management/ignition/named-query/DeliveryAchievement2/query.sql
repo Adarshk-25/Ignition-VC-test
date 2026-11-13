@@ -1,0 +1,1 @@
+select top 1 Actual_Qty,Delivery_Achievement from DeliveryAchievement order by SNo desc;

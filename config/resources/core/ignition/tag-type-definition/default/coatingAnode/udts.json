@@ -1,0 +1,3035 @@
+[
+  {
+    "name": "slurryFeeding",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.slurryFeedingA.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.slurryFeedingA"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.density"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Density",
+            "tagType": "AtomicTag",
+            "engUnit": "Kg/m^3",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.filterPressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 455.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "mode": "Equality",
+                "FBS Source": "LC4.XZS1",
+                "notes": "Packaging station safety door open ",
+                "name": "DoorPackagingStationOpen ",
+                "Index": "9",
+                "label": "DoorPackagingStationOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "7",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Filter Pressure",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.concentration"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Concentration",
+            "tagType": "AtomicTag",
+            "engUnit": "%",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Pressure",
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.flowRate"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 42.0,
+                "Alarm Code": "1",
+                "Severity": "3",
+                "FBS Source": "LC4.XZS2",
+                "notes": "Material jam at infeed. Clear blockage and restart ",
+                "name": "InfeedJamDetected ",
+                "Index": "10",
+                "label": "InfeedJamDetected ",
+                "priority": "High",
+                "Alarm Group Id": "65",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Flow Rate",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "m^3/h",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Temperature",
+            "tagType": "AtomicTag",
+            "engUnit": "°C",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "SideOvens",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.sideOvensA.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.sideOvensA"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.humidity"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "engHigh": 30.0,
+            "alarms": [
+              {
+                "setpointA": 30.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "FBS Source": "LC1.XZS2",
+                "mode": "AboveValue",
+                "notes": "Operator Station Emergency Stop pressed ",
+                "name": "EStopOperatorStation ",
+                "Index": "1",
+                "label": "EStopOperatorStation ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Humidity",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "RH%",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperatureDeviation"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Temperature Deviation",
+            "tagType": "AtomicTag",
+            "engUnit": "°C",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.ovenZoneTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Oven Zone Temperature",
+            "tagType": "AtomicTag",
+            "engLow": 60.0,
+            "engUnit": "°C",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.ovenAvailability"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Oven Availability",
+            "tagType": "AtomicTag",
+            "engUnit": "%",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 2.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "FBS Source": "LC1.XZS1",
+                "notes": "Emergency Stop pressed in Infeed Zone. Inspect area and reset ",
+                "name": "EStopInfeedZone ",
+                "Index": "0",
+                "label": "EStopInfeedZone ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Pressure",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.Mode"
+            },
+            "valueSource": "opc",
+            "dataType": "String",
+            "name": "Mode",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.dryingEfficiency"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Drying Efficiency",
+            "tagType": "AtomicTag",
+            "engUnit": "%",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.Interlock"
+            },
+            "valueSource": "opc",
+            "dataType": "String",
+            "name": "Interlock",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.BatchID"
+            },
+            "valueSource": "opc",
+            "dataType": "String",
+            "name": "BatchID",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.airflowVelocity"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Airflow Velocity",
+            "tagType": "AtomicTag",
+            "engUnit": "m/s",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.lineSpeedVSDryingCapacity"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Line Speed VS Drying Capacity",
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.exhaustSolventConcentration"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "documentation": "Exhaust Solvent Concentration",
+            "name": "Exhaust Solvent Concentration",
+            "tagType": "AtomicTag",
+            "engUnit": "%LEL",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.ovenZoneTemperatureUniformity"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Oven Zone Temperature Uniformity",
+            "tagType": "AtomicTag",
+            "engUnit": "°C",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.ovenEnergyConsumption"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Oven Energy Consumption",
+            "tagType": "AtomicTag",
+            "engUnit": "kWh/m",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.Last Event"
+            },
+            "valueSource": "opc",
+            "dataType": "String",
+            "name": "Last Event",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.Critical"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Critical",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.residualSolvent"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "engHigh": 0.5,
+            "name": "Residual Solvent",
+            "tagType": "AtomicTag",
+            "engUnit": "wt%",
+            "engLow": 0.2,
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "slurryBufferTanks",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.slurryBufferTanks1.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.slurryBufferTanks1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.level"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Level",
+            "tagType": "AtomicTag",
+            "engUnit": "m",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.speed"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Speed",
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.airFlow"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Air Flow",
+            "tagType": "AtomicTag",
+            "engUnit": "m^3/h",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Pressure",
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Temperature",
+            "tagType": "AtomicTag",
+            "engUnit": "°C",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.density"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 2.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "FBS Source": "LC3.XZS2",
+                "notes": "Robot cell perimeter door open. Lock required for operation ",
+                "name": "DoorRobotCellOpen ",
+                "Index": "7",
+                "label": "DoorRobotCellOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "6",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Density",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "kg/m^3",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.viscosity"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "Alarm Code": "1",
+                "Severity": "4",
+                "FBS Source": "LC3.XZS3",
+                "notes": "Inspection cell safety door open ",
+                "name": "DoorInspectionCellOpen ",
+                "Index": "8",
+                "label": "DoorInspectionCellOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "7",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Viscosity",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "Pa.s",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "ccd",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.ccd1.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.ccd1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.defectLocationX"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Defect Location X",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.defectType"
+            },
+            "valueSource": "opc",
+            "dataType": "String",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 19.0,
+                "Alarm Code": "4",
+                "Severity": "4",
+                "notes": "Maintenance platform E-Stop activated ",
+                "setpointB": 20.0,
+                "Index": "3",
+                "label": "EStopMaintenancePlatform ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC2.XZS1",
+                "name": "EStopMaintenancePlatform ",
+                "Alarm Group Id": "1",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Defect Type",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.resolution"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Inspection Speed",
+            "tagType": "AtomicTag",
+            "engUnit": "ppi",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.defectCount"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 10.0,
+                "Alarm Code": "3",
+                "Severity": "4",
+                "notes": "Top cover emergency stop has been activated ",
+                "setpointB": 12.0,
+                "Index": "2",
+                "label": "EStopTopCover ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC1.XZS3",
+                "name": "EStopTopCover ",
+                "Alarm Group Id": "1",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Defect Count",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.defectLocationY"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Defect Location Y",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.positionX"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Position X",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.positionY"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Position Y",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "rewinder",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.rewinder1.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.rewinder1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.cycleTime"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 200.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "notes": "Operator Station Emergency Stop pressed ",
+                "setpointB": 203.0,
+                "Index": "1",
+                "label": "EStopOperatorStation ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC1.XZS2",
+                "name": "EStopOperatorStation ",
+                "Alarm Group Id": "1",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Cycle Time",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "s",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.rollDiameter"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Roll Diameter",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tension"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Tension",
+            "tagType": "AtomicTag",
+            "engUnit": "N",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.speed"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 97.0,
+                "Alarm Code": "3",
+                "Severity": "4",
+                "FBS Source": "LC1.XZS3",
+                "notes": "Top cover emergency stop has been activated ",
+                "name": "EStopTopCover ",
+                "Index": "2",
+                "label": "EStopTopCover ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Speed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "unwinder",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.unwinder.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.unwinder"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.speed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 100.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "FBS Source": "LC1.XZS2",
+                "notes": "Operator Station Emergency Stop pressed ",
+                "name": "EStopOperatorStation ",
+                "Index": "1",
+                "label": "EStopOperatorStation ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Speed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tension"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "engHigh": 80.0,
+            "name": "Tension",
+            "tagType": "AtomicTag",
+            "engUnit": "N",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.remainingLength"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "engHigh": 5000.0,
+            "alarms": [
+              {
+                "setpointA": 900.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "notes": "Emergency Stop pressed in Infeed Zone. Inspect area and reset ",
+                "setpointB": 910.0,
+                "Index": "0",
+                "label": "EStopInfeedZone ",
+                "priority": "Medium",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC1.XZS1",
+                "name": "EStopInfeedZone ",
+                "Alarm Group Id": "1",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Remaining Length",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.torque"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "engHigh": 500.0,
+            "name": "Torque",
+            "tagType": "AtomicTag",
+            "engUnit": "N.m",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.rollDiameter"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "engHigh": 800.0,
+            "name": "Roll Diamater",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "engLow": 76.0,
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "coolingRoll",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.coolingRoller1.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.coolingRoller1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.speed"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Speed",
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Temperature",
+            "tagType": "AtomicTag",
+            "engUnit": "°C",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Pressure",
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.flowRate"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 25.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "FBS Source": "LC3.XZS1",
+                "notes": "Assembly cell safety door open ",
+                "name": "DoorAssemblyCellOpen ",
+                "Index": "6",
+                "label": "DoorAssemblyCellOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "6",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Flow Rate",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "m^3/h",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.surfaceTemp"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 40.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "notes": "Robot cell perimeter door open. Lock required for operation ",
+                "setpointB": 42.0,
+                "Index": "7",
+                "label": "DoorRobotCellOpen ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC3.XZS2",
+                "name": "DoorRobotCellOpen ",
+                "Alarm Group Id": "6",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Surface Temperature",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "°C",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.diameter"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Diameter",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "tensionControl",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.tensionControl.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.tensionControl"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tensionActual"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 300.0,
+                "Alarm Code": "1",
+                "Severity": "2",
+                "notes": "Upstream not supplying material ",
+                "setpointB": 305.0,
+                "Index": "14",
+                "label": "UpstreamStarved ",
+                "priority": "Medium",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC6.XZS1",
+                "name": "UpstreamStarved ",
+                "Alarm Group Id": "2000",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Tension Actual",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "N",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.controlOutput"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 10.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "mode": "BelowValue",
+                "FBS Source": "LC5.XZS3",
+                "notes": "Loss of communication with IO module. Check fieldbus ",
+                "name": "IOCommunicationLost ",
+                "Index": "13",
+                "label": "IOCommunicationLost ",
+                "priority": "Critical",
+                "Alarm Group Id": "311",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Control Output",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "%",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tensionError"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Tension Error",
+            "tagType": "AtomicTag",
+            "engUnit": "N",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tensionSetpoint"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Tension Setpoint",
+            "tagType": "AtomicTag",
+            "engUnit": "N",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.rollDiameter"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Roll Diameter",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "ngLaserMarking",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.ngLaserMarking.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.ngLaserMarking"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.power"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Power",
+            "tagType": "AtomicTag",
+            "engUnit": "W",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.vibration"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Vibration",
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tension"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 20.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "mode": "BelowValue",
+                "FBS Source": "LC1.XZS1",
+                "notes": "Emergency Stop pressed in Infeed Zone. Inspect area and reset ",
+                "name": "EStopInfeedZone ",
+                "Index": "0",
+                "label": "EStopInfeedZone ",
+                "priority": "Medium",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Tension",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "N",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.depth"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Depth",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.position"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "Alarm Code": "2",
+                "Severity": "1",
+                "setpointA": 120.0,
+                "notes": "Machine taken out of service for planned maintenance ",
+                "setpointB": 125.0,
+                "Index": "16",
+                "label": "PlannedMaintenanceMode ",
+                "priority": "Medium",
+                "ackNotesReqd": true,
+                "FBS Source": "LC5.XZS2",
+                "mode": "BetweenValues",
+                "name": "PlannedMaintenanceMode ",
+                "Alarm Group Id": "4001",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Position",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.speed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Speed",
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "cpc",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.cpc1.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.cpc1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.positionSetpoint"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "engHigh": 10.0,
+            "name": "Position Setpoint",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "engLow": -10.0,
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.actuatorLoad"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 90.0,
+                "mode": "AboveValue",
+                "Alarm Code": "1",
+                "Severity": "4",
+                "FBS Source": "LC3.XZS3",
+                "notes": "High Actuator Load",
+                "name": "High Actuator Load",
+                "Index": "8",
+                "label": "High Actuator Load",
+                "Alarm Group Id": "7",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Actuator Load",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "N",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.positionActual"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "engHigh": 10.0,
+            "alarms": [
+              {
+                "mode": "AboveValue",
+                "setpointA": 56.0,
+                "Alarm Code": "1",
+                "Severity": "3",
+                "FBS Source": "LC4.XZS2",
+                "name": "Position out",
+                "Index": "10",
+                "Alarm Group Id": "65",
+                "priority": "High",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Position Actual",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "engLow": -10.0,
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.deviation"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "engHigh": 5.0,
+            "alarms": [
+              {
+                "mode": "BelowValue",
+                "setpointA": 2.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "FBS Source": "LC4.XZS1",
+                "notes": "Packaging station safety door open ",
+                "name": "DoorPackagingStationOpen ",
+                "Index": "9",
+                "label": "DoorPackagingStationOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "7",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Deviation",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "degrees",
+            "engLow": -5.0,
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.positionSignal"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 80.0,
+                "Alarm Code": "2",
+                "Severity": "3",
+                "notes": "Temperature above high limit. Check heating system ",
+                "setpointB": 84.0,
+                "Index": "11",
+                "label": "TempHighWarning ",
+                "priority": "High",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC4.XZS3",
+                "name": "TempHighWarning ",
+                "Alarm Group Id": "121",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Position Signal",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "engLow": -100.0,
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "cleanAndDryRoom",
+    "typeId": "",
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.cleanAndDryRoom1.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.cleanAndDryRoom1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.particleCount"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "Particle Count",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Temperature",
+            "tagType": "AtomicTag",
+            "engUnit": "°C",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.humidity"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Humidity",
+            "tagType": "AtomicTag",
+            "engUnit": "%",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.airChangeRate"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "Alarm Code": "1",
+                "Severity": "4",
+                "FBS Source": "LC2.XZS2",
+                "notes": "Infeed conveyor access door open. Close and secure door ",
+                "name": "DoorInfeedConveyorOpen ",
+                "Index": "4",
+                "label": "DoorInfeedConveyorOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "5",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Air Change Rate",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "ACH",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Pressure",
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.airFlow"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Air Flow",
+            "tagType": "AtomicTag",
+            "engUnit": "m^3/h",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressureDifference"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 50.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "notes": "Buffer area access door open ",
+                "setpointB": 53.0,
+                "Index": "5",
+                "label": "DoorBufferAreaOpen ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC2.XZS3",
+                "name": "DoorBufferAreaOpen ",
+                "Alarm Group Id": "5",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Pressure Difference",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "expansionRoll",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.expansionRoll1.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.expansionRoll1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.diameter"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Diameter",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tension"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 81.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "notes": "Loss of communication with IO module. Check fieldbus ",
+                "setpointB": 81.0,
+                "Index": "13",
+                "label": "IOCommunicationLost ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "Equality",
+                "FBS Source": "LC5.XZS2",
+                "name": "IOCommunicationLost ",
+                "Alarm Group Id": "311",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Tension",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "N",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Pressure",
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.speed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 201.0,
+                "Alarm Code": "1",
+                "FBS Source": "LC5.XZS1",
+                "Severity": "4",
+                "notes": "Motor overload – inspect drive or mechanical load ",
+                "name": "MotorOverload ",
+                "Index": "12",
+                "label": "MotorOverload ",
+                "priority": "Critical",
+                "Alarm Group Id": "291",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Speed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.surfaceRoughness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Surface Roughness",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.vibration"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Vibration",
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "thicknessGauge",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.thicknessGuage1.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.thicknessGuage1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.maxDeviation"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Max Deviation",
+            "tagType": "AtomicTag",
+            "engUnit": "degrees",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.measuredThickness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 10.0,
+                "Alarm Code": "2",
+                "Severity": "1",
+                "notes": "Machine taken out of service for planned maintenance ",
+                "setpointB": 12.0,
+                "Index": "16",
+                "label": "PlannedMaintenanceMode ",
+                "priority": "Medium",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC6.XZS3",
+                "name": "PlannedMaintenanceMode ",
+                "Alarm Group Id": "4001",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Measured Thickness",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.avgThickness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 10.0,
+                "Alarm Code": "1",
+                "Severity": "2",
+                "mode": "BelowValue",
+                "FBS Source": "LC6.XZS2",
+                "notes": "Downstream equipment is blocked ",
+                "name": "DownstreamBlocked ",
+                "Index": "15",
+                "label": "DownstreamBlocked ",
+                "priority": "Medium",
+                "Alarm Group Id": "3000",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Average Thickness",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.measuredWidth"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Measured Width",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "halfSplitter",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.halfSplitter.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.halfSplitter"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.vibration"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Vibration",
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.speed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 260.0,
+                "Alarm Code": "1",
+                "Severity": "2",
+                "notes": "Downstream equipment is blocked ",
+                "setpointB": 265.0,
+                "Index": "15",
+                "label": "DownstreamBlocked ",
+                "priority": "Medium",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC6.XZS1",
+                "name": "DownstreamBlocked ",
+                "Alarm Group Id": "3000",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Speed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.cutCount"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 200.0,
+                "Alarm Code": "1",
+                "Severity": "2",
+                "mode": "AboveValue",
+                "FBS Source": "LC5.XZS3",
+                "notes": "Upstream not supplying material ",
+                "name": "UpstreamStarved ",
+                "Index": "14",
+                "label": "UpstreamStarved ",
+                "priority": "Medium",
+                "Alarm Group Id": "2000",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Cut Count",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tension"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Tension",
+            "tagType": "AtomicTag",
+            "engUnit": "N",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.cutlength"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Cut Length",
+            "tagType": "AtomicTag",
+            "engUnit": "m",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "typeColor": -64512,
+    "name": "valve",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.valve.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.valve"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "electrical",
+        "typeId": "electrical",
+        "parameters": {
+          "electricalPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.electrical"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.positionSetPoint"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "positionSetPoint",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.feedbackSignal"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "feedbackSignal",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.position"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "position",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "betaGauge",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.betaGauge1.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.betaGauge1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.minThickness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "engHigh": 6.0,
+            "name": "Min Thickness",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.density"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "engHigh": 10.0,
+            "alarms": [
+              {
+                "setpointA": 1.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "notes": "Emergency Stop pressed in Infeed Zone. Inspect area and reset ",
+                "setpointB": 1.5,
+                "Index": "0",
+                "label": "EStopInfeedZone ",
+                "priority": "Medium",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC1.XZS1",
+                "name": "EStopInfeedZone ",
+                "Alarm Group Id": "1",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Density",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "kg/m^3",
+            "engLow": 8.0,
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.width"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "engHigh": 1200.0,
+            "name": "Width",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "engLow": 300.0,
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.thickness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "engHigh": 20.0,
+            "alarms": [
+              {
+                "setpointA": 2.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "mode": "BelowValue",
+                "FBS Source": "LC1.XZS2",
+                "notes": "Operator Station Emergency Stop pressed ",
+                "name": "EStopOperatorStation ",
+                "Index": "1",
+                "label": "EStopOperatorStation ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Thickness",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "engLow": 6.0,
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.maxThickness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "engHigh": 20.0,
+            "name": "Max Thickness",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "engLow": 6.0,
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "srshrs",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.solventRecoverySystem.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.solventRecoverySystem"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.concentration"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 95.0,
+                "Alarm Code": "2",
+                "Severity": "3",
+                "notes": "Temperature above high limit. Check heating system ",
+                "setpointB": 100.0,
+                "Index": "11",
+                "label": "TempHighWarning ",
+                "priority": "High",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC4.XZS3",
+                "name": "TempHighWarning ",
+                "Alarm Group Id": "121",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Concentration",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "ppm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Temperature",
+            "tagType": "AtomicTag",
+            "engUnit": "°C",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.solventRate"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 165.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "notes": "Motor overload – inspect drive or mechanical load ",
+                "setpointB": 170.0,
+                "Index": "12",
+                "label": "MotorOverload ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC5.XZS1",
+                "name": "MotorOverload ",
+                "Alarm Group Id": "291",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Solvent Rate",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "L/h",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.efficiency"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Efficiency",
+            "tagType": "AtomicTag",
+            "engUnit": "%",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Pressure",
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "sideCoating",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.sideCoatingA.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.coating.anode.sideCoatingA"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.coatingSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "Alarm Code": "4",
+                "Severity": "4",
+                "FBS Source": "LC2.XZS1",
+                "notes": "Maintenance platform E-Stop activated ",
+                "name": "EStopMaintenancePlatform ",
+                "Index": "3",
+                "label": "EStopMaintenancePlatform ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Coating Speed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "m/min",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.viscosity"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Viscosity",
+            "tagType": "AtomicTag",
+            "engUnit": "Pa.s",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Pressure",
+            "tagType": "AtomicTag",
+            "engUnit": "Pa",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.coatingUniformity"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Coating Uniformity",
+            "tagType": "AtomicTag",
+            "engUnit": "%",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.thicknessSetpoint"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "ThicknessSetpoint",
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.thicknessActual"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 34.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "FBS Source": "LC2.XZS3",
+                "notes": "Infeed conveyor access door open. Close and secure door ",
+                "name": "DoorInfeedConveyorOpen ",
+                "Index": "4",
+                "label": "DoorInfeedConveyorOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "5",
+                "ackNotesReqd": true,
+                "Oprator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "Thickness Actual",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "mm",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.coatingTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "name": "Coating Temperature",
+            "tagType": "AtomicTag",
+            "engUnit": "°C",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  }
+]

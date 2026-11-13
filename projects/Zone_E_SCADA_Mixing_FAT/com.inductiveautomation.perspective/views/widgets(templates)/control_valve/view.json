@@ -1,0 +1,128 @@
+{
+  "custom": {},
+  "params": {
+    "Close_Fault": "value",
+    "Close_Fb": "value",
+    "Open_Fault": "value",
+    "Open_Fb": 10,
+    "Vlv_Name": "[default]agratas/sanand/zoneE/line1/mixing/904/XV_501",
+    "value": "value"
+  },
+  "propConfig": {
+    "params.Close_Fault": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Close_Fb": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Open_Fault": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Open_Fb": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Vlv_Name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 80,
+      "width": 80
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Valve"
+        },
+        "position": {
+          "height": 0.9875,
+          "width": 0.975,
+          "x": 0.0187,
+          "y": -0.0124
+        },
+        "propConfig": {
+          "props.label.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.Vlv_Name}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.value.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Open_Fb"
+              },
+              "transforms": [
+                {
+                  "fallback": "Null",
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "max": 0
+                      },
+                      "output": "Close"
+                    },
+                    {
+                      "input": {
+                        "min": 1
+                      },
+                      "output": "Open"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "appearance": "mimic",
+          "label": {
+            "location": "top",
+            "style": {
+              "fontSize": "75%"
+            }
+          },
+          "style": {
+            "fill": "#85A407"
+          },
+          "value": {
+            "style": {
+              "fontSize": "75%"
+            }
+          }
+        },
+        "type": "ia.symbol.valve"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

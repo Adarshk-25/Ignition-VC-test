@@ -1,0 +1,83 @@
+{
+  "custom": {},
+  "params": {
+    "path": "/"
+  },
+  "propConfig": {
+    "params.path": {
+      "binding": {
+        "config": {
+          "path": "page.props.path"
+        },
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 149
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "basis": "133px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.filters.active.conditions.source": {
+            "binding": {
+              "config": {
+                "expression": "\"*\"+{view.params.path}+\"*\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "enableDetails": false,
+          "enableHeader": false,
+          "filters": {
+            "active": {
+              "conditions": {},
+              "priorities": {
+                "high": false,
+                "low": false,
+                "medium": false
+              },
+              "text": "active"
+            }
+          },
+          "pager": {
+            "enabled": false
+          },
+          "style": {
+            "classes": "widgets/spacing widgets/valueDisplay"
+          },
+          "toolbar": {
+            "enableActiveTab": false,
+            "enableConfiguration": false,
+            "enableFilter": false,
+            "enableFilterResults": false,
+            "enablePreFilters": false,
+            "enableShelvedTab": false
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tconnectionName \u003d \"SiemensPLC\"\n\tobjectId \u003d \"nsu\u003dhttp://agratas.com/UA/;s\u003dF1.A1.SM.MIX3/AGMethods\"\n\tmethodId \u003d \"nsu\u003dhttp://agratas.com/UA/;s\u003dF1.A1.SM.MIX3/AGMethods/SetRecipe\"\n\t\n\theader \u003d {\n\t    \"ProcessStep\": \"STEP1\",\n\t    \"ProductionOrder\": \"PO12345\",\n\t    \"Version\": \"2.0\"\n\t}\n\t\n\tp0 \u003d {\n\t    \"ParameterRef\": \"Param_001\",\n\t    \"ParameterType\": \"Temperature\",\n\t    \"ParameterUOM\": \"degC\",\n\t    \"USL\": 60.0,\n\t    \"LSL\": 40.0,\n\t    \"Setpoint\": 45.0\n\t}\n\t\n\tp1 \u003d {\n\t    \"ParameterRef\": \"Param_002\",\n\t    \"ParameterType\": \"Speed\",\n\t    \"ParameterUOM\": \"RPM\",\n\t    \"USL\": 1500.0,\n\t    \"LSL\": 500.0,\n\t    \"Setpoint\": 1000.0\n\t}\n\t\n\tinputs \u003d [\n\t    system.util.jsonEncode(header),\n\t    system.util.jsonEncode([p0, p1])\n\t]\n\t\n\tresult \u003d system.opcua.callMethod(\n\t    connectionName,\n\t    objectId,\n\t    methodId,\n\t    inputs\n\t)\n\t\n\tlogger \u003d system.util.getLogger(\u0027CallMethodResult\u0027)\n\tlogger.info(str(result))"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 117,
+          "width": 278,
+          "x": 246,
+          "y": 62
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tconnectionName \u003d \"Test\"\n\tobjectId \u003d \"nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E305.PCE.CMS21/AGMethods\"\n\tmethodId \u003d \"nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E305.PCE.CMS21/AGMethods/SetRecipe\"\n\t\n\theader \u003d {\n\t    \"ProcessStep\": \"STEP2\",\n\t    \"ProductionOrder\": \"PO12345\",\n\t    \"Version\": \"2.2\"\n\t}\n\t\n\tp0 \u003d {\n\t    \"ParameterRef\": \"Param_001\",\n\t    \"ParameterType\": \"Temperature\",\n\t    \"ParameterUOM\": \"degC\",\n\t    \"USL\": 60.0,\n\t    \"LSL\": 40.0,\n\t    \"Setpoint\": 45.0\n\t}\n\t\n\tp1 \u003d {\n\t    \"ParameterRef\": \"Param_002\",\n\t    \"ParameterType\": \"Speed\",\n\t    \"ParameterUOM\": \"RPM\",\n\t    \"USL\": 1500.0,\n\t    \"LSL\": 500.0,\n\t    \"Setpoint\": 1000.0\n\t}\n\t\n\tinputs \u003d [\n\t    system.util.jsonEncode(header),\n\t    system.util.jsonEncode([p0, p1])\n\t]\n\t\n\tresult \u003d system.opcua.callMethod(\n\t    connectionName,\n\t    objectId,\n\t    methodId,\n\t    inputs\n\t)\n\t\n\tlogger \u003d system.util.getLogger(\u0027CallMethodResult\u0027)\n\tlogger.info(str(result))"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "height": 117,
+          "width": 278,
+          "x": 253,
+          "y": 368
+        },
+        "props": {
+          "text": " POW"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

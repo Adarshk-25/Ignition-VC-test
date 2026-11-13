@@ -1,0 +1,905 @@
+{
+  "custom": {
+    "oee": null,
+    "downtime": null
+  },
+  "params": {
+    "area": {
+      "id": "",
+      "step": 0,
+      "title": "",
+      "page": "",
+      "note": "",
+      "oeeTag": "",
+      "downtimeTag": "",
+      "countsText": "",
+      "groupCount": 0,
+      "alarm": {
+        "count": 0,
+        "worst": "none"
+      },
+      "groups": [
+        {
+          "title": "",
+          "compact": false,
+          "units": []
+        },
+        {
+          "title": "",
+          "compact": false,
+          "units": []
+        },
+        {
+          "title": "",
+          "compact": false,
+          "units": []
+        }
+      ]
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 320,
+      "height": 480
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "position": {},
+    "props": {
+      "direction": "column",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "stretch",
+      "alignContent": "flex-start",
+      "style": {
+        "classes": "HPHMI/Panel"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Header",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "44px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start"
+        },
+        "children": [
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Step"
+            },
+            "position": {
+              "basis": "24px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "1",
+              "style": {
+                "classes": "HPHMI/Panel/Step"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "toStr({view.params.area.step})"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Title"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "text": "Area",
+              "style": {
+                "classes": "HPHMI/Panel/Title"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.area.title"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "AlarmBadge"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start"
+            },
+            "children": [
+              {
+                "type": "ia.display.icon",
+                "meta": {
+                  "name": "BadgeIcon"
+                },
+                "position": {
+                  "basis": "18px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "material/warning",
+                  "color": "#1F2328",
+                  "style": {
+                    "minWidth": "18px",
+                    "height": "18px"
+                  }
+                },
+                "propConfig": {
+                  "props.path": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "case({view.params.area.alarm.worst}, \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+                      }
+                    }
+                  },
+                  "props.color": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.params.area.alarm.worst} = \"Critical\", \"#FFFFFF\", \"#1F2328\")"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "BadgeCount"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "0",
+                  "style": {
+                    "fontWeight": "700"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "toStr({view.params.area.alarm.count})"
+                      }
+                    }
+                  },
+                  "props.style.color": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "if({view.params.area.alarm.worst} = \"Critical\", \"#FFFFFF\", \"#1F2328\")"
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.alarm.count} > 0"
+                  }
+                }
+              },
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"HPHMI/Badge/\" + if({view.params.area.alarm.worst} = \"none\", \"Info\", {view.params.area.alarm.worst})"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.icon",
+            "meta": {
+              "name": "Chevron"
+            },
+            "position": {
+              "basis": "24px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "material/chevron_right",
+              "color": "#555C64",
+              "style": {
+                "minWidth": "24px",
+                "height": "24px"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.page} != \"\""
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.area.page} != \"\", \"HPHMI/Panel/Header\", \"HPHMI/Panel/HeaderStatic\")"
+              }
+            }
+          },
+          "meta.tooltip.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.area.page} != \"\", \"Open \" + {view.params.area.title} + \" screen\", \"No detail screen for this area yet\")"
+              }
+            }
+          }
+        },
+        "events": {
+          "dom": {
+            "onClick": {
+              "type": "script",
+              "scope": "G",
+              "config": {
+                "script": "\t# Navigate to the area screen when one exists\n\tpage = self.view.params.area.page\n\tif page:\n\t\tsystem.perspective.navigate(page=page)"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Row_Kpi"
+        },
+        "position": {
+          "basis": "auto",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "wrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "4px 12px",
+            "padding": "6px 12px",
+            "borderBottom": "1px solid #C3C8CE"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Counts"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Text/Label"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.area.countsText"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "OeeText"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Card/Value"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.oeeTag} != \"\""
+                  }
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"OEE \" + if(isNull({view.custom.oee}), \"? %\", numberFormat({view.custom.oee}, \"#,##0.0\") + \" %\")"
+                  }
+                }
+              },
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if(isNull({view.custom.oee}), \"HPHMI/Text/Muted\", \"HPHMI/Card/Value\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "DowntimeText"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Card/Value"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.downtimeTag} != \"\""
+                  }
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "\"Downtime \" + if(isNull({view.custom.downtime}), \"? min\", numberFormat({view.custom.downtime}, \"#,##0\") + \" min\")"
+                  }
+                }
+              },
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if(isNull({view.custom.downtime}), \"HPHMI/Text/Muted\", \"HPHMI/Card/Value\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "SimChip",
+              "tooltip": {
+                "enabled": true,
+                "text": "OEE / downtime are simulated memory tags ([default]_Sim/ZoneE). Shift-to-date."
+              }
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "SIM",
+              "style": {
+                "classes": "HPHMI/Chip/Sim"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.oeeTag} != \"\""
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Body"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "direction": "column",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "classes": "HPHMI/Panel/Body"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Group0_Title"
+            },
+            "position": {
+              "basis": "20px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Text/Group"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.area.groups[0].title"
+                  }
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.groupCount} > 0"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.flex-repeater",
+            "meta": {
+              "name": "Group0_Units"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "Components/HPHMI/EquipmentCard",
+              "instances": [],
+              "direction": "row",
+              "wrap": "wrap",
+              "justify": "flex-start",
+              "alignItems": "flex-start",
+              "alignContent": "flex-start",
+              "useDefaultViewWidth": false,
+              "useDefaultViewHeight": true,
+              "elementPosition": {
+                "basis": "132px",
+                "grow": 1,
+                "shrink": 0
+              },
+              "style": {
+                "gap": "8px"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.groupCount} > 0"
+                  }
+                }
+              },
+              "props.instances": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.area.groups[0].units"
+                  }
+                }
+              },
+              "props.path": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.area.groups[0].compact}, \"Components/HPHMI/EquipmentChip\", \"Components/HPHMI/EquipmentCard\")"
+                  }
+                }
+              },
+              "props.elementPosition.basis": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.area.groups[0].compact}, \"96px\", \"132px\")"
+                  }
+                }
+              },
+              "props.elementPosition.grow": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.area.groups[0].compact}, 0, 1)"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Group1_Title"
+            },
+            "position": {
+              "basis": "20px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Text/Group"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.area.groups[1].title"
+                  }
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.groupCount} > 1"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.flex-repeater",
+            "meta": {
+              "name": "Group1_Units"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "Components/HPHMI/EquipmentCard",
+              "instances": [],
+              "direction": "row",
+              "wrap": "wrap",
+              "justify": "flex-start",
+              "alignItems": "flex-start",
+              "alignContent": "flex-start",
+              "useDefaultViewWidth": false,
+              "useDefaultViewHeight": true,
+              "elementPosition": {
+                "basis": "132px",
+                "grow": 1,
+                "shrink": 0
+              },
+              "style": {
+                "gap": "8px"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.groupCount} > 1"
+                  }
+                }
+              },
+              "props.instances": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.area.groups[1].units"
+                  }
+                }
+              },
+              "props.path": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.area.groups[1].compact}, \"Components/HPHMI/EquipmentChip\", \"Components/HPHMI/EquipmentCard\")"
+                  }
+                }
+              },
+              "props.elementPosition.basis": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.area.groups[1].compact}, \"96px\", \"132px\")"
+                  }
+                }
+              },
+              "props.elementPosition.grow": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.area.groups[1].compact}, 0, 1)"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Group2_Title"
+            },
+            "position": {
+              "basis": "20px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Text/Group"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.area.groups[2].title"
+                  }
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.groupCount} > 2"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.flex-repeater",
+            "meta": {
+              "name": "Group2_Units"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "Components/HPHMI/EquipmentCard",
+              "instances": [],
+              "direction": "row",
+              "wrap": "wrap",
+              "justify": "flex-start",
+              "alignItems": "flex-start",
+              "alignContent": "flex-start",
+              "useDefaultViewWidth": false,
+              "useDefaultViewHeight": true,
+              "elementPosition": {
+                "basis": "132px",
+                "grow": 1,
+                "shrink": 0
+              },
+              "style": {
+                "gap": "8px"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.groupCount} > 2"
+                  }
+                }
+              },
+              "props.instances": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.area.groups[2].units"
+                  }
+                }
+              },
+              "props.path": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.area.groups[2].compact}, \"Components/HPHMI/EquipmentChip\", \"Components/HPHMI/EquipmentCard\")"
+                  }
+                }
+              },
+              "props.elementPosition.basis": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.area.groups[2].compact}, \"96px\", \"132px\")"
+                  }
+                }
+              },
+              "props.elementPosition.grow": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.params.area.groups[2].compact}, 0, 1)"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Note"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Placeholder"
+              },
+              "textStyle": {
+                "whiteSpace": "normal"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.area.note"
+                  }
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.area.note} != \"\""
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "propConfig": {
+    "custom.oee": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{p}",
+          "references": {
+            "p": "{view.params.area.oeeTag}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toFloat({value}), null)"
+          }
+        ]
+      }
+    },
+    "custom.downtime": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{p}",
+          "references": {
+            "p": "{view.params.area.downtimeTag}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toFloat({value}), null)"
+          }
+        ]
+      }
+    },
+    "params.area": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

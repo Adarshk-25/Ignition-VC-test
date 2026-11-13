@@ -1,0 +1,93 @@
+[
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E117.PCE.COT21/AGCalls/AGSetItemInfo/StatusCode",
+    "dataType": "Int4",
+    "name": "StatusCode",
+    "defaultValue": 200,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E117.PCE.COT21/AGCalls/AGSetItemInfo/ResponseTimestamp",
+    "dataType": "String",
+    "name": "ResponseTimestamp",
+    "defaultValue": "2026-09-11 18:29:23.236",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E117.PCE.COT21/AGCalls/AGSetItemInfo/Handshake",
+    "dataType": "Int4",
+    "name": "Handshake",
+    "defaultValue": 2,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E117.PCE.COT21/AGCalls/AGSetItemInfo/ResponseData",
+    "dataType": "Document",
+    "name": "ResponseData",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E117.PCE.COT21/AGCalls/AGSetItemInfo/RequestTimestamp",
+    "dataType": "String",
+    "name": "RequestTimestamp",
+    "defaultValue": "2026-09-09T05:00:00Z",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E117.PCE.COT21/AGCalls/AGSetItemInfo/ResponseAckNumber",
+    "dataType": "Int4",
+    "name": "ResponseAckNumber",
+    "defaultValue": 4,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E117.PCE.COT21/AGCalls/AGSetItemInfo/SenderFBS",
+    "dataType": "String",
+    "name": "SenderFBS",
+    "defaultValue": "MOCK_IN11_E117_PCE_COT21",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E117.PCE.COT21/AGCalls/AGSetItemInfo/RequestData",
+    "dataType": "Document",
+    "name": "RequestData",
+    "defaultValue": [
+      {
+        "ItemID": "CELL-SN-1001",
+        "RFID": "ANODE-ROLL-9001",
+        "SlotNo": 1
+      },
+      {
+        "ItemID": "CELL-SN-1002",
+        "RFID": "ANODE-ROLL-9002",
+        "SlotNo": 2
+      }
+    ],
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E117.PCE.COT21/AGCalls/AGSetItemInfo/RequestAckNumber",
+    "dataType": "Int4",
+    "name": "RequestAckNumber",
+    "defaultValue": 4,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  }
+]

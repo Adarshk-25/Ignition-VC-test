@@ -1,0 +1,103 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 998
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "T"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "SQDCP  SHOPFLOOR DASHBOARD",
+              "textStyle": {
+                "color": "#000000",
+                "fontSize": "20px",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "draggable": true,
+                    "id": "tPIC8B-F",
+                    "modal": false,
+                    "overlayDismiss": false,
+                    "resizable": true,
+                    "showCloseIcon": true,
+                    "type": "open",
+                    "viewPath": "actionTab",
+                    "viewportBound": false
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "Tab Action"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "W"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "text": "Week 15 - Apr 2026",
+              "textStyle": {
+                "color": "#888",
+                "fontSize": "12px"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "DH"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "alignItems": "center",
+          "style": {
+            "backgroundColor": "#FFFFFF",
+            "borderBottom": "2px solid #334",
+            "padding": "14px 20px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

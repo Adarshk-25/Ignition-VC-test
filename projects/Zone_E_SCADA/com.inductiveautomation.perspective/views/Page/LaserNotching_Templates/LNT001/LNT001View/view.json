@@ -1,0 +1,98 @@
+{
+  "custom": {},
+  "params": {
+    "metadata": "value"
+  },
+  "propConfig": {
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TrendsTemplate"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.path": {
+            "binding": {
+              "config": {
+                "path": "view.params.metadata"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Page/PopUpScreensTemplate/TrendsTemplate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "AlarmsTemplate"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.tagpath": {
+            "binding": {
+              "config": {
+                "path": "view.params.metadata"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Page/PopUpScreensTemplate/AlarmsTemplate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "BX001TabScreens"
+        },
+        "propConfig": {
+          "props.params.tag": {
+            "binding": {
+              "config": {
+                "path": "view.params.metadata"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/LNT001/LNT001TabScreens"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "tabSize": {
+        "width": 120
+      },
+      "tabs": [
+        "Process Data",
+        "Trends",
+        "Alarms"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

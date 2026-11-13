@@ -1,0 +1,1433 @@
+{
+  "custom": {},
+  "params": {
+    "tagPath": "[default]Mixing/Flow Control valve"
+  },
+  "propConfig": {
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 150,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Hand valve 4"
+        },
+        "position": {
+          "height": 0.3467,
+          "width": 0.8041,
+          "x": 0.0408,
+          "y": 0.3079
+        },
+        "propConfig": {
+          "custom.alarm": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Alarm Metrics.activeAckCount"
+              },
+              "type": "tag"
+            }
+          },
+          "props.elements[1].fill.opacity": {
+            "binding": {
+              "config": {
+                "expression": "if({this.custom.alarm}\u003e0,if(dateExtract(now(),\"second\")%2\u003d0,1,0.2),\r\n1) "
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/valveState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                },
+                {
+                  "code": "\tif self.custom.alarm\u003e0:\n\t\treturn \"rgb(202,51,51)\"\n\telse:\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[27].fill.opacity": {
+            "binding": {
+              "config": {
+                "expression": "if({this.custom.alarm}\u003e0,if(dateExtract(now(),\"second\")%2\u003d0,1,0.2),\r\n1) "
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[27].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/valveState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                },
+                {
+                  "code": "\tif self.custom.alarm\u003e0:\n\t\treturn \"rgb(202,51,51)\"\n\telse:\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[42].fill.opacity": {
+            "binding": {
+              "config": {
+                "expression": "if({this.custom.alarm}\u003e0,if(dateExtract(now(),\"second\")%2\u003d0,1,0.2),\r\n1) "
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[42].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/valveState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                },
+                {
+                  "code": "\tif self.custom.alarm\u003e0:\n\t\treturn \"rgb(202,51,51)\"\n\telse:\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[45].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/valveState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[46].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/valveState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#AAAAAA"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[88].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "expression": "if({value} \u003d 1, \u0027#00FF00\u0027, \u0027#808080\u0027 )\r\n ",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M560,574 l45,0 0,422 -45,0 0,-422z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M560,664 l0,242 -157,0 -17,17 -19,14 -23,9 -24,3 -23,-3 -22,-9 -16,-12 -17,-19 -153,0 0,-242 111,0 -26,-108 290,0 -26,108 122,0z",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M42,574 l47,0 0,422 -47,0 0,-422z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M111,553 l0,-33 419,0 0,33 -419,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M111,480 l0,35 419,0 0,-35 -419,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M127,515 l386,0 0,5 -386,0 0,-5z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M341,103 l-42,0 0,-101 42,0 0,101z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M365,336 l0,-25 47,0 0,23 -47,2z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M278,311 l0,25 -47,-2 0,-23 47,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M257,297 l0,14 9,0 0,-14 -9,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M398,297 l0,14 9,0 0,-14 -9,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,7 l35,9",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,16 l35,10",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,28 l35,7",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,38 l35,7",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,47 l35,7",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,56 l35,7",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,66 l35,7",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,75 l35,7",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,85 l35,9",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M304,94 l35,9",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M285,172 l73,0 0,332 -73,0 0,-332z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M356,103 l-69,0 0,-2 69,0 0,2z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M287,132 l69,0 0,7 -69,0 0,-7z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M290,172 l11,0 0,-31 -11,0 0,31z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M287,174 l69,0 0,-35 -69,0 0,35z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M278,172 l87,0 0,228 -87,0 0,-228z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M21,103 l598,0 5,3 7,2 5,5 0,5 0,7 -5,2 -7,5 -5,0 -598,0 -4,0 -8,-3 -4,-4 -3,-7 3,-5 4,-5 5,-2 7,-3z",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "height": "268",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000",
+                "width": "2px"
+              },
+              "type": "rect",
+              "width": "468",
+              "x": "-457",
+              "y": "660"
+            },
+            {
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "height": "268",
+              "name": "rect_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "2px"
+              },
+              "type": "rect",
+              "width": "528",
+              "x": "646",
+              "y": "658"
+            },
+            {
+              "d": "M377,297 l0,14 7,0 0,-14 -7,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M330,381 l-12,0 0,-228 12,0 0,228z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M318,426 l12,0 0,31 -12,0 0,-31z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M235,297 l0,14 7,0 0,-14 -7,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M120,480 l0,35 353,0 0,-35 -353,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M120,553 l0,-33 353,0 0,33 -353,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M454,478 l-270,0 28,-10 30,-7 38,-4 40,0 40,0 35,4 34,7 25,10z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M111,480 l0,35 419,0 0,-35 -419,0",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M111,556 l0,-36 419,0 0,36 -419,0",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M47,586 l40,0 0,351 -40,0 0,-351z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M607 612.5l40 0 0 351-40 0 0-351z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path_1",
+              "type": "path"
+            },
+            {
+              "d": "M563,586 l40,0 0,351 -40,0 0,-351z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M560,687 l0,203 -193,0 -35,26 -33,2 -24,-12 -11,-16 -172,0 0,-203 139,0 -14,-70 -22,-61 224,0 -12,131 153,0z",
+              "fill": {},
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M0 608.5l40 0 0 351-40 0 0-351z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path_0",
+              "type": "path"
+            },
+            {
+              "d": "M563,595 l40,0 0,29 -40,0 0,-29z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M560,699 l0,31 -115,0 -12,-17 -12,-14 139,0z",
+              "fill": {
+                "opacity": 1
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M89,730 l0,-31 161,0 -26,-143 26,0 9,56 16,87 7,116 12,47 31,35 -10,7 -9,2 -21,-14 -28,-77 -5,-43 0,-42 -163,0z",
+              "fill": {
+                "opacity": 1
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M47,595 l40,0 0,29 -40,0 0,-29z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M120,480 l0,35 28,0 0,-35 -28,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M120,556 l0,-36 28,0 0,36 -28,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M120,459 l0,21 9,0 0,-21 -9,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M120,577 l0,-24 9,0 0,24 -9,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M228,459 l0,21 10,0 0,-21 -10,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M228,577 l0,-24 10,0 0,24 -10,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M372,459 l0,21 9,0 0,-21 -9,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M372,577 l0,-24 9,0 0,24 -9,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M478,459 l0,21 9,0 0,-21 -9,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M478,577 l0,-24 9,0 0,24 -9,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M250,381 l143,0 7,0 10,5 4,7 0,5 3,5 -3,4 0,5 -2,5 -9,7 -5,2 -148,0 -10,-2 -7,-5 -5,-7 -2,-9 7,-15 7,-4 10,-3z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M398,297 l-14,0 0,-8 14,0 0,8z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M384,336 l14,-2 0,47 -14,0 0,-45z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M242,334 l15,2 0,45 -7,0 -8,0 0,-47z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M257,297 l-15,0 0,-8 15,0 0,8z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M259,461 l-21,0 0,-9 23,0 0,7 10,0 0,21 -12,0 0,-19z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M403,461 l-22,0 0,-9 24,0 0,7 9,0 0,21 -11,0 0,-19z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M509,461 l-24,0 0,-9 26,0 0,7 9,0 0,21 -11,0 0,-19z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M259,572 l-21,0 0,12 23,0 0,-7 10,0 0,-24 -12,0 0,19z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M403,572 l-22,0 0,12 24,0 0,-7 9,0 0,-24 -11,0 0,19z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M509,572 l-24,0 0,12 26,0 0,-7 9,0 0,-24 -11,0 0,19z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M151,461 l0,19 11,0 0,-21 -11,0 0,-7 -24,0 0,9 24,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M151,572 l-24,0 0,12 24,0 0,-7 11,0 0,-24 -11,0 0,19z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M509,459 l0,21 -22,0 0,-21 22,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M509,577 l0,-24 -22,0 0,24 22,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M403,577 l0,-24 -22,0 0,24 22,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M403,459 l0,21 -22,0 0,-21 22,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M259,459 l0,21 -21,0 0,-21 21,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M259,577 l0,-24 -21,0 0,24 21,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M151,577 l0,-24 -22,0 0,24 22,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M151,459 l0,21 -22,0 0,-21 22,0z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M252,388 l9,5 5,10 -5,11 -9,3 -12,-3 -5,-11 5,-10 12,-5",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M393,388 l10,5 4,10 -4,11 -10,3 -12,-3 -4,-11 4,-10 12,-5",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M313,381 l-12,0 0,-207 12,0 0,207z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M301,426 l12,0 0,31 -12,0 0,-31z",
+              "fill": {
+                "paint": "#AAAAAA"
+              },
+              "name": "path",
+              "type": "path"
+            }
+          ],
+          "viewBox": "-467 -8 1651 1014"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1616,
+          "width": 0.8144,
+          "x": 0.0978,
+          "y": 0.0305
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Open Status :"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/status/valveState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "NA",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "Running"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Stopped"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "0.2rem",
+                "borderBottomRightRadius": "0.2rem",
+                "borderStyle": "ridge",
+                "borderTopLeftRadius": "0.2rem",
+                "borderTopRightRadius": "0.2rem",
+                "borderWidth": 1
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "height": 0.1544,
+          "width": 0.9712,
+          "x": 0.0146,
+          "y": 0.6793
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderColor": "#808080",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 0.1,
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 2,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 2
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Position :"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/plcTags/position"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn round(value,2)",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "0.2rem",
+                "borderBottomRightRadius": "0.2rem",
+                "borderStyle": "ridge",
+                "borderTopLeftRadius": "0.2rem",
+                "borderTopRightRadius": "0.2rem",
+                "borderWidth": 1
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "height": 0.1533,
+          "width": 0.9712,
+          "x": 0.0102,
+          "y": 0.8393
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderColor": "#808080",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 0.1,
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 2,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 2
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "params": {
+              "tagPath": "{view.params.tagPath}"
+            },
+            "view": "EQUIPMENT SCREEN/VALVE/Valve"
+          },
+          "scope": "C",
+          "type": "nav"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "cursor": "pointer"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

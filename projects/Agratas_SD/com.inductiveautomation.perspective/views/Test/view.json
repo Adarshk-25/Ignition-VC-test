@@ -1,0 +1,143 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 533,
+      "width": 730
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "params": {
+                  "tabvalue": "1"
+                },
+                "view": "Page/2F_Templates/2F_mainScreen"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "valueDisplay_6"
+        },
+        "position": {
+          "height": 0.06,
+          "width": 0.1685,
+          "x": 0.0994,
+          "y": 0.1792
+        },
+        "props": {
+          "params": {
+            "name": "PLASTICISER IBC TANK",
+            "tagpath": "value",
+            "value": "value"
+          },
+          "path": "widgets(templates)/valueDisplay",
+          "style": {
+            "backgroundColor": "#DDDDDD",
+            "classes": "PipingAndInst/label"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "params": {
+                  "tabvalue": "1"
+                },
+                "view": "Page/2F_Templates/2F_mainScreen"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "valueDisplay_7"
+        },
+        "position": {
+          "height": 0.0694,
+          "width": 0.1658,
+          "x": 0.1359,
+          "y": 0.2992
+        },
+        "props": {
+          "params": {
+            "name": "PLASTICISER IBC TANK",
+            "tagpath": "value",
+            "value": "value"
+          },
+          "path": "widgets(templates)/valueDisplay",
+          "style": {
+            "backgroundColor": "#DDDDDD",
+            "classes": "PipingAndInst/label",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "params": {
+                  "tabvalue": "5"
+                },
+                "view": "Page/2F_Templates/2F_mainScreen"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "instrument_name_10"
+        },
+        "position": {
+          "height": 0.0994,
+          "width": 0.1836,
+          "x": 0.25,
+          "y": 0.607
+        },
+        "props": {
+          "params": {
+            "DisplayName": "DIVERTER VALVE",
+            "instrument_ID": ""
+          },
+          "path": "widgets(templates)/CMWidgets/Instruments/instrument_name"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 0.0638,
+          "width": 0.1096,
+          "x": 0.7671,
+          "y": 0.2402
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

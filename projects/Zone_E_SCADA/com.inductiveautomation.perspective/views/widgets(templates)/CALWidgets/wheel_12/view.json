@@ -1,0 +1,137 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 79,
+      "width": 78
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Roller"
+        },
+        "position": {
+          "height": 0.7867,
+          "rotate": {},
+          "width": 0.88,
+          "x": 0.0933,
+          "y": 0.1067
+        },
+        "propConfig": {
+          "custom.rotate": {
+            "binding": {
+              "config": {
+                "expression": "if(tag({view.params.tag}) \u003d 3, toMillis(now(500)) % 360, 0)"
+              },
+              "type": "expr"
+            }
+          },
+          "position.rotate.angle": {
+            "binding": {
+              "config": {
+                "path": "this.custom.rotate"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "cx": "499",
+              "cy": "499",
+              "fill": {
+                "paint": "#999"
+              },
+              "name": "circle",
+              "r": "499",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "circle"
+            },
+            {
+              "cx": "499",
+              "cy": "499",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "circle",
+              "r": "458",
+              "type": "circle"
+            },
+            {
+              "cx": "498",
+              "cy": "499",
+              "fill": {
+                "paint": "#d9d9d9"
+              },
+              "name": "circle",
+              "r": "416",
+              "type": "circle"
+            },
+            {
+              "fill": {
+                "paint": "#9a9797"
+              },
+              "name": "perspective-polygon_0",
+              "specialPath": {
+                "angle": 31,
+                "corners": 3,
+                "height": 444.5582076623937,
+                "rounding": 0,
+                "width": 444.5582076623937,
+                "x": 964.7208961688032,
+                "y": 275.72089616880316
+              },
+              "stroke": {
+                "paint": "#000000"
+              },
+              "transform": "matrix(-1 0 0 1 1452 0)",
+              "type": "perspective-star"
+            },
+            {
+              "cx": "492",
+              "cy": "505",
+              "fill": {
+                "paint": "#4c4c4c"
+              },
+              "name": "circle",
+              "r": 34,
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "circle"
+            }
+          ],
+          "viewBox": "0 0 999 999"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "1:1",
+      "mode": "percent",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

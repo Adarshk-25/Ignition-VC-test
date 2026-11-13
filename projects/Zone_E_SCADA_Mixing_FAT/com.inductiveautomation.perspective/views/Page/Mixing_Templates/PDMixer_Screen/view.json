@@ -1,0 +1,2610 @@
+{
+  "custom": {},
+  "params": {
+    "Metadata": "value",
+    "Motor": "value",
+    "Tag": "value"
+  },
+  "propConfig": {
+    "params.Metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Motor": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Drawing_5"
+            },
+            "position": {
+              "height": 0.4138,
+              "width": 0.4644,
+              "x": 0.0359,
+              "y": 0.0985
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "206.5",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "1px"
+                  },
+                  "type": "rect",
+                  "width": "334",
+                  "x": "88",
+                  "y": "142"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "style": {
+                "borderRadius": 10
+              },
+              "viewBox": "87 141 336 208.5"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.375,
+              "x": 0.08,
+              "y": 0.0316
+            },
+            "props": {
+              "style": {
+                "classes": "Title/Text"
+              },
+              "text": "PD Mixer-1- Discription",
+              "textStyle": {
+                "classes": "Title/Text",
+                "fontSize": 20,
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_0"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.1263,
+              "x": 0.5625,
+              "y": 0.0217
+            },
+            "propConfig": {
+              "props.params.Value_Color": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "#BDBDBD",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "#BDBDBD"
+                        },
+                        {
+                          "input": 1,
+                          "output": "#FF0000"
+                        },
+                        {
+                          "input": 2,
+                          "output": "#FAA500"
+                        },
+                        {
+                          "input": 3,
+                          "output": "#00FF00"
+                        }
+                      ],
+                      "outputType": "color",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.params.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "None"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Maintenance"
+                        },
+                        {
+                          "input": 2,
+                          "output": "SetUp"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Processing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "label": "Mode"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "UnwindingModule"
+            },
+            "position": {
+              "height": 0.3937,
+              "width": 0.1525,
+              "x": 0.1786,
+              "y": 0.1147
+            },
+            "propConfig": {
+              "props.params.mode": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Tag"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "widgets(templates)/PDMixer_new"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "height": 0.2125,
+              "width": 0.4575,
+              "x": 0.5124,
+              "y": 0.0959
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentMode"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentState"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\EquipmentBlocked"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\EquipmentStarved"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\ActualMachineSpeed"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "EquipmentName": "PD Mixer",
+                  "LTL": "-",
+                  "NominalValue": 0,
+                  "Parameter": "Current Mode",
+                  "UTL": "-"
+                },
+                {
+                  "EquipmentName": "PD Mixer",
+                  "NominalValue": 0,
+                  "Parameter": "Current State",
+                  "UTL": "-"
+                },
+                {
+                  "EquipmentName": "PD Mixer",
+                  "LTL": "-",
+                  "NominalValue": 0,
+                  "Parameter": "Equipment Blocked\n",
+                  "UTL": "-"
+                },
+                {
+                  "EquipmentName": "PD Mixer",
+                  "LTL": "-",
+                  "NominalValue": 0,
+                  "Parameter": "Equipment Starved",
+                  "UTL": "-"
+                },
+                {
+                  "EquipmentName": "PD Mixer",
+                  "LTL": "-",
+                  "NominalValue": 0,
+                  "Parameter": "Actual Machine Speed",
+                  "UTL": "-"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_1"
+            },
+            "position": {
+              "height": 0.075,
+              "width": 0.105,
+              "x": 0.8649,
+              "y": 0.0155
+            },
+            "propConfig": {
+              "props.params.Value_Color": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "#BDBDBD",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "#BDBDBD"
+                        },
+                        {
+                          "input": 1,
+                          "output": "#FF0000"
+                        },
+                        {
+                          "input": 2,
+                          "output": "#FAA500"
+                        },
+                        {
+                          "input": 3,
+                          "output": "#00FF00"
+                        }
+                      ],
+                      "outputType": "color",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.params.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "Not Available"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Out Of Service"
+                        },
+                        {
+                          "input": 2,
+                          "output": "Not Executing"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Executing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "label": "State"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_4"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.1444,
+              "x": 0.6973,
+              "y": 0.0217
+            },
+            "props": {
+              "params": {
+                "label": "Communication",
+                "value": "OK"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Label_Blocked"
+            },
+            "position": {
+              "height": 0.0387,
+              "width": 0.1175,
+              "x": 0.2049,
+              "y": 0.3908
+            },
+            "propConfig": {
+              "custom.blink": {
+                "binding": {
+                  "config": {
+                    "expression": "dateExtract(now(), \"second\") % 2 \u003d 0"
+                  },
+                  "type": "expr"
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]IN11_E115_PCE_MIX21_IN11_E115_PCE/MIX21/AGStatus/EquipmentBlocked"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.style.backgrounColor": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.blink},\r\n\"#FF0000\",\r\n\"#FFFFFF\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.textStyle.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.blink},\r\n\"#FF0000\",\r\n\"#FFFFFF\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.textStyle.color": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.blink},\r\n\"#FFFFFF\",\r\n\"#000000\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Blocked",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_Starved"
+            },
+            "position": {
+              "height": 0.0387,
+              "width": 0.1175,
+              "x": 0.2055,
+              "y": 0.3917
+            },
+            "propConfig": {
+              "custom.blink": {
+                "binding": {
+                  "config": {
+                    "expression": "dateExtract(now(), \"second\") % 2 \u003d 0"
+                  },
+                  "type": "expr"
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]IN11_E115_PCE_MIX21_IN11_E115_PCE/MIX21/AGStatus/EquipmentStarved"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.textStyle.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.blink},\r\n\"#FF0000\",\r\n\"#FFFF00\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.textStyle.color": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.blink},\r\n\"#FFFFFF\",\r\n\"#000000\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Starved",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Table_2"
+            },
+            "position": {
+              "height": 0.41,
+              "width": 0.4575,
+              "x": 0.0408,
+              "y": 0.5772
+            },
+            "propConfig": {
+              "props.data[0].ActualValue_1": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA1\\AxisPositionPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[0].ActualValue_2": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA2\\AxisPositionPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue_1": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA1\\AxisPositionSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue_2": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA2\\AxisPositionPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue_1": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA1\\CurrentPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue_2": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA2\\CurrentPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue_1": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA1\\MotorFault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue_2": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA2\\MotorFault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue_1": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA1\\MotorRunning"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue_2": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA2\\MotorRunning"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue_1": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA1\\MotorSpeedPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue_2": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA2\\MotorSpeedPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[6].ActualValue_1": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA1\\MotorSpeedSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[6].ActualValue_2": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA2\\MotorSpeedSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[7].ActualValue_1": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA1\\MotorStartCommand"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[7].ActualValue_2": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\MAA2\\MotorStartCommand"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter_1",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue_1",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.1px",
+                    "borderRightStyle": "solid",
+                    "borderRightWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {
+                    "ActualValue_1": ""
+                  },
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter_2",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "color": "#000000"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue_2",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.1px",
+                    "classes": "",
+                    "color": "#000000"
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "Parameter_1": "Axis Position PV",
+                  "Parameter_2": "Axis Position PV"
+                },
+                {
+                  "Parameter_1": "Axis Position SP",
+                  "Parameter_2": "Axis Position SP"
+                },
+                {
+                  "Parameter_1": "Current PV\n\n",
+                  "Parameter_2": "Current PV"
+                },
+                {
+                  "Parameter_1": "Motor Fault",
+                  "Parameter_2": "Motor Fault"
+                },
+                {
+                  "Parameter_1": "Motor Running",
+                  "Parameter_2": "Motor Running"
+                },
+                {
+                  "Parameter_1": "Motor Speed PV\n\n",
+                  "Parameter_2": "Motor Speeed PV"
+                },
+                {
+                  "Parameter_1": "Motor Speed SP",
+                  "Parameter_2": "Motor Speed SP"
+                },
+                {
+                  "Parameter_1": "Motor Start Command",
+                  "Parameter_2": "Motor Start Command"
+                }
+              ],
+              "enableHeaderGroups": true,
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerGroups": [
+                [
+                  {
+                    "align": "center",
+                    "justify": "center",
+                    "span": 2,
+                    "style": {
+                      "borderBottomStyle": "solid",
+                      "borderBottomWidth": "0.5px",
+                      "borderLeftStyle": "none",
+                      "borderRightStyle": "solid",
+                      "borderRightWidth": "0.5px",
+                      "borderTopStyle": "none",
+                      "classes": "",
+                      "fontWeight": "bold"
+                    },
+                    "title": "MAA1"
+                  },
+                  {
+                    "align": "center",
+                    "justify": "center",
+                    "span": 2,
+                    "style": {
+                      "borderBottomStyle": "solid",
+                      "borderBottomWidth": "0.5px",
+                      "classes": "",
+                      "fontWeight": "bold"
+                    },
+                    "title": "MAA2"
+                  }
+                ]
+              ],
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderRadius": 10,
+                "borderStyle": "solid",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.5px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_3"
+            },
+            "position": {
+              "height": 0.4288,
+              "width": 0.4587,
+              "x": 0.5118,
+              "y": 0.3125
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisJigDownSettingPostion"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[10].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\JogAcceleration"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[11].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\JogDeceleration"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisJigUpSettingPostion1"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisJigUpSettingPostion2"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisJigUpSettingPostion3"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisJigUpSettingPostion4"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisJigUpSettingPostion5"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[6].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisJogVelocity"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[7].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisPositioningAcceleration"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[8].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisPositioningDeceleration"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[9].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Motor": "{view.params.Motor}"
+                    },
+                    "tagPath": "{Motor}\\AxisPositioningVelocity"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "Parameter": "Axis Jig Down Setting Postion"
+                },
+                {
+                  "Parameter": "Axis Jig Up Setting Postion 1"
+                },
+                {
+                  "Parameter": "Axis Jig Up Setting Postion 2"
+                },
+                {
+                  "Parameter": "Axis Jig Up Setting Postion 3"
+                },
+                {
+                  "Parameter": "Axis Jig Up Setting Postion 4"
+                },
+                {
+                  "Parameter": "Axis Jig Up Setting Postion 5"
+                },
+                {
+                  "Parameter": "Axis Jog Velocity"
+                },
+                {
+                  "Parameter": "Axis Positioning Acceleration"
+                },
+                {
+                  "Parameter": "Axis Positioning Deceleration"
+                },
+                {
+                  "Parameter": "Axis Positioning Velocity"
+                },
+                {
+                  "Parameter": "Jog Acceleration"
+                },
+                {
+                  "Parameter": "Jog Deceleration"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_0"
+            },
+            "position": {
+              "height": 0.2437,
+              "width": 0.4587,
+              "x": 0.5117,
+              "y": 0.7473
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Metadata": "{view.params.Metadata}"
+                    },
+                    "tagPath": "{Metadata}/Manufacturer"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Metadata": "{view.params.Metadata}"
+                    },
+                    "tagPath": "{Metadata}/Model"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Metadata": "{view.params.Metadata}"
+                    },
+                    "tagPath": "{Metadata}/SerialNumber"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Metadata": "{view.params.Metadata}"
+                    },
+                    "tagPath": "{Metadata}/YearOfConstruction"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Metadata": "{view.params.Metadata}"
+                    },
+                    "tagPath": "{Metadata}/PLCFBS"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Metadata": "{view.params.Metadata}"
+                    },
+                    "tagPath": "{Metadata}/NodesetVersion"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "PLC Info"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "EquipmentName": "PD Mixer",
+                  "LTL": "-",
+                  "NominalValue": 0,
+                  "Parameter": "Manufacturer",
+                  "UTL": "-"
+                },
+                {
+                  "EquipmentName": "PD Mixer",
+                  "NominalValue": 0,
+                  "Parameter": "Model",
+                  "UTL": "-"
+                },
+                {
+                  "EquipmentName": "PD Mixer",
+                  "LTL": "-",
+                  "NominalValue": 0,
+                  "Parameter": "Serial Number",
+                  "UTL": "-"
+                },
+                {
+                  "EquipmentName": "PD Mixer",
+                  "LTL": "-",
+                  "NominalValue": 0,
+                  "Parameter": "Year of Construction",
+                  "UTL": "-"
+                },
+                {
+                  "EquipmentName": "PD Mixer",
+                  "LTL": "-",
+                  "NominalValue": 0,
+                  "Parameter": "PLC FBS",
+                  "UTL": "-"
+                },
+                {
+                  "EquipmentName": "PD Mixer",
+                  "LTL": "-",
+                  "NominalValue": 0,
+                  "Parameter": "Nodeset Version",
+                  "UTL": "-"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Drawing_0",
+              "tooltip": {
+                "enabled": true,
+                "text": "N: None;\t\nM: Maintenance;\t\nS: Setup;\t\nP: Processing."
+              }
+            },
+            "position": {
+              "height": 0.0437,
+              "width": 0.0219,
+              "x": 0.3268,
+              "y": 0.1175
+            },
+            "propConfig": {
+              "props.elements[0].fill.paint": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "#BDBDBD",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "#BDBDBD"
+                        },
+                        {
+                          "input": 1,
+                          "output": "#FF0000"
+                        },
+                        {
+                          "input": 2,
+                          "output": "#FAA500"
+                        },
+                        {
+                          "input": 3,
+                          "output": "#00FF00"
+                        }
+                      ],
+                      "outputType": "color",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.elements[1].text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "N",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "N"
+                        },
+                        {
+                          "input": 1,
+                          "output": "M"
+                        },
+                        {
+                          "input": 2,
+                          "output": "S"
+                        },
+                        {
+                          "input": 3,
+                          "output": "P"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "d": "M13.864197676814342 3C13.864197676814342 3 3 25.00000052980839 3 25.00000052980839 3 25.00000052980839 24.9999987414131 25.00000052980839 24.9999987414131 25.00000052980839L13.864197676814342 3.3142869207592867 14.135803654825331 3.3142869207592867",
+                  "fill": {},
+                  "name": "pen-path",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "1.2000000476837158px"
+                  },
+                  "type": "path"
+                },
+                {
+                  "fontSize": "13px",
+                  "name": "text",
+                  "stroke": {
+                    "width": "3px"
+                  },
+                  "type": "text",
+                  "x": "9.200013160705566",
+                  "y": "22.80002784729004"
+                }
+              ]
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Drawing_1",
+              "tooltip": {
+                "enabled": true,
+                "text": "NA: Not Available;     \nOS: Out of Service;     \nNE: Not Executing;   \nE: Executing."
+              }
+            },
+            "position": {
+              "height": 0.0425,
+              "rotate": {
+                "anchor": "-17% 75%"
+              },
+              "width": 0.0219,
+              "x": 0.1555,
+              "y": 0.1175
+            },
+            "propConfig": {
+              "props.elements[0].fill.paint": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "#BDBDBD",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "#BDBDBD"
+                        },
+                        {
+                          "input": 1,
+                          "output": "#FF0000"
+                        },
+                        {
+                          "input": 2,
+                          "output": "#FAA500"
+                        },
+                        {
+                          "input": 3,
+                          "output": "#00FF00"
+                        }
+                      ],
+                      "outputType": "color",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.elements[1].text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.Tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "NA",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "NA"
+                        },
+                        {
+                          "input": 1,
+                          "output": "OS"
+                        },
+                        {
+                          "input": 2,
+                          "output": "NE"
+                        },
+                        {
+                          "input": 3,
+                          "output": "E"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {},
+                  "height": 22,
+                  "name": "rect",
+                  "rx": 5,
+                  "ry": 5,
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "22",
+                  "x": "3",
+                  "y": "2"
+                },
+                {
+                  "fontSize": "12px",
+                  "name": "text",
+                  "type": "text",
+                  "x": "6.000001907348633",
+                  "y": "18.000017166137695"
+                }
+              ]
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.4612,
+              "x": 0.0375,
+              "y": 0.5372
+            },
+            "props": {
+              "style": {
+                "alignItems": "center"
+              },
+              "text": "Telematry Parameter",
+              "textStyle": {
+                "classes": "Title/Text"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0.0469,
+      "y": -0.0063
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

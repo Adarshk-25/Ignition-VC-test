@@ -1,0 +1,228 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "InspectionDualTransfer_Template"
+            },
+            "props": {
+              "path": "Page/Film_Wraping/InspectionDualTransfer_Template"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "ShortSideFolding_Template"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "path": "Page/Film_Wraping/ShortSideFolding_Template"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "LongSideFolding_Template"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "path": "Page/Film_Wraping/LongSideFolding_Template"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Insulation Sheet Loading Template"
+            },
+            "position": {
+              "tabIndex": 3
+            },
+            "props": {
+              "path": "Page/Film_Wraping/InsulationSheetLoading_Template"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "InsulationSheetAttach_Template"
+            },
+            "position": {
+              "tabIndex": 4
+            },
+            "props": {
+              "path": "Page/Film_Wraping/InsulationSheetAttach_Template"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "InsulationSheetAttach_Template_0"
+            },
+            "position": {
+              "tabIndex": 5
+            },
+            "props": {
+              "path": "Page/Film_Wraping/InsulationSheetAttach_Template"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EPP LID Transfer and Lifter_Screen"
+            },
+            "position": {
+              "tabIndex": 6
+            },
+            "props": {
+              "path": "Page/Sorting\u0026Packing_Templates/EPP LID Transfer and Lifter_Screen"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EPP Lid Transfer_Screen"
+            },
+            "position": {
+              "tabIndex": 7
+            },
+            "props": {
+              "path": "Page/Sorting\u0026Packing_Templates/EPP Lid Transfer_Screen"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Grading_Template"
+            },
+            "position": {
+              "tabIndex": 8
+            },
+            "props": {
+              "path": "Page/Film_Wraping/Grading_Template"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Sorting Robot_Screen"
+            },
+            "position": {
+              "tabIndex": 9
+            },
+            "props": {
+              "path": "Page/Sorting\u0026Packing_Templates/Sorting Robot_Screen"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "BendingMachine_Template"
+            },
+            "position": {
+              "tabIndex": 10
+            },
+            "props": {
+              "path": "Page/Film_Wraping/BendingMachine_Template"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Heatingpress_Template"
+            },
+            "position": {
+              "tabIndex": 11
+            },
+            "props": {
+              "path": "Page/Film_Wraping/Heatingpress_Template"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Cell Reverse_Screen"
+            },
+            "position": {
+              "tabIndex": 12
+            },
+            "props": {
+              "path": "Page/Film_Wraping/Cell Reverse_Screen"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.currentTabIndex": {
+            "binding": {
+              "config": {
+                "path": "view.params.tabValue"
+              },
+              "type": "property"
+            },
+            "onChange": {
+              "enabled": null,
+              "script": "\tif currentValue !\u003d previousValue :\n\t\tself.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+            }
+          }
+        },
+        "props": {
+          "tabSize": {
+            "height": 35,
+            "width": 200
+          },
+          "tabs": [
+            "Inspection Dual Transfer",
+            "Short Side Folding",
+            "Long Side Folding",
+            "Insulation Sheet Loading",
+            "Insulation Sheet Attach-1",
+            "Insulation Sheet Attach-2",
+            "EPP Lid Transfer and Lifter",
+            "EPP Lift Transfer",
+            "Grading",
+            "Sorting Robot",
+            "Bending Machine",
+            "Heating Press",
+            "Cell Reverse"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

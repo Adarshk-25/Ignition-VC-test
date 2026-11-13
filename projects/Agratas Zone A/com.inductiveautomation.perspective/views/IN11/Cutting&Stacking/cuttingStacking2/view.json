@@ -1,0 +1,166 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "0"
+                    },
+                    "view": "Page/Cutting\u0026stacking_Templates/stacking_main"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "stackingWidget"
+            },
+            "position": {
+              "height": 0.9587,
+              "width": 0.9419,
+              "x": 0.0329,
+              "y": 0.0394
+            },
+            "props": {
+              "path": "widgets(templates)/StackingWidgets/stackingWidget"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {},
+                    "view": "IN11/Cutting\u0026Stacking/cuttingStacking3"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Icon"
+            },
+            "position": {
+              "height": 0.0737,
+              "width": 0.0187,
+              "x": 0.9812,
+              "y": 0.4387
+            },
+            "props": {
+              "color": "#ffffff",
+              "path": "material/arrow_forward_ios",
+              "style": {
+                "backgroundColor": "#AAAAAA"
+              }
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {},
+                    "view": "IN11/Cutting\u0026Stacking/cuttingStacking"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Icon_0"
+            },
+            "position": {
+              "height": 0.0737,
+              "width": 0.0187,
+              "x": 0.001,
+              "y": 0.4386
+            },
+            "props": {
+              "color": "#ffffff",
+              "path": "material/arrow_back_ios",
+              "style": {
+                "backgroundColor": "#AAAAAA"
+              }
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "EuipmentStatusLabel_26"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0731,
+              "x": 0.0776,
+              "y": 0.822
+            },
+            "props": {
+              "params": {
+                "equipmentName": "Unwinder",
+                "status": 1
+              },
+              "path": "widgets(templates)/CuttingStackingWidgets/EuipmentStatusLabel"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.055,
+              "x": 0.4594,
+              "y": 0.8749
+            },
+            "props": {
+              "text": "Stacking Module",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "aspectRatio": "1600:800",
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

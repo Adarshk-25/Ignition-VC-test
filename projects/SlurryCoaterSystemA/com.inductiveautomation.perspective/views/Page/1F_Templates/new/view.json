@@ -1,0 +1,132 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 72,
+              "width": 125,
+              "x": 80,
+              "y": 100
+            },
+            "props": {
+              "text": "Label"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Drawing"
+            },
+            "position": {
+              "height": 257,
+              "width": 405,
+              "x": 190,
+              "y": 210
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "44.5",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "83.5",
+                  "x": 156,
+                  "y": "1"
+                }
+              ]
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 72,
+              "width": 125,
+              "x": 80,
+              "y": 100
+            },
+            "props": {
+              "text": "Label"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Drawing"
+            },
+            "position": {
+              "height": 257,
+              "width": 405,
+              "x": 190,
+              "y": 210
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "20.700000762939453",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "39.29999923706055",
+                  "x": 156,
+                  "y": "1"
+                }
+              ]
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_0"
+        },
+        "position": {
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 149,
+      "width": 320
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Drawing"
+            },
+            "position": {
+              "height": 133,
+              "width": 303,
+              "x": 8,
+              "y": 8
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "101",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "3px"
+                  },
+                  "type": "rect",
+                  "width": "418",
+                  "x": "284",
+                  "y": "99"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "283 98 420 103"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 32,
+              "width": 295,
+              "x": 13,
+              "y": 11
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "Arrow Indicator",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 36,
+              "width": 220,
+              "x": 86,
+              "y": 56
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "Injection 1 Process Flow",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 36,
+              "width": 220,
+              "x": 86,
+              "y": 93
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "NG Unload Flow",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "pipes": [
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_8",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 82.7,
+                    "y": 73
+                  }
+                ],
+                "x": 22,
+                "y": 73
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_42",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 81.2,
+                    "y": 112
+                  }
+                ],
+                "x": 23,
+                "y": 112
+              },
+              "start": "none",
+              "stroke": "#D90000",
+              "width": 2
+            }
+          ]
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

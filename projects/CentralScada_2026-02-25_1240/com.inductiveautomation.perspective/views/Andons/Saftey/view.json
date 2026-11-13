@@ -1,0 +1,50 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 824
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5"
+          },
+          "text": "Safety"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "IFrame_0"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "src": "http://10.34.26.4:8088/system/webdev/CentralScada_2026-02-25_1240/AndonMockup/Safety.html",
+          "style": {
+            "classes": "widgets/spacing widgets/valueDisplay"
+          }
+        },
+        "type": "ia.display.iframe"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

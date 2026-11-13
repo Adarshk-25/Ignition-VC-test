@@ -1,0 +1,36 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tconnectionName \u003d \"SiemensPlc\"\n    \n    objectId \u003d \"nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PRO.CMIX101/AGMethods\"\n    methodId \u003d \"nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PRO.CMIX101/AGMethods/SetRecipe\"\n    \n    header \u003d {\n        \"ProcessStep\": \"STEP1\",\n        \"ProductionOrder\": \"PO-12345\",\n        \"Version\": \"V1\"\n    }\n    \n    p0 \u003d {\n        \"ParameterRef\": \"Param_001\",\n        \"ParameterType\": \"Temperature\",\n        \"ParameterUOM\": \"degC\",\n        \"USL\": 60.0,\n        \"LSL\": 40.0,\n        \"Setpoint\": 45.0\n    }\n    \n    p1 \u003d {\n        \"ParameterRef\": \"Param_002\",\n        \"ParameterType\": \"Speed\",\n        \"ParameterUOM\": \"RPM\",\n        \"USL\": 1500.0,\n        \"LSL\": 500.0,\n        \"Setpoint\": 1000.0\n    }\n    \n    # Convert parameter list to JSON string\n    parameterArray \u003d system.util.jsonEncode([p0, p1])\n    \n    inputs \u003d [header, parameterArray]\n    \n    try:\n        callStatus, inputStatuses, outputs \u003d system.opcua.callMethod(\n            connectionName,\n            objectId,\n            methodId,\n            inputs\n        )\n    \n        system.perspective.print(\"Call Status: {}\".format(callStatus))\n        system.perspective.print(\"Input Statuses: {}\".format(inputStatuses))\n        system.perspective.print(\"Outputs: {}\".format(outputs))\n    \n    except Exception as e:\n        system.perspective.print(\"OPC UA Method Call Failed:\")\n        system.perspective.print(str(e))"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 80,
+          "x": 240,
+          "y": 251
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

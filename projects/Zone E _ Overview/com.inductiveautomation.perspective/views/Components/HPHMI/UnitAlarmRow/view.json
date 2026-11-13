@@ -1,0 +1,215 @@
+{
+  "custom": {},
+  "params": {
+    "time": "",
+    "desc": "",
+    "sev": 0,
+    "cls": "Warning",
+    "state": ""
+  },
+  "props": {
+    "defaultSize": {
+      "width": 760,
+      "height": 34
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "position": {},
+    "props": {
+      "direction": "row",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "center",
+      "alignContent": "flex-start",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Time"
+        },
+        "position": {
+          "basis": "90px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.time"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.icon",
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "basis": "18px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "path": "material/warning",
+          "color": "#E07B00",
+          "style": {
+            "minWidth": "18px",
+            "height": "18px"
+          }
+        },
+        "propConfig": {
+          "props.path": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "case({view.params.cls}, \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"material/notifications\")"
+              }
+            }
+          },
+          "props.color": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.cls} = \"Critical\", \"#C8102E\", \"#E07B00\")"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Desc"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/List/Wrap"
+          },
+          "textStyle": {
+            "whiteSpace": "normal"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.desc"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Sev"
+        },
+        "position": {
+          "basis": "60px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "\"Sev \" + toStr({view.params.sev})"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "State"
+        },
+        "position": {
+          "basis": "80px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/Card/Text"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.state"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "propConfig": {
+      "props.style.classes": {
+        "binding": {
+          "type": "expr",
+          "config": {
+            "expression": "\"HPHMI/List/Row \" + if({view.params.cls} = \"Critical\", \"HPHMI/Alarm/RowCritical\", \"HPHMI/Alarm/RowWarning\")"
+          }
+        }
+      }
+    }
+  },
+  "propConfig": {
+    "params.time": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.desc": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.sev": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.cls": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.state": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView_3"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/Active"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/Status"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/SLT001/SlittingDUC001",
+            "equipmentName": "DUC001: Suction Blow",
+            "parameterData": [
+              {
+                "Parameter": "Active"
+              },
+              {
+                "Parameter": "Closing"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_4"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB001/Closed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB001/Closing"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB001/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB001/Open"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB001/Opening"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/SLT001/SlittingDUC001",
+            "equipmentName": "QMB001: Slitter Suction Pipe Solenoid Valve",
+            "parameterData": [
+              {
+                "Parameter": "Closed"
+              },
+              {
+                "Parameter": "Closing"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "Open"
+              },
+              {
+                "Parameter": "Opening"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_5"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB002/Closed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB002/Closing"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB002/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB002/Open"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB002/Opening"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/SLT001/SlittingDUC001",
+            "equipmentName": "QMB002: Slitter Front Air Knife A Solenoid Valve",
+            "parameterData": [
+              {
+                "Parameter": "Closed"
+              },
+              {
+                "Parameter": "Closing"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "Open"
+              },
+              {
+                "Parameter": "Opening"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_6"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB003/Closed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB003/Closing"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB003/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB003/Open"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/SLT001/DUC001/QMB003/Opening"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/SLT001/SlittingDUC001",
+            "equipmentName": "QMB003: Slitter Front Air Knife B Solenoid Valve",
+            "parameterData": [
+              {
+                "Parameter": "Closed"
+              },
+              {
+                "Parameter": "Closing"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "Open"
+              },
+              {
+                "Parameter": "Opening"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 3,
+      "tabs": [
+        "DUC001",
+        "QMB001",
+        "QMB002",
+        "QMB003"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

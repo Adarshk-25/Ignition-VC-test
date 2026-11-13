@@ -1,0 +1,85 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 69,
+      "width": 79
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "height": 0.923,
+          "width": 0.8696,
+          "x": 0.0616,
+          "y": 0.0575
+        },
+        "props": {
+          "color": "FF4747",
+          "path": "sample-components/display-alarmStatusTable",
+          "style": {
+            "fill": "#FF4747"
+          }
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.4638,
+          "width": 0.5443,
+          "x": 0.4557,
+          "y": -0.0726
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "now(1000)"
+              },
+              "transforms": [
+                {
+                  "code": "\t\t\n\talarms \u003d system.alarm.queryStatus()\n\tactive \u003d [a for a in alarms \n\t          if \"Active\" in str(a.state) \n\t          and \"\" in str(a.source)]\n\tif len(active)\u003e0:\n\t\tself.getSibling(\"Icon\").props.style.fill\u003d\"#FF4747\"\n\treturn  len(active)",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "alignVertical": "top",
+          "textStyle": {
+            "alignSelf": "flex-end"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "page": "/alarmsManagement"
+          },
+          "scope": "C",
+          "type": "nav"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

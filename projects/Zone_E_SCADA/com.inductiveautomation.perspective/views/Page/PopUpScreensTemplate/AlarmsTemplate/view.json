@@ -1,0 +1,326 @@
+{
+  "custom": {},
+  "params": {
+    "Alarm_Path": "",
+    "FBS_Filter": "value",
+    "tagpath": "value"
+  },
+  "propConfig": {
+    "params.Alarm_Path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.FBS_Filter": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 700,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "  \tselected_data \u003d self.props.selection.active.data\n   \tif len(selected_data) \u003d\u003d1:\n   \t\talarm_source \u003d selected_data[0].source\n   \tequipment_name \u003d alarm_source.split(\u0027/\u0027)[2]\n   \tnavPath \u003d system.db.runPrepQuery(\n\t\t\"SELECT NavPath FROM alarmNav WHERE AlarmSource \u003d ?\",\n\t\t[str(equipment_name)]\n\t)\n\tself.parent.parent.getChild(\"Label_0\").props.text\u003dequipment_name\n\tnavPath\u003dnavPath[0][\u0027NavPath\u0027]\n\t\n\tif navPath:\n\t\tsystem.perspective.navigate(view\u003dstr(navPath),params\u003d{\"equipmentName\":equipment_name})\n\telse:\n\t\tsystem.perspective.print(\"No navigation mapping found for source: \" + equipment_name)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "AlarmStatusTable"
+            },
+            "position": {
+              "height": 0.9971,
+              "width": 0.9988
+            },
+            "propConfig": {
+              "props.filters.active.conditions.source": {
+                "binding": {
+                  "config": {
+                    "expression": "\"*\"+{view.params.Alarm_Path}+\"*\""
+                  },
+                  "enabled": false,
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "columns": {
+                "active": {
+                  "ackTime": {
+                    "order": 9
+                  },
+                  "activeTime": {
+                    "enabled": false
+                  },
+                  "displayPath": {
+                    "enabled": false,
+                    "order": 10
+                  },
+                  "label": {
+                    "order": 6
+                  },
+                  "name": {
+                    "enabled": false,
+                    "order": 0
+                  },
+                  "priority": {
+                    "enabled": false,
+                    "order": 8
+                  },
+                  "source": {
+                    "enabled": false
+                  },
+                  "state": {
+                    "order": 9
+                  }
+                }
+              },
+              "columnsAssociated": {
+                "active": [
+                  {
+                    "enabled": true,
+                    "field": "Alarm Group Id",
+                    "order": 2,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Alarm Code",
+                    "order": 3,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Severity",
+                    "order": 4,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "FBS Source",
+                    "order": 5,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Troubleshoot",
+                    "order": 7,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Timestamp Active",
+                    "order": 0,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": false,
+                    "field": "Timestamp Reset",
+                    "order": 1,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Alarm Priority",
+                    "order": 4,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Alarm Description",
+                    "order": 0,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  }
+                ]
+              },
+              "filters": {
+                "active": {
+                  "conditions": {
+                    "source": "*IN11_E155_PAE_NTC11_IN11_E155_PAE/NTC11/AGAdmin/CurrentAlarms*"
+                  },
+                  "priorities": {
+                    "critical": false,
+                    "high": false,
+                    "low": false,
+                    "medium": false
+                  },
+                  "states": {
+                    "clearUnacked": false
+                  }
+                }
+              },
+              "refreshRate": 1000,
+              "rowStyles": {
+                "activeAcked": {
+                  "base": {
+                    "backgroundColor": "",
+                    "color": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/critical"
+                    },
+                    "diagnostic": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/diagnostic",
+                      "color": ""
+                    },
+                    "high": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/high"
+                    },
+                    "low": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/low"
+                    },
+                    "medium": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/medium"
+                    }
+                  }
+                },
+                "activeUnacked": {
+                  "base": {
+                    "backgroundColor": "",
+                    "color": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "",
+                      "classes": "alarm/critical"
+                    },
+                    "diagnostic": {
+                      "backgroundColor": "",
+                      "classes": "alarm/diagnostic",
+                      "color": ""
+                    },
+                    "high": {
+                      "backgroundColor": "",
+                      "classes": "alarm/high"
+                    },
+                    "low": {
+                      "backgroundColor": "",
+                      "classes": "alarm/low"
+                    },
+                    "medium": {
+                      "backgroundColor": "",
+                      "classes": "alarm/medium"
+                    }
+                  }
+                },
+                "clearAcked": {
+                  "priorities": {
+                    "critical": {
+                      "classes": ""
+                    },
+                    "diagnostic": {
+                      "classes": ""
+                    },
+                    "high": {
+                      "classes": ""
+                    },
+                    "low": {
+                      "classes": ""
+                    },
+                    "medium": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "clearUnacked": {
+                  "base": {
+                    "backgroundColor": "",
+                    "color": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "#DCDCDC"
+                    },
+                    "high": {
+                      "backgroundColor": "#E8E8E8"
+                    },
+                    "low": {
+                      "backgroundColor": "#F9F9F9"
+                    },
+                    "medium": {
+                      "backgroundColor": "#F2F2F2"
+                    }
+                  }
+                }
+              }
+            },
+            "scripts": {
+              "customMethods": [],
+              "extensionFunctions": [
+                {
+                  "enabled": false,
+                  "name": "filterAlarm",
+                  "script": "\tfbsSource \u003d alarmEvent.get(\"FBSSource\")\n\tfilterValue \u003d self.view.params.FBS_Filter\n\t\n\tprint(\"FBSSource \u003d\", fbsSource)\n\tprint(\"FilterValue \u003d\", filterValue)\n\t\n\tif not fbsSource:\n\t    return False\n\t\n\tif not filterValue:\n\t    return True\n\t\n\treturn str(filterValue) in str(fbsSource)"
+                },
+                {
+                  "enabled": false,
+                  "name": "filterShelvedAlarm",
+                  "script": null
+                }
+              ],
+              "messageHandlers": []
+            },
+            "type": "ia.display.alarmstatustable"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "800px"
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

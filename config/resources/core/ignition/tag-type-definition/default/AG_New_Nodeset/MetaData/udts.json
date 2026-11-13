@@ -1,0 +1,204 @@
+[
+  {
+    "name": "MIX_Metadata",
+    "typeId": null,
+    "parameters": {
+      "ServerName": {
+        "dataType": "String",
+        "value": "PLC"
+      },
+      "OPC_Path": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "Manufacturer",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "Model",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "NodesetVersion",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "PLCFBS",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "SerialNumber",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "YearOfConstruction",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "NTC_Metadata",
+    "typeId": null,
+    "parameters": {
+      "ServerName": {
+        "dataType": "String",
+        "value": "PLC"
+      },
+      "OPC_Path": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "NodesetVersion",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "PLCFBS",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "PLC_Manufacturer",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "PLC_Model",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "SerialNumber",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{ParentInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "Year_Of_Construction_of_the_machine",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

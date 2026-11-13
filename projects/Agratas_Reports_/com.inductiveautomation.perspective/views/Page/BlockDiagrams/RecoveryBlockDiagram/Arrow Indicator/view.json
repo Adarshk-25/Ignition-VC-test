@@ -1,0 +1,127 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Drawing_12"
+            },
+            "position": {
+              "height": 0.6442,
+              "width": 0.648,
+              "x": 0.1264,
+              "y": 0.1029
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "141.5",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "242.5",
+                  "x": 4,
+                  "y": 4
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 250 150"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_4"
+            },
+            "position": {
+              "height": 0.136,
+              "width": 0.388,
+              "x": 0.3512,
+              "y": 0.3837
+            },
+            "props": {
+              "text": "SRS System Flow",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.1638,
+              "width": 0.556,
+              "x": 0.1546,
+              "y": 0.1317
+            },
+            "props": {
+              "text": "Arrow Indicators",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "800px"
+        },
+        "props": {
+          "aspectRatio": "250:250",
+          "mode": "percent",
+          "pipes": [
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_33",
+              "origin": {
+                "connections": [
+                  {
+                    "x": 0.2925,
+                    "y": 0.4291
+                  }
+                ],
+                "x": 0.175,
+                "y": 0.4291
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            }
+          ]
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

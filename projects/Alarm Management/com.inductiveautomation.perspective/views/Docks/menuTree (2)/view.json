@@ -1,0 +1,588 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": "auto",
+      "width": "auto"
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onItemClicked": {
+              "config": {
+                "script": "\tselection \u003d event.itemPath\n\t\n\tif not selection:\n\t    return\n\t\n\ttree \u003d self.props.items\n\t\n\tbreadcrumb \u003d []\n\tcurrent \u003d tree\n\t\n\tfor pos, idx in enumerate(selection):\n\t\n\t    i \u003d int(idx)\n\t    node \u003d current[i]\n\t\n\t    breadcrumb.append({\n\t        \"label\": node.get(\"label\"),\n\t        \"path\": \"/\" + node.get(\"data\", {}).get(\"path\", \"\").lstrip(\"/\"),\n\t        \"forwardDisplay\": pos \u003c len(selection) - 1\n\t    })\n\t\n\t    current \u003d node.get(\"items\", [])\n\t\n\t# selected page path\n\tselectedPath \u003d breadcrumb[-1][\"path\"]\n\t\n\t# store globally in session\n\tself.session.custom.nav \u003d {\n\t    \"selection\": selection,\n\t    \"breadcrumb\": breadcrumb,\n\t    \"currentPath\": selectedPath\n\t}\n\t\n\t# navigate only if page is different\n\tif self.page.props.path !\u003d selectedPath:\n\t    system.perspective.navigate(page\u003dselectedPath)\n\t\n\t# optional\n\tif selectedPath \u003d\u003d \"/alarms-management\":\n\t    system.perspective.closeDock(\"footerDock\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Tree"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.selectionData[0].value.path": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "page.props.path"
+              },
+              "type": "property"
+            }
+          },
+          "props.selection[0]": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "code": "\ttargetPath \u003d self.page.props.path.strip(\"/\")\n\t\n\tdef findPath(items, parent\u003d\"\"):\n\t    for i, item in enumerate(items):\n\t        indexPath \u003d parent + str(i)\n\t\n\t        itemPath \u003d item.get(\"data\", {}).get(\"path\", \"\").strip(\"/\")\n\t\n\t        # ✅ Match full path\n\t        if itemPath \u003d\u003d targetPath:\n\t            return indexPath\n\t\n\t        # ✅ Recursive search\n\t        if item.get(\"items\"):\n\t            result \u003d findPath(item[\"items\"], indexPath + \"/\")\n\t            if result:\n\t                return result\n\t\n\t    return None\n\t\n\t\n\ttreeItems \u003d self.props.items\n\t\n\tfound \u003d findPath(treeItems)\n\t\n\tif found:\n\t    return found\n\t\n\treturn None",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "appearance": {
+            "defaultNodeIcons": {
+              "collapsed": {
+                "path": "material/folder"
+              },
+              "empty": {
+                "path": "material/stop"
+              },
+              "expanded": {
+                "path": "material/crop_16_9"
+              }
+            },
+            "expandIcons": {
+              "collapsed": {
+                "path": "material/arrow_right"
+              },
+              "expanded": {
+                "path": "material/arrow_drop_down"
+              }
+            },
+            "selectedStyle": {
+              "classes": "Menu/Menu_Selected"
+            }
+          },
+          "items": [
+            {
+              "data": {
+                "level": "site",
+                "path": "sanand"
+              },
+              "expanded": true,
+              "icon": {
+                "color": "",
+                "path": "material/business",
+                "style": {}
+              },
+              "items": [
+                {
+                  "data": {
+                    "level": "area",
+                    "path": "sanand/zone-e"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/crop_3_2",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "level": "process",
+                        "path": "sanand/zone-e/mixing"
+                      },
+                      "expanded": true,
+                      "icon": {
+                        "color": "",
+                        "path": "material/battery_charging_full",
+                        "style": {}
+                      },
+                      "items": [
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-e/mixing/anode-line-1"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "level": "Alarms",
+                                "path": "Anode-Line-1-Alarms"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "level": "Trends",
+                                "path": "Anode-Line-1-Trends"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Anode Line 1"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-e/mixing/anode-line-2"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {},
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {},
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Anode Line 2"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-e/mixing/cathode-line-1"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {},
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {},
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Cathode Line 1"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-e/mixing/cathode-line-2"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "level": "value",
+                                "path": "Cathode-Line-2-Alarms"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "level": "",
+                                "path": "Cathode-Line-2-Trends"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Cathode Line 2"
+                        }
+                      ],
+                      "label": "Mixing"
+                    },
+                    {
+                      "data": {
+                        "level": "process",
+                        "path": "sanand/zone-e/coating"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-e/coating/anode-line-1"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Line 1"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-e/coating/anode-line-2"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Line 2"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-e/coating/cathode-line-1"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Line 1"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-e/coating/cathode-line-2:"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Line 2"
+                        }
+                      ],
+                      "label": "Coating"
+                    },
+                    {
+                      "data": {
+                        "path": "sanand/zone-e/calendering"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/calendering/anodeline"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Line 1"
+                        },
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/calendering/anodeline2"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Line 2\n"
+                        },
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/calendering/cathodeline1"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Line 1"
+                        },
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/calendering/cathodeline2"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Line 2"
+                        }
+                      ],
+                      "label": "Calendering"
+                    },
+                    {
+                      "data": {
+                        "label": "process",
+                        "path": "sanand/zone-e/recovery"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/recovery/anodeline"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Line 1"
+                        },
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/recovery/anodeline-2"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Line 2"
+                        },
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/recovery/cathodeline"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Line 1"
+                        },
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/recovery/cathodeline-2"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Line 2"
+                        }
+                      ],
+                      "label": "Recovery"
+                    },
+                    {
+                      "data": {
+                        "label": "process",
+                        "path": "sanand/zone-e/lasernotching"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/lasernotching/anodeline1"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Line 1"
+                        },
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/lasernotching/anodecathode:"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Line 2"
+                        },
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/lasernotching/cathodeline1"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Line 1"
+                        },
+                        {
+                          "data": {
+                            "path": "sanand/zone-e/lasernotching/cathodeline2"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Line 2"
+                        }
+                      ],
+                      "label": "Notching and Slitting"
+                    }
+                  ],
+                  "label": "Zone E"
+                },
+                {
+                  "data": {
+                    "path": "analytics"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/analytics",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "analytics/trends"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Trends"
+                    },
+                    {
+                      "data": {
+                        "path": "analytics/reports"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Reports"
+                    }
+                  ],
+                  "label": "ANALYTICS"
+                },
+                {
+                  "data": {
+                    "path": "operations"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/dashboard",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "alarms-management"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/notification_important",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Alarms"
+                    },
+                    {
+                      "data": {
+                        "path": "operations/recipes"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/menu_book",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Recipes"
+                    }
+                  ],
+                  "label": "OPERATIONS"
+                },
+                {
+                  "data": {
+                    "path": "system"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/settings_applications",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "system/userManagement"
+                      },
+                      "expanded": true,
+                      "icon": {
+                        "color": "",
+                        "path": "material/admin_panel_settings",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Security \u0026 Roles"
+                    },
+                    {
+                      "data": {
+                        "path": "system/auditLogs"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/history",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Audit Logs"
+                    },
+                    {
+                      "data": {
+                        "path": "system/help"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/help_outline",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Help"
+                    }
+                  ],
+                  "label": "Setting"
+                }
+              ],
+              "label": "Sanand"
+            }
+          ],
+          "selection": [
+            null
+          ],
+          "selectionData": [
+            {
+              "itemPath": "0/0/4/0",
+              "value": {}
+            }
+          ],
+          "style": {
+            "classes": "Item_Vertical Menu"
+          }
+        },
+        "type": "ia.display.tree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "margin": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

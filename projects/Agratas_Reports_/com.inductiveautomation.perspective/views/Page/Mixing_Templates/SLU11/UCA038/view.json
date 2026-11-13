@@ -1,0 +1,736 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "UCA022"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/Closed"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/pdMixer (1)",
+            "equipmentName": "UCA038 : Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038",
+            "parameterData": [
+              {
+                "Parameter": "Closed"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FCB01"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/FCB01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "FCB01 : AX-01 HMI (GOT2000) DC POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FCB02"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/FCB02/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "FCB02 : AX-02 HUB CONTROL POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FCB03"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/FCB03/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "FCB03 : AX-03 CC-LINK CONTROL POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FCB04"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/FCB03/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "FCB04 : AX-04 DIGITAL DC POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FCB05"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/FCB03/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "FCB05 : AX-05 SOL CONTROL POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FCB06"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/FCB03/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "FCB06 : AX-06 Service Port Power",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "KFA01"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/KFA02/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "KFA01 : SLU-STK1-1/2 Safety Feedback",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PSL01"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/PSL01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "PSL01 : Main Air Pressure Low S/W",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SGC01"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SGC02"
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SGC03"
+        },
+        "position": {
+          "tabIndex": 11
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SJA01"
+        },
+        "position": {
+          "tabIndex": 13
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SJB01"
+        },
+        "position": {
+          "tabIndex": 12
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SJB02"
+        },
+        "position": {
+          "tabIndex": 14
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SJB03"
+        },
+        "position": {
+          "tabIndex": 15
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SJB04"
+        },
+        "position": {
+          "tabIndex": 16
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SJB05"
+        },
+        "position": {
+          "tabIndex": 17
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "custom": {
+      "tabConfig": [
+        {
+          "tabText": "UCA038",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA38 - Cathode Slurry #1 Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038"
+        },
+        {
+          "tabText": "FCB01",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA038.FCB01 - Cathode Slurry #1 Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . AX-01 HMI (GOT2000) DC POWER"
+        },
+        {
+          "tabText": "FCB02",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA038.FCB02 - Cathode Slurry #1 Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . AX-02 HUB CONTROL POWER"
+        },
+        {
+          "tabText": "FCB03",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA038.FCB03 - Cathode Slurry #1 Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . AX-03 CC-LINK CONTROL POWER"
+        },
+        {
+          "tabText": "FCB04",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA038.FCB04 - Cathode Slurry #1 Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . AX-04 DIGITAL DC POWER"
+        },
+        {
+          "tabText": "FCB05",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA038.FCB05 - Cathode Slurry #1 Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . AX-05 SOL CONTROL POWER"
+        },
+        {
+          "tabText": "FCB06",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA038.FCB06 - Cathode Slurry #1 Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . AX-06 Service Port Power"
+        },
+        {
+          "tabText": "KFA01",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA038.KFA01 - Cathode Slurry #1 Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . CER-STK1-1 Safety Feedback"
+        },
+        {
+          "tabText": "PSL01",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA038.PSL01 - Cathode Slurry #1 Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . "
+        },
+        {
+          "tabText": "SGC01",
+          "toolTipText": "IN11.E115.PCE.STS11.SGC01 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . Slurry Storage Tank #1 \u0026 Ceramic Tank#1 LOP E-Stop"
+        },
+        {
+          "tabText": "SGC02",
+          "toolTipText": "IN11.E115.PCE.STS11.SGC02 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . Slurry Storage Tank #1 LOP E-Stop"
+        },
+        {
+          "tabText": "SGC03",
+          "toolTipText": "IN11.E115.PCE.STS11.SGC03 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . Ceramic Storage Tank#1 LOP E-Stop"
+        },
+        {
+          "tabText": "SJA01",
+          "toolTipText": "IN11.E115.PCE.STS11.SJA01 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . SLU+CER STK Manual Mode"
+        },
+        {
+          "tabText": "SJB01",
+          "toolTipText": "IN11.E115.PCE.STS11.SJB01 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . "
+        },
+        {
+          "tabText": "SJB02",
+          "toolTipText": "IN11.E115.PCE.STS11.SJB02 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . "
+        },
+        {
+          "tabText": "SJB03",
+          "toolTipText": "IN11.E115.PCE.STS11.SJB03 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . "
+        },
+        {
+          "tabText": "SJB04",
+          "toolTipText": "IN11.E115.PCE.STS11.SJB04 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . "
+        },
+        {
+          "tabText": "SJB05",
+          "toolTipText": "IN11.E115.PCE.STS11.SJB05 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . "
+        }
+      ]
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs": {
+        "binding": {
+          "config": {
+            "struct": {
+              "cfg": "{this.custom.tabConfig}",
+              "idx": "{this.props.currentTabIndex}",
+              "viewParams": {
+                "tabSelected": "\"value\"",
+                "tabText": "\"value\"",
+                "toolTipText": "\"value\""
+              },
+              "viewPath": "\"widgets(templates)/TabButton\""
+            },
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "    idx \u003d value[\u0027idx\u0027] if value[\u0027idx\u0027] is not None else 0\n    cfg \u003d value[\u0027cfg\u0027]\n    tabs \u003d []\n\n    for i in range(len(cfg)):\n        item \u003d cfg[i]\n\n        tabs.append({\n            \"viewPath\": \"widgets(templates)/TabButton\",\n\n            \"viewParams\": {\n                \"tabText\": item[\u0027tabText\u0027],\n                \"toolTipText\": item[\u0027toolTipText\u0027],\n                \"tabSelected\": (i \u003d\u003d idx)\n            },\n\n            \"runWhileHidden\": False\n        })\n\n    return tabs",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      }
+    },
+    "type": "ia.container.tab"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": 0
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 700,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "InletHopper"
+            },
+            "props": {
+              "path": "Page/3F_Templates/InletHopper"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Unpacking Station"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "params": {
+                "processName": "anode"
+              },
+              "path": "Page/3F_Templates/Unpacking Station"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DustCollection"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "path": "Page/3F_Templates/DustCollection"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.currentTabIndex": {
+            "binding": {
+              "config": {
+                "path": "view.params.tabValue"
+              },
+              "type": "property"
+            },
+            "onChange": {
+              "enabled": null,
+              "script": "\tif currentValue !\u003d previousValue :\n\t\tself.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+            }
+          }
+        },
+        "props": {
+          "tabSize": {
+            "width": 150
+          },
+          "tabs": [
+            "Inlet System",
+            "Unpacking Stations",
+            "Dust Collectors"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

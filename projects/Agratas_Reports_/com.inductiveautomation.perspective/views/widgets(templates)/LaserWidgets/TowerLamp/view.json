@@ -1,0 +1,249 @@
+{
+  "custom": {},
+  "params": {
+    "label": "value",
+    "path": 0,
+    "tagpath": "value"
+  },
+  "propConfig": {
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 130,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label_42"
+        },
+        "position": {
+          "height": 0.5202,
+          "width": 0.8079,
+          "x": 0.0962,
+          "y": 0.4724
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "textStyle": {
+            "borderStyle": "none",
+            "borderWidth": 2,
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "height": 0.5771,
+          "width": 0.4809,
+          "x": 0.2597,
+          "y": 0.0498
+        },
+        "propConfig": {
+          "custom.blue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tagpath}"
+                },
+                "tagPath": "{Tag}/BlueLamp"
+              },
+              "type": "tag"
+            }
+          },
+          "custom.green": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tagpath}"
+                },
+                "tagPath": "{Tag}/GreenLamp"
+              },
+              "type": "tag"
+            }
+          },
+          "custom.red": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tagpath}"
+                },
+                "tagPath": "{Tag}/RedLamp"
+              },
+              "type": "tag"
+            }
+          },
+          "custom.white": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tagpath}"
+                },
+                "tagPath": "{Tag}/WhiteLamp"
+              },
+              "type": "tag"
+            }
+          },
+          "custom.yellow": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tagpath}"
+                },
+                "tagPath": "{Tag}/YellowLamp"
+              },
+              "type": "tag"
+            }
+          },
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "expression": "if(\r\n    {this.custom.blue},\r\n    \"#0000FF\",\r\n    if(\r\n        {this.custom.green},\r\n        \"#00FF00\",\r\n        if(\r\n            {this.custom.red},\r\n            \"#FF0000\",\r\n            if(\r\n                {this.custom.white},\r\n                \"#FFFFFF\",\r\n                if(\r\n                    {this.custom.yellow},\r\n                    \"#FFFF00\",\r\n                    \"#A5A5A5\"\r\n                )\r\n            )\r\n        )\r\n    )\r\n)"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "expression": "if(\r\n    {this.custom.blue},\r\n    \"#0000FF\",\r\n    if(\r\n        {this.custom.green},\r\n        \"#00FF00\",\r\n        if(\r\n            {this.custom.red},\r\n            \"#FF0000\",\r\n            if(\r\n                {this.custom.white},\r\n                \"#FFFFFF\",\r\n                if(\r\n                    {this.custom.yellow},\r\n                    \"#FFFF00\",\r\n                    \"#A5A5A5\"\r\n                )\r\n            )\r\n        )\r\n    )\r\n)"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "expression": "if(\r\n    {this.custom.blue},\r\n    \"#0000FF\",\r\n    if(\r\n        {this.custom.green},\r\n        \"#00FF00\",\r\n        if(\r\n            {this.custom.red},\r\n            \"#FF0000\",\r\n            if(\r\n                {this.custom.white},\r\n                \"#FFFFFF\",\r\n                if(\r\n                    {this.custom.yellow},\r\n                    \"#FFFF00\",\r\n                    \"#A5A5A5\"\r\n                )\r\n            )\r\n        )\r\n    )\r\n)"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "height": "19.5",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.20000000298023224px"
+              },
+              "type": "rect",
+              "width": "17",
+              "x": "11",
+              "y": "13.5"
+            },
+            {
+              "fill": {},
+              "height": "18.799999237060547",
+              "name": "rect_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.20000000298023224"
+              },
+              "type": "rect",
+              "width": "17",
+              "x": "11",
+              "y": "32.70000076293945"
+            },
+            {
+              "fill": {},
+              "height": "18",
+              "name": "rect_1",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.20000000298023224"
+              },
+              "type": "rect",
+              "width": "17",
+              "x": "11",
+              "y": "51"
+            },
+            {
+              "fill": {
+                "paint": "#d9dbdd"
+              },
+              "height": "7.5",
+              "name": "rect_2",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.20000000298023224"
+              },
+              "type": "rect",
+              "width": "27.5",
+              "x": "5.5",
+              "y": "6"
+            },
+            {
+              "fill": {
+                "paint": "#d9dbdd"
+              },
+              "height": "7.5",
+              "name": "rect_3",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.20000000298023224"
+              },
+              "type": "rect",
+              "width": "27.5",
+              "x": "5.5",
+              "y": "69"
+            }
+          ],
+          "viewBox": "0 0 37 80"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "100:129",
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

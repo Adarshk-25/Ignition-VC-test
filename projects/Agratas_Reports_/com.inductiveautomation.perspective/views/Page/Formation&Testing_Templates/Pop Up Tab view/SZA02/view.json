@@ -1,0 +1,203 @@
+{
+  "custom": {},
+  "params": {
+    "equipmentGraphic": "value",
+    "equipmentName": "value"
+  },
+  "propConfig": {
+    "params.equipmentGraphic": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.equipmentName": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "PopUpTemplateView"
+            },
+            "props": {
+              "params": {
+                "equipmentGraphic": "value",
+                "equipmentName": "value",
+                "parameterData": [
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value"
+                  }
+                ]
+              },
+              "path": "Page/Formation\u0026Testing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "PopUpTemplateView_0"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "params": {
+                "equipmentGraphic": "value",
+                "equipmentName": "value",
+                "parameterData": [
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value"
+                  }
+                ]
+              },
+              "path": "Page/Formation\u0026Testing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "PopUpTemplateView_1"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "params": {
+                "equipmentGraphic": "value",
+                "equipmentName": "value",
+                "parameterData": [
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "value"
+                  }
+                ]
+              },
+              "path": "Page/Formation\u0026Testing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "props": {
+          "tabSize": {
+            "width": 100
+          },
+          "tabs": [
+            "PHA01",
+            "SGC01",
+            "XCG01"
+          ]
+        },
+        "type": "ia.container.tab"
+      },
+      {
+        "meta": {
+          "name": "AlarmsTemplate"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "params": {
+            "tagpath": "value"
+          },
+          "path": "Page/Formation\u0026Testing_Templates/PopUpScreensTemplate/AlarmsTemplate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TrendsTemplate"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "params": {
+            "path": ""
+          },
+          "path": "Page/Formation\u0026Testing_Templates/PopUpScreensTemplate/TrendsTemplate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ]
+          },
+          "path": "Page/Formation\u0026Testing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 3,
+      "tabSize": {
+        "width": 100
+      },
+      "tabs": [
+        "Process Data",
+        "Trends",
+        "Alarms",
+        "Metadata"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

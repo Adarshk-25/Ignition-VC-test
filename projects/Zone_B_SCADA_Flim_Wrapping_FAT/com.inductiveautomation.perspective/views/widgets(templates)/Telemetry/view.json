@@ -1,0 +1,221 @@
+{
+  "custom": {},
+  "params": {
+    "telemetry": "value"
+  },
+  "propConfig": {
+    "params.telemetry": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 305
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.64,
+              "width": 0.1639,
+              "x": 0.023,
+              "y": 0.12
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.telemetry}"
+                    },
+                    "tagPath": "{Tag}/Extended"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/ScreenBackground"
+              },
+              "textStyle": {
+                "classes": "PipingAndInst/label"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 0.64,
+              "width": 0.1639,
+              "x": 0.2197,
+              "y": 0.12
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.telemetry}"
+                    },
+                    "tagPath": "{Tag}/Extending"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/ScreenBackground"
+              },
+              "textStyle": {
+                "classes": "PipingAndInst/label"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.64,
+              "width": 0.1639,
+              "x": 0.4164,
+              "y": 0.12
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.telemetry}"
+                    },
+                    "tagPath": "{Tag}/Fault"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/ScreenBackground"
+              },
+              "textStyle": {
+                "classes": "PipingAndInst/label"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "height": 0.64,
+              "width": 0.1639,
+              "x": 0.6197,
+              "y": 0.12
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.telemetry}"
+                    },
+                    "tagPath": "{Tag}/Retracted"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/ScreenBackground"
+              },
+              "textStyle": {
+                "classes": "PipingAndInst/label"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.64,
+              "width": 0.1639,
+              "x": 0.8164,
+              "y": 0.12
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.telemetry}"
+                    },
+                    "tagPath": "{Tag}/Retracting"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/ScreenBackground"
+              },
+              "textStyle": {
+                "classes": "PipingAndInst/label"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#D5D5D500"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

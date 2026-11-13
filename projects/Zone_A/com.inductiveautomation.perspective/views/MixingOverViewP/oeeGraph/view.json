@@ -1,0 +1,79 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": "100%",
+      "width": "100%"
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "25%"
+        },
+        "props": {
+          "text": "Mixing Equipment Effectiveness (OEE)",
+          "textStyle": {
+            "classes": "General/SubHeading",
+            "color": "#1039CC",
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "SimpleGauge"
+        },
+        "position": {
+          "basis": "60%"
+        },
+        "props": {
+          "arc": {
+            "color": "#DC412D"
+          },
+          "arcBackground": {
+            "color": "#221816"
+          },
+          "endAngle": 405,
+          "label": {
+            "color": "#DC412D",
+            "offsetY": 12,
+            "units": "%"
+          },
+          "startAngle": 135,
+          "value": 50
+        },
+        "type": "ia.chart.simple-gauge"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "15%"
+        },
+        "props": {
+          "text": "Current OEE"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignItems": "center",
+      "direction": "column",
+      "style": {
+        "color": "#DC412D"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

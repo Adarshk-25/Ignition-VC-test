@@ -1,0 +1,99 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Outfeeder1_Anode"
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Outfeeder1_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Outfeeder2_Screen"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Outfeeder2_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Transport_Anode"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Transport_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Unwinder_Screen"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Unwinder_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Rewinder_Screen"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Rewinder_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ThicknessGauge_Screen"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/ThicknessGauge_Screen"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "tabSize": {
+        "width": 150
+      },
+      "tabs": [
+        "Outfeeder I",
+        "Outfeeder II",
+        "Transport",
+        "Unwinder",
+        "Rewinder",
+        "Thickness Gauge"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "custom": {},
+  "params": {
+    "forwardDisplay": true,
+    "label": "value",
+    "parentPath": "value",
+    "path": "value"
+  },
+  "propConfig": {
+    "params.forwardDisplay": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.parentPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 109
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tchildPath\u003d\"/\"+str(self.view.params.path)\n\tsystem.perspective.navigate(page\u003dchildPath)\n\t\n\ttree\u003dsystem.util.jsonDecode(self.parent.custom.navTree)\t\n\tancestors\u003dshared.nav.getAncestors(tree, self.view.params.path)\n\tfor item in ancestors:\n\t\titem[\"path\"] \u003d \"/\" + item[\"path\"]\n\t\n\tsystem.perspective.sendMessage(\n\tproject\u003dsystem.util.getProjectName(),\n\tmessageType\u003d\"updatePath\", \n\tpayload\u003d{\"breadCrumbPathsFinal\":ancestors},\n\tscope\u003d\"session\")\n\tself.session.custom.nav.breadcrumb \u003d ancestors\n\tsystem.perspective.closePopup(id\u003d\"crumbChildrenPopup\")\n"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.9107,
+          "width": 0.9541,
+          "x": 0.0275,
+          "y": 0.0179
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          },
+          "textStyle": {
+            "color": "#FDAD41",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "custom": {
+      "navTree": "[{\"expanded\":true,\"data\":{\"path\":\"sanand\",\"level\":\"site\"},\"icon\":{\"path\":\"material/business\",\"color\":\"\",\"style\":{}},\"label\":\"Sanand\",\"items\":[{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e\",\"level\":\"area\"},\"icon\":{\"path\":\"material/crop_3_2\",\"color\":\"\",\"style\":{}},\"label\":\"Zone E\",\"items\":[{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/mixing\",\"level\":\"process\"},\"icon\":{\"path\":\"material/battery_charging_full\",\"color\":\"\",\"style\":{}},\"label\":\"Mixing\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/anode-line-1\",\"level\":\"machine\"},\"label\":\"Anode Line 1\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"Anode-Line-1-Alarms\",\"level\":\"Alarms\"},\"icon\":{\"path\":\"material/access_alarm\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"Anode-Line-1-Trends\",\"level\":\"Trends\"},\"icon\":{\"path\":\"material/trending_up\",\"color\":\"\",\"style\":{}},\"label\":\"Trends\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/anode-line-2\",\"level\":\"machine\"},\"label\":\"Anode Line 2\",\"items\":[{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/access_alarm\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/trending_up\",\"color\":\"\",\"style\":{}},\"label\":\"Trends\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/cathode-line-1\",\"level\":\"machine\"},\"label\":\"Cathode Line 1\",\"items\":[{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/access_alarm\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/trending_up\",\"color\":\"\",\"style\":{}},\"label\":\"Trends\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/cathode-line-2\",\"level\":\"machine\"},\"label\":\"Cathode Line 2\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"Cathode-Line-2-Alarms\",\"level\":\"value\"},\"icon\":{\"path\":\"material/access_alarm\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"Cathode-Line-2-Trends\",\"level\":\"\"},\"icon\":{\"path\":\"material/trending_up\",\"color\":\"\",\"style\":{}},\"label\":\"Trends\",\"items\":[]}]}]},{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/coating\",\"level\":\"process\"},\"label\":\"Coating\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-1\",\"level\":\"machine\"},\"label\":\"Anode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-2\",\"level\":\"machine\"},\"label\":\"Anode Line 2\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-1\",\"level\":\"machine\"},\"label\":\"Cathode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-2:\",\"level\":\"machine\"},\"label\":\"Cathode Line 2\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/calendering\"},\"label\":\"Calendering\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/calendering/anodeline\"},\"label\":\"Anode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"/sanand/zone-e/calendering/anodeline2\"},\"label\":\"Anode Line 2\\n\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/calendering/cathodeline1\"},\"label\":\"Cathode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/calendering/cathodeline2\"},\"label\":\"Cathode Line 2\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/recovery\",\"label\":\"process\"},\"label\":\"Recovery\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/recovery/anodeline\"},\"label\":\"Anode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/recovery/anodeline-2\"},\"label\":\"Anode Line 2\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/recovery/cathodeline\"},\"label\":\"Cathode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/recovery/cathodeline-2\"},\"label\":\"Cathode Line 2\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/lasernotching\",\"label\":\"process\"},\"label\":\"Notching and Slitting\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/lasernotching/anodeline1\"},\"label\":\"Anode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/lasernotching/anodecathode:\"},\"label\":\"Anode Line 2\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/lasernotching/cathodeline1\"},\"label\":\"Cathode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/lasernotching/cathodeline2\"},\"label\":\"Cathode Line 2\",\"items\":[]}]}]},{\"expanded\":true,\"data\":{\"path\":\"analytics\"},\"icon\":{\"path\":\"material/analytics\",\"color\":\"\",\"style\":{}},\"label\":\"ANALYTICS\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"analytics/trends\"},\"label\":\"Trends\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"analytics/reports\"},\"label\":\"Reports\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"operations\"},\"icon\":{\"path\":\"material/dashboard\",\"color\":\"\",\"style\":{}},\"label\":\"OPERATIONS\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"alarms-management\"},\"icon\":{\"path\":\"material/notification_important\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"operations/recipes\"},\"icon\":{\"path\":\"material/menu_book\",\"color\":\"\",\"style\":{}},\"label\":\"Recipes\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"system\"},\"icon\":{\"path\":\"material/settings_applications\",\"color\":\"\",\"style\":{}},\"label\":\"Setting\",\"items\":[{\"expanded\":true,\"data\":{\"path\":\"system/userManagement\"},\"icon\":{\"path\":\"material/admin_panel_settings\",\"color\":\"\",\"style\":{}},\"label\":\"Security \u0026 Roles\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"system/auditLogs\"},\"icon\":{\"path\":\"material/history\",\"color\":\"\",\"style\":{}},\"label\":\"Audit Logs\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"system/help\"},\"icon\":{\"path\":\"material/help_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Help\",\"items\":[]}]}]}]"
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "navTreeUpdate",
+          "pageScope": false,
+          "script": "\tself.custom.navTree\u003dpayload[\u0027tree\u0027]\n\t# implement your handler here",
+          "sessionScope": true,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

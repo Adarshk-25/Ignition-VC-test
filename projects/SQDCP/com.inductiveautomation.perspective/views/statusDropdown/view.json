@@ -1,0 +1,88 @@
+{
+  "custom": {},
+  "params": {
+    "isEditable": "value \u003d \u0027Pending\u0027",
+    "rowData": "row",
+    "value": "value"
+  },
+  "propConfig": {
+    "params.isEditable": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.rowData": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 40,
+      "width": 120
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "    system.perspective.sendMessage(\n        \"updateStatus\",\n        {\n            \"id\": self.view.params.rowData.get(\"id\"),\n            \"value\": self.props.value\n        },\n        scope\u003d\"page\"\n    )"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "basis": "52px"
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.params.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Completed",
+              "value": "Completed"
+            },
+            {
+              "label": "Pending",
+              "value": "Pending"
+            }
+          ],
+          "search": {
+            "enabled": false
+          },
+          "style": {
+            "borderRadius": "5px",
+            "margin": "5px"
+          }
+        },
+        "type": "ia.input.dropdown"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

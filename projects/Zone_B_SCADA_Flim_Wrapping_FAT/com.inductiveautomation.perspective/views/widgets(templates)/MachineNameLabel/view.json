@@ -1,0 +1,99 @@
+{
+  "custom": {},
+  "params": {
+    "machineName": "value",
+    "status": "value"
+  },
+  "propConfig": {
+    "params.machineName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 63,
+      "width": 53
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label_76"
+        },
+        "position": {
+          "height": 0.5873,
+          "width": 0.5429,
+          "x": 0.2421,
+          "y": 0.1984
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.machineName"
+              },
+              "type": "property"
+            }
+          },
+          "props.textStyle.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#969696"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "textStyle": {
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

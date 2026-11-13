@@ -1,0 +1,4667 @@
+[
+  {
+    "name": "CurrAlarm",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t        # Get the corresponding Active_0 tag path\n\t        activeTag \u003d str(tagPath).replace(\"Acknowledged_0\", \"Active_0\")\n\t\n\t        # Convert tag path to alarm source format\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        # Query all active, unacknowledged alarms\n\t        alarms \u003d system.alarm.queryStatus(state\u003d[\"ActiveUnacked\"])\n\t\n\t        eventIds \u003d []\n\t\n\t        for alarm in alarms:\n\t            if str(alarm.getSource()) \u003d\u003d alarmSource:\n\t                eventIds.append(str(alarm.getId()))\n\t\n\t        if eventIds:\n\t\n\t            logger.info(\"Acknowledging Alarm(s): {}\".format(eventIds))\n\t\n\t            system.alarm.acknowledge(\n\t                eventIds,\n\t                \"Acknowledged from PLC\",\n\t                \"PLC\"\n\t            )\n\t\n\t            logger.info(\"Alarm acknowledged successfully.\")\n\t\n\t        else:\n\t            logger.warn(\"No matching active unacknowledged alarm found.\")\n\t\n\t    except Exception as e:\n\t        logger.error(\"Error acknowledging alarm: {}\".format(e))"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_0",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t        # Get the corresponding Active_0 tag path\n\t        activeTag \u003d str(tagPath).replace(\"Acknowledged_1\", \"Active_1\")\n\t\n\t        # Convert tag path to alarm source format\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        # Query all active, unacknowledged alarms\n\t        alarms \u003d system.alarm.queryStatus(state\u003d[\"ActiveUnacked\"])\n\t\n\t        eventIds \u003d []\n\t\n\t        for alarm in alarms:\n\t            if str(alarm.getSource()) \u003d\u003d alarmSource:\n\t                eventIds.append(str(alarm.getId()))\n\t\n\t        if eventIds:\n\t\n\t            logger.info(\"Acknowledging Alarm(s): {}\".format(eventIds))\n\t\n\t            system.alarm.acknowledge(\n\t                eventIds,\n\t                \"Acknowledged from PLC\",\n\t                \"PLC\"\n\t            )\n\t\n\t            logger.info(\"Alarm acknowledged successfully.\")\n\t\n\t        else:\n\t            logger.warn(\"No matching active unacknowledged alarm found.\")\n\t\n\t    except Exception as e:\n\t        logger.error(\"Error acknowledging alarm: {}\".format(e))"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_1",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t        # Get the corresponding Active_0 tag path\n\t        activeTag \u003d str(tagPath).replace(\"Acknowledged_2\", \"Active_2\")\n\t\n\t        # Convert tag path to alarm source format\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        # Query all active, unacknowledged alarms\n\t        alarms \u003d system.alarm.queryStatus(state\u003d[\"ActiveUnacked\"])\n\t\n\t        eventIds \u003d []\n\t\n\t        for alarm in alarms:\n\t            if str(alarm.getSource()) \u003d\u003d alarmSource:\n\t                eventIds.append(str(alarm.getId()))\n\t\n\t        if eventIds:\n\t\n\t            logger.info(\"Acknowledging Alarm(s): {}\".format(eventIds))\n\t\n\t            system.alarm.acknowledge(\n\t                eventIds,\n\t                \"Acknowledged from PLC\",\n\t                \"PLC\"\n\t            )\n\t\n\t            logger.info(\"Alarm acknowledged successfully.\")\n\t\n\t        else:\n\t            logger.warn(\"No matching active unacknowledged alarm found.\")\n\t\n\t    except Exception as e:\n\t        logger.error(\"Error acknowledging alarm: {}\".format(e))"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_2",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t        # Get the corresponding Active_0 tag path\n\t        activeTag \u003d str(tagPath).replace(\"Acknowledged_3\", \"Active_3\")\n\t\n\t        # Convert tag path to alarm source format\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        # Query all active, unacknowledged alarms\n\t        alarms \u003d system.alarm.queryStatus(state\u003d[\"ActiveUnacked\"])\n\t\n\t        eventIds \u003d []\n\t\n\t        for alarm in alarms:\n\t            if str(alarm.getSource()) \u003d\u003d alarmSource:\n\t                eventIds.append(str(alarm.getId()))\n\t\n\t        if eventIds:\n\t\n\t            logger.info(\"Acknowledging Alarm(s): {}\".format(eventIds))\n\t\n\t            system.alarm.acknowledge(\n\t                eventIds,\n\t                \"Acknowledged from PLC\",\n\t                \"PLC\"\n\t            )\n\t\n\t            logger.info(\"Alarm acknowledged successfully.\")\n\t\n\t        else:\n\t            logger.warn(\"No matching active unacknowledged alarm found.\")\n\t\n\t    except Exception as e:\n\t        logger.error(\"Error acknowledging alarm: {}\".format(e))"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_3",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t        # Get the corresponding Active_0 tag path\n\t        activeTag \u003d str(tagPath).replace(\"Acknowledged_4\", \"Active_4\")\n\t\n\t        # Convert tag path to alarm source format\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        # Query all active, unacknowledged alarms\n\t        alarms \u003d system.alarm.queryStatus(state\u003d[\"ActiveUnacked\"])\n\t\n\t        eventIds \u003d []\n\t\n\t        for alarm in alarms:\n\t            if str(alarm.getSource()) \u003d\u003d alarmSource:\n\t                eventIds.append(str(alarm.getId()))\n\t\n\t        if eventIds:\n\t\n\t            logger.info(\"Acknowledging Alarm(s): {}\".format(eventIds))\n\t\n\t            system.alarm.acknowledge(\n\t                eventIds,\n\t                \"Acknowledged from PLC\",\n\t                \"PLC\"\n\t            )\n\t\n\t            logger.info(\"Alarm acknowledged successfully.\")\n\t\n\t        else:\n\t            logger.warn(\"No matching active unacknowledged alarm found.\")\n\t\n\t    except Exception as e:\n\t        logger.error(\"Error acknowledging alarm: {}\".format(e))"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_4",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "ackMode": "Auto",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_0"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_0"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_0"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_0"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_0"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_0"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_0"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_0"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_0"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_0"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_0"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "Active_0",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_1"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_1"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_1"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_1"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_1"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_1"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_1"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_1"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_1"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_1"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_1"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "Active_1",
+        "defaultValue": false,
+        "value": false,
+        "enabled": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_2"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_2"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_2"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_2"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_2"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_2"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_2"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_2"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_2"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_2"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_2"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "Active_2",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_3"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_3"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_3"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_3"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_3"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_3"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_3"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_3"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_3"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_3"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_3"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "Active_3",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_4"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_4"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_4"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_4"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_4"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_4"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_4"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_4"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_4"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_4"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_4"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "Active_4",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].AlarmCode\")",
+        "name": "AlarmCode_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].AlarmCode\")",
+        "name": "AlarmCode_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].AlarmCode\")",
+        "name": "AlarmCode_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].AlarmCode\")",
+        "name": "AlarmCode_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].AlarmCode\")",
+        "name": "AlarmCode_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].AlarmGroupID\")",
+        "name": "AlarmGroupID_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].AlarmGroupID\")",
+        "name": "AlarmGroupID_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].AlarmGroupID\")",
+        "name": "AlarmGroupID_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].AlarmGroupID\")",
+        "name": "AlarmGroupID_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].AlarmGroupID\")",
+        "name": "AlarmGroupID_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Priority\")",
+        "dataType": "String",
+        "name": "Priority_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Priority\")",
+        "dataType": "String",
+        "name": "Priority_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Priority\")",
+        "dataType": "String",
+        "name": "Priority_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Priority\")",
+        "dataType": "String",
+        "name": "Priority_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].Priority\")",
+        "dataType": "String",
+        "name": "Priority_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{InstanceName}"
+        },
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tlogger \u003d system.util.getLogger(\"AlarmTest\")\n\t\n\tparsedJson \u003d currentValue.value\n\t\n\ttagPaths \u003d []\n\ttagValues \u003d []\n\t\n\tfor i in range(min(len(parsedJson), 5)):\n\t\n\t    alarmData \u003d parsedJson[i]\n\t\n\t    alarmGroupID \u003d alarmData[\"AlarmGroupID\"]\n\t    alarmCode \u003d alarmData[\"AlarmCode\"]\n\t    active \u003d alarmData[\"Active\"]\n\t\n\t    alarm \u003d AlarmConfig.AlarmMessages_1.getAlarm(alarmGroupID, alarmCode)\n\t\n\t    if alarm:\n\t\n\t        tagPaths.extend([\n\t            \"[.]Operator_Msg_{}\".format(i),\n\t            \"[.]Label_{}\".format(i),\n\t            \"[.]Troubleshoot_{}\".format(i),\n\t            \"[.]Active_{}\".format(i)\n\t        ])\n\t\n\t        tagValues.extend([\n\t            alarm[\"OperatorMessage\"],\n\t            alarm[\"Label\"],         \n\t            alarm[\"Troubleshoot\"],\n\t            active\n\t        ])\n\t\n\tif tagPaths:\n\t    system.tag.writeBlocking(tagPaths, tagValues)"
+          }
+        ],
+        "valueSource": "opc",
+        "dataType": "Document",
+        "name": "Raw_Data",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_0",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_1",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_2",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_3",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_4",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "DateTime",
+        "name": "TimestampActive_DT_0",
+        "formatString": "yyyy-MM-dd h:mm:ss aa",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "DateTime",
+        "name": "TimestampReset_DT_0",
+        "formatString": "yyyy-MM-dd h:mm:ss aa",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\tlogger \u003d system.util.getLogger(\"AlarmLookup\")\n\t\t\n\t\tgroupId \u003d system.tag.readBlocking([\"[.]AlarmGroupID_0\"])[0].value\n\t\talarmCode \u003d system.tag.readBlocking([\"[.]AlarmCode_0\"])[0].value\n\t\t\n\t\tlogger.info(\"Group \u003d {}\".format(groupId))\n\t\tlogger.info(\"Code  \u003d {}\".format(alarmCode))\n\t\t\n\t\talarm \u003d AlarmConfig.AlarmMessages.getAlarm(groupId, alarmCode)\n\t\t\n\t\tlogger.info(\"Alarm \u003d {}\".format(alarm))\n\t\t\n\t\tif alarm:\n\t\t    logger.info(\"Description \u003d {}\".format(alarm[\"description\"]))\n\t\t\n\t\t    qv \u003d system.tag.writeBlocking(\n\t\t        [\"[.]Operator_Msg_0\"],\n\t\t        [alarm[\"description\"]]\n\t\t    )\n\t\t\n\t\t    logger.info(\"Write Result \u003d {}\".format(qv))\n\t\telse:\n\t\t    logger.warn(\"Alarm not found in dictionary\")",
+            "enabled": false
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "ackMode": "Auto",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_0"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_0"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_0"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_0"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_0"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_0"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_0"
+            },
+            "Operator Msg": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_0"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_0"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_0",
+        "defaultValue": false,
+        "value": false,
+        "enabled": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\tlogger \u003d system.util.getLogger(\"AlarmLookup\")\n\t\t\n\t\tgroupId \u003d system.tag.readBlocking([\"[.]AlarmGroupID_1\"])[0].value\n\t\talarmCode \u003d system.tag.readBlocking([\"[.]AlarmCode_1\"])[0].value\n\t\t\n\t\tlogger.info(\"Group \u003d {}\".format(groupId))\n\t\tlogger.info(\"Code  \u003d {}\".format(alarmCode))\n\t\t\n\t\talarm \u003d AlarmConfig.AlarmMessages.getAlarm(groupId, alarmCode)\n\t\t\n\t\tlogger.info(\"Alarm \u003d {}\".format(alarm))\n\t\t\n\t\tif alarm:\n\t\t    logger.info(\"Description \u003d {}\".format(alarm[\"description\"]))\n\t\t\n\t\t    qv \u003d system.tag.writeBlocking(\n\t\t        [\"[.]Operator_Msg_1\"],\n\t\t        [alarm[\"description\"]]\n\t\t    )\n\t\t\n\t\t    logger.info(\"Write Result \u003d {}\".format(qv))\n\t\telse:\n\t\t    logger.warn(\"Alarm not found in dictionary\")"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_1"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_1"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_1"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_1"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_1"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_1"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_1"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_1"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_1",
+        "defaultValue": false,
+        "value": false,
+        "enabled": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_2"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_2"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_2"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_2"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_2"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_2"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_2"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_2"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_2",
+        "defaultValue": false,
+        "value": false,
+        "enabled": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_3"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_3"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_3"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_3"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_3"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_3"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_3"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_3"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_3",
+        "defaultValue": false,
+        "value": false,
+        "enabled": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_4"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_4"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_4"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_4"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_4"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_4"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_4"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_4"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_4",
+        "defaultValue": false,
+        "value": false,
+        "enabled": false,
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "typeColor": -64512,
+    "name": "mixerTank",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line.mixing.mixingTank.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line.mixing.mixingTank"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "electrical",
+        "typeId": "electrical",
+        "parameters": {
+          "electricalPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.electrical"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.spPressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "spPressure",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "pressure",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.spTemp"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "spTemp",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.spLevel"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "spLevel",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.spLowLevelLimit"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "spLowLevelLimit",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.level"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "level",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.slurryDensity"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "slurryDensity",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.levelInMm"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "levelInMm",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.spHighLevelLimit"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "spHighLevelLimit",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.weight"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "weight",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "temperature",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.spTargetWeight"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "spTargetWeight",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "typeColor": -522489,
+    "name": "mcPdMixer",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.mixing.anode.pdmixer.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.mixing.anode.pdmixer"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.postiveHopperSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 415.0,
+                "Alarm Code": "3",
+                "Severity": "4",
+                "FBS Source": "LC1.XZS3",
+                "name": "EStopTopCover ",
+                "Index": "2",
+                "label": "EStopTopCover ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "postiveHopperSpeed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.mixerScrewFeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 660.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "mode": "BelowValue",
+                "FBS Source": "LC1.XZS2",
+                "name": "EStopOperatorStation ",
+                "Index": "1",
+                "label": "EStopOperatorStation ",
+                "priority": "Critical",
+                "displayPath": "",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "mixerScrewFeed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.inletHopperSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "mode": "AboveValue",
+                "setpointA": 65.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "FBS Source": "LC1.XZS1",
+                "name": "EStopInfeedZone ",
+                "Index": "0",
+                "label": "EStopInfeedZone ",
+                "Alarm Group Id": "1",
+                "priority": "Medium",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "inletHopperSpeed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.weighingHopperSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "Alarm Code": "2",
+                "Severity": "4",
+                "FBS Source": "LC2.XZS3",
+                "notes": "Buffer area access door open ",
+                "name": "DoorBufferAreaOpen ",
+                "Index": "5",
+                "label": "DoorBufferAreaOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "5",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "weighingHopperSpeed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.screwFeeder1"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 502.0,
+                "Alarm Code": "4",
+                "Severity": "4",
+                "FBS Source": "LC2.XZS1",
+                "name": "EStopMaintenancePlatform ",
+                "Index": "3",
+                "label": "EStopMaintenancePlatform ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "screwFeeder1",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.screwFeeder2"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 502.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "FBS Source": "LC2.XZS2",
+                "name": "DoorInfeedConveyorOpen ",
+                "Index": "4",
+                "label": "DoorInfeedConveyorOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "5",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "screwFeeder2",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "XV",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.XV_665.Mode",
+        "dataType": "Int4",
+        "name": "Mode",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  },
+  {
+    "typeColor": -58880,
+    "name": "McColdPress",
+    "typeId": "",
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.calendering.anode.coldpress1.criticalDataPoint"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.calendering.anode.coldpress1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.mainRollGap"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 210.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "notes": "Robot cell perimeter door open. Lock required for operation ",
+                "Index": "7",
+                "label": "DoorRobotCellOpen ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "timestampSource": "System",
+                "mode": "AboveValue",
+                "FBS Source": "LC3.XZS2",
+                "name": "DoorRobotCellOpen ",
+                "Alarm Group Id": "6",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "mainRollGap",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.machineFbs"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "Alarm Code": "2",
+                "Severity": "4",
+                "setpointA": 35.0,
+                "notes": "Buffer area access door open ",
+                "setpointB": 40.0,
+                "Index": "5",
+                "label": "DoorBufferAreaOpen ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "FBS Source": "LC2.XZS3",
+                "mode": "BetweenValues",
+                "name": "DoorBufferAreaOpen ",
+                "Alarm Group Id": "5",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "machineFbs",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.outfeedTension"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 20.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "notes": "Packaging station safety door open ",
+                "setpointB": 25.0,
+                "Index": "9",
+                "label": "DoorPackagingStationOpen ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC4.XZS1",
+                "name": "DoorPackagingStationOpen ",
+                "Alarm Group Id": "7",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "outfeedTension",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.averagethickness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "mode": "AboveValue",
+                "Alarm Code": "1",
+                "Severity": "4",
+                "FBS Source": "LC1.XZS1",
+                "notes": "Emergency Stop pressed in Infeed Zone. Inspect area and reset ",
+                "name": "EStopInfeedZone ",
+                "Index": "0",
+                "label": "EStopInfeedZone ",
+                "priority": "Medium",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "averagethickness",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.productID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "productID",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.calenderCycleTime"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 80.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "mode": "BelowValue",
+                "FBS Source": "LC1.XZS2",
+                "notes": "Operator Station Emergency Stop pressed ",
+                "name": "EStopOperatorStation ",
+                "Index": "1",
+                "label": "EStopOperatorStation ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "calenderCycleTime",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.mainRollTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 40.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "mode": "AboveValue",
+                "FBS Source": "LC3.XZS3",
+                "notes": "Inspection cell safety door open ",
+                "name": "DoorInspectionCellOpen ",
+                "Index": "8",
+                "label": "DoorInspectionCellOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "7",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "mainRollTemperature",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.electrodeWidth"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "mode": "AboveValue",
+                "Alarm Code": "4",
+                "Severity": "4",
+                "FBS Source": "LC2.XZS1",
+                "notes": "Maintenance platform E-Stop activated ",
+                "name": "EStopMaintenancePlatform ",
+                "Index": "3",
+                "label": "EStopMaintenancePlatform ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "electrodeWidth",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.startTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "startTime",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.infeedTension"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "Alarm Code": "1",
+                "Severity": "4",
+                "setpointA": 50.0,
+                "FBS Source": "LC2.XZS2",
+                "mode": "AboveValue",
+                "notes": "Infeed conveyor access door open. Close and secure door ",
+                "name": "DoorInfeedConveyorOpen ",
+                "Index": "4",
+                "label": "DoorInfeedConveyorOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "5",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "infeedTension",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.endTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "endTime",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.defect"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 90.0,
+                "Alarm Code": "3",
+                "Severity": "4",
+                "mode": "BetweenValues",
+                "FBS Source": "LC1.XZS3",
+                "notes": "Top cover emergency stop has been activated ",
+                "name": "EStopTopCover ",
+                "Index": "2",
+                "label": "EStopTopCover ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "defect",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.operatorID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "operatorID",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.processStep"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 10.0,
+                "Alarm Code": "1",
+                "Severity": "3",
+                "mode": "AboveValue",
+                "FBS Source": "LC4.XZS2",
+                "notes": "Material jam at infeed. Clear blockage and restart ",
+                "name": "InfeedJamDetected ",
+                "Index": "10",
+                "label": "InfeedJamDetected ",
+                "priority": "High",
+                "Alarm Group Id": "65",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "processStep",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.machineSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 10.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "notes": "Assembly cell safety door open ",
+                "setpointB": 60.0,
+                "Index": "6",
+                "label": "DoorAssemblyCellOpen ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "OutsideValues",
+                "FBS Source": "LC3.XZS1",
+                "name": "DoorAssemblyCellOpen ",
+                "Alarm Group Id": "6",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "machineSpeed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.recipeID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "recipeID",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.productionOrder"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 90.0,
+                "Alarm Code": "2",
+                "Severity": "3",
+                "mode": "AboveValue",
+                "FBS Source": "LC4.XZS3",
+                "notes": "Temperature above high limit. Check heating system ",
+                "name": "TempHighWarning ",
+                "Index": "11",
+                "label": "TempHighWarning ",
+                "priority": "High",
+                "Alarm Group Id": "121",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "productionOrder",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "pumps",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Cmd",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Run_fb",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Stp_fb",
+        "value": false,
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "filter",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Cmd",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Run_fb",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Stp_fb",
+        "value": false,
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "typeColor": -16770432,
+    "name": "status",
+    "typeId": null,
+    "parameters": {
+      "statusPath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line.mixing.agitator.status"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.TripStatus"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "TripStatus",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.TripStatus2"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "TripStatus2",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.availability"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "availability",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.faultStatus"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "faultStatus",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.interlockActive"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "interlockActive",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.mode"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "mode",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.readyStatus"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "readyStatus",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.runStatus"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "runStatus",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.startCmd"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "startCmd",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.status"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "status",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.stopCmd"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "stopCmd",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.valveState"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "valveState",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  },
+  {
+    "name": "Tx_Dis_Ig",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "HH_SP",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "H_SP",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "LL_SP",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "L_SP",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "PV",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "typeColor": -64512,
+    "name": "conveyor",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.conveyor.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.conveyor.agitator"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "electrical",
+        "typeId": "electrical",
+        "parameters": {
+          "electricalPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.electrical"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.spSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "spSpeed",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.torque"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "torque",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.stopCmd"
+            },
+            "valueSource": "opc",
+            "dataType": "Boolean",
+            "name": "stopCmd",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.startCmd"
+            },
+            "valueSource": "opc",
+            "dataType": "Boolean",
+            "name": "startCmd",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.speed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "speed",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.vfdFrequency"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "vfdFrequency",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "alaramAG",
+    "typeId": "",
+    "parameters": {
+      "Alarm Code": {
+        "dataType": "Integer",
+        "value": null
+      },
+      "Severity": {
+        "dataType": "Integer",
+        "value": null
+      },
+      "TimestampReset": {
+        "dataType": "String",
+        "value": null
+      },
+      "TimestampActive": {
+        "dataType": "String",
+        "value": null
+      },
+      "Label": {
+        "dataType": "String",
+        "value": null
+      },
+      "AlarmGroupID": {
+        "dataType": "Integer",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "name": "Alarm",
+        "tagType": "AtomicTag",
+        "enabled": true
+      }
+    ]
+  },
+  {
+    "name": "BtachId",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "name": "LSL",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "ParameterRef",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "ParameterType",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "ParameterUOM",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "name": "Setpoint",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "name": "USL",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "VLV_XV",
+    "typeId": null,
+    "parameters": {
+      "OPC": {
+        "dataType": "String",
+        "value": "kep"
+      },
+      "ValveName": {
+        "dataType": "String",
+        "value": null
+      },
+      "OPCPath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPCPath}.{ValveName}.CMD"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{OPC}"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "CMD",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPCPath}.{ValveName}.Cls_FB"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{OPC}"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "Cls_FB",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPCPath}.{ValveName}.Cls_Fault"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{OPC}"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "Cls_Fault",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPCPath}.{ValveName}.Open_FB"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{OPC}"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "Opn_FB",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPCPath}.{ValveName}.Open_Fault"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{OPC}"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "Opn_Fault",
+        "value": true,
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "typeColor": -64512,
+    "name": "pump",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.pump.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.pump"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "electrical",
+        "typeId": "electrical",
+        "parameters": {
+          "electricalPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.electrical"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.fbStop"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "fbStop",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.stopCmd"
+            },
+            "valueSource": "opc",
+            "dataType": "Boolean",
+            "name": "stopCmd",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.flowRate"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "flowRate",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "pressure",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.fbStart"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "fbStart",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "temperature",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.speed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "speed",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.spSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "spSpeed",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "typeColor": -16774913,
+    "name": "oee",
+    "typeId": null,
+    "parameters": {
+      "oeePath": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.downTime"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "downTime",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.goodCount"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "goodCount",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.idealCycleTime"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "idealCycleTime",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "name": "oeeCore",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "expr",
+            "expression": "if ({[.]../runTime}\u003e0,(({[.]../totalCount}*{[.]../idealCycleTime})/{[.]../runTime})*100,0)",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "Performance",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "%"
+          },
+          {
+            "valueSource": "expr",
+            "expression": "if ({[.]../totalCount}\u003e0,({[.]../goodCount}/{[.]../totalCount})*100,0)",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "Quality",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "%"
+          },
+          {
+            "valueSource": "expr",
+            "expression": "if (({[.]../runTime}+{[.]../downTime})\u003e0,({[.]../runTime}/({[.]../runTime}+{[.]../downTime}))*100,0)",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "Availability",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "%"
+          },
+          {
+            "valueSource": "expr",
+            "expression": "({[.]Availability}*{[.]Performance}*{[.]Quality})/10000",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "oee",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "%"
+          }
+        ]
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.rejectCount"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "rejectCount",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.runTime"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "runTime",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.totalCount"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "totalCount",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  },
+  {
+    "name": "VLV_XV_Ig",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "CMD",
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Cls_FB",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Cls_Fault",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Opn_FB",
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Opn_Fault",
+        "value": false,
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "typeColor": -63488,
+    "name": "McHotPress",
+    "typeId": "",
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.calendering.anode.hotPress.criticalDataPoint"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.calendering.anode.hotPress"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.operatorID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "operatorID",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.materialSurfaceTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 3.0,
+                "Alarm Code": "1",
+                "Severity": "3",
+                "mode": "BelowValue",
+                "FBS Source": "LC4.XZS2",
+                "notes": "Material jam at infeed. Clear blockage and restart ",
+                "name": "InfeedJamDetected ",
+                "Index": "10",
+                "label": "InfeedJamDetected ",
+                "priority": "High",
+                "Alarm Group Id": "65",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "materialSurfaceTemperature",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.iha"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 5.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "mode": "BelowValue",
+                "FBS Source": "LC2.XZS3",
+                "notes": "Infeed conveyor access door open. Close and secure door ",
+                "name": "DoorInfeedConveyorOpen ",
+                "Index": "4",
+                "label": "DoorInfeedConveyorOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "5",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "iha",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.processStep"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 5.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "FBS Source": "LC5.XZS2",
+                "notes": "Loss of communication with IO module. Check fieldbus ",
+                "name": "IOCommunicationLost ",
+                "Index": "13",
+                "label": "IOCommunicationLost ",
+                "priority": "Critical",
+                "Alarm Group Id": "311",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "processStep",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.calenderCycleTime"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 80.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "mode": "BelowValue",
+                "FBS Source": "LC1.XZS2",
+                "notes": "Operator Station Emergency Stop pressed ",
+                "name": "EStopOperatorStation ",
+                "Index": "1",
+                "label": "EStopOperatorStation ",
+                "priority": "Critical",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "calenderCycleTime",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.preHeatingTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 5.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "mode": "BelowValue",
+                "FBS Source": "LC5.XZS1",
+                "notes": "Motor overload – inspect drive or mechanical load ",
+                "name": "MotorOverload ",
+                "Index": "12",
+                "label": "MotorOverload ",
+                "priority": "Critical",
+                "Alarm Group Id": "291",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "preHeatingTemperature",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.startTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "startTime",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.defect"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 400.0,
+                "Alarm Code": "3",
+                "Severity": "4",
+                "notes": "Top cover emergency stop has been activated ",
+                "setpointB": 402.0,
+                "Index": "2",
+                "label": "EStopTopCover ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC1.XZS3",
+                "name": "EStopTopCover ",
+                "Alarm Group Id": "1",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "defect",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.endTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "endTime",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.electrodeWidth"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 40.0,
+                "Alarm Code": "4",
+                "Severity": "4",
+                "notes": "Maintenance platform E-Stop activated ",
+                "setpointB": 42.0,
+                "Index": "3",
+                "label": "EStopMaintenancePlatform ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC2.XZS1",
+                "name": "EStopMaintenancePlatform ",
+                "Alarm Group Id": "1",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "electrodeWidth",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.mainRollTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 14.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "notes": "Packaging station safety door open ",
+                "setpointB": 16.0,
+                "Index": "9",
+                "label": "DoorPackagingStationOpen ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC4.XZS1",
+                "name": "DoorPackagingStationOpen ",
+                "Alarm Group Id": "7",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "mainRollTemperature",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.outfeedTension"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 100.0,
+                "Alarm Code": "2",
+                "Severity": "3",
+                "mode": "AboveValue",
+                "FBS Source": "LC4.XZS3",
+                "notes": "Temperature above high limit. Check heating system ",
+                "name": "TempHighWarning ",
+                "Index": "11",
+                "label": "TempHighWarning ",
+                "priority": "High",
+                "Alarm Group Id": "121",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "outfeedTension",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.mainRollGap"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 120.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "notes": "Inspection cell safety door open ",
+                "setpointB": 124.0,
+                "Index": "8",
+                "label": "DoorInspectionCellOpen ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC3.XZS3",
+                "name": "DoorInspectionCellOpen ",
+                "Alarm Group Id": "7",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "mainRollGap",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.productID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "productID",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.infeedTension"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "Alarm Code": "2",
+                "Severity": "4",
+                "FBS Source": "LC2.XZS3",
+                "notes": "Buffer area access door open ",
+                "name": "DoorBufferAreaOpen ",
+                "Index": "5",
+                "label": "DoorBufferAreaOpen ",
+                "displayPath": "",
+                "Alarm Group Id": "5",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "infeedTension",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.machineFbs"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 95.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "notes": "Assembly cell safety door open ",
+                "setpointB": 98.0,
+                "Index": "6",
+                "label": "DoorAssemblyCellOpen ",
+                "priority": "Critical",
+                "ackNotesReqd": true,
+                "mode": "BetweenValues",
+                "FBS Source": "LC3.XZS1",
+                "name": "DoorAssemblyCellOpen ",
+                "Alarm Group Id": "6",
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "machineFbs",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.recipeID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "recipeID",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.machineSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 20.0,
+                "Alarm Code": "2",
+                "Severity": "4",
+                "FBS Source": "LC3.XZS2",
+                "notes": "Robot cell perimeter door open. Lock required for operation ",
+                "name": "DoorRobotCellOpen ",
+                "Index": "7",
+                "label": "DoorRobotCellOpen ",
+                "priority": "Critical",
+                "Alarm Group Id": "6",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "machineSpeed",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.averagethickness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 70.0,
+                "Alarm Code": "1",
+                "Severity": "4",
+                "mode": "AboveValue",
+                "FBS Source": "LC1.XZS1",
+                "notes": "Emergency Stop pressed in Infeed Zone. Inspect area and reset ",
+                "name": "EStopInfeedZone ",
+                "Index": "0",
+                "label": "EStopInfeedZone ",
+                "priority": "Medium",
+                "Alarm Group Id": "1",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "averagethickness",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.productionOrder"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "alarms": [
+              {
+                "setpointA": 200.0,
+                "Alarm Code": "1",
+                "Severity": "2",
+                "FBS Source": "LC5.XZS3",
+                "notes": "Upstream not supplying material ",
+                "name": "UpstreamStarved ",
+                "Index": "14",
+                "label": "UpstreamStarved ",
+                "priority": "Medium",
+                "Alarm Group Id": "2000",
+                "ackNotesReqd": true,
+                "Operator Message": {
+                  "bindType": "Expression",
+                  "value": "{Severity}+\"[\"+{Index}+\".\"+{Alarm Group Id}+\"]_\"+{notes}+\"_\"+{FBS Source}"
+                }
+              }
+            ],
+            "name": "productionOrder",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "typeColor": -64512,
+    "name": "valve",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.valve.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.valve"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.valve.status.mode",
+        "dataType": "Int4",
+        "name": "mode",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.valve.status.valveState",
+        "dataType": "Int4",
+        "name": "openValue",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  },
+  {
+    "name": "CalenderLine",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "AGV_EmptyIn",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "AGV_EmptyOut",
+        "value": 0,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "documentation": "0 Empty,1 Occupied,2 Transfer",
+        "name": "AGV_MatIn",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "AGV_MatOut",
+        "value": 2,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int4",
+        "name": "AlarmCount",
+        "value": 2,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Chiller_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Chiller_Supply",
+        "value": 18.4,
+        "engUnit": "°C",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "ElecCab_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "ElecCab_Temp",
+        "value": 31.0,
+        "engUnit": "°C",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "documentation": "shift",
+        "name": "GoodLength",
+        "value": 6842.0,
+        "engUnit": "m",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Hyd1_Press",
+        "value": 182.0,
+        "engUnit": "bar",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Hyd1_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Hyd2_Press",
+        "value": 181.0,
+        "engUnit": "bar",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Hyd2_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Hyd3_Press",
+        "value": 0.0,
+        "engUnit": "bar",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Hyd3_State",
+        "value": 2,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Hyd4_Press",
+        "value": 120.0,
+        "engUnit": "bar",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Hyd4_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "IHA_Power",
+        "value": 62.0,
+        "engUnit": "kW",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "IHA_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Inf_DancerPos",
+        "value": 48.0,
+        "engUnit": "%",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Inf_EPC_Offset",
+        "value": 0.4,
+        "engUnit": "mm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Inf_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Inf_Tension",
+        "value": 221.0,
+        "engUnit": "N",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "LineSpeed",
+        "value": 45.0,
+        "engUnit": "m/min",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "LineSpeedSP",
+        "value": 45.0,
+        "engUnit": "m/min",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Line_Mode",
+        "value": "AUTO",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "documentation": "0 Stopped,1 Running,2 Ready,3 Fault,4 Manual",
+        "name": "Line_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "LotID",
+        "value": "C2610-0417",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "documentation": "shift",
+        "name": "NGLength",
+        "value": 38.0,
+        "engUnit": "m",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "OEE",
+        "value": 86.2,
+        "engUnit": "%",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Of1_DancerPos",
+        "value": 52.0,
+        "engUnit": "%",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Of1_PullSpeed",
+        "value": 45.1,
+        "engUnit": "m/min",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Of1_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Of1_Tension",
+        "value": 262.0,
+        "engUnit": "N",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Of2_DancerPos",
+        "value": 50.0,
+        "engUnit": "%",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Of2_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Of2_Tension",
+        "value": 241.0,
+        "engUnit": "N",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "OilCooler_State",
+        "value": 3,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "OilCooler_Temp",
+        "value": 48.7,
+        "engUnit": "°C",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_Density",
+        "value": 3.42,
+        "engUnit": "g/cc",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_ForceDS",
+        "value": 1652.0,
+        "engUnit": "kN",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_ForceMax",
+        "value": 2500.0,
+        "engUnit": "kN",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_ForceOS",
+        "value": 1640.0,
+        "engUnit": "kN",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_GapDS",
+        "value": 0.152,
+        "engUnit": "mm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_GapOS",
+        "value": 0.15,
+        "engUnit": "mm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_HydPress",
+        "value": 182.0,
+        "engUnit": "bar",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Prs_IHA_On",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_SpeedBot",
+        "value": 45.0,
+        "engUnit": "m/min",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_SpeedTop",
+        "value": 45.0,
+        "engUnit": "m/min",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Prs_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_TempBot",
+        "value": 91.6,
+        "engUnit": "°C",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_TempSP",
+        "value": 92.0,
+        "engUnit": "°C",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Prs_TempTop",
+        "value": 92.1,
+        "engUnit": "°C",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Recipe",
+        "value": "CAT-NCM811-102",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Rew_ActiveShaft",
+        "value": "A",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Rew_DiaMax",
+        "value": 800.0,
+        "engUnit": "mm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Rew_Diameter",
+        "value": 455.0,
+        "engUnit": "mm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Rew_Length",
+        "value": 2630.0,
+        "engUnit": "m",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Rew_LengthSP",
+        "value": 3000.0,
+        "engUnit": "m",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Rew_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Rew_Tension",
+        "value": 200.0,
+        "engUnit": "N",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Rew_TimeToDoff",
+        "value": 8.2,
+        "engUnit": "min",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Tg_Cpk",
+        "value": 1.42,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Tg_Mean",
+        "value": 103.0,
+        "engUnit": "µm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Tg_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Tg_Target",
+        "value": 102.0,
+        "engUnit": "µm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Tg_ThkC",
+        "value": 102.1,
+        "engUnit": "µm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Tg_ThkDS",
+        "value": 102.6,
+        "engUnit": "µm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Tg_ThkOS",
+        "value": 104.3,
+        "engUnit": "µm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "documentation": "+/- tolerance",
+        "name": "Tg_Tol",
+        "value": 2.0,
+        "engUnit": "µm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Unw_ActiveShaft",
+        "value": "A",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Unw_DiaMax",
+        "value": 800.0,
+        "engUnit": "mm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Unw_Diameter",
+        "value": 612.0,
+        "engUnit": "mm",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Unw_RemainLen",
+        "value": 1840.0,
+        "engUnit": "m",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Unw_SpliceReady",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Unw_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Unw_Tension",
+        "value": 180.0,
+        "engUnit": "N",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Unw_TensionSP",
+        "value": 180.0,
+        "engUnit": "N",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "VisRack_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int4",
+        "documentation": "per roll",
+        "name": "Vis_Defects",
+        "value": 3,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Int2",
+        "name": "Vis_State",
+        "value": 1,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "Yield",
+        "value": 99.4,
+        "engUnit": "%",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "AGAlarm",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.Acknowledged",
+        "dataType": "Boolean",
+        "name": "Acknowledged",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.Active",
+        "dataType": "Boolean",
+        "name": "Active",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.AlarmCode",
+        "dataType": "Int4",
+        "name": "AlarmCode",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.AlarmGroupID",
+        "dataType": "Int4",
+        "name": "AlarmGroupID",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.FBSSource",
+        "dataType": "String",
+        "name": "FBSSource",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.Label",
+        "dataType": "String",
+        "name": "Label",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.LabelText",
+        "dataType": "String",
+        "name": "LabelText",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.OperatorMessage",
+        "dataType": "String",
+        "name": "OperatorMessage",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.Priority",
+        "dataType": "Int4",
+        "name": "Priority",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.ResetType",
+        "dataType": "String",
+        "name": "ResetType",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.Severity",
+        "dataType": "Int4",
+        "name": "Severity",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.SeverityLabel",
+        "dataType": "String",
+        "name": "SeverityLabel",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.ShelveExpiry",
+        "dataType": "DateTime",
+        "name": "ShelveExpiry",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.Shelved",
+        "dataType": "Boolean",
+        "name": "Shelved",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.ShelvedByOperator",
+        "dataType": "String",
+        "name": "ShelvedByOperator",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.ShelvingAllowed",
+        "dataType": "Boolean",
+        "name": "ShelvingAllowed",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.StateChange",
+        "dataType": "String",
+        "name": "StateChange",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.Suppressed",
+        "dataType": "Boolean",
+        "name": "Suppressed",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.SuppressionAllowed",
+        "dataType": "Boolean",
+        "name": "SuppressionAllowed",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.TimestampActive",
+        "dataType": "DateTime",
+        "name": "TimestampActive",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.TimestampReset",
+        "dataType": "DateTime",
+        "name": "TimestampReset",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.{InstanceName}.Troubleshooting",
+        "dataType": "String",
+        "name": "Troubleshooting",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  },
+  {
+    "name": "Batch_Info",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "Batch_Id",
+        "typeId": "BtachId",
+        "tagType": "UdtInstance"
+      },
+      {
+        "valueSource": "memory",
+        "name": "LotId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "name": "OperatorId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Timestamp",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "WorkOrder",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "processValve",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.valve.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.valve"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.{InstanceName}.status.mode"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "mode",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing.{InstanceName}.status.valveState"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "openValue",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  },
+  {
+    "name": "AG_alarm",
+    "parameters": {
+      "Severity": {
+        "dataType": "Integer",
+        "value": 0
+      },
+      "Troubleshoot": {
+        "dataType": "String",
+        "value": null
+      },
+      "Label": {
+        "dataType": "String",
+        "value": null
+      },
+      "alaramId": {
+        "dataType": "Integer",
+        "value": null
+      },
+      "alarmCode": {
+        "dataType": "Integer",
+        "value": null
+      },
+      "FBS_Source": {
+        "dataType": "Integer",
+        "value": null
+      },
+      "Operator_Message": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "Active",
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "if(\r\n    {[.]Active},\r\n\r\n    concat(\r\n        if(floor(dateDiff({[.]TimestampActive}, now(), \"second\")/86400) \u003e 0,\r\n            toStr(floor(dateDiff({[.]TimestampActive}, now(), \"second\")/86400)) + \"d \",\r\n            \"\"\r\n        ),\r\n        toStr(floor((dateDiff({[.]TimestampActive}, now(), \"second\") % 86400)/3600)) + \"h \",\r\n        toStr(floor((dateDiff({[.]TimestampActive}, now(), \"second\") % 3600)/60)) + \"m \",\r\n        toStr(dateDiff({[.]TimestampActive}, now(), \"second\") % 60) + \"s\"\r\n    ),\r\n\r\n    concat(\r\n        if(floor(dateDiff({[.]TimestampActive}, {[.]TimestampReset}, \"second\")/86400) \u003e 0,\r\n            toStr(floor(dateDiff({[.]TimestampActive}, {[.]TimestampReset}, \"second\")/86400)) + \"d \",\r\n            \"\"\r\n        ),\r\n        toStr(floor((dateDiff({[.]TimestampActive}, {[.]TimestampReset}, \"second\") % 86400)/3600)) + \"h \",\r\n        toStr(floor((dateDiff({[.]TimestampActive}, {[.]TimestampReset}, \"second\") % 3600)/60)) + \"m \",\r\n        toStr(dateDiff({[.]TimestampActive}, {[.]TimestampReset}, \"second\") % 60) + \"s\"\r\n    )\r\n)",
+        "dataType": "String",
+        "name": "ActiveDuration",
+        "executionMode": "FixedRate",
+        "formatString": "yyyy-MM-dd h:mm:ss aa",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "DateTime",
+        "name": "TimestampActive",
+        "formatString": "yyyy-MM-dd h:mm:ss aa",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "DateTime",
+        "name": "TimestampReset",
+        "formatString": "yyyy-MM-dd h:mm:ss aa",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "setpointA": 1.0,
+            "name": "Trig_Alarm",
+            "Alarm Code": {
+              "bindType": "UDTParameter",
+              "value": "{alarmCode}"
+            },
+            "Severity": {
+              "bindType": "UDTParameter",
+              "value": "{Severity}"
+            },
+            "Troubleshoot": {
+              "bindType": "UDTParameter",
+              "value": "{Troubleshoot}"
+            },
+            "Operator Message": {
+              "bindType": "UDTParameter",
+              "value": "{Operator_Message}"
+            },
+            "Active Duration": {
+              "bindType": "Tag",
+              "value": "[.]ActiveDuration"
+            },
+            "FBS": {
+              "bindType": "UDTParameter",
+              "value": "{FBS_Source}"
+            },
+            "label": {
+              "bindType": "UDTParameter",
+              "value": "{Label}"
+            },
+            "Alarm Group Id": {
+              "bindType": "UDTParameter",
+              "value": "{alaramId}"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)\r\n"
+            }
+          }
+        ],
+        "name": "trig",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "Tx_Dis",
+    "parameters": {
+      "path": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line1.mixing"
+      },
+      "name": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "HH_SP",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "H_SP",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "LL_SP",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "name": "L_SP",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{path}.{name}.PV"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "PV",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  },
+  {
+    "typeColor": -13547562,
+    "name": "electrical",
+    "typeId": "",
+    "parameters": {
+      "electricalPath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.line.mixing.agitator.electrical"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{electricalPath}.current"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "current",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{electricalPath}.energy"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "energy",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{electricalPath}.frequency"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "frequency",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{electricalPath}.power"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "power",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{electricalPath}.voltage"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "voltage",
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  }
+]

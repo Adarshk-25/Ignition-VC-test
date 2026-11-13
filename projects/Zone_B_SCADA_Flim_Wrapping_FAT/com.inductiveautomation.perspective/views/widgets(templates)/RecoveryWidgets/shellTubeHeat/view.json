@@ -1,0 +1,75 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 100,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "height": 0.99,
+          "width": 0.99,
+          "x": 0.01,
+          "y": 0.01
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {
+                "paint": "rgb(240, 240, 240)"
+              },
+              "name": "perspective-arc",
+              "specialPath": {
+                "end": 0,
+                "height": 90,
+                "slice": true,
+                "start": 0,
+                "width": 90,
+                "x": 6,
+                "y": 8.800000000000182
+              },
+              "stroke": {
+                "paint": "#000000",
+                "width": "1px"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "d": "M30.51320854987 6.420312624331563L30.000001499227338 62.159374995715915 51.04150770572626 41.6703141852282 70.7999999563649 62.600001676380636 70.7999999563649 6.199999809265137",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            }
+          ],
+          "style": {
+            "backgroundColor": "#00000000"
+          },
+          "viewBox": "0 0 100 100"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": "#00000000"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 496,
+      "width": 594
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "606px"
+        },
+        "props": {
+          "instances": [
+            {
+              "greenEnd": 35000,
+              "greenStart": 32000,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              },
+              "max": 3700,
+              "min": 3000,
+              "title": "AVG PRIMARY VOLTAGE (V)",
+              "value": "value"
+            }
+          ],
+          "path": "Templates/gaugeCard"
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

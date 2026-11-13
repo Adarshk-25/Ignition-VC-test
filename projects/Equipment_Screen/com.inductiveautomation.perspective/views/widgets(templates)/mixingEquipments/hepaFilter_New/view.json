@@ -1,0 +1,155 @@
+{
+  "custom": {
+    "Cmd": "value",
+    "Run_fb": "value",
+    "Stp_fb": "value"
+  },
+  "params": {
+    "name": "[default]agratas/sanand/zoneE/line1/mixing/equipments/Hepa filter"
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 90,
+      "width": 60
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "params": {
+                  "tabValue": "17"
+                },
+                "view": "Page/1F_Templates/1F_mainScreen"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Sanitary air filter"
+        },
+        "position": {
+          "height": 0.9778,
+          "width": 0.9333,
+          "x": 0.0168,
+          "y": 0.0146
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [],
+              "id": "Group_Holder",
+              "name": "Group_Holder",
+              "type": "group"
+            },
+            {
+              "elements": [],
+              "id": "Group_Mesh",
+              "name": "Group_Mesh",
+              "type": "group"
+            },
+            {
+              "fill": {
+                "paint": "none"
+              },
+              "height": "120",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000",
+                "width": "5px"
+              },
+              "type": "rect",
+              "width": "75",
+              "x": 129.79999999999927,
+              "y": 14
+            },
+            {
+              "d": "M129.39999389648438 78C129.39999389648438 78 167.39125732729855 109.19999885559082 167.39125732729855 109.19999885559082L167.59999729529184 109.19999885559082",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path",
+              "stroke": {
+                "paint": "#000000",
+                "width": "5px"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M91.64999694824292 77.600003051758C91.64999694824292 77.600003051758 129.24344760394524 109.40000133514422 129.24344760394524 109.40000133514422L129.4500018213621 109.40000133514422",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_1",
+              "stroke": {
+                "paint": "#000000",
+                "width": "5px"
+              },
+              "transform": "matrix(-1 0 0 1 296.3999938964844 0)",
+              "type": "path"
+            },
+            {
+              "d": "M129.89999694824292 103.39999999999964C129.89999694824292 103.39999999999964 167.09563666328177 133.99999942779505 167.09563666328177 133.99999942779505L167.3000051402014 133.99999942779505",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "5px"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M91.15000000000146 103.00000305175763C91.15000000000146 103.00000305175763 128.74345065570378 133.80000228881818 128.74345065570378 133.80000228881818L128.95000487312063 133.80000228881818",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_2",
+              "stroke": {
+                "paint": "#000000",
+                "width": "5"
+              },
+              "transform": "matrix(-1 0 0 1 296.3999938964844 0)",
+              "type": "path"
+            }
+          ],
+          "viewBox": "128.39999389648438 13 77.85000610351562 122"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "60:90",
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

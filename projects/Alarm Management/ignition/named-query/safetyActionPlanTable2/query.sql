@@ -1,0 +1,1 @@
+select TOP 1 Status,Target_Date from SafetyActionPlan order by SNo desc;

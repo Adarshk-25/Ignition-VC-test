@@ -1,0 +1,75 @@
+{
+  "custom": {},
+  "params": {
+    "forwardDisplay": "value",
+    "label": "value",
+    "path": "value"
+  },
+  "propConfig": {
+    "params.forwardDisplay": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 109
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tchildPath\u003d\"/\"+str(self.view.params.path)\n\tsystem.perspective.navigate(page\u003dchildPath)\n\t\n\ttree\u003dsystem.util.jsonDecode(self.parent.custom.navTree)\t\n\tancestors\u003dshared.nav.getAncestors(tree, self.view.params.path)\n\tfor item in ancestors:\n\t\titem[\"path\"] \u003d \"/\" + item[\"path\"]\n\t\n\tsystem.perspective.sendMessage(\n\tproject\u003dsystem.util.getProjectName(),\n\tmessageType\u003d\"updatePath\", \n\tpayload\u003d{\"breadCrumbPathsFinal\":ancestors},\n\tscope\u003d\"session\")\n\t\n\tsystem.perspective.closePopup(\"crumbChildrenPopup\")\n"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "Page/Label2",
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

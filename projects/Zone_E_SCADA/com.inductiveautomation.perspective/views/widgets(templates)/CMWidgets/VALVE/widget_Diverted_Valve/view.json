@@ -1,0 +1,595 @@
+{
+  "custom": {
+    "alarm": 0
+  },
+  "params": {
+    "tagPath": "[default]Mixing/Diverter Valve"
+  },
+  "propConfig": {
+    "custom.alarm": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "parameter": "{view.params.tagPath}"
+          },
+          "tagPath": "{parameter}/Alarm Metrics.activeAckCount"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 149,
+      "width": 101
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "img_vlv3pos_1"
+        },
+        "position": {
+          "height": 0.2621,
+          "width": 0.6745,
+          "x": 0.004,
+          "y": 0.2119
+        },
+        "propConfig": {
+          "custom.alarm": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Alarm Metrics.activeAckCount"
+              },
+              "type": "tag"
+            }
+          },
+          "props.elements[0].elements[0].fill.opacity": {
+            "binding": {
+              "config": {
+                "expression": "if({this.custom.alarm}\u003e0,if(dateExtract(now(),\"second\")%2\u003d0,1,0.2),\r\n1) "
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#D5D5D5"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#85A407"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                },
+                {
+                  "code": "\tif self.custom.alarm\u003e0:\n\t\treturn \"rgb(202,51,51)\"\n\telse:\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "d": "m48.312 97.587v-45.808l39.671 22.904z",
+                  "fill": {},
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#010006",
+                    "width": 0.75
+                  },
+                  "style": {
+                    "paintOrder": "markers fill stroke"
+                  },
+                  "type": "path"
+                }
+              ],
+              "name": "group",
+              "transform": "translate(-47.937 -51.129)",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 40.796 47.108"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "img_vlv3pos_2"
+        },
+        "position": {
+          "height": 0.2621,
+          "rotate": {
+            "angle": "180deg"
+          },
+          "width": 0.6746,
+          "x": 0.3148,
+          "y": 0.2119
+        },
+        "propConfig": {
+          "custom.alarm": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Alarm Metrics.activeAckCount"
+              },
+              "type": "tag"
+            }
+          },
+          "props.elements[0].elements[0].fill.opacity": {
+            "binding": {
+              "config": {
+                "expression": "if({this.custom.alarm}\u003e0,if(dateExtract(now(),\"second\")%2\u003d0,1,0.2),\r\n1) "
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#D5D5D5"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#85A407"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                },
+                {
+                  "code": "\tif self.custom.alarm\u003e0:\n\t\treturn \"rgb(202,51,51)\"\n\telse:\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "d": "m48.312 97.587v-45.808l39.671 22.904z",
+                  "fill": {},
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#010006",
+                    "width": 0.75
+                  },
+                  "style": {
+                    "paintOrder": "markers fill stroke"
+                  },
+                  "type": "path"
+                }
+              ],
+              "name": "group",
+              "transform": "translate(-47.937 -51.129)",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 40.796 47.108"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "img_vlv3pos_3"
+        },
+        "position": {
+          "height": 0.2621,
+          "rotate": {
+            "angle": "-90deg"
+          },
+          "width": 0.6746,
+          "x": 0.1613,
+          "y": 0.323
+        },
+        "propConfig": {
+          "custom.alarm": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/Alarm Metrics.activeAckCount"
+              },
+              "type": "tag"
+            }
+          },
+          "props.elements[0].elements[0].fill.opacity": {
+            "binding": {
+              "config": {
+                "expression": "if({this.custom.alarm}\u003e0,if(dateExtract(now(),\"second\")%2\u003d0,1,0.2),\r\n1) "
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}/status/status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#808080",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#D5D5D5"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#85A407"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#85A407"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                },
+                {
+                  "code": "\tif self.custom.alarm\u003e0:\n\t\treturn \"rgb(202,51,51)\"\n\telse:\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "d": "m48.312 97.587v-45.808l39.671 22.904z",
+                  "fill": {},
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#010006",
+                    "width": 0.75
+                  },
+                  "style": {
+                    "paintOrder": "markers fill stroke"
+                  },
+                  "type": "path"
+                }
+              ],
+              "name": "group",
+              "transform": "translate(-47.937 -51.129)",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 40.796 47.108"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1616,
+          "width": 0.8144,
+          "x": 0.0978,
+          "y": 0.0305
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.tagPath}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Open Status :"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/status/valveState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "NA",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "Open"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Close"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "0.2rem",
+                "borderBottomRightRadius": "0.2rem",
+                "borderStyle": "ridge",
+                "borderTopLeftRadius": "0.2rem",
+                "borderTopRightRadius": "0.2rem",
+                "borderWidth": 1
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "height": 0.1544,
+          "width": 0.9712,
+          "x": 0.0146,
+          "y": 0.6793
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderColor": "#808080",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 0.1,
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 2,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 2
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Position :"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagPath}"
+                    },
+                    "tagPath": "{parameter}/plcTags/position"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn round(value,2)",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "0.2rem",
+                "borderBottomRightRadius": "0.2rem",
+                "borderStyle": "ridge",
+                "borderTopLeftRadius": "0.2rem",
+                "borderTopRightRadius": "0.2rem",
+                "borderWidth": 1
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "height": 0.1533,
+          "width": 0.9712,
+          "x": 0.0102,
+          "y": 0.8393
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": "0.2rem",
+            "borderBottomRightRadius": "0.2rem",
+            "borderColor": "#808080",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": "0.2rem",
+            "borderTopRightRadius": "0.2rem",
+            "borderWidth": 0.1,
+            "fontFamily": "sans-serif",
+            "fontSize": "0.6em",
+            "paddingBottom": 2,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "paddingTop": 2
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "params": {
+              "tagPath": "{view.params.tagPath}"
+            },
+            "view": "EQUIPMENT SCREEN/VALVE/Valve"
+          },
+          "scope": "C",
+          "type": "nav"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "cursor": "pointer"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

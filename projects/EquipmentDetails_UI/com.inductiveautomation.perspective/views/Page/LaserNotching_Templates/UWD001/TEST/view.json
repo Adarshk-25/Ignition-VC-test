@@ -1,0 +1,110 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "position": {
+                      "height": 25,
+                      "width": 25,
+                      "x": 5.37,
+                      "y": -3.49
+                    },
+                    "props": {
+                      "path": "material/minimize"
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "CoordinateContainer"
+                },
+                "position": {
+                  "height": 0.0413,
+                  "width": 0.0238,
+                  "x": 0.8965,
+                  "y": 0.0037
+                },
+                "type": "ia.container.coord"
+              },
+              {
+                "meta": {
+                  "name": "TabContainer"
+                },
+                "position": {
+                  "height": 0.9975,
+                  "width": 0.9988
+                },
+                "propConfig": {
+                  "meta.visible": {
+                    "binding": {
+                      "config": {
+                        "expression": "!{..../FlexContainer.custom.isMin}"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "currentTabIndex": 1,
+                  "tabSize": {
+                    "height": 40,
+                    "width": 120
+                  },
+                  "tabs": [
+                    "Process Data",
+                    "Trends",
+                    "Alarms",
+                    "Metadata"
+                  ]
+                },
+                "type": "ia.container.tab"
+              }
+            ],
+            "meta": {
+              "name": "CoordinateContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "mode": "percent"
+            },
+            "type": "ia.container.coord"
+          }
+        ],
+        "custom": {
+          "isMin": true
+        },
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "800px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

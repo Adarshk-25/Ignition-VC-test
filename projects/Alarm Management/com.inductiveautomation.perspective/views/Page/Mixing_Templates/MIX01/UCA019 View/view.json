@@ -1,0 +1,204 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA019/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "UCA019:Ceramic PD Mixer #1 Main Cabinet(Panel) - PNL-904-019 ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/MIxing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_0"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA019/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/MIxing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_1"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA019/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "value",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "value"
+              }
+            ],
+            "tableHeader": "value"
+          },
+          "path": "Page/MIxing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 2,
+      "tabSize": {
+        "width": 200
+      },
+      "tabs": [
+        "UCA019",
+        "QAB01",
+        "QAB02",
+        "QAB03",
+        "QAB04",
+        "QAB05",
+        "FCB01",
+        "FCB02",
+        "FCB03",
+        "FCB04",
+        "FCB05",
+        "FCB010",
+        "FCB021",
+        "FCB031",
+        "FCB032",
+        "FCB033",
+        "FCB034",
+        "FCB035",
+        "FCB041",
+        "FCB042",
+        "FCB043",
+        "TSH01",
+        "TSH02",
+        "QAB11",
+        "QAB12",
+        "QAB013",
+        "RBA01",
+        "TAC01",
+        "TAC02",
+        "TAC03",
+        "BJA01"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

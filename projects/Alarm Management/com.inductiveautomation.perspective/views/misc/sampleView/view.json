@@ -1,0 +1,684 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "valve_2way"
+            },
+            "position": {
+              "height": 60,
+              "width": 90,
+              "x": 258,
+              "y": 118
+            },
+            "props": {
+              "params": {
+                "isvertical": false,
+                "nameLabelPosition": "value",
+                "tagpath": "[default]agratas/sanand/zoneE/line1/mixing/VLV 910-507",
+                "valuePosition": "value",
+                "valveOrientation": "value",
+                "valveType": "p\u0026id"
+              },
+              "path": "widgets(templates)/CMWidgets/VALVE/valve_2way"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "valve_2way_0"
+            },
+            "position": {
+              "height": 60,
+              "width": 90,
+              "x": 426,
+              "y": 117.9720954284668
+            },
+            "props": {
+              "params": {
+                "isvertical": false,
+                "nameLabelPosition": "value",
+                "tagpath": "[default]agratas/sanand/zoneE/line1/mixing/VLV 904-531",
+                "valuePosition": "value",
+                "valveOrientation": "value",
+                "valveType": "p\u0026id"
+              },
+              "path": "widgets(templates)/CMWidgets/VALVE/valve_2way"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "instrument_name"
+            },
+            "position": {
+              "height": 35,
+              "width": 75,
+              "x": 119,
+              "y": 181
+            },
+            "props": {
+              "params": {
+                "DisplayName": "ZS",
+                "instrument_ID": "450-120"
+              },
+              "path": "widgets(templates)/CMWidgets/Instruments/instrument_name"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "instrument_name_0"
+            },
+            "position": {
+              "height": 35,
+              "width": 75,
+              "x": 100,
+              "y": 307
+            },
+            "props": {
+              "params": {
+                "DisplayName": "PG",
+                "instrument_ID": "450-125"
+              },
+              "path": "widgets(templates)/CMWidgets/Instruments/instrument_name"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Inline air filter"
+            },
+            "position": {
+              "height": 46,
+              "width": 28,
+              "x": 110,
+              "y": 95
+            },
+            "props": {
+              "elements": [
+                {
+                  "name": "symbol",
+                  "type": "symbol"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "height": "112.5",
+                              "id": "SVGID_1_",
+                              "name": "SVGID_1_",
+                              "type": "rect",
+                              "width": "54.842"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_1_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_2_",
+                          "name": "SVGID_2_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_2_)",
+                          "d": "M34.347,94.933H20.383C9.504,94.933,7.32,81.869,7.32,81.869V54.843    l-4.842-4.955h49.887l-4.954,4.955v27.026C47.41,87.834,40.671,94.933,34.347,94.933",
+                          "fill": {
+                            "paint": "#CCCCCC"
+                          },
+                          "name": "path",
+                          "type": "path"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_2_)",
+                          "d": "M32.995,92.455H21.734c-9.564-1.126-10.473-11.486-10.473-11.486v-24.1    l-3.942-4.504H47.41l-4.055,4.504v24.1C43.355,80.969,41.554,91.329,32.995,92.455",
+                          "fill": {
+                            "paint": "#E5E5E5"
+                          },
+                          "name": "path",
+                          "type": "path"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "id": "Group_8",
+                  "name": "Group_8",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "height": "112.5",
+                              "id": "SVGID_3_",
+                              "name": "SVGID_3_",
+                              "type": "rect",
+                              "width": "54.842"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_3_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_4_",
+                          "name": "SVGID_4_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_4_)",
+                          "d": "M29.842,112.5h-5.18c-3.928,0-4.833-4.444-4.955-5.293V94.933h15.09v12.274    C34.797,108.875,33.546,112.5,29.842,112.5",
+                          "fill": {
+                            "paint": "#231F20"
+                          },
+                          "name": "path",
+                          "type": "path"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "id": "Group_7",
+                  "name": "Group_7",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#999999"
+                      },
+                      "name": "polygon",
+                      "points": "19.707,91.329 19.707,85.022 14.752,85.022 14.752,82.545 39.752,82.545 39.752,85.022    34.797,85.022 34.797,91.329  ",
+                      "type": "polygon"
+                    }
+                  ],
+                  "id": "Group_6",
+                  "name": "Group_6",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#B2B232"
+                      },
+                      "name": "polygon",
+                      "points": "14.752,82.545 17.23,80.067 17.23,57.545 18.581,52.365 36.148,52.365 37.274,57.545    37.274,80.067 39.752,82.545  ",
+                      "type": "polygon"
+                    },
+                    {
+                      "fill": {
+                        "paint": "#CCCC4C"
+                      },
+                      "name": "polygon",
+                      "points": "18.581,82.545 20.383,80.067 20.383,58.445 21.283,53.716 33.445,53.716 34.347,58.445    34.347,80.067 36.148,82.545  ",
+                      "type": "polygon"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "height": "112.5",
+                              "id": "SVGID_5_",
+                              "name": "SVGID_5_",
+                              "type": "rect",
+                              "width": "54.842"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_5_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_6_",
+                          "name": "SVGID_6_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_6_)",
+                          "fill": {
+                            "paint": "#FFFFFF"
+                          },
+                          "name": "polygon",
+                          "points": "26.014,93.807 21.059,87.5 19.707,74.887 19.707,66.328 21.059,77.59     22.41,87.5   ",
+                          "type": "polygon"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "id": "Group_5",
+                  "name": "Group_5",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "id": "SVGID_7_",
+                              "name": "SVGID_7_",
+                              "points": "4.842,0 1.126,2.478 0,4.842 0,32.32 54.842,32.32 54.842,4.842 53.492,2.478 49.887,0    ",
+                              "type": "polygon"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_7_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_8_",
+                          "name": "SVGID_8_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "name": "stop",
+                              "offset": "0",
+                              "stopColor": "#231F20",
+                              "style": {
+                                "stopColor": "#231F20"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.5",
+                              "stopColor": "#ECECED",
+                              "style": {
+                                "stopColor": "#ECECED"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.56",
+                              "stopColor": "#D9D9DA",
+                              "style": {
+                                "stopColor": "#D9D9DA"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.69",
+                              "stopColor": "#A9A8A9",
+                              "style": {
+                                "stopColor": "#A9A8A9"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.87",
+                              "stopColor": "#5D5A5B",
+                              "style": {
+                                "stopColor": "#5D5A5B"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "1",
+                              "stopColor": "#231F20",
+                              "style": {
+                                "stopColor": "#231F20"
+                              },
+                              "type": "stop"
+                            }
+                          ],
+                          "gradientTransform": "matrix(54.8418 0 0 -54.8418 -0.0447 6185.8657)",
+                          "gradientUnits": "userSpaceOnUse",
+                          "id": "SVGID_9_",
+                          "name": "SVGID_9_",
+                          "type": "linearGradient",
+                          "x1": "0",
+                          "x2": "1",
+                          "y1": "112.5",
+                          "y2": "112.5"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_8_)",
+                          "fill": {
+                            "url": "url(#SVGID_9_)"
+                          },
+                          "height": "32.32",
+                          "name": "rect",
+                          "type": "rect",
+                          "width": "54.842"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "id": "Group_4",
+                  "name": "Group_4",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "d": "M5.405,3.829c1.617,0,2.928,4.437,2.928,9.91c0,5.473-1.311,9.909-2.928,9.909s-2.928-4.436-2.928-9.909   C2.478,8.266,3.788,3.829,5.405,3.829",
+                      "fill": {
+                        "paint": "#CC9933"
+                      },
+                      "name": "path",
+                      "type": "path"
+                    },
+                    {
+                      "d": "M6.644,7.545c0.995,0,1.802,2.723,1.802,6.081s-0.807,6.081-1.802,6.081s-1.802-2.723-1.802-6.081   S5.648,7.545,6.644,7.545",
+                      "fill": {
+                        "paint": "#B27F19"
+                      },
+                      "name": "path",
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_3",
+                  "name": "Group_3",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "height": "17.567",
+                              "id": "SVGID_10_",
+                              "name": "SVGID_10_",
+                              "type": "rect",
+                              "width": "49.887",
+                              "x": "2.478",
+                              "y": "32.32"
+                            }
+                          ],
+                          "name": "defs",
+                          "type": "defs"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "href": "#SVGID_10_",
+                              "name": "use",
+                              "overflow": "visible",
+                              "type": "use"
+                            }
+                          ],
+                          "id": "SVGID_11_",
+                          "name": "SVGID_11_",
+                          "type": "clipPath"
+                        },
+                        {
+                          "elements": [
+                            {
+                              "name": "stop",
+                              "offset": "0",
+                              "stopColor": "#5C5D60",
+                              "style": {
+                                "stopColor": "#5C5D60"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.19",
+                              "stopColor": "#818285",
+                              "style": {
+                                "stopColor": "#818285"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.4",
+                              "stopColor": "#A4A5A8",
+                              "style": {
+                                "stopColor": "#A4A5A8"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.51",
+                              "stopColor": "#B1B3B6",
+                              "style": {
+                                "stopColor": "#B1B3B6"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "0.73",
+                              "stopColor": "#8C8E91",
+                              "style": {
+                                "stopColor": "#8C8E91"
+                              },
+                              "type": "stop"
+                            },
+                            {
+                              "name": "stop",
+                              "offset": "1",
+                              "stopColor": "#5C5D60",
+                              "style": {
+                                "stopColor": "#5C5D60"
+                              },
+                              "type": "stop"
+                            }
+                          ],
+                          "gradientTransform": "matrix(49.8867 0 0 -49.8867 2.306 5653.5391)",
+                          "gradientUnits": "userSpaceOnUse",
+                          "id": "SVGID_12_",
+                          "name": "SVGID_12_",
+                          "type": "linearGradient",
+                          "x1": "0.0029",
+                          "x2": "1.0029",
+                          "y1": "112.5029",
+                          "y2": "112.5029"
+                        },
+                        {
+                          "clipPath": "url(#SVGID_11_)",
+                          "fill": {
+                            "url": "url(#SVGID_12_)"
+                          },
+                          "height": "17.567",
+                          "name": "rect",
+                          "type": "rect",
+                          "width": "49.887",
+                          "x": "2.478",
+                          "y": "32.32"
+                        }
+                      ],
+                      "name": "group",
+                      "type": "group"
+                    }
+                  ],
+                  "id": "Group_2",
+                  "name": "Group_2",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "polyline",
+                      "points": "2.478,49.887 52.364,47.41 52.364,44.932 2.478,47.41    2.478,44.932 52.364,42.455 52.364,39.977 2.478,42.455 2.478,39.977 52.364,37.5 52.364,35.022 2.478,37.5 2.478,35.022    52.364,32.32  ",
+                      "stroke": {
+                        "paint": "#4D4D4D",
+                        "width": "0.25"
+                      },
+                      "type": "polyline"
+                    },
+                    {
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "height": "17.567",
+                      "name": "rect",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "rect",
+                      "width": "49.887",
+                      "x": "2.478",
+                      "y": "32.32"
+                    }
+                  ],
+                  "id": "Group_1",
+                  "name": "Group_1",
+                  "type": "group"
+                }
+              ],
+              "viewBox": "0 0 54.842 112.5"
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "800px"
+        },
+        "props": {
+          "pipes": [
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe",
+              "origin": {
+                "connections": [
+                  {
+                    "x": 426,
+                    "y": 148
+                  }
+                ],
+                "x": 348,
+                "y": 148
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_0",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "x": 679,
+                            "y": 468
+                          }
+                        ],
+                        "x": 471,
+                        "y": 468
+                      }
+                    ],
+                    "x": 471,
+                    "y": 282
+                  }
+                ],
+                "x": 200,
+                "y": 282
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 2
+            },
+            {
+              "appearance": "auto",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_2",
+              "origin": {
+                "x": 613,
+                "y": 271
+              },
+              "start": "none",
+              "stroke": "",
+              "visible": true,
+              "width": 10
+            }
+          ]
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

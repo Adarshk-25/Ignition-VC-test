@@ -1,0 +1,188 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 156,
+      "width": 1849
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "style": {
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "marginBottom": "14px"
+          },
+          "text": "Slurry Preparation Process Flow"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "white",
+                "border": "1px dashed #8aa0b8",
+                "borderRadius": "6px",
+                "padding": "8px 14px"
+              },
+              "text": "Raw Material Storage"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "props": {
+              "text": "→"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "white",
+                "border": "1px dashed #8aa0b8",
+                "borderRadius": "6px",
+                "padding": "8px 14px"
+              },
+              "text": "Feeding / Unpacking"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "props": {
+              "text": "→"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "white",
+                "border": "1px dashed #8aa0b8",
+                "borderRadius": "6px",
+                "padding": "8px 14px"
+              },
+              "text": "Weighing Hopper"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_4"
+            },
+            "props": {
+              "text": "→"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_5"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "white",
+                "border": "1px dashed #8aa0b8",
+                "borderRadius": "6px",
+                "padding": "8px 14px"
+              },
+              "text": "Cathode / Anode Mixer"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_6"
+            },
+            "props": {
+              "text": "→"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_7"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "white",
+                "border": "1px dashed #8aa0b8",
+                "borderRadius": "6px",
+                "padding": "8px 14px"
+              },
+              "text": "Slurry Storage Tank"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_8"
+            },
+            "props": {
+              "text": "→"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_9"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "white",
+                "border": "1px dashed #8aa0b8",
+                "borderRadius": "6px",
+                "padding": "8px 14px"
+              },
+              "text": "Buffer / Transfer"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "space-between"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "Flow"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#f3f3f3",
+        "borderRadius": "10px",
+        "padding": "16px",
+        "width": "100%"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

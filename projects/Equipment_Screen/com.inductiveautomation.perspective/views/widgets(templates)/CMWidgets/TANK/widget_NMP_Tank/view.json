@@ -1,0 +1,1200 @@
+{
+  "custom": {},
+  "params": {
+    "instName": "NMP Tank",
+    "level": 82,
+    "max": 100,
+    "min": 0
+  },
+  "propConfig": {
+    "params.instName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.level": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.max": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.min": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 148,
+      "width": 96
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Tank 22"
+        },
+        "position": {
+          "height": 0.7788,
+          "width": 0.5879,
+          "x": 0.1986,
+          "y": 0.0748
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol",
+              "x": "0",
+              "y": "12"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "62.0999",
+                  "x2": "71.55",
+                  "y1": "99.2246",
+                  "y2": "99.2246"
+                },
+                {
+                  "d": "M62.1 99.75h9.45v22.95H62.1V99.75z",
+                  "fill": {
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "type": "linearGradient",
+                  "x1": "8.55",
+                  "x2": "18.2249",
+                  "y1": "99.2246",
+                  "y2": "99.2246"
+                },
+                {
+                  "d": "M8.55 99.75h9.675v22.95H8.55V99.75z",
+                  "fill": {
+                    "url": "url(#SVGID_2_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_3_",
+                  "name": "SVGID_3_",
+                  "type": "linearGradient",
+                  "x1": "5.8499",
+                  "x2": "20.925",
+                  "y1": "111.5996",
+                  "y2": "111.5996"
+                },
+                {
+                  "d": "M5.85 124.5h15.075v-1.8H5.85V124.5z",
+                  "fill": {
+                    "url": "url(#SVGID_3_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_4_",
+                  "name": "SVGID_4_",
+                  "type": "linearGradient",
+                  "x1": "59.175",
+                  "x2": "74.4749",
+                  "y1": "111.5996",
+                  "y2": "111.5996"
+                },
+                {
+                  "d": "M59.175 124.5h15.3v-1.8h-15.3V124.5z",
+                  "fill": {
+                    "url": "url(#SVGID_4_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_FrontLegs",
+              "name": "Group_FrontLegs",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "40.05",
+                  "cy": "1.0127",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.14",
+                      "stopColor": "#DDDDDD",
+                      "style": {
+                        "stopColor": "#DDDDDD"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.4",
+                      "stopColor": "#B8B8B8",
+                      "style": {
+                        "stopColor": "#B8B8B8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.75",
+                      "stopColor": "#7C7C7C",
+                      "style": {
+                        "stopColor": "#7C7C7C"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#4D4D4D",
+                      "style": {
+                        "stopColor": "#4D4D4D"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_5_",
+                  "name": "SVGID_5_",
+                  "r": "5.4568",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M32.4 14.025L40.05 12l7.65 2.025H32.4z",
+                  "fill": {
+                    "url": "url(#SVGID_5_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_6_",
+                  "name": "SVGID_6_",
+                  "type": "linearGradient",
+                  "x1": "32.3997",
+                  "x2": "47.7004",
+                  "y1": "3.375",
+                  "y2": "3.375"
+                },
+                {
+                  "d": "M32.4 16.725H47.7v-2.7H32.4V16.725z",
+                  "fill": {
+                    "url": "url(#SVGID_6_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M32.4 15.375H47.7",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Cap",
+              "name": "Group_Cap",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "12"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_7_",
+                  "name": "SVGID_7_",
+                  "type": "linearGradient",
+                  "x1": "2.0247",
+                  "x2": "78.3",
+                  "y1": "49.6348",
+                  "y2": "49.6348"
+                },
+                {
+                  "d": "M2.025 31.125c0-15.75 15.075-15.3 15.075-15.3H63c0 0 15.3-0.45 15.3 15.3V92.1C78.3 109.084 60.075 107.4 60.075 107.4H17.1c0 0-15.075 0-15.075-15.301V31.125",
+                  "fill": {
+                    "url": "url(#SVGID_7_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M2.025 29.1H78.3",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#7F7F7F",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M5.85 21.45h68.625",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#7F7F7F",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M0 49.125h80.1v1.125H0V49.125z",
+                  "fill": {
+                    "paint": "#999999"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_TankBody",
+              "name": "Group_TankBody",
+              "type": "group"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "4",
+              "name": "rect_0",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "0.4000000059604645",
+              "x": "29.400009155273438",
+              "y": "11.800000190734863"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_1",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "26.40000343322754",
+              "y": "10.800000190734863"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_2",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "26.533205032348633",
+              "y": "8.399999618530273"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_3",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "14.866409301757812",
+              "y": "8.333396911621094"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_4",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "14.733207702636719",
+              "y": "10.733396530151367"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "4",
+              "name": "rect_5",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "0.4000000059604645",
+              "x": "17.73320770263672",
+              "y": "11.733397483825684"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_6",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "49.133201599121094",
+              "y": "7.800000190734863"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_7",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "49",
+              "y": "10.19999885559082"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "4",
+              "name": "rect_8",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "0.4000000059604645",
+              "x": "52.000003814697266",
+              "y": "11.199999809265137"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_9",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "58.73318099975586",
+              "y": "8.600000381469727"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_10",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "58.599979400634766",
+              "y": "11"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "4",
+              "name": "rect_11",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "0.4000000059604645",
+              "x": "61.599979400634766",
+              "y": "12"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_12",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "68.33317565917969",
+              "y": "10.199999809265137"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_13",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "68.1999740600586",
+              "y": "12.600000381469727"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "4",
+              "name": "rect_14",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "0.4000000059604645",
+              "x": "71.1999740600586",
+              "y": "13.600000381469727"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "4",
+              "name": "rect_18",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "transform": "matrix(-0.9999999403953552 -1.4791546654180365e-8 1.4791546654180365e-8 -0.9999999403953552 195.53318786621094 11.400025367736816)",
+              "type": "rect",
+              "width": "0.4000000059604645",
+              "x": "152.46688842773438",
+              "y": "-100.33336639404297"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_19",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "transform": "matrix(-0.9999999403953552 -1.4791546654180365e-8 1.4791546654180365e-8 -0.9999999403953552 195.53318786621094 11.400025367736816)",
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "149.46688842773438",
+              "y": "-101.33336639404297"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_20",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "transform": "matrix(-0.9999999403953552 -1.4791546654180365e-8 1.4791546654180365e-8 -0.9999999403953552 195.53318786621094 11.400025367736816)",
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "149.60009765625",
+              "y": "-103.73336791992188"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "2.5",
+              "name": "rect_21",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "1",
+              "x": "78.80000305175781",
+              "y": "29.75"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "2.5",
+              "name": "rect_22",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "1",
+              "x": "0.8000030517578125",
+              "y": "29.75"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "4",
+              "name": "rect_15",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "0.4000000059604645",
+              "x": "7.933212757110596",
+              "y": "13.53339958190918"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_16",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "4.9332122802734375",
+              "y": "12.533400535583496"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_17",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "5.066413879394531",
+              "y": "10.13339900970459"
+            }
+          ],
+          "viewBox": "0 0 80.1 125"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Progress_1"
+        },
+        "position": {
+          "height": 0.0859,
+          "rotate": {
+            "angle": "270deg"
+          },
+          "width": 0.5309,
+          "x": 0.2678,
+          "y": 0.4043
+        },
+        "propConfig": {
+          "props.bar.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.level"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "max": 80,
+                        "min": 1
+                      },
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": {
+                        "max": 85,
+                        "min": 81
+                      },
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": {
+                        "max": 100,
+                        "min": 86
+                      },
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": {
+                        "min": 101
+                      },
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.max": {
+            "binding": {
+              "config": {
+                "path": "view.params.max"
+              },
+              "type": "property"
+            }
+          },
+          "props.min": {
+            "binding": {
+              "config": {
+                "path": "view.params.min"
+              },
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.params.level"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "bar": {},
+          "track": {
+            "style": {
+              "borderStyle": null
+            }
+          }
+        },
+        "type": "ia.display.progress"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1616,
+          "width": 0.8144,
+          "x": 0.0978,
+          "y": 0.0305
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.instName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 0.2119,
+          "width": 0.5,
+          "x": 0.26,
+          "y": 0.7881
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.level"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

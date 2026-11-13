@@ -1,0 +1,1499 @@
+{
+  "custom": {
+    "param": null,
+    "parameterData_0": [
+      {
+        "Parameter": "State",
+        "Value": null
+      }
+    ],
+    "parameterData_1": [
+      {
+        "Parameter": "State",
+        "Value": null
+      }
+    ],
+    "parameterData_10": [
+      {
+        "Parameter": "Extended",
+        "Value": null
+      },
+      {
+        "Parameter": "Extending",
+        "Value": null
+      },
+      {
+        "Parameter": "Fault",
+        "Value": null
+      },
+      {
+        "Parameter": "Retracted",
+        "Value": null
+      },
+      {
+        "Parameter": "Retracting",
+        "Value": null
+      }
+    ],
+    "parameterData_11": [
+      {
+        "Parameter": "Fault",
+        "Value": null
+      },
+      {
+        "Parameter": "Output",
+        "Value": null
+      },
+      {
+        "Parameter": "PV",
+        "Value": null
+      },
+      {
+        "Parameter": "SP",
+        "Value": null
+      },
+      {
+        "Parameter": "Status",
+        "Value": null
+      }
+    ],
+    "parameterData_12": [
+      {
+        "Parameter": "AxisJigDownSettingPostion",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisJigUpSettingPostion1",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisJigUpSettingPostion2",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisJigUpSettingPostion3",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisJigUpSettingPostion4",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisJigUpSettingPostion5",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisJogVelocity",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisPositioningAcceleration",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisPositioningDeceleration",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisPositioningVelocity",
+        "Value": null
+      },
+      {
+        "Parameter": "ErrorCode",
+        "Value": null
+      },
+      {
+        "Parameter": "Fault",
+        "Value": null
+      },
+      {
+        "Parameter": "FollowingError",
+        "Value": null
+      },
+      {
+        "Parameter": "Idle",
+        "Value": null
+      },
+      {
+        "Parameter": "JogAcceleration",
+        "Value": null
+      },
+      {
+        "Parameter": "JogDeceleration",
+        "Value": null
+      },
+      {
+        "Parameter": "Running",
+        "Value": null
+      },
+      {
+        "Parameter": "Speed",
+        "Value": null
+      },
+      {
+        "Parameter": "Status",
+        "Value": null
+      }
+    ],
+    "parameterData_13": [
+      {
+        "Parameter": "State",
+        "Value": null
+      }
+    ],
+    "parameterData_14": [
+      {
+        "Parameter": "State",
+        "Value": null
+      }
+    ],
+    "parameterData_15": [
+      {
+        "Parameter": "State",
+        "Value": null
+      }
+    ],
+    "parameterData_16": [],
+    "parameterData_17": [],
+    "parameterData_18": [],
+    "parameterData_19": [],
+    "parameterData_2": [
+      {
+        "Parameter": "State",
+        "Value": null
+      }
+    ],
+    "parameterData_20": [],
+    "parameterData_21": [
+      {
+        "Parameter": "value",
+        "Value": "value"
+      }
+    ],
+    "parameterData_22": [
+      {
+        "Parameter": "value",
+        "Value": "value"
+      }
+    ],
+    "parameterData_3": [
+      {
+        "Parameter": "State",
+        "Value": null
+      }
+    ],
+    "parameterData_4": [
+      {
+        "Parameter": "State",
+        "Value": null
+      }
+    ],
+    "parameterData_5": [
+      {
+        "Parameter": "State",
+        "Value": null
+      }
+    ],
+    "parameterData_6": [
+      {
+        "Parameter": "PV",
+        "Value": null
+      },
+      {
+        "Parameter": "Status",
+        "Value": null
+      }
+    ],
+    "parameterData_7": [
+      {
+        "Parameter": "PV",
+        "Value": null
+      },
+      {
+        "Parameter": "Status",
+        "Value": null
+      }
+    ],
+    "parameterData_8": [
+      {
+        "Parameter": "AxisPositionPV",
+        "Value": null
+      },
+      {
+        "Parameter": "AxisPositionSP",
+        "Value": null
+      },
+      {
+        "Parameter": "CurrentPV",
+        "Value": null
+      },
+      {
+        "Parameter": "MotorFault",
+        "Value": null
+      },
+      {
+        "Parameter": "MotorRunning",
+        "Value": null
+      },
+      {
+        "Parameter": "MotorSpeedPV",
+        "Value": null
+      },
+      {
+        "Parameter": "MotorSpeedSP",
+        "Value": null
+      },
+      {
+        "Parameter": "MotorStartCommand",
+        "Value": null
+      }
+    ],
+    "parameterData_9": [
+      {
+        "Parameter": "Extended",
+        "Value": null
+      },
+      {
+        "Parameter": "Extending",
+        "Value": null
+      },
+      {
+        "Parameter": "Fault",
+        "Value": null
+      },
+      {
+        "Parameter": "Retracted",
+        "Value": null
+      },
+      {
+        "Parameter": "Retracting",
+        "Value": null
+      }
+    ]
+  },
+  "events": {
+    "system": {
+      "onStartup": {
+        "config": {
+          "script": "\tparentPath \u003d str(self.view.params.Tag_Path_0)\n\t\n\tif not parentPath:\n\t    return\n\t\n\t# Get all UDT instances under COR001\n\tresults \u003d system.tag.browse(\n\t    parentPath,\n\t    {\n\t        \"tagType\": \"UdtInstance\"\n\t    }\n\t)\n\t\n\tudtInstances \u003d list(results.getResults())\n\t\n\t# Process every UDT instance sequentially\n\tfor index, udt in enumerate(udtInstances):\n\t\n\t    udtPath \u003d str(udt[\"fullPath\"])\n\t\n\t    # Browse attributes inside the UDT\n\t    childResults \u003d system.tag.browse(udtPath)\n\t\n\t    parameterData \u003d []\n\t\n\t    tagPaths \u003d []\n\t    tagNames \u003d []\n\t\n\t    for child in childResults.getResults():\n\t\n\t        if str(child[\"tagType\"]) \u003d\u003d \"AtomicTag\":\n\t\n\t            tagNames.append(str(child[\"name\"]))\n\t            tagPaths.append(str(child[\"fullPath\"]))\n\t\n\t    # Read all attribute values\n\t    if tagPaths:\n\t\n\t        values \u003d system.tag.readBlocking(tagPaths)\n\t\n\t        for i in range(len(tagPaths)):\n\t\n\t            parameterData.append({\n\t                \"Parameter\": tagNames[i],\n\t                \"Value\": values[i].value\n\t            })\n\t\n\t    # Store sequentially\n\t    propertyName \u003d \"parameterData_\" + str(index)\n\t\n\t    self.view.custom[propertyName] \u003d parameterData"
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {
+    "Man_Data": [
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      }
+    ],
+    "Tag_Path_0": "",
+    "equipmentGraphic": "",
+    "equipmentName": "",
+    "tag_SM": "value"
+  },
+  "propConfig": {
+    "custom.param": {
+      "binding": {
+        "config": {
+          "path": "view.params.Tag_Path_0"
+        },
+        "transforms": [
+          {
+            "code": "\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t# PARAMETER DATA POPULATION\n\t#\n\t# CASE 1:\n\t# Parent has direct AtomicTags\n\t#\n\t#   parameterData_0 -\u003e Parent AtomicTags\n\t#   parameterData_1 -\u003e First enabled UDT\n\t#   parameterData_2 -\u003e Second enabled UDT\n\t#\n\t#\n\t# CASE 2:\n\t# Parent has NO direct AtomicTags\n\t#\n\t#   parameterData_0 -\u003e First enabled UDT\n\t#   parameterData_1 -\u003e Second enabled UDT\n\t#   parameterData_2 -\u003e Third enabled UDT\n\t#\n\t# This MUST match the tab indexing.\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\t\n\t# ----------------------------------------------------------\n\t# Get parent path\n\t# ----------------------------------------------------------\n\t\n\tparentPath \u003d str(\n\t    self.view.params.Tag_Path_0\n\t)\n\t\n\tif not parentPath:\n\t    return\n\t\n\t\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t# STEP 1\n\t# CHECK DIRECT ATOMIC TAGS UNDER PARENT\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\tparentChildren \u003d system.tag.browse(\n\t    parentPath\n\t)\n\t\n\tparentAtomicPaths \u003d []\n\tparentAtomicNames \u003d []\n\t\n\t\n\tfor child in parentChildren.getResults():\n\t\n\t    if str(child[\"tagType\"]) \u003d\u003d \"AtomicTag\":\n\t\n\t        parentAtomicNames.append(\n\t            str(child[\"name\"])\n\t        )\n\t\n\t        parentAtomicPaths.append(\n\t            str(child[\"fullPath\"])\n\t        )\n\t\n\t\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t# STEP 2\n\t# DETERMINE STARTING INDEX\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\tdataIndex \u003d 0\n\t\n\t\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t# CASE 1\n\t# PARENT HAS DIRECT ATOMIC TAGS\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\tif len(parentAtomicPaths) \u003e 0:\n\t\n\t    parameterData \u003d []\n\t\n\t\n\t    # ------------------------------------------------------\n\t    # Read parent AtomicTags\n\t    # ------------------------------------------------------\n\t\n\t    values \u003d system.tag.readBlocking(\n\t        parentAtomicPaths\n\t    )\n\t\n\t\n\t    for i in range(len(parentAtomicPaths)):\n\t\n\t        parameterData.append({\n\t\n\t            \"Parameter\": parentAtomicNames[i],\n\t\n\t            \"Value\": values[i].value\n\t        })\n\t\n\t\n\t    # ------------------------------------------------------\n\t    # Parent occupies index 0\n\t    # ------------------------------------------------------\n\t\n\t    self.view.custom[\n\t        \"parameterData_0\"\n\t    ] \u003d parameterData\n\t\n\t\n\t    # First UDT starts at index 1\n\t    dataIndex \u003d 1\n\t\n\t\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t# CASE 2\n\t# PARENT HAS NO DIRECT ATOMIC TAGS\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\telse:\n\t\n\t    # First enabled UDT starts at index 0\n\t    dataIndex \u003d 0\n\t\n\t\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t# STEP 3\n\t# GET UDT INSTANCES\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\tresults \u003d system.tag.browse(\n\t    parentPath,\n\t    {\n\t        \"tagType\": \"UdtInstance\"\n\t    }\n\t)\n\t\n\tudtInstances \u003d results.getResults()\n\t\n\t\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t# STEP 4\n\t# PROCESS ENABLED UDTs\n\t# \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\tfor item in udtInstances:\n\t\n\t    udtPath \u003d str(\n\t        item[\"fullPath\"]\n\t    )\n\t\n\t\n\t    # ------------------------------------------------------\n\t    # Check Enabled\n\t    # ------------------------------------------------------\n\t\n\t    enabledPath \u003d (\n\t        udtPath + \".enabled\"\n\t    )\n\t\n\t    enabledResult \u003d system.tag.readBlocking(\n\t        [enabledPath]\n\t    )[0]\n\t\n\t\n\t    if not enabledResult.value:\n\t        continue\n\t\n\t\n\t    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t    # GET DIRECT ATOMIC TAGS INSIDE UDT\n\t    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\t    childResults \u003d system.tag.browse(\n\t        udtPath\n\t    )\n\t\n\t    tagPaths \u003d []\n\t    tagNames \u003d []\n\t\n\t\n\t    for child in childResults.getResults():\n\t\n\t        if str(child[\"tagType\"]) \u003d\u003d \"AtomicTag\":\n\t\n\t            tagNames.append(\n\t                str(child[\"name\"])\n\t            )\n\t\n\t            tagPaths.append(\n\t                str(child[\"fullPath\"])\n\t            )\n\t\n\t\n\t    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t    # READ VALUES\n\t    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\t    parameterData \u003d []\n\t\n\t\n\t    if len(tagPaths) \u003e 0:\n\t\n\t        values \u003d system.tag.readBlocking(\n\t            tagPaths\n\t        )\n\t\n\t\n\t        for i in range(len(tagPaths)):\n\t\n\t            parameterData.append({\n\t\n\t                \"Parameter\": tagNames[i],\n\t\n\t                \"Value\": values[i].value\n\t            })\n\t\n\t\n\t    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t    # STORE USING CURRENT TAB INDEX\n\t    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\t    propertyName \u003d (\n\t        \"parameterData_\" +\n\t        str(dataIndex)\n\t    )\n\t\n\t    self.view.custom[\n\t        propertyName\n\t    ] \u003d parameterData\n\t\n\t\n\t    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t    # NEXT ENABLED UDT\n\t    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\n\t    dataIndex +\u003d 1",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.parameterData_0": {
+      "persistent": true
+    },
+    "custom.parameterData_1": {
+      "persistent": true
+    },
+    "custom.parameterData_10": {
+      "persistent": true
+    },
+    "custom.parameterData_11": {
+      "persistent": true
+    },
+    "custom.parameterData_12": {
+      "persistent": true
+    },
+    "custom.parameterData_13": {
+      "persistent": true
+    },
+    "custom.parameterData_14": {
+      "persistent": true
+    },
+    "custom.parameterData_15": {
+      "persistent": true
+    },
+    "custom.parameterData_16": {
+      "persistent": true
+    },
+    "custom.parameterData_17": {
+      "persistent": true
+    },
+    "custom.parameterData_18": {
+      "persistent": true
+    },
+    "custom.parameterData_19": {
+      "persistent": true
+    },
+    "custom.parameterData_2": {
+      "persistent": true
+    },
+    "custom.parameterData_20": {
+      "persistent": true
+    },
+    "custom.parameterData_21": {
+      "persistent": true
+    },
+    "custom.parameterData_22": {
+      "persistent": true
+    },
+    "custom.parameterData_3": {
+      "persistent": true
+    },
+    "custom.parameterData_4": {
+      "persistent": true
+    },
+    "custom.parameterData_5": {
+      "persistent": true
+    },
+    "custom.parameterData_6": {
+      "persistent": true
+    },
+    "custom.parameterData_7": {
+      "persistent": true
+    },
+    "custom.parameterData_8": {
+      "persistent": true
+    },
+    "custom.parameterData_9": {
+      "persistent": true
+    },
+    "params.Man_Data": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag_Path_0": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.equipmentGraphic": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.equipmentName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_SM": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView_0"
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[0].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_0"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_1"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[1].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_1"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_2"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[2].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_2"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_3",
+          "tooltip": {
+            "width": ""
+          }
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[3].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_3"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_4"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[4].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_4"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_5"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[5].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_5"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_6"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[6].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_6"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_7"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[7].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_7"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_8"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[8].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_8"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_9"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[9].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_9"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_10"
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[10].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_10"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_11"
+        },
+        "position": {
+          "tabIndex": 12
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[11].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_11"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_12"
+        },
+        "position": {
+          "tabIndex": 13
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[12].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_12"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_13"
+        },
+        "position": {
+          "tabIndex": 14
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[13].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_13"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_14"
+        },
+        "position": {
+          "tabIndex": 15
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[14].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_14"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_15"
+        },
+        "position": {
+          "tabIndex": 16
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[15].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_15"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_16"
+        },
+        "position": {
+          "tabIndex": 17
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[16].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_16"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_17"
+        },
+        "position": {
+          "tabIndex": 18
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[17].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_17"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_18"
+        },
+        "position": {
+          "tabIndex": 19
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[18].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_18"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_19"
+        },
+        "position": {
+          "tabIndex": 11
+        },
+        "propConfig": {
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data[19].equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData": {
+            "binding": {
+              "config": {
+                "path": "view.custom.parameterData_19"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs": {
+        "binding": {
+          "config": {
+            "struct": {
+              "currentIndex": "{this.props.currentTabIndex}",
+              "tagPath": "{view.params.Tag_Path_0}"
+            },
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    # GET VALUES\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\n    if value is None:\n        return []\n\n    parentPath \u003d str(value[\"tagPath\"])\n\n    currentIndex \u003d value[\"currentIndex\"]\n\n    if currentIndex is None:\n        currentIndex \u003d 0\n\n    currentIndex \u003d int(currentIndex)\n\n    if not parentPath:\n        return []\n\n\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    # TOOLTIP DATA\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\n    manData \u003d self.view.params.Man_Data\n\n    tabs \u003d []\n\n\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    # STEP 1\n    # CHECK FOR DIRECT ATOMIC TAGS\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\n    childResults \u003d system.tag.browse(parentPath)\n\n    hasAtomicTags \u003d False\n\n    for child in childResults.getResults():\n\n        if str(child[\"tagType\"]) \u003d\u003d \"AtomicTag\":\n\n            hasAtomicTags \u003d True\n            break\n\n\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    # STEP 2\n    # CREATE COR001 TAB ONLY IF\n    # DIRECT ATOMIC TAGS EXIST\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\n    tabIndex \u003d 0\n\n\n    if hasAtomicTags:\n\n        toolTipText \u003d \"\"\n\n        if manData is not None:\n\n            if tabIndex \u003c len(manData):\n\n                dataItem \u003d manData[tabIndex]\n\n                if dataItem is not None:\n\n                    toolTipText \u003d str(\n                        dataItem.get(\n                            \"tab_tooltip\",\n                            \"\"\n                        )\n                    )\n\n\n        tabs.append({\n\n            \"viewPath\": \"widgets(templates)/TabButton\",\n\n            \"viewParams\": {\n\n                # Parent UDT name\n                \"tabText\": parentPath.split(\"/\")[-1],\n\n                # Tooltip\n                \"toolTipText\": toolTipText,\n\n                # Selected state\n                \"tabSelected\": (\n                    tabIndex \u003d\u003d currentIndex\n                )\n            },\n\n            \"runWhileHidden\": False\n        })\n\n\n        # COR001 occupied index 0\n        tabIndex +\u003d 1\n\n\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    # STEP 3\n    # GET UDT INSTANCES\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\n    results \u003d system.tag.browse(\n        parentPath,\n        {\n            \"tagType\": \"UdtInstance\"\n        }\n    )\n\n    udtInstances \u003d results.getResults()\n\n\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    # STEP 4\n    # CREATE TABS FOR ENABLED UDTs ONLY\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\n    for item in udtInstances:\n\n        udtPath \u003d str(item[\"fullPath\"])\n\n\n        # --------------------------------------------------\n        # CHECK ENABLED\n        # --------------------------------------------------\n\n        enabledPath \u003d udtPath + \".enabled\"\n\n        enabledResult \u003d system.tag.readBlocking(\n            [enabledPath]\n        )[0]\n\n\n        if not enabledResult.value:\n            continue\n\n\n        # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n        # TOOLTIP\n        # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\n        toolTipText \u003d \"\"\n\n        if manData is not None:\n\n            if tabIndex \u003c len(manData):\n\n                dataItem \u003d manData[tabIndex]\n\n                if dataItem is not None:\n\n                    toolTipText \u003d str(\n                        dataItem.get(\n                            \"tab_tooltip\",\n                            \"\"\n                        )\n                    )\n\n\n        # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n        # CREATE UDT TAB\n        # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\n        tabs.append({\n\n            \"viewPath\": \"widgets(templates)/TabButton\",\n\n            \"viewParams\": {\n\n                # UDT name\n                \"tabText\": str(item[\"name\"]),\n\n                # Tooltip\n                \"toolTipText\": toolTipText,\n\n                # Selected state\n                \"tabSelected\": (\n                    tabIndex \u003d\u003d currentIndex\n                )\n            },\n\n            \"runWhileHidden\": False\n        })\n\n\n        # Next visible tab\n        tabIndex +\u003d 1\n\n\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    # RETURN TABS\n    # \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\n    return tabs",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      }
+    },
+    "props": {
+      "currentTabIndex": -1,
+      "tabSize": {
+        "width": 120
+      }
+    },
+    "type": "ia.container.tab"
+  }
+}

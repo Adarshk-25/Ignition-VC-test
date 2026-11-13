@@ -1,0 +1,125 @@
+{
+  "custom": {},
+  "params": {
+    "status": "value"
+  },
+  "propConfig": {
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 122
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.56,
+          "width": 0.7179,
+          "x": 0.1195,
+          "y": 0.2354
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#AAAAAA"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#00D900"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#5E97DB"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#FFFF00"
+                    },
+                    {
+                      "input": 5,
+                      "output": "#FFA500"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.status} \u003d 2, \"Title/blink\", \"\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "code": "    try:\n        value \u003d int(value)\n    except:\n        return \"Unknown\"\n\n    return {\n        0: \"Stopped\",\n        1: \"Running\",\n        2: \"Fault\",\n        3: \"Maintenance\",\n        4: \"Starved\",\n    \t5: \"Blocked\"\n    }.get(value, \"UNKNOWN\")",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#000000",
+            "borderStyle": "dashed",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": "0.5px",
+            "fontSize": "10px",
+            "fontWeight": "normal",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "122:52",
+      "mode": "percent",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

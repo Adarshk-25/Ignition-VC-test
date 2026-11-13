@@ -1,0 +1,292 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1123,
+      "width": 1855
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "basis": "1855px"
+            },
+            "props": {
+              "instances": [
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "title": "Total Throughput",
+                  "value": "4.8 T/hr"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "title": "Tank Utilization",
+                  "value": "82%"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "title": "Avg Mixing Time",
+                  "value": "42 min"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "title": "Recipe Compliance",
+                  "value": "97%"
+                }
+              ],
+              "path": "MixingOPage/card1",
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "alignItems": "flex-start",
+              "instances": [
+                {
+                  "Batch_ID": "CAT-4821",
+                  "FillLevel": "72%",
+                  "RPM": 84,
+                  "Recipe": "NMC811",
+                  "Solids": "61%",
+                  "Status": "RUNNING",
+                  "Temp": "42°C",
+                  "Throughput": "1.3 T/hr",
+                  "Voscosity": "4200 cP",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "title": "Cathode Mixer 1"
+                },
+                {
+                  "Batch_ID": "ANO-2112",
+                  "FillLevel": "64%",
+                  "RPM": 79,
+                  "Recipe": "Graphite",
+                  "Solids": "58%",
+                  "Status": "HOLD",
+                  "Temp": "38°C",
+                  "Throughput": "1.1 T/hr",
+                  "Voscosity": "3100 cP",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "title": "Anode Mixer 1"
+                }
+              ],
+              "path": "MixingOPage/card2",
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "208px",
+          "grow": 1
+        },
+        "props": {
+          "alignContent": "center",
+          "alignItems": "center",
+          "style": {
+            "paddingLeft": "0px",
+            "paddingRight": "0px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "basis": "1855px"
+            },
+            "props": {
+              "instances": [
+                {
+                  "Batch_ID": "CAT-4821",
+                  "FillLevel": "72%",
+                  "RPM": 84,
+                  "Recipe": "NMC811",
+                  "Solids": "61%",
+                  "Status": "CLEANING",
+                  "Temp": "42°C",
+                  "Throughput": "1.3 T/hr",
+                  "Voscosity": "4200 cP",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "title": "Cathode Mixer 2"
+                },
+                {
+                  "Batch_ID": "ANO-2112",
+                  "FillLevel": "64%",
+                  "RPM": 79,
+                  "Recipe": "Graphite",
+                  "Solids": "58%",
+                  "Status": "ALARM",
+                  "Temp": "38°C",
+                  "Throughput": "1.1 T/hr",
+                  "Voscosity": "3100 cP",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "title": "Anode Mixer 2"
+                }
+              ],
+              "path": "MixingOPage/card2",
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "247px"
+        },
+        "props": {
+          "alignItems": "center",
+          "style": {
+            "paddingLeft": "0px",
+            "paddingRight": null
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "props": {
+          "alignItems": "center",
+          "instances": [
+            {
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            }
+          ],
+          "path": "MixingOPage/card3",
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Card4"
+                },
+                "position": {
+                  "basis": "1064px"
+                },
+                "props": {
+                  "path": "MixingOPage/card4"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "1064px"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "card5"
+                },
+                "position": {
+                  "basis": "791px"
+                },
+                "props": {
+                  "path": "MixingOPage/card5"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "791px"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_2"
+        },
+        "position": {
+          "basis": "300px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

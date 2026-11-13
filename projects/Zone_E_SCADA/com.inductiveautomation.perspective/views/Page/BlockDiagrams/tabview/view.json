@@ -1,0 +1,1328 @@
+{
+  "custom": {},
+  "params": {
+    "path": "/"
+  },
+  "propConfig": {
+    "params.path": {
+      "binding": {
+        "config": {
+          "path": "page.props.path"
+        },
+        "type": "property"
+      },
+      "onChange": {
+        "enabled": null,
+        "script": "\tif currentValue\u003d\u003d\"sanand/zoneE/mixing/cathode\":\n\t\tself.getChild(\"root\").getChild(\"FlexContainer\").getChild(\"lines\").getChild(\"line1\").getChild(\"anode1\").position.display\u003dfalse\n\t\tself.getChild(\"root\").getChild(\"FlexContainer\").getChild(\"lines\").getChild(\"line2\").getChild(\"anode2\").position.display\u003dfalse\n\telif currentValue\u003d\u003d\"sanand/zoneE/mixing/anode\":\n\t\tself.getChild(\"root\").getChild(\"FlexContainer\").getChild(\"lines\").getChild(\"line1\").getChild(\"cathode1\").position.display\u003dfalse\n\t\tself.getChild(\"root\").getChild(\"FlexContainer\").getChild(\"lines\").getChild(\"line2\").getChild(\"cathode2\").position.display\u003dfalse"
+      },
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1106,
+      "width": 1868
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Mixig/mixing_3D"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "200px"
+                },
+                "props": {
+                  "text": "Select Process:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "246px"
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "Mixing",
+                      "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/mixing"
+                    },
+                    {
+                      "label": "Coating",
+                      "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/coating"
+                    },
+                    {
+                      "label": "Calendering",
+                      "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/calendering"
+                    },
+                    {
+                      "label": "Slitting",
+                      "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/slitting"
+                    },
+                    {
+                      "label": "Notching",
+                      "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/notching"
+                    }
+                  ],
+                  "placeholder": {
+                    "text": "Select Process"
+                  },
+                  "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/mixing"
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "59px",
+              "display": false
+            },
+            "props": {
+              "style": {
+                "classes": "widgets/spacing"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "PowerChart"
+                },
+                "position": {
+                  "basis": "800px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.config.tagBrowserStartPath": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.params.path}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\treturn \"histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/\"+value",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "config": {},
+                  "interaction": {
+                    "chartZoomLevel": 1,
+                    "rangeZoomLevel": 1
+                  },
+                  "style": {
+                    "paddingBottom": 30,
+                    "paddingLeft": 30,
+                    "paddingRight": 30,
+                    "paddingTop": 30
+                  }
+                },
+                "type": "ia.chart.powerchart"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "600px",
+              "grow": 1
+            },
+            "props": {
+              "alignContent": "center",
+              "alignItems": "center",
+              "direction": "column",
+              "style": {
+                "classes": "widgets/spacing"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "root"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "AlarmStatusTable"
+                    },
+                    "position": {
+                      "basis": "800px"
+                    },
+                    "propConfig": {
+                      "props.filters.active.conditions.source": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"*\"+{view.params.path}+\"*\""
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "columns": {
+                        "active": {
+                          "activeTime": {
+                            "order": 1
+                          },
+                          "displayPath": {
+                            "order": 4
+                          },
+                          "name": {
+                            "order": 0
+                          },
+                          "source": {
+                            "enabled": false
+                          }
+                        }
+                      },
+                      "filters": {
+                        "active": {
+                          "conditions": {}
+                        }
+                      },
+                      "rowStyles": {
+                        "activeAcked": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "backgroundColor": "",
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "backgroundColor": "",
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "backgroundColor": "",
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "backgroundColor": "",
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "backgroundColor": "",
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        },
+                        "activeUnacked": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "backgroundColor": "",
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "backgroundColor": "",
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "backgroundColor": "",
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "backgroundColor": "",
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "backgroundColor": "",
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "type": "ia.display.alarmstatustable"
+                  }
+                ],
+                "meta": {
+                  "name": "alarmStatusFlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "alarmStatusTable"
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-evenly",
+              "style": {
+                "classes": "widgets/spacing"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "AlarmJournalTable"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.filter.conditions.source": {
+                    "binding": {
+                      "config": {
+                        "expression": "\"*\"+{view.params.path}+\"*\""
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "columns": {
+                    "displayPath": {
+                      "enabled": true
+                    },
+                    "eventId": {
+                      "enabled": false
+                    },
+                    "source": {
+                      "enabled": false
+                    }
+                  },
+                  "filter": {
+                    "conditions": {}
+                  },
+                  "name": "Alarm Management Journal",
+                  "rowStyles": {
+                    "acked": {
+                      "base": {
+                        "backgroundColor": ""
+                      },
+                      "priorities": {
+                        "critical": {
+                          "classes": "alarm/critical"
+                        },
+                        "diagnostic": {
+                          "classes": "alarm/diagnostic"
+                        },
+                        "high": {
+                          "classes": "alarm/high"
+                        },
+                        "low": {
+                          "classes": "alarm/low"
+                        },
+                        "medium": {
+                          "classes": "alarm/medium"
+                        }
+                      }
+                    },
+                    "active": {
+                      "base": {
+                        "backgroundColor": ""
+                      },
+                      "priorities": {
+                        "critical": {
+                          "classes": "alarm/critical"
+                        },
+                        "diagnostic": {
+                          "classes": "alarm/diagnostic"
+                        },
+                        "high": {
+                          "classes": "alarm/high alarm/medium"
+                        },
+                        "low": {
+                          "classes": "alarm/low"
+                        },
+                        "medium": {
+                          "classes": "alarm/medium"
+                        }
+                      }
+                    }
+                  }
+                },
+                "type": "ia.display.alarmjournaltable"
+              }
+            ],
+            "meta": {
+              "name": "alarmJournalFlexContainer"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "classes": "widgets/spacing"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "path": "screens/Alarm Configurator"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "menuType": "modern",
+          "tabSize": {
+            "width": 150
+          },
+          "tabs": [
+            "Alarm Status Table",
+            "Alarm Journal Table",
+            "Alarm Configurator"
+          ]
+        },
+        "type": "ia.container.tab"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Dashboard"
+                },
+                "position": {
+                  "basis": "100%",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "stretch": {
+                    "columnCount": 4,
+                    "columnGutterSize": 4,
+                    "rowCount": 4,
+                    "rowGutterSize": 4
+                  },
+                  "widgets": [
+                    {
+                      "body": {
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "header": {
+                        "enabled": false,
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": ""
+                      },
+                      "isConfigurable": false,
+                      "minSize": {
+                        "columnSpan": 3,
+                        "rowSpan": 3
+                      },
+                      "name": "",
+                      "position": {
+                        "columnEnd": 5,
+                        "columnStart": 1,
+                        "rowEnd": 5,
+                        "rowStart": 1
+                      },
+                      "style": {
+                        "classes": ""
+                      },
+                      "viewParams": {},
+                      "viewPath": "MixingOverViewP/oeeGaugeandLabel"
+                    },
+                    {
+                      "body": {
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "header": {
+                        "enabled": true,
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Production Counters"
+                      },
+                      "isConfigurable": false,
+                      "minSize": {
+                        "columnSpan": 1,
+                        "rowSpan": 1
+                      },
+                      "name": "",
+                      "position": {
+                        "columnEnd": 7,
+                        "columnStart": 5,
+                        "rowEnd": 4,
+                        "rowStart": 1
+                      },
+                      "style": {
+                        "classes": ""
+                      },
+                      "viewParams": {},
+                      "viewPath": ""
+                    },
+                    {
+                      "body": {
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "header": {
+                        "enabled": true,
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Process Parameters (Live)"
+                      },
+                      "isConfigurable": false,
+                      "minSize": {
+                        "columnSpan": 1,
+                        "rowSpan": 1
+                      },
+                      "name": "",
+                      "position": {
+                        "columnEnd": 10,
+                        "columnStart": 7,
+                        "rowEnd": 4,
+                        "rowStart": 1
+                      },
+                      "style": {
+                        "classes": ""
+                      },
+                      "viewParams": {},
+                      "viewPath": ""
+                    },
+                    {
+                      "body": {
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "header": {
+                        "enabled": true,
+                        "style": {
+                          "classes": ""
+                        },
+                        "title": "Top Downtime Reasons (Today)"
+                      },
+                      "isConfigurable": false,
+                      "minSize": {
+                        "columnSpan": 1,
+                        "rowSpan": 1
+                      },
+                      "name": "",
+                      "position": {
+                        "columnEnd": 10,
+                        "columnStart": 5,
+                        "rowEnd": 2,
+                        "rowStart": 4
+                      },
+                      "style": {
+                        "classes": ""
+                      },
+                      "viewParams": {},
+                      "viewPath": ""
+                    }
+                  ]
+                },
+                "type": "ia.display.dashboard"
+              }
+            ],
+            "meta": {
+              "name": "mixingOEE"
+            },
+            "position": {
+              "basis": "483px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "20px",
+                    "fontWeight": "bold"
+                  },
+                  "text": "LINES (4)"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "fontWeight": "bold"
+                          },
+                          "text": "CATHODE 1 LINE"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "text": "Status: RUN/STOP"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_1"
+                        },
+                        "props": {
+                          "text": "Output: ___ kg/hr"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_2"
+                        },
+                        "props": {
+                          "text": "Key Params: Visc, Temp, RPM"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_3"
+                        },
+                        "props": {
+                          "text": "Alarms: (count)"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "cathode1"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.path}"
+                          },
+                          "transforms": [
+                            {
+                              "code": "\tdisplay\u003d\"true\"\n\tif str(value)\u003d\u003d\"/sanand/zoneE/mixing/anode\":\n\t\tdisplay\u003d\"false\"\n\treturn display",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "basis": "33%",
+                      "direction": "column",
+                      "style": {
+                        "backgroundColor": "#CCCCFF",
+                        "borderRadius": "6px",
+                        "borderStyle": "solid",
+                        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                        "padding": "25px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "fontWeight": "bold"
+                          },
+                          "text": "ANODE 1 LINE"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "text": "Status: RUN/STOP"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_1"
+                        },
+                        "props": {
+                          "text": "Output: ___ kg/hr"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_2"
+                        },
+                        "props": {
+                          "text": "Key Params: Visc, Temp, RPM"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_3"
+                        },
+                        "props": {
+                          "text": "Alarms: (count)"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "anode1"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.path}"
+                          },
+                          "transforms": [
+                            {
+                              "code": "\tdisplay\u003d\"true\"\n\tif str(value)\u003d\u003d\"/sanand/zoneE/mixing/cathode\":\n\t\tdisplay\u003d\"false\"\n\treturn display",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "basis": "33%",
+                      "direction": "column",
+                      "style": {
+                        "backgroundColor": "#8A8AFF",
+                        "borderRadius": "6px",
+                        "borderStyle": "solid",
+                        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                        "padding": "25px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "fontWeight": "bold"
+                          },
+                          "text": "COMMON ACTIONS"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "text": "• Start Batch"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_1"
+                        },
+                        "props": {
+                          "text": "• Pause / Resume"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_2"
+                        },
+                        "props": {
+                          "text": "• End Batch"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_3"
+                        },
+                        "props": {
+                          "text": "• Change Recipe"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "commonActions"
+                    },
+                    "props": {
+                      "basis": "33%",
+                      "direction": "column",
+                      "style": {
+                        "backgroundColor": "#8AFFFF",
+                        "borderRadius": "6px",
+                        "borderStyle": "solid",
+                        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                        "padding": "25px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "line1"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "gap": "50px"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "fontWeight": "bold"
+                          },
+                          "text": "CATHODE 2 LINE"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "text": "Status: RUN/STOP"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_1"
+                        },
+                        "props": {
+                          "text": "Output: ___ kg/hr"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_2"
+                        },
+                        "props": {
+                          "text": "Key Params: Visc, Temp, RPM"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_3"
+                        },
+                        "props": {
+                          "text": "Alarms: (count)"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "cathode2"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.path}"
+                          },
+                          "transforms": [
+                            {
+                              "code": "\tdisplay\u003d\"true\"\n\tif str(value)\u003d\u003d\"/sanand/zoneE/mixing/anode\":\n\t\tdisplay\u003d\"false\"\n\treturn display",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "basis": "50%",
+                      "direction": "column",
+                      "style": {
+                        "backgroundColor": "#CCCCFF",
+                        "borderRadius": "6px",
+                        "borderStyle": "solid",
+                        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                        "padding": "15px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "fontWeight": "bold"
+                          },
+                          "text": "ANODE 2 LINE"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "text": "Status: RUN/STOP"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_1"
+                        },
+                        "props": {
+                          "text": "Output: ___ kg/hr"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_2"
+                        },
+                        "props": {
+                          "text": "Key Params: Visc, Temp, RPM"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_3"
+                        },
+                        "props": {
+                          "text": "Alarms: (count)"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "anode2"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.path}"
+                          },
+                          "transforms": [
+                            {
+                              "code": "\tdisplay\u003d\"true\"\n\tif str(value)\u003d\u003d\"/sanand/zoneE/mixing/cathode\":\n\t\tdisplay\u003d\"false\"\n\treturn display",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "basis": "50%",
+                      "direction": "column",
+                      "style": {
+                        "backgroundColor": "#8A8AFF",
+                        "borderRadius": "6px",
+                        "borderStyle": "solid",
+                        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+                        "padding": "15px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "line2"
+                },
+                "position": {
+                  "basis": "148px",
+                  "grow": 1
+                },
+                "props": {
+                  "gap": "50px"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "lines"
+            },
+            "position": {
+              "basis": "364px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#FFCA8A",
+                        "borderRadius": "6px",
+                        "borderStyle": "dashed",
+                        "boxShadow": "0 2px 4px rgba(0,0,0,0.2)",
+                        "fontWeight": "bold",
+                        "padding": "15px",
+                        "textAlign": "center",
+                        "width": "200px"
+                      },
+                      "text": "RAW MATERIAL STORAGE"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "28px"
+                      },
+                      "text": "→"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_1"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#FFFF8A",
+                        "borderStyle": "dashed",
+                        "padding": "15px",
+                        "textAlign": "center",
+                        "width": "200px"
+                      },
+                      "text": "UNPACKING STATION (Big Bag / IBC)"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_2"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "28px"
+                      },
+                      "text": "→"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_3"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#8AFF8A",
+                        "borderRadius": "6px",
+                        "borderStyle": "dashed",
+                        "padding": "15px",
+                        "textAlign": "center",
+                        "width": "200px"
+                      },
+                      "text": "WEIGHING HOPPERS"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_4"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "28px"
+                      },
+                      "text": "→"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_5"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#8A8AFF",
+                        "borderRadius": "6px",
+                        "borderStyle": "dashed",
+                        "padding": "15px",
+                        "textAlign": "center",
+                        "width": "200px"
+                      },
+                      "text": "POSITIVE SENDING HOPPER"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_6"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "28px"
+                      },
+                      "text": "→"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_9"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#008080",
+                        "borderRadius": "6px",
+                        "padding": "15px",
+                        "textAlign": "center",
+                        "width": "200px"
+                      },
+                      "text": "PD MIXER"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_10"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "28px"
+                      },
+                      "text": "→"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_11"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#FF47FF",
+                        "borderRadius": "6px",
+                        "borderStyle": "dashed",
+                        "padding": "15px",
+                        "textAlign": "center",
+                        "width": "200px"
+                      },
+                      "text": "SLURRY STORAGE TANK"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_12"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "28px"
+                      },
+                      "text": "→"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_13"
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#808000",
+                        "borderRadius": "6px",
+                        "borderStyle": "dashed",
+                        "padding": "15px",
+                        "textAlign": "center",
+                        "width": "200px"
+                      },
+                      "text": "BUFFER TANK",
+                      "textStyle": {
+                        "fontWeight": "bold"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "root"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "center",
+                  "style": {
+                    "backgroundColor": "#f5f7fb",
+                    "gap": "15px",
+                    "padding": "30px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "flowChart"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "props": {
+          "direction": "column",
+          "justify": "space-around"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 1,
+      "menuType": "modern",
+      "tabStyle": {
+        "active": {
+          "color": "#8A8AFF",
+          "fontWeight": "bolder"
+        }
+      },
+      "tabs": [
+        "Dashboard",
+        "Trend",
+        "Alarm",
+        "Control",
+        "Process"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

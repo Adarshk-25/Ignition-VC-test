@@ -1,0 +1,86 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ThicknessGauge_Screen"
+        },
+        "props": {
+          "path": "\n"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DensityMeter_Screen"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "\n"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "HalfSpliterWebPositionController_Screen"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "HalfSpliterWebPositionController_Screen_0"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CoatingWebPositionController_Screen"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "\n"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 5,
+      "tabSize": {
+        "height": 40,
+        "width": 300
+      },
+      "tabs": [
+        "Hi-Pot Check",
+        "Loading Station Check",
+        "Unloading Station Check",
+        "BCR",
+        "DMC Cabinet",
+        "QR Check",
+        "Thickness Check",
+        "Weight Check",
+        "Vaccum Chamber"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

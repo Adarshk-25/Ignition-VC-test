@@ -1,0 +1,1 @@
+select top 1 Name,AvgScore from SkillMatrix order by SNo desc;

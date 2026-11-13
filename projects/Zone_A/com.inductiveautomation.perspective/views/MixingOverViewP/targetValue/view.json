@@ -1,0 +1,54 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 117,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "props": {
+          "text": "Target OEE",
+          "textStyle": {
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "props": {
+          "text": "85%",
+          "textStyle": {
+            "fontSize": 20,
+            "fontWeight": "bold"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignItems": "center",
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

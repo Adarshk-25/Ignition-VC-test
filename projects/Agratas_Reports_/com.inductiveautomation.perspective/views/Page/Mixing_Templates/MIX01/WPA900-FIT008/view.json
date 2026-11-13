@@ -1,0 +1,97 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView_5"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA900/FIT008/PV"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/pdMixer (1)",
+            "equipmentName": "FIT008:NMP Flowmeter",
+            "parameterData": [
+              {
+                "Parameter": "PV"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "custom": {
+      "tabConfig": [
+        {
+          "tabText": "FIT008",
+          "toolTipText": "IN11.E115.PCE.MIX01.WPA900.FIT008- Cathode Ceramic PD Mixer NMP NMP Flowmeter"
+        },
+        {
+          "tabText": "FIT008",
+          "toolTipText": "IN11.E115.PCE.MIX01.WPA900.FIT008- Cathode Ceramic PD Mixer NMP NMP Flowmeter"
+        }
+      ]
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs": {
+        "binding": {
+          "config": {
+            "struct": {
+              "cfg": "{this.custom.tabConfig}",
+              "idx": "{this.props.currentTabIndex}",
+              "viewParams": {
+                "tabSelected": "\"value\"",
+                "tabText": "\"value\"",
+                "toolTipText": "\"value\""
+              },
+              "viewPath": "\"widgets(templates)/TabButton\""
+            },
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "    idx \u003d value[\u0027idx\u0027] if value[\u0027idx\u0027] is not None else 0\n    cfg \u003d value[\u0027cfg\u0027]\n    tabs \u003d []\n\n    for i in range(len(cfg)):\n        item \u003d cfg[i]\n\n        tabs.append({\n            \"viewPath\": \"widgets(templates)/TabButton\",\n\n            \"viewParams\": {\n                \"tabText\": item[\u0027tabText\u0027],\n                \"toolTipText\": item[\u0027toolTipText\u0027],\n                \"tabSelected\": (i \u003d\u003d idx)\n            },\n\n            \"runWhileHidden\": False\n        })\n\n    return tabs",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      }
+    },
+    "type": "ia.container.tab"
+  }
+}

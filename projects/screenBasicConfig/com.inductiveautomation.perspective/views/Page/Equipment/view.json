@@ -1,0 +1,215 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1089,
+      "width": 1906
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "515px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "circularGuage"
+                        },
+                        "position": {
+                          "basis": "320px"
+                        },
+                        "props": {
+                          "params": {
+                            "innerCircleValue": 78,
+                            "middleCircleValue": 61,
+                            "outerCircleValue": 90,
+                            "valueDisplay": "85%"
+                          },
+                          "path": "widgets(templates)/baseTemplates/circularGuage"
+                        },
+                        "type": "ia.display.view"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "393px"
+                    },
+                    "props": {
+                      "direction": "column"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "processdisplay"
+                        },
+                        "position": {
+                          "basis": "68px"
+                        },
+                        "props": {
+                          "params": {
+                            "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/oeeCore/Quality"
+                          },
+                          "path": "widgets(templates)/processdisplay"
+                        },
+                        "type": "ia.display.view"
+                      },
+                      {
+                        "meta": {
+                          "name": "processdisplay_0"
+                        },
+                        "position": {
+                          "basis": "68px"
+                        },
+                        "props": {
+                          "params": {
+                            "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/oeeCore/Performance"
+                          },
+                          "path": "widgets(templates)/processdisplay"
+                        },
+                        "type": "ia.display.view"
+                      },
+                      {
+                        "meta": {
+                          "name": "processdisplay_1"
+                        },
+                        "position": {
+                          "basis": "68px"
+                        },
+                        "props": {
+                          "params": {
+                            "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/oeeCore/oee"
+                          },
+                          "path": "widgets(templates)/processdisplay"
+                        },
+                        "type": "ia.display.view"
+                      },
+                      {
+                        "meta": {
+                          "name": "processdisplay_2"
+                        },
+                        "position": {
+                          "basis": "68px"
+                        },
+                        "props": {
+                          "params": {
+                            "tagpath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/oeeCore/Availability"
+                          },
+                          "path": "widgets(templates)/processdisplay"
+                        },
+                        "type": "ia.display.view"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "position": {
+                      "basis": "476px"
+                    },
+                    "props": {
+                      "direction": "column",
+                      "justify": "space-around"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "325px"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "position": {
+                  "basis": "308px"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "869px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "518px"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "652px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "255px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "ColumnContainer"
+        },
+        "position": {
+          "basis": "22.1px"
+        },
+        "type": "ia.container.column"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

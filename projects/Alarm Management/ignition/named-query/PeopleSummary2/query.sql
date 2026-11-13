@@ -1,0 +1,1 @@
+select top 1 Designation,Skill_Level from PeopleSummary order by No desc;

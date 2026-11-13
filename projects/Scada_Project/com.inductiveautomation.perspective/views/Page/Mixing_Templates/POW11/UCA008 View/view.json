@@ -1,0 +1,801 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/Closed"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "UCA008:Unpacking Station#1-1 LCP PNL-904-008",
+            "parameterData": [
+              {
+                "Parameter": "Closed"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_0",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/FCB01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB01:AX-01 HMI (GOT2000) DC POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_1",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/FCB02/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB02:AX-02 HUB CONTROL POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_2",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 16
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/SJA01/Position"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SJA01:PWD 1-1 Manual Mode  ( 1: manual, 0 : Auto)",
+            "parameterData": [
+              {
+                "Parameter": "Position"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_3",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/FCB03/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB03:AX-03 CC-LINK CONTROL POWER\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_4",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/FCB04/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB04:AX-04 DIGITAL DC POWER\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_5",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/FCB05/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB05:X-05 SOL CONTROL POWER\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_6",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/FCB06/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "FCB06:X-06 Service Port Power",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_7",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/SJB01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SJB01:Q START_SW\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_8",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/SJB02/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SJB02:Q STOP_SW\n\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_9",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/PSL01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "PSL01: Main Air Pressure Low S/W\n\n\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_10",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/SGC01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SGC01:CP E-Stop S/W ON\n\n\n\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_11",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 11
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/SGC02/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SGC02:PWD1-1 EMG Stop\n\n\n\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_12",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 12
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/KFA01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "KFA01:PWD1-1 Safety Feedback\n\n\n\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_13",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 13
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/SJB03/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SJB03:PWD1-1 Safety Reset Switch\n\n\n\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_14",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 14
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/SJB04/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SJB04:PWD1-1 Power On Swtich\n\n\n\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_15",
+          "tooltip": {
+            "text": "IN11.E155.PAE.NTC11.UWD001.COR001-Unwinder A core"
+          }
+        },
+        "position": {
+          "tabIndex": 15
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA008/SJB05/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/Panel",
+            "equipmentName": "SJB05:PWD1-1 Power Off Swtich\n\n\n\n\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "custom": {
+      "tabConfig": [
+        {
+          "tabText": "UCA008",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "FCB01",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "FCB02",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "FCB03",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "FCB04",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "FCB05",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "FCB06",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "SJB01",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "SJB02",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "PSL01",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "SGC01",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "SGC02",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "KFA01",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "SJB03",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "SJB04",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "SJB05",
+          "toolTipText": "value"
+        },
+        {
+          "tabText": "SJA01",
+          "toolTipText": "value"
+        }
+      ]
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs": {
+        "binding": {
+          "config": {
+            "struct": {
+              "cfg": "{this.custom.tabConfig}",
+              "idx": "{this.props.currentTabIndex}",
+              "viewParams": {
+                "tabSelected": "\"value\"",
+                "tabText": "\"value\"",
+                "toolTipText": "\"value\""
+              },
+              "viewPath": "\"widgets(templates)/TabButton\""
+            },
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "    idx \u003d value[\u0027idx\u0027] if value[\u0027idx\u0027] is not None else 0\n    cfg \u003d value[\u0027cfg\u0027]\n    tabs \u003d []\n\n    for i in range(len(cfg)):\n        item \u003d cfg[i]\n\n        tabs.append({\n            \"viewPath\": \"widgets(templates)/TabButton\",\n\n            \"viewParams\": {\n                \"tabText\": item[\u0027tabText\u0027],\n                \"toolTipText\": item[\u0027toolTipText\u0027],\n                \"tabSelected\": (i \u003d\u003d idx)\n            },\n\n            \"runWhileHidden\": False\n        })\n\n    return tabs\n ",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      }
+    },
+    "type": "ia.container.tab"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "custom": {},
+  "params": {
+    "color": "value",
+    "path": "value",
+    "text": "value"
+  },
+  "propConfig": {
+    "params.color": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.text": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 160
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "   self.view.params.path"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "56px"
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.text"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "image": {
+            "style": {
+              "backgroundColor": "#ffa500",
+              "color": "#ffa500"
+            }
+          }
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,1051 @@
+[
+  {
+    "typeColor": -63488,
+    "name": "McHotPress",
+    "typeId": "",
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas1.sanand.zoneE.calendering.anode.hotPress.criticalDataPoint"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas1.sanand.zoneE.calendering.anode.hotPress"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "criticalDataPoint",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.outfeedTension"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "outfeedTension",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.machineSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "machineSpeed",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.endTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "endTime",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.electrodeWidth"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "electrodeWidth",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.mainRollTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "mainRollTemperature",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.preHeatingTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "preHeatingTemperature",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.machineFbs"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "machineFbs",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.mainRollGap"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "mainRollGap",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.processStep"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "processStep",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.productionOrder"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "productionOrder",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.defect"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "defect",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.materialSurfaceTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "materialSurfaceTemperature",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.iha"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "iha",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.startTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "startTime",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.averagethickness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "averagethickness",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.calenderCycleTime"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "calenderCycleTime",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.recipeID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "recipeID",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.productID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "productID",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.operatorID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "operatorID",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.infeedTension"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "infeedTension",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "typeColor": -64512,
+    "name": "McNotching",
+    "typeId": null,
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas1.sanand.zoneE.notching.anode.slitting.criticalDataPoint"
+      },
+      "machinepath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas1.sanand.zoneE.notching.anode.slitting"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "criticalDataPoints",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tabLength1"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "tabLength1",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.notchingCycleTime"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "notchingCycleTime",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.processStep"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "processStep",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.operatorID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "operatorID",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.defect"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "defect",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.recipeID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "recipeID",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.electrodeWidth"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "electrodeWidth",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.productionOrder"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "productionOrder",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.startTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "startTime",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tabWidth1"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "tabWidth1",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.machineFbs"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "machineFbs",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.endTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "endTime",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tabWidth2"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "tabWidth2",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.slittingWidth2"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "slittingWidth2",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.slittingWidth1"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "slittingWidth1",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.tabLength2"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "tabLength2",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "typeColor": -58880,
+    "name": "McColdPress",
+    "typeId": "",
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas1.sanand.zoneE.calendering.anode.coldpress1.criticalDataPoint"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas1.sanand.zoneE.calendering.anode.coldpress1"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "criticalDataPoint",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.defect"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "defect",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.processStep"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "processStep",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.operatorID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "operatorID",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.productID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "productID",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.startTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "startTime",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.recipeID"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "recipeID",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.calenderCycleTime"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "calenderCycleTime",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.machineFbs"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "machineFbs",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.outfeedTension"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "outfeedTension",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.infeedTension"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "infeedTension",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.electrodeWidth"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "electrodeWidth",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.mainRollTemperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "mainRollTemperature",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.averagethickness"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "averagethickness",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.mainRollGap"
+            },
+            "valueSource": "opc",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "mainRollGap",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.endTime"
+            },
+            "valueSource": "opc",
+            "dataType": "DateTime",
+            "historyProvider": "historian2",
+            "name": "endTime",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.productionOrder"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "productionOrder",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.machineSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "historyProvider": "historian2",
+            "name": "machineSpeed",
+            "historyEnabled": false,
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "Integer",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "Integer",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "typeColor": -16774913,
+    "name": "oee",
+    "typeId": null,
+    "parameters": {
+      "oeePath": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.downTime"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "downTime",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.goodCount"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "goodCount",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.idealCycleTime"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "idealCycleTime",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "name": "oeeCore",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "valueSource": "expr",
+            "expression": "if ({[.]../runTime}\u003e0,(({[.]../totalCount}*{[.]../idealCycleTime})/{[.]../runTime})*100,0)",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "Performance",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "%"
+          },
+          {
+            "valueSource": "expr",
+            "expression": "if ({[.]../totalCount}\u003e0,({[.]../goodCount}/{[.]../totalCount})*100,0)",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "Quality",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "%"
+          },
+          {
+            "valueSource": "expr",
+            "expression": "if (({[.]../runTime}+{[.]../downTime})\u003e0,({[.]../runTime}/({[.]../runTime}+{[.]../downTime}))*100,0)",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "Availability",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "%"
+          },
+          {
+            "valueSource": "expr",
+            "expression": "({[.]Availability}*{[.]Performance}*{[.]Quality})/10000",
+            "dataType": "Float4",
+            "historyProvider": "historian2",
+            "name": "oee",
+            "historyEnabled": true,
+            "tagType": "AtomicTag",
+            "engUnit": "%"
+          }
+        ]
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.rejectCount"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "rejectCount",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.runTime"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "runTime",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{oeePath}.totalCount"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "totalCount",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  },
+  {
+    "typeColor": -16770432,
+    "name": "status",
+    "typeId": null,
+    "parameters": {
+      "statusPath": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.downtimeReasonCode"
+        },
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "historyProvider": "historian2",
+        "name": "downtimeReasonCode",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.faulted"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "historyProvider": "historian2",
+        "name": "faulted",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.plannedStop"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "historyProvider": "historian2",
+        "name": "plannedStop",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{statusPath}.running"
+        },
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "historyProvider": "historian2",
+        "name": "running",
+        "historyEnabled": true,
+        "tagType": "AtomicTag",
+        "opcServer": "kep"
+      }
+    ]
+  }
+]

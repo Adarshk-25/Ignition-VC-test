@@ -1,0 +1,105 @@
+{
+  "custom": {},
+  "params": {
+    "forwardDisplay": true,
+    "label": "value",
+    "parentPath": "value",
+    "path": "value"
+  },
+  "propConfig": {
+    "params.forwardDisplay": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.parentPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 109
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tchildPath\u003d\"/\"+str(self.view.params.path)\n\tsystem.perspective.navigate(page\u003dchildPath)\n\t\n\ttree\u003dsystem.util.jsonDecode(self.parent.custom.navTree)\t\n\tancestors\u003dshared.nav.getAncestors(tree, self.view.params.path)\n\tfor item in ancestors:\n\t\titem[\"path\"] \u003d \"/\" + item[\"path\"]\n\t\n\tsystem.perspective.sendMessage(\n\tproject\u003dsystem.util.getProjectName(),\n\tmessageType\u003d\"updatePath\", \n\tpayload\u003d{\"breadCrumbPathsFinal\":ancestors},\n\tscope\u003d\"session\")\n\tself.session.custom.nav.breadcrumb \u003d ancestors\n\tsystem.perspective.closePopup(id\u003d\"crumbChildrenPopup\")\n"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.9107,
+          "width": 0.9541,
+          "x": 0.0275,
+          "y": 0.0179
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          },
+          "textStyle": {
+            "color": "#FDAD41",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "custom": {
+      "navTree": "[{\"expanded\":true,\"data\":{\"path\":\"sanand\",\"level\":\"site\"},\"icon\":{\"path\":\"material/business\",\"color\":\"\",\"style\":{}},\"label\":\"Sanand\",\"items\":[{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e\",\"level\":\"area\"},\"icon\":{\"path\":\"material/crop_3_2\",\"color\":\"\",\"style\":{}},\"label\":\"Zone E\",\"items\":[{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/mixing\",\"level\":\"process\"},\"icon\":{\"path\":\"material/cached\",\"color\":\"\",\"style\":{}},\"label\":\"Mixing\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/anode-line-1\",\"level\":\"machine\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 1\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/anode-line-1/process-flow-3f-2f\",\"level\":\"\"},\"label\":\"Powder Room (3rd \u0026 2nd Floor)\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/anode-line-1/process-flow-1F-mixing\",\"level\":\"value\"},\"label\":\"Mixing Room-1 (1st Floor)\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/anode-line-1/process-flow-1F-mixing\"},\"label\":\"Mixing Room-2 (1st Floor)\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"value\"},\"label\":\"Coater Room (1st Floor)\",\"items\":[]},{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/access_alarm\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/trending_up\",\"color\":\"\",\"style\":{}},\"label\":\"Trends\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/anode-line-2\",\"level\":\"machine\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 2\",\"items\":[{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/access_alarm\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/trending_up\",\"color\":\"\",\"style\":{}},\"label\":\"Trends\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/cathode-line-1\",\"level\":\"machine\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 1\",\"items\":[{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/access_alarm\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{},\"icon\":{\"path\":\"material/trending_up\",\"color\":\"\",\"style\":{}},\"label\":\"Trends\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/cathode-line-2\",\"level\":\"machine\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 2\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/cathode-line-1/process-flow-3f\",\"level\":\"\"},\"label\":\"Powder Room (3rd Floor)\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/cathode-line-1/process-flow-2f\",\"level\":\"value\"},\"label\":\"Powder Room (2nd Floor)\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/cathode-line-1/process-flow-1F-mixing-1\"},\"label\":\"Mixing Room-1 (1st Floor)\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/cathode-line-1/process-flow-1F-mixing-2\"},\"label\":\"Mixing Room-2 (1st Floor)\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/mixing/cathode-line-1/process-flow-1F-coater\"},\"label\":\"Coater Room (1st Floor)\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"Cathode-Line-2-Alarms\"},\"icon\":{\"path\":\"material/access_alarm\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"Cathode-Line-2-Trends\"},\"icon\":{\"path\":\"material/trending_up\",\"color\":\"\",\"style\":{}},\"label\":\"Trends\",\"items\":[]}]}]},{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/coating\",\"level\":\"process\"},\"icon\":{\"path\":\"material/battery_charging_full\",\"color\":\"\",\"style\":{}},\"label\":\"Coating\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-1\",\"level\":\"machine\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 1\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-1/side-a\"},\"label\":\"Coating Side A\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-1/side-a/equipment-screen\"},\"label\":\"Side A Equipment\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-1/side-b\"},\"label\":\"Coating Side B\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-1/side-b/equipment-screen\"},\"label\":\"Side B Equipment\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-1/half-slitter\"},\"label\":\"Coating Half Slitter\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-1/half-slitter/equipment-screen\"},\"label\":\"Half Sitter Equipment\",\"items\":[]}]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/anode-line-2\",\"level\":\"machine\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 2\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-1\",\"level\":\"machine\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 1\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-1/side-a\"},\"label\":\"Coating Side A\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-1/side-a/equipment-screen\"},\"label\":\"Side A Equipment\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-1/side-b\"},\"label\":\"Coating Side B\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-1/side-b/equipment-screen\"},\"label\":\"Side B Equipment\",\"items\":[]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-1/outfeeder\"},\"label\":\"Coating Outfeeder\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-1/outfeeder/equipment-screen\"},\"label\":\"Outfeeder Equipment\",\"items\":[]}]}]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/coating/cathode-line-2:\",\"level\":\"machine\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 2\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/calendering\"},\"icon\":{\"path\":\"material/battery_charging_full\",\"color\":\"\",\"style\":{}},\"label\":\"Calendering\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/calendering/anodeline\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"/sanand/zone-e/calendering/anodeline2\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 2\\n\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/calendering/cathodeline1\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/calendering/cathodeline2\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 2\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/recovery\",\"label\":\"process\"},\"icon\":{\"path\":\"material/360\",\"color\":\"\",\"style\":{}},\"label\":\"Recovery\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/recovery/anodeline\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/recovery/anodeline-2\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 2\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/recovery/cathodeline\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/recovery/cathodeline-2\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 2\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"sanand/zone-e/lasernotching\",\"label\":\"process\"},\"icon\":{\"path\":\"material/content_cut\",\"color\":\"\",\"style\":{}},\"label\":\"Notching and Slitting\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/lasernotching/anodeline1\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/lasernotching/anodecathode:\"},\"icon\":{\"path\":\"material/add_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Anode Line 2\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/lasernotching/cathodeline1\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 1\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"sanand/zone-e/lasernotching/cathodeline2\"},\"icon\":{\"path\":\"material/remove_circle_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Cathode Line 2\",\"items\":[]}]}]},{\"expanded\":true,\"data\":{\"path\":\"analytics\"},\"icon\":{\"path\":\"material/analytics\",\"color\":\"\",\"style\":{}},\"label\":\"ANALYTICS\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"analytics/trends\"},\"icon\":{\"path\":\"material/trending_up\",\"color\":\"\",\"style\":{}},\"label\":\"Trends\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"analytics/reports\"},\"icon\":{\"path\":\"material/library_books\",\"color\":\"\",\"style\":{}},\"label\":\"Reports\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"operations\"},\"icon\":{\"path\":\"material/dashboard\",\"color\":\"\",\"style\":{}},\"label\":\"OPERATIONS\",\"items\":[{\"expanded\":false,\"data\":{\"path\":\"alarms-management\"},\"icon\":{\"path\":\"material/notification_important\",\"color\":\"\",\"style\":{}},\"label\":\"Alarms\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"operations/recipes\"},\"icon\":{\"path\":\"material/menu_book\",\"color\":\"\",\"style\":{}},\"label\":\"Recipes\",\"items\":[]}]},{\"expanded\":true,\"data\":{\"path\":\"system\"},\"icon\":{\"path\":\"material/settings_applications\",\"color\":\"\",\"style\":{}},\"label\":\"Setting\",\"items\":[{\"expanded\":true,\"data\":{\"path\":\"system/userManagement\"},\"icon\":{\"path\":\"material/admin_panel_settings\",\"color\":\"\",\"style\":{}},\"label\":\"Security \u0026 Roles\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"system/auditLogs\"},\"icon\":{\"path\":\"material/history\",\"color\":\"\",\"style\":{}},\"label\":\"Audit Logs\",\"items\":[]},{\"expanded\":false,\"data\":{\"path\":\"system/help\"},\"icon\":{\"path\":\"material/help_outline\",\"color\":\"\",\"style\":{}},\"label\":\"Help\",\"items\":[]}]}]}]"
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "navTreeUpdate",
+          "pageScope": false,
+          "script": "\tself.custom.navTree\u003dpayload[\u0027tree\u0027]\n\t# implement your handler here",
+          "sessionScope": true,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

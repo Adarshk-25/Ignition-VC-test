@@ -1,0 +1,136 @@
+{
+  "custom": {
+    "Cmd": true,
+    "Run_fb": true,
+    "Stp_fb": false
+  },
+  "params": {
+    "Pump_Name": "[default]agratas/sanand/zoneE/line1/mixing/equipments/Rotary pump"
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Pump_Name": "{view.params.Pump_Name}"
+          },
+          "tagPath": "{Pump_Name}\\CMD"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Pump_Name": "{view.params.Pump_Name}"
+          },
+          "tagPath": "{Pump_Name}\\Run_FB"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Pump_Name": "{view.params.Pump_Name}"
+          },
+          "tagPath": "{Pump_Name}\\Stp_FB"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.Pump_Name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 75,
+      "width": 75
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Pump"
+        },
+        "position": {
+          "height": 0.9867,
+          "rotate": {
+            "anchor": "0% 0%"
+          },
+          "width": 1,
+          "y": -0.0055
+        },
+        "propConfig": {
+          "props.label.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "name": "{view.params.Pump_Name}"
+                },
+                "tagPath": "{name}.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.state": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.Cmd} \u0026\u0026 {view.custom.Run_fb}, \"running\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.Stp_fb}, \"stopped\",\r\nif({view.custom.Cmd} \u0026\u0026 {view.custom.Run_fb}\u003d0, \"faulted\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.Stp_fb}, \"faulted\",\r\n\"default\"))))"
+              },
+              "type": "expr"
+            }
+          },
+          "props.value.text": {
+            "binding": {
+              "config": {
+                "path": "this.props.state"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "style": {
+              "classes": "Page/Label2",
+              "fontFamily": "",
+              "fontSize": ""
+            }
+          },
+          "value": {
+            "location": "hidden",
+            "style": {
+              "classes": "Page/Label2"
+            }
+          }
+        },
+        "type": "ia.symbol.pump"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "75:75",
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

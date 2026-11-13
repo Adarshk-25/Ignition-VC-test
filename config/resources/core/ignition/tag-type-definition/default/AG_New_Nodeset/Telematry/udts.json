@@ -1,0 +1,510 @@
+[
+  {
+    "name": "Ax_Motor",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{InstanceName}.CurrentPV"
+        },
+        "New Property": {
+          "bindType": "parameter",
+          "binding": "{TagName}"
+        },
+        "value": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}_{TagName}_CurrentPV"
+        },
+        "valueSource": "opc",
+        "opcItemPath": "",
+        "dataType": "Float4",
+        "name": "AxisPositionPV",
+        "tagType": "AtomicTag",
+        "opcServer": ""
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{InstanceName}.CurrentPV"
+        },
+        "New Property": {
+          "bindType": "parameter",
+          "binding": "{TagName}"
+        },
+        "value": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}_{TagName}_CurrentPV"
+        },
+        "valueSource": "opc",
+        "opcItemPath": "",
+        "dataType": "Float4",
+        "name": "AxisPositionSP",
+        "tagType": "AtomicTag",
+        "opcServer": ""
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{InstanceName}.CurrentPV"
+        },
+        "New Property": {
+          "bindType": "parameter",
+          "binding": "{TagName}"
+        },
+        "value": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}_{TagName}_CurrentPV"
+        },
+        "valueSource": "opc",
+        "opcItemPath": "",
+        "dataType": "Float4",
+        "name": "CurrentPV",
+        "tagType": "AtomicTag",
+        "opcServer": ""
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "",
+        "dataType": "Boolean",
+        "name": "MotorFault",
+        "tagType": "AtomicTag",
+        "opcServer": ""
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "",
+        "dataType": "Boolean",
+        "name": "MotorRunning",
+        "tagType": "AtomicTag",
+        "opcServer": ""
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path{InstanceName}.MotorSpeedPV"
+        },
+        "valueSource": "opc",
+        "opcItemPath": "",
+        "dataType": "Float4",
+        "name": "MotorSpeedPV",
+        "tagType": "AtomicTag",
+        "opcServer": ""
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{InstanceName}.MotorTorquePV"
+        },
+        "valueSource": "opc",
+        "opcItemPath": "",
+        "dataType": "Float4",
+        "name": "MotorSpeedSP",
+        "tagType": "AtomicTag",
+        "opcServer": ""
+      },
+      {
+        "valueSource": "opc",
+        "opcItemPath": "",
+        "dataType": "Boolean",
+        "name": "MotorStartCommand",
+        "tagType": "AtomicTag",
+        "opcServer": ""
+      }
+    ]
+  },
+  {
+    "name": "TAC",
+    "parameters": {
+      "ServerName": {
+        "dataType": "String",
+        "value": null
+      },
+      "OPC_Path": {
+        "dataType": "String",
+        "value": null
+      },
+      "Mixer_Name": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisJigDownSettingPostion",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisJigUpSettingPostion1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisJigUpSettingPostion2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisJigUpSettingPostion3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisJigUpSettingPostion4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisJigUpSettingPostion5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisJogVelocity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisPositioningAcceleration",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisPositioningDeceleration",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "AxisPositioningVelocity",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "JogAcceleration",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{TagName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "JogDeceleration",
+        "tagType": "AtomicTag"
+      },
+      {
+        "name": "MAA1",
+        "typeId": "AG_New_Nodeset/Telematry/Ax_Motor",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorSpeedSP",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorRunning",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentPV",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "AxisPositionPV",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorStartCommand",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "AxisPositionSP",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorSpeedPV",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorFault",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "MAA2",
+        "typeId": "AG_New_Nodeset/Telematry/Ax_Motor",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorSpeedPV",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorSpeedSP",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorStartCommand",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentPV",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorFault",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "AxisPositionPV",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "AxisPositionSP",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{Mixer_Name}/{RootInstanceName}/{InstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MotorRunning",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  }
+]

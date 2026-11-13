@@ -1,0 +1,158 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.options": {
+            "persistent": true
+          },
+          "props.series": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "stacked": false,
+              "toolbar": {
+                "show": false
+              },
+              "type": "bar"
+            },
+            "colors": [
+              "#22C55E",
+              "#F59E0B",
+              "#EF4444"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#E5E7EB",
+              "padding": {
+                "bottom": 0,
+                "left": 10,
+                "right": 10,
+                "top": 0
+              },
+              "strokeDashArray": 4
+            },
+            "legend": {
+              "horizontalAlign": "center",
+              "markers": {
+                "radius": 15
+              },
+              "position": "bottom",
+              "show": true
+            },
+            "plotOptions": {
+              "bar": {
+                "borderRadius": 4,
+                "columnWidth": "45%"
+              }
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "color": "#111827",
+                "fontSize": "12px",
+                "fontWeight": "bold"
+              },
+              "text": "Day vs Value"
+            },
+            "xaxis": {
+              "categories": [
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+                "Sun"
+              ],
+              "labels": {
+                "style": {
+                  "colors": "#6B7280"
+                }
+              }
+            },
+            "yaxis": {
+              "labels": {
+                "style": {
+                  "colors": "#6B7280"
+                }
+              },
+              "max": 100,
+              "min": 0
+            }
+          },
+          "series": [
+            {
+              "data": [
+                20,
+                50,
+                30,
+                40,
+                70,
+                65,
+                10
+              ],
+              "name": "NMP Vapor"
+            },
+            {
+              "data": [
+                40,
+                55,
+                65,
+                45,
+                96,
+                76,
+                90
+              ],
+              "name": "Exhaust Airflow"
+            },
+            {
+              "data": [
+                87,
+                30,
+                88,
+                89,
+                23,
+                34,
+                56
+              ],
+              "name": "High"
+            }
+          ],
+          "type": "bar"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

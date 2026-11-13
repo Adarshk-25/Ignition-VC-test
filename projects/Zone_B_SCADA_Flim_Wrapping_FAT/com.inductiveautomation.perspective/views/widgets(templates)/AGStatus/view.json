@@ -1,0 +1,174 @@
+{
+  "custom": {},
+  "params": {
+    "tag": ""
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 65,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.5845,
+              "width": 0.448,
+              "x": 0.032,
+              "y": 0.276
+            },
+            "propConfig": {
+              "custom.blink": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentStarved"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if({value},dateExtract(now(),\u0027second\u0027)%2\u003d0, False)",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentStarved"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.blink},\r\n\"#FF0000\",\r\n\"#FFFFFF00\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Starved",
+              "textStyle": {
+                "classes": "Page/Label2",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "height": 0.5845,
+              "width": 0.448,
+              "x": 0.5277,
+              "y": 0.2751
+            },
+            "propConfig": {
+              "custom.blink": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentBlocked"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if({value},dateExtract(now(),\u0027second\u0027)%2\u003d0, False)",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentBlocked"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.blink},\r\n\"#FF0000\",\r\n\"#FFFFFF00\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Blocked",
+              "textStyle": {
+                "classes": "Page/Label2",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "custom": {
+          "blink": null
+        },
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "classes": "PipingAndInst/label"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFFFFF00"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

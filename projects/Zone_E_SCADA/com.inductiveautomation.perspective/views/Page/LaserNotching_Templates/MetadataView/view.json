@@ -1,0 +1,144 @@
+{
+  "custom": {},
+  "params": {
+    "metadata": "value"
+  },
+  "propConfig": {
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 467,
+      "width": 634
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MetaDataView"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "props.params.parameterData[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}/NodesetVersion"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}PLCManufacturer"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}PLCModel"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": ""
+                    },
+                    "tagPath": "{Tag}/PLCFBS"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.parameterData[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}/YearOfConstruction"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "machineFBS": "IN11.E155.PAE.NTC11 ",
+                "parameterData": [
+                  {
+                    "Parameter": "Nodeset Version"
+                  },
+                  {
+                    "Parameter": "PLC Manufacturer"
+                  },
+                  {
+                    "Parameter": "PLC Model"
+                  },
+                  {
+                    "Parameter": "PLC FBS"
+                  },
+                  {
+                    "Parameter": "Year Of Construction"
+                  }
+                ],
+                "tableHeader": "PLC Information"
+              },
+              "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/MetaDataTemplateView"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

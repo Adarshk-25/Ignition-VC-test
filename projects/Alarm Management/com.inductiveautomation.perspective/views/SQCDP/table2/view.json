@@ -1,0 +1,729 @@
+{
+  "custom": {},
+  "params": {
+    "DataFromHRMS": {
+      "row1": "value",
+      "row2": "value",
+      "row3": "value",
+      "visible": false
+    },
+    "DataFromMES": {
+      "row1": "value",
+      "row2": "value",
+      "row3": "value",
+      "visible": true
+    },
+    "DataFromSCADA": {
+      "row1": "value",
+      "row2": "value",
+      "row3": "value",
+      "visible": true
+    },
+    "ERP": {
+      "row1": "value",
+      "row2": "value",
+      "row3": "value",
+      "visible": false
+    },
+    "InputFactors": {
+      "row1": "value",
+      "row2": "value",
+      "row3": "value",
+      "visible": true
+    }
+  },
+  "propConfig": {
+    "params.DataFromHRMS": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.DataFromMES": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.DataFromSCADA": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ERP": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.InputFactors": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 168,
+      "width": 368
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "166px"
+        },
+        "propConfig": {
+          "props.columns[0].visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromSCADA.visible"
+              },
+              "type": "property"
+            }
+          },
+          "props.columns[1].visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromMES.visible"
+              },
+              "type": "property"
+            }
+          },
+          "props.columns[2].visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.InputFactors.visible"
+              },
+              "type": "property"
+            }
+          },
+          "props.columns[3].visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.ERP.visible"
+              },
+              "type": "property"
+            }
+          },
+          "props.columns[4].visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromHRMS.visible"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[0].DataFromHRMS": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromHRMS.row1"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[0].DataFromMES": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromMES.row1"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[0].DataFromSCADA": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromSCADA.row1"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[0].ERP": {
+            "binding": {
+              "config": {
+                "path": "view.params.ERP.row1"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[0].InputFactors": {
+            "binding": {
+              "config": {
+                "path": "view.params.InputFactors.row1"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[1].DataFromHRMS": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromHRMS.row2"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[1].DataFromMES": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromMES.row2"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[1].DataFromSCADA": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromSCADA.row2"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[1].ERP": {
+            "binding": {
+              "config": {
+                "path": "view.params.ERP.row2"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[1].InputFactors": {
+            "binding": {
+              "config": {
+                "path": "view.params.InputFactors.row2"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[2].DataFromHRMS": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromHRMS.row3"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[2].DataFromMES": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromMES.row3"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[2].DataFromSCADA": {
+            "binding": {
+              "config": {
+                "path": "view.params.DataFromSCADA.row3"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[2].ERP": {
+            "binding": {
+              "config": {
+                "path": "view.params.ERP.row3"
+              },
+              "type": "property"
+            }
+          },
+          "props.data[2].InputFactors": {
+            "binding": {
+              "config": {
+                "path": "view.params.InputFactors.row3"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "DataFromSCADA",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2"
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "DataFromMES",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": "Page/Label1"
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2"
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "InputFactors",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": true,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2"
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "ERP",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": true,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2"
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "DataFromHRMS",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2"
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "width": ""
+            }
+          ],
+          "data": [
+            {},
+            {},
+            {}
+          ],
+          "pager": {
+            "bottom": false
+          },
+          "style": {
+            "borderStyle": "none"
+          }
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "borderColor": "#D5D5D5",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "borderWidth": "0.1px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

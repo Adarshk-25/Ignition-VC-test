@@ -1,0 +1,96 @@
+{
+  "custom": {},
+  "params": {
+    "rowData": "value"
+  },
+  "propConfig": {
+    "params.rowData": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 180,
+      "width": 286
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tsystem.perspective.sendMessage(\n    messageType\u003d\"editPermissionGranted\",\n    payload\u003d{\"rowData\": self.view.params.rowData},\n    scope\u003d\"page\"\n)\n\tsystem.perspective.closePopup(id\u003d\"myPopup\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 0.1705,
+          "width": 0.2798,
+          "x": 0.0821,
+          "y": 0.5616
+        },
+        "props": {
+          "text": "Ok"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "    # Just close — no DB write, UI already reverted\n    system.perspective.closePopup(\"myPopup\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "height": 0.1705,
+          "width": 0.2798,
+          "x": 0.5576,
+          "y": 0.5616
+        },
+        "props": {
+          "text": "Cancel"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 0.1604,
+          "width": 0.7833,
+          "x": 0.1503,
+          "y": 0.1805
+        },
+        "props": {
+          "text": "Do you want to edit?"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

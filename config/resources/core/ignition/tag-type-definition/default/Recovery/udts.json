@@ -1,0 +1,567 @@
+[
+  {
+    "typeColor": -58880,
+    "name": "mcCondenser",
+    "typeId": "",
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.recovery.anodeHeatRecovery.line1.solventRecoveryCondenser.condenser.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.recovery.anodeHeatRecovery.line1.solventRecoveryCondenser.condenser"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.nmpInletQi"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "nmpInletQi",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperatureStage4"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "temperatureStage4",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperatureStage2"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "temperatureStage2",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperatureStage1"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "temperatureStage1",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.coolingPumpSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "coolingPumpSpeed",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.finalStageTemp"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "finalStageTemp",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.freshAirFlow"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "freshAirFlow",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperatureStage3"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "temperatureStage3",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "typeColor": -58880,
+    "name": "mcPurgeSystemAndActiveCarbon",
+    "typeId": "",
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.recovery.anodeHeatRecovery.line1.purgeSystemAndActiveCarbon.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.recovery.anodeHeatRecovery.line1.purgeSystemAndActiveCarbon"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinepath}.filter2Status"
+            },
+            "valueSource": "opc",
+            "dataType": "Boolean",
+            "name": "filter2Status",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinepath}.FlowRate"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "FlowRate",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinepath}.filter1Status"
+            },
+            "valueSource": "opc",
+            "dataType": "Boolean",
+            "name": "filter1Status",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.fanSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "fanSpeed",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.damper2Status"
+            },
+            "valueSource": "opc",
+            "dataType": "Boolean",
+            "name": "damper2Status",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.damper1Status1"
+            },
+            "valueSource": "opc",
+            "dataType": "Boolean",
+            "name": "damper1Status1",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinepath}.gasPressure1"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "gasPressure1",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "typeColor": -58880,
+    "name": "mcDryer",
+    "typeId": "",
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.recovery.anodeHeatRecovery.line1.solventRecoveryCondenser.dryerSideA.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.recovery.anodeHeatRecovery.line1.solventRecoveryCondenser.dryerSideA"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.nmpQi"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "nmpQi",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.nmpValue"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "nmpValue",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.nmpInletQi"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "nmpInletQi",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.freshAirFlow"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "freshAirFlow",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.exhaustFlow"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "exhaustFlow",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinepath}.damper"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "damper",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "Crane",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "ActualPositionPV",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "ActualSpeedPV",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "ActualVelocityPV",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "OperationTime",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "PositionReachedPV",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "PowerPV",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "TargetPositionPV",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "typeColor": -58880,
+    "name": "mcAirPollutionControlSystem",
+    "typeId": "",
+    "parameters": {
+      "machinePath": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.recovery.anodeHeatRecovery.line1.airPollutionControlSystem.plcTags"
+      },
+      "machinePath1": {
+        "dataType": "String",
+        "value": "nsu\u003dKepware Server;s\u003dagratas.sanand.zoneE.recovery.anodeHeatRecovery.line1.airPollutionControlSystem"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "oee",
+        "typeId": "oee",
+        "parameters": {
+          "oeePath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.oee"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "plcTags",
+        "tagType": "Folder",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.temperature"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "temperature",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.pressure"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "pressure",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.damper2Status"
+            },
+            "valueSource": "opc",
+            "dataType": "Boolean",
+            "name": "damper2Status",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.nmpQi"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "nmpQi",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.damper1Status1"
+            },
+            "valueSource": "opc",
+            "dataType": "Boolean",
+            "name": "damper1Status1",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.exhaustfanSpeed"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "exhaustfanSpeed",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{machinePath}.airFlowRate"
+            },
+            "valueSource": "opc",
+            "dataType": "Int4",
+            "name": "airFlowRate",
+            "tagType": "AtomicTag",
+            "opcServer": "kep"
+          }
+        ]
+      },
+      {
+        "name": "status",
+        "typeId": "status",
+        "parameters": {
+          "statusPath": {
+            "dataType": "String",
+            "value": {
+              "bindType": "parameter",
+              "binding": "{machinePath1}.status"
+            }
+          }
+        },
+        "tagType": "UdtInstance"
+      }
+    ]
+  }
+]

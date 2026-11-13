@@ -1,0 +1,159 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "HorizontalMenu"
+            },
+            "position": {
+              "basis": "879px",
+              "grow": 1
+            },
+            "props": {
+              "items": [
+                {
+                  "enabled": true,
+                  "icon": {
+                    "path": "material/360"
+                  },
+                  "items": [
+                    {
+                      "enabled": true,
+                      "icon": {
+                        "color": "",
+                        "path": "material/invert_colors"
+                      },
+                      "items": [],
+                      "label": "Slurry",
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/slurry"
+                    },
+                    {
+                      "enabled": true,
+                      "icon": {
+                        "path": "material/explore"
+                      },
+                      "items": [],
+                      "label": "Powder Feeding",
+                      "style": {
+                        "classes": ""
+                      },
+                      "target": "/powderFeeding"
+                    }
+                  ],
+                  "label": "Mixing",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": ""
+                },
+                {
+                  "enabled": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/broken_image"
+                  },
+                  "items": [],
+                  "label": "Coating",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "/coating"
+                },
+                {
+                  "enabled": true,
+                  "icon": {
+                    "path": "material/dry"
+                  },
+                  "items": [],
+                  "label": "Drying",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "/drying"
+                },
+                {
+                  "enabled": true,
+                  "icon": {
+                    "path": "material/calendar_view_day"
+                  },
+                  "items": [],
+                  "label": "Calendering",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "/calendering"
+                },
+                {
+                  "enabled": true,
+                  "icon": {
+                    "path": "material/adjust"
+                  },
+                  "items": [],
+                  "label": "Slitting",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "/slitting"
+                },
+                {
+                  "enabled": true,
+                  "icon": {
+                    "path": "material/all_inclusive"
+                  },
+                  "items": [],
+                  "label": "Winding",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "/winding"
+                },
+                {
+                  "enabled": true,
+                  "icon": {
+                    "path": "material/settings_overscan"
+                  },
+                  "items": [],
+                  "label": "Overview",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "/overview"
+                }
+              ]
+            },
+            "type": "ia.navigation.horizontalmenu"
+          }
+        ],
+        "meta": {
+          "name": "menu"
+        },
+        "position": {
+          "basis": "60px"
+        },
+        "props": {
+          "justify": "space-between"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

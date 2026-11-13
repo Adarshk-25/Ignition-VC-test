@@ -1,0 +1,195 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 798
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "text": "Select Process:"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "246px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Mixing",
+                  "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:IN11_E155_PAE_NTC11_IN11_E155_PAE_Telemetry"
+                },
+                {
+                  "label": "Coating",
+                  "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/line1/coating"
+                },
+                {
+                  "label": "Calendering",
+                  "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/line1/calendering"
+                },
+                {
+                  "label": "Slitting",
+                  "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/line1/slitting"
+                },
+                {
+                  "label": "Notching",
+                  "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/line1/notching"
+                }
+              ],
+              "placeholder": {
+                "text": "Select Process"
+              },
+              "value": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zoneE/line1/calendering"
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "59px"
+        },
+        "props": {
+          "style": {
+            "classes": "widgets/spacing"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "PowerChart"
+            },
+            "position": {
+              "basis": "800px"
+            },
+            "propConfig": {
+              "props.config.tagBrowserStartPath": {
+                "binding": {
+                  "config": {
+                    "path": ".../FlexContainer/Dropdown.props.value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "axes": [
+                {
+                  "color": "#757A7F",
+                  "dataFormat": "0,0.##",
+                  "grid": {
+                    "color": "",
+                    "dashArray": 0,
+                    "opacity": 0.9,
+                    "style": {
+                      "classes": ""
+                    },
+                    "visible": false
+                  },
+                  "label": {
+                    "font": {
+                      "color": "#757A7F",
+                      "size": 10
+                    },
+                    "offset": 0,
+                    "style": {
+                      "classes": ""
+                    },
+                    "text": "tempu"
+                  },
+                  "name": "",
+                  "position": "left",
+                  "range": {
+                    "auto": true,
+                    "max": "",
+                    "min": ""
+                  },
+                  "style": {
+                    "classes": ""
+                  },
+                  "tick": {
+                    "color": "#757A7F",
+                    "count": "Auto",
+                    "label": {
+                      "font": {
+                        "color": "#757A7F",
+                        "size": 10
+                      },
+                      "format": "Auto",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "width": 10
+                }
+              ],
+              "config": {},
+              "interaction": {
+                "chartZoomLevel": 1,
+                "rangeZoomLevel": 1
+              },
+              "style": {
+                "paddingBottom": 10,
+                "paddingLeft": 30,
+                "paddingRight": 30,
+                "paddingTop": 30
+              },
+              "timeAxis": {
+                "height": 50
+              }
+            },
+            "type": "ia.chart.powerchart"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "600px",
+          "grow": 1
+        },
+        "props": {
+          "alignContent": "center",
+          "alignItems": "center",
+          "direction": "column",
+          "justify": "center",
+          "style": {
+            "classes": "widgets/spacing"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

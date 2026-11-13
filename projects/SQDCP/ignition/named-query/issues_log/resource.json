@@ -1,0 +1,50 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "Query",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "Dev_MSSQL_Server",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "92934f47a1b81e315948801bc7613bf8f8c7175d3c43d9d17bcf7e50b5b8b239",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "Danvarsha.M@bs.nttdata.com",
+      "timestamp": "2026-04-17T03:46:02Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "line",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "category",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "status",
+        "sqlType": 7
+      }
+    ]
+  }
+}

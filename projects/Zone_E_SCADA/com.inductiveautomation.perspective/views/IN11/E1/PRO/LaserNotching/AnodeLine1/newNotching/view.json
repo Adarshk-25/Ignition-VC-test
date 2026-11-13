@@ -1,0 +1,59 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 2080,
+      "width": 3840
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "NotchingProcessFlow"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "lamp": 0
+          },
+          "path": "IN11/E1/PRO/LaserNotching/AnodeLine1/NotchingProcessFlow",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ProcessFlow2"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "lamp": 0
+          },
+          "path": "IN11/E1/PRO/LaserNotching/AnodeLine1/ProcessFlow2",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

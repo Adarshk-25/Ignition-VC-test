@@ -1,0 +1,70 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "UnwinderAnode"
+        },
+        "props": {
+          "params": {
+            "metadata": "[default]IN11_E123_PAE_NTC11_Metadata_IN11_E123_PAE/NTC11",
+            "tag": "[default]IN11_E123_PAE_NTC11_IN11_E123_PAE/NTC11/AGStatus",
+            "unwinder": "[default]IN11_E123_PAE_NTC11_IN11_E123_PAE_Telemetry/UWD001"
+          },
+          "path": "Page/LaserNotching_Templates/AnodeLine1/UnwinderAnode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "NotchingAnode"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/LaserNotching_Templates/AnodeLine1/NotchingAnode"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 150
+      },
+      "tabs": [
+        "Unwinder",
+        "Notching"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

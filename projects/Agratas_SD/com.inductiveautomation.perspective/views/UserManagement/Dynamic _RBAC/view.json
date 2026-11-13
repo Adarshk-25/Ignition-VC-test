@@ -1,0 +1,194 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DD_ScreenSel"
+        },
+        "position": {
+          "height": 36,
+          "width": 256,
+          "x": 24,
+          "y": 171
+        },
+        "props": {
+          "options": [
+            {
+              "label": "Anode Line 1",
+              "value": "sanand/zone-e/mixing/anode-line-1"
+            },
+            {
+              "label": "Anode Line 2",
+              "value": "sanand/zone-e/mixing/anode-line-2"
+            },
+            {
+              "label": "Cathod Line 1",
+              "value": "Mix_Cathod_Line1_BD"
+            },
+            {
+              "label": "Cathod Line 2",
+              "value": "sanand/zone-e/mixing/cathode-line-2"
+            }
+          ],
+          "showClearIcon": true,
+          "value": "sanand/zone-e/mixing/anode-line-1",
+          "wrapMultiSelectValues": false
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "events": {
+          "system": {
+            "onStartup": {
+              "config": {
+                "script": "\troles \u003d system.user.getRoles(\u0027default\u0027)\n\t\n\tself.props.options \u003d [\n\t    {\"label\": role, \"value\": role}\n\t    for role in sorted(roles)\n\t]"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "DD_RoleSel"
+        },
+        "position": {
+          "height": 36,
+          "width": 256,
+          "x": 304,
+          "y": 171
+        },
+        "props": {
+          "multiSelect": true,
+          "options": [
+            {
+              "label": "Administrator",
+              "value": "Administrator"
+            },
+            {
+              "label": "Ignition_Developer",
+              "value": "Ignition_Developer"
+            },
+            {
+              "label": "Litmus_Developer",
+              "value": "Litmus_Developer"
+            },
+            {
+              "label": "Operator",
+              "value": "Operator"
+            },
+            {
+              "label": "Plant Admin",
+              "value": "Plant Admin"
+            },
+            {
+              "label": "Plant Manager",
+              "value": "Plant Manager"
+            },
+            {
+              "label": "Supervisor",
+              "value": "Supervisor"
+            }
+          ],
+          "value": [
+            "Administrator"
+          ],
+          "wrapMultiSelectValues": false
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tselectedPath \u003d self.getSibling(\"DD_ScreenSel\").props.value\n\tselectedRoles \u003d self.getSibling(\"DD_RoleSel\").props.value\n\t\n\tif not selectedPath or not selectedRoles:\n\t    return\n\t\n\t# Convert Multi-Select value to normal Python list\n\tselectedRoles \u003d [str(role) for role in selectedRoles]\n\t\n\t# Convert Session Tree from ArrayWrapper to normal Python objects\n\ttree \u003d system.util.jsonDecode(\n\t    system.util.jsonEncode(self.session.custom.treeItems)\n\t)\n\t\n\t\n\tdef findNodeByPath(nodes, path):\n\t\n\t    for node in nodes:\n\t\n\t        if node.get(\"data\", {}).get(\"path\") \u003d\u003d path:\n\t            return node\n\t\n\t        result \u003d findNodeByPath(\n\t            node.get(\"items\", []),\n\t            path\n\t        )\n\t\n\t        if result:\n\t            return result\n\t\n\t    return None\n\t\n\t\n\t# ----------------------------------\n\t# Update Tree Node Roles\n\t# ----------------------------------\n\t\n\ttargetNode \u003d findNodeByPath(tree, selectedPath)\n\t\n\tif not targetNode:\n\t\n\t    system.util.getLogger(\"RBAC\").warn(\n\t        \"Node not found: {}\".format(selectedPath)\n\t    )\n\t    return\n\t\n\t# Replace existing roles\n\ttargetNode[\"data\"][\"roles\"] \u003d selectedRoles\n\t\n\t# Save updated tree back to Session\n\tself.session.custom.treeItems \u003d tree\n\t\n\t\n\t# ----------------------------------\n\t# Update RBAC Table\n\t# ----------------------------------\n\t\n\ttable \u003d self.getSibling(\"Table\")\n\ttableData \u003d list(table.props.data or [])\n\t\n\tscreenName \u003d targetNode.get(\"label\")\n\t\n\tfound \u003d False\n\t\n\tfor row in tableData:\n\t\n\t    if row[\"ScreenName\"] \u003d\u003d screenName:\n\t\n\t        row[\"UserRoles\"] \u003d \", \".join(selectedRoles)\n\t        found \u003d True\n\t        break\n\t\n\tif not found:\n\t\n\t    tableData.append({\n\t        \"ScreenName\": screenName,\n\t        \"UserRoles\": \", \".join(selectedRoles)\n\t    })\n\t\n\ttable.props.data \u003d tableData\n\t\n\t\n\t# ----------------------------------\n\t# Logging\n\t# ----------------------------------\n\t\n\tsystem.util.getLogger(\"RBAC\").info(\n\t    \"Updated \u0027{}\u0027 with roles {}\".format(\n\t        screenName,\n\t        selectedRoles\n\t    )\n\t)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 163,
+          "x": 571,
+          "y": 172
+        },
+        "props": {
+          "text": "ADD"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\t# Get selected row index\n\ttable \u003d self.getSibling(\"Table\")\n\t\n\tselectedRow \u003d table.props.selection.selectedRow\n\t\n\tif selectedRow is None or selectedRow \u003c 0:\n\t    return\n\t\n\ttableData \u003d list(table.props.data or [])\n\t\n\tselectedRecord \u003d tableData[selectedRow]\n\t\n\tscreenName \u003d selectedRecord[\"ScreenName\"]\n\t\n\t# ----------------------------------\n\t# Update Tree\n\t# ----------------------------------\n\t\n\ttree \u003d system.util.jsonDecode(\n\t    system.util.jsonEncode(self.session.custom.treeItems)\n\t)\n\t\n\t\n\tdef findNodeByLabel(nodes, label):\n\t\n\t    for node in nodes:\n\t\n\t        if node.get(\"label\") \u003d\u003d label:\n\t            return node\n\t\n\t        result \u003d findNodeByLabel(\n\t            node.get(\"items\", []),\n\t            label\n\t        )\n\t\n\t        if result:\n\t            return result\n\t\n\t    return None\n\t\n\t\n\ttargetNode \u003d findNodeByLabel(tree, screenName)\n\t\n\tif targetNode:\n\t\n\t    targetNode[\"data\"][\"roles\"] \u003d []\n\t\n\t    self.session.custom.treeItems \u003d tree\n\t\n\t# ----------------------------------\n\t# Remove Row From Table\n\t# ----------------------------------\n\t\n\ttableData.pop(selectedRow)\n\t\n\ttable.props.data \u003d tableData\n\t\n\t# Clear selection\n\ttable.props.selection.selectedRow \u003d -1\n\t\n\tsystem.util.getLogger(\"RBAC\").info(\n\t    \"Removed all access from \u0027{}\u0027\".format(screenName)\n\t)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "height": 34,
+          "width": 163,
+          "x": 571,
+          "y": 478
+        },
+        "props": {
+          "text": "Remove"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "height": 264,
+          "width": 532,
+          "x": 30,
+          "y": 248
+        },
+        "props": {
+          "data": [
+            {
+              "ScreenName": "Cathode Line 1",
+              "UserRoles": "Operator"
+            },
+            {
+              "ScreenName": "Anode Line 1",
+              "UserRoles": "Administrator"
+            }
+          ],
+          "selection": {
+            "data": [
+              {
+                "ScreenName": "Cathode Line 1",
+                "UserRoles": "Operator"
+              }
+            ],
+            "selectedColumn": "ScreenName",
+            "selectedRow": 0
+          }
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

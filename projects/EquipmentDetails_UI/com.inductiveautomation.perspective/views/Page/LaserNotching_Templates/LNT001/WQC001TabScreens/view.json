@@ -1,0 +1,739 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView_0"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/MAA001/AxisPositionPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"mm\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/MAA001/AxisPositionSP"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"mm\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/MAA001/CurrentPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"A\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/MAA001/MotorFault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/MAA001/MotorRunning"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[5].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/MAA001/MotorSpeedPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"m/min\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[6].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/MAA001/MotorSpeedSP"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"m/min\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[7].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/MAA001/MotorStartCommand"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingWQC001",
+            "equipmentName": "MAA001: Reel Chain Roll Servo Motor (SM16)",
+            "parameterData": [
+              {
+                "Parameter": "AxisPositionPV"
+              },
+              {
+                "Parameter": "AxisPositionSP"
+              },
+              {
+                "Parameter": "CurrentPV"
+              },
+              {
+                "Parameter": "MotorFault"
+              },
+              {
+                "Parameter": "MotorRunning"
+              },
+              {
+                "Parameter": "MotorSpeedPV"
+              },
+              {
+                "Parameter": "MotorSpeedSP"
+              },
+              {
+                "Parameter": "MotorStartCommand"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_12"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/AxisJigDownSettingPostion"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[10].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/ErrorCode"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[11].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[12].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/FollowingError"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[13].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/Idle"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[14].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/JogAcceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[15].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/JogDeceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[16].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/Running"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[17].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/Speed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[18].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/Status"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/BGA001/AxisJigUpSettingPostion1"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/AxisJigUpSettingPostion2"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/AxisJigUpSettingPostion3"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/AxisJigUpSettingPostion4"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[5].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/AxisJigUpSettingPostion5"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[6].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/AxisJogVelocity"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[7].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/AxisPositioningAcceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[8].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/AxisPositioningDeceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[9].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/TAC001/AxisPositioningVelocity"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingWQC001",
+            "equipmentName": "TAC001: Reel Chain Roll Servo Drive (SD16)",
+            "parameterData": [
+              {
+                "Parameter": "AxisJigDownSettingPosition"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition1"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition2"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition3"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition4"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition5"
+              },
+              {
+                "Parameter": "AxisJogVelocity"
+              },
+              {
+                "Parameter": "AxisPositioningAcceleration"
+              },
+              {
+                "Parameter": "AxisPositioningDeceleration"
+              },
+              {
+                "Parameter": "AxisPositioningVelocity"
+              },
+              {
+                "Parameter": "ErrorCode"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "FollowingError"
+              },
+              {
+                "Parameter": "Idle"
+              },
+              {
+                "Parameter": "JogAcceleration"
+              },
+              {
+                "Parameter": "JogDeceleration"
+              },
+              {
+                "Parameter": "Running"
+              },
+              {
+                "Parameter": "Speed"
+              },
+              {
+                "Parameter": "Status"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_3"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/ZS001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingWQC001",
+            "equipmentName": "ZS001: Reel Chain Start Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_4"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/ZS002/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingWQC001",
+            "equipmentName": "ZS002: Reel Chain End Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_13"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/ZSC001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingWQC001",
+            "equipmentName": "ZCS001: Reel Chain Roll Servo Motor FLS Sensor (SM16)",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_14"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/ZSC002/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingWQC001",
+            "equipmentName": "ZCS002: Reel Chain Roll Servo Motor RLS Sensor (SM16)",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_17"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/LNT001/WQC001/ZSO001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingWQC001",
+            "equipmentName": "ZSO001: Reel Chain Roll Servo Motor DOG Sensor (SM16)",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 6,
+      "tabs": [
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "MAA001",
+            "toolTipText": "value"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "selected": false,
+            "tabSelected": false,
+            "tabText": "TAC001",
+            "toolTipText": "value"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        "ZS001",
+        "ZS002",
+        "ZSC001",
+        "ZSC002",
+        "ZSO001"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

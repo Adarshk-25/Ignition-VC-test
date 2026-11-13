@@ -1,0 +1,299 @@
+{
+  "custom": {},
+  "params": {
+    "tagpath": "value"
+  },
+  "propConfig": {
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "AlarmStatusTable"
+            },
+            "position": {
+              "height": 798,
+              "width": 1599
+            },
+            "propConfig": {
+              "props.filters.active.conditions.source": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.tagpath"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\t# value \u003d \"[default]IN11_E155_PAE_NTC11_IN11_E155_PAE_Telemetry/UWD001/COR001\"\n\tpath \u003d value.split(\u0027]\u0027)[-1]  # strips \"[default]\" prefix\n\treturn \"*\" + path + \"*\"\n\t#result \u003d \"*IN11_E155_PAE_NTC11_IN11_E155_PAE_Telemetry/UWD001/COR001*\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "columns": {
+                "active": {
+                  "ackTime": {
+                    "order": 9
+                  },
+                  "activeTime": {
+                    "enabled": false
+                  },
+                  "displayPath": {
+                    "enabled": false,
+                    "order": 10
+                  },
+                  "label": {
+                    "order": 6
+                  },
+                  "name": {
+                    "enabled": false,
+                    "order": 0
+                  },
+                  "priority": {
+                    "enabled": false,
+                    "order": 8
+                  },
+                  "source": {
+                    "enabled": false
+                  },
+                  "state": {
+                    "order": 9
+                  }
+                }
+              },
+              "columnsAssociated": {
+                "active": [
+                  {
+                    "enabled": true,
+                    "field": "Alarm Group Id",
+                    "order": 2,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Alarm Code",
+                    "order": 3,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Severity",
+                    "order": 4,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "FBS Source",
+                    "order": 5,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Troubleshoot",
+                    "order": 7,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Timestamp Active",
+                    "order": 0,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": false,
+                    "field": "Timestamp Reset",
+                    "order": 1,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Alarm Priority",
+                    "order": 4,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "Alarm Description",
+                    "order": 0,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  }
+                ]
+              },
+              "filters": {
+                "active": {
+                  "conditions": {},
+                  "priorities": {
+                    "critical": false,
+                    "high": false,
+                    "low": false,
+                    "medium": false
+                  },
+                  "states": {
+                    "clearUnacked": false
+                  }
+                }
+              },
+              "refreshRate": 1000,
+              "rowStyles": {
+                "activeAcked": {
+                  "base": {
+                    "backgroundColor": "",
+                    "color": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/critical"
+                    },
+                    "diagnostic": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/diagnostic",
+                      "color": ""
+                    },
+                    "high": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/high"
+                    },
+                    "low": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/low"
+                    },
+                    "medium": {
+                      "backgroundColor": "",
+                      "classes": "alarmAck/medium"
+                    }
+                  }
+                },
+                "activeUnacked": {
+                  "base": {
+                    "backgroundColor": "",
+                    "color": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "",
+                      "classes": "alarm/critical"
+                    },
+                    "diagnostic": {
+                      "backgroundColor": "",
+                      "classes": "alarm/diagnostic",
+                      "color": ""
+                    },
+                    "high": {
+                      "backgroundColor": "",
+                      "classes": "alarm/high"
+                    },
+                    "low": {
+                      "backgroundColor": "",
+                      "classes": "alarm/low"
+                    },
+                    "medium": {
+                      "backgroundColor": "",
+                      "classes": "alarm/medium"
+                    }
+                  }
+                },
+                "clearAcked": {
+                  "priorities": {
+                    "critical": {
+                      "classes": ""
+                    },
+                    "diagnostic": {
+                      "classes": ""
+                    },
+                    "high": {
+                      "classes": ""
+                    },
+                    "low": {
+                      "classes": ""
+                    },
+                    "medium": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "clearUnacked": {
+                  "base": {
+                    "backgroundColor": "",
+                    "color": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "#DCDCDC"
+                    },
+                    "high": {
+                      "backgroundColor": "#E8E8E8"
+                    },
+                    "low": {
+                      "backgroundColor": "#F9F9F9"
+                    },
+                    "medium": {
+                      "backgroundColor": "#F2F2F2"
+                    }
+                  }
+                }
+              }
+            },
+            "scripts": {
+              "customMethods": [],
+              "extensionFunctions": [
+                {
+                  "enabled": false,
+                  "name": "filterAlarm",
+                  "script": "\n    activeTime \u003d system.date.fromMillis(\n        alarmEvent.getActiveData().getTimestamp()\n    )\n\n    duration \u003d system.date.secondsBetween(\n        activeTime,\n        system.date.now()\n    )\n\n    system.perspective.print(\n        alarmEvent.getName() + \" : \" + str(duration)\n    )\n\n    return True"
+                }
+              ],
+              "messageHandlers": []
+            },
+            "type": "ia.display.alarmstatustable"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "800px"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

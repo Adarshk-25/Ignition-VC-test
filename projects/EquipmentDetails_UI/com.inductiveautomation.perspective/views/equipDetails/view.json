@@ -1,0 +1,54 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1336
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "739px"
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {},
+                "tagPath": "[default]agratas/sanand/zoneE/calendering/anode"
+              },
+              "transforms": [
+                {
+                  "code": "\n\tresults \u003d []\n\n\tbasePath \u003d \"[default]agratas/sanand/zoneE/calendering/anode\"\n\n\tmachines \u003d system.tag.browse(basePath)\n\n\tfor machine in machines.getResults():\n\n\t\tmachineName \u003d machine[\u0027name\u0027]\n\t\tmachinePath \u003d str(machine[\u0027fullPath\u0027])\n\n\t\tspeedTag \u003d machinePath + \"/plcTags/machineSpeed\"\n\t\tproductTag \u003d machinePath + \"/plcTags/productId\"\n\n\t\tspeed \u003d system.tag.readBlocking([speedTag])[0].value\n\t\tproduct \u003d system.tag.readBlocking([productTag])[0].value\n\n\t\tresults.append({\n\t\t\t\"machineName\": machineName,\n\t\t\t\"machineSpeed\": speed,\n\t\t\t\"productId\": product,\n\t\t\t\"speedpercent\": speed\n\t\t})\n\n\treturn results",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "path": "templates/cardView"
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "instrument_name"
+        },
+        "position": {
+          "height": 30,
+          "width": 80,
+          "x": 125.9844090209961,
+          "y": 167.99107360839844
+        },
+        "props": {
+          "params": {
+            "DisplayName": "Dewpoint Sensor",
+            "instrument_ID": "123123 "
+          },
+          "path": "widgets(templates)/CMWidgets/Instruments/instrument_name"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "valve_2way"
+        },
+        "position": {
+          "height": 60,
+          "width": 80,
+          "x": 50,
+          "y": 153
+        },
+        "props": {
+          "params": {
+            "isvertical": false,
+            "nameLabelPosition": "value",
+            "tagpath": "[default]agratas/sanand/zoneE/line1/mixing/VLV 904-531",
+            "valuePosition": "value",
+            "valveOrientation": "value",
+            "valveType": "p\u0026id"
+          },
+          "path": "widgets(templates)/CMWidgets/VALVE/valve_2way"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "valve_2way_0"
+        },
+        "position": {
+          "height": 60,
+          "width": 80,
+          "x": 86,
+          "y": 391
+        },
+        "propConfig": {
+          "props.params.tagpath": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[default]agratas/sanand/zoneE/line1/mixing/VLV(M) 904-543"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "isvertical": false,
+            "nameLabelPosition": "value",
+            "valuePosition": "value",
+            "valveOrientation": "value",
+            "valveType": "p\u0026id"
+          },
+          "path": "widgets(templates)/CMWidgets/VALVE/valve_2way"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Motor"
+        },
+        "position": {
+          "height": 66,
+          "width": 60,
+          "x": 115.98,
+          "y": 254
+        },
+        "props": {
+          "appearance": "p\u0026id"
+        },
+        "type": "ia.symbol.motor"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 24,
+      "y": 0
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,1 @@
+select TOP 1 Last_Count,Last_Occurrence_Date from IncidentFreeDays order by SNo desc;

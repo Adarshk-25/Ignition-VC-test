@@ -1,0 +1,47 @@
+{
+  "custom": {},
+  "params": {
+    "Tag_Path_0": ""
+  },
+  "propConfig": {
+    "params.Tag_Path_0": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs": {
+        "binding": {
+          "config": {
+            "path": "view.params.Tag_Path_0"
+          },
+          "previewEnabled": false,
+          "transforms": [
+            {
+              "code": "\n    if not value:\n        return []\n\n    tagPath \u003d str(value)\n\n    results \u003d system.tag.browse(\n        tagPath,\n        {\n            \"tagType\": \"UdtInstance\"\n        }\n    )\n\n    tabs \u003d []\n\n    for item in results.getResults():\n\n        tabs.append({\n#            \"text\": str(item[\"name\"]),\n            \"viewPath\": \"Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView\",\n#            \"viewParams\": {\n#                \"Tag_Path_0\": str(item[\"fullPath\"])\n#            }\n        })\n\n    return tabs",
+              "type": "script"
+            }
+          ],
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "currentTabIndex": -1,
+      "tabSize": {
+        "width": 120
+      }
+    },
+    "type": "ia.container.tab"
+  }
+}

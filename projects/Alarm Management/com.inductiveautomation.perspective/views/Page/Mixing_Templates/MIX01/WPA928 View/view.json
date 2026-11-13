@@ -1,0 +1,103 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView_33"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA928/PT005/PV"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/WPA928/PT005/Status"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/pdMixer (1)",
+            "equipmentName": "PT005:CPM1-1 VFI Differential Pressure PV",
+            "parameterData": [
+              {
+                "Parameter": "PV"
+              },
+              {
+                "Parameter": "Status"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "tabs": [
+        {
+          "viewParams": {
+            "tabSelected": false,
+            "tabText": "PT005",
+            "toolTipText": "IN11.E115.PCE.MIX01.WPA928.PT005-Cathode Ceramic PD Mixer Chilled Water CPM1-1 CHR Flow"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "tabSelected": false,
+            "tabText": "QNB026",
+            "toolTipText": "IN11.E115.PCE.MIX01.WPA905.PT009-Cathode Ceramic PD Mixer Chilled Water CPM1-1 CHR Pressure PV"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        },
+        {
+          "viewParams": {
+            "tabSelected": false,
+            "tabText": "QNB027",
+            "toolTipText": "IN11.E155.PAE.NTC11.LNT001.BGA001-LaserNotching Encoder Roll"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        }
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

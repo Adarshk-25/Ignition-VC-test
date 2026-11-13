@@ -1,0 +1,384 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 129,
+      "width": 107
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Machine vision camera 2"
+        },
+        "position": {
+          "basis": "86px"
+        },
+        "propConfig": {
+          "props.style.transform": {
+            "binding": {
+              "config": {
+                "expression": "(dateExtract(now(), \"second\") * 6) % 360"
+              },
+              "transforms": [
+                {
+                  "code": "\n\treturn \"rotate\"+\"(\"+str(value)+\"deg\"+\")\"",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M71.959,0H4.394v38.174h67.565V0z",
+                  "fill": {
+                    "paint": "#CCCCCC"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M71.959,0H62.95v35.922h9.009V0",
+                  "fill": {
+                    "paint": "#999999"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Machine_Camera",
+              "name": "Group_Machine_Camera",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.51",
+                      "stopColor": "#E0E0E0",
+                      "style": {
+                        "stopColor": "#E0E0E0"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "74.2109",
+                  "x2": "74.2109",
+                  "y1": "32.9951",
+                  "y2": "2.8164"
+                },
+                {
+                  "d": "M71.959,2.816h4.504v30.179h-4.504V2.816z",
+                  "fill": {
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.51",
+                      "stopColor": "#E0E0E0",
+                      "style": {
+                        "stopColor": "#E0E0E0"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "type": "linearGradient",
+                  "x1": "98.9854",
+                  "x2": "98.9854",
+                  "y1": "33.6699",
+                  "y2": "2.1406"
+                },
+                {
+                  "d": "M85.473,2.14h27.025v31.53H85.473V2.14",
+                  "fill": {
+                    "url": "url(#SVGID_2_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Camera_Projectors",
+              "name": "Group_Camera_Projectors",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.51",
+                      "stopColor": "#E0E0E0",
+                      "style": {
+                        "stopColor": "#E0E0E0"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {
+                        "stopColor": "#595959"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_3_",
+                  "name": "SVGID_3_",
+                  "type": "linearGradient",
+                  "x1": "2.1978",
+                  "x2": "2.1978",
+                  "y1": "11.1489",
+                  "y2": "2.1401"
+                },
+                {
+                  "d": "M4.394,2.14H0.002v9.009h4.392V2.14",
+                  "fill": {
+                    "url": "url(#SVGID_3_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Layer_6",
+              "name": "Group_Layer_6",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M60.698,33.67H6.646v4.504h54.052V33.67z",
+                  "fill": {
+                    "paint": "#8C8C8C"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Vision_Unit",
+              "name": "Group_Vision_Unit",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M60.248,23.985H46.059v3.604h14.189V23.985z",
+                  "fill": {
+                    "paint": "#CCCCFF"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Label",
+              "name": "Group_Label",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#1F1F1F",
+                      "style": {
+                        "stopColor": "#1F1F1F"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.51",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#1F1F1F",
+                      "style": {
+                        "stopColor": "#1F1F1F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_4_",
+                  "name": "SVGID_4_",
+                  "type": "linearGradient",
+                  "x1": "100.1113",
+                  "x2": "100.1113",
+                  "y1": "34.1201",
+                  "y2": "1.6895"
+                },
+                {
+                  "d": "M95.607,1.689h9.008V34.12h-9.008V1.689z",
+                  "fill": {
+                    "url": "url(#SVGID_4_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0.01",
+                      "stopColor": "#1F1F1F",
+                      "style": {
+                        "stopColor": "#1F1F1F"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.51",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#1F1F1F",
+                      "style": {
+                        "stopColor": "#1F1F1F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_5_",
+                  "name": "SVGID_5_",
+                  "type": "linearGradient",
+                  "x1": "80.9678",
+                  "x2": "80.9678",
+                  "y1": "34.1201",
+                  "y2": "1.6895"
+                },
+                {
+                  "d": "M76.463,1.689h9.01V34.12h-9.01V1.689",
+                  "fill": {
+                    "url": "url(#SVGID_5_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Adjusters",
+              "name": "Group_Adjusters",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 112.5 38.174"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-around",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

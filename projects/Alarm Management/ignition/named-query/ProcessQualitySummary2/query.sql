@@ -1,0 +1,1 @@
+select top 1 Status,Total_Rejections from ProcessQualitySummary order by SNo desc;

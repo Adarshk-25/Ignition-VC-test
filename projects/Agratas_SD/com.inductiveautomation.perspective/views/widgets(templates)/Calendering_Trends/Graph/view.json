@@ -1,0 +1,191 @@
+{
+  "custom": {},
+  "params": {
+    "Mode": "value",
+    "Tag_Path": "agratas/sanand/zoneE/line1/Calendering"
+  },
+  "propConfig": {
+    "params.Mode": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag_Path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 527,
+      "width": 1031
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.8974,
+              "width": 0.1063,
+              "x": 0.7672,
+              "y": 0.1049
+            },
+            "props": {
+              "text": "Select Mode:",
+              "textStyle": {
+                "alignSelf": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "custom": {
+              "Toggle_Value": 1
+            },
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t if self.custom.Toggle_Value \u003d\u003d 0:\n\t \tself.custom.Toggle_Value \u003d 1\n\t elif self.custom.Toggle_Value \u003d\u003d 1:\n\t \tself.custom.Toggle_Value \u003d 0"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 0.8718,
+              "width": 0.0859,
+              "x": 0.9141,
+              "y": 0.1282
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.Toggle_Value"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": 0,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "realtime"
+                        },
+                        {
+                          "input": 1,
+                          "output": "historical"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "70px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "PowerChart"
+        },
+        "position": {
+          "basis": "600px"
+        },
+        "propConfig": {
+          "props.config.mode": {
+            "binding": {
+              "config": {
+                "path": "../CoordinateContainer/Button.props.text"
+              },
+              "type": "property"
+            }
+          },
+          "props.config.tagBrowserStartPath": {
+            "binding": {
+              "config": {
+                "expression": "\"histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:\"+{view.params.Tag_Path}"
+              },
+              "enabled": false,
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "config": {
+            "endDate": {
+              "$": [
+                "ts",
+                0,
+                1780399492252
+              ],
+              "$ts": 1780338540000
+            },
+            "measureOfTime": "minutes",
+            "rangeSelectorPen": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:DataSource/Agratas/IN11/hist tag",
+            "startDate": {
+              "$": [
+                "ts",
+                0,
+                1780399492252
+              ],
+              "$ts": 1780185600000
+            },
+            "tagBrowserStartPath": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand",
+            "visibility": {
+              "showTagBrowser": true
+            }
+          },
+          "interaction": {
+            "chartZoomLevel": 1,
+            "mode": "rangeBrush",
+            "rangeZoomLevel": 1
+          }
+        },
+        "type": "ia.chart.powerchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

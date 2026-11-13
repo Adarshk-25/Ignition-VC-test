@@ -1,0 +1,98 @@
+[
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PCE.MIX21/AGCalls/AGSetOperationResult/SenderFBS",
+    "dataType": "String",
+    "name": "SenderFBS",
+    "defaultValue": "IN11.E115.PCE.MIX21",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PCE.MIX21/AGCalls/AGSetOperationResult/ResponseAckNumber",
+    "dataType": "Int4",
+    "name": "ResponseAckNumber",
+    "defaultValue": 2,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PCE.MIX21/AGCalls/AGSetOperationResult/RequestAckNumber",
+    "dataType": "Int4",
+    "name": "RequestAckNumber",
+    "defaultValue": 2,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PCE.MIX21/AGCalls/AGSetOperationResult/RequestTimestamp",
+    "dataType": "String",
+    "name": "RequestTimestamp",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PCE.MIX21/AGCalls/AGSetOperationResult/ResponseTimestamp",
+    "dataType": "String",
+    "name": "ResponseTimestamp",
+    "defaultValue": "2026-09-11 19:38:45.992",
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PCE.MIX21/AGCalls/AGSetOperationResult/Handshake",
+    "dataType": "Int4",
+    "name": "Handshake",
+    "defaultValue": 2,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PCE.MIX21/AGCalls/AGSetOperationResult/StatusCode",
+    "dataType": "Int4",
+    "name": "StatusCode",
+    "defaultValue": 200,
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  },
+  {
+    "valueSource": "memory",
+    "opcItemPath": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E115.PCE.MIX21/AGCalls/AGSetOperationResult/RequestData",
+    "dataType": "Document",
+    "name": "RequestData",
+    "defaultValue": [
+      {
+        "DestinationFBS": "IN11.E116.PCE.MIX12",
+        "EndTime": "2026-09-11T17:35:00Z",
+        "ItemID": "CELL-SN-1001",
+        "QuantityTransferred": 10.5,
+        "RecipeID": "RECIPE-1001",
+        "SourceFBS": "IN11.E115.PCE.MIX11",
+        "StartTime": "2026-09-11T17:30:00Z",
+        "StepID": 1,
+        "UoM": "PCS",
+        "WorkOrderID": "WO-100001"
+      },
+      {
+        "DestinationFBS": "IN11.E116.PCE.MIX12",
+        "EndTime": "2026-09-11T17:40:00Z",
+        "ItemID": "CELL-SN-1002",
+        "QuantityTransferred": 5.0,
+        "RecipeID": "RECIPE-1001",
+        "SourceFBS": "IN11.E115.PCE.MIX11",
+        "StartTime": "2026-09-11T17:36:00Z",
+        "StepID": 2,
+        "UoM": "PCS",
+        "WorkOrderID": "WO-100001"
+      }
+    ],
+    "tagType": "AtomicTag",
+    "opcServer": "PLC"
+  }
+]

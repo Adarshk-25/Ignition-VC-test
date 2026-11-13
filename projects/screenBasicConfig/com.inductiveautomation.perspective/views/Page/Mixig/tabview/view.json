@@ -1,0 +1,40 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1090,
+      "width": 1868
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "mixing"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 4,
+      "tabs": [
+        "Dashboard",
+        "Trend",
+        "Alarm",
+        "Control",
+        "Process"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

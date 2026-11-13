@@ -1,0 +1,140 @@
+{
+  "custom": {},
+  "params": {
+    "username": ""
+  },
+  "propConfig": {
+    "params.username": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 130,
+      "width": 444
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "warningMessage"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{session.props.auth.user.firstName} + \", Are you sure you want to log out?\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "color": "#FFFFFF",
+            "fontFamily": "Merriweather",
+            "fontSize": "1.5em",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {},
+                  "scope": "C",
+                  "type": "logout"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_yes"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "image": {
+                "style": {
+                  "backgroundColor": "red"
+                }
+              },
+              "style": {
+                "backgroundColor": "#343474",
+                "margin": "10px"
+              },
+              "text": "Yes",
+              "textStyle": {
+                "color": "#FDAD41"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Button_No"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#343474",
+                "margin": "10px"
+              },
+              "text": "Cancel",
+              "textStyle": {
+                "color": "#ffa500"
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tsystem.perspective.closePopup(\"\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "margin": "0.5em"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundImage": "linear-gradient(90deg,rgba(52, 52, 116, 1) 25%,  rgba(52, 52, 116, 1) 100%)",
+        "borderStyle": "none",
+        "margin": "3px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

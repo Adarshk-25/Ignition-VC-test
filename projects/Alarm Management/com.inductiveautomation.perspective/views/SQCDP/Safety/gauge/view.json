@@ -1,0 +1,123 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Incident Free Days: \"+ {../Gauge.props.value}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "sans-serif",
+            "fontSize": "0.7vw",
+            "fontWeight": "bold",
+            "paddingLeft": 10,
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "draggable": true,
+                "id": "toggle",
+                "modal": false,
+                "overlayDismiss": false,
+                "position": {
+                  "height": 500,
+                  "width": 500
+                },
+                "positionType": "exact",
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewPath": "SQCDP/Safety/gauge",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Gauge"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "backgroundColor": "",
+          "innerAxis": {
+            "data": "secondaryValue",
+            "maxValue": 80,
+            "percentRadius": 85,
+            "show": false,
+            "width": 1
+          },
+          "outerAxis": {
+            "data": "value",
+            "maxValue": 30,
+            "percentRadius": 100,
+            "ranges": [
+              {
+                "color": "#FF7F7F",
+                "end": 10,
+                "start": 0,
+                "width": 8
+              },
+              {
+                "color": "#EAD728",
+                "end": 25,
+                "start": 10,
+                "width": 12
+              },
+              {
+                "color": "#77D887",
+                "end": 30,
+                "start": 25,
+                "width": 12
+              }
+            ],
+            "show": true,
+            "width": 1
+          },
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "value": 9
+        },
+        "type": "ia.chart.gauge"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

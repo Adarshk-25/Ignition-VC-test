@@ -1,0 +1,54 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Cell Loading_Template"
+            },
+            "props": {
+              "path": "Page/Film_Wraping/Cell Loading_Template"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "currentTabIndex": 2,
+          "tabSize": {
+            "height": 40,
+            "width": 200
+          },
+          "tabs": [
+            "Cell Loading",
+            "Cell Loading NG Port",
+            "",
+            "value"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 457
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "lblTitle"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "fontSize": "18px",
+            "fontWeight": "600"
+          },
+          "text": "Add Custom Log"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "ddAction"
+        },
+        "position": {
+          "basis": "45px"
+        },
+        "props": {
+          "options": [
+            {
+              "label": "CREATE",
+              "value": "CREATE"
+            },
+            {
+              "label": "UPDATE",
+              "value": "UPDATE"
+            },
+            {
+              "label": "DELETE",
+              "value": "DELETE"
+            },
+            {
+              "label": "NOTE",
+              "value": "NOTE"
+            },
+            {
+              "label": "APPROVE",
+              "value": "APPROVE"
+            },
+            {
+              "label": "REJECT",
+              "value": "REJECT"
+            },
+            {
+              "label": "project save",
+              "value": "project save"
+            },
+            {
+              "label": "resources created",
+              "value": "resources created"
+            },
+            {
+              "label": "resources deleted",
+              "value": "resources deleted"
+            },
+            {
+              "label": "tag edit",
+              "value": "tag edit"
+            },
+            {
+              "label": "tag write",
+              "value": "tag write"
+            }
+          ],
+          "value": "Action"
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "txtTarget"
+        },
+        "position": {
+          "basis": "45px"
+        },
+        "props": {
+          "placeholder": "Enter Entity Name"
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "txtDescription"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "minHeight": "80px"
+          },
+          "text": "Description"
+        },
+        "type": "ia.input.text-area"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "    system.perspective.closePopup(\"addCustomLog\")\n\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "cancel"
+            },
+            "position": {
+              "basis": "200px",
+              "shrink": 0
+            },
+            "props": {
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\troot \u003d self.getParent().getParent()\n\t\n\t\n\taction \u003d root.getChild(\"ddAction\").props.value\n\ttarget \u003d root.getChild(\"txtTarget\").props.text\n\tdescription \u003d root.getChild(\"txtDescription\").props.text\n\t\n\tif not action or not target:\n\t    system.perspective.print(\"Validation failed\")\n\t    return\n\t\n\tsystem.util.audit(\n\t    action\u003daction,\n\t    actionTarget\u003dtarget,\n\t    actionValue\u003ddescription\n\t)\n\t\n\tsystem.perspective.print(\"Audit inserted\")\n\tsystem.perspective.closePopup(\"addCustomLog\")\n\t\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "save"
+            },
+            "position": {
+              "basis": "200px",
+              "shrink": 0
+            },
+            "props": {
+              "text": "Save"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "center",
+          "style": {
+            "gap": "10px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "gap": "14px",
+        "padding": "20px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

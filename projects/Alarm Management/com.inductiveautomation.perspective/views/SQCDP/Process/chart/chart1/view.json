@@ -1,0 +1,165 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "basis": "232px",
+          "grow": 1
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "dropShadow": {
+                "blur": 10,
+                "color": "#000",
+                "enabled": false,
+                "left": 7,
+                "opacity": 0.2,
+                "top": 18
+              },
+              "events": {
+                "animationEnd": false,
+                "beforeMount": false,
+                "beforeResetZoom": false,
+                "beforeZoom": false,
+                "brushScrolled": false,
+                "click": false,
+                "dataPointMouseEnter": false,
+                "dataPointMouseLeave": false,
+                "dataPointSelection": false,
+                "legendClick": false,
+                "markerClick": false,
+                "mounted": false,
+                "mouseLeave": false,
+                "mouseMove": false,
+                "scrolled": false,
+                "selection": false,
+                "updated": false,
+                "xAxisLabelClick": false,
+                "zoomed": false
+              },
+              "height": 350,
+              "toolbar": {
+                "show": false
+              },
+              "type": "line"
+            },
+            "colors": [
+              "#77B6EA",
+              "#545454"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#e7e7e7",
+              "row": {
+                "colors": [
+                  "#f3f3f3",
+                  "transparent"
+                ],
+                "opacity": 0.5
+              }
+            },
+            "legend": {
+              "floating": true,
+              "horizontalAlign": "right",
+              "offsetX": -5,
+              "offsetY": -25,
+              "position": "top"
+            },
+            "markers": {
+              "size": 1
+            },
+            "stroke": {
+              "curve": "smooth"
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "fontSize": "10px"
+              },
+              "text": "."
+            },
+            "xaxis": {
+              "categories": [
+                "1hr Ago",
+                "2hr Ago",
+                "3hr Ago",
+                "4hr Ago",
+                "5hr Ago",
+                "6hr Ago",
+                "7hr Ago",
+                "Now"
+              ],
+              "style": {
+                "fontSize": "10px"
+              },
+              "title": {
+                "text": "Target"
+              }
+            },
+            "yaxis": {
+              "max": 30,
+              "min": 0,
+              "title": {
+                "text": "VOC% LEL"
+              }
+            }
+          },
+          "series": [
+            {
+              "data": [
+                "16%",
+                17,
+                18,
+                19,
+                17,
+                16,
+                19,
+                18
+              ],
+              "name": "VOC% LEL"
+            },
+            {
+              "data": [
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20
+              ],
+              "name": "Target(\u003c20%)"
+            }
+          ]
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

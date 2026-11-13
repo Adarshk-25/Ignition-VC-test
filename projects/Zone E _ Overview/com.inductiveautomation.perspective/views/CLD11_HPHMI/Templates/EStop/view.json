@@ -1,0 +1,283 @@
+{
+  "custom": {},
+  "params": {
+    "tagRoot": "[default]IN11_E122_PCE_CLD11",
+    "tag": "Telemetry/SGC001/State",
+    "code": "SGC001",
+    "healthy": true
+  },
+  "propConfig": {
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.code": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.healthy": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 48,
+      "height": 50
+    }
+  },
+  "root": {
+    "type": "ia.container.coord",
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "aspectRatio": "48:50",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Frame",
+          "tooltip": {
+            "enabled": true,
+            "text": "Emergency stop"
+          }
+        },
+        "position": {
+          "x": 0.0833,
+          "y": 0.0,
+          "width": 0.8333,
+          "height": 0.72
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "borderRadius": "4px",
+            "border": "2px solid transparent"
+          }
+        },
+        "propConfig": {
+          "props.style.borderColor": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})) && (toInt(toMillis(now(500)) / 500) % 2 = 0), \"#D7262E\", \"transparent\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Housing",
+          "tooltip": {
+            "enabled": true,
+            "text": "Emergency stop"
+          }
+        },
+        "position": {
+          "x": 0.1667,
+          "y": 0.06,
+          "width": 0.6667,
+          "height": 0.6
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "backgroundImage": "linear-gradient(160deg, #FFE45C 0%, #F2C200 55%, #C99A00 100%)",
+            "border": "1px solid #7A6200",
+            "borderRadius": "4px",
+            "boxShadow": "inset 0 1px 0 rgba(255,255,255,.6), 0 1px 2px rgba(0,0,0,.35)"
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Collar",
+          "tooltip": {
+            "enabled": true,
+            "text": "Emergency stop"
+          }
+        },
+        "position": {
+          "x": 0.25,
+          "y": 0.12,
+          "width": 0.5,
+          "height": 0.48
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "borderRadius": "50%",
+            "backgroundImage": "radial-gradient(circle at 40% 35%, #D9D9D9, #7C7C7C)",
+            "border": "1px solid #5A5A5A"
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Mushroom",
+          "tooltip": {
+            "enabled": true,
+            "text": "Emergency stop"
+          }
+        },
+        "position": {
+          "x": 0.2917,
+          "y": 0.16,
+          "width": 0.4167,
+          "height": 0.4
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "borderRadius": "50%",
+            "border": "1px solid #6E0B10",
+            "backgroundImage": "radial-gradient(circle at 35% 30%, #FF8A80 0%, #E3262E 45%, #8E0E14 100%)",
+            "boxShadow": "0 2px 2px rgba(0,0,0,.45)",
+            "transition": "transform .3s ease, box-shadow .3s ease"
+          }
+        },
+        "propConfig": {
+          "props.style.transform": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})), \"scale(0.78)\", \"scale(1)\")"
+                }
+              ]
+            }
+          },
+          "props.style.boxShadow": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})), \"inset 0 2px 3px rgba(0,0,0,.6)\", \"0 2px 2px rgba(0,0,0,.45)\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Code",
+          "tooltip": {
+            "enabled": true,
+            "text": "Emergency stop"
+          }
+        },
+        "position": {
+          "x": 0.0,
+          "y": 0.72,
+          "width": 1.0,
+          "height": 0.26
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "9px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center",
+            "color": "#4F4F4F"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(!isGood({value}), \"?\", if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})), \"PRESSED\", {view.params.code}))"
+                }
+              ]
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})), \"#D7262E\", \"#4F4F4F\")"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

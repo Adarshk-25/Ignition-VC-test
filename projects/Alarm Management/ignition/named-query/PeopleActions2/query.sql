@@ -1,0 +1,1 @@
+select Top 1 Target_Date,Status  From PeopleActions order by Sn desc;

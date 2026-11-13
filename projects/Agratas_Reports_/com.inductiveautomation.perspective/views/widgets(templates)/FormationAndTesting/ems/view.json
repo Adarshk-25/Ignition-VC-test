@@ -1,0 +1,199 @@
+{
+  "custom": {},
+  "params": {
+    "label": "value",
+    "path": 0
+  },
+  "propConfig": {
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 78
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "3-D red button (not pressed)_7"
+        },
+        "position": {
+          "height": 0.4617,
+          "width": 0.5002,
+          "x": 0.2549,
+          "y": 0.0883
+        },
+        "propConfig": {
+          "props.elements[2].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.path"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#AAAAAA"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "56.25",
+                  "cy": "56.25",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#737373",
+                      "style": {
+                        "stopColor": "#DEDEDE"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.82",
+                      "stopColor": "#DEDEDE",
+                      "style": {
+                        "stopColor": "#DEDEDE"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#575757",
+                      "style": {
+                        "stopColor": "#DEDEDE"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "r": "56.25",
+                  "type": "radialGradient"
+                },
+                {
+                  "cx": "56.25",
+                  "cy": "56.25",
+                  "fill": {
+                    "paint": "#fff",
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "circle",
+                  "r": "56.25",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.5"
+                  },
+                  "type": "circle"
+                }
+              ],
+              "id": "Group_Red_Button_Base",
+              "name": "Group_Red_Button_Base",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "55.25",
+                  "cy": "55.112",
+                  "fill": {},
+                  "name": "ellipse",
+                  "rx": "44.029",
+                  "ry": "44.517",
+                  "type": "ellipse"
+                }
+              ],
+              "id": "Group_Red_Button_Side",
+              "name": "Group_Red_Button_Side",
+              "type": "group"
+            },
+            {
+              "elements": [],
+              "id": "Group_Red_Button_Face_Front",
+              "name": "Group_Red_Button_Face_Front",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 112.5 112.5"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label_42"
+        },
+        "position": {
+          "height": 0.3714,
+          "width": 0.9359,
+          "x": 0.0188,
+          "y": 0.615
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "borderStyle": "none",
+            "borderWidth": 0,
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "78:70",
+      "mode": "percent",
+      "style": {
+        "alignItems": "stretch",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

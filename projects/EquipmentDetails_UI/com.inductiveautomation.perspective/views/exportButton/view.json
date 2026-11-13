@@ -1,0 +1,88 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 856,
+      "width": 1009
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "height": 788,
+          "width": 996,
+          "x": 29,
+          "y": 81.5
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "polling": {
+                  "enabled": true,
+                  "rate": "30"
+                },
+                "queryPath": "exportQuery",
+                "returnFormat": "dataset"
+              },
+              "type": "query"
+            }
+          }
+        },
+        "props": {
+          "selection": {
+            "data": [
+              {
+                "action": "resources modified",
+                "action_target": "SlurryCoaterSystemA",
+                "action_value": "com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HOPPER/widget_Ceramic_Positive_Sending_Hopper, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/FILTER/widget_Mesh_Filter, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VALVE/widget_Pressure_Safety_Valve, com.inductiveautomation.perspective/views/widgets(templates)/processdisplay, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VALVE/widget_Butterfly_Valve, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VALVE/valve_2way, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/AIR HOIST/widget_Air_Hoist, com.inductiveautomation.perspective/views/widgets(templates)/action_badger, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VACUUM CONVEYER/widget_Vacuum_Conveyer, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/FILTER/widget_Cartridge_Filter, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/Instruments/instrument_name, com.inductiveautomation.perspective/session-props, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/TANK/widget_Coater_Buffer_Tank, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/LINES/widget_Lines, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HOPPER/widget_Vibrator, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/PD MIXER TANK/pdMixerTank2, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/METER/widget_Rotary_Magentic_Flow_transmitter, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HOPPER/widget_Air_Purge, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HYDRAULIC UNIT/Hydraulic Unit, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/forTesting, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/TANK/Tank, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HOPPER/widget_Air_Fludizer, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VFD_PUMP/widget_Rotary_Pump, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/METER/flow meter, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HEATING UNIT/HeatingUnit, com.inductiveautomation.perspective/views/widgets(templates)/cardDisplay, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/PRESSURE REGULATOR/PressureRegulator, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/TANK/widget_Cnt_Storage_Tank, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HOPPER/widget_Ceramic_Weighing_Hopper, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/DUST COLLECTION ROOM/widget_Dust_Collection, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/SCREW FEEDER/ScrewFeeder, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/PIG/widget_PIG_Launcher, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VALVE/RotaryValve, com.inductiveautomation.perspective/views/widgets(templates)/baseTemplates/inputValues, com.inductiveautomation.perspective/views/widgets(templates)/baseTemplates/circularGuage, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/CONVEYER/conveyer, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/PD MIXER TANK/pdMixerTank, com.inductiveautomation.perspective/views/widgets(templates)/baseTemplates/labelValueDisplay, com.inductiveautomation.perspective/views/widgets(templates)/circularGuage_OEE, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HOPPER/InletHopper, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/TANK/widget_Dispersant_Storage_Tank, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VFD_PUMP/widget_Sealless_Pump, com.inductiveautomation.perspective/page-config, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/TANK/widget_NMP_Tank, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/FILTER/widget_Magnetic_Filter, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/FILTER/widget_HEPA_Filter, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VFD_PUMP/widget_Diaphragm_Pump, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/PD MIXER TANK/pd_MixerTank, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HOPPER/widget_CM_Weighing_Hopper, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VALVE/widget_Diverted_Valve, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/HOPPER/hopper2, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/METER/widget_Voltmeter_Ammeter, com.inductiveautomation.perspective/views/widgets(templates)/CMWidgets/VALVE/widget_FC_Valve",
+                "actor": "Anavi.J@bs.nttdata.com",
+                "actor_host": "10.34.8.69",
+                "audit_events_id": 4193,
+                "event_timestamp": 1775545802400,
+                "originating_context": 2,
+                "originating_system": "sys:Ignition-ag-win-ig-dev:/project:SlurryCoaterSystemA",
+                "status_code": 0
+              }
+            ],
+            "selectedColumn": "originating_context",
+            "selectedRow": 3
+          }
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\n\n\tquery \u003d \"SELECT * FROM audit_events\"\n\n\tdata \u003d system.db.runQuery(query, \"Dev_MSSQL_Server\")\n\n\tbytes \u003d system.dataset.toExcel(True, [data])\n\n\tsystem.perspective.download(\n\t\tfilename \u003d \"audit_logs.xlsx\",\n\t\tdata \u003d bytes\n\t)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 80,
+          "x": 209,
+          "y": 32
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

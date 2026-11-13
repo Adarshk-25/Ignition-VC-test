@@ -1,0 +1,723 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 492,
+      "width": 799
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Drawing"
+            },
+            "position": {
+              "height": 141,
+              "width": 336,
+              "x": 10,
+              "y": 10
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "250",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "3px"
+                  },
+                  "type": "rect",
+                  "width": "300",
+                  "x": 207,
+                  "y": 124
+                },
+                {
+                  "d": "M207.66668065677453 185.6666717529297L505.9999942779541 186 505.9999942779541 186",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "pen-path",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M207.1666704842491 244.83333587646484L505.49998410542867 245.16666412353516 505.49998410542867 245.16666412353516",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "pen-path_0",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M262.8333429424768 29.166667997837067L451.16666425267977 29.49999624490738 451.16666425267977 29.49999624490738",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "pen-path_1",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "transform": "matrix(6.123234262925839e-17 -1 1 6.123234262925839e-17 248.83334350585938 636.8333740234375)",
+                  "type": "path"
+                },
+                {
+                  "d": "M262.33338359284454 144.99999624490738L450.6667049030475 145.3333244919777 450.6667049030475 145.3333244919777",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "pen-path_2",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "transform": "matrix(6.123234262925839e-17 -1 1 6.123234262925839e-17 248.83334350585938 636.8333740234375)",
+                  "type": "path"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "206 123 302 252"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 33,
+              "width": 329,
+              "x": 15,
+              "y": 14
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "PLC Connection Status "
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 33,
+              "width": 79,
+              "x": 11.5,
+              "y": 47.5
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "PLC"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 33,
+              "width": 129,
+              "x": 91.5,
+              "y": 47.5
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "Communication Status"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "height": 33,
+              "width": 122,
+              "x": 223,
+              "y": 47.5
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "TimeStamp"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 32,
+              "width": 129,
+              "x": 91.5,
+              "y": 80.5
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "publishInitial": false,
+                    "tagPath": "[System]Gateway/OPC/Connections/kep/State"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_4"
+            },
+            "position": {
+              "height": 32,
+              "width": 123,
+              "x": 223,
+              "y": 82
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[System]Gateway/OPC/Connections/kep/State.Timestamp"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_5"
+            },
+            "position": {
+              "height": 32,
+              "width": 78,
+              "x": 13.5,
+              "y": 81.5
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[System]Gateway/OPC/Connections/kep.Name"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_6"
+            },
+            "position": {
+              "height": 32,
+              "width": 78,
+              "x": 13.5,
+              "y": 114.5
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[System]Gateway/OPC/Connections/PLC.Name"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_7"
+            },
+            "position": {
+              "height": 32,
+              "width": 129,
+              "x": 90.5,
+              "y": 113.5
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[System]Gateway/OPC/Connections/PLC/State"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_8"
+            },
+            "position": {
+              "height": 32,
+              "width": 123,
+              "x": 222,
+              "y": 115
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[System]Gateway/OPC/Connections/PLC/State.Timestamp"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px"
+        },
+        "propConfig": {
+          "props.data[0].ConnectionStatus": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[System]Gateway/OPC/Connections/kep/State"
+              },
+              "type": "tag"
+            }
+          },
+          "props.data[0].PLC": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[System]Gateway/OPC/Connections/kep.Name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.data[0].TimeStamp": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[System]Gateway/OPC/Connections/kep/State.Timestamp"
+              },
+              "type": "tag"
+            }
+          },
+          "props.data[1].ConnectionStatus": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[System]Gateway/OPC/Connections/PLC/State"
+              },
+              "type": "tag"
+            }
+          },
+          "props.data[1].PLC": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[System]Gateway/OPC/Connections/PLC.Name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.data[1].TimeStamp": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[System]Gateway/OPC/Connections/PLC/State.Timestamp"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "bodyStyle": {
+            "classes": "Table/tableValue"
+          },
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "PLC Name",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "ConnectionStatus",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "TimeStamp",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            }
+          ],
+          "data": [
+            {},
+            {}
+          ],
+          "headerStyle": {
+            "classes": "Table/tableHeader"
+          },
+          "pager": {
+            "bottom": false
+          }
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

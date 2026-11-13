@@ -1,0 +1,89 @@
+{
+  "accessPermissions": {
+    "securityLevels": [
+      {
+        "children": [],
+        "description": "Represents a user who has been authenticated by the system.",
+        "name": "Authenticated"
+      }
+    ],
+    "type": "AllOf"
+  },
+  "allowDesignerSSO": false,
+  "allowUserAdmin": false,
+  "createProjectPermissions": {
+    "securityLevels": [
+      {
+        "children": [],
+        "description": "Represents a user who has been authenticated by the system.",
+        "name": "Authenticated"
+      }
+    ],
+    "type": "AnyOf"
+  },
+  "designerAuthStrategy": "CLASSIC",
+  "designerAuthTokenInactivityTimeout": 30,
+  "designerAuthTokenTimeToLive": 0,
+  "designerPermissions": {
+    "securityLevels": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "name": "Administrator"
+              }
+            ],
+            "name": "Roles"
+          }
+        ],
+        "name": "Authenticated"
+      }
+    ],
+    "type": "AnyOf"
+  },
+  "designerRoleName": "Administrator",
+  "forceIdpAuth": true,
+  "readPermissions": {
+    "securityLevels": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "name": "Administrator"
+              }
+            ],
+            "name": "Roles"
+          }
+        ],
+        "name": "Authenticated"
+      }
+    ],
+    "type": "AnyOf"
+  },
+  "systemAuthProfile": "temp_0",
+  "systemIdentityProvider": "temp_0",
+  "userInactivityTimeout": 0,
+  "writePermissions": {
+    "securityLevels": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "name": "Administrator"
+              }
+            ],
+            "name": "Roles"
+          }
+        ],
+        "name": "Authenticated"
+      }
+    ],
+    "type": "AnyOf"
+  }
+}

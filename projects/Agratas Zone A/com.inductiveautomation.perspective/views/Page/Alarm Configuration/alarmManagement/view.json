@@ -1,0 +1,646 @@
+{
+  "custom": {
+    "selectedRow": null
+  },
+  "params": {
+    "path": "/"
+  },
+  "propConfig": {
+    "params.path": {
+      "binding": {
+        "config": {
+          "path": "page.props.path"
+        },
+        "type": "property"
+      },
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 914,
+      "width": 1321
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "122px"
+                    },
+                    "props": {
+                      "text": "Select Process:"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "242px"
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Cutting \u0026 Stacking",
+                          "value": "agratas/sanand/zoneA/line1/cutting-stacking"
+                        },
+                        {
+                          "label": "Assembly",
+                          "value": "sanand/zoneA/line1/assembly"
+                        }
+                      ],
+                      "placeholder": {
+                        "text": "Select"
+                      },
+                      "value": "agratas/sanand/zoneA/line1/cutting-stacking"
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "50px"
+                },
+                "props": {
+                  "style": {
+                    "classes": "widgets/spacing"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "AlarmStatusTable"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.filters.active.conditions.source": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"*\"+{.../FlexContainer/Dropdown.props.value}+\"*\""
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "columns": {
+                        "active": {
+                          "ackTime": {
+                            "order": 9
+                          },
+                          "activeTime": {
+                            "enabled": false
+                          },
+                          "displayPath": {
+                            "enabled": false,
+                            "order": 10
+                          },
+                          "label": {
+                            "order": 6
+                          },
+                          "name": {
+                            "enabled": false,
+                            "order": 0
+                          },
+                          "priority": {
+                            "enabled": false,
+                            "order": 8
+                          },
+                          "source": {
+                            "enabled": false
+                          },
+                          "state": {
+                            "order": 9
+                          }
+                        }
+                      },
+                      "columnsAssociated": {
+                        "active": [
+                          {
+                            "enabled": true,
+                            "field": "Alarm Group Id",
+                            "order": 2,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Alarm Code",
+                            "order": 3,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Severity",
+                            "order": 4,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "FBS Source",
+                            "order": 5,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Troubleshoot",
+                            "order": 7,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Timestamp Active",
+                            "order": 0,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": false,
+                            "field": "Timestamp Reset",
+                            "order": 1,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Alarm Priority",
+                            "order": 4,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          },
+                          {
+                            "enabled": true,
+                            "field": "Alarm Description",
+                            "order": 0,
+                            "sort": "none",
+                            "strictWidth": false,
+                            "width": ""
+                          }
+                        ]
+                      },
+                      "filters": {
+                        "active": {
+                          "conditions": {},
+                          "priorities": {
+                            "critical": false,
+                            "high": false,
+                            "low": false,
+                            "medium": false
+                          },
+                          "states": {
+                            "clearUnacked": false
+                          }
+                        }
+                      },
+                      "rowStyles": {
+                        "activeAcked": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarmAck/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarmAck/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarmAck/high"
+                            },
+                            "low": {
+                              "classes": "alarmAck/low"
+                            },
+                            "medium": {
+                              "classes": "alarmAck/medium"
+                            }
+                          }
+                        },
+                        "activeUnacked": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "backgroundColor": "",
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "backgroundColor": "",
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "backgroundColor": "",
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "backgroundColor": "",
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "type": "ia.display.alarmstatustable"
+                  }
+                ],
+                "meta": {
+                  "name": "alarmStatusFlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-between",
+                  "style": {
+                    "classes": "widgets/spacing"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "alarmStatusTable"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "132px"
+                    },
+                    "props": {
+                      "text": "Select Process: "
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown"
+                    },
+                    "position": {
+                      "basis": "242px"
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Cutting \u0026 Stacking",
+                          "value": "agratas/sanand/zoneA/line1/cutting-stacking"
+                        },
+                        {
+                          "label": "Assembly",
+                          "value": "sanand/zoneA/line1/assembly"
+                        }
+                      ],
+                      "value": "sanand/zoneA/line1/assembly"
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "50px"
+                },
+                "props": {
+                  "style": {
+                    "classes": "widgets/spacing"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "AlarmJournalTable"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.filter.conditions.source": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"*\"+{.../FlexContainer/Dropdown.props.value}+\"*\""
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "columns": {
+                        "displayPath": {
+                          "order": 9
+                        },
+                        "eventId": {
+                          "enabled": false
+                        },
+                        "eventState": {
+                          "order": 10
+                        },
+                        "eventTime": {
+                          "enabled": false,
+                          "order": 1
+                        },
+                        "label": {
+                          "order": 7
+                        },
+                        "priority": {
+                          "enabled": false,
+                          "order": 8
+                        },
+                        "source": {
+                          "enabled": false
+                        }
+                      },
+                      "columnsAssociated": [
+                        {
+                          "enabled": true,
+                          "field": "Alarm Group Id",
+                          "order": 2,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Alarm Code",
+                          "order": 3,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Severity",
+                          "order": 4,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "FBS Source",
+                          "order": 6,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Troubleshoot",
+                          "order": 9,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Timestamp Active",
+                          "order": 0,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Timestamp Reset",
+                          "order": 1,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Alarm Priority",
+                          "order": 5,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        },
+                        {
+                          "enabled": true,
+                          "field": "Alarm Description",
+                          "order": 0,
+                          "sort": "none",
+                          "strictWidth": false,
+                          "width": ""
+                        }
+                      ],
+                      "filter": {
+                        "conditions": {},
+                        "events": {
+                          "acked": false,
+                          "active": false,
+                          "cleared": false
+                        },
+                        "priorities": {
+                          "critical": false,
+                          "high": false,
+                          "low": false,
+                          "medium": false
+                        }
+                      },
+                      "name": "Alarm Management Journal",
+                      "rowStyles": {
+                        "acked": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        },
+                        "active": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        },
+                        "cleared": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "type": "ia.display.alarmjournaltable"
+                  }
+                ],
+                "meta": {
+                  "name": "alarmJournalFlexContainer"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "classes": "widgets/spacing"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "alarmJournal"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "path": "screens/Alarm Configurator"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "tabContainer"
+        },
+        "position": {
+          "basis": "600px",
+          "grow": 1
+        },
+        "props": {
+          "menuType": "modern",
+          "tabSize": {
+            "width": 150
+          },
+          "tabStyle": {
+            "active": {
+              "borderBottomColor": "#FFCA8A",
+              "borderBottomLeftRadius": 1,
+              "borderBottomRightRadius": 1,
+              "borderBottomStyle": "solid",
+              "borderTopRightRadius": 1,
+              "fontWeight": "bold"
+            }
+          },
+          "tabs": [
+            "Alarm Status Table",
+            "Alarm Journal",
+            "Alarm Configurator"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "custom": {
+      "changedName": []
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,498 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 845,
+      "width": 274
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onItemClicked": {
+              "config": {
+                "script": "\tselected \u003d self.props.selectionData[0].value.path\n\tsystem.perspective.navigate(page\u003d\"/{}\".format(selected))"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Tree"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.selectionData[0].value.path": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "page.props.path"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "appearance": {
+            "defaultNodeIcons": {
+              "collapsed": {
+                "path": "material/folder"
+              },
+              "empty": {
+                "path": "material/stop"
+              },
+              "expanded": {
+                "path": "material/crop_16_9"
+              }
+            },
+            "expandIcons": {
+              "collapsed": {
+                "path": "material/arrow_right"
+              },
+              "expanded": {
+                "path": "material/arrow_drop_down"
+              }
+            }
+          },
+          "items": [
+            {
+              "data": {
+                "level": "site",
+                "path": "Sanand"
+              },
+              "expanded": true,
+              "icon": {
+                "color": "",
+                "path": "material/business",
+                "style": {}
+              },
+              "items": [
+                {
+                  "data": {
+                    "level": "area",
+                    "path": "sanand/zoneE"
+                  },
+                  "expanded": true,
+                  "items": [
+                    {
+                      "data": {
+                        "level": "process",
+                        "path": "sanand/zoneE/Mixing"
+                      },
+                      "expanded": false,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "Sanand/ZoneE/Mixing/MixingTankA"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Mixing Tank A"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "Sanand/ZoneE/Mixing/MixingTankB"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Mixing Tank B"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "Sanand/ZoneE/Mixing/SlurryPumpA"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Slurry Pump A"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "Sanand/ZoneE/Mixing/SlurryPumpB"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Slurry Pump B"
+                        }
+                      ],
+                      "label": "Mixing"
+                    },
+                    {
+                      "data": {
+                        "level": "value",
+                        "path": "sanand/zoneE/coating"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "value",
+                            "path": "sanand/zoneE/coating/anode"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "anode"
+                        },
+                        {
+                          "data": {
+                            "level": "value",
+                            "path": "sanand/zoneE/coating/cathode"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "cathode"
+                        }
+                      ],
+                      "label": "Coating"
+                    },
+                    {
+                      "data": {
+                        "level": "process",
+                        "path": "sanand/zoneE/calendering"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "line",
+                            "path": "sanand/zoneE/calendering/anode"
+                          },
+                          "expanded": true,
+                          "items": [
+                            {
+                              "data": {
+                                "level": "machine",
+                                "path": "sanand/zoneE/calendering/anode/coldPress1"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "level": "oee",
+                                    "path": "sanand/zoneE/calendering/anode/coldPress1/oee"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "OEE"
+                                },
+                                {
+                                  "data": {
+                                    "level": "status",
+                                    "path": "sanand/zoneE/calendering/anode/coldPress1/status"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Status"
+                                }
+                              ],
+                              "label": "ColdPress1"
+                            },
+                            {
+                              "data": {
+                                "level": "machine",
+                                "path": "sanand/zoneE/calendering/anode/coldPress2"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "level": "oee",
+                                    "path": "sanand/zoneE/calendering/anode/coldPress2/oee"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "OEE"
+                                },
+                                {
+                                  "data": {
+                                    "level": "status",
+                                    "path": "sanand/zoneE/calendering/anode/coldPress2/status"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Status"
+                                }
+                              ],
+                              "label": "ColdPress2"
+                            }
+                          ],
+                          "label": "Anode"
+                        },
+                        {
+                          "data": {
+                            "level": "line",
+                            "path": "sanand/zoneE/calendering/cathode"
+                          },
+                          "expanded": true,
+                          "items": [
+                            {
+                              "data": {
+                                "level": "machine",
+                                "path": "sanand/zoneE/calendering/cathode/hotPress"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "level": "oee",
+                                    "path": "sanand/zoneE/calendering/cathode/hotPress/oee"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "OEE"
+                                },
+                                {
+                                  "data": {
+                                    "level": "status",
+                                    "path": "sanand/zoneE/calendering/cathode/hotPress/status"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Status"
+                                }
+                              ],
+                              "label": "HotPress"
+                            }
+                          ],
+                          "label": "Cathode"
+                        }
+                      ],
+                      "label": "Calendering"
+                    },
+                    {
+                      "data": {
+                        "level": "process",
+                        "path": "Sanand/ZoneE/Slitting"
+                      },
+                      "expanded": false,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "Sanand/ZoneE/Slitting/AnodeSlitter"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Slitter"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "Sanand/ZoneE/Slitting/CathodeSlitter"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Slitter"
+                        }
+                      ],
+                      "label": "Slitting"
+                    },
+                    {
+                      "data": {
+                        "level": "process",
+                        "path": "Sanand/ZoneE/Notching"
+                      },
+                      "expanded": false,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "Sanand/ZoneE/Notching/Anode"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Anode Notching"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "Sanand/ZoneE/Notching/Cathode"
+                          },
+                          "expanded": false,
+                          "items": [],
+                          "label": "Cathode Notching"
+                        }
+                      ],
+                      "label": "Notching"
+                    }
+                  ],
+                  "label": "Zone E"
+                },
+                {
+                  "data": {
+                    "path": "analytics"
+                  },
+                  "expanded": false,
+                  "icon": {
+                    "color": "",
+                    "path": "material/analytics",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "analytics/trends"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Trends"
+                    },
+                    {
+                      "data": {
+                        "path": "analytics/reports"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Reports"
+                    }
+                  ],
+                  "label": "ANALYTICS"
+                },
+                {
+                  "data": {
+                    "path": "operations"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/dashboard",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "alarmsManagement"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/notification_important",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Alarms"
+                    },
+                    {
+                      "data": {
+                        "path": "operations/recipes"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/menu_book",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Recipes"
+                    }
+                  ],
+                  "label": "OPERATIONS"
+                },
+                {
+                  "data": {
+                    "path": "system"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/settings_applications",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "userManagement"
+                      },
+                      "expanded": true,
+                      "icon": {
+                        "color": "",
+                        "path": "material/admin_panel_settings",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Security \u0026 Roles"
+                    },
+                    {
+                      "data": {
+                        "path": "auditLogs"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/history",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Audit Logs"
+                    },
+                    {
+                      "data": {
+                        "path": "system/help"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/help_outline",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Help"
+                    }
+                  ],
+                  "label": "Setting"
+                }
+              ],
+              "label": "Sanand"
+            }
+          ],
+          "selection": [
+            "0/0/1/1/0"
+          ],
+          "selectionData": [
+            {
+              "itemPath": "0/0/1/1/0",
+              "value": {
+                "level": "machine"
+              }
+            }
+          ],
+          "style": {
+            "classes": "widgets/spacing widgets/valueDisplay"
+          }
+        },
+        "type": "ia.display.tree"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "text": "Label"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "margin": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

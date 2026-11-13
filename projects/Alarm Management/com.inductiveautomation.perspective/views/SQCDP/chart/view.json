@@ -1,0 +1,167 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 200,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "apexchart"
+            },
+            "position": {
+              "height": 1,
+              "width": 0.9933
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "dropShadow": {
+                    "blur": 10,
+                    "color": "#000",
+                    "enabled": true,
+                    "left": 7,
+                    "opacity": 0.2,
+                    "top": 18
+                  },
+                  "events": {
+                    "animationEnd": false,
+                    "beforeMount": false,
+                    "beforeResetZoom": false,
+                    "beforeZoom": false,
+                    "brushScrolled": false,
+                    "click": false,
+                    "dataPointMouseEnter": false,
+                    "dataPointMouseLeave": false,
+                    "dataPointSelection": false,
+                    "legendClick": false,
+                    "markerClick": false,
+                    "mounted": false,
+                    "mouseLeave": false,
+                    "mouseMove": false,
+                    "scrolled": false,
+                    "selection": false,
+                    "updated": false,
+                    "xAxisLabelClick": false,
+                    "zoomed": false
+                  },
+                  "height": 350,
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "line"
+                },
+                "colors": [
+                  "#77B6EA",
+                  "#545454"
+                ],
+                "dataLabels": {
+                  "enabled": true
+                },
+                "grid": {
+                  "borderColor": "#e7e7e7",
+                  "row": {
+                    "colors": [
+                      "#f3f3f3",
+                      "transparent"
+                    ],
+                    "opacity": 0.5
+                  }
+                },
+                "legend": {
+                  "floating": true,
+                  "horizontalAlign": "right",
+                  "offsetX": -5,
+                  "offsetY": -25,
+                  "position": "top"
+                },
+                "markers": {
+                  "size": 1
+                },
+                "stroke": {
+                  "curve": "smooth"
+                },
+                "title": {
+                  "align": "left",
+                  "text": "VOC% LEL vs Target"
+                },
+                "xaxis": {
+                  "categories": [
+                    "1hr_ago",
+                    "2hr_ago",
+                    "3hr_ago",
+                    "4hr_ago",
+                    "5hr_ago",
+                    "6hr_ago",
+                    "7hr_ago"
+                  ],
+                  "title": {
+                    "text": "Time"
+                  }
+                },
+                "yaxis": {
+                  "max": 0,
+                  "min": 30,
+                  "title": {
+                    "text": "VOC% LEL"
+                  }
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    16,
+                    17,
+                    18,
+                    19,
+                    17,
+                    16,
+                    19
+                  ],
+                  "name": "VOC% LEL"
+                },
+                {
+                  "data": [
+                    20,
+                    20,
+                    20,
+                    20,
+                    20,
+                    20,
+                    20
+                  ],
+                  "name": "Target(\u003c20% LEL)"
+                }
+              ]
+            },
+            "type": "kyvislabs.display.apexchart"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "aspectRatio": "200:200",
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

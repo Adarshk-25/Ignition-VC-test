@@ -1,0 +1,960 @@
+{
+  "custom": {},
+  "params": {
+    "Label": "value",
+    "header": "value",
+    "machineFBS": "value",
+    "tag_SM": "value",
+    "title": "value",
+    "tooltip": "value"
+  },
+  "propConfig": {
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.header": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.machineFBS": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_SM": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.title": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tooltip": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 183,
+      "width": 197
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Hopper 8",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.9275,
+          "width": 0.6589,
+          "x": 0.0007,
+          "y": 0.0055
+        },
+        "propConfig": {
+          "custom.color": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}/CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tooltip"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[0].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[1].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[0].elements[2].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[2].elements[0].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[2].elements[1].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].elements[2].elements[2].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[1].elements[0].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[1].elements[1].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[1].elements[2].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#595959",
+                      "style": {},
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#EBEBEB",
+                      "style": {},
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {},
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "0.0015",
+                  "x2": "100.0015",
+                  "y1": "30.5742",
+                  "y2": "30.5742"
+                },
+                {
+                  "d": "M88.335 61.148l16.666-38.964V0h-100v22.185l16.533 38.65",
+                  "fill": {
+                    "paint": "#fff",
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": 0.25
+                  },
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#595959",
+                      "style": {},
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#EBEBEB",
+                      "style": {},
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {},
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "type": "linearGradient",
+                  "x1": "16.5342",
+                  "x2": "83.3354",
+                  "y1": "85.9922",
+                  "y2": "85.9922"
+                },
+                {
+                  "d": "M21.534 60.835l0.134 0.313v11.036l19.482 38.964h27.816l19.369-38.964V61.148",
+                  "fill": {
+                    "url": "url(#SVGID_2_)"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": 0.25
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M18.853 0v22.185l12.05 38.964v11.036l14.076 38.964h20.046l14.076-38.964V61.148L91.15 22.185V0H18.853",
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": 0.25
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Hopper",
+              "name": "Group_Hopper",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "55.000999450683594",
+                  "cy": "111.14800262451172",
+                  "fill": {},
+                  "name": "ellipse",
+                  "rx": "13.852",
+                  "ry": "1.352",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "ellipse"
+                },
+                {
+                  "cx": "55.000999450683594",
+                  "cy": "111.14800262451172",
+                  "fill": {
+                    "paint": "#4C4C4C"
+                  },
+                  "name": "ellipse",
+                  "rx": "11.036",
+                  "ry": "1.014",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "ellipse"
+                }
+              ],
+              "id": "Group_Outlet",
+              "name": "Group_Outlet",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M21.668 72.185h66.667",
+                  "fill": {},
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#7F7F7F",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#595959",
+                      "style": {},
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#CCCCCC",
+                      "style": {},
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#595959",
+                      "style": {},
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_3_",
+                  "name": "SVGID_3_",
+                  "type": "linearGradient",
+                  "x1": "11.0376",
+                  "x2": "88.9663",
+                  "y1": "61.0918",
+                  "y2": "61.0918"
+                },
+                {
+                  "d": "M16.038 60.36h77.929v1.464H16.038V60.36z",
+                  "fill": {
+                    "url": "url(#SVGID_3_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M16.038 60.36h77.929v1.464H16.038V60.36",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Cross_Layer",
+              "name": "Group_Cross_Layer",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M18.853 47.185L13.335 33.333 5.0009999999999994 44.482 18.853 47.185z",
+                  "fill": {
+                    "paint": "#bdbdbd"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M91.15 47.185l5.519-13.851 8.446 11.148L91.15 47.185z",
+                  "fill": {
+                    "paint": "#bdbdbd"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Triangle",
+              "name": "Group_Triangle",
+              "type": "group"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "name": "perspective-polygon_0",
+              "specialPath": {
+                "angle": 61,
+                "corners": 3,
+                "height": 12.354755835721138,
+                "rounding": 0,
+                "width": 12.354755835721138,
+                "x": 98.90047303013453,
+                "y": 42.60545851005155
+              },
+              "stroke": {
+                "paint": "hsl(0, 0%, 0%)",
+                "width": "0.25px"
+              },
+              "transform": "matrix(0.9998477101325989 0.01745240017771721 -0.01745240017771721 0.9998477101325989 0.8737776875495911 -0.12502305209636688)",
+              "type": "perspective-star"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "name": "perspective-polygon_1",
+              "specialPath": {
+                "angle": 61,
+                "corners": 3,
+                "height": 12.354755835721138,
+                "rounding": 0,
+                "width": 12.354755835721138,
+                "x": -1.084297983125353,
+                "y": 44.350698714087784
+              },
+              "stroke": {
+                "paint": "hsl(0, 0%, 0%)",
+                "width": "0.25px"
+              },
+              "transform": "matrix(0.9998477101325989 0.01745240017771721 -0.01745240017771721 0.9998477101325989 0.8737776875495911 -0.12502305209636688)",
+              "type": "perspective-star"
+            }
+          ],
+          "viewBox": "0 0 110 112.5"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "custom": {
+          "key": "value"
+        },
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1064,
+          "width": 0.2988,
+          "x": 0.5737,
+          "y": 0.5711
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "path": "{view.params.path}"
+                },
+                "tagPath": "{path}/PV"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}+\u0027 \u0027+{view.params.unit}",
+                  "type": "expression"
+                },
+                {
+                  "formatType": "numeric",
+                  "formatValue": "##.00",
+                  "type": "format"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "borderColor": "black",
+            "borderStyle": "solid",
+            "borderWidth": "1.5px"
+          },
+          "textStyle": {
+            "alignSelf": "center",
+            "color": "#000000",
+            "fontFamily": "sans-serif",
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 0.1064,
+          "width": 0.2943,
+          "x": 0.5738,
+          "y": 0.4692
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "parameter": "{view.params.path}"
+                },
+                "tagPath": "{parameter}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "alignItems": "center"
+          },
+          "textStyle": {
+            "fontSize": "75%"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_3"
+        },
+        "position": {
+          "height": 0.2951,
+          "width": 0.4974,
+          "x": 0.0778,
+          "y": 0.1491
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Drawing_4",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.1465,
+          "rotate": {
+            "anchor": "-17% 75%"
+          },
+          "width": 0.128,
+          "x": 0.0432,
+          "y": 0.1165
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "Not Available",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "NA"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Out of Service"
+                    },
+                    {
+                      "input": 2,
+                      "output": "Not Executing"
+                    },
+                    {
+                      "input": 3,
+                      "output": "Executing"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "../Hopper 8.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}/CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "NA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "NA"
+                    },
+                    {
+                      "input": 1,
+                      "output": "OS"
+                    },
+                    {
+                      "input": 2,
+                      "output": "NE"
+                    },
+                    {
+                      "input": 3,
+                      "output": "E"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "height": 22,
+              "name": "rect",
+              "rx": 5,
+              "ry": 5,
+              "stroke": {
+                "paint": "#BDBDBD"
+              },
+              "type": "rect",
+              "width": "22",
+              "x": 3,
+              "y": "2"
+            },
+            {
+              "fontSize": "12px",
+              "name": "text",
+              "type": "text",
+              "x": "6.000001907348633",
+              "y": "18.000017166137695"
+            }
+          ],
+          "preserveAspectRatio": "none"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Drawing_1",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.1465,
+          "width": 0.1327,
+          "x": 0.4709,
+          "y": 0.1165
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}\\CurrentMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "None",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "None"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Maintenance"
+                    },
+                    {
+                      "input": 2,
+                      "output": "Set Up"
+                    },
+                    {
+                      "input": 3,
+                      "output": "Processing"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "../Hopper 8.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}/CurrentMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "N",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "N"
+                    },
+                    {
+                      "input": 1,
+                      "output": "M"
+                    },
+                    {
+                      "input": 2,
+                      "output": "S"
+                    },
+                    {
+                      "input": 3,
+                      "output": "P"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.Tag}"
+                },
+                "tagPath": "{Tag}\\CurrentMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "name": "perspective-arc",
+              "specialPath": {
+                "end": 0,
+                "height": 22,
+                "slice": true,
+                "start": 0,
+                "width": 22,
+                "x": 3,
+                "y": 3
+              },
+              "stroke": {
+                "paint": "#BDBDBD"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "fontSize": "13px",
+              "name": "text",
+              "stroke": {
+                "width": "3px"
+              },
+              "type": "text",
+              "x": "8.800013542175293",
+              "y": "18.60003089904785"
+            }
+          ],
+          "preserveAspectRatio": "none"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "draggable": true,
+            "id": "sqy2zHUC",
+            "modal": false,
+            "overlayDismiss": false,
+            "position": {
+              "height": 800,
+              "width": 1200
+            },
+            "positionType": "exact",
+            "resizable": true,
+            "showCloseIcon": true,
+            "title": "{view.params.title}",
+            "type": "open",
+            "viewParams": {
+              "machineFBS": "{view.params.machineFBS}",
+              "path": "{view.params.tag_SM}",
+              "tableHeader": "{view.params.header}"
+            },
+            "viewPath": "Page/PopUpScreensTemplate/AGStatusTemplateView",
+            "viewportBound": false
+          },
+          "scope": "C",
+          "type": "popup"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": -0.0406,
+      "y": -0.071
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

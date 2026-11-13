@@ -1,0 +1,122 @@
+{
+  "custom": {},
+  "params": {
+    "rotating": "value"
+  },
+  "propConfig": {
+    "params.rotating": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 98,
+      "width": 67
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "basis": "85px"
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {
+                "paint": "#ffffff"
+              },
+              "name": "perspective-arc",
+              "specialPath": {
+                "end": 0,
+                "height": 30,
+                "slice": true,
+                "start": 0,
+                "width": 30,
+                "x": 12,
+                "y": 15
+              },
+              "stroke": {
+                "paint": "#b6b7b9",
+                "width": "2px"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "fill": {
+                "paint": "#ffffff"
+              },
+              "name": "perspective-arc_0",
+              "specialPath": {
+                "end": 0,
+                "height": 30,
+                "slice": true,
+                "start": 0,
+                "width": 30,
+                "x": 32.333251953125,
+                "y": 45.333251953125
+              },
+              "stroke": {
+                "paint": "#b6b7b9",
+                "width": "2px"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "fill": {
+                "paint": "#b6b7b9"
+              },
+              "name": "perspective-arc_1",
+              "specialPath": {
+                "end": 0,
+                "height": 5,
+                "slice": true,
+                "start": 0,
+                "width": 5,
+                "x": 45.333251953125,
+                "y": 58.333251953125
+              },
+              "stroke": {
+                "paint": "#b6b7b9",
+                "width": "2px"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "fill": {
+                "paint": "#b6b7b9"
+              },
+              "name": "perspective-arc_2",
+              "specialPath": {
+                "end": 0,
+                "height": 5,
+                "slice": true,
+                "start": 0,
+                "width": 5,
+                "x": 24.66650390625,
+                "y": 27.333251953125
+              },
+              "stroke": {
+                "paint": "#b6b7b9",
+                "width": "2px"
+              },
+              "type": "perspective-arc"
+            }
+          ]
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

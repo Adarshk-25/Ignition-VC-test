@@ -1,0 +1,713 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "style": {
+            "fontSize": "24px",
+            "fontWeight": "bold",
+            "marginBottom": "15px"
+          },
+          "text": "SQDCP Decision Dashboard"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontWeight": "bold"
+                  },
+                  "text": "Safety"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "20px"
+                  },
+                  "text": "98% ▲"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#22c55e",
+                "borderRadius": "10px",
+                "color": "white",
+                "padding": "15px",
+                "width": "20%"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Quality"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "20px"
+                  },
+                  "text": "92% ▲"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#06b6d4",
+                "borderRadius": "10px",
+                "color": "white",
+                "padding": "15px",
+                "width": "20%"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Cost"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "20px"
+                  },
+                  "text": "85% ▼"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#f59e0b",
+                "borderRadius": "10px",
+                "color": "white",
+                "padding": "15px",
+                "width": "20%"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Delivery"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "20px"
+                  },
+                  "text": "88% ▲"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_2"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#3b82f6",
+                "borderRadius": "10px",
+                "color": "white",
+                "padding": "15px",
+                "width": "20%"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "People"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "20px"
+                  },
+                  "text": "90% ▲"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_3"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#a855f7",
+                "borderRadius": "10px",
+                "color": "white",
+                "padding": "15px",
+                "width": "20%"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "props": {
+          "style": {
+            "gap": "10px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold",
+            "marginTop": "25px"
+          },
+          "text": "Performance Trends"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "XYChart"
+        },
+        "props": {
+          "data": [
+            {
+              "Quality": 90,
+              "Safety": 95,
+              "day": "Mon"
+            },
+            {
+              "Quality": 92,
+              "Safety": 97,
+              "day": "Tue"
+            },
+            {
+              "Quality": 91,
+              "Safety": 98,
+              "day": "Wed"
+            },
+            {
+              "Quality": 93,
+              "Safety": 96,
+              "day": "Thu"
+            },
+            {
+              "Quality": 94,
+              "Safety": 99,
+              "day": "Fri"
+            }
+          ],
+          "series": [
+            {
+              "candlestick": {
+                "appearance": {
+                  "deriveFieldsFromData": {
+                    "fill": {
+                      "color": "",
+                      "opacity": ""
+                    },
+                    "stroke": {
+                      "color": "",
+                      "opacity": "",
+                      "width": ""
+                    }
+                  },
+                  "fill": {
+                    "color": "",
+                    "opacity": 1
+                  },
+                  "heatRules": {
+                    "dataField": "",
+                    "enabled": false,
+                    "max": "",
+                    "min": ""
+                  },
+                  "stacked": false,
+                  "stroke": {
+                    "color": "",
+                    "opacity": 1,
+                    "width": 1
+                  }
+                },
+                "high": {
+                  "x": "",
+                  "y": ""
+                },
+                "low": {
+                  "x": "",
+                  "y": ""
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "column": {
+                "appearance": {
+                  "deriveFieldsFromData": {
+                    "fill": {
+                      "color": "",
+                      "opacity": ""
+                    },
+                    "stroke": {
+                      "color": "",
+                      "opacity": "",
+                      "width": ""
+                    }
+                  },
+                  "fill": {
+                    "color": "",
+                    "opacity": 1
+                  },
+                  "heatRules": {
+                    "dataField": "",
+                    "enabled": false,
+                    "max": "",
+                    "min": ""
+                  },
+                  "height": null,
+                  "stacked": false,
+                  "stroke": {
+                    "color": "",
+                    "opacity": 1,
+                    "width": 1
+                  },
+                  "width": null
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "data": {
+                "source": "",
+                "x": "",
+                "y": ""
+              },
+              "defaultState": {
+                "visible": true
+              },
+              "hiddenInLegend": false,
+              "label": {
+                "text": ""
+              },
+              "line": {
+                "appearance": {
+                  "bullets": [
+                    {
+                      "deriveFieldsFromData": {
+                        "fill": {
+                          "color": "",
+                          "opacity": ""
+                        },
+                        "rotation": "",
+                        "stroke": {
+                          "color": "",
+                          "opacity": "",
+                          "width": ""
+                        }
+                      },
+                      "enabled": false,
+                      "fill": {
+                        "color": "",
+                        "opacity": 1
+                      },
+                      "heatRules": {
+                        "dataField": "",
+                        "enabled": false,
+                        "max": 100,
+                        "min": 2
+                      },
+                      "height": 10,
+                      "label": {
+                        "position": {
+                          "dx": 0,
+                          "dy": 0
+                        },
+                        "text": "{value}"
+                      },
+                      "render": "circle",
+                      "rotation": 0,
+                      "stroke": {
+                        "color": "",
+                        "opacity": 1,
+                        "width": 1
+                      },
+                      "tooltip": {
+                        "background": {
+                          "color": "",
+                          "opacity": 1
+                        },
+                        "cornerRadius": 3,
+                        "enabled": true,
+                        "pointerLength": 4,
+                        "text": "{name}: [bold]{valueY}[/]"
+                      },
+                      "width": 10
+                    }
+                  ],
+                  "connect": true,
+                  "fill": {
+                    "color": "",
+                    "opacity": 0
+                  },
+                  "minDistance": 0.5,
+                  "stroke": {
+                    "color": "",
+                    "dashArray": "",
+                    "opacity": 1,
+                    "width": 3
+                  },
+                  "tensionX": 1,
+                  "tensionY": 1
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "name": "Safety",
+              "render": "line",
+              "stepLine": {
+                "appearance": {
+                  "bullets": [
+                    {
+                      "deriveFieldsFromData": {
+                        "fill": {
+                          "color": "",
+                          "opacity": ""
+                        },
+                        "rotation": "",
+                        "stroke": {
+                          "color": "",
+                          "opacity": "",
+                          "width": ""
+                        }
+                      },
+                      "enabled": true,
+                      "fill": {
+                        "color": "",
+                        "opacity": 1
+                      },
+                      "heatRules": {
+                        "dataField": "",
+                        "enabled": false,
+                        "max": 100,
+                        "min": 2
+                      },
+                      "height": 10,
+                      "label": {
+                        "position": {
+                          "dx": 0,
+                          "dy": 0
+                        },
+                        "text": "{value}"
+                      },
+                      "render": "circle",
+                      "rotation": 0,
+                      "stroke": {
+                        "color": "",
+                        "opacity": 1,
+                        "width": 1
+                      },
+                      "tooltip": {
+                        "background": {
+                          "color": "",
+                          "opacity": 1
+                        },
+                        "cornerRadius": 3,
+                        "enabled": true,
+                        "pointerLength": 4,
+                        "text": "{name}: [bold]{valueY}[/]"
+                      },
+                      "width": 10
+                    }
+                  ],
+                  "connect": true,
+                  "fill": {
+                    "color": "",
+                    "opacity": 0
+                  },
+                  "minDistance": 0.5,
+                  "stroke": {
+                    "color": "",
+                    "dashArray": "",
+                    "opacity": 1,
+                    "width": 3
+                  },
+                  "tensionX": 1,
+                  "tensionY": 1
+                },
+                "open": {
+                  "x": "",
+                  "y": ""
+                }
+              },
+              "tooltip": {
+                "background": {
+                  "color": "",
+                  "opacity": 1
+                },
+                "cornerRadius": 3,
+                "enabled": true,
+                "pointerLength": 4,
+                "text": "{name}: [bold]{valueY}[/]"
+              },
+              "visible": true,
+              "x": "day",
+              "xAxis": "",
+              "y": "Safety",
+              "yAxis": "",
+              "zIndex": 0
+            },
+            {
+              "name": "Quality",
+              "render": "line",
+              "x": "day",
+              "y": "Quality"
+            }
+          ],
+          "style": {
+            "backgroundColor": "white",
+            "borderRadius": "8px",
+            "height": "250px",
+            "marginTop": "10px"
+          }
+        },
+        "type": "ia.chart.xy"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold",
+            "marginTop": "25px"
+          },
+          "text": "What is wrong right now?"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "white",
+                "borderLeft": "5px solid orange",
+                "borderRadius": "6px",
+                "padding": "12px"
+              },
+              "text": "⚠ Machine Down (Line-1)"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "white",
+                "borderLeft": "5px solid orange",
+                "borderRadius": "6px",
+                "padding": "12px"
+              },
+              "text": "⚠ Quality Issue"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "white",
+                "borderLeft": "5px solid orange",
+                "borderRadius": "6px",
+                "padding": "12px"
+              },
+              "text": "⚠ Delay Shipment"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "props": {
+          "style": {
+            "gap": "10px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "props": {
+          "style": {
+            "color": "red",
+            "fontWeight": "bold",
+            "marginTop": "25px"
+          },
+          "text": "Immediate Action Required"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#fee2e2",
+                "border": "1px solid red",
+                "borderRadius": "6px",
+                "padding": "12px"
+              },
+              "text": "🔴 Fix Machine"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#fee2e2",
+                "border": "1px solid red",
+                "borderRadius": "6px",
+                "padding": "12px"
+              },
+              "text": "🔴 Inspect Quality"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#fee2e2",
+                "border": "1px solid red",
+                "borderRadius": "6px",
+                "padding": "12px"
+              },
+              "text": "🔴 Increase Dispatch"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "props": {
+          "style": {
+            "gap": "10px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#e9eef3",
+        "padding": "20px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,751 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 666,
+      "width": 575
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "events": {
+                  "dom": {
+                    "onClick": {
+                      "config": {
+                        "script": "\tsystem.perspective.openPopup(\n    id\u003d\"machineDetails\",\n    view\u003d\"equipment_view_details\",   # your popup view name\n    params\u003d{\"machineName\": \"ColdPress1\"},\n    modal\u003dTrue,\n    draggable\u003dTrue,\n    resizable\u003dFalse,\n    position\u003d{\"top\": 100, \"left\": 200}\n)"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Title"
+                },
+                "position": {
+                  "basis": "32.5px"
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "color": "#111827",
+                    "fontSize": "22px",
+                    "fontWeight": "600"
+                  },
+                  "text": "ColdPress1"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "productId"
+                },
+                "position": {
+                  "basis": "9px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "\"product Id: \" +{[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/productID.value}"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#152734",
+                    "fontSize": "13px",
+                    "fontWeight": "400",
+                    "marginBottom": "10px",
+                    "marginLeft": "20px",
+                    "marginTop": "-5px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "machine speed"
+                },
+                "position": {
+                  "basis": "16px"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "\"Machine Speed: \" + {[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/machineSpeed.value} + \" m/min\""
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#3E3E3E",
+                    "fontSize": "13px",
+                    "fontWeight": "500",
+                    "height": "20px",
+                    "letterSpacing": "0.5px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Progress"
+                },
+                "position": {
+                  "basis": "12px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.bar.color": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/machineSpeed.value}\u003c 20, \"#16A34A\",\r\n    if({[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/machineSpeed.value} \u003c 40, \"#F59E0B\",\r\n        \"#DC2626\"))        "
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/machineSpeed.value"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "bar": {},
+                  "max": 50,
+                  "style": {
+                    "borderRadius": "8px",
+                    "color": " #64748B",
+                    "fontWeight": 500,
+                    "height": "10px",
+                    "width": "150px"
+                  },
+                  "track": {
+                    "backgroundColor": "",
+                    "style": {
+                      "backgroundColor": "#E2E8F0",
+                      "borderRadius": "8px"
+                    }
+                  },
+                  "valueDisplay": {
+                    "format": "0,0"
+                  }
+                },
+                "type": "ia.display.progress"
+              }
+            ],
+            "meta": {
+              "name": "HeaderContainer"
+            },
+            "position": {
+              "basis": "106px"
+            },
+            "props": {
+              "alignContent": "flex-start",
+              "alignItems": "flex-start",
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "marginBottom": "20px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "32px"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#64748B",
+                            "fontSize": "16px",
+                            "fontWeight": "500"
+                          },
+                          "text": "Good Count"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "position": {
+                          "basis": "32px"
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/goodCount.value"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#051D5E",
+                            "fontSize": "20px",
+                            "fontWeight": "600"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "135px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "flex-start",
+                      "direction": "column",
+                      "justify": "center",
+                      "style": {
+                        "backgroundColor": "#FFFFFF",
+                        "border": " 1px solid #E2E8F0",
+                        "borderRadius": "12px",
+                        "boxShadow": "0px 1px 3px rgba(0,0,0,0.05)",
+                        "minHeight": "75px",
+                        "padding": "10px 14px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "32px"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#64748B",
+                            "fontSize": "16px",
+                            "fontWeight": "500"
+                          },
+                          "text": "Bad Count"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "position": {
+                          "basis": "32px"
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/rejectCount.value"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#051D5E",
+                            "fontSize": "20px",
+                            "fontWeight": "600"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "position": {
+                      "basis": "135px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "flex-start",
+                      "direction": "column",
+                      "justify": "center",
+                      "style": {
+                        "backgroundColor": "#FFFFFF",
+                        "border": " 1px solid #E2E8F0",
+                        "borderRadius": "12px",
+                        "boxShadow": "0px 1px 3px rgba(0,0,0,0.05)",
+                        "minHeight": "75px",
+                        "padding": "10px 14px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "position": {
+                          "basis": "32px"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#64748B",
+                            "fontSize": "16px",
+                            "fontWeight": "500"
+                          },
+                          "text": "Runtime"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "position": {
+                          "basis": "32px"
+                        },
+                        "propConfig": {
+                          "props.text": {
+                            "binding": {
+                              "config": {
+                                "fallbackDelay": 2.5,
+                                "mode": "direct",
+                                "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/runTime.value"
+                              },
+                              "type": "tag"
+                            }
+                          }
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#051D5E",
+                            "fontSize": "20px",
+                            "fontWeight": 600
+                          }
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "position": {
+                      "basis": "135px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "alignItems": "flex-start",
+                      "direction": "column",
+                      "justify": "center",
+                      "style": {
+                        "backgroundColor": "#FFFFFF",
+                        "border": " 1px solid #E2E8F0",
+                        "borderRadius": "12px",
+                        "boxShadow": "0px 1px 3px rgba(0,0,0,0.05)",
+                        "minHeight": "75px",
+                        "padding": "10px 14px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1
+                },
+                "props": {
+                  "style": {
+                    "backgroundColor": "#F8FAFC",
+                    "borderRadius": "12px",
+                    "boxShadow": "0px 2px 8px rgba(0,0,0,0.25)",
+                    "gap": "20px",
+                    "minHeight": "100px",
+                    "padding": "18px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "154px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#F8FAFC",
+                "borderRadius": "12px",
+                "boxShadow": "0px 2px 8px rgba(0,0,0,0.25)"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#64748B",
+                        "fontSize": "16px",
+                        "fontWeight": "500"
+                      },
+                      "text": "Downtime"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/oee/downTime.value"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#051D5E",
+                        "fontSize": "20px",
+                        "fontWeight": 600
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "135px",
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "flex-start",
+                  "direction": "column",
+                  "justify": "center",
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "border": " 1px solid #E2E8F0",
+                    "borderRadius": "12px",
+                    "boxShadow": "0px 1px 3px rgba(0,0,0,0.05)",
+                    "minHeight": "75px",
+                    "padding": "10px 14px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#64748B",
+                        "fontSize": "16px",
+                        "fontWeight": "500"
+                      },
+                      "text": "Downtime Reason"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/status/downtimeReasonCode.value"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#051D5E",
+                        "fontSize": "20px",
+                        "fontWeight": 600
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "position": {
+                  "basis": "135px",
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "flex-start",
+                  "direction": "column",
+                  "justify": "center",
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "border": " 1px solid #E2E8F0",
+                    "borderRadius": "12px",
+                    "boxShadow": "0px 1px 3px rgba(0,0,0,0.05)",
+                    "minHeight": "75px",
+                    "padding": "10px 14px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#64748B",
+                        "fontSize": "16px",
+                        "fontWeight": "500"
+                      },
+                      "text": "FaultCode"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0"
+                    },
+                    "position": {
+                      "basis": "32px"
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "direct",
+                            "tagPath": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/status/faulted.value"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "color": "#051D5E",
+                        "fontSize": "20px",
+                        "fontWeight": "600"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_1"
+                },
+                "position": {
+                  "basis": "135px",
+                  "shrink": 0
+                },
+                "props": {
+                  "alignItems": "flex-start",
+                  "direction": "column",
+                  "justify": "center",
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "border": " 1px solid #E2E8F0",
+                    "borderRadius": "12px",
+                    "boxShadow": "0px 1px 3px rgba(0,0,0,0.05)",
+                    "minHeight": "75px",
+                    "padding": "10px 14px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "154px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#F8FAFC",
+                "borderRadius": "12px",
+                "boxShadow": "0px 2px 8px rgba(0,0,0,0.25)",
+                "gap": "20px",
+                "minHeight": "100px",
+                "overflow": "visible",
+                "padding": "18px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "script": "\tsystem.tag.writeBlocking(\n\t    [\n\t        \"[default]agratas/sanand/zoneE/calendering/anode/coldPress1/status/running\",\n\t        \"[default]agratas/sanand/zoneE/calendering/anode/coldPress1/status/plannedStop\"\n\t    ],\n\t    [\n\t        True,\n\t        False\n\t    ]\n\t)"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Button"
+                },
+                "position": {
+                  "basis": "97px"
+                },
+                "props": {
+                  "text": "Start"
+                },
+                "type": "ia.input.button"
+              },
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "script": "\tsystem.tag.writeBlocking(\n\t    [\n\t        \"[default]agratas/sanand/zoneE/calendering/anode/coldPress1/status/running\",\n\t        \"[default]agratas/sanand/zoneE/calendering/anode/coldPress1/status/plannedStop\"\n\t    ],\n\t    [\n\t        False,\n\t        True\n\t    ]\n\t)"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Button_1"
+                },
+                "position": {
+                  "basis": "91px"
+                },
+                "props": {
+                  "text": "Stop"
+                },
+                "type": "ia.input.button"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "58px"
+            },
+            "props": {
+              "alignItems": "center",
+              "justify": "space-around"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "MainContainer"
+        },
+        "position": {
+          "basis": "510px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "16px",
+            "boxShadow": "0px 6px 24px rgba(15,23,42,0.08)\n",
+            "gap": "20px",
+            "margin": "20px",
+            "padding": "20px",
+            "width": "100%"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignItems": "center",
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "backgroundColor": "#F1F5F9",
+        "padding": "20px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

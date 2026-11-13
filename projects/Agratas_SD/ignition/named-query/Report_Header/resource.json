@@ -1,0 +1,45 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "Query",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "Dev_MSSQL_Server",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "7aa93dd81ea587d3be83d72d8e8e5bfe14dbf32da5261050b4a72eaf497d58c8",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "Sumedh.Dhoke.ext@bs.nttdata.com",
+      "timestamp": "2026-05-06T05:02:50Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "equipmentId",
+        "sqlType": 3
+      },
+      {
+        "type": "Parameter",
+        "identifier": "shiftId",
+        "sqlType": 3
+      }
+    ]
+  }
+}

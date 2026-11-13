@@ -1,0 +1,216 @@
+{
+  "custom": {},
+  "params": {
+    "dropDownOptions": [
+      {
+        "label": "A1-M1",
+        "value": "A1-M1"
+      },
+      {
+        "label": "A1-M2",
+        "value": "A1-M2"
+      },
+      {
+        "label": "A1-M3",
+        "value": "A1-M3"
+      },
+      {
+        "label": "A2-M1",
+        "value": "A2-M1"
+      },
+      {
+        "label": "A2-M2",
+        "value": "A2-M2"
+      },
+      {
+        "label": "A2-M3",
+        "value": "A2-M3"
+      },
+      {
+        "label": "B1-M1",
+        "value": "B1-M1"
+      },
+      {
+        "label": "B1-M2",
+        "value": "B1-M2"
+      },
+      {
+        "label": "B1-M3",
+        "value": "B1-M3"
+      },
+      {
+        "label": "B2-M1",
+        "value": "B2-M1"
+      },
+      {
+        "label": "B2-M2",
+        "value": "B2-M2"
+      },
+      {
+        "label": "B2-M3",
+        "value": "B2-M3"
+      },
+      {
+        "label": "E1-M1",
+        "value": "E1-M1"
+      },
+      {
+        "label": "E1-M2",
+        "value": "E1-M2"
+      },
+      {
+        "label": "E1-M3",
+        "value": "E1-M3"
+      },
+      {
+        "label": "E2-M1",
+        "value": "E2-M1"
+      },
+      {
+        "label": "E2-M2",
+        "value": "E2-M2"
+      },
+      {
+        "label": "E2-M3",
+        "value": "E2-M3"
+      }
+    ],
+    "isDropdown": true,
+    "selectedDate": "",
+    "selectedDropDownValue": "",
+    "title": "value"
+  },
+  "propConfig": {
+    "params.dropDownOptions": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.isDropdown": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.selectedDate": {
+      "binding": {
+        "config": {
+          "path": "/root/DateTimeInput.props.formattedValue"
+        },
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    },
+    "params.selectedDropDownValue": {
+      "binding": {
+        "config": {
+          "path": "/root/Dropdown.props.value"
+        },
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    },
+    "params.title": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 68,
+      "width": 399
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.title"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "DateTimeInput"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!{view.params.isDropdown}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "format": "YYYY-MM-DD",
+          "pickerType": "date"
+        },
+        "type": "ia.input.date-time-input"
+      },
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "basis": "36px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.isDropdown}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.options": {
+            "binding": {
+              "config": {
+                "expression": "1"
+              },
+              "transforms": [
+                {
+                  "code": "\tif self.view.params.isDropdown \u003d\u003d True:\n\t\treturn self.view.params.dropDownOptions",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "type": "ia.input.dropdown"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "margin": "0.1em",
+        "overflow": "hidden",
+        "padding": "0.1em"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

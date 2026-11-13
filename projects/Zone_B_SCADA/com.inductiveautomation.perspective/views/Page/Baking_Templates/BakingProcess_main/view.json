@@ -1,0 +1,226 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "LoadingStation_Screen"
+        },
+        "props": {
+          "path": "Page/Baking_Templates/LoadingStation_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RampUp_Screen"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/Baking_Templates/RampUp_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "UnloadingStation_Screen"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Baking_Templates/UnloadingStation_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VacuumDwell_Screen"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/Baking_Templates/VacuumDwell_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CoolingUnit_Screen"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Baking_Templates/CoolingUnit_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Conveyer_Screen"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/Baking_Templates/Conveyor_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Diverter_Screen"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "props": {
+          "path": "Page/Baking_Templates/DiverterViews"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "6AxisRobotModule_Screen"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "props": {
+          "path": "Page/Baking_Templates/6AxisRobotModule_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "SCARARobot_Screen"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "props": {
+          "path": "Page/Baking_Templates/SCARARobot_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RampUp_Screen_0"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "props": {
+          "path": "Page/Baking_Templates/RampUp_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VacuumDwell_Screen_0"
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "props": {
+          "path": "Page/Baking_Templates/VacuumDwell_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CoolingUnit_Screen_0"
+        },
+        "position": {
+          "tabIndex": 11
+        },
+        "props": {
+          "path": "Page/Baking_Templates/CoolingUnit_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Stacker-UnstackerUnit_Screen"
+        },
+        "position": {
+          "tabIndex": 12
+        },
+        "props": {
+          "path": "Page/Baking_Templates/Stacker-UnstackerUnit_Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Heaters_Screen"
+        },
+        "position": {
+          "tabIndex": 13
+        },
+        "props": {
+          "path": "Page/Baking_Templates/Heaters_Screen"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        },
+        "onChange": {
+          "enabled": null,
+          "script": "\tif currentValue !\u003d previousValue :\n\t\tself.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "height": 40,
+        "width": 400
+      },
+      "tabs": [
+        "Loading Station",
+        "Unloading Station",
+        "RampUp - Chamber 1",
+        "Vacuum Dwell-1",
+        "Cooling Chamber-1",
+        "Conveyor ",
+        "Diverter",
+        "6 Axis Robot",
+        "SCARA Robot",
+        "RampUp -2",
+        "Vacuum Dwell -2",
+        "Cooling Chamber -2",
+        "Stacker-Unstacker Unit",
+        "Heaters"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

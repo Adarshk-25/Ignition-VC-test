@@ -1,0 +1,1127 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onEditCellCommit": {
+              "config": {
+                "script": "# 1. Extract the edit details from the built-in event object\n\trow_index   \u003d event.rowIndex  # fixed: was event.row\n\tcolumn_name \u003d event.column   # fixed: was event.column\n\tnew_value   \u003d event.value  # fixed: was event.value\n\n# 2. Get the unique identifier (Primary Key) for the database row\n# This assumes you have a hidden or visible column named \u0027id\u0027 in your table data\n\trow_id \u003d self.props.data[row_index][\u0027SNo\u0027]\n\n# 3. Build your SQL Update Statement dynamically\n# Using a prepared statement prevents SQL injection vulnerabilities\n\tquery \u003d \"UPDATE [FiveS_Audit] SET [{}] \u003d ? WHERE [SNo] \u003d ?\".format(column_name)\n\targs  \u003d [new_value, row_id]\n\n# 4. Execute the update query\n\tsystem.db.runPrepUpdate(query, args, database\u003d\"Dev_MSSQL_Server\")\n\t#self.getSibling(\"Label\").props.text\u003dnew_value\n\n# 5. Force the table UI component to fetch the fresh data immediately\n\tself.refreshBinding(\"props.data\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "polling": {
+                  "enabled": true,
+                  "rate": "5"
+                },
+                "queryPath": "FiveS_Audit"
+              },
+              "type": "query"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "SNo",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 15
+                },
+                "title": "SNo"
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 20
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 30
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "FiveS_Category",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": "5S Category"
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 4
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 60
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Audit_Point",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": "Audit Point"
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 10,
+                "paddingRight": 10
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "People_Impact",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 5
+                },
+                "title": "People Impact"
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 10,
+                "paddingRight": 10
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 100
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Score",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 10
+                },
+                "title": "Score"
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 10,
+                "paddingRight": 10
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 40
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Score_Name",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Score Name"
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 10,
+                "paddingRight": 10
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 70
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Status",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 15
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 20
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 60
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Remarks",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": "",
+                  "paddingLeft": 3
+                },
+                "title": ""
+              },
+              "justify": "left",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "backgroundColor": "#FFFFFF",
+                "classes": "Page/Label2",
+                "paddingLeft": 4
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 100
+            }
+          ],
+          "pager": {
+            "bottom": false
+          },
+          "rows": {
+            "style": {
+              "paddingBottom": 4,
+              "paddingTop": 4
+            }
+          }
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.2455,
+              "x": 0.0539,
+              "y": 0.0146
+            },
+            "props": {
+              "text": "SNo",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.2455,
+              "x": 0.0541,
+              "y": 0.1259
+            },
+            "props": {
+              "text": "5S Category",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.2455,
+              "x": 0.0541,
+              "y": 0.2374
+            },
+            "props": {
+              "text": "Audit Point",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_4"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.2455,
+              "x": 0.0541,
+              "y": 0.3488
+            },
+            "props": {
+              "text": "Score",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_7"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.2455,
+              "x": 0.054,
+              "y": 0.5717
+            },
+            "props": {
+              "text": "Status",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_9"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.2455,
+              "x": 0.0541,
+              "y": 0.4602
+            },
+            "props": {
+              "text": "Score Name",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t# 1. Gather your input values from your Perspective UI components\n\tval1 \u003dself.getSibling(\"TextField\").props.text\n\tval2 \u003dself.getSibling(\"TextField_0\").props.text\n\tval3 \u003dself.getSibling(\"TextField_1\").props.text\n\tval4 \u003dself.getSibling(\"TextField_2\").props.text\n\tval5 \u003dself.getSibling(\"TextField_3\").props.text\n\tval6 \u003dself.getSibling(\"TextField_4\").props.text\n\tval7 \u003dself.getSibling(\"TextField_5\").props.text\n\tval8 \u003dself.getSibling(\"TextField_6\").props.text\n# 2. Define your parameterized SQL statement\n\tquery \u003d \"INSERT INTO FiveS_Audit (SNo, FiveS_Category, Audit_Point, Score, Score_Name, Status,People_Impact,Remarks) VALUES (?, ?,?,?,?,?,?,?)\"\n\n# 3. List the arguments in the exact order of the question marks\n\targs \u003d [val1, val2,val3,val4,val5,val6,val7,val8]\n\n# 4. Execute the update query \n# (Omit the database argument if you want to use the project\u0027s default database)\n\tsystem.db.runPrepUpdate(query, args, database\u003d\"Dev_MSSQL_Server\")\n\n# 5. Tell the Perspective Table component to refresh its data binding\n\tself.parent.parent.getChild(\"Table\").refreshBinding(\"props.data\")\n\tself.parent.position.display\u003dFalse\n\tself.parent.parent.getChild(\"Table\").position.display\u003dTrue\n\tself.parent.parent.getChild(\"FlexContainer\").position.display\u003dTrue\n\t#self.parent.getChild(\"Table\").refreshBinding(\"props.data\")"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 0.085,
+              "width": 0.2888,
+              "x": 0.2888,
+              "y": 0.8925
+            },
+            "props": {
+              "primary": false,
+              "text": "Save",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "TextField"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.5,
+              "x": 0.4107,
+              "y": 0.0273
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_0"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.4973,
+              "x": 0.4107,
+              "y": 0.1409
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_1"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.5,
+              "x": 0.4107,
+              "y": 0.2374
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_2"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.4973,
+              "x": 0.4107,
+              "y": 0.3531
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_3"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.4973,
+              "x": 0.4107,
+              "y": 0.4602
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_4"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.4973,
+              "x": 0.4107,
+              "y": 0.5674
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "TextField_5"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.4973,
+              "x": 0.4107,
+              "y": 0.657
+            },
+            "type": "ia.input.text-field"
+          },
+          {
+            "meta": {
+              "name": "Label_8"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.2455,
+              "x": 0.054,
+              "y": 0.7687
+            },
+            "props": {
+              "text": "Status",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_10"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.2455,
+              "x": 0.054,
+              "y": 0.657
+            },
+            "props": {
+              "text": "Score Name",
+              "textStyle": {
+                "classes": "Page/Label2"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TextField_6"
+            },
+            "position": {
+              "height": 0.0688,
+              "width": 0.4973,
+              "x": 0.4107,
+              "y": 0.7687
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "root"
+        },
+        "position": {
+          "display": false,
+          "grow": 1
+        },
+        "props": {
+          "aspectRatio": "300:400",
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "borderBottomLeftRadius": 5,
+        "borderBottomRightRadius": 5,
+        "borderColor": "#D5D5D5",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 5,
+        "borderTopRightRadius": 5,
+        "borderWidth": "0.1px",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

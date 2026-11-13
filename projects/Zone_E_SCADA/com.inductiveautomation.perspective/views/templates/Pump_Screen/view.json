@@ -1,0 +1,571 @@
+{
+  "custom": {
+    "attrubute": "value",
+    "key": []
+  },
+  "params": {
+    "tagpath": "[default]DiaphragmPump"
+  },
+  "propConfig": {
+    "custom.attrubute": {
+      "persistent": true
+    },
+    "custom.key": {
+      "binding": {
+        "config": {
+          "expression": "1"
+        },
+        "transforms": [
+          {
+            "code": "\treturn system.tag.browse(\"[default]Pump\")",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.tagpath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1411
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "path": "templates/Pump Equipment"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_0"
+            },
+            "props": {
+              "path": "templates/PumpStatus"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "basis": "219px"
+            },
+            "propConfig": {
+              "props.instances[0].parameter": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "1": "{view.params.tagpath}"
+                    },
+                    "tagPath": "{1}/plcTags/speed.name"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.instances[0].value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "parameter": "{view.params.tagpath}"
+                    },
+                    "tagPath": "{parameter}/plcTags/speed"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "alignItems": "flex-end",
+              "elementPosition": {
+                "shrink": 0
+              },
+              "instances": [
+                {
+                  "greenEnd": 50,
+                  "greenStart": 30,
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "max": 100,
+                  "min": 0
+                },
+                {
+                  "greenEnd": 45,
+                  "greenStart": 20,
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "parameter": "Voltage(V)",
+                  "value": 47
+                },
+                {
+                  "greenEnd": 70,
+                  "greenStart": 40,
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "max": 150,
+                  "min": 0,
+                  "parameter": "Power(kW)",
+                  "value": 110
+                },
+                {
+                  "greenEnd": 250,
+                  "greenStart": 110,
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "max": 400,
+                  "min": 0,
+                  "parameter": "Frequency(Hz)",
+                  "value": 300
+                }
+              ],
+              "justify": "space-evenly",
+              "path": "templates/Gauge Card Static",
+              "style": {
+                "overflow": "hidden",
+                "width": "value"
+              },
+              "useDefaultViewHeight": false
+            },
+            "type": "ia.display.flex-repeater"
+          },
+          {
+            "meta": {
+              "name": "Trend"
+            },
+            "position": {
+              "basis": "23.4px"
+            },
+            "props": {
+              "style": {
+                "fontSize": "18px",
+                "fontWeight": "bold",
+                "marginBottom": "10px",
+                "width": "200px"
+              },
+              "text": "Trend"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "AlarmStatusTable"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.filters.active.conditions.source": {
+                "binding": {
+                  "config": {
+                    "expression": "\"*\"+ \"agratas/sanand/zoneE/coating/anode/\" + {view.params.equipment} + \"*\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "columns": {
+                "active": {
+                  "displayPath": {
+                    "enabled": false,
+                    "order": 4
+                  },
+                  "name": {
+                    "order": 2
+                  },
+                  "priority": {
+                    "order": 8
+                  },
+                  "source": {
+                    "enabled": false
+                  },
+                  "state": {
+                    "order": 9
+                  }
+                }
+              },
+              "columnsAssociated": {
+                "active": [
+                  {
+                    "enabled": true,
+                    "field": "severity",
+                    "order": 3,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "alarmGroupId",
+                    "order": 4,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "alarmCode",
+                    "order": 5,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "fbsSource",
+                    "order": 6,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "operatorMessage",
+                    "order": 7,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  },
+                  {
+                    "enabled": true,
+                    "field": "index",
+                    "order": 1,
+                    "sort": "none",
+                    "strictWidth": false,
+                    "width": ""
+                  }
+                ]
+              },
+              "filters": {
+                "active": {
+                  "conditions": {}
+                }
+              },
+              "pager": {
+                "enabled": false
+              },
+              "rowStyles": {
+                "activeAcked": {
+                  "base": {
+                    "backgroundColor": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "",
+                      "classes": "alarm/critical"
+                    },
+                    "diagnostic": {
+                      "backgroundColor": "",
+                      "classes": "alarm/diagnostic"
+                    },
+                    "high": {
+                      "backgroundColor": "",
+                      "classes": "alarm/high"
+                    },
+                    "low": {
+                      "backgroundColor": "",
+                      "classes": "alarm/low"
+                    },
+                    "medium": {
+                      "backgroundColor": "",
+                      "classes": "alarm/medium"
+                    }
+                  }
+                },
+                "activeUnacked": {
+                  "base": {
+                    "backgroundColor": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "",
+                      "classes": "alarm/critical"
+                    },
+                    "diagnostic": {
+                      "backgroundColor": "",
+                      "classes": "alarm/diagnostic"
+                    },
+                    "high": {
+                      "backgroundColor": "",
+                      "classes": "alarm/high"
+                    },
+                    "low": {
+                      "backgroundColor": "",
+                      "classes": "alarm/low"
+                    },
+                    "medium": {
+                      "backgroundColor": "",
+                      "classes": "alarm/medium"
+                    }
+                  }
+                },
+                "clearAcked": {
+                  "base": {
+                    "backgroundColor": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "",
+                      "classes": "alarm/critical"
+                    },
+                    "diagnostic": {
+                      "backgroundColor": "",
+                      "classes": "alarm/diagnostic"
+                    },
+                    "high": {
+                      "backgroundColor": "",
+                      "classes": "alarm/high"
+                    },
+                    "low": {
+                      "backgroundColor": "",
+                      "classes": "alarm/low"
+                    },
+                    "medium": {
+                      "backgroundColor": "",
+                      "classes": "alarm/medium"
+                    }
+                  }
+                },
+                "clearUnacked": {
+                  "base": {
+                    "backgroundColor": ""
+                  },
+                  "priorities": {
+                    "critical": {
+                      "backgroundColor": "",
+                      "classes": "alarm/critical"
+                    },
+                    "diagnostic": {
+                      "backgroundColor": "",
+                      "classes": "alarm/diagnostic"
+                    },
+                    "high": {
+                      "backgroundColor": "",
+                      "classes": "alarm/high"
+                    },
+                    "low": {
+                      "backgroundColor": "",
+                      "classes": "alarm/low"
+                    },
+                    "medium": {
+                      "backgroundColor": "",
+                      "classes": "alarm/medium"
+                    }
+                  }
+                }
+              },
+              "toolbar": {
+                "enableActiveTab": false,
+                "enableConfiguration": false,
+                "enableFilter": false,
+                "enablePreFilters": false,
+                "enableShelvedTab": false,
+                "toggleableFilter": false
+              }
+            },
+            "type": "ia.display.alarmstatustable"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "60%"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "widgets/spacing"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Process View Embedded"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "props": {
+              "params": {
+                "tagpath1": "value",
+                "tagpath10": "value",
+                "tagpath2": "value",
+                "tagpath3": "value",
+                "tagpath4": "value",
+                "tagpath5": "value",
+                "tagpath6": "value",
+                "tagpath7": "value",
+                "tagpath8": "value",
+                "tagpath9": "value"
+              },
+              "path": "templates/template_process_data"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "PowerChart"
+            },
+            "position": {
+              "basis": "300px",
+              "grow": 1
+            },
+            "props": {
+              "config": {
+                "rangeEndDate": {
+                  "$": [
+                    "ts",
+                    0,
+                    1788934348459
+                  ],
+                  "$ts": 1788934252285
+                },
+                "rangeStartDate": {
+                  "$": [
+                    "ts",
+                    0,
+                    1788934348458
+                  ],
+                  "$ts": 1788905548285
+                }
+              },
+              "interaction": {
+                "chartZoomLevel": 1,
+                "rangeZoomLevel": 1
+              },
+              "legend": {
+                "visible": true
+              },
+              "pens": [
+                {
+                  "axis": "",
+                  "data": {
+                    "aggregateMode": "default",
+                    "source": "histprov:historian2:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating/anode/betagauge1/plctags/thickness"
+                  },
+                  "display": {
+                    "breakLine": true,
+                    "interpolation": "curveLinear",
+                    "radius": 3,
+                    "styles": {
+                      "highlighted": {
+                        "fill": {
+                          "color": "#63BEA2",
+                          "opacity": 1
+                        },
+                        "stroke": {
+                          "color": "#63BEA2",
+                          "dashArray": 0,
+                          "opacity": 1,
+                          "width": 1
+                        }
+                      },
+                      "muted": {
+                        "fill": {
+                          "color": "#63BEA2",
+                          "opacity": 0.4
+                        },
+                        "stroke": {
+                          "color": "#63BEA2",
+                          "dashArray": 0,
+                          "opacity": 0.4,
+                          "width": 1
+                        }
+                      },
+                      "normal": {
+                        "fill": {
+                          "color": "#63BEA2",
+                          "opacity": 0.8
+                        },
+                        "stroke": {
+                          "color": "#63BEA2",
+                          "dashArray": 0,
+                          "opacity": 0.8,
+                          "width": 1
+                        }
+                      },
+                      "selected": {
+                        "fill": {
+                          "color": "#63BEA2",
+                          "opacity": 1
+                        },
+                        "stroke": {
+                          "color": "#63BEA2",
+                          "dashArray": 0,
+                          "opacity": 1,
+                          "width": 1
+                        }
+                      }
+                    },
+                    "type": "line"
+                  },
+                  "enabled": true,
+                  "name": "thickness",
+                  "plot": 0,
+                  "selectable": true,
+                  "visible": true
+                }
+              ]
+            },
+            "type": "ia.chart.powerchart"
+          }
+        ],
+        "meta": {
+          "name": "Status Container"
+        },
+        "position": {
+          "basis": "20%",
+          "grow": 1
+        },
+        "props": {
+          "alignItems": "flex-start",
+          "direction": "column",
+          "style": {
+            "classes": "widgets/spacing"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

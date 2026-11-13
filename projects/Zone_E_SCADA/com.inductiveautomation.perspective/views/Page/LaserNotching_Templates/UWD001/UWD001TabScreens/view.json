@@ -1,0 +1,101 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "[default]IN11_E155_PAE_NTC11_IN11_E155_PAE_Telemetry"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/Active"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/Status"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "UWD001: Unwinder",
+            "parameterData": [
+              {
+                "Parameter": "Active"
+              },
+              {
+                "Parameter": "Status"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs[0].viewParams.tabSelected": {
+        "binding": {
+          "config": {
+            "expression": "{this.props.currentTabIndex} \u003d 0"
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 120
+      },
+      "tabs": [
+        {
+          "viewParams": {
+            "selected": false,
+            "tabText": "UWD001",
+            "toolTipText": "IN11.E155.PAE.NTC11.UWD001 - Unwinder"
+          },
+          "viewPath": "widgets(templates)/TabButton"
+        }
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 813,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TableCard"
+        },
+        "position": {
+          "basis": "801px",
+          "grow": 1
+        },
+        "props": {
+          "path": "Zone E/TableCard"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Graph_new"
+        },
+        "position": {
+          "basis": "799px",
+          "grow": 1
+        },
+        "props": {
+          "path": "widgets(templates)/Graph_new",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Page/ScreenBackground"
+      },
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

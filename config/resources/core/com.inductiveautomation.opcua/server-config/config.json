@@ -1,0 +1,30 @@
+{
+  "advanced": {
+    "exposedTagsEnabled": true,
+    "gdsPushEnabled": false,
+    "maxSessionCount": 100
+  },
+  "authentication": {
+    "anonymousAccessAllowed": true,
+    "authenticationProfile": "default"
+  },
+  "endpoint": {
+    "bindAddresses": [
+      "0.0.0.0"
+    ],
+    "bindPort": 62541,
+    "endpointAddresses": [
+      "10.34.26.4"
+    ],
+    "messageSecurityModes": [
+      "SignAndEncrypt"
+    ],
+    "securityPolicies": [
+      "Basic256Sha256",
+      "None"
+    ]
+  },
+  "redundancy": {
+    "readOnlyWhenInactive": false
+  }
+}

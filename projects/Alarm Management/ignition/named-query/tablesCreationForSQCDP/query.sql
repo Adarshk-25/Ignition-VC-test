@@ -1,0 +1,1 @@
+select * from safety_audit

@@ -1,0 +1,417 @@
+{
+  "custom": {},
+  "params": {
+    "Alarm_Path": "value",
+    "FBS_Filter": "value",
+    "Man_Data": [
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      }
+    ],
+    "Tag_Path_0": "",
+    "equipmentGraphic": "value",
+    "equipmentName": "value",
+    "machineFBS": "value",
+    "metadata": "",
+    "tabNumber": "value",
+    "tag_SM": "value"
+  },
+  "propConfig": {
+    "params.Alarm_Path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.FBS_Filter": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Man_Data": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag_Path_0": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.equipmentGraphic": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.equipmentName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.machineFBS": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tabNumber": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_SM": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ProcessTemplate"
+        },
+        "propConfig": {
+          "props.params.Man_Data": {
+            "binding": {
+              "config": {
+                "path": "view.params.Man_Data"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Tag_Path_0": {
+            "binding": {
+              "config": {
+                "path": "view.params.Tag_Path_0"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentGraphic": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentGraphic"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.equipmentName": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentName"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tag_SM": {
+            "binding": {
+              "config": {
+                "path": "view.params.tag_SM"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Page/PopUpScreensTemplate/TabScreens"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TrendsTemplate"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.path": {
+            "binding": {
+              "config": {
+                "expression": "replace({view.params.Tag_Path_0}, \"[default]\", \"\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Page/PopUpScreensTemplate/TrendsTemplate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.machineFBS": {
+            "binding": {
+              "config": {
+                "path": "view.params.machineFBS"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/NodesetVersion"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/PLC Manufacturer"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/PLC Model"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/PLCFBS"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/Year Of Construction of the machine"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[5].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/SerialNumber"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "parameterData": [
+              {
+                "Parameter": "Nodeset Version"
+              },
+              {
+                "Parameter": "PLC Manufacturer"
+              },
+              {
+                "Parameter": "PLC Model"
+              },
+              {
+                "Parameter": "PLC FBS"
+              },
+              {
+                "Parameter": "Year Of Construction"
+              },
+              {
+                "Parameter": "Serial Number"
+              }
+            ],
+            "tableHeader": "PLC Information"
+          },
+          "path": "Page/PopUpScreensTemplate/MetaDataTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "AlarmsTemplate"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.Alarm_Path": {
+            "binding": {
+              "config": {
+                "path": "view.params.Alarm_Path"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.FBS_Filter": {
+            "binding": {
+              "config": {
+                "path": "view.params.FBS_Filter"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.tagpath": {
+            "binding": {
+              "config": {
+                "path": "view.params.Tag_Path_0"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Page/PopUpScreensTemplate/AlarmsTemplate"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "events": {
+      "system": {
+        "onShutdown": {
+          "config": {
+            "script": "\ttry:\n\t    system.perspective.sendMessage(\n\t        \"popupClosed\",\n\t        scope\u003d\"page\"\n\t    )\n\texcept:\n\t    pass"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabNumber"
+          },
+          "transforms": [
+            {
+              "code": "    tabs \u003d [\"Process Data\", \"Trends\", \"Alarms\"]\n    if value \u003d\u003d 4:\n        tabs.append(\"Metadata\")\n    return tabs",
+              "type": "script"
+            }
+          ],
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 120
+      }
+    },
+    "type": "ia.container.tab"
+  }
+}

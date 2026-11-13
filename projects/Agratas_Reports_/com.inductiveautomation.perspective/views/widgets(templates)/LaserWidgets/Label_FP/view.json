@@ -1,0 +1,294 @@
+{
+  "custom": {
+    "popupOpen": false
+  },
+  "params": {
+    "Alarm_Path": "value",
+    "FBS_Filter": "value",
+    "Man_Data": [
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      },
+      {
+        "equipmentName": "value",
+        "tab_tooltip": "value"
+      }
+    ],
+    "Tag_Path": 0,
+    "Title": 0,
+    "ToolTip": 0,
+    "equipmentGraphic": "Value"
+  },
+  "propConfig": {
+    "custom.popupOpen": {
+      "persistent": true
+    },
+    "params.Alarm_Path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.FBS_Filter": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Man_Data": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag_Path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Title": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ToolTip": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.equipmentGraphic": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 26,
+      "width": 47
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.view.custom.popupOpen \u003d True"
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onMouseOut": {
+              "config": {
+                "script": "\tself.props.style.backgroundColor \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onMouseOver": {
+              "config": {
+                "script": "\tself.props.style.backgroundColor \u003d \"#D3D3D3\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Label",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.77,
+          "width": 0.8936,
+          "x": 0.0426,
+          "y": 0.1154
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.ToolTip"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag_Path": "{view.params.Tag_Path}"
+                },
+                "tagPath": "{Tag_Path}.Name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.textStyle.backgroundColor": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.popupOpen}, \"#D3D3D3\", \"transparent\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": ""
+          },
+          "textStyle": {
+            "borderStyle": "outset",
+            "borderWidth": 1,
+            "classes": "Page/Label3",
+            "paddingBottom": 9,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 9,
+            "resize": "both",
+            "whiteSpace": "normal"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": [
+          {
+            "config": {
+              "draggable": true,
+              "id": "{view.params.Title}",
+              "modal": false,
+              "overlayDismiss": false,
+              "position": {
+                "height": 800,
+                "width": 1200
+              },
+              "positionType": "exact",
+              "resizable": true,
+              "showCloseIcon": true,
+              "title": "{view.params.Title}",
+              "type": "open",
+              "viewParams": {
+                "Alarm_Path": "{view.params.Alarm_Path}",
+                "FBS_Filter": "{view.params.FBS_Filter}",
+                "Man_Data": "{view.params.Man_Data}",
+                "Tag_Path_0": "{view.params.Tag_Path}",
+                "equipmentGraphic": "{view.params.equipmentGraphic}",
+                "equipmentName": "{view.params.equipmentName}",
+                "tabNumber": "{view.params.tabNumber}"
+              },
+              "viewPath": "Page/PopUpScreensTemplate/ProcessScreenTemplate",
+              "viewportBound": false
+            },
+            "scope": "C",
+            "type": "popup"
+          },
+          {
+            "config": {
+              "script": "\t\t# onClick on root — equivalent of the Popup action\n\t\n\tpopupId \u003d  \"LeiSbHz5\"  # same identifier as your action config\n\t\n\tparams_1 \u003d {\n\t    \"Screen_Path\": self.view.params.Screen_Path,\n\t    \"Tag_Path_0\": self.view.params.Tag_Path,\n\t}\n\t\n\tsystem.perspective.openPopup(\n\t    id\u003dpopupId,\n\t    view\u003d\"Page/LaserNotching_Templates/PopUpScreensTemplate/ProcessScreenTemplate_resize\",  # replace with the full view path shown in your dropdown\n\t    params\u003dparams_1,\n\t    title\u003dself.view.params.Title,\n\t    position\u003d{\"width\": 1200, \"height\": 800},   # no left/top given, so it opens centered\n\t    showCloseIcon\u003dTrue,\n\t    draggable\u003dTrue,\n\t    resizable\u003dTrue,\n\t    modal\u003dFalse,\n\t    overlayDismiss\u003dFalse,\n\t    viewPortBound\u003dFalse\n\t)"
+            },
+            "enabled": false,
+            "scope": "G",
+            "type": "script"
+          }
+        ]
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "47:26",
+      "mode": "percent",
+      "style": {
+        "alignItems": "stretch",
+        "overflow": "hidden"
+      }
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "PopupClosed",
+          "pageScope": true,
+          "script": "\t# implement your handler here\n\tself.view.custom.popupOpen \u003d False",
+          "sessionScope": false,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

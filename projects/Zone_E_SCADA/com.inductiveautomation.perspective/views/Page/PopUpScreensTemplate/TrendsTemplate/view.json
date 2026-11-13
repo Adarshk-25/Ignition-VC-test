@@ -1,0 +1,76 @@
+{
+  "custom": {},
+  "params": {
+    "path": ""
+  },
+  "propConfig": {
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PowerChart"
+        },
+        "position": {
+          "basis": "800px"
+        },
+        "propConfig": {
+          "props.config.tagBrowserStartPath": {
+            "binding": {
+              "config": {
+                "expression": "\"histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:\"+{view.params.path}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "config": {
+            "endDate": {
+              "$": [
+                "ts",
+                0,
+                1788941213028
+              ],
+              "$ts": 1788941208946
+            },
+            "measureOfTime": "minutes",
+            "startDate": {
+              "$": [
+                "ts",
+                0,
+                1788941213028
+              ],
+              "$ts": 1788912408946
+            },
+            "unitOfTime": 20,
+            "visibility": {
+              "showTagBrowser": true
+            }
+          },
+          "interaction": {
+            "chartZoomLevel": 1,
+            "rangeZoomLevel": 1
+          }
+        },
+        "type": "ia.chart.powerchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

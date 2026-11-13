@@ -1,0 +1,179 @@
+{
+  "custom": {},
+  "params": {
+    "metadata": "value"
+  },
+  "propConfig": {
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "COR001TabScreens"
+        },
+        "props": {
+          "params": {
+            "tag": "[default]IN11_E155_PAE_NTC11_IN11_E155_PAE_Telemetry"
+          },
+          "path": "Page/LaserNotching_Templates/UWD001/GME001TabScreens"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TrendsTemplate"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "params": {
+            "path": "IN11_E155_PAE_NTC11"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/TrendsTemplate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/NodesetVersion"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/PLCManufacturer"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/PLCModel"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/PLCFBS"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.metadata}"
+                },
+                "tagPath": "{Tag}/YearOfConstruction"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/UnwinderNotchingNew",
+            "equipmentName": "UWD001: Unwinder",
+            "parameterData": [
+              {
+                "Parameter": "Nodeset Version"
+              },
+              {
+                "Parameter": "PLC Manufacturer"
+              },
+              {
+                "Parameter": "PLC Model"
+              },
+              {
+                "Parameter": "PLC FBS"
+              },
+              {
+                "Parameter": "Year Of Construction"
+              }
+            ],
+            "tableHeader": "PLC Information"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "AlarmsTemplate"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "params": {
+            "tagpath": "value"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/AlarmsTemplate"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "tabSize": {
+        "width": 120
+      },
+      "tabs": [
+        "Process Data",
+        "Trends",
+        "Alarms",
+        "Metadata"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

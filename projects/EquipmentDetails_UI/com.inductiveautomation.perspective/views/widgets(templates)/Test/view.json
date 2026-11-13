@@ -1,0 +1,76 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TabContainer",
+          "tooltip": {
+            "text": "test"
+          }
+        },
+        "position": {
+          "height": 799,
+          "width": 799,
+          "x": 1,
+          "y": 1
+        },
+        "props": {
+          "currentTabIndex": 1,
+          "tabs": [
+            {
+              "viewParams": {
+                "tabSelected": false,
+                "tabText": "MAA001",
+                "toolTipText": "Cutting Unit"
+              },
+              "viewPath": "widgets(templates)/TabButton"
+            },
+            {
+              "viewParams": {
+                "tabSelected": false,
+                "tabText": "TAC001",
+                "toolTipText": "value"
+              },
+              "viewPath": "widgets(templates)/TabButton"
+            },
+            {
+              "viewParams": {
+                "tabSelected": false,
+                "tabText": "COR001",
+                "toolTipText": "Unwinder"
+              },
+              "viewPath": "widgets(templates)/TabButton"
+            },
+            {
+              "viewParams": {
+                "tabSelected": false,
+                "tabText": "ZCS001",
+                "toolTipText": "value"
+              },
+              "viewPath": "widgets(templates)/TabButton"
+            }
+          ]
+        },
+        "scripts": {
+          "customMethods": [
+            {
+              "name": "newMethod",
+              "params": [],
+              "script": "\t# currentValue is a QualifiedValue, so extract the raw integer value using currentValue.value\n\tactive_index \u003d currentValue.value\n\t\n\ttabs \u003d self.props.tabs\n\tfor i in range(len(tabs)):\n\t    # Check if viewParams exists on the tab element\n\t    if \"viewParams\" in tabs[i]:\n\t        tabs[i].viewParams.tabSelected \u003d (i \u003d\u003d active_index)"
+            }
+          ],
+          "extensionFunctions": null,
+          "messageHandlers": []
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Carousel"
+        },
+        "position": {
+          "basis": "800px",
+          "grow": 1
+        },
+        "props": {
+          "views": [
+            {
+              "alignItems": "flex-start",
+              "direction": "row",
+              "justify": "flex-start",
+              "viewParams": {},
+              "viewPath": "Andons/Saftey"
+            },
+            {
+              "alignItems": "flex-start",
+              "direction": "row",
+              "justify": "flex-start",
+              "viewParams": {},
+              "viewPath": "Andons/Quality"
+            }
+          ]
+        },
+        "type": "ia.display.carousel"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

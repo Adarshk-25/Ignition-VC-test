@@ -1,0 +1,547 @@
+{
+  "custom": {
+    "filter": "all",
+    "list": {
+      "rows": [],
+      "count": 0
+    }
+  },
+  "params": {
+    "filter": "all"
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1220,
+      "height": 700
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "position": {},
+    "props": {
+      "direction": "column",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "stretch",
+      "alignContent": "flex-start",
+      "style": {
+        "classes": "HPHMI/Popup/Root",
+        "overflow": "hidden"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Filters"
+        },
+        "position": {
+          "basis": "44px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "6px",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "F_all"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "All positions",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "",
+                  "color": "#1F2328"
+                },
+                "position": "right",
+                "width": 0,
+                "height": 0
+              },
+              "style": {
+                "classes": "HPHMI/Button/Secondary"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "script",
+                  "scope": "G",
+                  "config": {
+                    "script": "\tself.view.custom.filter = \"all\""
+                  }
+                }
+              }
+            },
+            "propConfig": {
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.custom.filter} = \"all\", \"HPHMI/Button/Primary\", \"HPHMI/Button/Secondary\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "F_abnormal"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Not running / alarm",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "",
+                  "color": "#1F2328"
+                },
+                "position": "right",
+                "width": 0,
+                "height": 0
+              },
+              "style": {
+                "classes": "HPHMI/Button/Secondary"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "script",
+                  "scope": "G",
+                  "config": {
+                    "script": "\tself.view.custom.filter = \"abnormal\""
+                  }
+                }
+              }
+            },
+            "propConfig": {
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.custom.filter} = \"abnormal\", \"HPHMI/Button/Primary\", \"HPHMI/Button/Secondary\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.input.button",
+            "meta": {
+              "name": "F_nocomm"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "No comm",
+              "primary": false,
+              "image": {
+                "icon": {
+                  "path": "",
+                  "color": "#1F2328"
+                },
+                "position": "right",
+                "width": 0,
+                "height": 0
+              },
+              "style": {
+                "classes": "HPHMI/Button/Secondary"
+              }
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "type": "script",
+                  "scope": "G",
+                  "config": {
+                    "script": "\tself.view.custom.filter = \"nocomm\""
+                  }
+                }
+              }
+            },
+            "propConfig": {
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if({view.custom.filter} = \"nocomm\", \"HPHMI/Button/Primary\", \"HPHMI/Button/Secondary\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Spacer"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "children": []
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Count"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "",
+              "style": {
+                "classes": "HPHMI/Text/Label"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "toStr({view.custom.list.count}) + \" rows\""
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "ListBox"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "direction": "column",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "classes": "HPHMI/List/Box",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/List/Header",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "H_Area"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Area",
+                  "style": {
+                    "classes": "HPHMI/List/HeaderText"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "H_Line"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Line",
+                  "style": {
+                    "classes": "HPHMI/List/HeaderText"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "H_Unit"
+                },
+                "position": {
+                  "basis": "120px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Unit",
+                  "style": {
+                    "classes": "HPHMI/List/HeaderText"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "H_Description"
+                },
+                "position": {
+                  "basis": "260px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Description",
+                  "style": {
+                    "classes": "HPHMI/List/HeaderText"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "H_State"
+                },
+                "position": {
+                  "basis": "210px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "State",
+                  "style": {
+                    "classes": "HPHMI/List/HeaderText"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "H_Mode"
+                },
+                "position": {
+                  "basis": "120px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Mode",
+                  "style": {
+                    "classes": "HPHMI/List/HeaderText"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "H_Workorder"
+                },
+                "position": {
+                  "basis": "140px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Work order",
+                  "style": {
+                    "classes": "HPHMI/List/HeaderText"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "H_Recipe"
+                },
+                "position": {
+                  "basis": "130px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Recipe",
+                  "style": {
+                    "classes": "HPHMI/List/HeaderText"
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "H_Alarms"
+                },
+                "position": {
+                  "basis": "60px",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "Alarms",
+                  "style": {
+                    "classes": "HPHMI/List/HeaderText"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Scroll"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "direction": "column",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "overflowY": "auto"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.flex-repeater",
+                "meta": {
+                  "name": "Rows"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "Components/HPHMI/EquipmentListRow",
+                  "instances": [],
+                  "direction": "column",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "stretch",
+                  "alignContent": "flex-start",
+                  "useDefaultViewWidth": false,
+                  "useDefaultViewHeight": true,
+                  "elementPosition": {
+                    "basis": "34px",
+                    "grow": 0,
+                    "shrink": 0
+                  },
+                  "style": {
+                    "overflow": "hidden"
+                  }
+                },
+                "propConfig": {
+                  "props.instances": {
+                    "binding": {
+                      "type": "property",
+                      "config": {
+                        "path": "view.custom.list.rows"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "propConfig": {
+    "custom.filter": {
+      "binding": {
+        "type": "property",
+        "config": {
+          "path": "view.params.filter"
+        }
+      }
+    },
+    "custom.list": {
+      "binding": {
+        "type": "expr",
+        "config": {
+          "expression": "if({view.custom.filter} = \"\", now(3000), now(3000))"
+        },
+        "transforms": [
+          {
+            "type": "script",
+            "code": "\t# rows for the selected filter (all / abnormal / nocomm)\n\treturn HPHMI_ZoneE.equipmentList(self.view.custom.filter)"
+          }
+        ]
+      }
+    },
+    "params.filter": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "custom": {},
+  "params": {
+    "color": "",
+    "displayName": "Target",
+    "displayValue": "80%"
+  },
+  "propConfig": {
+    "params.color": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.displayName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.displayValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label_displayName"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.displayName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "sans-serif",
+            "fontSize": "75%",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_displayValue"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.displayValue"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontSize": "125%",
+            "fontWeight": "bolder",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFFFFF00"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

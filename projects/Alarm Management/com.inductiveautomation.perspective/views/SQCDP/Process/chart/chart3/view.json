@@ -1,0 +1,165 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 250
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "basis": "232px",
+          "grow": 1
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "dropShadow": {
+                "blur": 10,
+                "color": "#000",
+                "enabled": false,
+                "left": 7,
+                "opacity": 0.2,
+                "top": 18
+              },
+              "events": {
+                "animationEnd": false,
+                "beforeMount": false,
+                "beforeResetZoom": false,
+                "beforeZoom": false,
+                "brushScrolled": false,
+                "click": false,
+                "dataPointMouseEnter": false,
+                "dataPointMouseLeave": false,
+                "dataPointSelection": false,
+                "legendClick": false,
+                "markerClick": false,
+                "mounted": false,
+                "mouseLeave": false,
+                "mouseMove": false,
+                "scrolled": false,
+                "selection": false,
+                "updated": false,
+                "xAxisLabelClick": false,
+                "zoomed": false
+              },
+              "height": 350,
+              "toolbar": {
+                "show": false
+              },
+              "type": "line"
+            },
+            "colors": [
+              "#77B6EA",
+              "#545454"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#e7e7e7",
+              "row": {
+                "colors": [
+                  "#f3f3f3",
+                  "transparent"
+                ],
+                "opacity": 0.5
+              }
+            },
+            "legend": {
+              "floating": true,
+              "horizontalAlign": "right",
+              "offsetX": -5,
+              "offsetY": -25,
+              "position": "top"
+            },
+            "markers": {
+              "size": 1
+            },
+            "stroke": {
+              "curve": "smooth"
+            },
+            "title": {
+              "align": "left",
+              "style": {
+                "fontSize": "10px"
+              },
+              "text": "."
+            },
+            "xaxis": {
+              "categories": [
+                "Shift1",
+                "Shift2",
+                "Shift3",
+                "Shift4",
+                "Shift5",
+                "Shift6",
+                "Shift7",
+                "Shift8"
+              ],
+              "style": {
+                "fontSize": "10px"
+              },
+              "title": {
+                "text": "Shift"
+              }
+            },
+            "yaxis": {
+              "max": 20,
+              "min": 0,
+              "title": {
+                "text": "Cost Per Cell"
+              }
+            }
+          },
+          "series": [
+            {
+              "data": [
+                12.1,
+                12.3,
+                12.6,
+                12.4,
+                12.8,
+                12.2,
+                12.7,
+                12.5
+              ],
+              "name": "Cost Per Cell"
+            },
+            {
+              "data": [
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11
+              ],
+              "name": "Target"
+            }
+          ]
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

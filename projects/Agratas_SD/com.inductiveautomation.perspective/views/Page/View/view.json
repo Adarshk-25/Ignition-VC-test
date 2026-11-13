@@ -1,0 +1,60 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 783
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "height": 275,
+          "width": 800
+        },
+        "propConfig": {
+          "props.options": {
+            "binding": {
+              "config": {
+                "expression": "1"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn {\n\t    \"chart\": {\n\t        \"type\": \"bar\",\n\t        \"stacked\": True,\n\t        \"toolbar\": {\n\t            \"show\": False\n\t        }\n\t    },\n\t    \"plotOptions\": {\n\t        \"bar\": {\n\t            \"horizontal\": True,\n\t            \"dataLabels\": {\n\t                \"total\": {\n\t                    \"enabled\": True,\n\t                    \"style\": {\n\t                        \"fontSize\": \"13px\",\n\t                        \"fontWeight\": 900\n\t                    }\n\t                }\n\t            }\n\t        }\n\t    },\n\t    \"stroke\": {\n\t        \"width\": 1,\n\t        \"colors\": [\"#ffffff\"]\n\t    },\n\t    \"title\": {\n\t        \"text\": \"Production by Category\",\n\t        \"align\": \"left\"\n\t    },\n\t    \"xaxis\": {\n\t        \"categories\": [\"Line 1\", \"Line 2\", \"Line 3\", \"Line 4\", \"Line 5\"],\n\t        \"title\": {\n\t            \"text\": \"Units\"\n\t        }\n\t    },\n\t    \"legend\": {\n\t        \"position\": \"top\",\n\t        \"horizontalAlign\": \"left\"\n\t    },\n\t    \"fill\": {\n\t        \"opacity\": 1\n\t    },\n\t    \"colors\": [\n\t        \"#008FFB\",\n\t        \"#00E396\",\n\t        \"#FEB019\",\n\t        \"#FF4560\",\n\t        \"#775DD0\"\n\t    ]\n\t}",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          },
+          "props.series": {
+            "binding": {
+              "config": {
+                "expression": "1"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn [\n    {\n        \"name\": \"Running\",\n        \"data\": [44, 55, 41, 37, 22]\n    },\n    {\n        \"name\": \"Minor Stop\",\n        \"data\": [13, 23, 20, 8, 13]\n    },\n    {\n        \"name\": \"Breakdown\",\n        \"data\": [11, 17, 15, 15, 21]\n    },\n    {\n        \"name\": \"Planned Stop\",\n        \"data\": [21, 7, 25, 13, 22]\n    }\n]",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "type": "bar"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

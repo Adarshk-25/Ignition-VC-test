@@ -1,0 +1,1518 @@
+{
+  "custom": {},
+  "params": {
+    "path": "/"
+  },
+  "propConfig": {
+    "params.path": {
+      "binding": {
+        "config": {
+          "path": "page.props.path"
+        },
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 900,
+      "width": 1766
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MultiStateButton_0",
+              "visible": false
+            },
+            "position": {
+              "height": 0.0348,
+              "width": 0.3519,
+              "x": 0.4209,
+              "y": 0.6848
+            },
+            "props": {
+              "controlValue": 2,
+              "indicatorValue": 0,
+              "orientation": "row",
+              "states": [
+                {
+                  "selectedStyle": {
+                    "classes": ""
+                  },
+                  "text": "Fill Tank",
+                  "unselectedStyle": {
+                    "classes": ""
+                  },
+                  "value": 2
+                },
+                {
+                  "selectedStyle": {
+                    "classes": ""
+                  },
+                  "text": "Mix",
+                  "unselectedStyle": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "color": "#D5D5D5",
+                    "fontFamily": "Roboto",
+                    "fontWeight": "bold",
+                    "textTransform": "capitalize"
+                  },
+                  "value": 0
+                }
+              ]
+            },
+            "type": "ia.input.multi-state-button"
+          },
+          {
+            "meta": {
+              "name": "Label_20"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0449,
+              "x": 0.5394,
+              "y": 0.3618
+            },
+            "props": {
+              "text": "318 / 500 L",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_21"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0449,
+              "x": 0.5394,
+              "y": 0.4016
+            },
+            "props": {
+              "text": "24°C",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_22"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0449,
+              "x": 0.5394,
+              "y": 0.4414
+            },
+            "props": {
+              "text": "1180 CP",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_23"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0449,
+              "x": 0.5394,
+              "y": 0.481
+            },
+            "props": {
+              "text": "1.12 Bar",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_24"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0449,
+              "x": 0.5394,
+              "y": 0.5206
+            },
+            "props": {
+              "text": "170 RPM",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_19"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.1679,
+              "x": 0.418,
+              "y": 0.3302
+            },
+            "props": {
+              "text": "Tank ID : B 002",
+              "textStyle": {
+                "fontSize": 14
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_25"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0595,
+              "x": 0.418,
+              "y": 0.3618
+            },
+            "props": {
+              "text": "Volume",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_26"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0595,
+              "x": 0.4181,
+              "y": 0.4016
+            },
+            "props": {
+              "text": "Temperature",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_27"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0595,
+              "x": 0.4181,
+              "y": 0.4399
+            },
+            "props": {
+              "text": "Viscosity",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_28"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0595,
+              "x": 0.4181,
+              "y": 0.4795
+            },
+            "props": {
+              "text": "Pressure",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_29"
+            },
+            "position": {
+              "height": 0.0202,
+              "width": 0.0595,
+              "x": 0.4181,
+              "y": 0.5216
+            },
+            "props": {
+              "text": "Mixer Speed",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "MultiStateButton",
+              "visible": false
+            },
+            "position": {
+              "height": 0.0337,
+              "width": 0.3175,
+              "x": 0.0181,
+              "y": 0.5671
+            },
+            "props": {
+              "controlValue": 2,
+              "indicatorValue": 0,
+              "orientation": "row",
+              "states": [
+                {
+                  "selectedStyle": {
+                    "classes": ""
+                  },
+                  "text": "Fill Tank",
+                  "unselectedStyle": {
+                    "classes": ""
+                  },
+                  "value": 2
+                },
+                {
+                  "selectedStyle": {
+                    "classes": ""
+                  },
+                  "text": "Mix",
+                  "unselectedStyle": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": "",
+                    "color": "#D5D5D5",
+                    "fontFamily": "Roboto",
+                    "fontWeight": "bold",
+                    "textTransform": "capitalize"
+                  },
+                  "value": 0
+                }
+              ]
+            },
+            "type": "ia.input.multi-state-button"
+          },
+          {
+            "meta": {
+              "name": "Label_31"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0481,
+              "x": 0.1191,
+              "y": 0.3757
+            },
+            "props": {
+              "text": "300 / 500 L",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_32"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0481,
+              "x": 0.1191,
+              "y": 0.4138
+            },
+            "props": {
+              "text": "25°C",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_33"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0481,
+              "x": 0.1191,
+              "y": 0.4519
+            },
+            "props": {
+              "text": "1250 cP",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_34"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0481,
+              "x": 0.1191,
+              "y": 0.4899
+            },
+            "props": {
+              "text": "1.2 bar",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_35"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0481,
+              "x": 0.1191,
+              "y": 0.5279
+            },
+            "props": {
+              "text": "180 RPM",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "end",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_36"
+            },
+            "position": {
+              "height": 0.0394,
+              "width": 0.1139,
+              "x": 0.0192,
+              "y": 0.279
+            },
+            "props": {
+              "alignVertical": "top",
+              "text": "Slurry Coating A",
+              "textStyle": {
+                "classes": "General/Header",
+                "textAlign": "justify"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_37"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.2888,
+              "x": 0.0192,
+              "y": 0.3337
+            },
+            "props": {
+              "text": "Tank ID : A 001",
+              "textStyle": {
+                "fontSize": 14
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_38"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0559,
+              "x": 0.0181,
+              "y": 0.3757
+            },
+            "props": {
+              "text": "Volume",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_39"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0559,
+              "x": 0.0181,
+              "y": 0.4138
+            },
+            "props": {
+              "text": "Temperature",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_40"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0559,
+              "x": 0.0181,
+              "y": 0.4507
+            },
+            "props": {
+              "text": "Viscosity",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_41"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0559,
+              "x": 0.0181,
+              "y": 0.4889
+            },
+            "props": {
+              "text": "Pressure",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_42"
+            },
+            "position": {
+              "height": 0.0191,
+              "width": 0.0559,
+              "x": 0.0181,
+              "y": 0.5291
+            },
+            "props": {
+              "text": "Mixer Speed",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "textAlign": "start",
+                "textTransform": "capitalize"
+              },
+              "viewBox": "93\n"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_46"
+            },
+            "position": {
+              "height": 0.036,
+              "width": 0.451,
+              "x": 0.0043,
+              "y": 0.0155
+            },
+            "props": {
+              "style": {
+                "classes": "General/Header"
+              },
+              "text": "COATING SYSTEM OVERVIEW"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_47",
+              "visible": false
+            },
+            "position": {
+              "height": 0.0223,
+              "width": 0.4456,
+              "x": 0.0043,
+              "y": 0.0627
+            },
+            "props": {
+              "text": "Battery Electrode Manufacturing - Roll To Roll Coating Line",
+              "textStyle": {
+                "fontFamily": "Roboto",
+                "fontSize": 15,
+                "fontWeight": "lighter",
+                "textAlign": "justify-all",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_49"
+            },
+            "position": {
+              "height": 0.0247,
+              "width": 0.9714,
+              "x": 0.0043,
+              "y": 0.2351
+            },
+            "props": {
+              "style": {
+                "classes": "General/Header"
+              },
+              "text": "LITHIUM SLURRY MIXING \u0026 PREPARING"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_50"
+            },
+            "position": {
+              "height": 0.0247,
+              "width": 0.9714,
+              "x": 0.0043,
+              "y": 0.7371
+            },
+            "props": {
+              "key": "value",
+              "style": {
+                "classes": "General/Header"
+              },
+              "text": "STATION STATUS OVERVIEW"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "FlexRepeater"
+            },
+            "position": {
+              "height": 0.1254,
+              "width": 0.8932,
+              "x": 0.0043,
+              "y": 0.1005
+            },
+            "propConfig": {
+              "props.instances": {
+                "binding": {
+                  "config": {
+                    "expression": "1"
+                  },
+                  "enabled": false,
+                  "transforms": [
+                    {
+                      "code": "\treturn [\n  {\n    \"instanceStyle\": {\n      \"classes\": \"\"\n    },\n    \"instancePosition\": {},\n    \"label\": \"Line Speed\",\n    \"value\": \"25.1 m/min\"\n  },\n  {\n    \"instanceStyle\": {\n      \"classes\": \"\"\n    },\n    \"instancePosition\": {},\n    \"label\": \"Total Length\",\n    \"value\": \"14464 Meters Coated\"\n  },\n  {\n    \"instanceStyle\": {\n      \"classes\": \"\"\n    },\n    \"instancePosition\": {},\n    \"label\": \"Material Used\",\n    \"value\": \"1247 L Liters Slurry\"\n  },\n  {\n    \"instanceStyle\": {\n      \"classes\": \"\"\n    },\n    \"instancePosition\": {},\n    \"label\": \"Production Rate\",\n    \"value\": \"98.7% Efficiency\"\n  },\n  {\n    \"instanceStyle\": {\n      \"classes\": \"\"\n    },\n    \"instancePosition\": {},\n    \"label\": \"RunTime\",\n    \"value\": \"7h 42m Operating Time\"\n  },\n  {\n    \"instanceStyle\": {\n      \"classes\": \"\"\n    },\n    \"instancePosition\": {},\n    \"label\": \"Active Alarms\",\n    \"value\": \"2 Red Alert\"\n  }\n]",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "instances": [
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "label": "Line Speed",
+                  "value": "25.1 m/min"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "label": "Total Coated",
+                  "value": "14464 M"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "label": "Material Slurry Used",
+                  "value": "1247 L "
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "label": "Production Rate",
+                  "value": "98.7%"
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "label": "Runtime",
+                  "value": "1h 42m"
+                }
+              ],
+              "path": "widgets(templates)/cardDisplay",
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          },
+          {
+            "meta": {
+              "name": "FlexRepeater_0"
+            },
+            "position": {
+              "height": 0.2121,
+              "width": 0.9404,
+              "x": 0.0043,
+              "y": 0.7634
+            },
+            "propConfig": {
+              "props.instances": {
+                "binding": {
+                  "config": {
+                    "expression": "1"
+                  },
+                  "enabled": false,
+                  "transforms": [
+                    {
+                      "code": "\treturn[\n  {\n    \"instanceStyle\": { \"classes\": \"\" },\n    \"instancePosition\": {},\n    \"name\": \"Unwinder\",\n    \"isActive\": True,\n    \"value\": 25.1,\n    \"id_name\": \"ID : UNW-001\",\n    \"uom\": \"m/min\"\n  },\n  {\n    \"instanceStyle\": { \"classes\": \"\" },\n    \"instancePosition\": {},\n    \"name\": \"Half Split\",\n    \"isActive\": True,\n    \"value\": 99.1,\n    \"id_name\": \"ID : SPLT-001\",\n    \"uom\": \"%\"\n  },\n  {\n    \"instanceStyle\": { \"classes\": \"\" },\n    \"instancePosition\": {},\n    \"name\": \"Coater : A\",\n    \"isActive\": True,\n    \"value\": 124.7,\n    \"id_name\": \"ID : COAT-A-001\",\n    \"uom\": \"µm\"\n  },\n  {\n    \"instanceStyle\": { \"classes\": \"\" },\n    \"instancePosition\": {},\n    \"name\": \"Coater : B\",\n    \"isActive\": True,\n    \"value\": 119.4,\n    \"id_name\": \"ID : COAT-B-001\",\n    \"uom\": \"µm\"\n  },\n  {\n    \"instanceStyle\": { \"classes\": \"\" },\n    \"instancePosition\": {},\n    \"name\": \"Oven : 1\",\n    \"isActive\": True,\n    \"value\": 124.8,\n    \"id_name\": \"ID : OVEN-1-001\",\n    \"uom\": \"°C\"\n  },\n  {\n    \"instanceStyle\": { \"classes\": \"\" },\n    \"instancePosition\": {},\n    \"name\": \"Oven : 2\",\n    \"isActive\": True,\n    \"value\": 136.3,\n    \"id_name\": \"ID : OVEN-2-001\",\n    \"uom\": \"°C\"\n  }\n]",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "elementPosition": {
+                "basis": 1
+              },
+              "elementStyle": {
+                "margin": "1em"
+              },
+              "instances": [
+                {
+                  "id_name": "ID : UNW-001",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "isActive": true,
+                  "name": "Unwinder",
+                  "uom": "m/min",
+                  "value": 25.1
+                },
+                {
+                  "id_name": "ID : SPLT-001",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "isActive": true,
+                  "name": "Half Split",
+                  "uom": "%",
+                  "value": 99.1
+                },
+                {
+                  "id_name": "ID : COAT-A-001",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "isActive": true,
+                  "name": "Coater : A",
+                  "uom": "µm",
+                  "value": 124.7
+                },
+                {
+                  "id_name": "ID : COAT-B-001",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "isActive": true,
+                  "name": "Coater : B",
+                  "uom": "µm",
+                  "value": 119.4
+                },
+                {
+                  "id_name": "ID : OVEN-1-001",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "isActive": true,
+                  "name": "Oven : 1",
+                  "uom": "°C",
+                  "value": 124.8
+                },
+                {
+                  "id_name": "ID : OVEN-2-001",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  },
+                  "isActive": true,
+                  "name": "Oven : 2",
+                  "uom": "°C",
+                  "value": 136.3
+                }
+              ],
+              "path": "widgets(templates)/coatingOverview/StatusCards",
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          },
+          {
+            "meta": {
+              "name": "CylindricalTank"
+            },
+            "position": {
+              "height": 0.3175,
+              "width": 0.1071,
+              "x": 0.2045,
+              "y": 0.3066
+            },
+            "props": {
+              "liquidColor": "#343474",
+              "liquidOpacity": 1,
+              "tankColor": "#D5D5D5",
+              "value": 76.4,
+              "valueDisplay": {
+                "format": "0.#%",
+                "style": {
+                  "color": "#FFFFFF",
+                  "fontFamily": "serif",
+                  "fontSize": "5em"
+                },
+                "unit": {
+                  "enabled": true
+                }
+              }
+            },
+            "type": "ia.display.cylindrical-tank"
+          },
+          {
+            "meta": {
+              "name": "CylindricalTank_0"
+            },
+            "position": {
+              "height": 0.3175,
+              "width": 0.1071,
+              "x": 0.6014,
+              "y": 0.3066
+            },
+            "props": {
+              "liquidColor": "#343474",
+              "liquidOpacity": 1,
+              "tankColor": "#D5D5D5",
+              "value": 68.4,
+              "valueDisplay": {
+                "format": "0.#%",
+                "style": {
+                  "color": "#FFFFFF",
+                  "fontFamily": "serif",
+                  "fontSize": "5em"
+                }
+              }
+            },
+            "type": "ia.display.cylindrical-tank"
+          },
+          {
+            "meta": {
+              "name": "Label_43"
+            },
+            "position": {
+              "height": 0.0394,
+              "width": 0.1076,
+              "x": 0.4179,
+              "y": 0.279
+            },
+            "props": {
+              "alignVertical": "top",
+              "text": "Slurry Coating B",
+              "textStyle": {
+                "classes": "General/Header",
+                "textAlign": "justify"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Dashboard"
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "PowerChart"
+                },
+                "position": {
+                  "basis": "800px",
+                  "grow": 1
+                },
+                "props": {
+                  "config": {
+                    "rangeEndDate": {
+                      "$": [
+                        "ts",
+                        0,
+                        1774260692582
+                      ],
+                      "$ts": 1774260597519
+                    },
+                    "rangeStartDate": {
+                      "$": [
+                        "ts",
+                        0,
+                        1774260692582
+                      ],
+                      "$ts": 1774231893519
+                    },
+                    "tagBrowserStartPath": "histprov:historian2:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating",
+                    "visibility": {
+                      "showTagBrowser": true
+                    }
+                  },
+                  "interaction": {
+                    "chartZoomLevel": 1,
+                    "rangeZoomLevel": 1
+                  },
+                  "pens": [
+                    {
+                      "axis": "",
+                      "data": {
+                        "aggregateMode": "default",
+                        "source": "histprov:historian2:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating/anode/betagauge1/plctags/thickness"
+                      },
+                      "display": {
+                        "breakLine": true,
+                        "interpolation": "curveLinear",
+                        "radius": 3,
+                        "styles": {
+                          "highlighted": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          },
+                          "muted": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 0.4
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 0.4,
+                              "width": 1
+                            }
+                          },
+                          "normal": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 0.8
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 0.8,
+                              "width": 1
+                            }
+                          },
+                          "selected": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          }
+                        },
+                        "type": "line"
+                      },
+                      "enabled": true,
+                      "name": "thickness",
+                      "plot": 0,
+                      "selectable": true,
+                      "visible": true
+                    },
+                    {
+                      "axis": "",
+                      "data": {
+                        "aggregateMode": "default",
+                        "source": "histprov:historian2:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating/anode/unwinder/plctags/speed"
+                      },
+                      "display": {
+                        "breakLine": true,
+                        "interpolation": "curveLinear",
+                        "radius": 3,
+                        "styles": {
+                          "highlighted": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#fc8d62",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          },
+                          "muted": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 0.4
+                            },
+                            "stroke": {
+                              "color": "#fc8d62",
+                              "dashArray": 0,
+                              "opacity": 0.4,
+                              "width": 1
+                            }
+                          },
+                          "normal": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 0.8
+                            },
+                            "stroke": {
+                              "color": "#fc8d62",
+                              "dashArray": 0,
+                              "opacity": 0.8,
+                              "width": 1
+                            }
+                          },
+                          "selected": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#fc8d62",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          }
+                        },
+                        "type": "line"
+                      },
+                      "enabled": true,
+                      "name": "Unwinder speed",
+                      "plot": 0,
+                      "selectable": true,
+                      "visible": true
+                    }
+                  ],
+                  "style": {
+                    "paddingBottom": 30,
+                    "paddingLeft": 30,
+                    "paddingRight": 30,
+                    "paddingTop": 30
+                  }
+                },
+                "type": "ia.chart.powerchart"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "basis": "600px",
+              "grow": 1
+            },
+            "props": {
+              "alignContent": "center",
+              "alignItems": "center",
+              "direction": "column",
+              "style": {
+                "classes": "widgets/spacing"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "AlarmStatusTable"
+                        },
+                        "position": {
+                          "basis": "800px"
+                        },
+                        "propConfig": {
+                          "props.filters.active.conditions.source": {
+                            "binding": {
+                              "config": {
+                                "expression": "\"*\"+{view.params.path}+\"*\""
+                              },
+                              "type": "expr"
+                            }
+                          }
+                        },
+                        "props": {
+                          "columns": {
+                            "active": {
+                              "activeTime": {
+                                "order": 1
+                              },
+                              "displayPath": {
+                                "order": 4
+                              },
+                              "name": {
+                                "order": 0
+                              },
+                              "source": {
+                                "enabled": false
+                              }
+                            }
+                          },
+                          "filters": {
+                            "active": {
+                              "conditions": {}
+                            }
+                          },
+                          "rowStyles": {
+                            "activeAcked": {
+                              "base": {
+                                "backgroundColor": ""
+                              },
+                              "priorities": {
+                                "critical": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/critical"
+                                },
+                                "diagnostic": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/diagnostic"
+                                },
+                                "high": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/high"
+                                },
+                                "low": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/low"
+                                },
+                                "medium": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/medium"
+                                }
+                              }
+                            },
+                            "activeUnacked": {
+                              "base": {
+                                "backgroundColor": ""
+                              },
+                              "priorities": {
+                                "critical": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/critical"
+                                },
+                                "diagnostic": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/diagnostic"
+                                },
+                                "high": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/high"
+                                },
+                                "low": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/low"
+                                },
+                                "medium": {
+                                  "backgroundColor": "",
+                                  "classes": "alarm/medium"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "type": "ia.display.alarmstatustable"
+                      }
+                    ],
+                    "meta": {
+                      "name": "alarmStatusFlexContainer"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "props": {
+                      "direction": "column",
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "alarmStatusTable"
+                },
+                "props": {
+                  "direction": "column",
+                  "justify": "space-evenly",
+                  "style": {
+                    "classes": "widgets/spacing"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "AlarmJournalTable"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.filter.conditions.source": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"*\"+{view.params.path}+\"*\""
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "columns": {
+                        "displayPath": {
+                          "enabled": true
+                        },
+                        "eventId": {
+                          "enabled": false
+                        },
+                        "source": {
+                          "enabled": false
+                        }
+                      },
+                      "filter": {
+                        "conditions": {}
+                      },
+                      "name": "Alarm Management Journal",
+                      "rowStyles": {
+                        "acked": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarm/high"
+                            },
+                            "low": {
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        },
+                        "active": {
+                          "base": {
+                            "backgroundColor": ""
+                          },
+                          "priorities": {
+                            "critical": {
+                              "classes": "alarm/critical"
+                            },
+                            "diagnostic": {
+                              "classes": "alarm/diagnostic"
+                            },
+                            "high": {
+                              "classes": "alarm/high alarm/medium"
+                            },
+                            "low": {
+                              "classes": "alarm/low"
+                            },
+                            "medium": {
+                              "classes": "alarm/medium"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "type": "ia.display.alarmjournaltable"
+                  }
+                ],
+                "meta": {
+                  "name": "alarmJournalFlexContainer"
+                },
+                "position": {
+                  "tabIndex": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "classes": "widgets/spacing"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "EmbeddedView"
+                },
+                "position": {
+                  "tabIndex": 2
+                },
+                "props": {
+                  "path": "screens/Alarm Configurator"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "TabContainer"
+            },
+            "position": {
+              "basis": "913px"
+            },
+            "props": {
+              "menuType": "modern",
+              "tabSize": {
+                "width": 150
+              },
+              "tabs": [
+                "Alarm Status Table",
+                "Alarm Journal Table",
+                "Alarm Configurator"
+              ]
+            },
+            "type": "ia.container.tab"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Process"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "CoatingProcess/Process"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "menuType": "modern",
+      "tabStyle": {
+        "active": {
+          "borderBottomColor": "#343474",
+          "borderBottomStyle": "solid",
+          "borderBottomWidth": 2,
+          "classes": "",
+          "fontWeight": "bold"
+        }
+      },
+      "tabs": [
+        "Dashboard",
+        "Trend",
+        "Alarm",
+        "Process"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

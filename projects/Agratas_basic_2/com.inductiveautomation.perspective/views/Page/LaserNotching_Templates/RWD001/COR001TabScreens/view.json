@@ -1,0 +1,1114 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PopUpTemplateView"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/Active"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/Status"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "COR001: A Core",
+            "parameterData": [
+              {
+                "Parameter": "Active"
+              },
+              {
+                "Parameter": "Status"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_0"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/AxisPositionPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"mm\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/AxisPositionSP"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"mm\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/CurrentPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"A\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].Actualvalue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/CurrentPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"A\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/MotorFault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/MotorRunning"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[5].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/MotorSpeedPV"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"m/min\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[6].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/MAA001/MotorSpeedSP"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value)+\" \"+\"m/min\"",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[8].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/MotorStartCommand"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "MAA001: Upper Rewinder A Spool DS Axis Servo Motor (SM41)",
+            "parameterData": [
+              {
+                "Parameter": "AxisPositionPV"
+              },
+              {
+                "Parameter": "AxisPositionSP"
+              },
+              {
+                "Parameter": "CurrentPV"
+              },
+              {
+                "Parameter": "MotorFault"
+              },
+              {
+                "Parameter": "MotorRunning"
+              },
+              {
+                "Parameter": "MotorSpeedPV"
+              },
+              {
+                "Parameter": "MotorSpeedSP"
+              },
+              "value",
+              {
+                "Parameter": "MotorStartCommand"
+              }
+            ],
+            "tableHeader": "Process Parameters",
+            "tag": "value"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_1"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/AxisJigUpSettingPostion2"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[10].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/ErrorCode"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[11].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[12].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/FollowingError"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[13].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/Idle"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[14].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/JogAcceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[15].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/JogDeceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[16].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/Running"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[17].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/Speed"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[18].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/Status"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UWD001/COR001/TAC001/AxisJigDownSettingPostion"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/AxisJigUpSettingPostion1"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/AxisJigUpSettingPostion3"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/AxisJigUpSettingPostion4"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[5].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/AxisJigUpSettingPostion5"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[6].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/AxisJogVelocity"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[7].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/AxisPositioningAcceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[8].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/AxisPositioningDeceleration"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[9].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/TAC001/AxisPositioningVelocity"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "TAC001: Upper Rewinder A Spool DS Axis Servo Drive (SD41) ",
+            "parameterData": [
+              {
+                "Parameter": "AxisJigDownSettingPosition2"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition1"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition3"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition4"
+              },
+              {
+                "Parameter": "AxisJigDownSettingPosition5"
+              },
+              {
+                "Parameter": "AxisJogVelocity"
+              },
+              {
+                "Parameter": "AxisPositioningAcceleration"
+              },
+              {
+                "Parameter": "AxisPositioningDeceleration"
+              },
+              {
+                "Parameter": "AxisPositioningVelocity"
+              },
+              {
+                "Parameter": "ErrorCode"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "FollowingError"
+              },
+              {
+                "Parameter": "Idle"
+              },
+              {
+                "Parameter": "JogAcceleration"
+              },
+              {
+                "Parameter": "JogDeceleration"
+              },
+              {
+                "Parameter": "Running"
+              },
+              {
+                "Parameter": "Speed"
+              },
+              {
+                "Parameter": "Status"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_2"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/ZSC001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "ZSC001: Upper Rewinder A Spool DS Axis Servo Motor FLS Sensor (SM41)  ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_3"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/ZSC002/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "ZSC002: Upper Rewinder A Spool DS Axis Servo Motor RLS Sensor (SM41)",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_4"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/ZSO001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "ZSO001: Upper Rewinder A Spool DS Axis Servo Motor DOG Sensor (SM41)\n",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_5"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/MMB001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "MMB001: Upper Rewinder A Core Shaft Chucking Cylinder Lock Solenoid Valve ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_6"
+        },
+        "position": {
+          "tabIndex": 7
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/BED001/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "BED001: Upper Rewinder A Core Shaft Chucking Cylinder Forward Sensor ",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_7"
+        },
+        "position": {
+          "tabIndex": 8
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/BED002/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "BED002: Upper Rewinder A Core Shaft Chucking Cylinder Backward Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_8"
+        },
+        "position": {
+          "tabIndex": 9
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/MMB002/Extended"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/RWD001/COR001/MMB002/Extending"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/MMB002/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/MMB002/Retracted"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[4].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/MMB002/Retracting"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "MMB002: Upper Rewinder A Air Shaft Unit Chucking Unlock Solenoid Valve",
+            "parameterData": [
+              {
+                "Parameter": "Extended"
+              },
+              {
+                "Parameter": "Extending"
+              },
+              {
+                "Parameter": "Fault"
+              },
+              {
+                "Parameter": "Retracted"
+              },
+              {
+                "Parameter": "Retracting"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_9"
+        },
+        "position": {
+          "tabIndex": 10
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/BED003/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "BED003: Upper Rewinder A Air Shaft Unit Chucking Forward Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_10"
+        },
+        "position": {
+          "tabIndex": 11
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/BED004/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "BED004: Upper Rewinder A Air Shaft Unit Chucking Backward Sensor",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PopUpTemplateView_11"
+        },
+        "position": {
+          "tabIndex": 12
+        },
+        "propConfig": {
+          "props.params.parameterData[0].Parameter": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/PIT001/Fault"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[1].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/PIT001/Output"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[2].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/PIT001/PV"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.parameterData[3].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": ""
+                },
+                "tagPath": "{Tag}/RWD001/COR001/PIT001/SP"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/LaserWidgets/RWD001/RewinderCOR001",
+            "equipmentName": "PIT001: Upper Rewinder A Core Air Shaft Digital Pressure Gauge",
+            "parameterData": [
+              {
+                "ActualValue": "value"
+              },
+              {
+                "Parameter": "Output"
+              },
+              {
+                "Parameter": "PV"
+              },
+              {
+                "Parameter": "SP"
+              },
+              {
+                "ActualValue": "value",
+                "Parameter": "Status"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 12,
+      "tabSize": {
+        "width": 120
+      },
+      "tabs": [
+        "COR001",
+        "MAA001",
+        "TAC001",
+        "ZSC001",
+        "ZSC002",
+        "ZSO001",
+        "MMB001",
+        "BED001",
+        "BED002",
+        "MMB002",
+        "BED003",
+        "BED004",
+        "PIT001"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

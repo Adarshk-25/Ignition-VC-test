@@ -1,0 +1,74 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "SolventRecoveryCondenser"
+        },
+        "props": {
+          "path": "IN11/E1/PRO/Recovery/CathodeLine1/SolventRecoveryCondenser"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "purgeSystem"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "IN11/E1/PRO/Recovery/CathodeLine1/purgeSystem"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "airPollutionControlSystem"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "IN11/E1/PRO/Recovery/CathodeLine1/airPollutionControlSystem"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "condensateTransferSystemCathode"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "IN11/E1/PRO/Recovery/CathodeLine1/condensateTransferSystemCathode"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "currentTabIndex": 3,
+      "tabSize": {
+        "width": 210
+      },
+      "tabs": [
+        "Solvent Recovery Condenser",
+        "Purge System",
+        "Air Pollution Control System",
+        "Condensate Transfer System"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

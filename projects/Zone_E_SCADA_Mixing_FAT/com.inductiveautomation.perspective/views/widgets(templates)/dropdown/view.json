@@ -1,0 +1,73 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 42,
+      "width": 162
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "filterDropdown"
+            },
+            "position": {
+              "basis": "137px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "All",
+                  "value": "all"
+                },
+                {
+                  "label": "User Based",
+                  "value": "user"
+                },
+                {
+                  "label": "Mail Based",
+                  "value": "mail"
+                },
+                {
+                  "label": "Zone Based",
+                  "value": "zone"
+                },
+                {
+                  "label": "Action Based",
+                  "value": "action"
+                }
+              ],
+              "style": {
+                "backgroundColor": "#ffffff",
+                "borderRadius": "6px",
+                "classes": "General/dropdownStyle",
+                "height": "38px",
+                "marginLeft": "20px"
+              },
+              "value": null
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "42px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

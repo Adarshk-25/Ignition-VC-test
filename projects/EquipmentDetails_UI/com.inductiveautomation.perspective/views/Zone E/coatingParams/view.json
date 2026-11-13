@@ -1,0 +1,2061 @@
+{
+  "custom": {},
+  "params": {
+    "coaterName": "value",
+    "line": "value"
+  },
+  "propConfig": {
+    "params.coaterName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.line": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 462,
+      "width": 318
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Drawing"
+        },
+        "position": {
+          "height": 0.0563,
+          "width": 1
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {
+                "opacity": "1",
+                "paint": "#343474",
+                "rule": "nonzero"
+              },
+              "height": "75",
+              "name": "rect",
+              "stroke": {
+                "paint": "hsl(245, 83%, 23%)"
+              },
+              "type": "rect",
+              "width": "430",
+              "x": 6,
+              "y": 48
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "5 47 432 77"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label_25"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0537,
+          "y": 0.1746
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Coating Speed",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_26"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.1944
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "A Side Coating Weight",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_27"
+        },
+        "position": {
+          "height": 0.0408,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.2185
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "A+B Side Coating Weight",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_37"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.2473
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "A+B Coating Thickness",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_29"
+        },
+        "position": {
+          "height": 0.0408,
+          "width": 0.3549,
+          "x": 0.0506,
+          "y": 0.7348
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Average Batch Time ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_24"
+        },
+        "position": {
+          "height": 0.0361,
+          "width": 0.4734,
+          "x": 0.0321,
+          "y": 0.1467
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Process Paramenter",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_28"
+        },
+        "position": {
+          "height": 0.0361,
+          "width": 0.5155,
+          "x": 0.0321,
+          "y": 0.7126
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Operational Parameter",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_31"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.486,
+          "x": 0.0506,
+          "y": 0.7982
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Batch Start Time ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_32"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.4606,
+          "x": 0.0506,
+          "y": 0.8269
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Batch End Time",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_30"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.5155,
+          "x": 0.0506,
+          "y": 0.7672
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "No. Of Batches Completed ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_33"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.448,
+          "x": 0.0506,
+          "y": 0.8578
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Batch Duration",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_34"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.4986,
+          "x": 0.0506,
+          "y": 0.8891
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Total Batch Per Mixer",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_35"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.448,
+          "x": 0.0506,
+          "y": 0.9203
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Downtime ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_112"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6343,
+          "y": 0.7391
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "4 hr ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_113"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.1057,
+          "x": 0.6343,
+          "y": 0.7739
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "1 ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_114"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.1057,
+          "x": 0.6343,
+          "y": 0.8012
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "08:30",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_115"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.1057,
+          "x": 0.6343,
+          "y": 0.8279
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "16:30",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_116"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.1057,
+          "x": 0.6343,
+          "y": 0.8924
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": 2,
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_117"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.1057,
+          "x": 0.6343,
+          "y": 0.8626
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "8 hrs",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_118"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.1057,
+          "x": 0.6343,
+          "y": 0.9206
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "1 hr",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_138"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6124,
+          "y": 0.2204
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "164.7 g/m²",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_139"
+        },
+        "position": {
+          "height": 0.0408,
+          "width": 0.1057,
+          "x": 0.6124,
+          "y": 0.3007
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "82.3 g/m²",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_136"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1184,
+          "x": 0.6155,
+          "y": 0.1998
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "82.4 g/m²",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_137"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1184,
+          "x": 0.6155,
+          "y": 0.1724
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "45 m/min ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_119"
+        },
+        "position": {
+          "height": 0.0349,
+          "width": 0.1057,
+          "x": 0.6343,
+          "y": 0.9547
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "88 % ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bolder",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_36"
+        },
+        "position": {
+          "height": 0.0349,
+          "width": 0.1509,
+          "x": 0.058,
+          "y": 0.95
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "OEE ",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bolder",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_19"
+        },
+        "position": {
+          "height": 0.0392,
+          "width": 0.1559,
+          "x": 0.0432,
+          "y": 0.0645
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Machine ID:",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_20"
+        },
+        "position": {
+          "height": 0.0392,
+          "width": 0.1559,
+          "x": 0.0432,
+          "y": 0.1035
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Line",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_21"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.1719,
+          "x": 0.5793,
+          "y": 0.0645
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Coater: \"+{view.params.coaterName}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_22"
+        },
+        "position": {
+          "height": 0.039,
+          "width": 0.1719,
+          "x": 0.5793,
+          "y": 0.1035
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.line"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_23"
+        },
+        "position": {
+          "height": 0.0392,
+          "width": 0.1495,
+          "x": 0.441,
+          "y": 0.0102
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label1"
+          },
+          "text": "Parameters",
+          "textStyle": {
+            "color": "#E5AD57",
+            "fontWeight": "bold",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_140"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6124,
+          "y": 0.2438
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "156.8 µm",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_38"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.2753
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Surface Defects",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_39"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.2988
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "B Side Coating Weight",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_141"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6217,
+          "y": 0.2742
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": 2,
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_40"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.3227
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "A Side Coating Width",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_41"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.3465
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "B Side Coating Width",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_42"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.4246
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "B Side Coating Weight",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_43"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0569,
+          "y": 0.4528
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Alarm Status",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_44"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.4767
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Length Of Coating",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_45"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.5026
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "A/B Side Misalignment",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_142"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6124,
+          "y": 0.3242
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "520.3 mm",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_46"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.3726
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "A Side Ceramic Width",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_47"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.3986
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "B Side Ceramic Width",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_143"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6093,
+          "y": 0.3481
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "519.9 mm",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_144"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6124,
+          "y": 0.372
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "514.9 mm",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_145"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6124,
+          "y": 0.4003
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "514 mm",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_146"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6124,
+          "y": 0.4262
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "520.3 mm",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_147"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6155,
+          "y": 0.4522
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Normal",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_148"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6186,
+          "y": 0.48
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "1248m",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_149"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6186,
+          "y": 0.5054
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "0.18 mm",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_48"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.5308
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "%LEL (Cathode)",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_49"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.5568
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "%Humidity (Anode)",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_50"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.5828
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Zone 1F Temperatures (14 points)",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_150"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6217,
+          "y": 0.5315
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "3.2 %",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_151"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6155,
+          "y": 0.5555
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "1.4 %RH",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_152"
+        },
+        "position": {
+          "height": 0.0628,
+          "width": 0.6006,
+          "x": 0.3825,
+          "y": 0.5709
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "82.1, 82.5, 83.0, 83.3, 83.6, 84.0, 84.2, 84.1, 83.8, 83.5, 83.1, 82.8, 82.4, 82.0 °C",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_51"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.6106
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Zone 2F Temperatures (14 points)",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_52"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.6585
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Coating Tank Level",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_53"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.3043,
+          "x": 0.0538,
+          "y": 0.634
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "Ceramic Tank Level",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "normal",
+            "textAlign": "start"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_153"
+        },
+        "position": {
+          "height": 0.0368,
+          "width": 0.5849,
+          "x": 0.3913,
+          "y": 0.6114
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "80.2, 80.5, 80.9, 81.3, 81.6, 81.9, 82.2, 82.0, 81.8, 81.4, 81.0, 80.7, 80.4, 80.1°C",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_154"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6217,
+          "y": 0.6351
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "76.5 %",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_155"
+        },
+        "position": {
+          "height": 0.0407,
+          "width": 0.1057,
+          "x": 0.6217,
+          "y": 0.6612
+        },
+        "props": {
+          "style": {
+            "classes": "Page/Label2"
+          },
+          "text": "68.9 %",
+          "textStyle": {
+            "color": "#000080",
+            "fontWeight": "bold",
+            "textAlign": "start",
+            "textTransform": "none"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Drawing_1"
+        },
+        "position": {
+          "height": 0.5519,
+          "rotate": {
+            "angle": 0
+          },
+          "width": 0.9811,
+          "x": 0.0052,
+          "y": 0.1492
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M8 8.075861922206398L445 10.151723844412796 446 908.9999361597831 5 906.9240742375766 7 6",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5px"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M8.000013105622067 45L447 46",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M171 44.66665699228878L171 908.6348977454237",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_1",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 84L445 85",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_2",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 127L448 128",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_5",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 172L447 172",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_6",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M5.999982317471677 216L447.0000211426896 216",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_7",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 259L446 259",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_8",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 304L447 304",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_9",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 347L446 347",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_10",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M4.800017642973216 557.3999999999996L444.8000176429732 557.3999999999996",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_11",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M4.800017642973216 645.3999999999996L444.8000176429732 645.3999999999996",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_12",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M5.800017642973216 602.3999999999996L445.8000176429732 602.3999999999996",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_14",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M4.799999960444893 514.3999999999996L445.80003878566276 514.3999999999996",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_15",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M5.800017642973216 470.39999999999964L445.8000176429732 470.39999999999964",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_16",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M4.800017642973216 425.39999999999964L446.8000176429732 426.39999999999964",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_17",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M5.800017642973216 382.39999999999964L443.8000176429732 383.39999999999964",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_3",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M5.000017452238353 688.8000061035154L443.00001745223835 689.8000061035154",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_4",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M4.000017452238353 731.8000061035154L446.00001745223835 732.8000061035154",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_18",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M5.000017452238353 776.8000061035154L445.00001745223835 776.8000061035154",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_19",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M3.99999976971003 820.8000061035154L445.0000385949279 820.8000061035154",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_20",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M4.000017452238353 863.8000061035154L444.00001745223835 863.8000061035154",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_23",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 450 920"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Drawing_2"
+        },
+        "position": {
+          "height": 0.2814,
+          "rotate": {
+            "angle": 0
+          },
+          "width": 0.9811,
+          "x": 0.0052,
+          "y": 0.7099
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M8 6.894252775737088L445 7.7885055514741754 446 394.99995744563324 5 394.10570466989617 7 6",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5px"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M8.000013105622067 45L447 46",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M228 44.666656992288786L228 393.634923696303",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_1",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 84L445 85",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_2",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 127L448 128",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_5",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 172L447 172",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_6",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M5.999982317471677 216L447.0000211426896 216",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_7",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M200,624L200,624",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_13",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M-102 387L-102 433",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_17",
+              "stroke": {
+                "paint": "#000000",
+                "width": "2px"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 259L446 259",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_8",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M7 304L447 304",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_9",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M6 347L446 347",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "pen-path_10",
+              "stroke": {
+                "paint": "#000000",
+                "width": "1.5"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 450 400"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 72.5138,
+      "y": 110.64538383483887
+    },
+    "props": {
+      "mode": "percent",
+      "pipes": [
+        {
+          "appearance": "p\u0026id",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_0",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.9832,
+                "y": 0.7
+              }
+            ],
+            "x": 0.0052,
+            "y": 0.7
+          },
+          "start": "none",
+          "stroke": "#000000",
+          "width": 1
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.9832,
+                "y": 0.1447
+              }
+            ],
+            "x": 0.0032,
+            "y": 0.1447
+          },
+          "start": "none",
+          "stroke": "#000000",
+          "visible": true,
+          "width": 1
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 647,
+      "width": 989
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "height": 486,
+          "width": 960,
+          "x": 14.5,
+          "y": 34
+        },
+        "props": {
+          "columns": {
+            "active": {
+              "ackTime": {
+                "order": 9
+              },
+              "activeTime": {
+                "enabled": false
+              },
+              "displayPath": {
+                "enabled": false,
+                "order": 10
+              },
+              "label": {
+                "order": 6
+              },
+              "name": {
+                "enabled": false,
+                "order": 0
+              },
+              "priority": {
+                "enabled": false,
+                "order": 8
+              },
+              "source": {
+                "enabled": false
+              },
+              "state": {
+                "order": 9
+              }
+            }
+          },
+          "columnsAssociated": {
+            "active": [
+              {
+                "enabled": true,
+                "field": "Alarm Group Id",
+                "order": 2,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Alarm Code",
+                "order": 3,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Severity",
+                "order": 4,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "FBS Source",
+                "order": 5,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Troubleshoot",
+                "order": 7,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Timestamp Active",
+                "order": 0,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": false,
+                "field": "Timestamp Reset",
+                "order": 1,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Alarm Priority",
+                "order": 4,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Alarm Description",
+                "order": 0,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              }
+            ]
+          },
+          "filters": {
+            "active": {
+              "priorities": {
+                "diagnostic": true
+              },
+              "states": {
+                "clearUnacked": false
+              }
+            }
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

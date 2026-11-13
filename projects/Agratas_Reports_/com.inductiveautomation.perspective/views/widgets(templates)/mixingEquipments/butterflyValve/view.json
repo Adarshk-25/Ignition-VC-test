@@ -1,0 +1,138 @@
+{
+  "custom": {
+    "Cmd": true,
+    "Run_fb": true,
+    "Stp_fb": false
+  },
+  "params": {
+    "name": "[default]agratas/sanand/zoneE/line1/mixing/equipments/Butterfly Valve"
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "name": "{view.params.name}"
+          },
+          "tagPath": "{name}/Cmd"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "name": "{view.params.name}"
+          },
+          "tagPath": "{name}/Run_fb"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "name": "{view.params.name}"
+          },
+          "tagPath": "{name}/Stp_fb"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 60,
+      "width": 60
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Valve"
+        },
+        "position": {
+          "height": 0.5802,
+          "width": 0.9662
+        },
+        "propConfig": {
+          "props.state": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.Cmd} \u0026\u0026 {view.custom.Run_fb}, \"open\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.Stp_fb}, \"closed\",\r\nif({view.custom.Cmd} \u0026\u0026 {view.custom.Run_fb}\u003d0, \"failedToOpen\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.Stp_fb}, \"failedToOpen\",\r\n\"default\"))))"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "appearance": "p\u0026id",
+          "label": {
+            "location": "hidden"
+          },
+          "value": {
+            "location": "hidden"
+          },
+          "valve": "left"
+        },
+        "type": "ia.symbol.valve"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.3165,
+          "width": 0.9153,
+          "x": 0.0832,
+          "y": 0.6452
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "name": "{view.params.name}"
+                },
+                "tagPath": "{name}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "PipingAndInst/label"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "60:60",
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,3126 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1080,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "props": {
+              "style": {
+                "color": "#e94560",
+                "fontSize": "22px",
+                "fontWeight": "bold"
+              },
+              "text": "Zone E — Mixing \u0026 Coating"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Speed: {[ZoneE]MixCoat/LineSpeed}"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "props": {
+                  "text": "Yield: {[ZoneE]MixCoat/Yield}"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "props": {
+                  "style": {
+                    "color": "#f59e0b"
+                  },
+                  "text": "Defect: {[ZoneE]MixCoat/DefectRate}"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_2"
+                },
+                "props": {
+                  "text": "Batch: {[ZoneE]MixCoat/Batch}"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_3"
+                },
+                "props": {
+                  "text": "Length: {[ZoneE]MixCoat/CoatedLength}"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_4"
+                },
+                "props": {
+                  "style": {
+                    "color": "#f59e0b"
+                  },
+                  "text": "Alarms: {[ZoneE]MixCoat/ActiveAlarms}"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_5"
+                },
+                "props": {
+                  "style": {
+                    "color": "#ef4444"
+                  },
+                  "text": "Crit: {[ZoneE]MixCoat/Critical}"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "KPIBar"
+            },
+            "props": {
+              "style": {
+                "gap": "24px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Header"
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "space-between",
+          "style": {
+            "backgroundColor": "#16213e",
+            "borderBottom": "2px solid #0f3460",
+            "padding": "12px 24px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "SectionTitle_Mixing"
+        },
+        "props": {
+          "style": {
+            "color": "#22d3ee",
+            "fontSize": "14px",
+            "fontWeight": "bold",
+            "padding": "12px 24px 4px"
+          },
+          "text": "SLURRY MIXING SYSTEM"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "13px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Raw Material Feeding"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "color": "#8899aa",
+                    "fontSize": "10px"
+                  },
+                  "text": "AUTO | 8h 15m"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Binder Feed Rate"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/RawMaterial/BinderFeedRate} kg/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Powder Feed Rate"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/RawMaterial/PowderFeedRate} kg/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Hopper Level"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/RawMaterial/HopperLevel} %"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Feeder Speed"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/RawMaterial/FeederSpeed} RPM"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_2"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "8px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "RawMaterial"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "340px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "13px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Yunsung Mixer"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "color": "#8899aa",
+                    "fontSize": "10px"
+                  },
+                  "text": "AUTO | 8h 15m"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Agitator RPM"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/Mixer/AgitatorRPM}"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Motor Load"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/Mixer/MotorLoad} %"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Temperature"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/Mixer/Temperature} °C"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Viscosity"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/Mixer/Viscosity} cP"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_2"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Vacuum"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/Mixer/Vacuum} bar"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_3"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Tank Level"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/Mixer/TankLevel} %"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_4"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "8px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Mixer"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "340px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "13px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Slurry Buffer Tank"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "color": "#8899aa",
+                    "fontSize": "10px"
+                  },
+                  "text": "AUTO | 8h 15m"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Level"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/BufferTank/Level} %"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Pressure"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/BufferTank/Pressure} bar"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Flow Rate"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/BufferTank/FlowRate} L/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Temperature"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/BufferTank/Temperature} °C"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_2"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "8px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "BufferTank"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "340px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "13px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Transfer Pump"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "color": "#8899aa",
+                    "fontSize": "10px"
+                  },
+                  "text": "AUTO | 8h 15m"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Flow Rate"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/TransferPump/FlowRate} L/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Pressure"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/TransferPump/Pressure} bar"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Motor Speed"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/TransferPump/MotorSpeed} RPM"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "8px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "TransferPump"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "340px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "13px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Coating Feed Tank"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "color": "#8899aa",
+                    "fontSize": "10px"
+                  },
+                  "text": "AUTO | 8h 15m"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Level"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/FeedTank/Level} %"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Viscosity"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/FeedTank/Viscosity} cP"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "11px"
+                          },
+                          "text": "Output Flow"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "11px"
+                          },
+                          "text": "{[ZoneE]Mixing/FeedTank/OutputFlow} L/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "8px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "FeedTank"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "340px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "MixingMachines"
+        },
+        "props": {
+          "style": {
+            "gap": "12px",
+            "padding": "8px 24px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "SectionTitle_Coating"
+        },
+        "props": {
+          "style": {
+            "color": "#22d3ee",
+            "fontSize": "14px",
+            "fontWeight": "bold",
+            "padding": "16px 24px 4px"
+          },
+          "text": "PNT COATING LINE"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Unwinder"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Roll Ø"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Unwinder/RollDiameter} mm"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Speed"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Unwinder/Speed} m/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Tension"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Unwinder/Tension} N"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Unwinder"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Tension (In)"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "SP / PV"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/TensionIn/SP} / {[ZoneE]Coating/TensionIn/PV} N"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Dancer"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/TensionIn/DancerPos}"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "TensionIn"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "A-Side Coat"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Gap"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/CoatingA/Gap} µm"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Pump Flow"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/CoatingA/PumpFlow} L/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Coat Weight"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/CoatingA/CoatWeight} mg/cm²"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "CoatingA"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Oven 1-2"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Z1 / Z2"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Oven1/Zone1} / {[ZoneE]Coating/Oven1/Zone2} °C"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Airflow"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Oven1/Airflow} %"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Oven1"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Expansion Roll"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Speed"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Expansion/Speed} m/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Tension"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Expansion/Tension} N"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Expansion"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Cooling Roll"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Temp"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Cooling/Temperature} °C"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Coolant"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Cooling/CoolantFlow} L/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Cooling"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Tension (Out)"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "SP / PV"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/TensionOut/SP} / {[ZoneE]Coating/TensionOut/PV} N"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "TensionOut"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "B-Side Coat"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Gap"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/CoatingB/Gap} µm"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Pump Flow"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/CoatingB/PumpFlow} L/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "CoatingB"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Oven 3-4"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#f59e0b",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Z3 / Z4"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Oven2/Zone3} / {[ZoneE]Coating/Oven2/Zone4} °C"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Airflow"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Oven2/Airflow} %"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Oven2"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #f59e0b",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "CCD Inspect"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Thickness"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/CCD/Thickness} µm"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Defects"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/CCD/DefectCount}"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "CCD"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "NG Laser"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Trigger"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/NGLaser/TriggerStatus}"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "NG Count"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/NGLaser/MarkingCounter}"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "NGLaser"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label"
+                    },
+                    "props": {
+                      "style": {
+                        "fontSize": "12px",
+                        "fontWeight": "bold"
+                      },
+                      "text": "Rewinder"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Icon"
+                    },
+                    "props": {
+                      "color": "#22c55e",
+                      "path": "material/circle",
+                      "style": {
+                        "fontSize": "10px"
+                      }
+                    },
+                    "type": "ia.display.icon"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "props": {
+                  "alignItems": "center",
+                  "justify": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Roll Ø"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Rewinder/RollDiameter} mm"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Length"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Rewinder/LengthCounter} m"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_0"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Label"
+                        },
+                        "props": {
+                          "style": {
+                            "color": "#8899aa",
+                            "fontSize": "10px"
+                          },
+                          "text": "Speed"
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "Label_0"
+                        },
+                        "props": {
+                          "style": {
+                            "fontSize": "10px"
+                          },
+                          "text": "{[ZoneE]Coating/Rewinder/Speed} m/min"
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer_1"
+                    },
+                    "props": {
+                      "justify": "space-between"
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "gap": "2px",
+                    "marginTop": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Rewinder"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#16213e",
+                "border": "1px solid #0f3460",
+                "borderRadius": "6px",
+                "padding": "12px",
+                "width": "220px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "CoatingMachines"
+        },
+        "props": {
+          "style": {
+            "gap": "12px",
+            "padding": "8px 24px"
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#1a1a2e",
+        "color": "#e0e0e0"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

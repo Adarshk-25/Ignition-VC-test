@@ -1,0 +1,931 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": "auto",
+      "width": "auto"
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onItemClicked": {
+              "config": {
+                "script": "\tselection \u003d event.itemPath\n\t\n\tif not selection:\n\t    return\n\t\n\ttree \u003d self.props.items\n\t\n\tbreadcrumb \u003d []\n\tcurrent \u003d tree\n\t\n\tfor pos, idx in enumerate(selection):\n\t\n\t    i \u003d int(idx)\n\t    node \u003d current[i]\n\t\n\t    breadcrumb.append({\n\t        \"label\": node.get(\"label\"),\n\t        \"path\": \"/\" + node.get(\"data\", {}).get(\"path\", \"\").lstrip(\"/\"),\n\t        \"forwardDisplay\": pos \u003c len(selection) - 1\n\t    })\n\t\n\t    current \u003d node.get(\"items\", [])\n\t\n\t# selected page path\n\tselectedPath \u003d breadcrumb[-1][\"path\"]\n\t\n\t# store globally in session\n\tself.session.custom.nav \u003d {\n\t    \"selection\": selection,\n\t    \"breadcrumb\": breadcrumb,\n\t    \"currentPath\": selectedPath\n\t}\n\t\n\t# navigate only if page is different\n\tif self.page.props.path !\u003d selectedPath:\n\t    system.perspective.navigate(page\u003dselectedPath)\n\t\n\t# optional\n\tif selectedPath \u003d\u003d \"/alarms-management\":\n\t    system.perspective.closeDock(\"footerDock\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Tree"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.selectionData[0].value.path": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "page.props.path"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "appearance": {
+            "defaultNodeIcons": {
+              "collapsed": {
+                "path": "material/folder"
+              },
+              "empty": {
+                "path": "material/stop"
+              },
+              "expanded": {
+                "path": "material/crop_16_9"
+              }
+            },
+            "expandIcons": {
+              "collapsed": {
+                "path": "material/arrow_right"
+              },
+              "expanded": {
+                "path": "material/arrow_drop_down"
+              }
+            },
+            "selectedStyle": {
+              "classes": "Menu/Menu_Selected"
+            }
+          },
+          "items": [
+            {
+              "data": {
+                "level": "site",
+                "path": "sanand"
+              },
+              "expanded": true,
+              "icon": {
+                "color": "",
+                "path": "material/business",
+                "style": {}
+              },
+              "items": [
+                {
+                  "data": {
+                    "level": "area",
+                    "path": "sanand/zone-b"
+                  },
+                  "expanded": true,
+                  "items": [
+                    {
+                      "data": {
+                        "level": "process",
+                        "path": "sanand/zone-b/baking"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-b/baking"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "sanand/zone-b/BakingProcessScreen/Line-1"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "BakingProcessMain"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Baking Equipment"
+                                }
+                              ],
+                              "label": "Baking Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Line 1"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-a/cutting-stacking/pf"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "value"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "value"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Baking Equipment"
+                                }
+                              ],
+                              "label": "Baking Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Line 2\n\n"
+                        }
+                      ],
+                      "label": "Baking"
+                    },
+                    {
+                      "data": {
+                        "level": "process",
+                        "path": "InjectionBlockDiagram"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "InjectionBlockDiagram1"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "Injection1ProcessFlow"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "Injection1EquipmentScreen"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Injection 1 Equipment "
+                                }
+                              ],
+                              "label": "Injection 1 Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Injection 1 Line 1\n"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "InjectionBlockDiagram-2A"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "Injection2AProcessFlow"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "Injection2AEquipmentScreen"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Injection 2A Equipment"
+                                }
+                              ],
+                              "label": "Injection 2A Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Injection 2A Line 1\n"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "InjectionBlockDiagram2B"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "Injection2BProcessFlow"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "Injection2BEquipmentScreen"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Injection 2B Equipment"
+                                }
+                              ],
+                              "label": "Injection 2B Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Injection 2B Line 1"
+                        },
+                        {
+                          "data": {
+                            "path": "value"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "value"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "value"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Injection 1 Equipment"
+                                }
+                              ],
+                              "label": "Injection 1 Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Injection 1 Line 2"
+                        },
+                        {
+                          "data": {
+                            "path": "value"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "value"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "value"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Injection 2A Equipment"
+                                }
+                              ],
+                              "label": "Injection 2A Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Injection 2A Line 2"
+                        },
+                        {
+                          "data": {
+                            "path": "value"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "value"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "value"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Injection 2B Equipment"
+                                }
+                              ],
+                              "label": "Injection 2B Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Injection 2B Line 2"
+                        }
+                      ],
+                      "label": "Injection"
+                    },
+                    {
+                      "data": {
+                        "level": "process",
+                        "path": "sanand/zone-b/film-wrapping"
+                      },
+                      "expanded": true,
+                      "items": [
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-b/film-wrapping"
+                          },
+                          "expanded": true,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "sanand/zone-b/film-wrapping/process-flow-1"
+                              },
+                              "expanded": true,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "sanand/zone-b/film-wrapping/EquipmentScreen-1"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Cell Loading Side Equipment"
+                                }
+                              ],
+                              "label": "Film Wrapping Process Flow Cell Loading Side"
+                            },
+                            {
+                              "data": {
+                                "path": "sanand/zone-b/film-wrapping/process-flow-2"
+                              },
+                              "expanded": true,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "sanand/zone-b/film-wrapping/EquipmentScreen-2"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Cell Transfer Side Equipment"
+                                }
+                              ],
+                              "label": "Film Wrapping Process Flow Cell Transfer Side"
+                            },
+                            {
+                              "data": {
+                                "path": "sanand/zone-b/film-wrapping/process-flow-3"
+                              },
+                              "expanded": true,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "sanand/zone-b/film-wrapping/EquipmentScreen-3"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Cell Unloading Side Equipment"
+                                }
+                              ],
+                              "label": "Film Wrapping Process Flow Cell Unloading Side"
+                            },
+                            {
+                              "data": {},
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {},
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Line 1"
+                        },
+                        {
+                          "data": {
+                            "level": "machine",
+                            "path": "sanand/zone-b/film-wrapping"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "sanand/zone-b/film-wrapping"
+                              },
+                              "expanded": true,
+                              "items": [
+                                {
+                                  "data": {},
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Film Wrapping Equipment"
+                                }
+                              ],
+                              "label": "Film Wrapping Process Flow"
+                            },
+                            {
+                              "data": {},
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {},
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Line 2"
+                        }
+                      ],
+                      "label": "Film Wrapping"
+                    },
+                    {
+                      "data": {
+                        "path": "sanand/zone-b/sorting"
+                      },
+                      "expanded": false,
+                      "items": [
+                        {
+                          "data": {
+                            "path": "sanand/zone-b/sorting"
+                          },
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {
+                                "path": "sortingprocessflowscreen"
+                              },
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {
+                                    "path": "SortingProcessMain"
+                                  },
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Sorting \u0026 Packing Equipment"
+                                }
+                              ],
+                              "label": "Sorting \u0026 Packing Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Line 1"
+                        },
+                        {
+                          "data": {},
+                          "expanded": false,
+                          "items": [
+                            {
+                              "data": {},
+                              "expanded": false,
+                              "items": [
+                                {
+                                  "data": {},
+                                  "expanded": false,
+                                  "items": [],
+                                  "label": "Sorting \u0026 Packing Equipment"
+                                }
+                              ],
+                              "label": "Sorting \u0026 Packing Process Flow"
+                            },
+                            {
+                              "data": {
+                                "path": "alarms-management/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/access_alarm",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Alarms"
+                            },
+                            {
+                              "data": {
+                                "path": "trends/line-wise"
+                              },
+                              "expanded": false,
+                              "icon": {
+                                "color": "",
+                                "path": "material/trending_up",
+                                "style": {}
+                              },
+                              "items": [],
+                              "label": "Trends"
+                            }
+                          ],
+                          "label": "Line 2"
+                        }
+                      ],
+                      "label": "Sorting and Packing"
+                    }
+                  ],
+                  "label": "Zone B"
+                },
+                {
+                  "data": {
+                    "path": "analytics"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/analytics",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "analytics/trends"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Trends"
+                    },
+                    {
+                      "data": {
+                        "path": "analytics/reports"
+                      },
+                      "expanded": false,
+                      "items": [],
+                      "label": "Reports"
+                    }
+                  ],
+                  "label": "Analytics"
+                },
+                {
+                  "data": {
+                    "path": "operations"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/dashboard",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "operations/alarms-management"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/notification_important",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Alarms"
+                    },
+                    {
+                      "data": {
+                        "path": "operations/recipes"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/menu_book",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Recipes"
+                    }
+                  ],
+                  "label": "Operations"
+                },
+                {
+                  "data": {
+                    "path": "setting"
+                  },
+                  "expanded": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/settings_applications",
+                    "style": {}
+                  },
+                  "items": [
+                    {
+                      "data": {
+                        "path": "setting/userManagement"
+                      },
+                      "expanded": true,
+                      "icon": {
+                        "color": "",
+                        "path": "material/admin_panel_settings",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Security \u0026 Roles"
+                    },
+                    {
+                      "data": {
+                        "path": "setting/auditLogs"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/history",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Audit Logs"
+                    },
+                    {
+                      "data": {
+                        "path": "setting/help"
+                      },
+                      "expanded": false,
+                      "icon": {
+                        "color": "",
+                        "path": "material/help_outline",
+                        "style": {}
+                      },
+                      "items": [],
+                      "label": "Help"
+                    }
+                  ],
+                  "label": "Setting"
+                }
+              ],
+              "label": "Sanand"
+            }
+          ],
+          "selection": [
+            "0/0/2/0/2/0"
+          ],
+          "selectionData": [
+            {
+              "itemPath": "0/0/2/0/2/0",
+              "value": {}
+            }
+          ],
+          "style": {
+            "classes": "Item_Vertical Menu"
+          }
+        },
+        "type": "ia.display.tree"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "margin": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

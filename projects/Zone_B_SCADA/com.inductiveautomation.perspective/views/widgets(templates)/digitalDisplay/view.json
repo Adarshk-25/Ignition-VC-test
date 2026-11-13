@@ -1,0 +1,119 @@
+{
+  "custom": {},
+  "params": {
+    "Name": "ZS",
+    "status": 1
+  },
+  "propConfig": {
+    "params.Name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 60,
+      "width": 71
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.4151,
+          "width": 0.9577,
+          "x": 0.0141,
+          "y": 0.0189
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "PipingAndInst/label",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Circles"
+        },
+        "position": {
+          "height": 0.566,
+          "width": 0.5775,
+          "x": 0.1831,
+          "y": 0.4151
+        },
+        "propConfig": {
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#969696"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#85A407"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "cx": "6.800000190734863",
+              "cy": "6.500000476837158",
+              "fill": {},
+              "name": "ellipse",
+              "r": 5,
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "0.5"
+              },
+              "type": "circle"
+            }
+          ],
+          "viewBox": "0 0 13 13"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

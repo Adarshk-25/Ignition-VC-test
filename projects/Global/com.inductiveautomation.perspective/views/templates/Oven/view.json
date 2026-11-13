@@ -1,0 +1,535 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 730,
+      "width": 1709
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "    system.perspective.openDock(\n        id\u003d\"dockView\", \n        view\u003d\"templates/DockDynamic\",\n        params\u003d{\n            \"equipment\": \"sideOvensA\",\n            \"width\": 400,\n            \"height\": 900\n        }\n    )"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Heater damper"
+            },
+            "position": {
+              "basis": "452px"
+            },
+            "props": {
+              "elements": [
+                {
+                  "name": "symbol",
+                  "type": "symbol"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0.01",
+                          "stopColor": "#595959",
+                          "style": {
+                            "stopColor": "#595959"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.5",
+                          "stopColor": "#E0E0E0",
+                          "style": {
+                            "stopColor": "#E0E0E0"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#595959",
+                          "style": {
+                            "stopColor": "#595959"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_1_",
+                      "name": "SVGID_1_",
+                      "type": "linearGradient",
+                      "x1": "84.3066",
+                      "x2": "25.2666",
+                      "y1": "87.6736",
+                      "y2": "-14.5868"
+                    },
+                    {
+                      "d": "M0,0.001h109.572v73.086H0V0.001z",
+                      "fill": {
+                        "url": "url(#SVGID_1_)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.1"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_Outer_Frame",
+                  "name": "Group_Outer_Frame",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "d": "M2.14,2.14h105.067v68.693H2.14V2.14z",
+                      "fill": {
+                        "paint": "#333333"
+                      },
+                      "name": "path",
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_Inner_Frame",
+                  "name": "Group_Inner_Frame",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0.01",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.5",
+                          "stopColor": "#B24C19",
+                          "style": {
+                            "stopColor": "#B24C19"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_2_",
+                      "name": "SVGID_2_",
+                      "type": "linearGradient",
+                      "x1": "9.2344",
+                      "x2": "100.5625",
+                      "y1": "36.5437",
+                      "y2": "36.5437"
+                    },
+                    {
+                      "d": "M9.234,9.235h91.328v54.617H9.234V9.235z",
+                      "fill": {
+                        "url": "url(#SVGID_2_)"
+                      },
+                      "name": "path",
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_Heater_Damper",
+                  "name": "Group_Heater_Damper",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0.01",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.5",
+                          "stopColor": "#B24C19",
+                          "style": {
+                            "stopColor": "#B24C19"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_3_",
+                      "name": "SVGID_3_",
+                      "type": "linearGradient",
+                      "x1": "54.7866",
+                      "x2": "54.7866",
+                      "y1": "14.3025",
+                      "y2": "11.825"
+                    },
+                    {
+                      "d": "M6.869,11.825h95.834v2.478H6.869V11.825z",
+                      "fill": {
+                        "url": "url(#SVGID_3_)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0.01",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.5",
+                          "stopColor": "#B24C19",
+                          "style": {
+                            "stopColor": "#B24C19"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_4_",
+                      "name": "SVGID_4_",
+                      "type": "linearGradient",
+                      "x1": "54.7866",
+                      "x2": "54.7866",
+                      "y1": "23.9871",
+                      "y2": "21.7351"
+                    },
+                    {
+                      "d": "M6.869,21.735h95.834v2.252H6.869V21.735z",
+                      "fill": {
+                        "url": "url(#SVGID_4_)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0.01",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.5",
+                          "stopColor": "#B24C19",
+                          "style": {
+                            "stopColor": "#B24C19"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_5_",
+                      "name": "SVGID_5_",
+                      "type": "linearGradient",
+                      "x1": "54.7866",
+                      "x2": "54.7866",
+                      "y1": "32.9958",
+                      "y2": "30.7439"
+                    },
+                    {
+                      "d": "M6.869,30.744h95.834v2.252H6.869V30.744z",
+                      "fill": {
+                        "url": "url(#SVGID_5_)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0.01",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.5",
+                          "stopColor": "#B24C19",
+                          "style": {
+                            "stopColor": "#B24C19"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_6_",
+                      "name": "SVGID_6_",
+                      "type": "linearGradient",
+                      "x1": "54.7866",
+                      "x2": "54.7866",
+                      "y1": "42.2302",
+                      "y2": "39.9783"
+                    },
+                    {
+                      "d": "M6.869,39.978h95.834v2.252H6.869V39.978z",
+                      "fill": {
+                        "url": "url(#SVGID_6_)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0.01",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.5",
+                          "stopColor": "#B24C19",
+                          "style": {
+                            "stopColor": "#B24C19"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_7_",
+                      "name": "SVGID_7_",
+                      "type": "linearGradient",
+                      "x1": "54.7866",
+                      "x2": "54.7866",
+                      "y1": "51.4646",
+                      "y2": "48.9871"
+                    },
+                    {
+                      "d": "M6.869,48.987h95.834v2.478H6.869V48.987z",
+                      "fill": {
+                        "url": "url(#SVGID_7_)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0.01",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.5",
+                          "stopColor": "#B24C19",
+                          "style": {
+                            "stopColor": "#B24C19"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#330000",
+                          "style": {
+                            "stopColor": "#330000"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_8_",
+                      "name": "SVGID_8_",
+                      "type": "linearGradient",
+                      "x1": "54.7866",
+                      "x2": "54.7866",
+                      "y1": "60.4734",
+                      "y2": "58.2214"
+                    },
+                    {
+                      "d": "M6.869,58.221h95.834v2.252H6.869V58.221z",
+                      "fill": {
+                        "url": "url(#SVGID_8_)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_Coils",
+                  "name": "Group_Coils",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "d": "M109.572,21.059h2.928v30.855h-2.928V21.059z",
+                      "fill": {
+                        "paint": "#B2B2B2"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_Inlet",
+                  "name": "Group_Inlet",
+                  "type": "group"
+                }
+              ],
+              "viewBox": "0 0 112.5 73.088"
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "730px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "widget_Diaphragm_Pump"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "props": {
+          "params": {
+            "tagPath": "[default]Mixing/Diaphragm Pump"
+          },
+          "path": "Widgets/CMWidgets/VFD_PUMP/widget_Diaphragm_Pump"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

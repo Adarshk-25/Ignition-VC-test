@@ -1,0 +1,204 @@
+{
+  "custom": {},
+  "params": {
+    "name": "value"
+  },
+  "propConfig": {
+    "params.name": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 336,
+      "width": 618
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "51px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "marginLeft": 10
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "apexchart_1"
+        },
+        "position": {
+          "basis": "258px"
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "events": {
+                "animationEnd": false,
+                "beforeMount": false,
+                "beforeResetZoom": false,
+                "beforeZoom": false,
+                "brushScrolled": false,
+                "click": false,
+                "dataPointMouseEnter": false,
+                "dataPointMouseLeave": false,
+                "dataPointSelection": false,
+                "legendClick": false,
+                "markerClick": false,
+                "mounted": false,
+                "mouseLeave": false,
+                "mouseMove": false,
+                "scrolled": false,
+                "selection": false,
+                "updated": false,
+                "xAxisLabelClick": false,
+                "zoomed": false
+              },
+              "height": 320,
+              "stacked": true,
+              "toolbar": {
+                "show": false
+              },
+              "type": "bar"
+            },
+            "colors": [
+              "#DC2626",
+              "#F59E0B",
+              "#0052CC",
+              "#7C3AED",
+              "#1F9D55"
+            ],
+            "dataLabels": {
+              "enabled": false
+            },
+            "grid": {
+              "borderColor": "#E0E3E7",
+              "row": {
+                "colors": [
+                  "#f3f3f3",
+                  "transparent"
+                ],
+                "opacity": 0.5
+              }
+            },
+            "legend": {
+              "horizontalAlign": "left",
+              "position": "top"
+            },
+            "markers": {
+              "size": 1
+            },
+            "plotOptions": {
+              "bar": {
+                "barHeight": "60%",
+                "horizontal": true
+              }
+            },
+            "stroke": {
+              "curve": "smooth"
+            },
+            "title": {
+              "align": "left",
+              "text": "."
+            },
+            "xaxis": {
+              "categories": [
+                "Line 1",
+                "Line 2",
+                "Line 3"
+              ],
+              "max": 100,
+              "title": {
+                "text": "Downtime Contribution (%)"
+              }
+            },
+            "yaxis": {
+              "max": 40,
+              "min": 5,
+              "title": {
+                "text": "Line"
+              }
+            }
+          },
+          "series": [
+            {
+              "data": [
+                35.3,
+                42.3,
+                36
+              ],
+              "name": "Material Jam"
+            },
+            {
+              "data": [
+                27.9,
+                22.5,
+                25.2
+              ],
+              "name": "Power Trip"
+            },
+            {
+              "data": [
+                17.6,
+                21.1,
+                19.8
+              ],
+              "name": "Sensor Fault"
+            },
+            {
+              "data": [
+                11.8,
+                8.5,
+                12.6
+              ],
+              "name": "No Material"
+            },
+            {
+              "data": [
+                7.4,
+                5.6,
+                6.5
+              ],
+              "name": "Maintenance"
+            }
+          ],
+          "type": "bar"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFFFFF",
+        "borderBottomLeftRadius": 6,
+        "borderBottomRightRadius": 6,
+        "borderTopLeftRadius": 6,
+        "borderTopRightRadius": 6
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

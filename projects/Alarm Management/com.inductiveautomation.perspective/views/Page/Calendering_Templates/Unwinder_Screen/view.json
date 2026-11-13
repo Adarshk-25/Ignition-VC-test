@@ -1,0 +1,3375 @@
+{
+  "custom": {},
+  "params": {
+    "metadata": "value",
+    "tag": "value",
+    "unwinder": "value"
+  },
+  "propConfig": {
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unwinder": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Unwinder",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "height": 0.45,
+              "width": 0.2725,
+              "x": 0.1463,
+              "y": 0.1762
+            },
+            "props": {
+              "params": {
+                "isvertical": false,
+                "nameLabelPosition": "value",
+                "tagpath": "[default]agratas/sanand/zoneE/line1/mixing/Val101-59",
+                "valuePosition": "value",
+                "valveOrientation": "value",
+                "valveType": "p\u0026id"
+              },
+              "path": "widgets(templates)/CALWidgets/Unwinder"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Drawing_5"
+            },
+            "position": {
+              "height": 0.5375,
+              "width": 0.4163,
+              "x": 0.0611,
+              "y": 0.1053
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "181.75",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "2px"
+                  },
+                  "type": "rect",
+                  "width": "282.25",
+                  "x": "88",
+                  "y": "142"
+                }
+              ],
+              "viewBox": "87 141 284.25 183.75"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.0572,
+              "width": 0.0604,
+              "x": 0.1002,
+              "y": 0.295
+            },
+            "props": {
+              "text": "Unwinder Chuck",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "fontSize": ""
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Drawing_3"
+            },
+            "position": {
+              "height": 0.1062,
+              "width": 0.1131,
+              "x": 0.1647,
+              "y": 0.2815
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "206.5",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "5px"
+                  },
+                  "type": "rect",
+                  "width": "412",
+                  "x": "88",
+                  "y": "142"
+                }
+              ],
+              "viewBox": "87 141 414 208.5"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 0.0572,
+              "width": 0.0604,
+              "x": 0.1891,
+              "y": 0.175
+            },
+            "props": {
+              "text": "Turret",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "fontSize": ""
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "height": 0.0572,
+              "width": 0.0778,
+              "x": 0.0926,
+              "y": 0.5032
+            },
+            "props": {
+              "text": "EPC Accuator",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "fontSize": ""
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0469,
+              "x": 0.2836,
+              "y": 0.2653
+            },
+            "props": {
+              "text": "Splicing Arm",
+              "textStyle": {
+                "classes": "Page/Label1",
+                "fontSize": ""
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_3"
+            },
+            "position": {
+              "height": 0.04,
+              "width": 0.4169,
+              "x": 0.0609,
+              "y": 0.0291
+            },
+            "props": {
+              "text": "Equipment Screen : Unwinder",
+              "textStyle": {
+                "classes": "Title/Text",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "height": 0.42,
+              "width": 0.4856,
+              "x": 0.5004,
+              "y": 0.0959
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/ActualMachineSpeed"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn str(value)+\" \"+\"RPM\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "None"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Maintenance"
+                        },
+                        {
+                          "input": 2,
+                          "output": "Setup"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Processing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "NotAvailable"
+                        },
+                        {
+                          "input": 1,
+                          "output": "OutOfService"
+                        },
+                        {
+                          "input": 2,
+                          "output": "NotExecuting"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Executing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentTransitionState"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\EquipmentBlocked"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/EquipmentStarved"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[6].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/MESRunning"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[7].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/PLCHeartbeat"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[8].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/SCADAHeartbeat"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[9].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}/SetRecipeStatusCode"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Actual Machine Speed"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Current Mode"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Current State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Current Transition State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Equipment Blocked"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Equipment Starved"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MES Running"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "PLC Heartbeat"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "SCADA Heartbeat"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Set Recipe Status Code"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_0"
+            },
+            "position": {
+              "height": 0.45,
+              "width": 0.4856,
+              "x": 0.4998,
+              "y": 0.524
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/Active"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[100].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB010/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[101].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB010/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[102].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB011/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[103].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB011/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[104].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB011/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[105].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB011/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[106].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB011/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[107].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/SGC001/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[108].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/SGC002/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[109].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/SGC003/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[10].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/KEB001/ScanTimeCurrent"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[110].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/SGC004/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[111].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/SGC005/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[112].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/ZZS001/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[11].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/KEB001/ScanTimeMax"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[12].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA001/AxisPositionPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[13].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA001/AxisPositionSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[14].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA001/CurrentPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[15].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA001/MotorFault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[16].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA001/MotorRunning"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[17].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA001/MotorSpeedPv"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[18].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA001/MotorSpeedSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[19].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA001/MotorStartCommand"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/BRB001/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[20].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA002/AxixPositionPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[21].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA02/AxisPositionSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[22].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA002/CurrentPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[23].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA002/MotorFault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[24].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": ""
+                    },
+                    "tagPath": "{Tag}/MAA002/MotorRunning"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[25].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA002/MotorSpeedPv"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[26].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA002/MotorSpeedSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[27].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA002/MotorSartCommand"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[28].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA003/AxisPositionPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[29].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA003/AxisPositionSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/BRB002/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[30].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA003/CurrentPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[31].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA003/MotorFault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[32].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA003/MotorRunning"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[33].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA003/MotorSpeedPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[34].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA003/MotorSpeedSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[35].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA003/MotorStartCommand"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[36].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA004/AxisPositionPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[37].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA004/AxisPositionSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[38].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA004/CurrentPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[39].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA004/MotorFault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/FLA001/State"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[40].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA004/MotorRunning"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[41].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA004/MotorSpeedPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[42].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA004/MotorSpeedSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[43].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA004/MotorStartCommand"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[44].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA005/AxisPositionPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[45].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA005/AxisPositionSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[46].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA005/CurrentPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[47].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA005/MotorFault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[48].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA005/MotorRunning"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[49].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA005/MotorSpeedPV"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/KEB001/BatteryHealthy"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[50].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA005/MotorSpeedSP"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[51].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MAA005/MotorStartCommand"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[52].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB001/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[53].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB001/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[54].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB001/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[55].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB001/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[56].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB001/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[57].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB002/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[58].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB002/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[59].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB002/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/KEB001/CommLoadCurrent"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[60].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB002/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[61].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB002/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[62].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB003/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[63].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB003/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[64].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB003/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[65].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB003/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[66].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB003/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[67].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB004/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[68].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB004/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[69].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB004/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[6].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/KEB001/CommLoadMax"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[70].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB004/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[71].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB004/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[72].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB005/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[73].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB005/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[74].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB005/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[75].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB005/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[76].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB005/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[77].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB006/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[78].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB006/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[79].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB006/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[7].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/KEB001/MajorFaulCode"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[80].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB006/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[81].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB006/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[82].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB007/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[83].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB007/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[84].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB007/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[85].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB007/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[86].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": ""
+                    },
+                    "tagPath": "{Tag}/MMB007/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[87].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB008/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[88].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB008/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[89].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB008/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[8].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/KEB001/MinorFaultCode"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[90].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB008/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[91].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB008/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[92].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB009/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[93].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB009/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[94].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB009/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[95].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB009/Retracted"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[96].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB009/Retracting"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[97].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB010/Extended"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[98].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB010/Extending"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[99].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/MMB010/Fault"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[9].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.unwinder}"
+                    },
+                    "tagPath": "{Tag}/KEB001/SafetySignature"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "UWD001 Active"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "BRB001 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "BRB002 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "FLA001 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "KEB001 Battery Healthy"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "KEB001 Comm Load Current"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "KEB001 Comm Load Max"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "KEB001 Major Faul Code"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "KEB001 Minor Fault Code"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "KEB001 Safety Signature"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "KEB001 Scan Time Current"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "KEB001 Scan Time Max"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA001 Axis Position PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA001 Axis Position SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA001 Current PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA001 Motor Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA001 Motor Running"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA001 Motor Speed PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA001 Motor Speed SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA001 Motor Start Command "
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA002 Axis Position PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA002 Axis Position SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA002 Current PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA002 Motor Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA002 Motor Running"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA002 Motor Speed PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA002 Motor Speed SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA002 Motor Start Command "
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA003 Axis Position PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA003 Axis Position SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA003 Current PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA003 Motor Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA003 Motor Running"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA003 Motor Speed PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA003 Motor Speed SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA003 Motor Start Command "
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA004 Axis Position PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA004 Axis Position SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA004 Current PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA004 Motor Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA004 Motor Running"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA004 Motor Speed PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA004 Motor Speed SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA004 Motor Start Command "
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA005 Axis Position PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA005 Axis Position SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA005 Current PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA005 Motor Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA005 Motor Running"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA005 Motor Speed PV"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA005 Motor Speed SP"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MAA005 Motor Start Command "
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB001 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB001 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB001 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB001 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB001 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB002 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB002 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB002 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB002 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB002 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB003 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB003 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB003 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB003 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB003 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB004 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB004 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB004 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB004 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB004 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB005 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB005 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB005 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB005 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB005 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB006 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB006 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB006 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB006 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB006 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB007 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB007 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB007 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB007 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB007 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB008 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB008 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB008 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB008 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB008 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB009 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB009 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB009 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB009 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB009 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB010 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB010 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB010 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB010 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB010 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB011 Extended"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB011 Extending"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB011 Fault"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB011 Retracted"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "MMB011 Retracting"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "SGC001 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "SGC002 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "SGC003 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "SGC004 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "SGC005 State"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "ZZS001 State"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "Table_1"
+            },
+            "position": {
+              "height": 0.2863,
+              "width": 0.4856,
+              "x": 0.0108,
+              "y": 0.6873
+            },
+            "propConfig": {
+              "props.data[0].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}\\NodesetVersion"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[1].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}\\PLC_Manufacturer"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[2].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}/PLC_Model"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[3].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}\\PLCFBS"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[4].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}\\SerialNumber"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.data[5].ActualValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.metadata}"
+                    },
+                    "tagPath": "{Tag}/Year_Of_Construction_of_the_machine"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Parameter",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Parameter"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ActualValue",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Actual Value"
+                  },
+                  "justify": "center",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "view",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "backgroundColor": "#FFFFFF",
+                    "borderLeftStyle": "solid",
+                    "borderLeftWidth": "0.5px",
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "widgets(templates)/tableLabel",
+                  "visible": true,
+                  "width": ""
+                }
+              ],
+              "data": [
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Nodeset Version"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "PLC Manufacturer"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "PLC Model"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "PLC FBS"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Serial Number"
+                },
+                {
+                  "EquipmentName": "Unwinder",
+                  "Parameter": "Year Of Construction of the Machine"
+                }
+              ],
+              "headerGroupStyle": {
+                "classes": "Table/tableHeader",
+                "outlineStyle": "none"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader",
+                "fontWeight": "bold",
+                "outlineStyle": "none"
+              },
+              "pager": {
+                "bottom": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "rows": {
+                "striped": {
+                  "color": {
+                    "even": "#D5D5D5",
+                    "odd": "#D5D5D5"
+                  }
+                }
+              },
+              "selection": {
+                "enableRowSelection": false,
+                "style": {
+                  "borderStyle": "solid"
+                }
+              },
+              "style": {
+                "borderStyle": "none",
+                "outlineStyle": "solid",
+                "outlineWidth": "0.1px"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_0"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.1263,
+              "x": 0.6476,
+              "y": 0.0143
+            },
+            "propConfig": {
+              "props.params.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentMode"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "None"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Maintenance"
+                        },
+                        {
+                          "input": 2,
+                          "output": "SetUp"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Processing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "label": "Mode"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_4"
+            },
+            "position": {
+              "height": 0.0674,
+              "width": 0.0973,
+              "x": 0.7774,
+              "y": 0.0143
+            },
+            "props": {
+              "params": {
+                "label": "Communication",
+                "value": "OK"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cardDisplay_1"
+            },
+            "position": {
+              "height": 0.075,
+              "width": 0.105,
+              "x": 0.8794,
+              "y": 0.0138
+            },
+            "propConfig": {
+              "props.params.value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "Tag": "{view.params.tag}"
+                    },
+                    "tagPath": "{Tag}\\CurrentState"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": null,
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": 0,
+                          "output": "Not Available"
+                        },
+                        {
+                          "input": 1,
+                          "output": "Out Of Service"
+                        },
+                        {
+                          "input": 2,
+                          "output": "Not Executing"
+                        },
+                        {
+                          "input": 3,
+                          "output": "Executing"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "label": "STATE"
+              },
+              "path": "widgets(templates)/cardDisplay",
+              "style": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

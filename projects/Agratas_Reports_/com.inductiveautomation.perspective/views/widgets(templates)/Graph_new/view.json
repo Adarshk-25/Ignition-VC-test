@@ -1,0 +1,355 @@
+{
+  "custom": {
+    "SelectedTag": [
+      "[default]agratas/sanand/zoneE/line1/Calendering/RotateCCW"
+    ],
+    "Tags": [
+      "[default]agratas/sanand/zoneE/line1/Calendering/Rotate",
+      "[default]agratas/sanand/zoneE/line1/Calendering/RotateCCW"
+    ],
+    "tagBrowserOpen": false
+  },
+  "params": {},
+  "propConfig": {
+    "custom.SelectedTag": {
+      "binding": {
+        "config": {
+          "path": "/root/CoordinateContainer_0/FlexContainer/TagBrowseTree.props.selection.values"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.Tags": {
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "TagBrowseTree"
+                },
+                "position": {
+                  "basis": "235px"
+                },
+                "propConfig": {
+                  "custom.tagBrowserOpen": {
+                    "binding": {
+                      "config": {
+                        "path": "..../CoordinateContainer/Button_1.custom.browserOpen"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "path": "this.custom.tagBrowserOpen"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "display": {
+                    "Hide_Tag": {
+                      "path": "material/refresh",
+                      "style": {
+                        "classes": "value"
+                      },
+                      "visible": true
+                    }
+                  },
+                  "filter": {
+                    "enabled": true
+                  },
+                  "selection": {
+                    "values": [
+                      "[default]agratas/sanand/zoneE/line1/Calendering/RotateCCW"
+                    ]
+                  }
+                },
+                "type": "ia.display.tag-browse-tree"
+              },
+              {
+                "meta": {
+                  "name": "TimeSeriesChart"
+                },
+                "position": {
+                  "basis": "699px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.series": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.Tags"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\ttags \u003d value  # list from Tag Browser\n\t\n\tseries \u003d []\n\t\n\tfor tagPath in tags:\n\t    series.append({\n\t        \"name\": tagPath.split(\"/\")[-1],\n\t        \"data\": system.tag.queryTagHistory(\n\t            paths\u003d[tagPath],\n\t            startDate\u003dNone,\n\t            endDate\u003dNone,\n\t            returnSize\u003d100,\n\t            aggregationMode\u003d\"Average\",\n\t            returnFormat\u003d\"Wide\",\n\t            intervalHours\u003d1\n\t        )\n\t    })\n\t\n\treturn series\n",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "autoGenerateSeriesNames": true,
+                  "defaultStyles": {
+                    "selected": {
+                      "fill": {
+                        "opacity": 0
+                      },
+                      "stroke": {
+                        "opacity": 5
+                      }
+                    }
+                  },
+                  "legend": {
+                    "visible": true
+                  },
+                  "timeAxis": {
+                    "tick": {
+                      "label": {
+                        "angled": true
+                      }
+                    }
+                  },
+                  "xTrace": {
+                    "infoBox": {
+                      "fill": {
+                        "color": "#FFFF8A"
+                      }
+                    }
+                  }
+                },
+                "type": "ia.chart.timeseries"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_0"
+        },
+        "position": {
+          "basis": "602px"
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t# 1. Grab the selected tag path from your custom property\n\tselected \u003d self.view.custom.SelectedTag\n\t\n\t# 2. Safely read the existing tags list as a true Python list\n\tcurrent \u003d list(self.view.custom.Tags) if self.view.custom.Tags else []\n\t\n\t# 3. Normalize single selection strings into a list\n\tif isinstance(selected, basestring):\n\t    selected \u003d [selected]\n\t\n\t# 4. Append new tags if they aren\u0027t duplicates\n\tadded_any \u003d False\n\tfor tag in selected:\n\t    if tag not in current and tag.strip() !\u003d \"\":\n\t        current.append(tag)\n\t        added_any \u003d True\n\t\n\t# 5. If changes were made, update the View and the Chart\n\tif added_any:\n\t    self.view.custom.Tags \u003d current\n\t    \n\t    # Path navigating across the container layout to find the chart\n\t    chart \u003d self.getParent().getSibling(\"CoordinateContainer_0\").getChild(\"FlexContainer\").getChild(\"TimeSeriesChart\")\n\t    \n\t    # Check if the chart component was successfully located\n\t    if chart is not None:\n\t        chart_plots \u003d []\n\t        \n\t        # Loop through the tags to build the plots structure without hardcoded colors\n\t        for t in current:\n\t            tag_name \u003d t.split(\"/\")[-1] \n\t            \n\t            chart_plots.append({\n\t                \"field\": t,\n\t                \"label\": tag_name,\n\t                \"type\": \"line\",\n\t                \"axis\": \"Default\",\n\t                \"style\": {\n\t                    \"stroke\": {\n\t                        \"width\": 2  # Standard, clean line width\n\t                    }\n\t                }\n\t            })\n\t        \n\t        # --- SAFE SERIES INJECTION ---\n\t        # Checks if series[0] exists. If not, creates it dynamically to prevent IndexError.\n\t        if len(chart.props.series) \u003e 0:\n\t            chart.props.series[0].plots \u003d chart_plots\n\t        else:\n\t            new_series \u003d {\n\t                \"name\": \"Trends\",\n\t                \"plots\": chart_plots\n\t            }\n\t            chart.props.series \u003d [new_series]\n\t            \n\t    else:\n\t        system.util.getLogger(\"TrendAddButton\").warn(\"Could not find TimeSeriesChart using the specified container path.\")"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 0.2831,
+              "rotate": {
+                "anchor": "50% 1803%"
+              },
+              "width": 0.1135,
+              "x": 0.0058,
+              "y": 0.0344
+            },
+            "props": {
+              "image": {
+                "width": 60
+              },
+              "style": {
+                "classes": "Page/Button"
+              },
+              "text": "Add Tag"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t# 1. Get the Table component (sitting directly next to this button)\n\ttable \u003d self.getSibling(\"Table\")\n\tselected_row_index \u003d table.props.selection.selectedRow\n\t\n\t# Ensure a row is actually highlighted\n\tif selected_row_index is not None and selected_row_index \u003e\u003d 0:\n\t    \n\t    # 2. Extract the tag path safely from the highlighted table row\n\t    row_data \u003d table.props.data[selected_row_index]\n\t    tag_to_remove \u003d row_data[\"Tag Path\"]\n\t    \n\t    # 3. Safely read the existing tags list as a true Python list\n\t    current \u003d list(self.view.custom.Tags) if self.view.custom.Tags else []\n\t    \n\t    # 4. If the selected tag exists in our list, clear it out\n\t    if tag_to_remove in current:\n\t        current.remove(tag_to_remove)\n\t        self.view.custom.Tags \u003d current\n\t        \n\t        # 5. Path navigating across the container layout to find the chart\n\t        chart \u003d self.getParent().getSibling(\"CoordinateContainer_0\").getChild(\"FlexContainer\").getChild(\"TimeSeriesChart\")\n\t        \n\t        # Check if the chart component was successfully located\n\t        if chart is not None:\n\t            chart_plots \u003d []\n\t            \n\t            # Loop through remaining tags to rebuild the plots configuration\n\t            for t in current:\n\t                tag_name \u003d t.split(\"/\")[-1]\n\t                \n\t                chart_plots.append({\n\t                    \"field\": t,\n\t                    \"label\": tag_name,\n\t                    \"type\": \"line\",\n\t                    \"axis\": \"Default\",\n\t                    \"style\": {\n\t                        \"stroke\": {\n\t                            \"width\": 2\n\t                        }\n\t                    }\n\t                })\n\t            \n\t            # --- SAFE SERIES INJECTION ---\n\t            # Checks if series[0] exists. If not, creates it dynamically to prevent IndexError.\n\t            if len(chart.props.series) \u003e 0:\n\t                chart.props.series[0].plots \u003d chart_plots\n\t            else:\n\t                new_series \u003d {\n\t                    \"name\": \"Trends\",\n\t                    \"plots\": chart_plots\n\t                }\n\t                chart.props.series \u003d [new_series]\n\t            \n\t            # 6. Wipe out the table selection highlights so a deleted item doesn\u0027t look stuck\n\t            table.props.selection.selectedRow \u003d None\n\t        else:\n\t            system.util.getLogger(\"TrendRemoveButton\").warn(\"Could not find TimeSeriesChart using the specified container path.\")"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_0"
+            },
+            "position": {
+              "height": 0.2831,
+              "rotate": {
+                "anchor": "50% 1803%"
+              },
+              "width": 0.1135,
+              "x": 0.0057,
+              "y": 0.3584
+            },
+            "props": {
+              "image": {
+                "width": 60
+              },
+              "style": {
+                "classes": "Page/Button"
+              },
+              "text": "Remove Tag"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "height": 1,
+              "width": 0.8769,
+              "x": 0.1231,
+              "y": -0.0089
+            },
+            "propConfig": {
+              "props.data": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Tags"
+                  },
+                  "transforms": [
+                    {
+                      "code": "# 1. Handle an empty tag list gracefully\n    if not value:\n        return []\n        \n    formatted_table_data \u003d []\n    \n    # Convert the \u0027value\u0027 wrapper to a clean python list of paths\n    tag_paths \u003d list(value)\n    \n    # system.tag.readBlocking reads all tag values at once for maximum efficiency\n    qualified_values \u003d system.tag.readBlocking(tag_paths)\n    \n    # 2. Loop through each path and pair it with its live data\n    for i in range(len(tag_paths)):\n        path \u003d tag_paths[i]\n        \n        # Extract the friendly name (everything after the last \u0027/\u0027)\n        name \u003d path.split(\"/\")[-1]\n        \n        # Get the live value from our read results\n        live_value \u003d qualified_values[i].value\n        \n        # Clean up floating decimals if necessary\n        if isinstance(live_value, float):\n            live_value \u003d round(live_value, 2)\n            \n        # Append the fully structured object with all 3 columns\n        formatted_table_data.append({\n            \"Name\": name,\n            \"Value\": live_value,\n            \"Tag Path\": path\n        })\n        \n    # 3. Return the fully structured array of objects to the table data property\n    return formatted_table_data",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Table/tableValue"
+              },
+              "headerStyle": {
+                "classes": "Table/tableHeader"
+              },
+              "selection": {
+                "enableColumnSelection": true
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "custom": {
+              "browserOpen": false
+            },
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "# 1. Read the toggle state stored directly on this button\n\tcurrent_state \u003d self.custom.browserOpen\n\t\n\t# 2. Toggle it (True becomes False, False becomes True)\n\tself.custom.browserOpen \u003d not current_state"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_1"
+            },
+            "position": {
+              "height": 0.2831,
+              "rotate": {
+                "anchor": "50% 1803%"
+              },
+              "width": 0.1135,
+              "x": 0.0057,
+              "y": 0.692
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.browserOpen},\"Hide Tag Browser \", \"Open Tag Browser\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "image": {
+                "width": 60
+              },
+              "style": {
+                "classes": "Page/Button"
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\n\tcurrent_state \u003d self.parent.getChild(\"CoordinateContainer_0\").getChild(\"FlexContainer\").getChild(\"TagBrowseTree\").custom.tagBrowserOpen\n\n\tself.view.custom.tagBrowserOpen \u003d not current_state"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

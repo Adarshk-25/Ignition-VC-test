@@ -1,0 +1,56 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": true,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "Query",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "Dev_MSSQL_Server",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "87252efed4f5b396dcf22f73eef82a904b305dca198f17308b5e720e079b4584",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-02-25T18:03:31Z"
+    },
+    "syntaxProvider": "class com.adbs.syntax.UniversalSyntaxProvider",
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "filterType",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "actionValue",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "startDate",
+        "sqlType": 8
+      },
+      {
+        "type": "Parameter",
+        "identifier": "endDate",
+        "sqlType": 8
+      }
+    ]
+  }
+}

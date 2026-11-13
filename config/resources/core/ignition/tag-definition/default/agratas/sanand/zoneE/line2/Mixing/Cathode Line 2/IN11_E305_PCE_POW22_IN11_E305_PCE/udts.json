@@ -1,0 +1,69 @@
+[
+  {
+    "name": "CMS21",
+    "typeId": "AG_New_Nodeset_POW/POW",
+    "parameters": {
+      "OPC_Path": {
+        "dataType": "String",
+        "value": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E305.PCE."
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "parameters": {
+          "Mid_Path": {
+            "dataType": "String",
+            "value": "AGAdmin"
+          }
+        },
+        "name": "AGAdmin",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "POW22",
+    "typeId": "AG_New_Nodeset_POW/POW",
+    "parameters": {
+      "OPC_Path": {
+        "dataType": "String",
+        "value": "nsu\u003dhttp://agratas.com/UA/;s\u003dIN11.E305.PCE."
+      }
+    },
+    "tagType": "UdtInstance",
+    "tags": [
+      {
+        "name": "AGAdmin",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "enabled": false,
+            "name": "LastRecipeID",
+            "tagType": "AtomicTag"
+          },
+          {
+            "enabled": false,
+            "name": "CurrentRecipeID",
+            "tagType": "AtomicTag"
+          },
+          {
+            "enabled": false,
+            "name": "CurrentAlarms",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "enabled": false,
+        "name": "AGCalls",
+        "tagType": "AtomicTag"
+      },
+      {
+        "enabled": false,
+        "name": "AGStatus",
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

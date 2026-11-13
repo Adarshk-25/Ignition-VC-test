@@ -1,0 +1,301 @@
+{
+  "custom": {},
+  "params": {
+    "tag": "value"
+  },
+  "propConfig": {
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "UCA022"
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/Closed"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "widgets(templates)/mixingEquipments/pdMixer (1)",
+            "equipmentName": "UCA022 : Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038",
+            "parameterData": [
+              {
+                "Parameter": "Closed"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FCB01"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/FCB01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "FCB01 : AX-01 CC-LINK CONTROL POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FCB02"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/FCB02/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "FCB02 : AX-02 DIGITAL DC POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "FCB03"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/FCB03/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "FCB03 : AX-03 SOL CONTROL POWER",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "KFA02"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/KFA02/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "KFA02 : CER-STK1-1 Safety Feedback",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PSL01"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "propConfig": {
+          "props.params.parameterData[0].ActualValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag}"
+                },
+                "tagPath": "{Tag}/UCA022/PSL01/State"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "equipmentGraphic": "value",
+            "equipmentName": "PSL01 : Main Air Pressure Low S/W",
+            "parameterData": [
+              {
+                "Parameter": "State"
+              }
+            ],
+            "tableHeader": "Process Parameters"
+          },
+          "path": "Page/Mixing_Templates/PopUpScreensTemplate/PopUpTemplateView"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "custom": {
+      "tabConfig": [
+        {
+          "tabText": "UCA022",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA022 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038"
+        },
+        {
+          "tabText": "FCB01",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA022.FCB01 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . AX-01 CC-LINK CONTROL POWER"
+        },
+        {
+          "tabText": "FCB02",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA022.FCB02 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . AX-02 DIGITAL DC POWER"
+        },
+        {
+          "tabText": "FCB03",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA022.FCB03 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . AX-03 SOL CONTROL POWER"
+        },
+        {
+          "tabText": "KFA02",
+          "toolTipText": "IN11.E115.PCE.STS11.UCA022.KFA02 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . CER-STK1-1 Safety Feedback"
+        },
+        {
+          "tabText": "PSL01",
+          "toolTipText": "IN11.E115.PCE.STS11.PSL01 - Cathode Slurry #1Storage Tank . Slurry Storage Tank #1-1 / 1-2 LCP - PNL-904-038 . Main Air Pressure Low S/W"
+        }
+      ]
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.tabs": {
+        "binding": {
+          "config": {
+            "struct": {
+              "cfg": "{this.custom.tabConfig}",
+              "idx": "{this.props.currentTabIndex}",
+              "viewParams": {
+                "tabSelected": "\"value\"",
+                "tabText": "\"value\"",
+                "toolTipText": "\"value\""
+              },
+              "viewPath": "\"widgets(templates)/TabButton\""
+            },
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "    idx \u003d value[\u0027idx\u0027] if value[\u0027idx\u0027] is not None else 0\n    cfg \u003d value[\u0027cfg\u0027]\n    tabs \u003d []\n\n    for i in range(len(cfg)):\n        item \u003d cfg[i]\n\n        tabs.append({\n            \"viewPath\": \"widgets(templates)/TabButton\",\n\n            \"viewParams\": {\n                \"tabText\": item[\u0027tabText\u0027],\n                \"toolTipText\": item[\u0027toolTipText\u0027],\n                \"tabSelected\": (i \u003d\u003d idx)\n            },\n\n            \"runWhileHidden\": False\n        })\n\n    return tabs",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      }
+    },
+    "props": {
+      "currentTabIndex": 5
+    },
+    "type": "ia.container.tab"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MixingBlockDiagram"
+            },
+            "position": {
+              "height": 0.9263,
+              "width": 1,
+              "y": 0.0737
+            },
+            "props": {
+              "path": "Page/BlockDiagrams/MixingBockDiagram/Anode Line 1"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "height": 0.045,
+              "width": 0.16,
+              "x": 0.0344,
+              "y": 0.0225
+            },
+            "propConfig": {
+              "props.value": {
+                "onChange": {
+                  "enabled": null,
+                  "script": "\tif currentValue!\u003dpreviousValue:\n\t\tcurrentValue\u003dstr(currentValue)\n\t\tcurrentValue\u003dcurrentValue.replace(\"[\",\"\")\n\t\tcurrentValue\u003dcurrentValue.replace(\"]\",\"\")\n\t\tcurrentValue\u003dcurrentValue.split(\",\")\t\t\n\t\tself.getSibling(\"MixingBlockDiagram\").props.path\u003d\"Page/BlockDiagrams/MixingBockDiagram/\"+currentValue[0]\n\t\tself.getSibling(\"Label\").props.text\u003dcurrentValue[0]"
+                }
+              }
+            },
+            "props": {
+              "dropdownOptionStyle": {
+                "color": "#000000",
+                "fontFamily": "sans-serif",
+                "fontSize": "15px",
+                "textAlign": "center"
+              },
+              "options": [
+                {
+                  "label": "Anode Line 1",
+                  "value": "Anode Line 1"
+                },
+                {
+                  "label": "Anode Line 2",
+                  "value": "Anode Line 2"
+                },
+                {
+                  "label": "Cathode Line 1",
+                  "value": "Cathode Line 1"
+                },
+                {
+                  "label": "Cathode Line 2",
+                  "value": "Cathode Line 2"
+                }
+              ],
+              "placeholder": {
+                "color": "#000000",
+                "text": "Select Line"
+              },
+              "style": {
+                "color": "#000000",
+                "fontFamily": "sans-serif",
+                "fontSize": 17
+              },
+              "textAlign": "center",
+              "value": "Anode Line 1"
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "backgroundColor": "rgb(240,240,240)"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

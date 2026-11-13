@@ -1,0 +1,250 @@
+{
+  "custom": {
+    "SelectedTag": [
+      "[default]Assembly Cell"
+    ],
+    "Tags": [
+      "[default]Assembly Cell",
+      "[default]agratas/sanand/zoneE/line1/Calendering/Rotate",
+      "[default]agratas/sanand/zoneE/line1/Calendering/RotateCCW",
+      "[default]alaram_Insta_Test",
+      "[default]DATA_Alarm"
+    ]
+  },
+  "params": {},
+  "propConfig": {
+    "custom.SelectedTag": {
+      "binding": {
+        "config": {
+          "path": "/root/FlexContainer/TagBrowseTree.props.selection.values"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.Tags": {
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 743,
+      "width": 934
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "TagBrowseTree"
+            },
+            "position": {
+              "basis": "235px"
+            },
+            "props": {
+              "display": {
+                "Hide_Tag": {
+                  "path": "material/refresh",
+                  "style": {
+                    "classes": "value"
+                  },
+                  "visible": true
+                }
+              },
+              "filter": {
+                "enabled": true
+              },
+              "selection": {
+                "values": [
+                  "[default]Assembly Cell"
+                ]
+              }
+            },
+            "type": "ia.display.tag-browse-tree"
+          },
+          {
+            "meta": {
+              "name": "TimeSeriesChart"
+            },
+            "position": {
+              "basis": "699px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.series": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Tags"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\ttags \u003d value  # list from Tag Browser\n\t\n\tseries \u003d []\n\t\n\tfor tagPath in tags:\n\t    series.append({\n\t        \"name\": tagPath.split(\"/\")[-1],\n\t        \"data\": system.tag.queryTagHistory(\n\t            paths\u003d[tagPath],\n\t            startDate\u003dNone,\n\t            endDate\u003dNone,\n\t            returnSize\u003d100,\n\t            aggregationMode\u003d\"Average\",\n\t            returnFormat\u003d\"Wide\",\n\t            intervalHours\u003d1\n\t        )\n\t    })\n\t\n\treturn series\n",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "autoGenerateSeriesNames": true,
+              "defaultStyles": {
+                "selected": {
+                  "fill": {
+                    "opacity": 0
+                  },
+                  "stroke": {
+                    "opacity": 5
+                  }
+                }
+              },
+              "legend": {
+                "visible": true
+              },
+              "timeAxis": {
+                "tick": {
+                  "label": {
+                    "angled": true
+                  }
+                }
+              },
+              "xTrace": {
+                "infoBox": {
+                  "fill": {
+                    "color": "#FFFF8A"
+                  }
+                }
+              }
+            },
+            "type": "ia.chart.timeseries"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "602px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t\t\t# selected tag from Tag Browser\n\tselected \u003d self.view.custom.SelectedTag  # change this to your tag browser property\n\t\n\t# existing list\n\tcurrent \u003d self.view.custom.Tags or []\n\t\n\t\n\t# if single selection comes as string, normalize to list\n\tif isinstance(selected, basestring):\n\t    selected \u003d [selected]\n\t\n\t# add only new tags (avoid duplicates)\n\tfor tag in selected:\n\t    if tag not in current:\n\t        current.append(tag)\n\t\n\t# write back\n\tself.view.custom.Tags \u003d current\n\t# convert for table\n\ttableData \u003d []\n\tfor t in current:\n\t    tableData.append({\"tag\": t})\n\t\n\tself.getSibling(\"Table\").props.data \u003d tableData"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 0.4,
+              "rotate": {
+                "anchor": "50% 1803%"
+              },
+              "width": 0.25,
+              "x": -0.0021,
+              "y": -0.02
+            },
+            "props": {
+              "image": {
+                "width": 60
+              },
+              "text": "Add Tag"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\ttable \u003d self.getSibling(\"Table\")\n\t\n\tdata \u003d self.view.custom.Tags or []\n\t\n\t# get selected index safely\n\tselection \u003d table.props.selection\n\t\n\tif not selection or not selection.get(\"data\"):\n\t    return\n\t\n\tindex \u003d selection[\"data\"][0]\n\t\n\t# safety check\n\tif index \u003e\u003d len(data):\n\t    return\n\t\n\t# remove item\n\tdel data[index]\n\t\n\t# update source ONLY\n\tself.view.custom.Tags \u003d data"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_0"
+            },
+            "position": {
+              "height": 0.4,
+              "rotate": {
+                "anchor": "50% 1803%"
+              },
+              "width": 0.25,
+              "x": -0.0003,
+              "y": 0.3887
+            },
+            "props": {
+              "image": {
+                "width": 60
+              },
+              "text": "Remove Tag"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "Table"
+            },
+            "position": {
+              "height": 0.922,
+              "width": 0.741,
+              "x": 0.2594,
+              "y": 4.2764
+            },
+            "propConfig": {
+              "props.data": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Tags"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "selection": {
+                "enableColumnSelection": true
+              }
+            },
+            "type": "ia.display.table"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

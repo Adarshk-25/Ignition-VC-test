@@ -1,0 +1,586 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1127,
+      "width": 1530
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "height": 128.12,
+          "width": 1504,
+          "x": 18,
+          "y": 677.88
+        },
+        "props": {
+          "enableAcknowledge": false,
+          "enableDetails": false,
+          "enableHeader": false,
+          "enableShelve": false,
+          "enableUnshelve": false,
+          "pager": {
+            "enabled": false
+          },
+          "toolbar": {
+            "enableShelvedTab": false,
+            "enabled": false
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "18px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px"
+                  },
+                  "text": "Trend"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "PowerChart"
+                },
+                "position": {
+                  "basis": "600px"
+                },
+                "props": {
+                  "config": {
+                    "rangeEndDate": {
+                      "$": [
+                        "ts",
+                        0,
+                        1773223486859
+                      ],
+                      "$ts": 1773223390702
+                    },
+                    "rangeStartDate": {
+                      "$": [
+                        "ts",
+                        0,
+                        1773223486859
+                      ],
+                      "$ts": 1773194686702
+                    }
+                  },
+                  "interaction": {
+                    "chartZoomLevel": 1,
+                    "rangeZoomLevel": 1
+                  },
+                  "legend": {
+                    "visible": true
+                  },
+                  "pens": [
+                    {
+                      "axis": "",
+                      "data": {
+                        "aggregateMode": "default",
+                        "source": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating/anode/thicknessgauge2/plctags/average thickness"
+                      },
+                      "display": {
+                        "breakLine": true,
+                        "interpolation": "curveLinear",
+                        "radius": 3,
+                        "styles": {
+                          "highlighted": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          },
+                          "muted": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 0.4
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 0.4,
+                              "width": 1
+                            }
+                          },
+                          "normal": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 0.8
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 0.8,
+                              "width": 1
+                            }
+                          },
+                          "selected": {
+                            "fill": {
+                              "color": "#63BEA2",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#63BEA2",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          }
+                        },
+                        "type": "line"
+                      },
+                      "enabled": true,
+                      "name": "average thickness",
+                      "plot": 0,
+                      "selectable": true,
+                      "visible": true
+                    },
+                    {
+                      "axis": "",
+                      "data": {
+                        "aggregateMode": "default",
+                        "source": "histprov:MS SQL Historian:/drv:ignition-ag-win-ig-dev:default:/tag:agratas/sanand/zonee/coating/anode/thicknessgauge2/plctags/measured thickness"
+                      },
+                      "display": {
+                        "breakLine": true,
+                        "interpolation": "curveLinear",
+                        "radius": 3,
+                        "styles": {
+                          "highlighted": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#FC8D62",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          },
+                          "muted": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 0.4
+                            },
+                            "stroke": {
+                              "color": "#FC8D62",
+                              "dashArray": 0,
+                              "opacity": 0.4,
+                              "width": 1
+                            }
+                          },
+                          "normal": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 0.8
+                            },
+                            "stroke": {
+                              "color": "#FC8D62",
+                              "dashArray": 0,
+                              "opacity": 0.8,
+                              "width": 1
+                            }
+                          },
+                          "selected": {
+                            "fill": {
+                              "color": "#FC8D62",
+                              "opacity": 1
+                            },
+                            "stroke": {
+                              "color": "#FC8D62",
+                              "dashArray": 0,
+                              "opacity": 1,
+                              "width": 1
+                            }
+                          }
+                        },
+                        "type": "line"
+                      },
+                      "enabled": true,
+                      "name": "measured thickness",
+                      "plot": 0,
+                      "selectable": true,
+                      "visible": true
+                    }
+                  ]
+                },
+                "type": "ia.chart.powerchart"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_0"
+        },
+        "position": {
+          "height": 316.39,
+          "width": 726,
+          "x": 25.88,
+          "y": 345.29
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "style": {
+                    "fontSize": "18px",
+                    "fontWeight": "bold",
+                    "marginBottom": "10px"
+                  },
+                  "text": "KPI"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_1"
+        },
+        "position": {
+          "height": 307.23,
+          "width": 726,
+          "x": 772,
+          "y": 347.11
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "gaugeCard"
+        },
+        "position": {
+          "height": 332.07,
+          "width": 336,
+          "x": 1162,
+          "y": 329.2
+        },
+        "props": {
+          "params": {
+            "greenEnd": 50,
+            "greenStart": 0,
+            "max": 100,
+            "min": 0,
+            "tagPath": "[default]agratas/sanand/zoneE/coating/anode/thicknessGauge2/plcTags/Measured Thickness"
+          },
+          "path": "Templates/gaugeCard"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "gaugeCard_0"
+        },
+        "position": {
+          "height": 332.07,
+          "width": 336,
+          "x": 819,
+          "y": 323.58
+        },
+        "props": {
+          "params": {
+            "greenEnd": 50,
+            "greenStart": "value",
+            "max": 100,
+            "min": 0,
+            "tagPath": "[default]agratas/sanand/zoneE/coating/anode/thicknessGauge2/plcTags/Average Thickness"
+          },
+          "path": "Templates/gaugeCard"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Thickness Gauge"
+                },
+                "position": {
+                  "basis": "320px"
+                },
+                "props": {
+                  "path": "widgets(templates)/baseTemplates/TestTemplate/Thickness Gauge"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_2"
+        },
+        "position": {
+          "height": 253.75,
+          "width": 356,
+          "x": 1143.82,
+          "y": 14.159167938232422
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "template_process_data"
+        },
+        "position": {
+          "height": 251.58,
+          "width": 719,
+          "x": 31,
+          "y": 16.42
+        },
+        "props": {
+          "params": {
+            "tagpath": "[default]agratas/sanand/zoneE/coating/anode/thicknessGauge2/plcTags/Average Thickness",
+            "tagpath1": "[default]agratas/sanand/zoneE/coating/anode/thicknessGauge2/plcTags/Max Deviation",
+            "tagpath2": "[default]agratas/sanand/zoneE/coating/anode/thicknessGauge2/plcTags/Measured Thickness",
+            "tagpath3": "[default]agratas/sanand/zoneE/coating/anode/thicknessGauge2/plcTags/Measured Width",
+            "tagpath4": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/mainRollTemperature",
+            "tagpath5": "[default]agratas/sanand/zoneE/coating/anode/betaGauge1/plcTags/density",
+            "tagpath6": "[default]agratas/sanand/zoneE/calendering/anode/coldPress1/plcTags/machineSpeed",
+            "tagpath7": "[default]agratas/sanand/zoneE/coating/anode/betaGauge1/plcTags/density",
+            "tagpath8": "[default]agratas/sanand/zoneE/coating/anode/betaGauge1/plcTags/density",
+            "tagpath9": "[default]agratas/sanand/zoneE/coating/anode/betaGauge1/plcTags/density"
+          },
+          "path": "widgets(templates)/baseTemplates/Table_Templates/template_process_data"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "button"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "propConfig": {
+              "props.params.path": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[default]running.value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "color": "#28A745",
+                "text": "Start"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "button_0"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "#DC3545",
+                "path": "[default]running",
+                "text": "Stop"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "button_1"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "darkblue",
+                "path": "[default]running",
+                "text": "Alarm Reset"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "button_2"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "darkblue",
+                "path": "[default]running",
+                "text": "Alarm Acknowledge"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "button_3"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "color": "darkblue",
+                "path": "[default]running",
+                "text": "Auto"
+              },
+              "path": "widgets(templates)/baseTemplates/button"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "height": 40.53,
+          "width": 1470,
+          "x": 25.88,
+          "y": 295.6
+        },
+        "props": {
+          "style": {
+            "gap": "15px",
+            "justifyContent": "center"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "oeeChart"
+        },
+        "position": {
+          "height": 255,
+          "width": 354,
+          "x": 770,
+          "y": 13.87499923706055
+        },
+        "props": {
+          "params": {
+            "blue": "value",
+            "green": "value",
+            "red": "value",
+            "tagpath": "[default]agratas/sanand/zoneE/mixing/cathode/pdMixer",
+            "yellow": "value"
+          },
+          "path": "Templates/oeeChart"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": -248,
+      "y": 430
+    },
+    "type": "ia.container.coord"
+  }
+}

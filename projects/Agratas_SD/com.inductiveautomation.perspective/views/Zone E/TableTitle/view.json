@@ -1,0 +1,78 @@
+{
+  "custom": {},
+  "params": {
+    "equipmentName": "value",
+    "status": "value"
+  },
+  "propConfig": {
+    "params.equipmentName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 48,
+      "width": 129
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.9167,
+          "width": 0.9767,
+          "x": 0.0188,
+          "y": 0.0356
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.status} \u003d 2, \"Title/blink\", \"\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#4747FF",
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderColor": "#0000FF",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "color": "#FAFAFB",
+            "fontWeight": "bold",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

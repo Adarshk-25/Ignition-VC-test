@@ -1,0 +1,570 @@
+{
+  "custom": {},
+  "params": {
+    "step": {
+      "step": 0,
+      "title": "",
+      "page": "",
+      "connected": false,
+      "runningText": "",
+      "countsText": "",
+      "planned": 0,
+      "alarm": {
+        "count": 0,
+        "worst": "none"
+      },
+      "bar": {
+        "run": "0%",
+        "wait": "0%",
+        "stop": "0%",
+        "nocomm": "100%"
+      }
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 360,
+      "height": 56
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "position": {},
+    "props": {
+      "direction": "row",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "stretch",
+      "alignContent": "flex-start",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Num"
+        },
+        "position": {
+          "basis": "28px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "1",
+          "style": {
+            "classes": "HPHMI/Flow/Num",
+            "height": "28px",
+            "alignSelf": "center"
+          },
+          "alignVertical": "center"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "toStr({view.params.step.step})"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Content"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "direction": "column",
+          "wrap": "nowrap",
+          "justify": "center",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "6px",
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Row_Title"
+            },
+            "position": {
+              "basis": "22px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "center",
+              "alignContent": "flex-start",
+              "style": {
+                "gap": "8px",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "Title"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "classes": "HPHMI/Flow/Title"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "property",
+                      "config": {
+                        "path": "view.params.step.title"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Spacer"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 1
+                },
+                "props": {
+                  "direction": "row",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "stretch",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "overflow": "hidden"
+                  }
+                },
+                "children": []
+              },
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Kpi1"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "row",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "center",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "gap": "6px",
+                    "overflow": "hidden"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.display.label",
+                    "meta": {
+                      "name": "L"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "text": "Running",
+                      "style": {
+                        "classes": "HPHMI/Text/Label"
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.display.label",
+                    "meta": {
+                      "name": "V"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "text": "",
+                      "style": {
+                        "classes": "HPHMI/Text/Strong"
+                      }
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "type": "property",
+                          "config": {
+                            "path": "view.params.step.runningText"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ],
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "type": "property",
+                      "config": {
+                        "path": "view.params.step.connected"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Kpi2"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "row",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "center",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "gap": "6px",
+                    "marginLeft": "12px",
+                    "overflow": "hidden"
+                  }
+                },
+                "children": [
+                  {
+                    "type": "ia.display.label",
+                    "meta": {
+                      "name": "L"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "text": "Alarms",
+                      "style": {
+                        "classes": "HPHMI/Text/Label"
+                      }
+                    }
+                  },
+                  {
+                    "type": "ia.display.label",
+                    "meta": {
+                      "name": "V"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 0,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "text": "",
+                      "style": {
+                        "classes": "HPHMI/Text/Strong"
+                      }
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "type": "expr",
+                          "config": {
+                            "expression": "toStr({view.params.step.alarm.count})"
+                          }
+                        }
+                      },
+                      "props.style.classes": {
+                        "binding": {
+                          "type": "expr",
+                          "config": {
+                            "expression": "case({view.params.step.alarm.worst}, \"Critical\",\"HPHMI/Text/Critical\", \"Warning\",\"HPHMI/Text/Warning\", \"HPHMI/Text/Strong\")"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ],
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "type": "property",
+                      "config": {
+                        "path": "view.params.step.connected"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.display.label",
+                "meta": {
+                  "name": "NotConnected"
+                },
+                "position": {
+                  "basis": "auto",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "text": "",
+                  "style": {
+                    "classes": "HPHMI/Text/Muted"
+                  }
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "type": "property",
+                      "config": {
+                        "path": "view.params.step.countsText"
+                      }
+                    }
+                  },
+                  "position.display": {
+                    "binding": {
+                      "type": "expr",
+                      "config": {
+                        "expression": "!{view.params.step.connected}"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Bar"
+            },
+            "position": {
+              "basis": "8px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Flow/Bar",
+                "overflow": "hidden"
+              }
+            },
+            "children": [
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Run"
+                },
+                "position": {
+                  "basis": "0%",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "row",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "stretch",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "classes": "HPHMI/Flow/Run",
+                    "overflow": "hidden"
+                  }
+                },
+                "children": [],
+                "propConfig": {
+                  "position.basis": {
+                    "binding": {
+                      "type": "property",
+                      "config": {
+                        "path": "view.params.step.bar.run"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Wait"
+                },
+                "position": {
+                  "basis": "0%",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "row",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "stretch",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "classes": "HPHMI/Flow/Wait",
+                    "overflow": "hidden"
+                  }
+                },
+                "children": [],
+                "propConfig": {
+                  "position.basis": {
+                    "binding": {
+                      "type": "property",
+                      "config": {
+                        "path": "view.params.step.bar.wait"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "Stop"
+                },
+                "position": {
+                  "basis": "0%",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "row",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "stretch",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "classes": "HPHMI/Flow/Stop",
+                    "overflow": "hidden"
+                  }
+                },
+                "children": [],
+                "propConfig": {
+                  "position.basis": {
+                    "binding": {
+                      "type": "property",
+                      "config": {
+                        "path": "view.params.step.bar.stop"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "ia.container.flex",
+                "meta": {
+                  "name": "NoComm"
+                },
+                "position": {
+                  "basis": "0%",
+                  "grow": 0,
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "row",
+                  "wrap": "nowrap",
+                  "justify": "flex-start",
+                  "alignItems": "stretch",
+                  "alignContent": "flex-start",
+                  "style": {
+                    "classes": "HPHMI/Flow/NoComm",
+                    "overflow": "hidden"
+                  }
+                },
+                "children": [],
+                "propConfig": {
+                  "position.basis": {
+                    "binding": {
+                      "type": "property",
+                      "config": {
+                        "path": "view.params.step.bar.nocomm"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "propConfig": {
+      "props.style.classes": {
+        "binding": {
+          "type": "expr",
+          "config": {
+            "expression": "if({view.params.step.connected}, \"HPHMI/Flow/Step\", \"HPHMI/Flow/StepNC\")"
+          }
+        }
+      },
+      "meta.tooltip.text": {
+        "binding": {
+          "type": "expr",
+          "config": {
+            "expression": "if({view.params.step.page} != \"\", \"Open \" + {view.params.step.title} + \" screen\", {view.params.step.title} + \" – \" + toStr({view.params.step.planned}) + \" positions without PLC signals\")"
+          }
+        }
+      }
+    },
+    "events": {
+      "dom": {
+        "onClick": {
+          "type": "script",
+          "scope": "G",
+          "config": {
+            "script": "\t# open the area screen (if one exists)\n\tHPHMI_ZoneE.openAreaScreen(self.view.params.step.page)"
+          }
+        }
+      }
+    }
+  },
+  "propConfig": {
+    "params.step": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

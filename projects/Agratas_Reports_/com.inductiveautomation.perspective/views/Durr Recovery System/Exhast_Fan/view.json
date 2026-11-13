@@ -1,0 +1,710 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 798
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "348px"
+            },
+            "props": {
+              "style": {
+                "alignItems": "center",
+                "fontWeight": "bold"
+              },
+              "text": "Exhaust Fan\n",
+              "textStyle": {
+                "fontSize": 18
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "height": 0.0414,
+          "width": 0.87,
+          "x": 0.0374,
+          "y": 0.0075
+        },
+        "props": {
+          "justify": "space-evenly",
+          "style": {
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderColor": "#D5D5D5",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "borderWidth": 1,
+            "gap": "15px",
+            "justifyContent": "center"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.0407,
+          "rotate": {
+            "anchor": "-38% 25%"
+          },
+          "width": 0.2068,
+          "x": 0.6991,
+          "y": 0.2144
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#8AFF8A",
+            "borderBottomLeftRadius": 5,
+            "borderBottomRightRadius": 5,
+            "borderColor": "#AAAAAA",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 5,
+            "borderTopRightRadius": 5,
+            "borderWidth": 1,
+            "textAlign": "center"
+          },
+          "text": "RUNNING",
+          "textStyle": {
+            "color": "#00D900",
+            "fontFamily": "sans-serif",
+            "fontSize": 12,
+            "fontWeight": "bold",
+            "textAlign": "center",
+            "textTransform": "uppercase"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "apexchart"
+            },
+            "position": {
+              "height": 0.7642,
+              "width": 0.5735,
+              "x": 0.0308,
+              "y": 0.1136
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "dropShadow": {
+                    "blur": 10,
+                    "color": "#000",
+                    "enabled": true,
+                    "left": 7,
+                    "opacity": 0.2,
+                    "top": 18
+                  },
+                  "events": {
+                    "animationEnd": false,
+                    "beforeMount": false,
+                    "beforeResetZoom": false,
+                    "beforeZoom": false,
+                    "brushScrolled": false,
+                    "click": false,
+                    "dataPointMouseEnter": false,
+                    "dataPointMouseLeave": false,
+                    "dataPointSelection": false,
+                    "legendClick": false,
+                    "markerClick": false,
+                    "mounted": false,
+                    "mouseLeave": false,
+                    "mouseMove": false,
+                    "scrolled": false,
+                    "selection": false,
+                    "updated": false,
+                    "xAxisLabelClick": false,
+                    "zoomed": false
+                  },
+                  "height": 350,
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "line"
+                },
+                "colors": [
+                  "#000080"
+                ],
+                "dataLabels": {
+                  "enabled": true
+                },
+                "grid": {
+                  "borderColor": "#e7e7e7",
+                  "row": {
+                    "colors": [
+                      "#f3f3f3",
+                      "transparent"
+                    ],
+                    "opacity": 0.5
+                  }
+                },
+                "legend": {
+                  "floating": true,
+                  "horizontalAlign": "right",
+                  "offsetX": -5,
+                  "offsetY": -25,
+                  "position": "top"
+                },
+                "markers": {
+                  "size": 1
+                },
+                "stroke": {
+                  "curve": "smooth"
+                },
+                "title": {
+                  "align": "left",
+                  "text": "Trends"
+                },
+                "xaxis": {
+                  "categories": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul"
+                  ],
+                  "title": {
+                    "text": "Time"
+                  }
+                },
+                "yaxis": {
+                  "max": 80,
+                  "min": 10,
+                  "title": {
+                    "text": "Speed"
+                  }
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    45.6,
+                    43.8,
+                    36,
+                    55,
+                    42,
+                    46.2,
+                    57.3
+                  ],
+                  "name": "Speed"
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": 10,
+                "borderBottomRightRadius": 10,
+                "borderColor": "#000000",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": 10,
+                "borderTopRightRadius": 10,
+                "borderWidth": 1
+              },
+              "type": "area"
+            },
+            "type": "kyvislabs.display.apexchart"
+          },
+          {
+            "meta": {
+              "name": "SimpleGauge"
+            },
+            "position": {
+              "height": 0.7602,
+              "width": 0.3464,
+              "x": 0.6292,
+              "y": 0.1159
+            },
+            "props": {
+              "arc": {
+                "color": "#000080"
+              },
+              "endAngle": 405,
+              "label": {
+                "offsetY": 12
+              },
+              "maxValue": 50,
+              "startAngle": 135,
+              "style": {
+                "borderBottomLeftRadius": 10,
+                "borderBottomRightRadius": 10,
+                "borderColor": "#000000",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": 10,
+                "borderTopRightRadius": 10,
+                "borderWidth": 1
+              },
+              "value": 12.36
+            },
+            "type": "ia.chart.simple-gauge"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.0894,
+              "width": 0.3377,
+              "x": 0.6338,
+              "y": 0.1383
+            },
+            "props": {
+              "text": "Current ( A )",
+              "textStyle": {
+                "fontFamily": "sans-serif",
+                "fontWeight": "bold",
+                "textAlign": "center",
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_0"
+        },
+        "position": {
+          "height": 0.3133,
+          "width": 0.8643,
+          "x": 0.0404,
+          "y": 0.2742
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderColor": "#000000",
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "borderWidth": 1,
+            "outlineStyle": "none"
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 0.3644,
+              "width": 0.6807,
+              "x": 0.1596,
+              "y": 0.3186
+            },
+            "props": {
+              "text": "Active",
+              "textStyle": {
+                "color": "#00AC00",
+                "fontFamily": "sans-serif",
+                "fontSize": 30,
+                "fontWeight": "bold",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.161,
+              "width": 0.4427,
+              "x": 0.0453,
+              "y": 0.0673
+            },
+            "props": {
+              "text": "STATUS",
+              "textStyle": {
+                "color": "#00AC00",
+                "fontFamily": "sans-serif",
+                "fontWeight": "bold",
+                "textTransform": "uppercase"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_5"
+        },
+        "position": {
+          "height": 0.1411,
+          "width": 0.2068,
+          "x": 0.6991,
+          "y": 0.0579
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "backgroundColor": "#8AFF8A",
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderStyle": "solid",
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "borderWidth": 1,
+            "outlineStyle": "none"
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "height": 0.317,
+          "width": 0.8643,
+          "x": 0.0401,
+          "y": 0.6104
+        },
+        "props": {
+          "filters": {
+            "active": {
+              "priorities": {
+                "high": false,
+                "low": false,
+                "medium": false
+              },
+              "states": {
+                "clearUnacked": false
+              }
+            }
+          },
+          "style": {
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10
+          },
+          "toolbar": {
+            "enableConfiguration": false,
+            "enablePreFilters": false,
+            "enableShelvedTab": false
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 0.3628,
+              "width": 0.6446,
+              "x": 0.1777,
+              "y": 0.3186
+            },
+            "props": {
+              "text": "12.36 A",
+              "textStyle": {
+                "color": "#FFFFFF",
+                "fontFamily": "sans-serif",
+                "fontSize": 30,
+                "fontWeight": "bold",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.161,
+              "width": 0.4427,
+              "x": 0.0453,
+              "y": 0.0673
+            },
+            "props": {
+              "text": "CURRENT",
+              "textStyle": {
+                "color": "#FFFFFF",
+                "fontFamily": "sans-serif",
+                "fontWeight": "bold",
+                "textTransform": "uppercase"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_4"
+        },
+        "position": {
+          "height": 0.1411,
+          "width": 0.2068,
+          "x": 0.473,
+          "y": 0.0579
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "backgroundColor": "#000080",
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderColor": "#000080",
+            "borderStyle": "none",
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "borderWidth": 1
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "MultiStateButton"
+        },
+        "position": {
+          "height": 0.0431,
+          "width": 0.4266,
+          "x": 0.2512,
+          "y": 0.2144
+        },
+        "props": {
+          "buttonGap": 17,
+          "controlValue": 2,
+          "indicatorValue": 0,
+          "orientation": "row",
+          "states": [
+            {
+              "selectedStyle": {
+                "backgroundColor": "#FFF275",
+                "classes": ""
+              },
+              "text": "Start",
+              "unselectedStyle": {
+                "classes": ""
+              },
+              "value": 2
+            },
+            {
+              "selectedStyle": {
+                "backgroundColor": "#F84553",
+                "classes": ""
+              },
+              "text": "Stop",
+              "unselectedStyle": {
+                "classes": ""
+              },
+              "value": 0
+            }
+          ]
+        },
+        "type": "ia.input.multi-state-button"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "backgroundColor": "#000080",
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.161,
+              "width": 0.5241,
+              "x": 0.0453,
+              "y": 0.0671
+            },
+            "props": {
+              "text": "SPEED",
+              "textStyle": {
+                "color": "#FFFFFF",
+                "fontFamily": "sans-serif",
+                "fontWeight": "bold",
+                "textTransform": "uppercase"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 0.3644,
+              "width": 0.5783,
+              "x": 0.2108,
+              "y": 0.3186
+            },
+            "props": {
+              "text": "55.4 %",
+              "textStyle": {
+                "color": "#FFFFFF",
+                "fontFamily": "sans-serif",
+                "fontSize": 30,
+                "fontWeight": "bold",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_3"
+        },
+        "position": {
+          "height": 0.1411,
+          "width": 0.2068,
+          "x": 0.249,
+          "y": 0.0579
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderColor": "#000080",
+            "borderStyle": "none",
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "borderWidth": 1,
+            "outlineStyle": "none"
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexContainer_0"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "direction": "column",
+              "justify": "space-between",
+              "style": {
+                "border": "1px solid #dcdcdc",
+                "borderRadius": "6px",
+                "padding": "15px"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Pump"
+            },
+            "position": {
+              "height": 0.8447,
+              "width": 0.8387,
+              "x": 0.0806,
+              "y": 0.0776
+            },
+            "type": "ia.symbol.pump"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_2"
+        },
+        "position": {
+          "height": 0.2022,
+          "width": 0.1935,
+          "x": 0.0383,
+          "y": 0.0566
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

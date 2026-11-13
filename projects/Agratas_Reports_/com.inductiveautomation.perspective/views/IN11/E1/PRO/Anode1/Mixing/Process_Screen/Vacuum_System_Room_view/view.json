@@ -1,0 +1,2395 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.session.custom.nav.currentPath \u003d \"Plasticzer Feeding System\"\t\n\tsystem.perspective.navigate(\n\tview\u003d\u0027Page/2F_Templates/2F_mainScreen\u0027,\n\tparams\u003d{\"tab\": 0}\n\t)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_26"
+            },
+            "position": {
+              "height": 0.0537,
+              "width": 0.0544,
+              "x": 0.0176,
+              "y": 0.0342
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#D5D5D5",
+                "borderBottomLeftRadius": "1em",
+                "borderBottomRightRadius": "1em",
+                "borderColor": "#808080",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "1em",
+                "borderTopRightRadius": "1em",
+                "borderWidth": 0.01,
+                "classes": "Page/Label1",
+                "cursor": "pointer"
+              },
+              "text": "1F",
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {},
+                    "view": "IN11/E1/PRO/Mixing/AMIX1/New/Mixing_Room_2"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                },
+                "onMouseEnter": {
+                  "config": {
+                    "script": "\tself.props.style.backgroundColor\u003d\"#808080\""
+                  },
+                  "scope": "G",
+                  "type": "script"
+                },
+                "onMouseLeave": {
+                  "config": {
+                    "script": "\tself.props.style.backgroundColor\u003d\"#AAAAAA\""
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Icon"
+            },
+            "position": {
+              "height": 0.0362,
+              "width": 0.05,
+              "x": 0.4818,
+              "y": 0.9637
+            },
+            "props": {
+              "color": "#FFFFFF",
+              "path": "material/keyboard_arrow_down",
+              "style": {
+                "backgroundColor": "#AAAAAA",
+                "cursor": "pointer"
+              }
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Drawing_4"
+            },
+            "position": {
+              "height": 0.1787,
+              "width": 0.0681,
+              "x": 0.7735,
+              "y": 0.5268
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "35.70326614379883",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "24.979846954345703",
+                  "x": "2.992248058319092",
+                  "y": "2.496734142303467"
+                },
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "0.9986926317214966",
+                  "name": "rect_0",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "29.399999618530273",
+                  "x": "0.40000030398368835",
+                  "y": "1.4980415105819702"
+                },
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "1.248366355895996",
+                  "name": "rect_1",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "2.356588363647461",
+                  "x": "14.068218231201172",
+                  "y": "0.0000021515891148737865"
+                },
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "12.983003616333008",
+                  "name": "rect_2",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "9.426356315612793",
+                  "x": "10.297675132751465",
+                  "y": "18.97516441345215"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "11.984312057495117",
+                  "name": "rect_3",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "0.9426355361938477",
+                  "x": "14.303876876831055",
+                  "y": "19.474510192871094"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "name": "perspective-arc",
+                  "specialPath": {
+                    "end": 0,
+                    "height": 2.4967689514160156,
+                    "slice": true,
+                    "start": 0,
+                    "width": 2.3566417694091797,
+                    "x": 13.47906494140625,
+                    "y": 24.717620849609375
+                  },
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "perspective-arc"
+                }
+              ],
+              "viewBox": "0 0 30 40"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Drawing_41"
+            },
+            "position": {
+              "height": 0.08,
+              "rotate": {
+                "angle": "180deg"
+              },
+              "width": 0.0617,
+              "x": 0.638,
+              "y": 0.33
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#cbcbcb"
+                      },
+                      "name": "perspective-polygon",
+                      "specialPath": {
+                        "angle": 44,
+                        "corners": 3,
+                        "height": 81.69720339775085,
+                        "rounding": 0,
+                        "width": 77.93695718050003,
+                        "x": 136.07740735433995,
+                        "y": -8.434627056121826
+                      },
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "transform": "matrix(0.7193397283554077 -0.6946583986282349 0.6946583986282349 0.7193397283554077 -7.2220563888549805 155.76763916015625)",
+                      "type": "perspective-star"
+                    },
+                    {
+                      "d": "M30 83l123 0 0 74L30 157Z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "#cbcbcb"
+                      },
+                      "height": "64.389892578125",
+                      "name": "rect",
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "type": "rect",
+                      "width": "123.27082824707031",
+                      "x": "0",
+                      "y": "24"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "style": {
+                "classes": "Page/Label2"
+              },
+              "viewBox": "0 0 200 115"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_93"
+            },
+            "position": {
+              "height": 0.0983,
+              "width": 0.0214,
+              "x": 0.6613,
+              "y": 0.3234
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "CHW"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Drawing_42"
+            },
+            "position": {
+              "height": 0.08,
+              "width": 0.0617,
+              "x": 0.6444,
+              "y": 0.4178
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#cbcbcb"
+                      },
+                      "name": "perspective-polygon",
+                      "specialPath": {
+                        "angle": 44,
+                        "corners": 3,
+                        "height": 81.69720339775085,
+                        "rounding": 0,
+                        "width": 77.93695718050003,
+                        "x": 136.07740735433995,
+                        "y": -8.434627056121826
+                      },
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "transform": "matrix(0.7193397283554077 -0.6946583986282349 0.6946583986282349 0.7193397283554077 -7.2220563888549805 155.76763916015625)",
+                      "type": "perspective-star"
+                    },
+                    {
+                      "d": "M30 83l123 0 0 74L30 157Z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "#cbcbcb"
+                      },
+                      "height": "64.389892578125",
+                      "name": "rect",
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "type": "rect",
+                      "width": "123.27082824707031",
+                      "x": "0",
+                      "y": "24"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 200 115"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_94"
+            },
+            "position": {
+              "height": 0.0983,
+              "width": 0.0214,
+              "x": 0.6468,
+              "y": 0.4089
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "CHW"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Drawing_45"
+            },
+            "position": {
+              "height": 0.08,
+              "width": 0.0617,
+              "x": 0.8964,
+              "y": 0.0864
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#cbcbcb"
+                      },
+                      "name": "perspective-polygon",
+                      "specialPath": {
+                        "angle": 44,
+                        "corners": 3,
+                        "height": 81.69720339775085,
+                        "rounding": 0,
+                        "width": 77.93695718050003,
+                        "x": 136.07740735433995,
+                        "y": -8.434627056121826
+                      },
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "transform": "matrix(0.7193397283554077 -0.6946583986282349 0.6946583986282349 0.7193397283554077 -7.2220563888549805 155.76763916015625)",
+                      "type": "perspective-star"
+                    },
+                    {
+                      "d": "M30 83l123 0 0 74L30 157Z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "#cbcbcb"
+                      },
+                      "height": "64.389892578125",
+                      "name": "rect",
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "type": "rect",
+                      "width": "123.27082824707031",
+                      "x": "0",
+                      "y": "24"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 200 115"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_97"
+            },
+            "position": {
+              "height": 0.0983,
+              "width": 0.0214,
+              "x": 0.9024,
+              "y": 0.0779
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "EXG"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Drawing_46"
+            },
+            "position": {
+              "height": 0.0799,
+              "width": 0.0617,
+              "x": 0.896,
+              "y": 0.4414
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#cbcbcb"
+                      },
+                      "name": "perspective-polygon",
+                      "specialPath": {
+                        "angle": 44,
+                        "corners": 3,
+                        "height": 81.69720339775085,
+                        "rounding": 0,
+                        "width": 77.93695718050003,
+                        "x": 136.07740735433995,
+                        "y": -8.434627056121826
+                      },
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "transform": "matrix(0.7193397283554077 -0.6946583986282349 0.6946583986282349 0.7193397283554077 -7.2220563888549805 155.76763916015625)",
+                      "type": "perspective-star"
+                    },
+                    {
+                      "d": "M30 83l123 0 0 74L30 157Z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "#cbcbcb"
+                      },
+                      "height": "64.389892578125",
+                      "name": "rect",
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "type": "rect",
+                      "width": "123.27082824707031",
+                      "x": "0",
+                      "y": "24"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 200 115"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_98"
+            },
+            "position": {
+              "height": 0.0983,
+              "width": 0.0214,
+              "x": 0.8994,
+              "y": 0.4322
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "EXG"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Simple filter"
+            },
+            "position": {
+              "height": 0.165,
+              "width": 0.0437,
+              "x": 0.2905,
+              "y": 0.1647
+            },
+            "props": {
+              "elements": [
+                {
+                  "name": "symbol",
+                  "type": "symbol"
+                },
+                {
+                  "elements": [
+                    {
+                      "cx": "25.2827",
+                      "cy": "46.1147",
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0",
+                          "stopColor": "#D6D6D6",
+                          "style": {
+                            "stopColor": "#D6D6D6"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.59",
+                          "stopColor": "#CACACA",
+                          "style": {
+                            "stopColor": "#CACACA"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#C0C0C0",
+                          "style": {
+                            "stopColor": "#C0C0C0"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientTransform": "matrix(1 0 0 4 0 -138.3442)",
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_1_",
+                      "name": "SVGID_1_",
+                      "r": "37.1868",
+                      "type": "radialGradient"
+                    },
+                    {
+                      "d": "M3.042,2.59v68.469l2.027,2.703H0.001v7.883h10.923   l8.108,10.585h10.36l15.991-21.171V18.356h5.18V7.771h-5.18V2.59H29.393V0h-10.36v2.59H3.042z",
+                      "fill": {
+                        "url": "url(#SVGID_1_)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M3.042,71.059h42.342",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M5.069,73.762l6.081,7.883",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M45.384,28.941H3.042",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M19.033,2.59h10.36",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_Filter",
+                  "name": "Group_Filter",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "d": "M8.447,7.771h31.531v7.883H8.447V7.771",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_Label",
+                  "name": "Group_Label",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "cx": "24.2134",
+                      "cy": "101.5762",
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0",
+                          "stopColor": "#D6D6D6",
+                          "style": {
+                            "stopColor": "#D6D6D6"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.59",
+                          "stopColor": "#CACACA",
+                          "style": {
+                            "stopColor": "#CACACA"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#C0C0C0",
+                          "style": {
+                            "stopColor": "#C0C0C0"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_2_",
+                      "name": "SVGID_2_",
+                      "r": "10.8105",
+                      "type": "radialGradient"
+                    }
+                  ],
+                  "id": "Group_Rotor",
+                  "name": "Group_Rotor",
+                  "type": "group"
+                }
+              ],
+              "viewBox": "0 0 50.566 93"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_101"
+            },
+            "position": {
+              "height": 0.055,
+              "width": 0.066,
+              "x": 0.2776,
+              "y": 0.3346
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "Vacuum Filter"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_103"
+            },
+            "position": {
+              "height": 0.055,
+              "width": 0.066,
+              "x": 0.4975,
+              "y": 0.1499
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "Vacuum pump"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "vacuumPump"
+            },
+            "position": {
+              "height": 0.1575,
+              "width": 0.1981,
+              "x": 0.4351,
+              "y": 0.1903
+            },
+            "props": {
+              "path": "widgets(templates)/AG_FP/Process_FacePlate/Mixing/vacuumPump_New"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Drawing_43"
+            },
+            "position": {
+              "height": 0.08,
+              "width": 0.0617,
+              "x": 0.6477,
+              "y": 0.8455
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#cbcbcb"
+                      },
+                      "name": "perspective-polygon",
+                      "specialPath": {
+                        "angle": 44,
+                        "corners": 3,
+                        "height": 81.69720339775085,
+                        "rounding": 0,
+                        "width": 77.93695718050003,
+                        "x": 136.07740735433995,
+                        "y": -8.434627056121826
+                      },
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "transform": "matrix(0.7193397283554077 -0.6946583986282349 0.6946583986282349 0.7193397283554077 -7.2220563888549805 155.76763916015625)",
+                      "type": "perspective-star"
+                    },
+                    {
+                      "d": "M30 83l123 0 0 74L30 157Z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "#cbcbcb"
+                      },
+                      "height": "64.389892578125",
+                      "name": "rect",
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "type": "rect",
+                      "width": "123.27082824707031",
+                      "x": "0",
+                      "y": "24"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 200 115"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Drawing_44"
+            },
+            "position": {
+              "height": 0.0799,
+              "rotate": {
+                "angle": "180deg"
+              },
+              "width": 0.0617,
+              "x": 0.6406,
+              "y": 0.7325
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#cbcbcb"
+                      },
+                      "name": "perspective-polygon",
+                      "specialPath": {
+                        "angle": 44,
+                        "corners": 3,
+                        "height": 81.69720339775085,
+                        "rounding": 0,
+                        "width": 77.93695718050003,
+                        "x": 136.07740735433995,
+                        "y": -8.434627056121826
+                      },
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "transform": "matrix(0.7193397283554077 -0.6946583986282349 0.6946583986282349 0.7193397283554077 -7.2220563888549805 155.76763916015625)",
+                      "type": "perspective-star"
+                    },
+                    {
+                      "d": "M30 83l123 0 0 74L30 157Z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "#cbcbcb"
+                      },
+                      "height": "64.389892578125",
+                      "name": "rect",
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "type": "rect",
+                      "width": "123.27082824707031",
+                      "x": "0",
+                      "y": "24"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 200 115"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_96"
+            },
+            "position": {
+              "height": 0.0983,
+              "width": 0.0214,
+              "x": 0.6753,
+              "y": 0.7238
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "CHW"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_119"
+            },
+            "position": {
+              "height": 0.055,
+              "width": 0.09,
+              "x": 0.6874,
+              "y": 0.5649
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "Silencer"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_95"
+            },
+            "position": {
+              "height": 0.0983,
+              "width": 0.0214,
+              "x": 0.6501,
+              "y": 0.8365
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "CHW"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "vacuumPump_0"
+            },
+            "position": {
+              "height": 0.1575,
+              "width": 0.1981,
+              "x": 0.4351,
+              "y": 0.5948
+            },
+            "props": {
+              "path": "widgets(templates)/AG_FP/Process_FacePlate/Mixing/vacuumPump_New"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_104"
+            },
+            "position": {
+              "height": 0.055,
+              "width": 0.066,
+              "x": 0.4975,
+              "y": 0.5545
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "Vacuum pump"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_102"
+            },
+            "position": {
+              "height": 0.055,
+              "width": 0.066,
+              "x": 0.2776,
+              "y": 0.7389
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "Vacuum filter"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Simple filter_0"
+            },
+            "position": {
+              "height": 0.165,
+              "width": 0.0437,
+              "x": 0.2905,
+              "y": 0.5704
+            },
+            "props": {
+              "elements": [
+                {
+                  "name": "symbol",
+                  "type": "symbol"
+                },
+                {
+                  "elements": [
+                    {
+                      "cx": "25.2827",
+                      "cy": "46.1147",
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0",
+                          "stopColor": "#D6D6D6",
+                          "style": {
+                            "stopColor": "#D6D6D6"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.59",
+                          "stopColor": "#CACACA",
+                          "style": {
+                            "stopColor": "#CACACA"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#C0C0C0",
+                          "style": {
+                            "stopColor": "#C0C0C0"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientTransform": "matrix(1 0 0 4 0 -138.3442)",
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_1_",
+                      "name": "SVGID_1_",
+                      "r": "37.1868",
+                      "type": "radialGradient"
+                    },
+                    {
+                      "d": "M3.042,2.59v68.469l2.027,2.703H0.001v7.883h10.923   l8.108,10.585h10.36l15.991-21.171V18.356h5.18V7.771h-5.18V2.59H29.393V0h-10.36v2.59H3.042z",
+                      "fill": {
+                        "url": "url(#SVGID_1_)"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M3.042,71.059h42.342",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M5.069,73.762l6.081,7.883",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M45.384,28.941H3.042",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M19.033,2.59h10.36",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_Filter",
+                  "name": "Group_Filter",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "d": "M8.447,7.771h31.531v7.883H8.447V7.771",
+                      "fill": {
+                        "paint": "transparent"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#4C4C4C",
+                        "width": "0.25"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "id": "Group_Label",
+                  "name": "Group_Label",
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "cx": "24.2134",
+                      "cy": "101.5762",
+                      "elements": [
+                        {
+                          "name": "stop",
+                          "offset": "0",
+                          "stopColor": "#D6D6D6",
+                          "style": {
+                            "stopColor": "#D6D6D6"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "0.59",
+                          "stopColor": "#CACACA",
+                          "style": {
+                            "stopColor": "#CACACA"
+                          },
+                          "type": "stop"
+                        },
+                        {
+                          "name": "stop",
+                          "offset": "1",
+                          "stopColor": "#C0C0C0",
+                          "style": {
+                            "stopColor": "#C0C0C0"
+                          },
+                          "type": "stop"
+                        }
+                      ],
+                      "gradientUnits": "userSpaceOnUse",
+                      "id": "SVGID_2_",
+                      "name": "SVGID_2_",
+                      "r": "10.8105",
+                      "type": "radialGradient"
+                    }
+                  ],
+                  "id": "Group_Rotor",
+                  "name": "Group_Rotor",
+                  "type": "group"
+                }
+              ],
+              "viewBox": "0 0 50.566 93"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Drawing_5"
+            },
+            "position": {
+              "height": 0.1787,
+              "width": 0.0681,
+              "x": 0.7619,
+              "y": 0.1419
+            },
+            "props": {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "35.70326614379883",
+                  "name": "rect",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "24.979846954345703",
+                  "x": "2.992248058319092",
+                  "y": "2.496734142303467"
+                },
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "0.9986926317214966",
+                  "name": "rect_0",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "29.399999618530273",
+                  "x": "0.40000030398368835",
+                  "y": "1.4980415105819702"
+                },
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "1.248366355895996",
+                  "name": "rect_1",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "2.356588363647461",
+                  "x": "14.068218231201172",
+                  "y": "0.0000021515891148737865"
+                },
+                {
+                  "fill": {
+                    "paint": "none"
+                  },
+                  "height": "12.983003616333008",
+                  "name": "rect_2",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "9.426356315612793",
+                  "x": "10.297675132751465",
+                  "y": "18.97516441345215"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "11.984312057495117",
+                  "name": "rect_3",
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "rect",
+                  "width": "0.9426355361938477",
+                  "x": "14.303876876831055",
+                  "y": "19.474510192871094"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "name": "perspective-arc",
+                  "specialPath": {
+                    "end": 0,
+                    "height": 2.4967689514160156,
+                    "slice": true,
+                    "start": 0,
+                    "width": 2.3566417694091797,
+                    "x": 13.47906494140625,
+                    "y": 24.717620849609375
+                  },
+                  "stroke": {
+                    "paint": "#000000",
+                    "width": "0.30000001192092896px"
+                  },
+                  "type": "perspective-arc"
+                }
+              ],
+              "viewBox": "0 0 30 40"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_120"
+            },
+            "position": {
+              "height": 0.055,
+              "width": 0.09,
+              "x": 0.6786,
+              "y": 0.1886
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "Silencer"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Drawing_47"
+            },
+            "position": {
+              "height": 0.08,
+              "width": 0.0617,
+              "x": 0.3638,
+              "y": 0.0515
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#cbcbcb"
+                      },
+                      "name": "perspective-polygon",
+                      "specialPath": {
+                        "angle": 44,
+                        "corners": 3,
+                        "height": 81.69720339775085,
+                        "rounding": 0,
+                        "width": 77.93695718050003,
+                        "x": 136.07740735433995,
+                        "y": -8.434627056121826
+                      },
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "transform": "matrix(0.7193397283554077 -0.6946583986282349 0.6946583986282349 0.7193397283554077 -7.2220563888549805 155.76763916015625)",
+                      "type": "perspective-star"
+                    },
+                    {
+                      "d": "M30 83l123 0 0 74L30 157Z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "#cbcbcb"
+                      },
+                      "height": "64.389892578125",
+                      "name": "rect",
+                      "stroke": {
+                        "paint": "none"
+                      },
+                      "type": "rect",
+                      "width": "123.27082824707031",
+                      "x": "0",
+                      "y": "24"
+                    }
+                  ],
+                  "name": "group",
+                  "type": "group"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 200 115"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_99"
+            },
+            "position": {
+              "height": 0.0983,
+              "width": 0.0214,
+              "x": 0.3722,
+              "y": 0.0426
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "CDA"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_105"
+            },
+            "position": {
+              "height": 0.0788,
+              "width": 0.1163,
+              "x": 0.0276,
+              "y": 0.8226
+            },
+            "props": {
+              "style": {
+                "borderStyle": "solid",
+                "borderWidth": 2,
+                "classes": "Page/Label2"
+              },
+              "text": "From PD Mixers and Slurry Storage Tank",
+              "textStyle": {
+                "textTransform": "capitalize"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Tank2"
+            },
+            "position": {
+              "height": 0.3613,
+              "width": 0.1388,
+              "x": 0.1012,
+              "y": 0.325
+            },
+            "props": {
+              "path": "widgets(templates)/AG_FP/Process_FacePlate/Mixing/Tank2"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {
+                      "tabValue": "14"
+                    },
+                    "view": "Page/1F_Templates/1F_mainScreen"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_108"
+            },
+            "position": {
+              "height": 0.1849,
+              "width": 0.0806,
+              "x": 0.1271,
+              "y": 0.3785
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label2",
+                "textTransform": "capitalize"
+              },
+              "text": "Vacuum tank"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "page": "/sanand/zone-e/mixing/anode-line-1"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Label_7"
+            },
+            "position": {
+              "height": 0.0535,
+              "width": 0.1064,
+              "x": 0.27,
+              "y": 0.825
+            },
+            "props": {
+              "style": {
+                "classes": "Page/Label1"
+              },
+              "text": "Pump Room",
+              "textStyle": {
+                "color": "#000000",
+                "textTransform": "uppercase"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "pipes": [
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.2932,
+                            "y": 0.2474
+                          },
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.2932,
+                                "y": 0.6529
+                              }
+                            ],
+                            "x": 0.2404,
+                            "y": 0.6529
+                          }
+                        ],
+                        "x": 0.2404,
+                        "y": 0.2474
+                      }
+                    ],
+                    "x": 0.1792,
+                    "y": 0.2474
+                  }
+                ],
+                "x": 0.1792,
+                "y": 0.3706
+              },
+              "start": "none",
+              "stroke": "#FF1717",
+              "visible": true,
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_15",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.1553,
+                            "y": 0.3346
+                          }
+                        ],
+                        "x": 0.1553,
+                        "y": 0.2474
+                      }
+                    ],
+                    "x": 0.0865,
+                    "y": 0.2474
+                  }
+                ],
+                "x": 0.0865,
+                "y": 0.8226
+              },
+              "start": "none",
+              "stroke": "#FF1717",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_0",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.5646,
+                            "y": 0.2076
+                          }
+                        ],
+                        "x": 0.5646,
+                        "y": 0.0915
+                      },
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.5646,
+                                "y": 0.6148
+                              }
+                            ],
+                            "x": 0.5646,
+                            "y": 0.5153
+                          }
+                        ],
+                        "x": 0.4511,
+                        "y": 0.5153
+                      }
+                    ],
+                    "x": 0.4511,
+                    "y": 0.0915
+                  }
+                ],
+                "x": 0.3985,
+                "y": 0.0915
+              },
+              "start": "none",
+              "stroke": "#0000FF",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_1",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.4964,
+                                "y": 0.6148
+                              }
+                            ],
+                            "x": 0.4964,
+                            "y": 0.5801
+                          }
+                        ],
+                        "x": 0.4326,
+                        "y": 0.5801
+                      }
+                    ],
+                    "x": 0.4326,
+                    "y": 0.6529
+                  }
+                ],
+                "x": 0.3261,
+                "y": 0.6529
+              },
+              "start": "none",
+              "stroke": "#FF1717",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_2",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.4964,
+                                "y": 0.2076
+                              }
+                            ],
+                            "x": 0.4964,
+                            "y": 0.1751
+                          }
+                        ],
+                        "x": 0.4289,
+                        "y": 0.1751
+                      }
+                    ],
+                    "x": 0.4289,
+                    "y": 0.2472
+                  }
+                ],
+                "x": 0.3261,
+                "y": 0.2472
+              },
+              "start": "none",
+              "stroke": "#FF1717",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_3",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.5767,
+                        "y": 0.2809
+                      }
+                    ],
+                    "x": 0.5767,
+                    "y": 0.3684
+                  }
+                ],
+                "x": 0.6712,
+                "y": 0.3684
+              },
+              "start": "none",
+              "stroke": "#398E8E",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_4",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.1795,
+                    "y": 0.2473
+                  }
+                ],
+                "x": 0.1795,
+                "y": 0.3776
+              },
+              "start": "none",
+              "stroke": "#FF1717",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_5",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.9352,
+                        "y": 0.4766
+                      }
+                    ],
+                    "x": 0.8088,
+                    "y": 0.4766
+                  }
+                ],
+                "x": 0.8088,
+                "y": 0.5322
+              },
+              "start": "none",
+              "stroke": "#00A5DD",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_6",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.6777,
+                        "y": 0.8859
+                      }
+                    ],
+                    "x": 0.4978,
+                    "y": 0.8859
+                  }
+                ],
+                "x": 0.4978,
+                "y": 0.6831
+              },
+              "start": "none",
+              "stroke": "#398E8E",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_7",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.7961,
+                            "y": 0.3099
+                          }
+                        ],
+                        "x": 0.7961,
+                        "y": 0.4178
+                      }
+                    ],
+                    "x": 0.5242,
+                    "y": 0.4178
+                  }
+                ],
+                "x": 0.5242,
+                "y": 0.2786
+              },
+              "start": "none",
+              "stroke": "#4747FF",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_8",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.9193,
+                        "y": 0.1256
+                      }
+                    ],
+                    "x": 0.7961,
+                    "y": 0.1256
+                  }
+                ],
+                "x": 0.7961,
+                "y": 0.1419
+              },
+              "start": "none",
+              "stroke": "#00A5DD",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_9",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.8088,
+                            "y": 0.6937
+                          }
+                        ],
+                        "x": 0.8088,
+                        "y": 0.823
+                      }
+                    ],
+                    "x": 0.5248,
+                    "y": 0.823
+                  }
+                ],
+                "x": 0.5248,
+                "y": 0.6833
+              },
+              "start": "none",
+              "stroke": "#4747FF",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_10",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.578,
+                        "y": 0.6808
+                      }
+                    ],
+                    "x": 0.578,
+                    "y": 0.7683
+                  }
+                ],
+                "x": 0.6728,
+                "y": 0.7683
+              },
+              "start": "none",
+              "stroke": "#398E8E",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_11",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.6753,
+                        "y": 0.4583
+                      }
+                    ],
+                    "x": 0.4964,
+                    "y": 0.4583
+                  }
+                ],
+                "x": 0.4964,
+                "y": 0.2759
+              },
+              "start": "none",
+              "stroke": "#398E8E",
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_12",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.7961,
+                            "y": 0.3099
+                          }
+                        ],
+                        "x": 0.7961,
+                        "y": 0.4178
+                      }
+                    ],
+                    "x": 0.5242,
+                    "y": 0.4178
+                  }
+                ],
+                "x": 0.5242,
+                "y": 0.2786
+              },
+              "start": "none",
+              "stroke": "#4747FF",
+              "width": 1
+            }
+          ],
+          "style": {
+            "backgroundColor": "rgb(240,240,240)"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

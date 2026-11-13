@@ -1,0 +1,269 @@
+{
+  "custom": {
+    "v": null
+  },
+  "params": {
+    "tagRoot": "",
+    "label": "Label",
+    "path": "",
+    "unit": "",
+    "fmt": "#,##0.0",
+    "kind": "value"
+  },
+  "props": {
+    "defaultSize": {
+      "width": 180,
+      "height": 21
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "position": {},
+    "props": {
+      "direction": "row",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "center",
+      "alignContent": "flex-start",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Label",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "auto",
+          "grow": 0,
+          "shrink": 1
+        },
+        "props": {
+          "text": "Label",
+          "style": {
+            "classes": "HPHMI/KV/Label"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.label"
+              }
+            }
+          },
+          "meta.tooltip.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.label"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Track"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "alignContent": "flex-start",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.container.flex",
+            "meta": {
+              "name": "Fill"
+            },
+            "position": {
+              "basis": "0%",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "row",
+              "wrap": "nowrap",
+              "justify": "flex-start",
+              "alignItems": "stretch",
+              "alignContent": "flex-start",
+              "style": {
+                "classes": "HPHMI/Level/Fill",
+                "overflow": "hidden"
+              }
+            },
+            "children": [],
+            "propConfig": {
+              "position.basis": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if(isNull({view.custom.v}), \"0%\", toStr(max(0, min(100, {view.custom.v}))) + \"%\")"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.kind} = \"level\", \"HPHMI/Level/Track\", \"\")"
+              }
+            }
+          },
+          "position.display": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "true"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Value",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "auto",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "—",
+          "style": {
+            "classes": "HPHMI/KV/Value"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if(isNull({view.custom.v}), \"—\", numberFormat({view.custom.v}, {view.params.fmt}))"
+              }
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if(isNull({view.custom.v}), \"HPHMI/KV/ValueBad\", \"HPHMI/KV/Value\")"
+              }
+            }
+          },
+          "meta.tooltip.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if(isNull({view.custom.v}), \"No value – bad, stale or missing tag: \" + {view.params.tagRoot} + \"/\" + {view.params.path}, {view.params.tagRoot} + \"/\" + {view.params.path})"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Unit"
+        },
+        "position": {
+          "basis": "auto",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/KV/Unit"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.unit"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "propConfig": {
+    "custom.v": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{root}/{p}",
+          "references": {
+            "root": "{view.params.tagRoot}",
+            "p": "{view.params.path}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toFloat({value}), null)"
+          }
+        ]
+      }
+    },
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unit": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.fmt": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.kind": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

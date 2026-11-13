@@ -1,0 +1,138 @@
+{
+  "custom": {
+    "Cmd": "value",
+    "Run_fb": "value",
+    "Stp_fb": "value"
+  },
+  "params": {
+    "name": "[default]agratas/sanand/zoneE/line1/mixing/equipments/Rotary magnetic filter"
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 100,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Rotary feeder"
+        },
+        "position": {
+          "height": 0.69,
+          "width": 0.99
+        },
+        "props": {
+          "elements": [
+            {
+              "cx": "284",
+              "cy": "284",
+              "fill": {
+                "paint": "#c0c0c0"
+              },
+              "name": "circle",
+              "r": "284",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "circle"
+            },
+            {
+              "d": "M0,285 l569,0",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M142,531 l285,-493",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M142,38 l285,493",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            }
+          ],
+          "viewBox": "0 0 569 569"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.26,
+          "width": 0.97,
+          "y": 0.72
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "name": "{view.params.name}"
+                },
+                "tagPath": "{name}.name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "PipingAndInst/label"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

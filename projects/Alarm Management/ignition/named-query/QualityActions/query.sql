@@ -1,0 +1,1 @@
+select * from QualityActions order by SNo desc;

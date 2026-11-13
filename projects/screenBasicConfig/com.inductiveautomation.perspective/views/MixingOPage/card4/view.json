@@ -1,0 +1,96 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 514,
+      "width": 915
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "props": {
+          "style": {
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "marginBottom": "20px"
+          },
+          "text": "Situation Analysis – Tank Utilization"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "PieChart"
+            },
+            "position": {
+              "basis": "155px"
+            },
+            "props": {
+              "colors": [
+                "#22c55e",
+                "#3b82f6",
+                "#ef4444"
+              ],
+              "data": [
+                {
+                  "name": "Running",
+                  "value": 50
+                },
+                {
+                  "name": "Cleaning",
+                  "value": 25
+                },
+                {
+                  "name": "Idle/Alarm",
+                  "value": 25
+                }
+              ],
+              "innerRadius": 60,
+              "labels": {
+                "enabled": true
+              },
+              "legend": {
+                "enabled": true,
+                "position": "right"
+              }
+            },
+            "type": "ia.chart.pie"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "447px"
+        },
+        "props": {
+          "alignItems": "center",
+          "direction": "column",
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "Task"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#f4f4f4",
+        "borderRadius": "10px",
+        "borderStyle": "outset",
+        "padding": "20px",
+        "width": "100%"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

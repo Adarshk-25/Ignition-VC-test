@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "readOnly": false,
+    "type": "com.inductiveautomation.OpcUaServerType"
+  },
+  "settings": {
+    "advanced": {
+      "acknowledgeTimeout": 5000,
+      "browseOrigin": "OBJECTS_FOLDER",
+      "connectTimeout": 5000,
+      "deprecatedDataTypeDictionarySupport": false,
+      "maxArrayLength": 2147483647,
+      "maxMessageSize": 33554432,
+      "maxNotificationsPerPublish": 65535,
+      "maxPendingPublishRequests": 2,
+      "maxPerOperation": 8192,
+      "maxReferencesPerNode": 8192,
+      "maxStringLength": 2147483647,
+      "requestTimeout": 60000,
+      "sessionTimeout": 120000,
+      "timestampSource": "OPC_PREFER_SOURCE"
+    },
+    "authentication": {
+      "authenticationType": "ANONYMOUS"
+    },
+    "configVersion": 2,
+    "endpoint": {
+      "discoveryUrl": "opc.tcp://ag-win-ig-dev.agratas.com:49320",
+      "endpointUrl": "opc.tcp://ag-win-ig-dev.agratas.com:49320",
+      "hostOverride": "",
+      "securityMode": "None",
+      "securityPolicy": "None"
+    },
+    "failover": {
+      "discoveryUrl": "",
+      "enabled": false,
+      "endpointUrl": "",
+      "hostOverride": "",
+      "threshold": 1
+    },
+    "keepAlive": {
+      "failuresAllowed": 1,
+      "interval": 15000,
+      "timeout": 10000
+    },
+    "security": {
+      "certificateValidationEnabled": true,
+      "keyStoreAlias": "client",
+      "keyStoreAliasPassword": {
+        "data": {
+          "ciphertext": "fBX2BvegRJTHzw",
+          "encrypted_key": "ySgN8vb4PTD-zkwAyv5DdJa7RhT340FwSc0AUptI_-atJxFPZwkKBA",
+          "iv": "qOf94KI7iRPPhxx2",
+          "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzc1NjI5NjE0LCJ6aXAiOiJERUYifQ",
+          "tag": "nmr_beIp9xxf1ilfZ1niUQ"
+        },
+        "type": "Embedded"
+      }
+    }
+  }
+}

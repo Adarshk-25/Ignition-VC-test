@@ -1,0 +1,118 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "BackingBlockDiagram"
+            },
+            "position": {
+              "height": 0.9125,
+              "width": 1,
+              "y": 0.0874
+            },
+            "props": {
+              "path": "Page/BlockDiagrams/Backing\u0026InjectionBlockDiagram/Injection-1"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "height": 0.0537,
+              "width": 0.1019,
+              "x": 0.0145,
+              "y": 0.0145
+            },
+            "propConfig": {
+              "props.value": {
+                "onChange": {
+                  "enabled": null,
+                  "script": "\tif currentValue!\u003dpreviousValue:\n\t\tcurrentValue\u003dstr(currentValue)\n\t\tcurrentValue\u003dcurrentValue.replace(\"[\",\"\")\n\t\tcurrentValue\u003dcurrentValue.replace(\"]\",\"\")\n\t\tcurrentValue\u003dcurrentValue.split(\",\")\t\t\n\t\tself.getSibling(\"MixingBlockDiagram\").props.path\u003d\"Page/BlockDiagrams/MixingBockDiagram/\"+currentValue[0]\n\t\tself.getSibling(\"Label\").props.text\u003dcurrentValue[0]"
+                }
+              }
+            },
+            "props": {
+              "dropdownOptionStyle": {
+                "color": "#000000",
+                "fontFamily": "sans-serif",
+                "fontSize": "15px",
+                "textAlign": "center"
+              },
+              "options": [
+                {
+                  "label": "Injection-1",
+                  "value": "Injection-1"
+                },
+                {
+                  "label": "Injection-2A",
+                  "value": "Injection-2A"
+                },
+                {
+                  "label": "Injection-2B",
+                  "value": "Injection-2B"
+                },
+                {
+                  "label": "Backing",
+                  "value": "Backing"
+                }
+              ],
+              "placeholder": {
+                "color": "#000000",
+                "text": "Select Line"
+              },
+              "style": {
+                "backgroundColor": "#F4F4F4",
+                "borderBottomLeftRadius": 8,
+                "borderBottomRightRadius": 8,
+                "borderColor": "#000000",
+                "borderStyle": "outset",
+                "borderTopLeftRadius": 8,
+                "borderTopRightRadius": 8,
+                "borderWidth": "1px",
+                "color": "#000000",
+                "fontFamily": "sans-serif",
+                "fontSize": "15px"
+              },
+              "textAlign": "center",
+              "value": "Anode Line 1"
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "backgroundColor": "rgb(240,240,240)"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

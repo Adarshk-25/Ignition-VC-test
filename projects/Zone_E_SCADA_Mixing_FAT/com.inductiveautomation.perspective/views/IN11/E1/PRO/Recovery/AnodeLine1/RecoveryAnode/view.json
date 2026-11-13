@@ -1,0 +1,56 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DehumidifierCondensateAnode"
+        },
+        "props": {
+          "path": "IN11/E1/PRO/Recovery/AnodeLine1/DehumidifierCondensateAnode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "condensateTransferSystemAnode"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "IN11/E1/PRO/Recovery/AnodeLine1/condensateTransferSystemAnode"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "onChange": {
+          "enabled": null,
+          "script": "\tif currentValue !\u003d previousValue :\n\t\tself.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+        }
+      }
+    },
+    "props": {
+      "currentTabIndex": 1,
+      "tabSize": {
+        "width": 210
+      },
+      "tabs": [
+        "Dehumidifier Condenser",
+        "Condensate Transfer System"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

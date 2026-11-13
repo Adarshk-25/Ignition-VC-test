@@ -1,0 +1,119 @@
+{
+  "custom": {
+    "Cmd": 0,
+    "Run_fb": 0,
+    "Stp_fb": 0
+  },
+  "params": {
+    "Motr_Name": 1
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Motr_Name": ""
+          },
+          "tagPath": "{Motr_Name}\\CMD"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Motr_Name": ""
+          },
+          "tagPath": "{Motr_Name}\\Run_FB"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Motr_Name": ""
+          },
+          "tagPath": "{Motr_Name}\\Stp_FB"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.Motr_Name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 114,
+      "width": 106
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Motor"
+        },
+        "position": {
+          "height": 112.24,
+          "width": 102.29
+        },
+        "propConfig": {
+          "props.label.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "tagpath": ""
+                },
+                "tagPath": "{tagpath}.name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.state": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.Cmd} \u0026\u0026 {view.custom.Run_fb}, \"running\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.Stp_fb}, \"stopped\",\r\nif({view.custom.Cmd} \u0026\u0026 {view.custom.Run_fb}\u003d0, \"faulted\",\r\nif({view.custom.Cmd}\u003d0 \u0026\u0026 {view.custom.Stp_fb}, \"faulted\",\r\n\"default\"))))"
+              },
+              "type": "expr"
+            }
+          },
+          "props.value.text": {
+            "binding": {
+              "config": {
+                "path": "this.props.state"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "location": "top"
+          },
+          "value": {}
+        },
+        "type": "ia.symbol.motor"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

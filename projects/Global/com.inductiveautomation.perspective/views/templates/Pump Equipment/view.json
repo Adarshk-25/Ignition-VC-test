@@ -1,0 +1,158 @@
+{
+  "custom": {},
+  "params": {
+    "pumpId": "value"
+  },
+  "propConfig": {
+    "params.pumpId": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 98,
+      "width": 885
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Equipment name"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "alignItems": "center",
+                "fontWeight": "bold"
+              },
+              "text": "Pump"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Equipment Id"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignVertical": "bottom",
+              "text": "Equipment Id:P -101"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Name"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignVertical": "bottom",
+              "text": "Equipment Name: Transfer Pump"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Type"
+            },
+            "position": {
+              "shrink": 0
+            },
+            "props": {
+              "alignVertical": "bottom",
+              "text": "Equipment Type: Diaphragm\n"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "PumpHeader"
+        },
+        "position": {
+          "basis": "400px"
+        },
+        "props": {
+          "alignItems": "flex-start",
+          "direction": "column",
+          "justify": "space-around"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Location"
+            },
+            "position": {
+              "basis": "18px",
+              "shrink": 0
+            },
+            "props": {
+              "text": "Location : Sanand"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Site"
+            },
+            "position": {
+              "basis": "18px",
+              "shrink": 0
+            },
+            "props": {
+              "text": "Zone E : Mixing"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Service"
+            },
+            "position": {
+              "basis": "18px",
+              "shrink": 0
+            },
+            "props": {
+              "text": "Service: Slurry"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "LocationContainer"
+        },
+        "position": {
+          "basis": "326px"
+        },
+        "props": {
+          "alignItems": "flex-start",
+          "direction": "column",
+          "justify": "space-evenly"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "space-around",
+      "style": {
+        "margin": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

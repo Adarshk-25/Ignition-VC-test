@@ -1,0 +1,103 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "UnwindingModule"
+            },
+            "position": {
+              "height": 0.9587,
+              "width": 0.9419,
+              "x": 0.0341,
+              "y": 0.0329
+            },
+            "props": {
+              "path": "widgets(templates)/StackingWidgets/UnwindingModule"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "params": {},
+                    "view": "Page/cuttingStacking2"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Icon"
+            },
+            "position": {
+              "height": 0.0737,
+              "width": 0.0187,
+              "x": 0.9812,
+              "y": 0.4387
+            },
+            "props": {
+              "color": "#ffffff",
+              "path": "material/arrow_forward_ios",
+              "style": {
+                "backgroundColor": "#AAAAAA"
+              }
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "EuipmentStatusLabel_26"
+            },
+            "position": {
+              "height": 0.0575,
+              "width": 0.0731,
+              "x": 0.0733,
+              "y": 0.7957
+            },
+            "props": {
+              "params": {
+                "equipmentName": "Unwinder",
+                "status": 1
+              },
+              "path": "widgets(templates)/CALWidgets/EuipmentStatusLabel"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "aspectRatio": "1600:800",
+          "mode": "percent",
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

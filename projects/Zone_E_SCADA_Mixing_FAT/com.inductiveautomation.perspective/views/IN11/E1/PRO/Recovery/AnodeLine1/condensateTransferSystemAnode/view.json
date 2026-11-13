@@ -1,0 +1,541 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_38"
+            },
+            "position": {
+              "height": 0.0667,
+              "width": 0.0581,
+              "x": 0.6273,
+              "y": 0.7058
+            },
+            "props": {
+              "style": {
+                "key": "value"
+              },
+              "text": "To Storage Tank",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "tank_0"
+            },
+            "position": {
+              "height": 0.3488,
+              "width": 0.1444,
+              "x": 0.4093,
+              "y": 0.3649
+            },
+            "props": {
+              "path": "widgets(templates)/RecoveryWidgets/tank"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Label_39"
+            },
+            "position": {
+              "height": 0.0667,
+              "width": 0.05,
+              "x": 0.4552,
+              "y": 0.4929
+            },
+            "props": {
+              "text": "Condensate Transfer Tank",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_40"
+            },
+            "position": {
+              "height": 0.0667,
+              "width": 0.0788,
+              "x": 0.534,
+              "y": 0.4566
+            },
+            "props": {
+              "text": "Tank Capacity: 9 m³",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_41"
+            },
+            "position": {
+              "height": 0.0825,
+              "width": 0.0994,
+              "x": 0.261,
+              "y": 0.079
+            },
+            "props": {
+              "style": {
+                "borderStyle": "solid"
+              },
+              "text": "Anode Condensor Line 1",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_42"
+            },
+            "position": {
+              "height": 0.0838,
+              "width": 0.0994,
+              "x": 0.2604,
+              "y": 0.1682
+            },
+            "props": {
+              "style": {
+                "borderStyle": "solid"
+              },
+              "text": "Anode Condensor Line 2",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_46"
+            },
+            "position": {
+              "height": 0.0662,
+              "width": 0.0581,
+              "x": 0.3295,
+              "y": 0.334
+            },
+            "props": {
+              "text": "Condensate Transfer System Anode",
+              "textStyle": {
+                "classes": "Page/Label1"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Display_5"
+            },
+            "position": {
+              "height": 0.0862,
+              "width": 0.0394,
+              "x": 0.584,
+              "y": 0.5685
+            },
+            "props": {
+              "params": {
+                "path": "[default]agratas/sanand/zoneE/line1/Recovery/TT",
+                "unit": ""
+              },
+              "path": "widgets(templates)/Display"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Display_6"
+            },
+            "position": {
+              "height": 0.0862,
+              "width": 0.0394,
+              "x": 0.3727,
+              "y": 0.726
+            },
+            "props": {
+              "params": {
+                "path": "[default]agratas/sanand/zoneE/line1/Recovery/TT",
+                "unit": ""
+              },
+              "path": "widgets(templates)/Display"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Pump_1"
+            },
+            "position": {
+              "height": 0.0712,
+              "width": 0.055,
+              "x": 0.5378,
+              "y": 0.6754
+            },
+            "props": {
+              "params": {
+                "Pump_Name": "[default]agratas/sanand/zoneE/line1/Recovery/Pump"
+              },
+              "path": "widgets(templates)/mixingEquipments/Pump"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Pump_2"
+            },
+            "position": {
+              "height": 0.0712,
+              "width": 0.055,
+              "x": 0.5378,
+              "y": 0.7694
+            },
+            "props": {
+              "params": {
+                "Pump_Name": "[default]agratas/sanand/zoneE/line1/Recovery/Pump"
+              },
+              "path": "widgets(templates)/mixingEquipments/Pump"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Label_47"
+            },
+            "position": {
+              "height": 0.0662,
+              "width": 0.14,
+              "x": 0.4114,
+              "y": 0.8415
+            },
+            "props": {
+              "text": "Collection Tray",
+              "textStyle": {
+                "classes": "Page/Text"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer_0"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "pipes": [
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_3",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.4712,
+                        "y": 0.4041
+                      }
+                    ],
+                    "x": 0.4712,
+                    "y": 0.2013
+                  }
+                ],
+                "x": 0.3586,
+                "y": 0.2013
+              },
+              "start": "none",
+              "stroke": "#AD13AE",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_4",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.4815,
+                        "y": 0.4041
+                      }
+                    ],
+                    "x": 0.4815,
+                    "y": 0.1202
+                  }
+                ],
+                "x": 0.3586,
+                "y": 0.1202
+              },
+              "start": "none",
+              "stroke": "#AD13AE",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_5",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.516,
+                        "y": 0.7466
+                      }
+                    ],
+                    "x": 0.4815,
+                    "y": 0.7466
+                  }
+                ],
+                "x": 0.4815,
+                "y": 0.6547
+              },
+              "start": "none",
+              "stroke": "#AD13AE",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_6",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [],
+                        "x": 0.5553,
+                        "y": 0.7921
+                      }
+                    ],
+                    "x": 0.516,
+                    "y": 0.7921
+                  },
+                  {
+                    "connections": [],
+                    "x": 0.5537,
+                    "y": 0.6981
+                  }
+                ],
+                "x": 0.516,
+                "y": 0.6981
+              },
+              "start": "none",
+              "stroke": "#AD13AE",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_9",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.5708,
+                            "y": 0.6981
+                          }
+                        ],
+                        "x": 0.6051,
+                        "y": 0.6981
+                      }
+                    ],
+                    "x": 0.6051,
+                    "y": 0.7921
+                  }
+                ],
+                "x": 0.5708,
+                "y": 0.7921
+              },
+              "start": "none",
+              "stroke": "#AD13AE",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_10",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.6421,
+                    "y": 0.7389
+                  }
+                ],
+                "x": 0.6051,
+                "y": 0.7389
+              },
+              "start": "none",
+              "stroke": "#AD13AE",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_12",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.6051,
+                    "y": 0.7058
+                  }
+                ],
+                "x": 0.6051,
+                "y": 0.6414
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "visible": true,
+              "width": 1
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe_15",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 0.6813,
+                                "y": 0.7775
+                              }
+                            ],
+                            "x": 0.6813,
+                            "y": 0.8406
+                          }
+                        ],
+                        "x": 0.4207,
+                        "y": 0.8406
+                      }
+                    ],
+                    "x": 0.4207,
+                    "y": 0.7775
+                  }
+                ],
+                "x": 0.3978,
+                "y": 0.7775
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            },
+            {
+              "appearance": "p\u0026id",
+              "end": "none",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "dashed",
+              "name": "pipe_16",
+              "origin": {
+                "connections": [
+                  {
+                    "connections": [],
+                    "x": 0.7394,
+                    "y": 0.315
+                  },
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.7394,
+                            "y": 0.315
+                          }
+                        ],
+                        "x": 0.7394,
+                        "y": 0.9463
+                      }
+                    ],
+                    "x": 0.3101,
+                    "y": 0.9463
+                  }
+                ],
+                "x": 0.3101,
+                "y": 0.315
+              },
+              "start": "none",
+              "stroke": "#000000",
+              "width": 2
+            }
+          ],
+          "style": {
+            "classes": "Page/ScreenBackground"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Page/ScreenBackground"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "valueSource": "memory",
+    "dataType": "DataSet",
+    "documentation": "Central SCADA alarm lookup \u003d \u0027Alarm List mapping file.xlsx\u0027 (existing, 44 alarms) + \u0027AlarmLookup_FromExcel.xlsx\u0027 (added, 47 alarms); 91 alarms in total. Key AlarmID \u003d \u0027\u003cAlarm GroupID\u003e.\u003cAlarm Code\u003e\u0027, fallback key \u003d FBS Source. Reload with NTC11_Alarms.reloadLookupFromCsv(path).",
+    "name": "AlarmLookup",
+    "tagType": "AtomicTag"
+  }
+]

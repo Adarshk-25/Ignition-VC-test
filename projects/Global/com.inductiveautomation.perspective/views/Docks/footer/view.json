@@ -1,0 +1,175 @@
+{
+  "custom": {},
+  "params": {
+    "path": "/"
+  },
+  "propConfig": {
+    "params.path": {
+      "binding": {
+        "config": {
+          "path": "page.props.path"
+        },
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 125
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.filters.active.conditions.source": {
+            "binding": {
+              "config": {
+                "expression": "\"*\"+{view.params.path}+\"*\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "columns": {
+            "active": {
+              "activeTime": {
+                "order": 1
+              },
+              "displayPath": {
+                "order": 8
+              },
+              "label": {
+                "enabled": true,
+                "order": 11
+              },
+              "name": {
+                "order": 0
+              },
+              "priority": {
+                "order": 9
+              },
+              "source": {
+                "enabled": false
+              },
+              "state": {
+                "order": 10
+              }
+            }
+          },
+          "columnsAssociated": {
+            "active": [
+              {
+                "enabled": true,
+                "field": "Index",
+                "order": 2,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Alarm Group Id",
+                "order": 3,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Alarm Code",
+                "order": 4,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Severity",
+                "order": 5,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "FBS Source",
+                "order": 6,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              },
+              {
+                "enabled": true,
+                "field": "Operator Message",
+                "order": 7,
+                "sort": "none",
+                "strictWidth": false,
+                "width": ""
+              }
+            ]
+          },
+          "enableDetails": false,
+          "filters": {
+            "active": {
+              "conditions": {},
+              "priorities": {
+                "high": false,
+                "low": false,
+                "medium": false
+              },
+              "text": "active"
+            }
+          },
+          "pager": {
+            "enabled": false
+          },
+          "style": {
+            "margin": "5px",
+            "padding": "5px"
+          },
+          "toolbar": {
+            "enableActiveTab": false,
+            "enableConfiguration": false,
+            "enableFilter": false,
+            "enableFilterResults": false,
+            "enablePreFilters": false,
+            "enableShelvedTab": false
+          }
+        },
+        "type": "ia.display.alarmstatustable"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "page": "/alarmsManagement"
+          },
+          "scope": "C",
+          "type": "nav"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

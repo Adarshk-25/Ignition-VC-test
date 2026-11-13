@@ -1,0 +1,307 @@
+{
+  "custom": {},
+  "params": {
+    "tagRoot": "[default]IN11_E123_PCE_NTC11",
+    "tag": "Telemetry/ZS001/State",
+    "code": "ZS001",
+    "healthy": true
+  },
+  "propConfig": {
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.code": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.healthy": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 48,
+      "height": 50
+    }
+  },
+  "root": {
+    "type": "ia.container.coord",
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "aspectRatio": "48:50",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Frame",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "x": 0.0417,
+          "y": 0.04,
+          "width": 0.9167,
+          "height": 0.64
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "borderRadius": "3px",
+            "border": "2px solid transparent"
+          }
+        },
+        "propConfig": {
+          "props.style.borderColor": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})) && (toInt(toMillis(now(500)) / 500) % 2 = 0), \"#D7262E\", \"transparent\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Guard",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "x": 0.125,
+          "y": 0.12,
+          "width": 0.0833,
+          "height": 0.48
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "backgroundImage": "linear-gradient(90deg,#6F6F6F,#A9A9A9)",
+            "borderRadius": "1px"
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Actuator",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "x": 0.2083,
+          "y": 0.3,
+          "width": 0.2917,
+          "height": 0.14
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "backgroundImage": "linear-gradient(180deg,#FFE45C,#D9A800)",
+            "border": "1px solid #7A6200",
+            "borderRadius": "1px",
+            "transition": "transform .4s ease"
+          }
+        },
+        "propConfig": {
+          "props.style.transform": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})), \"translateX(-4px)\", \"translateX(10px)\")"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Body",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "x": 0.5,
+          "y": 0.14,
+          "width": 0.375,
+          "height": 0.44
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "backgroundImage": "linear-gradient(180deg,#F2F2F2 0%,#BDBDBD 100%)",
+            "border": "1px solid #6B6B6B",
+            "borderRadius": "2px",
+            "boxShadow": "0 1px 2px rgba(0,0,0,.3)"
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Window",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "x": 0.6042,
+          "y": 0.2,
+          "width": 0.1667,
+          "height": 0.12
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "borderRadius": "1px",
+            "border": "1px solid #555"
+          }
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(!isGood({value}), \"#BDBDBD\", if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})), \"#D7262E\", \"#4E4E4E\"))"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Code",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "x": 0.0,
+          "y": 0.72,
+          "width": 1.0,
+          "height": 0.26
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "9px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center",
+            "color": "#4F4F4F"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(!isGood({value}), \"?\", if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})), \"OPEN\", {view.params.code}))"
+                }
+              ]
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{t}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if((isGood({value}) && toBoolean({value}) != toBoolean({view.params.healthy})), \"#D7262E\", \"#4F4F4F\")"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

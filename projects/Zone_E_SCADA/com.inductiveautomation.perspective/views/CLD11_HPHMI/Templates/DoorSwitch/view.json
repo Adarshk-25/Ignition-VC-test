@@ -1,0 +1,303 @@
+{
+  "custom": {},
+  "params": {
+    "code": "ZS001",
+    "healthy": true,
+    "tag": "Telemetry/ZS001/State",
+    "tagRoot": "[default]IN11_E122_PCE_CLD11"
+  },
+  "propConfig": {
+    "params.code": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.healthy": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 48
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Frame",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "height": 0.64,
+          "width": 0.9167,
+          "x": 0.0417,
+          "y": 0.04
+        },
+        "propConfig": {
+          "props.style.borderColor": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "tagPath": "{r}/{t}"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn True",
+                  "type": "script"
+                },
+                {
+                  "expression": "if((isGood({value}) \u0026\u0026 toBoolean({value}) !\u003d toBoolean({view.params.healthy})) \u0026\u0026 (toInt(toMillis(now(500)) / 500) % 2 \u003d 0), \"#D7262E\", \"transparent\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "border": "2px solid transparent",
+            "borderRadius": "3px",
+            "fontFamily": "Roboto, \u0027Segoe UI\u0027, Arial, sans-serif"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Guard",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "height": 0.48,
+          "width": 0.0833,
+          "x": 0.125,
+          "y": 0.12
+        },
+        "props": {
+          "style": {
+            "backgroundImage": "linear-gradient(90deg,#6F6F6F,#A9A9A9)",
+            "borderRadius": "1px",
+            "fontFamily": "Roboto, \u0027Segoe UI\u0027, Arial, sans-serif"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Actuator",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "height": 0.14,
+          "width": 0.2917,
+          "x": 0.2083,
+          "y": 0.3
+        },
+        "propConfig": {
+          "props.style.transform": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "tagPath": "{r}/{t}"
+              },
+              "transforms": [
+                {
+                  "expression": "if((isGood({value}) \u0026\u0026 toBoolean({value}) !\u003d toBoolean({view.params.healthy})), \"translateX(-4px)\", \"translateX(10px)\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundImage": "linear-gradient(180deg,#FFE45C,#D9A800)",
+            "border": "1px solid #7A6200",
+            "borderRadius": "1px",
+            "fontFamily": "Roboto, \u0027Segoe UI\u0027, Arial, sans-serif",
+            "transition": "transform .4s ease"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Body",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "height": 0.44,
+          "width": 0.375,
+          "x": 0.5,
+          "y": 0.14
+        },
+        "props": {
+          "style": {
+            "backgroundImage": "linear-gradient(180deg,#F2F2F2 0%,#BDBDBD 100%)",
+            "border": "1px solid #6B6B6B",
+            "borderRadius": "2px",
+            "boxShadow": "0 1px 2px rgba(0,0,0,.3)",
+            "fontFamily": "Roboto, \u0027Segoe UI\u0027, Arial, sans-serif"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Window",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "height": 0.12,
+          "width": 0.1667,
+          "x": 0.6042,
+          "y": 0.2
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "tagPath": "{r}/{t}"
+              },
+              "transforms": [
+                {
+                  "expression": "if(!isGood({value}), \"#BDBDBD\", if((isGood({value}) \u0026\u0026 toBoolean({value}) !\u003d toBoolean({view.params.healthy})), \"#D7262E\", \"#4E4E4E\"))",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "border": "1px solid #555",
+            "borderRadius": "1px",
+            "fontFamily": "Roboto, \u0027Segoe UI\u0027, Arial, sans-serif"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Code",
+          "tooltip": {
+            "enabled": true,
+            "text": "Safety door switch"
+          }
+        },
+        "position": {
+          "height": 0.26,
+          "width": 1,
+          "y": 0.72
+        },
+        "propConfig": {
+          "props.style.color": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "tagPath": "{r}/{t}"
+              },
+              "transforms": [
+                {
+                  "expression": "if((isGood({value}) \u0026\u0026 toBoolean({value}) !\u003d toBoolean({view.params.healthy})), \"#D7262E\", \"#4F4F4F\")\r\n//true ",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "t": "{view.params.tag}"
+                },
+                "tagPath": "{r}/{t}"
+              },
+              "transforms": [
+                {
+                  "expression": "if(!isGood({value}), \"?\", if((isGood({value}) \u0026\u0026 toBoolean({value}) !\u003d toBoolean({view.params.healthy})), \"OPEN\", {view.params.code}))",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontFamily": "Roboto, \u0027Segoe UI\u0027, Arial, sans-serif",
+            "fontSize": "9px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "48:50",
+      "mode": "percent",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

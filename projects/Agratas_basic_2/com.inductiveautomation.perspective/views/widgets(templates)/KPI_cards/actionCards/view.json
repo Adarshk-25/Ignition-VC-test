@@ -1,0 +1,158 @@
+{
+  "custom": {},
+  "params": {
+    "dueDate": "value",
+    "note": "value",
+    "user": "value"
+  },
+  "propConfig": {
+    "params.dueDate": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.note": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.user": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Update PPE training",
+              "textStyle": {
+                "fontSize": "12px",
+                "fontWeight": "bolder"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "96px"
+            },
+            "props": {
+              "enabled": false,
+              "image": {
+                "icon": {
+                  "color": "#FF8C00"
+                },
+                "style": {
+                  "backgroundColor": "#AC5F00"
+                }
+              },
+              "primary": false,
+              "style": {
+                "backgroundColor": "#FFCA8A",
+                "borderBottomLeftRadius": "15px",
+                "borderBottomRightRadius": "15px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "15px",
+                "borderTopRightRadius": "15px",
+                "borderWidth": 1,
+                "classes": "alarm/critical alarm/medium"
+              },
+              "text": "Overdue",
+              "textStyle": {
+                "color": "#FFFFFF"
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Label",
+              "textStyle": {
+                "color": "#555555",
+                "fontFamily": "sans-serif",
+                "fontSize": "12px"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Due : 2026-04-10",
+              "textStyle": {
+                "color": "#FF0000",
+                "fontWeight": "bolder",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFCCCC",
+        "borderBottomLeftRadius": "5px",
+        "borderBottomRightRadius": "5px",
+        "borderColor": "#FF8A8A",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": "5px",
+        "borderTopRightRadius": "5px",
+        "borderWidth": 0.1,
+        "margin": "5px"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

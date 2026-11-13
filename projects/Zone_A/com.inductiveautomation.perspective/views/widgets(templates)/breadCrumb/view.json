@@ -1,0 +1,49 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 15
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "page.props.path"
+              },
+              "transforms": [
+                {
+                  "code": "\n\tpath \u003d value\n\t\n\tparts \u003d [p for p in path.split(\"/\") if p]\n\t\n\tinstances \u003d []\n\tcurrentPath \u003d \"\"\n\t\n\tfor i, p in enumerate(parts):\n\t\t\n\t\tcurrentPath +\u003d \"/\" + p\n\t\t\n\t\tinstances.append({\n\t\t\t\"instanceStyle\": {\n\t\t\t\t\"classes\": \"\"\n\t\t\t},\n\t\t\t\"instancePosition\": {},\n\t\t\t\"forwardDisplay\": i \u003c len(parts) - 1,\n\t\t\t\"name\": p.replace(\"_\",\" \").title(),\n\t\t\t\"path\": currentPath\n\t\t})\n\t\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "widgets(templates)/baseTemplates/breadcrumbBase",
+          "useDefaultViewHeight": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

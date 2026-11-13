@@ -1,0 +1,183 @@
+{
+  "custom": {},
+  "params": {
+    "header": "value",
+    "label": "value",
+    "metadata": "value",
+    "screenPath": "value",
+    "tag_SM": "value",
+    "tag_TM": "value",
+    "tooltip": "value"
+  },
+  "propConfig": {
+    "params.header": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.screenPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_SM": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_TM": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tooltip": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 72,
+      "width": 52
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1641,
+          "width": 0.92,
+          "x": 0.0504,
+          "y": 0.7826
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Drawing",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.5362,
+          "width": 0.6802,
+          "x": 0.1497,
+          "y": 0.0717
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tooltip"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {
+                "paint": "none"
+              },
+              "height": "111.42857360839844",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "62",
+              "x": "4.3333330154418945",
+              "y": "4.3333330154418945"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "126.39180755615234",
+              "name": "rect_0",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "transform": "matrix(0.8746198415756226 -0.48480966687202454 0.48480966687202454 0.8746198415756226 -17.00943374633789 33.69744873046875)",
+              "type": "rect",
+              "width": "0.33000001311302185",
+              "x": "33.02812576293945",
+              "y": "-14.620299339294434"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "125.83702087402344",
+              "name": "rect_1",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "transform": "matrix(-0.874619722366333 -0.484809547662735 0.484809547662735 -0.874619722366333 -30.02684211730957 174.7248077392578)",
+              "type": "rect",
+              "width": "0.3333333134651184",
+              "x": "-1.383718490600586",
+              "y": "68.95067596435547"
+            }
+          ],
+          "viewBox": "0 0 70 120"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "draggable": true,
+            "id": "AODqw8vZ",
+            "modal": false,
+            "overlayDismiss": false,
+            "resizable": true,
+            "showCloseIcon": true,
+            "type": "open",
+            "viewParams": {
+              "Screen_Path": "{view.params.screenPath}",
+              "Tag_Path_0": "{view.params.tag_TM}"
+            },
+            "viewPath": "Page/LaserNotching_Templates/PopUpScreensTemplate/ProcessScreenTemplate",
+            "viewportBound": false
+          },
+          "scope": "C",
+          "type": "popup"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

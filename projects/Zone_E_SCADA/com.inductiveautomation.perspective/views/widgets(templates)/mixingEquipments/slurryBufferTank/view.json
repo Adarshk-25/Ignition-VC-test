@@ -1,0 +1,1176 @@
+{
+  "custom": {},
+  "params": {
+    "label": "value",
+    "screenPath": "value",
+    "tag_SM": "value",
+    "tag_TM": "value"
+  },
+  "propConfig": {
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.screenPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_SM": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_TM": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 160,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Tank 32"
+        },
+        "position": {
+          "height": 0.6131,
+          "width": 0.495,
+          "x": 0.2465,
+          "y": 0.2116
+        },
+        "propConfig": {
+          "custom.color": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}/CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[2].elements[0].elements[0].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[1].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[2].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[3].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[2].elements[0].elements[4].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[0].elements[0].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[0].elements[1].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[0].elements[2].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[0].elements[3].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[0].elements[4].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].elements[0].elements[5].style.stopColor": {
+            "binding": {
+              "config": {
+                "path": "this.custom.color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol",
+              "x": "4",
+              "y": "0"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "62.0999",
+                  "x2": "71.55",
+                  "y1": "99.2246",
+                  "y2": "99.2246"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "type": "linearGradient",
+                  "x1": "8.55",
+                  "x2": "18.2249",
+                  "y1": "99.2246",
+                  "y2": "99.2246"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_3_",
+                  "name": "SVGID_3_",
+                  "type": "linearGradient",
+                  "x1": "5.8499",
+                  "x2": "20.925",
+                  "y1": "111.5996",
+                  "y2": "111.5996"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_4_",
+                  "name": "SVGID_4_",
+                  "type": "linearGradient",
+                  "x1": "59.175",
+                  "x2": "74.4749",
+                  "y1": "111.5996",
+                  "y2": "111.5996"
+                }
+              ],
+              "id": "Group_FrontLegs",
+              "name": "Group_FrontLegs",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "40.05",
+                  "cy": "1.0127",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#ECECEC",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop_0",
+                      "offset": "0.14",
+                      "stopColor": "#DDDDDD",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop_1",
+                      "offset": "0.4",
+                      "stopColor": "#B8B8B8",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop_2",
+                      "offset": "0.75",
+                      "stopColor": "#7C7C7C",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop_3",
+                      "offset": "1",
+                      "stopColor": "#4D4D4D",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_5_",
+                  "name": "SVGID_5_",
+                  "r": "5.4568",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M34.98971674068386 1.6857247505216861L43.330989737326036-0.5753958844789965l8.341272996642171 2.2611206350006827H34.98971674068386z",
+                  "fill": {
+                    "url": "url(#SVGID_5_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#bdbdbd"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#bdbdbd"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#bdbdbd"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#bdbdbd"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#bdbdbd"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#bdbdbd"
+                      },
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_6_",
+                  "name": "SVGID_6_",
+                  "type": "linearGradient",
+                  "x1": "32.3997",
+                  "x2": "47.7004",
+                  "y1": "3.375",
+                  "y2": "3.375"
+                },
+                {
+                  "d": "M34.98971674068386 4.700552263855929H51.67226273396821v-3.014827513334244H34.98971674068386V4.700552263855929z",
+                  "fill": {
+                    "url": "url(#SVGID_6_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M34.98971674068386 3.1931385071888077H51.67226273396821",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Cap",
+              "name": "Group_Cap",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {},
+                      "type": "stop",
+                      "x": "4",
+                      "y": "0"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_7_",
+                  "name": "SVGID_7_",
+                  "type": "linearGradient",
+                  "x1": "2.0247",
+                  "x2": "78.3",
+                  "y1": "49.6348",
+                  "y2": "49.6348"
+                },
+                {
+                  "d": "M1.8699563128399461 20.779632334971897c0-17.586493827783087 16.43721443455957-17.084022575560713 16.43721443455957-17.084022575560713H68.35480872725255c0 0 16.682545993284343-0.5024712522223739 16.682545993284343 17.084022575560713V88.86448701110355C85.03735472053688 107.82886867275867 65.16549846383055 105.94850958666427 65.16549846383055 105.94850958666427H18.307170747399518c0 0-16.43721443455957 0-16.43721443455957-17.08513917834343V20.779632334971897",
+                  "fill": {
+                    "url": "url(#SVGID_7_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_TankBody",
+              "name": "Group_TankBody",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 87 107"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "ISA Agitator"
+        },
+        "position": {
+          "height": 0.7368,
+          "width": 0.2738,
+          "x": 0.3565,
+          "y": 0.0376
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M226,298 l0,-284 -20,-6 -24,-4 -27,-3 -14,-1 -29,0 -28,2 -26,4 -22,5 -9,3 0,284 20,6 24,4 27,3 14,1 29,0 27,-2 26,-4 22,-5 10,-3z",
+              "fill": {
+                "paint": "#808080"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M335.066678695638 1123l-417.01177592618336-56-13.149019961636412 5-9.39215711545458 6-5.635294269272748 8-1.878431423090916 9 1.878431423090916 8 5.635294269272748 8 9.39215711545458 7 11.270588538545496 5 418.8902073492743-56 13.149019961636412 5 9.39215711545458 6 7.513725692363664 8 1.878431423090916 9-1.878431423090916 8-7.513725692363664 8-9.39215711545458 7-13.149019961636412 5z",
+              "fill": {
+                "paint": "#808080"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M127 312l0 786.6000365802361",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            }
+          ],
+          "viewBox": "-113 -1 481 1125"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Drawing_4",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.1812,
+          "rotate": {
+            "anchor": "-17% 75%"
+          },
+          "width": 0.15,
+          "y": 0.0342
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}\\CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "Not Available",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "NA"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Out of Service"
+                    },
+                    {
+                      "input": 2,
+                      "output": "Not Executing"
+                    },
+                    {
+                      "input": 3,
+                      "output": "Executing"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}/CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[1].text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}/CurrentState"
+              },
+              "transforms": [
+                {
+                  "fallback": "NA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "NA"
+                    },
+                    {
+                      "input": 1,
+                      "output": "OS"
+                    },
+                    {
+                      "input": 2,
+                      "output": "NE"
+                    },
+                    {
+                      "input": 3,
+                      "output": "E"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "height": 22,
+              "name": "rect",
+              "rx": 5,
+              "ry": 5,
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "rect",
+              "width": "22",
+              "x": "3",
+              "y": "2"
+            },
+            {
+              "fontSize": "12px",
+              "name": "text",
+              "type": "text",
+              "x": "6.000001907348633",
+              "y": "18.000017166137695"
+            }
+          ]
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Drawing_1",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "height": 0.1812,
+          "width": 0.155,
+          "x": 0.8361,
+          "y": 0.0342
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}\\CurrentMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "None",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "None"
+                    },
+                    {
+                      "input": 1,
+                      "output": "Maintenance"
+                    },
+                    {
+                      "input": 2,
+                      "output": "Set Up"
+                    },
+                    {
+                      "input": 3,
+                      "output": "Processing"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[1].text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.tag_SM}"
+                },
+                "tagPath": "{Tag}/CurrentMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "N",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "N"
+                    },
+                    {
+                      "input": 1,
+                      "output": "M"
+                    },
+                    {
+                      "input": 2,
+                      "output": "S"
+                    },
+                    {
+                      "input": 3,
+                      "output": "P"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Tag": "{view.params.Tag}"
+                },
+                "tagPath": "{Tag}\\CurrentMode"
+              },
+              "transforms": [
+                {
+                  "fallback": "#BDBDBD",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": "#BDBDBD"
+                    },
+                    {
+                      "input": 1,
+                      "output": "#FF0000"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#FAA500"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#00FF00"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {
+                "paint": "#BDBDBD"
+              },
+              "name": "perspective-arc",
+              "specialPath": {
+                "end": 0,
+                "height": 22,
+                "slice": true,
+                "start": 0,
+                "width": 22,
+                "x": 3,
+                "y": 3
+              },
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "perspective-arc"
+            },
+            {
+              "fontSize": "13px",
+              "name": "text",
+              "stroke": {
+                "width": "3px"
+              },
+              "type": "text",
+              "x": "8.800013542175293",
+              "y": "18.60003089904785"
+            }
+          ]
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label_60",
+          "tooltip": {
+            "text": "MIX21.HWA001"
+          }
+        },
+        "position": {
+          "height": 0.1065,
+          "width": 0.62,
+          "x": 0.184,
+          "y": 0.8838
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "PipingAndInst/label"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

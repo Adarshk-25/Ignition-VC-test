@@ -1,0 +1,127 @@
+{
+  "custom": {},
+  "params": {
+    "name": "value"
+  },
+  "propConfig": {
+    "params.name": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 291,
+      "width": 618
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "51px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "marginLeft": 10
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "apexchart"
+        },
+        "position": {
+          "basis": "225px"
+        },
+        "props": {
+          "options": {
+            "chart": {
+              "events": {
+                "animationEnd": false,
+                "beforeMount": false,
+                "beforeResetZoom": false,
+                "beforeZoom": false,
+                "brushScrolled": false,
+                "click": false,
+                "dataPointMouseEnter": false,
+                "dataPointMouseLeave": false,
+                "dataPointSelection": false,
+                "legendClick": false,
+                "markerClick": false,
+                "mounted": false,
+                "mouseLeave": false,
+                "mouseMove": false,
+                "scrolled": false,
+                "selection": false,
+                "updated": false,
+                "xAxisLabelClick": false,
+                "zoomed": false
+              },
+              "type": "pie",
+              "width": 380
+            },
+            "labels": [
+              "Surface Defect",
+              "Dimensional",
+              "Crack",
+              "Burr",
+              "Others"
+            ],
+            "responsive": [
+              {
+                "breakpoint": 480,
+                "options": {
+                  "chart": {
+                    "width": 200
+                  },
+                  "legend": {
+                    "position": "bottom"
+                  }
+                }
+              }
+            ]
+          },
+          "series": [
+            44,
+            55,
+            13,
+            43,
+            22
+          ],
+          "type": "donut"
+        },
+        "type": "kyvislabs.display.apexchart"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFFFFF",
+        "borderBottomLeftRadius": 6,
+        "borderBottomRightRadius": 6,
+        "borderTopLeftRadius": 6,
+        "borderTopRightRadius": 6
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

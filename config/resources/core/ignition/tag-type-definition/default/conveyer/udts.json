@@ -1,0 +1,97 @@
+[
+  {
+    "name": "tags",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "batchEndTime",
+        "value": "0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "batchStartTime",
+        "value": "20",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "alarms": [
+          {
+            "mode": "BetweenValues",
+            "setpointA": 90.0,
+            "setpointB": 95.0,
+            "name": "Alarm",
+            "ackNotesReqd": true
+          }
+        ],
+        "name": "beltTension",
+        "value": 87,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "name": "conveyerDirection",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "alarms": [
+          {
+            "mode": "AboveValue",
+            "setpointA": 97.0,
+            "name": "Alarm",
+            "priority": "Medium",
+            "ackNotesReqd": true
+          }
+        ],
+        "name": "conveyerSpeed",
+        "value": 10,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "alarms": [
+          {
+            "mode": "AboveValue",
+            "setpointA": 95.0,
+            "name": "Alarm",
+            "priority": "High"
+          }
+        ],
+        "name": "load",
+        "value": 50,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Boolean",
+        "name": "runningStatus",
+        "value": true,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "Float4",
+        "alarms": [
+          {
+            "mode": "BetweenValues",
+            "setpointA": 140.0,
+            "setpointB": 145.0,
+            "name": "Alarm",
+            "priority": "Critical",
+            "ackNotesReqd": true
+          }
+        ],
+        "name": "vibration",
+        "value": 40.6,
+        "tagType": "AtomicTag"
+      }
+    ]
+  }
+]

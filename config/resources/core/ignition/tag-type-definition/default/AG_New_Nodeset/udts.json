@@ -1,0 +1,2735 @@
+[
+  {
+    "name": "Cmd",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "name": "ReqMod",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "ReqModeInprogress",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "ReqState",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "ReqStateInprogress",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "RequestData_1",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"ItemID\")",
+        "dataType": "String",
+        "name": "ItemId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{Mid_Path2}/{ParentInstanceName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Document",
+        "name": "Raw_Data",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"RecipeId\")",
+        "dataType": "String",
+        "name": "RecipeId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"WorkOrderID\")",
+        "dataType": "String",
+        "name": "WorkOrderId",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "AGSetOperationResult",
+    "parameters": {
+      "Mid_Path2": {
+        "dataType": "String",
+        "value": "AGSetOperationResult"
+      },
+      "Mid_Path": {
+        "dataType": "String",
+        "value": "AGCalls"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "name": "Handshake",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "RequestAckNumber",
+        "tagType": "AtomicTag"
+      },
+      {
+        "name": "RequestData",
+        "typeId": "AG_New_Nodeset/RequestData",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "name": "ItemDetails",
+            "tagType": "UdtInstance",
+            "tags": [
+              {
+                "valueSource": "expr",
+                "name": "Raw",
+                "tagType": "AtomicTag"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "RequestTimestamp",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "ResponseAckNumber",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "ResponseTimestamp",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "SenderFBS",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "StatusCode",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "ResponseData",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"Authorized\")",
+        "dataType": "Boolean",
+        "name": "Authorized",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"BatchID\")",
+        "dataType": "String",
+        "name": "BatchId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"ExpiryDate\")",
+        "dataType": "String",
+        "name": "ExpiryDate",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"ItemID\")",
+        "dataType": "String",
+        "name": "ItemId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"QualityStatus\")",
+        "dataType": "Boolean",
+        "name": "QualityStatus",
+        "tagType": "AtomicTag"
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{Mid_Path2}/{ParentInstanceName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Document",
+        "name": "Raw_Data",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"RecipeId\")",
+        "dataType": "Boolean",
+        "name": "RecipeId",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"WorkOrderID\")",
+        "dataType": "Boolean",
+        "name": "WorkOrderID",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "AGSetItemInfo",
+    "typeId": null,
+    "parameters": {
+      "Mid_Path2": {
+        "dataType": "String",
+        "value": null
+      },
+      "Mid_Path": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "name": "Handshake",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "RequestAckNumber",
+        "tagType": "AtomicTag"
+      },
+      {
+        "name": "RequestData",
+        "typeId": "AG_New_Nodeset/RequestData_1",
+        "tagType": "UdtInstance"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "RequestTimestamp",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "ResponseAckNumber",
+        "tagType": "AtomicTag"
+      },
+      {
+        "name": "ResponseData",
+        "typeId": "AG_New_Nodeset/ResponseData",
+        "tagType": "UdtInstance",
+        "enabled": true
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "ResponseTimestamp",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "SenderFBS",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "StatusCode",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "SetRecipe",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "dataType": "Document",
+        "name": "Raw_Data",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "RequestData",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"DestinationFBS\")",
+        "dataType": "String",
+        "name": "DestinationFBS",
+        "tagType": "AtomicTag"
+      },
+      {
+        "name": "ItemDetails",
+        "typeId": "AG_New_Nodeset/ItemDetails",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "expression": "jsonGet({[.]../Raw_Data}, \"ItemDetails\")\r\n",
+            "name": "Raw",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "opcItemPath": {
+          "bindType": "parameter",
+          "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{Mid_Path2}/{ParentInstanceName}"
+        },
+        "opcServer": {
+          "bindType": "parameter",
+          "binding": "{ServerName}"
+        },
+        "valueSource": "opc",
+        "dataType": "Document",
+        "name": "Raw_Data",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"RecipeID\")",
+        "name": "RecipeID",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"SourceFBS\")",
+        "dataType": "String",
+        "name": "SourceFBS",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"WorkOrderID\")",
+        "name": "WorkOrderID",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "AGCalls",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "AGSetItemInfo",
+        "typeId": "AG_New_Nodeset/AGSetItemInfo",
+        "parameters": {
+          "Mid_Path2": {
+            "dataType": "String",
+            "value": "AGSetItemInfo"
+          },
+          "Mid_Path": {
+            "dataType": "String",
+            "value": "AGCalls"
+          }
+        },
+        "tagType": "UdtInstance"
+      },
+      {
+        "name": "AGSetOperationResult",
+        "typeId": "AG_New_Nodeset/AGSetOperationResult",
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "Admin",
+    "parameters": {
+      "Mid_Path": {
+        "dataType": "String",
+        "value": "Admin"
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "ActiveWorkOrderID",
+        "tagType": "AtomicTag"
+      },
+      {
+        "name": "CurrentAlarms",
+        "typeId": "AG_New_Nodeset/CurrAlarm",
+        "tagType": "UdtInstance"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "CurrentRecipeID",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "LastRecipeID",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "AGMethods",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "SetRecipe",
+        "typeId": "AG_New_Nodeset/SetRecipe",
+        "tagType": "UdtInstance"
+      }
+    ]
+  },
+  {
+    "name": "AG",
+    "typeId": "",
+    "parameters": {
+      "ServerName": {
+        "dataType": "String",
+        "value": "PLC"
+      },
+      "OPC_Path": {
+        "dataType": "String",
+        "value": null
+      }
+    },
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "name": "AGAdmin",
+        "typeId": "AG_New_Nodeset/Admin",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "name": "CurrentAlarms",
+            "tagType": "UdtInstance",
+            "tags": [
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "Raw_Data",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "ActiveWorkOrderID",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "LastRecipeID",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentRecipeID",
+            "tagType": "AtomicTag"
+          }
+        ]
+      },
+      {
+        "name": "AGCalls",
+        "typeId": "AG_New_Nodeset/AGCalls",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "name": "AGSetItemInfo",
+            "tagType": "UdtInstance",
+            "tags": [
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "RequestAckNumber",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "SenderFBS",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "ResponseTimestamp",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "ResponseAckNumber",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "StatusCode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "RequestTimestamp",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "Handshake",
+                "tagType": "AtomicTag"
+              }
+            ]
+          },
+          {
+            "name": "AGSetOperationResult",
+            "tagType": "UdtInstance",
+            "tags": [
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "ResponseAckNumber",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "SenderFBS",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "Handshake",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "ResponseTimestamp",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "RequestAckNumber",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "StatusCode",
+                "tagType": "AtomicTag"
+              },
+              {
+                "opcItemPath": {
+                  "bindType": "parameter",
+                  "binding": "{OPC_Path}{RootInstanceName}/{Mid_Path}/{ParentInstanceName}/{TagName}"
+                },
+                "opcServer": {
+                  "bindType": "parameter",
+                  "binding": "{ServerName}"
+                },
+                "name": "RequestTimestamp",
+                "tagType": "AtomicTag"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "AGStatus",
+        "typeId": "AG_New_Nodeset/Status",
+        "tagType": "UdtInstance",
+        "tags": [
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "SCADAHeartbeat",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "MESRunning",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "EquipmentStarved",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "EquipmentBlocked",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "ActualMachineSpeed",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "PLCHeartbeat",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "SetRecipeStatusCode",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentMode",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentState",
+            "tagType": "AtomicTag"
+          },
+          {
+            "opcItemPath": {
+              "bindType": "parameter",
+              "binding": "{OPC_Path}{RootInstanceName}/{ParentInstanceName}/{TagName}"
+            },
+            "opcServer": {
+              "bindType": "parameter",
+              "binding": "{ServerName}"
+            },
+            "name": "CurrentTransitionState",
+            "tagType": "AtomicTag"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Admin 1",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "ActiveWorkOrderID",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "Status",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "opc",
+        "dataType": "Float4",
+        "name": "ActualMachineSpeed",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "CurrentMode",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "name": "CurrentState",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "CurrentTransitionState",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "EquipmentBlocked",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "EquipmentStarved",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Boolean",
+        "name": "MESRunning",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "PLCHeartbeat",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "Int4",
+        "name": "SCADAHeartbeat",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "opc",
+        "dataType": "String",
+        "name": "SetRecipeStatusCode",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "ItemDetails",
+    "typeId": null,
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw}, \"[0].EndTime\")",
+        "dataType": "String",
+        "name": "EndTime",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw}, \"[0].ItemID\")",
+        "dataType": "String",
+        "name": "ItemID",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw}, \"[0].QuantityTransferred\")",
+        "dataType": "Float4",
+        "name": "QuantityTransferred",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "dataType": "Document",
+        "name": "Raw",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw}, \"[0].StartTime\")",
+        "dataType": "String",
+        "name": "StartTime",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw}, \"[0].StepID\")",
+        "name": "StepID",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw}, \"[0].UOM\")",
+        "dataType": "String",
+        "name": "UOM",
+        "tagType": "AtomicTag"
+      }
+    ]
+  },
+  {
+    "name": "CurrAlarm",
+    "tagType": "UdtType",
+    "tags": [
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_0",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_1",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_2",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_3",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_4",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[5].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_5",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[6].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_6",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[7].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_7",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[8].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_8",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\n\t    logger \u003d system.util.getLogger(\"PLC_ACK\")\n\t\n\t    try:\n\t\n\t        # Convert Acknowledged_x -\u003e Active_x\n\t        activeTag \u003d str(tagPath).replace(\n\t            \"Acknowledged_\",\n\t            \"Active_\"\n\t        )\n\t\n\t        # Build Ignition alarm source\n\t        provider, tag \u003d activeTag.split(\"]\", 1)\n\t        provider \u003d provider.replace(\"[\", \"\")\n\t\n\t        alarmSource \u003d \"prov:%s:/tag:%s:/alm:Alarm\" % (\n\t            provider,\n\t            tag.lstrip(\"/\")\n\t        )\n\t\n\t        logger.info(\n\t            \"Looking for: {}\".format(alarmSource)\n\t        )\n\t\n\t        # Get all alarm events\n\t        alarms \u003d system.alarm.queryStatus()\n\t\n\t        for alarm in alarms:\n\t\n\t            source \u003d str(alarm.getSource())\n\t\n\t            if source \u003d\u003d alarmSource:\n\t\n\t                logger.info(\n\t                    \"Found: ID\u003d{} | State\u003d{} | Acked\u003d{} | Cleared\u003d{}\".format(\n\t                        alarm.getId(),\n\t                        alarm.getState(),\n\t                        alarm.isAcked(),\n\t                        alarm.isCleared()\n\t                    )\n\t                )\n\t\n\t                # Only acknowledge ACTIVE + UNACKNOWLEDGED\n\t                if not alarm.isAcked() and not alarm.isCleared():\n\t\n\t                    eventId \u003d str(alarm.getId())\n\t\n\t                    logger.info(\n\t                        \"Acknowledging Event ID: {}\".format(eventId)\n\t                    )\n\t\n\t                    system.alarm.acknowledge(\n\t                        [eventId],\n\t                        \"Acknowledged from PLC\",\n\t                        \"PLC\"\n\t                    )\n\t\n\t                    logger.info(\n\t                        \"Acknowledgement command sent.\"\n\t                    )\n\t\n\t                    break\n\t\n\t        else:\n\t\n\t            logger.warn(\n\t                \"Matching Active Unacknowledged alarm not found.\"\n\t            )\n\t\n\t    except Exception as e:\n\t\n\t        logger.error(\n\t            \"PLC ACK ERROR: {}\".format(e)\n\t        )"
+          }
+        ],
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[9].Acknowledged\")",
+        "dataType": "Boolean",
+        "name": "Acknowledged_9",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "ackMode": "Auto",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_0"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_0"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_0"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_0"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_0"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_0"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_0"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_0"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_0"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_0"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_0"
+            }
+          }
+        ],
+        "name": "Active_0",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_1"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_1"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_1"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_1"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_1"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_1"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_1"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_1"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_1"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_1"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_1"
+            }
+          }
+        ],
+        "name": "Active_1",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag",
+        "enabled": true
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_2"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_2"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_2"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_2"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_2"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_2"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_2"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_2"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_2"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_2"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_2"
+            }
+          }
+        ],
+        "name": "Active_2",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_3"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_3"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_3"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_3"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_3"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_3"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_3"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_3"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_3"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_3"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_3"
+            }
+          }
+        ],
+        "name": "Active_3",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_4"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_4"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_4"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_4"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_4"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_4"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_4"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_4"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_4"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_4"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_4"
+            }
+          }
+        ],
+        "name": "Active_4",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_5"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_5"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_5"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_5"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_5"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_5"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_5"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_5"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_5"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_5"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_5"
+            }
+          }
+        ],
+        "name": "Active_5",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_6"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_6"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_6"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_6"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_6"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_6"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_6"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_6"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_6"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_6"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_6"
+            }
+          }
+        ],
+        "name": "Active_6",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_7"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_7"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_7"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_7"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_7"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_7"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_7"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_7"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_7"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_7"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_7"
+            }
+          }
+        ],
+        "name": "Active_7",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_8"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_8"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_8"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_8"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_8"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_8"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_8"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_8"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_8"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_8"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_8"
+            }
+          }
+        ],
+        "name": "Active_8",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_9"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_9"
+            },
+            "Troubleshoot": {
+              "bindType": "Tag",
+              "value": "[.]Troubleshoot_9"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_9"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_9"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_9"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_9"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_9"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label_9"
+            },
+            "Alarm Description": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_9"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_9"
+            }
+          }
+        ],
+        "name": "Active_9",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].AlarmCode\")",
+        "name": "AlarmCode_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].AlarmCode\")",
+        "name": "AlarmCode_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].AlarmCode\")",
+        "name": "AlarmCode_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].AlarmCode\")",
+        "name": "AlarmCode_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].AlarmCode\")",
+        "name": "AlarmCode_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[5].AlarmCode\")",
+        "name": "AlarmCode_5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[6].AlarmCode\")",
+        "name": "AlarmCode_6",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[7].AlarmCode\")",
+        "name": "AlarmCode_7",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[8].AlarmCode\")",
+        "name": "AlarmCode_8",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[9].AlarmCode\")",
+        "name": "AlarmCode_9",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].AlarmGroupID\")",
+        "name": "AlarmGroupID_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].AlarmGroupID\")",
+        "name": "AlarmGroupID_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].AlarmGroupID\")",
+        "name": "AlarmGroupID_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].AlarmGroupID\")",
+        "name": "AlarmGroupID_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].AlarmGroupID\")",
+        "name": "AlarmGroupID_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[5].AlarmGroupID\")",
+        "name": "AlarmGroupID_5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[6].AlarmGroupID\")",
+        "name": "AlarmGroupID_6",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[7].AlarmGroupID\")",
+        "name": "AlarmGroupID_7",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[8].AlarmGroupID\")",
+        "name": "AlarmGroupID_8",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[9].AlarmGroupID\")",
+        "name": "AlarmGroupID_9",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[5].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[6].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_6",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[7].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_7",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[8].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_8",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[9].FBSSource\")",
+        "dataType": "String",
+        "name": "FBSSource_9",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_6",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_7",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_8",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Label_9",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_6",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_7",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_8",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Operator_Msg_9",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Priority\")",
+        "dataType": "String",
+        "name": "Priority_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Priority\")",
+        "dataType": "String",
+        "name": "Priority_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Priority\")",
+        "dataType": "String",
+        "name": "Priority_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Priority\")",
+        "dataType": "String",
+        "name": "Priority_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].Priority\")",
+        "dataType": "String",
+        "name": "Priority_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[5].Priority\")",
+        "dataType": "String",
+        "name": "Priority_5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[6].Priority\")",
+        "dataType": "String",
+        "name": "Priority_6",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[7].Priority\")",
+        "dataType": "String",
+        "name": "Priority_7",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[8].Priority\")",
+        "dataType": "String",
+        "name": "Priority_8",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[9].Priority\")",
+        "dataType": "String",
+        "name": "Priority_9",
+        "tagType": "AtomicTag"
+      },
+      {
+        "sourceTagPath": {
+          "bindType": "parameter",
+          "binding": "{InstanceName}"
+        },
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tlogger \u003d system.util.getLogger(\"AlarmTest\")\n\t\n\tparsedJson \u003d currentValue.value\n\t\n\ttagPaths \u003d []\n\ttagValues \u003d []\n\t\n\tfor i in range(min(len(parsedJson), 10)):\n\t\n\t    alarmData \u003d parsedJson[i]\n\t\n\t    alarmGroupID \u003d alarmData[\"AlarmGroupID\"]\n\t    alarmCode \u003d alarmData[\"AlarmCode\"]\n\t    FBS_Source \u003d alarmData[\"FBSSource\"]\n\t    active \u003d alarmData[\"Active\"]\n\t\n\t    # Default values\n\t    operatorMsg \u003d \"\"\n\t    label \u003d \"\"\n\t    troubleshoot \u003d \"\"\n\t\n\t    # Only lookup valid alarm entries\n\t    if alarmGroupID !\u003d 0 and alarmCode !\u003d 0 and FBS_Source !\u003d \"\":\n\t\n\t        alarm \u003d AlarmConfig.AlarmMessages_1.getAlarm(\n\t            alarmGroupID,\n\t            alarmCode,\n\t            FBS_Source\n\t        )\n\t\n\t        if alarm:\n\t\n\t            # Alarm found\n\t            operatorMsg \u003d alarm[\"OperatorMessage\"]\n\t            label \u003d alarm[\"Label\"]\n\t            troubleshoot \u003d alarm[\"Troubleshoot\"]\n\t\n\t            logger.info(\n\t                \"Alarm found: Group\u003d{}, Code\u003d{}, FBSSource\u003d{}\".format(\n\t                    alarmGroupID,\n\t                    alarmCode,\n\t                    FBS_Source\n\t                )\n\t            )\n\t\n\t        else:\n\t\n\t            # Alarm not found\n\t            operatorMsg \u003d \"Alarm need to add in lookup table\"\n\t\n\t            logger.warn(\n\t                \"Alarm NOT found: Group\u003d{}, Code\u003d{}, FBSSource\u003d{}\".format(\n\t                    alarmGroupID,\n\t                    alarmCode,\n\t                    FBS_Source\n\t                )\n\t            )\n\t\n\t    # Prepare tags for writing\n\t    tagPaths.extend([\n\t        \"[.]Operator_Msg_{}\".format(i),\n\t        \"[.]Label_{}\".format(i),\n\t        \"[.]Troubleshoot_{}\".format(i),\n\t        \"[.]Active_{}\".format(i)\n\t    ])\n\t\n\t    tagValues.extend([\n\t        operatorMsg,\n\t        label,\n\t        troubleshoot,\n\t        active\n\t    ])\n\t\n\t\n\t# Write all values in one operation\n\tif tagPaths:\n\t    system.tag.writeBlocking(tagPaths, tagValues)"
+          }
+        ],
+        "valueSource": "opc",
+        "dataType": "Document",
+        "name": "Raw_Data",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[5].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[6].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_6",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[7].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_7",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[8].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_8",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[9].Severity\")",
+        "dataType": "Int4",
+        "name": "Severity_9",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_0",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_1",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_2",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_3",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_4",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[5].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_5",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[6].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_6",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[7].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_7",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[8].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_8",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[9].TimestampActive\")\r\n",
+        "deriveExpressionGetter": "from java.time import Instant\r\nfrom java.util import Date\r\n\r\nts \u003d value[0][\"TimestampActive\"]\r\nreturn Date.from(Instant.parse(ts))",
+        "dataType": "String",
+        "sourceTagPath": "[.]Raw_Data",
+        "name": "TimestampActive_9",
+        "formatString": "#,##0.##",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[5].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[6].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_6",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[7].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_7",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[8].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_8",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[9].TimestampReset\")",
+        "dataType": "String",
+        "name": "TimestampReset_9",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_0",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_1",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_2",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_3",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_4",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_5",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_6",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_7",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_8",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "memory",
+        "dataType": "String",
+        "name": "Troubleshoot_9",
+        "tagType": "AtomicTag"
+      },
+      {
+        "valueSource": "expr",
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\tlogger \u003d system.util.getLogger(\"AlarmLookup\")\n\t\t\n\t\tgroupId \u003d system.tag.readBlocking([\"[.]AlarmGroupID_0\"])[0].value\n\t\talarmCode \u003d system.tag.readBlocking([\"[.]AlarmCode_0\"])[0].value\n\t\t\n\t\tlogger.info(\"Group \u003d {}\".format(groupId))\n\t\tlogger.info(\"Code  \u003d {}\".format(alarmCode))\n\t\t\n\t\talarm \u003d AlarmConfig.AlarmMessages.getAlarm(groupId, alarmCode)\n\t\t\n\t\tlogger.info(\"Alarm \u003d {}\".format(alarm))\n\t\t\n\t\tif alarm:\n\t\t    logger.info(\"Description \u003d {}\".format(alarm[\"description\"]))\n\t\t\n\t\t    qv \u003d system.tag.writeBlocking(\n\t\t        [\"[.]Operator_Msg_0\"],\n\t\t        [alarm[\"description\"]]\n\t\t    )\n\t\t\n\t\t    logger.info(\"Write Result \u003d {}\".format(qv))\n\t\telse:\n\t\t    logger.warn(\"Alarm not found in dictionary\")",
+            "enabled": false
+          }
+        ],
+        "expression": "jsonGet({[.]Raw_Data}, \"[0].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "ackMode": "Auto",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_0"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_0"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_0"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_0"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_0"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_0"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_0"
+            },
+            "Operator Msg": {
+              "bindType": "Tag",
+              "value": "[.]Operator_Msg_0"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_0"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_0",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag",
+        "enabled": false
+      },
+      {
+        "valueSource": "expr",
+        "eventScripts": [
+          {
+            "eventid": "valueChanged",
+            "script": "\tif currentValue.value and not previousValue.value:\n\t\tlogger \u003d system.util.getLogger(\"AlarmLookup\")\n\t\t\n\t\tgroupId \u003d system.tag.readBlocking([\"[.]AlarmGroupID_1\"])[0].value\n\t\talarmCode \u003d system.tag.readBlocking([\"[.]AlarmCode_1\"])[0].value\n\t\t\n\t\tlogger.info(\"Group \u003d {}\".format(groupId))\n\t\tlogger.info(\"Code  \u003d {}\".format(alarmCode))\n\t\t\n\t\talarm \u003d AlarmConfig.AlarmMessages.getAlarm(groupId, alarmCode)\n\t\t\n\t\tlogger.info(\"Alarm \u003d {}\".format(alarm))\n\t\t\n\t\tif alarm:\n\t\t    logger.info(\"Description \u003d {}\".format(alarm[\"description\"]))\n\t\t\n\t\t    qv \u003d system.tag.writeBlocking(\n\t\t        [\"[.]Operator_Msg_1\"],\n\t\t        [alarm[\"description\"]]\n\t\t    )\n\t\t\n\t\t    logger.info(\"Write Result \u003d {}\".format(qv))\n\t\telse:\n\t\t    logger.warn(\"Alarm not found in dictionary\")"
+          }
+        ],
+        "expression": "jsonGet({[.]Raw_Data}, \"[1].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_1"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_1"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_1"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_1"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_1"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_1"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_1"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_1"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_1",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag",
+        "enabled": false
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[2].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_2"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_2"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_2"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_2"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_2"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_2"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_2"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_2"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_2",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag",
+        "enabled": false
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[3].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_3"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_3"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_3"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_3"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_3"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_3"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_3"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_3"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_3",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag",
+        "enabled": false
+      },
+      {
+        "valueSource": "expr",
+        "expression": "jsonGet({[.]Raw_Data}, \"[4].Active\")",
+        "dataType": "Boolean",
+        "alarms": [
+          {
+            "Troubleshoot": "",
+            "mode": "WhenTrue",
+            "name": "Alarm",
+            "Alarm Code": {
+              "bindType": "Tag",
+              "value": "[.]AlarmCode_4"
+            },
+            "FBS Source": {
+              "bindType": "Tag",
+              "value": "[.]FBSSource_4"
+            },
+            "Severity": {
+              "bindType": "Tag",
+              "value": "[.]Severity_4"
+            },
+            "Alarm Priority": {
+              "bindType": "Tag",
+              "value": "[.]Priority_4"
+            },
+            "Acknowledged": {
+              "bindType": "Tag",
+              "value": "[.]Acknowledged_4"
+            },
+            "Timestamp Reset": {
+              "bindType": "Tag",
+              "value": "[.]TimestampReset_4"
+            },
+            "Timestamp Active": {
+              "bindType": "Tag",
+              "value": "[.]TimestampActive_4"
+            },
+            "label": {
+              "bindType": "Tag",
+              "value": "[.]Label"
+            },
+            "Alarm Group Id": {
+              "bindType": "Tag",
+              "value": "[.]AlarmGroupID_4"
+            },
+            "priority": {
+              "bindType": "Expression",
+              "value": "if({Severity} \u003d 5, \"Critical\",\r\n    if({Severity} \u003d 4, \"High\",\r\n        if({Severity} \u003d 3, \"Medium\",\r\n            if({Severity} \u003d 2, \"Low\",\r\n                if({Severity} \u003d 1, \"Diagnostic\", \"Unknown\")\r\n            )\r\n        )\r\n    )\r\n)"
+            }
+          }
+        ],
+        "name": "z_Active_4",
+        "defaultValue": false,
+        "value": false,
+        "tagType": "AtomicTag",
+        "enabled": false
+      }
+    ]
+  }
+]

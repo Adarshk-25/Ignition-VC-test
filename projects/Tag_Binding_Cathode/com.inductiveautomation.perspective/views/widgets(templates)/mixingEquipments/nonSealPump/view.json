@@ -1,0 +1,176 @@
+{
+  "custom": {
+    "Cmd": "value",
+    "Run_fb": "value",
+    "Stp_fb": "value"
+  },
+  "params": {
+    "header": "value",
+    "label": "",
+    "metadata": "value",
+    "screenPath": "value",
+    "tag_TM": "value",
+    "tooltip": "value"
+  },
+  "propConfig": {
+    "custom.Cmd": {
+      "persistent": true
+    },
+    "custom.Run_fb": {
+      "persistent": true
+    },
+    "custom.Stp_fb": {
+      "persistent": true
+    },
+    "params.header": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.screenPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tag_TM": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tooltip": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 60,
+      "width": 64
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1857,
+          "width": 0.8367,
+          "x": 0.081,
+          "y": 0.771
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "classes": "Page/Label2"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Classic pump 2"
+        },
+        "position": {
+          "height": 0.5333,
+          "width": 0.65,
+          "x": 0.1842,
+          "y": 0.1044
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M125,707 l-125,292 833,0 -126,-292 -582,0z",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M125,707 l-11,26 -13,31 -12,28 -11,26 -11,26 -11,26 -13,29 -14,33 -4,9 24,-10 47,-18 48,-15 48,-13 49,-10 50,-7 50,-5 50,-3 50,0 50,3 50,5 50,7 49,10 48,13 48,15 47,18 24,10 -4,-9 -11,-25 -13,-30 -11,-27 -11,-26 -11,-26 -12,-27 -13,-30 -10,-25 -4,-9 -19,0 -563,0z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M415,0 l584,0 0,333 -176,0 5,30 4,31 0,42 -4,42 -9,41 -12,39 -16,38 -19,35 -23,34 -25,30 -29,29 -30,25 -34,23 -35,19 -38,16 -39,12 -41,9 -42,4 -21,1 -21,-1 -42,-4 -40,-9 -39,-12 -37,-16 -36,-19 -33,-23 -31,-25 -28,-29 -26,-30 -22,-34 -19,-35 -16,-38 -12,-39 -9,-41 -4,-42 0,-21 0,-21 4,-42 9,-40 12,-39 16,-37 19,-36 22,-33 26,-31 28,-28 31,-26 33,-22 36,-19 37,-16 39,-12 40,-9 42,-4 21,0z",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M93,503 l42,-10 -5,-29 -4,-30 0,-34 3,-29 5,-29 9,-27 11,-26 13,-25 16,-23 18,-21 19,-20 22,-18 23,-16 25,-14 26,-11 27,-8 28,-6 29,-3 30,0 28,4 27,6 4,1 12,-42 -5,-1 -31,-5 -33,-3 -6,0 -5,-1 -6,0 -34,2 -33,5 -31,8 -30,12 -29,14 -28,16 -25,20 -24,21 -21,24 -20,25 -16,28 -14,29 -12,30 -8,31 -5,33 -1,17 -1,17 0,6 2,33 5,33 2,11 1,5z",
+              "fill": {
+                "paint": "#e5e5e5"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M711,119 l288,0 0,-62 -374,-2 6,4 5,3 6,4 6,4 5,4 6,4 6,4 5,4 5,4 6,4 5,4 5,5 5,4 5,4 5,4 5,4z",
+              "fill": {
+                "paint": "#e5e5e5"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M823,333 l176,0 0,-126 -222,0 4,8 4,7 4,7 3,8 4,8 3,8 4,8 3,8 3,8 2,8 3,8 2,8 2,8 2,8 1,8 2,8z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M739,329 l-42,10 5,29 4,29 0,33 -3,30 -5,28 -9,28 -11,26 -13,25 -16,23 -18,22 -30,29 -22,16 -24,15 -26,12 -27,10 -28,7 -29,4 -30,2 -32,-2 -28,-5 -14,-3 -10,40 5,1 31,6 32,4 5,0 6,1 5,0 34,-2 33,-5 32,-8 31,-12 29,-14 28,-16 25,-20 24,-21 21,-24 20,-25 16,-28 14,-29 12,-31 8,-32 5,-33 1,-17 1,-17 0,-5 -3,-33 -5,-32 -2,-11 0,-5z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "type": "path"
+            }
+          ],
+          "viewBox": "0 0 999 999"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "aspectRatio": "70:70",
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

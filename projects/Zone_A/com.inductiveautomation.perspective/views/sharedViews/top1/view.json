@@ -1,0 +1,463 @@
+{
+  "custom": {},
+  "params": {
+    "Lang1": "value"
+  },
+  "propConfig": {
+    "params.Lang1": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 75,
+      "width": 1549
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Image"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "source": "/system/images/agratabl.jpg",
+          "style": {
+            "marginRight": "2px"
+          }
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label_1",
+                  "visible": false
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "page.props.path"
+                      },
+                      "enabled": false,
+                      "transforms": [
+                        {
+                          "fallback": null,
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "/screen/alarms",
+                              "output": "Alarms"
+                            },
+                            {
+                              "input": "/screen/graph",
+                              "output": "Graph"
+                            },
+                            {
+                              "input": "/",
+                              "output": "Overview"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "flex-start"
+                  },
+                  "text": "User Management"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "now()"
+                      },
+                      "transforms": [
+                        {
+                          "formatType": "datetime",
+                          "formatValue": {
+                            "date": "short",
+                            "time": "short"
+                          },
+                          "type": "format"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "color": "#FFBF00",
+                    "marginRight": "10px"
+                  },
+                  "textStyle": {
+                    "marginRight": "5px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Label_2"
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "session.props.auth.user.roles[0]"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{session.props.auth.user.userName}",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "center",
+                    "marginRight": "5px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "mainContainer"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "justify": "space-around",
+              "style": {
+                "color": "#FFBF00",
+                "margin": "0.25em"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Dropdown_2"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Zone 1",
+                          "value": "Zone 1"
+                        },
+                        {
+                          "label": "Zone  2",
+                          "value": "Zone  2"
+                        },
+                        {
+                          "label": "Zone  3",
+                          "value": "Zone  3"
+                        }
+                      ],
+                      "placeholder": {
+                        "text": "Select Zone "
+                      },
+                      "search": {
+                        "enabled": false,
+                        "marginLeft": "8px"
+                      },
+                      "textAlign": "center"
+                    },
+                    "type": "ia.input.dropdown"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown_1"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Line 1",
+                          "value": "Line 1"
+                        },
+                        {
+                          "label": "Line 2",
+                          "value": "Line 2"
+                        },
+                        {
+                          "label": "Line 3",
+                          "value": "Line 3"
+                        }
+                      ],
+                      "placeholder": {
+                        "text": "Select Line"
+                      },
+                      "search": {
+                        "enabled": false,
+                        "marginLeft": "8px"
+                      },
+                      "textAlign": "center"
+                    },
+                    "type": "ia.input.dropdown"
+                  },
+                  {
+                    "meta": {
+                      "name": "Dropdown_0"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "props": {
+                      "options": [
+                        {
+                          "label": "Machine 1",
+                          "value": "Machine 1"
+                        },
+                        {
+                          "label": "Machine 2",
+                          "value": "Machine 2"
+                        },
+                        {
+                          "label": "Machine 3",
+                          "value": "Machine 3"
+                        }
+                      ],
+                      "placeholder": {
+                        "text": "Select Machine"
+                      },
+                      "search": {
+                        "enabled": false,
+                        "marginLeft": "8px"
+                      },
+                      "textAlign": "center"
+                    },
+                    "type": "ia.input.dropdown"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_1"
+                },
+                "position": {
+                  "basis": "400px",
+                  "grow": 1
+                },
+                "props": {
+                  "alignContent": "space-between"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Label_1"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "page.props.path"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": null,
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": "/userManagement",
+                              "output": "USER MANAGEMENT"
+                            },
+                            {
+                              "input": "/alarmsManagement",
+                              "output": "ALARM MANAGEMENT"
+                            },
+                            {
+                              "input": "/auditLogs",
+                              "output": "EVENT AUDIT LOGS"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "alignItems": "flex-start",
+                    "color": "#FFBF00",
+                    "fontSize": "1.2em",
+                    "fontWeight": "bolder"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Dropdown"
+                },
+                "position": {
+                  "basis": "180px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "session.props.locale"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "options": [
+                    {
+                      "label": "English",
+                      "value": "English"
+                    },
+                    {
+                      "label": "ગુજરાતી",
+                      "value": "Gujarati"
+                    },
+                    {
+                      "label": "हिंदी",
+                      "value": "Hindi"
+                    },
+                    {
+                      "label": "ಕನ್ನಡ",
+                      "value": "Telgu"
+                    }
+                  ],
+                  "placeholder": {
+                    "icon": {
+                      "path": "material/language"
+                    },
+                    "text": "Select language"
+                  },
+                  "search": {
+                    "enabled": false,
+                    "marginLeft": "8px"
+                  },
+                  "style": {
+                    "alignItems": "flex-end"
+                  }
+                },
+                "type": "ia.input.dropdown"
+              }
+            ],
+            "meta": {
+              "name": "mainContainer_0"
+            },
+            "props": {
+              "alignItems": "center",
+              "style": {
+                "margin": "0.25em"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "976px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "backgroundImage": "linear-gradient(90deg, #2B1E5F 0%, #3F2F91 40%, #6B5FD6 100%)",
+            "borderBottomLeftRadius": "4px",
+            "borderBottomRightRadius": "4px",
+            "borderStyle": "none",
+            "borderTopLeftRadius": "4px",
+            "borderTopRightRadius": "4px",
+            "overflow": "hidden",
+            "paddingLeft": "5px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {},
+              "scope": "C",
+              "type": "logout"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/exit_to_app"
+            }
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignContent": "flex-start",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

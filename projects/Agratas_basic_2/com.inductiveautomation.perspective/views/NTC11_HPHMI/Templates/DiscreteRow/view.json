@@ -1,0 +1,221 @@
+{
+  "custom": {},
+  "params": {
+    "tagRoot": "[default]IN11_E123_PCE_NTC11",
+    "path": "",
+    "field": "State",
+    "code": "",
+    "desc": "",
+    "on": "ON",
+    "off": "OFF",
+    "alarm": 0
+  },
+  "propConfig": {
+    "params.tagRoot": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.path": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.field": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.code": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.desc": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.on": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.off": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.alarm": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1240,
+      "height": 32
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "row",
+      "alignItems": "stretch",
+      "style": {
+        "borderBottom": "1px solid #D2D2D2",
+        "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif"
+      }
+    },
+    "children": [
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Code"
+        },
+        "position": {
+          "basis": "112px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "6px",
+            "fontWeight": "bold"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.code"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Desc"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "6px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "property",
+              "config": {
+                "path": "view.params.desc"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "State"
+        },
+        "position": {
+          "basis": "104px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "fontFamily": "Roboto, 'Segoe UI', Arial, sans-serif",
+            "fontSize": "11px",
+            "color": "#333333",
+            "paddingLeft": "0px",
+            "fontWeight": "bold",
+            "justifyContent": "center",
+            "textAlign": "center",
+            "border": "1px solid #9C9C9C",
+            "borderRadius": "2px",
+            "margin": "5px 6px"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.field}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}), if(toBoolean({value}), {view.params.on}, {view.params.off}), \"?\")"
+                }
+              ]
+            }
+          },
+          "props.style.backgroundColor": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.field}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(!isGood({value}), \"#CFCFCF\", if({view.params.alarm} = 1 && toBoolean({value}), \"#EE7D1A\", if({view.params.alarm} = 2 && !toBoolean({value}), \"#EE7D1A\", if(toBoolean({value}), \"#4E4E4E\", \"#E8E8E8\"))))"
+                }
+              ]
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "type": "tag",
+              "config": {
+                "mode": "indirect",
+                "tagPath": "{r}/{p}/{f}",
+                "references": {
+                  "r": "{view.params.tagRoot}",
+                  "p": "{view.params.path}",
+                  "f": "{view.params.field}"
+                },
+                "fallbackDelay": 2.5
+              },
+              "transforms": [
+                {
+                  "type": "expression",
+                  "expression": "if(isGood({value}) && (toBoolean({value}) || ({view.params.alarm} = 2)), \"#FFFFFF\", \"#4A4A4A\")"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  }
+}

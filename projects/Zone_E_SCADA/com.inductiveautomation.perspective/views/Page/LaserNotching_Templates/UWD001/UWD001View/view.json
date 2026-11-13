@@ -1,0 +1,88 @@
+{
+  "custom": {},
+  "params": {
+    "metadata": "value"
+  },
+  "propConfig": {
+    "params.metadata": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "COR001TabScreens"
+        },
+        "props": {
+          "params": {
+            "tag": "[default]IN11_E155_PAE_NTC11_IN11_E155_PAE_Telemetry"
+          },
+          "path": "Page/LaserNotching_Templates/UWD001/UWD001TabScreens"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TrendsTemplate"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "params": {
+            "path": "IN11_E155_PAE_NTC11"
+          },
+          "path": "Page/PopUpScreensTemplate/TrendsTemplate"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "AlarmsTemplate"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "params": {
+            "tagpath": "value"
+          },
+          "path": "Page/PopUpScreensTemplate/AlarmsTemplate"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "events": {
+      "system": {
+        "onShutdown": {
+          "config": {
+            "script": "\ttry:\n\t    system.perspective.sendMessage(\n\t        \"PopupClosed\",\n\t        scope\u003d\"Page\"\n\t    )\n\texcept:\n\t    pass"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "tabSize": {
+        "width": 120
+      },
+      "tabs": [
+        "Process Data",
+        "Trends",
+        "Alarms"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

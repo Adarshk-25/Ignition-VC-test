@@ -1,0 +1,93 @@
+{
+  "custom": {},
+  "params": {
+    "parameterData": [
+      {
+        "ActualValue": "value",
+        "Parameter": "value",
+        "SubEquipmentName": "value"
+      }
+    ]
+  },
+  "propConfig": {
+    "params.parameterData": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MergedEquipmentTemplate"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "params": {
+                "EquipmentHeader": "BTA001-BTA002",
+                "equipmentGraphic": "widgets(templates)/LaserWidgets/LNT001/LaserNotchingLNT001",
+                "parameterData": [
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "PV",
+                    "SubEquipmentName": "BTA001",
+                    "equipmentDescription": "Laser Temperature Meter DS"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Paramter": "Status",
+                    "SubEquipmentName": "BTA001",
+                    "equipmentDescription": "Laser Temperature Meter DS"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "PV",
+                    "SubEquipmentName": "BTA002",
+                    "equipmentDescription": "Laser Temperature Meter OS"
+                  },
+                  {
+                    "ActualValue": "value",
+                    "Parameter": "Status",
+                    "SubEquipmentName": "BTA002",
+                    "equipmentDescription": "Laser Temperature Meter OS"
+                  }
+                ],
+                "tableHeader": "Process Parameters"
+              },
+              "path": "Page/LaserNotching_Templates/PopUpScreensTemplate/MergedEquipmentTemplate"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

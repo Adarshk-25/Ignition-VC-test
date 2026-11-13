@@ -1,0 +1,134 @@
+{
+  "custom": {},
+  "params": {
+    "tabvalue": 0
+  },
+  "propConfig": {
+    "params.tabvalue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "PlasticizerFeedSys"
+        },
+        "props": {
+          "path": "Page/2F_Templates/PlasticizerFeedSys"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "sbr_feeding_system"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/2F_Templates/sbr_feeding_system"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "cmc_si_weighing_system"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/2F_Templates/cmc_si_weighing_system"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "si_cmc_sending_system"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/2F_Templates/si_cmc_sending_system"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "am_weighing_hopper"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/2F_Templates/am_weighing_hopper"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "am_positive_sending_system"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/2F_Templates/am_positive_sending_system"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PAA_feeding_system"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "props": {
+          "path": "Page/2F_Templates/PAA_feeding_system"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabvalue"
+          },
+          "type": "property"
+        },
+        "onChange": {
+          "enabled": null,
+          "script": "\tif currentValue !\u003d previousValue :\n\t\tself.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 200
+      },
+      "tabs": [
+        "Plasticzer Feeding System",
+        "SBR Feeding System",
+        "CMC SI Weighing System",
+        "SI CMC Sending System",
+        "AM Weighing Hopper",
+        "AM Positive Sending System",
+        "PAA Feeding System"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}

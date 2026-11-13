@@ -1,0 +1,713 @@
+{
+  "custom": {},
+  "params": {
+    "instName": "CM Weighing Hopper",
+    "status": 0,
+    "value": "value"
+  },
+  "propConfig": {
+    "params.instName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 150,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Simple weigh hopper"
+        },
+        "position": {
+          "height": 0.65,
+          "width": 0.7,
+          "x": 0.0651,
+          "y": 0.1217
+        },
+        "propConfig": {
+          "props.elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[10].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[11].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[3].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[4].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[5].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[6].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[7].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[8].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[9].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#AAAAAA",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "fill": {},
+              "name": "symbol",
+              "type": "symbol",
+              "x": "4",
+              "y": "17"
+            },
+            {
+              "d": "M16.951 17v23.536L4 51.347v13.063h10.698V51.347h2.252l34.685 43.468v4.279h17.117v-4.279l34.686-43.468h2.252v13.063H116.5V51.347L103.438 40.536V17H16.951z",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4C4C4C",
+                "width": "0.25"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M16.951 40.536v10.811h86.487V40.536",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4C4C4C",
+                "width": "0.25"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M14.698 51.347H4",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4C4C4C",
+                "width": "0.25"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M105.689 51.347H116.5",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4C4C4C",
+                "width": "0.25"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M51.635 94.815h17.117",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4C4C4C",
+                "width": "0.25"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M14.698 64.40899999999999L4 51.347",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4C4C4C",
+                "width": "0.25"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M4 64.40899999999999l10.698-13.063",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4C4C4C",
+                "width": "0.25"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M105.689 64.40899999999999L116.5 51.347",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4C4C4C",
+                "width": "0.25"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M116.5 64.40899999999999l-10.811-13.063",
+              "fill": {},
+              "name": "path",
+              "stroke": {
+                "paint": "#4C4C4C",
+                "width": "0.25"
+              },
+              "type": "path"
+            },
+            {
+              "fill": {},
+              "height": "11.399999618530273",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.10000000149011612px"
+              },
+              "type": "rect",
+              "width": "4",
+              "x": "81.11100006103516",
+              "y": "5.444498538970947"
+            },
+            {
+              "fill": {},
+              "name": "perspective-polygon",
+              "specialPath": {
+                "angle": 51,
+                "corners": 3,
+                "height": 5.206829209895975,
+                "rounding": 0,
+                "width": 5.206829209895975,
+                "x": 80.31677901756196,
+                "y": 1.489377925906707
+              },
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.10000000149011612px"
+              },
+              "transform": "matrix(0.9902681112289429 -0.13917309045791626 0.13917309045791626 0.9902681112289429 0.4281761944293976 11.598468780517578)",
+              "type": "perspective-star"
+            }
+          ],
+          "viewBox": "0 0 120 100"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "widget_Air_Purge"
+        },
+        "position": {
+          "height": 0.0534,
+          "rotate": {
+            "angle": "225deg"
+          },
+          "width": 0.062,
+          "x": 0.2285,
+          "y": 0.4754
+        },
+        "props": {
+          "params": {
+            "status": 10
+          },
+          "path": "Widgets/CMWidgets/HOPPER/widget_Air_Purge"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "widget_Vibrator"
+        },
+        "position": {
+          "height": 0.0679,
+          "rotate": {
+            "angle": "225deg"
+          },
+          "width": 0.0532,
+          "x": 0.2848,
+          "y": 0.4963
+        },
+        "props": {
+          "params": {
+            "status": 10
+          },
+          "path": "Widgets/CMWidgets/HOPPER/widget_Vibrator"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "widget_Air_Fludizer"
+        },
+        "position": {
+          "height": 0.0728,
+          "rotate": {
+            "angle": "45deg"
+          },
+          "width": 0.0621,
+          "x": 0.3169,
+          "y": 0.5405
+        },
+        "props": {
+          "path": "Widgets/CMWidgets/HOPPER/widget_Air_Fludizer"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 0.1819,
+          "width": 0.5343,
+          "x": 0.2582,
+          "y": 0.8028
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1387,
+          "width": 0.8703,
+          "x": 0.0652,
+          "y": 0.0338
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.instName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "custom": {},
+  "events": {
+    "system": {
+      "onStartup": [
+        {
+          "config": {
+            "name": "light"
+          },
+          "scope": "C",
+          "type": "theme"
+        },
+        {
+          "config": {
+            "id": "{view.props.loading.mode}",
+            "type": "open"
+          },
+          "scope": "C",
+          "type": "dock"
+        }
+      ]
+    }
+  },
+  "params": {
+    "username": "value"
+  },
+  "propConfig": {
+    "params.username": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 133,
+      "width": 353
+    },
+    "loading": {
+      "mode": "blocking"
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "text": "Are you sure you want to logout?",
+          "textStyle": {
+            "classes": "widgets/valueDisplay"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {},
+                  "scope": "C",
+                  "stopPropagation": true,
+                  "type": "logout"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_Exit"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Exit"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "draggable": true,
+                    "id": "ExitApplication_logout",
+                    "modal": false,
+                    "overlayDismiss": false,
+                    "resizable": true,
+                    "showCloseIcon": true,
+                    "type": "close",
+                    "viewPath": "widgets(templates)/userAlertPopups/ExitApplication_logout",
+                    "viewportBound": false
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_Cancel"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "props": {
+          "style": {
+            "gap": "5px",
+            "margin": "2px",
+            "overflow": "hidden",
+            "padding": "2px"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "widgets/spacing"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

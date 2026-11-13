@@ -1,0 +1,1609 @@
+{
+  "custom": {},
+  "params": {
+    "instName": "Coater Buffer Tank",
+    "slurryLevel": "value",
+    "slurryTemp": "value",
+    "status": 1,
+    "tankPressure": "value"
+  },
+  "propConfig": {
+    "params.instName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.slurryLevel": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.slurryTemp": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tankPressure": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 150,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Tank 23"
+        },
+        "position": {
+          "height": 0.6533,
+          "width": 0.68,
+          "x": 0.11,
+          "y": 0.145
+        },
+        "propConfig": {
+          "props.elements[20].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.params.status"
+              },
+              "transforms": [
+                {
+                  "fallback": "#555555",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": "#71A407"
+                    },
+                    {
+                      "input": 2,
+                      "output": "#EACE21"
+                    },
+                    {
+                      "input": 3,
+                      "output": "#E77910"
+                    },
+                    {
+                      "input": 4,
+                      "output": "#CA3333"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[31].text": {
+            "binding": {
+              "config": {
+                "path": "view.params.slurryLevel"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol",
+              "x": "0",
+              "y": "13"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": "62.0999",
+                  "x2": "71.55",
+                  "y1": "99.2246",
+                  "y2": "99.2246"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "type": "linearGradient",
+                  "x1": "8.55",
+                  "x2": "18.2249",
+                  "y1": "99.2246",
+                  "y2": "99.2246"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_3_",
+                  "name": "SVGID_3_",
+                  "type": "linearGradient",
+                  "x1": "5.8499",
+                  "x2": "20.925",
+                  "y1": "111.5996",
+                  "y2": "111.5996"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_4_",
+                  "name": "SVGID_4_",
+                  "type": "linearGradient",
+                  "x1": "59.175",
+                  "x2": "74.4749",
+                  "y1": "111.5996",
+                  "y2": "111.5996"
+                }
+              ],
+              "id": "Group_FrontLegs",
+              "name": "Group_FrontLegs",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "cx": "40.05",
+                  "cy": "1.0127",
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop_0",
+                      "offset": "0.14",
+                      "stopColor": "#DDDDDD",
+                      "style": {
+                        "stopColor": "#DDDDDD"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop_1",
+                      "offset": "0.4",
+                      "stopColor": "#B8B8B8",
+                      "style": {
+                        "stopColor": "#B8B8B8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop_2",
+                      "offset": "0.75",
+                      "stopColor": "#7C7C7C",
+                      "style": {
+                        "stopColor": "#7C7C7C"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop_3",
+                      "offset": "1",
+                      "stopColor": "#4D4D4D",
+                      "style": {
+                        "stopColor": "#4D4D4D"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_5_",
+                  "name": "SVGID_5_",
+                  "r": "5.4568",
+                  "type": "radialGradient"
+                },
+                {
+                  "d": "M32.4 15.025L40.05 13l7.65 2.025H32.4z",
+                  "fill": {
+                    "url": "url(#SVGID_5_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_6_",
+                  "name": "SVGID_6_",
+                  "type": "linearGradient",
+                  "x1": "32.3997",
+                  "x2": "47.7004",
+                  "y1": "3.375",
+                  "y2": "3.375"
+                },
+                {
+                  "d": "M32.4 17.725H47.7v-2.7H32.4V17.725z",
+                  "fill": {
+                    "url": "url(#SVGID_6_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M32.4 16.375H47.7",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Cap",
+              "name": "Group_Cap",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.45",
+                      "stopColor": "#ECECEC",
+                      "style": {
+                        "stopColor": "#ECECEC"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.55",
+                      "stopColor": "#D9D9D9",
+                      "style": {
+                        "stopColor": "#D9D9D9"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.76",
+                      "stopColor": "#A8A8A8",
+                      "style": {
+                        "stopColor": "#A8A8A8"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.77",
+                      "stopColor": "#A6A6A6",
+                      "style": {
+                        "stopColor": "#A6A6A6"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#383838",
+                      "style": {
+                        "stopColor": "#383838"
+                      },
+                      "type": "stop",
+                      "x": "0",
+                      "y": "13"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_7_",
+                  "name": "SVGID_7_",
+                  "type": "linearGradient",
+                  "x1": "2.0247",
+                  "x2": "78.3",
+                  "y1": "49.6348",
+                  "y2": "49.6348"
+                },
+                {
+                  "d": "M2.025 30.1H78.3",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#7F7F7F",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M2.025 32.125c0-15.75 15.075-15.3 15.075-15.3H63c0 0 15.3-0.45 15.3 15.3V93.1C78.3 110.084 60.075 108.4 60.075 108.4H17.1c0 0-15.075 0-15.075-15.301V32.125",
+                  "fill": {
+                    "paint": "#808080",
+                    "url": "url(#SVGID_7_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M5.85 22.45h68.625",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#7F7F7F",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M0 50.125h80.1v1.125H0V50.125z",
+                  "fill": {
+                    "paint": "#999999"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_TankBody",
+              "name": "Group_TankBody",
+              "type": "group"
+            },
+            {
+              "fill": {
+                "paint": {
+                  "cx": 0.5,
+                  "cy": 0.5,
+                  "fr": 0,
+                  "fx": 0.5,
+                  "fy": 0.5,
+                  "r": 0.5,
+                  "stops": [
+                    {
+                      "offset": 0.1,
+                      "stopColor": "#70757A",
+                      "stopOpacity": 1
+                    },
+                    {
+                      "offset": 0.44806748628616333,
+                      "stopColor": "#70757a",
+                      "stopOpacity": 0.13636364042758942
+                    },
+                    {
+                      "offset": 0.9,
+                      "stopColor": "#70757A",
+                      "stopOpacity": 1
+                    }
+                  ],
+                  "type": "linear",
+                  "x1": 0,
+                  "x2": 1,
+                  "y1": 0.5,
+                  "y2": 0.5
+                }
+              },
+              "height": "11.666666984558105",
+              "name": "rect",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "rect",
+              "width": "3.3333332538604736",
+              "x": "38.11100387573242",
+              "y": "16.88883399963379"
+            },
+            {
+              "fill": {
+                "paint": {
+                  "cx": 0.5,
+                  "cy": 0.5,
+                  "fr": 0,
+                  "fx": 0.5,
+                  "fy": 0.5,
+                  "r": 0.5,
+                  "stops": [
+                    {
+                      "offset": 0.1,
+                      "stopColor": "#e6e6e6",
+                      "stopOpacity": 1
+                    },
+                    {
+                      "offset": 0.9,
+                      "stopColor": "#333435",
+                      "stopOpacity": 0
+                    }
+                  ],
+                  "type": "radial",
+                  "x1": 0,
+                  "x2": 1,
+                  "y1": 0.5,
+                  "y2": 0.5
+                }
+              },
+              "height": "1.6666666269302368",
+              "name": "rect_0",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "15",
+              "x": "32.4443359375",
+              "y": "22.555500030517578"
+            },
+            {
+              "fill": {
+                "paint": "#4a4a4a"
+              },
+              "height": "33",
+              "name": "rect_1",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "rect",
+              "width": "3.6666667461395264",
+              "x": "3.7776691913604736",
+              "y": "62.55550003051758"
+            },
+            {
+              "fill": {
+                "paint": "#4a4a4a"
+              },
+              "height": "33",
+              "name": "rect_2",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5"
+              },
+              "type": "rect",
+              "width": "3.6666667461395264",
+              "x": "73.11100006103516",
+              "y": "62.888851165771484"
+            },
+            {
+              "fill": {
+                "paint": {
+                  "cx": 0.5,
+                  "cy": 0.5,
+                  "fr": 0,
+                  "fx": 0.5,
+                  "fy": 0.5,
+                  "r": 0.5,
+                  "stops": [
+                    {
+                      "offset": 0.1,
+                      "stopColor": "#70757A",
+                      "stopOpacity": 1
+                    },
+                    {
+                      "offset": 0.46256023645401,
+                      "stopColor": "#70757a",
+                      "stopOpacity": 0.19176135957241058
+                    },
+                    {
+                      "offset": 0.9,
+                      "stopColor": "#70757A",
+                      "stopOpacity": 1
+                    }
+                  ],
+                  "type": "linear",
+                  "x1": 0,
+                  "x2": 1,
+                  "y1": 0.5,
+                  "y2": 0.5
+                }
+              },
+              "name": "perspective-polygon",
+              "specialPath": {
+                "angle": 121,
+                "corners": 3,
+                "height": 5.830951894845301,
+                "rounding": 0,
+                "width": 5.830951894845301,
+                "x": 34.58452405257735,
+                "y": 99.33452405257735
+              },
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "perspective-star"
+            },
+            {
+              "fill": {
+                "paint": {
+                  "cx": 0.5,
+                  "cy": 0.5,
+                  "fr": 0,
+                  "fx": 0.5,
+                  "fy": 0.5,
+                  "r": 0.5,
+                  "stops": [
+                    {
+                      "offset": 0.1,
+                      "stopColor": "#70757A",
+                      "stopOpacity": 1
+                    },
+                    {
+                      "offset": 0.45531386137008667,
+                      "stopColor": "#70757a",
+                      "stopOpacity": 0.12784090638160706
+                    },
+                    {
+                      "offset": 0.9,
+                      "stopColor": "#70757A",
+                      "stopOpacity": 1
+                    }
+                  ],
+                  "type": "linear",
+                  "x1": 0,
+                  "x2": 1,
+                  "y1": 0.5,
+                  "y2": 0.5
+                }
+              },
+              "height": "33.75",
+              "name": "rect_3",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "rect",
+              "width": "5.4166669845581055",
+              "x": "34.5",
+              "y": "66.75"
+            },
+            {
+              "fill": {
+                "paint": {
+                  "cx": 0.5,
+                  "cy": 0.5,
+                  "fr": 0,
+                  "fx": 0.5,
+                  "fy": 0.5,
+                  "r": 0.5,
+                  "stops": [
+                    {
+                      "offset": 0,
+                      "stopColor": "#bdbdbd",
+                      "stopOpacity": 1
+                    },
+                    {
+                      "offset": 0.4987921118736267,
+                      "stopColor": "#969393",
+                      "stopOpacity": 0.4984901398420334
+                    },
+                    {
+                      "offset": 0.9,
+                      "stopColor": "#9e9e9e",
+                      "stopOpacity": 1
+                    }
+                  ],
+                  "type": "radial",
+                  "x1": 0,
+                  "x2": 1,
+                  "y1": 0.5,
+                  "y2": 0.5
+                }
+              },
+              "height": "4.199999809265137",
+              "name": "rect_4",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "rect",
+              "width": "22.799999237060547",
+              "x": "25.600000381469727",
+              "y": "76.1333999633789"
+            },
+            {
+              "fill": {
+                "paint": "#4a4a4a"
+              },
+              "height": "2.4000000953674316",
+              "name": "rect_6",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "transform": "matrix(0.9396927952766418 -0.3420201241970062 0.3420201241970062 0.9396927952766418 -25.878475189208984 26.07468605041504)",
+              "type": "rect",
+              "width": "26.95466423034668",
+              "x": "44.74727249145508",
+              "y": "97.20734405517578"
+            },
+            {
+              "fill": {
+                "paint": "#4a4a4a"
+              },
+              "height": "2",
+              "name": "rect_5",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "transform": "matrix(0.9335803985595703 0.3583679497241974 -0.3583679497241974 0.9335803985595703 33.095603942871094 -12.30109977722168)",
+              "type": "rect",
+              "width": "10.399999618530273",
+              "x": "46.947757720947266",
+              "y": "100.70137023925781"
+            },
+            {
+              "fill": {
+                "paint": "#4a4a4a"
+              },
+              "height": "2",
+              "name": "rect_7",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "transform": "matrix(0.9510564804077148 -0.30901697278022766 0.30901697278022766 0.9510564804077148 -30.796735763549805 6.535706520080566)",
+              "type": "rect",
+              "width": "10.399999618530273",
+              "x": "22.444480895996094",
+              "y": "106.60392761230469"
+            },
+            {
+              "fill": {
+                "paint": "#4a4a4a"
+              },
+              "height": "2.4000000953674316",
+              "name": "rect_8",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "transform": "matrix(0.9271837472915649 0.3746069073677063 -0.3746069073677063 0.9271837472915649 17.150197982788086 17.720394134521484)",
+              "type": "rect",
+              "width": "21.754968643188477",
+              "x": "16.754825592041016",
+              "y": "74.54012298583984"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "2.5",
+              "name": "rect_9",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "1",
+              "x": "78.80000305175781",
+              "y": "30.75"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "2.5",
+              "name": "rect_10",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "type": "rect",
+              "width": "1",
+              "x": "0.4443376064300537",
+              "y": "30.777830123901367"
+            },
+            {
+              "elements": [
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "4",
+                  "name": "rect_14",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "0.4000000059604645",
+                  "x": "71.1999740600586",
+                  "y": "5.599999904632568"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_13",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "68.1999740600586",
+                  "y": "4.599999904632568"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_12",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "68.33317565917969",
+                  "y": "2.200000047683716"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "4",
+                  "name": "rect_11",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "0.4000000059604645",
+                  "x": "61.599979400634766",
+                  "y": "5"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_15",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "58.599979400634766",
+                  "y": "4"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_16",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "58.73318099975586",
+                  "y": "1.5999999046325684"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "4",
+                  "name": "rect_17",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "0.4000000059604645",
+                  "x": "51.000003814697266",
+                  "y": "5.199999809265137"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_18",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "48",
+                  "y": "4.1999993324279785"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_19",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "48.133201599121094",
+                  "y": "1.8000001907348633"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "4",
+                  "name": "rect_20",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "0.4000000059604645",
+                  "x": "10.733207702636719",
+                  "y": "5.733397483825684"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_21",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "7.733207702636719",
+                  "y": "4.733396530151367"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_22",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "7.8664093017578125",
+                  "y": "2.3333969116210938"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_23",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "19.533205032348633",
+                  "y": "2.4000000953674316"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.8000000715255737",
+                  "name": "rect_24",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "6.200000286102295",
+                  "x": "19.40000343322754",
+                  "y": "4.800000190734863"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "4",
+                  "name": "rect_25",
+                  "stroke": {
+                    "paint": "#70757A"
+                  },
+                  "type": "rect",
+                  "width": "0.4000000059604645",
+                  "x": "22.400009155273438",
+                  "y": "5.800000190734863"
+                },
+                {
+                  "fill": {
+                    "paint": "#70757A"
+                  },
+                  "height": "0.4000000059604645",
+                  "name": "rect_26",
+                  "stroke": {
+                    "paint": "#000000"
+                  },
+                  "type": "rect",
+                  "width": "71.5999984741211",
+                  "x": "4.400000095367432",
+                  "y": "10.399999618530273"
+                }
+              ],
+              "name": "group",
+              "type": "group"
+            },
+            {
+              "cx": "40.05",
+              "cy": "1.0127",
+              "elements": [
+                {
+                  "name": "stop",
+                  "offset": "0",
+                  "stopColor": "#ECECEC",
+                  "style": {
+                    "stopColor": "#ECECEC"
+                  },
+                  "type": "stop",
+                  "x": "0",
+                  "y": "12"
+                },
+                {
+                  "name": "stop_0",
+                  "offset": "0.14",
+                  "stopColor": "#DDDDDD",
+                  "style": {
+                    "stopColor": "#DDDDDD"
+                  },
+                  "type": "stop",
+                  "x": "0",
+                  "y": "12"
+                },
+                {
+                  "name": "stop_1",
+                  "offset": "0.4",
+                  "stopColor": "#B8B8B8",
+                  "style": {
+                    "stopColor": "#B8B8B8"
+                  },
+                  "type": "stop",
+                  "x": "0",
+                  "y": "12"
+                },
+                {
+                  "name": "stop_2",
+                  "offset": "0.75",
+                  "stopColor": "#7C7C7C",
+                  "style": {
+                    "stopColor": "#7C7C7C"
+                  },
+                  "type": "stop",
+                  "x": "0",
+                  "y": "12"
+                },
+                {
+                  "name": "stop_3",
+                  "offset": "1",
+                  "stopColor": "#4D4D4D",
+                  "style": {
+                    "stopColor": "#4D4D4D"
+                  },
+                  "type": "stop",
+                  "x": "0",
+                  "y": "12"
+                }
+              ],
+              "gradientUnits": "userSpaceOnUse",
+              "id": "SVGID_5_",
+              "name": "SVGID_5_",
+              "r": "5.4568",
+              "type": "radialGradient"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "6.400000095367432",
+              "name": "rect_27",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "rect",
+              "width": "1.600000023841858",
+              "x": "38.933204650878906",
+              "y": 6.533398437500182
+            },
+            {
+              "fill": {},
+              "height": "5.599999904632568",
+              "name": "rect_28",
+              "stroke": {
+                "paint": "#000000",
+                "width": "0.5px"
+              },
+              "type": "rect",
+              "width": "13.40000057220459",
+              "x": "30.93320083618164",
+              "y": "1.7333984375"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_29",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "transform": "matrix(-1.0000001192092896 -4.540800802033118e-8 4.540800802033118e-8 -1.0000001192092896 54.06649398803711 229.79995727539062)",
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "23.399873733520508",
+              "y": "113.7999267578125"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_30",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "transform": "matrix(-1.0000001192092896 -4.540800802033118e-8 4.540800802033118e-8 -1.0000001192092896 54.06649398803711 229.79995727539062)",
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "23.266672134399414",
+              "y": "116.19991302490234"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "4",
+              "name": "rect_31",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "transform": "matrix(-1.0000001192092896 -4.540800802033118e-8 4.540800802033118e-8 -1.0000001192092896 54.06649398803711 229.79995727539062)",
+              "type": "rect",
+              "width": "0.4000000059604645",
+              "x": "26.266666412353516",
+              "y": "117.19991302490234"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "4",
+              "name": "rect_32",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "transform": "matrix(-1.0000001192092896 -4.540800802033118e-8 4.540800802033118e-8 -1.0000001192092896 54.06649398803711 229.79995727539062)",
+              "type": "rect",
+              "width": "0.4000000059604645",
+              "x": "4.666599273681641",
+              "y": "116.93328094482422"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_33",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "transform": "matrix(-1.0000001192092896 -4.540800802033118e-8 4.540800802033118e-8 -1.0000001192092896 54.06649398803711 229.79995727539062)",
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "1.666615605354309",
+              "y": "115.93328094482422"
+            },
+            {
+              "fill": {
+                "paint": "#70757A"
+              },
+              "height": "0.8000000715255737",
+              "name": "rect_34",
+              "stroke": {
+                "paint": "#70757A"
+              },
+              "transform": "matrix(-1.0000001192092896 -4.540800802033118e-8 4.540800802033118e-8 -1.0000001192092896 54.06649398803711 229.79995727539062)",
+              "type": "rect",
+              "width": "6.200000286102295",
+              "x": "1.799824833869934",
+              "y": "113.53329467773438"
+            },
+            {
+              "d": "M91.86048745400944 78.55518754014838l-13.985736386681559-16.655169479528922",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path_4",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M-12.000010206762907 78.95518754014802l15.185736632785414-16.655169479528922",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path_3",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M2.5731722470620184 78.19999999999982l-20.801711777323707 0 0 10.20237089156093 20.801711777323707 0 0-10.20237089156093",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path_2",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M77.41426635859398 78.03363494733668l21.385737070707144 0 0 10.202369852788026-21.385737070707144 0 0-10.202369852788026",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path_1",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "fontSize": "5px",
+              "name": "text",
+              "type": "text",
+              "x": "31.39997100830078",
+              "y": "5.999998092651367"
+            }
+          ],
+          "viewBox": "-28.228540420532227 -8.400000095367432 137.0285415649414 134.6666488647461"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.1387,
+          "width": 0.8703,
+          "x": 0.0652,
+          "y": 0.0338
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.instName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 0.1819,
+          "width": 0.5343,
+          "x": 0.2582,
+          "y": 0.8028
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tankPressure"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "fontFamily": "Arial",
+            "fontSize": 12,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

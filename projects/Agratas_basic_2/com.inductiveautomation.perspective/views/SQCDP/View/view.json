@@ -1,0 +1,4921 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 999,
+      "width": 1282
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "278px"
+            },
+            "props": {
+              "text": "SQCDP Decision Dashboard",
+              "textStyle": {
+                "fontSize": "20px",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "grow": 1
+            },
+            "props": {
+              "textStyle": {
+                "fontSize": "20px",
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "All Department",
+                  "value": "All Department"
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "borderWidth": "0.02px",
+                "gap": "2px",
+                "marginRight": 5
+              },
+              "value": "All Department"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Dropdown_0"
+            },
+            "position": {
+              "basis": "100px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": 2026,
+                  "value": 2026
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "borderWidth": "0.02px"
+              },
+              "value": 2026
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "now()"
+                  },
+                  "transforms": [
+                    {
+                      "formatType": "datetime",
+                      "formatValue": {
+                        "time": "medium"
+                      },
+                      "type": "format"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "borderWidth": "0.02px",
+                "gap": "2px",
+                "margin": "2px"
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "MultiStateButton"
+            },
+            "position": {
+              "basis": "200px"
+            },
+            "props": {
+              "buttonGap": 2,
+              "controlValue": 1,
+              "indicatorValue": 0,
+              "orientation": "row",
+              "states": [
+                {
+                  "selectedStyle": {
+                    "backgroundColor": "#4747FF",
+                    "borderRadius": "6px",
+                    "classes": "",
+                    "color": "#FFFFFF"
+                  },
+                  "text": "Daily",
+                  "unselectedStyle": {
+                    "backgroundColor": "#E0E0E0",
+                    "borderRadius": "6px",
+                    "classes": "",
+                    "color": "#000000"
+                  },
+                  "value": 0
+                },
+                {
+                  "selectedStyle": {
+                    "backgroundColor": "#4747FF",
+                    "borderRadius": "6px",
+                    "color": "#FFFFFF"
+                  },
+                  "text": "Weekly",
+                  "unselectedStyle": {
+                    "backgroundColor": "#E0E0E0",
+                    "borderRadius": "6px",
+                    "color": "#000000"
+                  },
+                  "value": 1
+                },
+                {
+                  "selectedStyle": {
+                    "backgroundColor": "#4747FF",
+                    "borderRadius": "6px",
+                    "color": "#FFFFFF"
+                  },
+                  "text": "Monthly",
+                  "unselectedStyle": {
+                    "backgroundColor": "#E0E0E0",
+                    "borderRadius": "6px",
+                    "color": "#000000"
+                  },
+                  "value": 2
+                }
+              ],
+              "style": {
+                "gap": "2px"
+              }
+            },
+            "type": "ia.input.multi-state-button"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "basis": "100px"
+            },
+            "props": {
+              "style": {
+                "gap": "2px"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "space-between",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "height": 0.3235,
+                  "width": 0.346,
+                  "x": 0.2419,
+                  "y": 0.3224
+                },
+                "props": {
+                  "text": "S",
+                  "textStyle": {
+                    "color": "#FFFFFF80",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "15rem",
+                    "fontWeight": "lighter",
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "dates"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1418,
+                  "y": 0.7904
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 23
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_0"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.2533,
+                  "y": 0.7904
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 24
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_1"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.614,
+                  "y": 0.7904
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 25
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_2"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.7253,
+                  "y": 0.7904
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 26
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_3"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.2533,
+                  "y": 0.0231
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 1
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_4"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.3728,
+                  "y": 0.0219
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 2
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_5"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4952,
+                  "y": 0.0217
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 3
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_6"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.614,
+                  "y": 0.0209
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 4
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_7"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1418,
+                  "y": 0.1223
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 5
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_8"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.2533,
+                  "y": 0.1223
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 6
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_9"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1418,
+                  "y": 0.2217
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 9
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_10"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.2533,
+                  "y": 0.2205
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 10
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_12"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.2533,
+                  "y": 0.3171
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 11
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_13"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3728,
+                  "y": 0.3161
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 12
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_14"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4952,
+                  "y": 0.3144
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 13
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_15"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.4952,
+                  "y": 0.4125
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 15
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_16"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.614,
+                  "y": 0.4121
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 16
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_17"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.614,
+                  "y": 0.5109
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 18
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_18"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4952,
+                  "y": 0.5119
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 17
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_21"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.614,
+                  "y": 0.6074
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 19
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_22"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.7255,
+                  "y": 0.6074
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 20
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_24"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.614,
+                  "y": 0.7031
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 21
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_25"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.7253,
+                  "y": 0.7035
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 22
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_19"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.3728,
+                  "y": 0.4125
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 14
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_11"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.614,
+                  "y": 0.124
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 7
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_20"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.7253,
+                  "y": 0.123
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 8
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_23"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3728,
+                  "y": 0.8934
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 28
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_26"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4952,
+                  "y": 0.8942
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 29
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_27"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.614,
+                  "y": 0.8932
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 30
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_28"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.2533,
+                  "y": 0.8947
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 27
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "CoordinateContainer_3"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "mode": "percent",
+              "style": {
+                "backgroundImage": "linear-gradient(90deg,rgba(141, 226, 173, 1) 0%, rgba(130, 219, 200, 1) 75%)",
+                "borderBottomLeftRadius": "10px",
+                "borderBottomRightRadius": "10px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "10px",
+                "borderTopRightRadius": "10px",
+                "borderWidth": "0.01px",
+                "margin": "10px"
+              }
+            },
+            "type": "ia.container.coord"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "height": 0.2695,
+                  "width": 0.2508,
+                  "x": 0.0949,
+                  "y": 0.3297
+                },
+                "props": {
+                  "text": "Q",
+                  "textStyle": {
+                    "color": "#FFFFFF80",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "15rem",
+                    "fontWeight": "lighter",
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "dates"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.2743,
+                  "y": 0.6996
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 23
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_0"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4176,
+                  "y": 0.6996
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 24
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_1"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5841,
+                  "y": 0.6996
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 25
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_2"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4176,
+                  "y": 0.7914
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 26
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_3"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.2963,
+                  "y": 0.0128
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 1
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_4"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.4236,
+                  "y": 0.0109
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 2
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_5"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5527,
+                  "y": 0.0109
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 3
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_6"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.1528,
+                  "y": 0.1086
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 4
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_7"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.2743,
+                  "y": 0.1071
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 5
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_8"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5841,
+                  "y": 0.1098
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 6
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_9"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1528,
+                  "y": 0.2092
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 9
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_10"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.7257,
+                  "y": 0.2052
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 10
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_12"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.8539,
+                  "y": 0.204
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 11
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_13"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.042,
+                  "y": 0.3164
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 12
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_14"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.8539,
+                  "y": 0.3015
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 13
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_15"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.8539,
+                  "y": 0.3995
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 15
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_16"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.042,
+                  "y": 0.5124
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 16
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_17"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.042,
+                  "y": 0.6078
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 18
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_18"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.8539,
+                  "y": 0.4908
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 17
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_21"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1528,
+                  "y": 0.6078
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 19
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_22"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5841,
+                  "y": 0.6078
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 20
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_24"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.7249,
+                  "y": 0.6078
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 21
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_25"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1528,
+                  "y": 0.6996
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 22
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_19"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.042,
+                  "y": 0.4152
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 14
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_11"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.7257,
+                  "y": 0.1116
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 7
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_20"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.042,
+                  "y": 0.208
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 8
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_23"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5841,
+                  "y": 0.8848
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 28
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_26"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.737,
+                  "y": 0.8856
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 29
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_27"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.8539,
+                  "y": 0.8846
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 30
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_28"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5841,
+                  "y": 0.7914
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 27
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "CoordinateContainer_0"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "mode": "percent",
+              "style": {
+                "backgroundImage": "linear-gradient(90deg,rgba(129, 217, 200, 1) 0%, rgba(129, 198, 227, 1) 75%)",
+                "borderBottomLeftRadius": "10px",
+                "borderBottomRightRadius": "10px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "10px",
+                "borderTopRightRadius": "10px",
+                "borderWidth": "0.01px",
+                "margin": "10px"
+              }
+            },
+            "type": "ia.container.coord"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "height": 0.2695,
+                  "width": 0.2508,
+                  "x": 0.1413,
+                  "y": 0.3663
+                },
+                "props": {
+                  "text": "C",
+                  "textStyle": {
+                    "color": "#FFFFFF80",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "15rem",
+                    "fontWeight": "lighter",
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "dates"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1875,
+                  "y": 0.7944
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 23
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_0"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.6957,
+                  "y": 0.7927
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 24
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_1"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.8132,
+                  "y": 0.7927
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 25
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_2"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1855,
+                  "y": 0.89
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 26
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_3"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.1826,
+                  "y": 0.0152
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 1
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_4"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.3086,
+                  "y": 0.0152
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 2
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_5"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4381,
+                  "y": 0.0152
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 3
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_6"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.561,
+                  "y": 0.0152
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 4
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_7"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.6988,
+                  "y": 0.0152
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 5
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_8"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0251,
+                  "y": 0.1105
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 6
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_9"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.8145,
+                  "y": 0.1069
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 9
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_10"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0251,
+                  "y": 0.2058
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 10
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_12"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1875,
+                  "y": 0.2047
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 11
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_13"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0251,
+                  "y": 0.3146
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 12
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_14"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1875,
+                  "y": 0.3152
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 13
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_15"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.1875,
+                  "y": 0.4158
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 15
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_16"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.0251,
+                  "y": 0.5106
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 16
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_17"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0251,
+                  "y": 0.606
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 18
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_18"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1875,
+                  "y": 0.515
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 17
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_21"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1875,
+                  "y": 0.6055
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 19
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_22"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0251,
+                  "y": 0.7004
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 20
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_24"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1875,
+                  "y": 0.7004
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 21
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_25"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0246,
+                  "y": 0.7944
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 22
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_19"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.0251,
+                  "y": 0.4134
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 14
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_11"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1875,
+                  "y": 0.1123
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 7
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_20"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.6988,
+                  "y": 0.1057
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 8
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_23"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4381,
+                  "y": 0.8892
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 28
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_26"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.561,
+                  "y": 0.8892
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 29
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_27"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.6988,
+                  "y": 0.89
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 30
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_28"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3086,
+                  "y": 0.891
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 27
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "CoordinateContainer_4"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "mode": "percent",
+              "style": {
+                "backgroundImage": "linear-gradient(90deg,rgba(248, 215, 119, 1) 0%, rgba(240, 170, 117, 1) 75%)",
+                "borderBottomLeftRadius": "10px",
+                "borderBottomRightRadius": "10px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "10px",
+                "borderTopRightRadius": "10px",
+                "borderWidth": "0.01px",
+                "margin": "10px"
+              }
+            },
+            "type": "ia.container.coord"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label_0"
+                },
+                "position": {
+                  "height": 0.2695,
+                  "width": 0.2508,
+                  "x": 0.1364,
+                  "y": 0.3634
+                },
+                "props": {
+                  "text": "D",
+                  "textStyle": {
+                    "color": "#FFFFFF80",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "15rem",
+                    "fontWeight": "lighter",
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "dates_0"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0079,
+                  "y": 0.8084
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 24
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_1"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3926,
+                  "y": 0.8084
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 25
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_2"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5207,
+                  "y": 0.8084
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 26
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_3"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.0133,
+                  "y": 0.0007
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 1
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_4"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.1404,
+                  "y": 0.0007
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 2
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_5"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.2717,
+                  "y": 0.0007
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 3
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_6"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.3926,
+                  "y": 0.0007
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 4
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_7"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0079,
+                  "y": 0.0992
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 5
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_8"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3926,
+                  "y": 0.0992
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 6
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_9"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5207,
+                  "y": 0.2009
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 9
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_10"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.6699,
+                  "y": 0.2009
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 10
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_12"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0079,
+                  "y": 0.3027
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 11
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_13"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.6699,
+                  "y": 0.3027
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 12
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_14"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.8344,
+                  "y": 0.3027
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 13
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_15"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.8344,
+                  "y": 0.4044
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 15
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_16"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.0079,
+                  "y": 0.5061
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 16
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_17"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0079,
+                  "y": 0.6041
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 18
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_18"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.8344,
+                  "y": 0.5061
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 17
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_21"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.6699,
+                  "y": 0.6041
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 19
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_22"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.8344,
+                  "y": 0.6041
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 20
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_24"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0079,
+                  "y": 0.7077
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 21
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_25"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5207,
+                  "y": 0.7077
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 22
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_19"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.0079,
+                  "y": 0.4044
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 14
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_11"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5207,
+                  "y": 0.0992
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 7
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_20"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0079,
+                  "y": 0.2009
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 8
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_23"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1404,
+                  "y": 0.9144
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 28
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_26"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.2717,
+                  "y": 0.9144
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 29
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_27"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3926,
+                  "y": 0.9144
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 30
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_28"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.0079,
+                  "y": 0.9144
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 27
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_29"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.6699,
+                  "y": 0.7077
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 23
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "CoordinateContainer_1"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "mode": "percent",
+              "style": {
+                "backgroundImage": "linear-gradient(90deg,rgba(138, 183, 230, 1) 0%, rgba(156, 145, 223, 1) 75%)",
+                "borderBottomLeftRadius": "10px",
+                "borderBottomRightRadius": "10px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "10px",
+                "borderTopRightRadius": "10px",
+                "borderWidth": "0.01px",
+                "margin": "10px"
+              }
+            },
+            "type": "ia.container.coord"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "height": 0.2695,
+                  "width": 0.2508,
+                  "x": 0.1693,
+                  "y": 0.3601
+                },
+                "props": {
+                  "text": "P",
+                  "textStyle": {
+                    "color": "#FFFFFF80",
+                    "fontFamily": "sans-serif",
+                    "fontSize": "15rem",
+                    "fontWeight": "lighter",
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "dates_0"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1976,
+                  "y": 0.7051
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 24
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_1"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3333,
+                  "y": 0.7051
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 25
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_2"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1976,
+                  "y": 0.8063
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 26
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_3"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.2034
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 1
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_4"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.3374
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 2
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_5"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4704
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 3
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_6"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.5926
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 4
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_7"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1976,
+                  "y": 0.0952
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 5
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_8"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3333,
+                  "y": 0.0952
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 6
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_9"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1976,
+                  "y": 0.1969
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 9
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_10"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3333,
+                  "y": 0.1969
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 10
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_12"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.7327,
+                  "y": 0.1969
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 11
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_13"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1976,
+                  "y": 0.2971
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 12
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_14"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3333,
+                  "y": 0.2971
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 13
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_15"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.7378,
+                  "y": 0.2971
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 15
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_16"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.1976,
+                  "y": 0.4079
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 16
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_17"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4704,
+                  "y": 0.4079
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 18
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_18"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3333,
+                  "y": 0.4079
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 17
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_21"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5926,
+                  "y": 0.4079
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 19
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_22"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1976,
+                  "y": 0.5027
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 20
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_24"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3333,
+                  "y": 0.5027
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 21
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_25"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1976,
+                  "y": 0.6039
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 22
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_19"
+                },
+                "position": {
+                  "height": 0.0872,
+                  "width": 0.1046,
+                  "x": 0.5926,
+                  "y": 0.2971
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 14
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_11"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.5926,
+                  "y": 0.0952
+                },
+                "props": {
+                  "params": {
+                    "color": 1,
+                    "value": 7
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_20"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.7303,
+                  "y": 0.0952
+                },
+                "props": {
+                  "params": {
+                    "color": 2,
+                    "value": 8
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_23"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.1976,
+                  "y": 0.9075
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 28
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_26"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3333,
+                  "y": 0.9075
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 29
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_27"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.4704,
+                  "y": 0.9072
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 30
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_28"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3333,
+                  "y": 0.8063
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 27
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "dates_29"
+                },
+                "position": {
+                  "height": 0.0863,
+                  "width": 0.1046,
+                  "x": 0.3333,
+                  "y": 0.6039
+                },
+                "props": {
+                  "params": {
+                    "color": 0,
+                    "value": 23
+                  },
+                  "path": "widgets(templates)/KPI_cards/dates"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "CoordinateContainer_2"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "mode": "percent",
+              "style": {
+                "backgroundImage": "linear-gradient(90deg,rgba(181, 150, 232, 1) 0%, rgba(209, 144, 223, 1) 75%)",
+                "borderBottomLeftRadius": "10px",
+                "borderBottomRightRadius": "10px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "10px",
+                "borderTopRightRadius": "10px",
+                "borderWidth": "0.01px",
+                "margin": "10px"
+              }
+            },
+            "type": "ia.container.coord"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_3"
+        },
+        "position": {
+          "basis": "400px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "space-between",
+          "style": {
+            "margin": 5,
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "279px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Accidents",
+                  "value": "Accidents"
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "borderWidth": "0.02px"
+              },
+              "value": "Accidents"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Dropdown_0"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "First Pass Yield",
+                  "value": "First Pass Yield"
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "borderWidth": "0.02px"
+              },
+              "value": "First Pass Yield"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Dropdown_1"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Material Waste",
+                  "value": "Material Waste"
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "borderWidth": "0.02px"
+              },
+              "value": "Material Waste"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Dropdown_2"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "On-Time Delivery",
+                  "value": "On-Time Delivery"
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "borderWidth": "0.02px"
+              },
+              "value": "On-Time Delivery"
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "Dropdown_3"
+            },
+            "position": {
+              "basis": "300px"
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Attendance",
+                  "value": "Attendance"
+                }
+              ],
+              "style": {
+                "borderBottomLeftRadius": "8px",
+                "borderBottomRightRadius": "8px",
+                "borderColor": "#D5D5D5",
+                "borderStyle": "solid",
+                "borderTopLeftRadius": "8px",
+                "borderTopRightRadius": "8px",
+                "borderWidth": "0.02px"
+              },
+              "value": "Attendance"
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "center",
+          "justify": "space-between",
+          "style": {
+            "margin": "5px",
+            "overflow": "hidden",
+            "padding": "5px"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "apexchart"
+            },
+            "position": {
+              "basis": "248px"
+            },
+            "propConfig": {
+              "props.options": {
+                "persistent": true
+              },
+              "props.series": {
+                "persistent": true
+              }
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "stacked": false,
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "bar"
+                },
+                "colors": [
+                  "#22C55E",
+                  "#F59E0B",
+                  "#EF4444"
+                ],
+                "dataLabels": {
+                  "enabled": false
+                },
+                "grid": {
+                  "borderColor": "#E5E7EB",
+                  "padding": {
+                    "bottom": 0,
+                    "left": 10,
+                    "right": 10,
+                    "top": 0
+                  },
+                  "strokeDashArray": 4
+                },
+                "legend": {
+                  "horizontalAlign": "center",
+                  "markers": {
+                    "radius": 15
+                  },
+                  "position": "bottom",
+                  "show": true
+                },
+                "plotOptions": {
+                  "bar": {
+                    "borderRadius": 4,
+                    "columnWidth": "45%"
+                  }
+                },
+                "title": {
+                  "align": "left",
+                  "style": {
+                    "color": "#111827",
+                    "fontSize": "12px",
+                    "fontWeight": "bold"
+                  },
+                  "text": "Right First Time (%)"
+                },
+                "xaxis": {
+                  "categories": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                    "Sun"
+                  ],
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  }
+                },
+                "yaxis": {
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  },
+                  "max": 100,
+                  "min": 0
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    100,
+                    null
+                  ],
+                  "name": "Meet"
+                },
+                {
+                  "data": [
+                    null,
+                    92,
+                    null,
+                    null,
+                    96,
+                    null,
+                    94
+                  ],
+                  "name": "Behind"
+                },
+                {
+                  "data": [
+                    null,
+                    null,
+                    88,
+                    89,
+                    null,
+                    null,
+                    null
+                  ],
+                  "name": "At Risk"
+                }
+              ],
+              "type": "bar"
+            },
+            "type": "kyvislabs.display.apexchart"
+          },
+          {
+            "meta": {
+              "name": "apexchart_0"
+            },
+            "position": {
+              "basis": "248px"
+            },
+            "propConfig": {
+              "props.options": {
+                "persistent": true
+              },
+              "props.series": {
+                "persistent": true
+              }
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "stacked": false,
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "bar"
+                },
+                "colors": [
+                  "#22C55E",
+                  "#F59E0B",
+                  "#EF4444"
+                ],
+                "dataLabels": {
+                  "enabled": false
+                },
+                "grid": {
+                  "borderColor": "#E5E7EB",
+                  "padding": {
+                    "bottom": 0,
+                    "left": 10,
+                    "right": 10,
+                    "top": 0
+                  },
+                  "strokeDashArray": 4
+                },
+                "legend": {
+                  "horizontalAlign": "center",
+                  "markers": {
+                    "radius": 15
+                  },
+                  "position": "bottom",
+                  "show": true
+                },
+                "plotOptions": {
+                  "bar": {
+                    "borderRadius": 4,
+                    "columnWidth": "45%"
+                  }
+                },
+                "title": {
+                  "align": "left",
+                  "style": {
+                    "color": "#111827",
+                    "fontSize": "12px",
+                    "fontWeight": "bold"
+                  },
+                  "text": "Right First Time (%)"
+                },
+                "xaxis": {
+                  "categories": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                    "Sun"
+                  ],
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  }
+                },
+                "yaxis": {
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  },
+                  "max": 100,
+                  "min": 0
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    100,
+                    null
+                  ],
+                  "name": "Meet"
+                },
+                {
+                  "data": [
+                    null,
+                    92,
+                    null,
+                    null,
+                    96,
+                    null,
+                    94
+                  ],
+                  "name": "Behind"
+                },
+                {
+                  "data": [
+                    null,
+                    null,
+                    88,
+                    89,
+                    null,
+                    null,
+                    null
+                  ],
+                  "name": "At Risk"
+                }
+              ],
+              "type": "bar"
+            },
+            "type": "kyvislabs.display.apexchart"
+          },
+          {
+            "meta": {
+              "name": "apexchart_1"
+            },
+            "position": {
+              "basis": "248px"
+            },
+            "propConfig": {
+              "props.options": {
+                "persistent": true
+              },
+              "props.series": {
+                "persistent": true
+              }
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "stacked": false,
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "bar"
+                },
+                "colors": [
+                  "#22C55E",
+                  "#F59E0B",
+                  "#EF4444"
+                ],
+                "dataLabels": {
+                  "enabled": false
+                },
+                "grid": {
+                  "borderColor": "#E5E7EB",
+                  "padding": {
+                    "bottom": 0,
+                    "left": 10,
+                    "right": 10,
+                    "top": 0
+                  },
+                  "strokeDashArray": 4
+                },
+                "legend": {
+                  "horizontalAlign": "center",
+                  "markers": {
+                    "radius": 15
+                  },
+                  "position": "bottom",
+                  "show": true
+                },
+                "plotOptions": {
+                  "bar": {
+                    "borderRadius": 4,
+                    "columnWidth": "45%"
+                  }
+                },
+                "title": {
+                  "align": "left",
+                  "style": {
+                    "color": "#111827",
+                    "fontSize": "12px",
+                    "fontWeight": "bold"
+                  },
+                  "text": "Right First Time (%)"
+                },
+                "xaxis": {
+                  "categories": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                    "Sun"
+                  ],
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  }
+                },
+                "yaxis": {
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  },
+                  "max": 100,
+                  "min": 0
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    100,
+                    null
+                  ],
+                  "name": "Meet"
+                },
+                {
+                  "data": [
+                    null,
+                    92,
+                    null,
+                    null,
+                    96,
+                    null,
+                    94
+                  ],
+                  "name": "Behind"
+                },
+                {
+                  "data": [
+                    null,
+                    null,
+                    88,
+                    89,
+                    null,
+                    null,
+                    null
+                  ],
+                  "name": "At Risk"
+                }
+              ],
+              "type": "bar"
+            },
+            "type": "kyvislabs.display.apexchart"
+          },
+          {
+            "meta": {
+              "name": "apexchart_2"
+            },
+            "position": {
+              "basis": "248px"
+            },
+            "propConfig": {
+              "props.options": {
+                "persistent": true
+              },
+              "props.series": {
+                "persistent": true
+              }
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "stacked": false,
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "bar"
+                },
+                "colors": [
+                  "#22C55E",
+                  "#F59E0B",
+                  "#EF4444"
+                ],
+                "dataLabels": {
+                  "enabled": false
+                },
+                "grid": {
+                  "borderColor": "#E5E7EB",
+                  "padding": {
+                    "bottom": 0,
+                    "left": 10,
+                    "right": 10,
+                    "top": 0
+                  },
+                  "strokeDashArray": 4
+                },
+                "legend": {
+                  "horizontalAlign": "center",
+                  "markers": {
+                    "radius": 15
+                  },
+                  "position": "bottom",
+                  "show": true
+                },
+                "plotOptions": {
+                  "bar": {
+                    "borderRadius": 4,
+                    "columnWidth": "45%"
+                  }
+                },
+                "title": {
+                  "align": "left",
+                  "style": {
+                    "color": "#111827",
+                    "fontSize": "12px",
+                    "fontWeight": "bold"
+                  },
+                  "text": "Right First Time (%)"
+                },
+                "xaxis": {
+                  "categories": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                    "Sun"
+                  ],
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  }
+                },
+                "yaxis": {
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  },
+                  "max": 100,
+                  "min": 0
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    100,
+                    null
+                  ],
+                  "name": "Meet"
+                },
+                {
+                  "data": [
+                    null,
+                    92,
+                    null,
+                    null,
+                    96,
+                    null,
+                    94
+                  ],
+                  "name": "Behind"
+                },
+                {
+                  "data": [
+                    null,
+                    null,
+                    88,
+                    89,
+                    null,
+                    null,
+                    null
+                  ],
+                  "name": "At Risk"
+                }
+              ],
+              "type": "bar"
+            },
+            "type": "kyvislabs.display.apexchart"
+          },
+          {
+            "meta": {
+              "name": "apexchart_3"
+            },
+            "position": {
+              "basis": "248px"
+            },
+            "propConfig": {
+              "props.options": {
+                "persistent": true
+              },
+              "props.series": {
+                "persistent": true
+              }
+            },
+            "props": {
+              "options": {
+                "chart": {
+                  "stacked": false,
+                  "toolbar": {
+                    "show": false
+                  },
+                  "type": "bar"
+                },
+                "colors": [
+                  "#22C55E",
+                  "#F59E0B",
+                  "#EF4444"
+                ],
+                "dataLabels": {
+                  "enabled": false
+                },
+                "grid": {
+                  "borderColor": "#E5E7EB",
+                  "padding": {
+                    "bottom": 0,
+                    "left": 10,
+                    "right": 10,
+                    "top": 0
+                  },
+                  "strokeDashArray": 4
+                },
+                "legend": {
+                  "horizontalAlign": "center",
+                  "markers": {
+                    "radius": 15
+                  },
+                  "position": "bottom",
+                  "show": true
+                },
+                "plotOptions": {
+                  "bar": {
+                    "borderRadius": 4,
+                    "columnWidth": "45%"
+                  }
+                },
+                "title": {
+                  "align": "left",
+                  "style": {
+                    "color": "#111827",
+                    "fontSize": "12px",
+                    "fontWeight": "bold"
+                  },
+                  "text": "Right First Time (%)"
+                },
+                "xaxis": {
+                  "categories": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                    "Sun"
+                  ],
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  }
+                },
+                "yaxis": {
+                  "labels": {
+                    "style": {
+                      "colors": "#6B7280"
+                    }
+                  },
+                  "max": 100,
+                  "min": 0
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    100,
+                    null,
+                    null,
+                    null,
+                    null,
+                    100,
+                    null
+                  ],
+                  "name": "Meet"
+                },
+                {
+                  "data": [
+                    null,
+                    92,
+                    null,
+                    null,
+                    96,
+                    null,
+                    94
+                  ],
+                  "name": "Behind"
+                },
+                {
+                  "data": [
+                    null,
+                    null,
+                    88,
+                    89,
+                    null,
+                    null,
+                    null
+                  ],
+                  "name": "At Risk"
+                }
+              ],
+              "type": "bar"
+            },
+            "type": "kyvislabs.display.apexchart"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "space-between",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\t\t\n    headers \u003d [\"Area\", \"Issue\", \"Status\"]\n\n    data \u003d [\n        [\"Safety\", \"FPY Drop\", \"Risk\"],\n        [\"Quality\", \"Assembly Error\", \"Risk\"]\n    ]\n\n    ds \u003d system.dataset.toDataSet(headers, data)\n\n    excel \u003d system.dataset.toExcel(True, [ds])\n\n    system.perspective.download(\n        filename\u003d\"Risk_Report.xlsx\",\n        data\u003dexcel\n     )\n    "
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "cards_0"
+            },
+            "position": {
+              "basis": "385px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Impact": "value",
+                "alertColor": "",
+                "alertmessage": "value",
+                "message": "value",
+                "rootCause": "value"
+              },
+              "path": "widgets(templates)/KPI_cards/cards",
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cards_2"
+            },
+            "position": {
+              "basis": "385px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Impact": "value",
+                "alertColor": "value",
+                "alertmessage": "value",
+                "message": "value",
+                "rootCause": "value"
+              },
+              "path": "widgets(templates)/KPI_cards/cards",
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "cards_4"
+            },
+            "position": {
+              "basis": "385px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Impact": "value",
+                "alertColor": "value",
+                "alertmessage": "value",
+                "message": "value",
+                "rootCause": "value"
+              },
+              "path": "widgets(templates)/KPI_cards/cards",
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_4"
+        },
+        "position": {
+          "basis": "180px"
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "180px",
+          "grow": 1
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Safety",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "view",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {
+                "dueDate": "Due: 2026-04-12",
+                "note": "Root cause for defect",
+                "user": "M. Chenue"
+              },
+              "viewPath": "widgets(templates)/KPI_cards/actionCards",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Quality",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "view",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {
+                "dueDate": "value",
+                "note": "value",
+                "user": "value"
+              },
+              "viewPath": "widgets(templates)/KPI_cards/actionCards",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Cost",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "view",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {
+                "dueDate": "value",
+                "note": "value",
+                "user": "value"
+              },
+              "viewPath": "widgets(templates)/KPI_cards/actionCards",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Delivery",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "view",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {
+                "dueDate": "value",
+                "note": "value",
+                "user": "value"
+              },
+              "viewPath": "widgets(templates)/KPI_cards/actionCards",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "People",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "view",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {
+                "dueDate": "value",
+                "note": "value",
+                "user": "value"
+              },
+              "viewPath": "widgets(templates)/KPI_cards/actionCards",
+              "visible": true,
+              "width": ""
+            }
+          ],
+          "data": [
+            {
+              "Cost": {
+                "params": {
+                  "actions": [
+                    {
+                      "due": "2026-04-12",
+                      "name": "Update PPE training",
+                      "owner": "M. Chen",
+                      "status": "overdue"
+                    },
+                    {
+                      "due": "2026-04-12",
+                      "name": "Fix ventilation in Zone B",
+                      "owner": "A. Patel",
+                      "status": "overdue"
+                    }
+                  ],
+                  "title": "Safety"
+                },
+                "viewPath": "SQCDP/Card"
+              },
+              "Delivery": {
+                "params": {
+                  "actions": [
+                    {
+                      "due": "2026-04-12",
+                      "name": "Update PPE training",
+                      "owner": "M. Chen",
+                      "status": "overdue"
+                    },
+                    {
+                      "due": "2026-04-12",
+                      "name": "Fix ventilation in Zone B",
+                      "owner": "A. Patel",
+                      "status": "overdue"
+                    }
+                  ],
+                  "title": "Safety"
+                },
+                "viewPath": "SQCDP/Card"
+              },
+              "People": {
+                "params": {
+                  "actions": [
+                    {
+                      "due": "2026-04-12",
+                      "name": "Update PPE training",
+                      "owner": "M. Chen",
+                      "status": "overdue"
+                    },
+                    {
+                      "due": "2026-04-12",
+                      "name": "Fix ventilation in Zone B",
+                      "owner": "A. Patel",
+                      "status": "overdue"
+                    }
+                  ],
+                  "title": "Safety"
+                },
+                "viewPath": "SQCDP/Card"
+              },
+              "Quality": {
+                "params": {
+                  "actions": [
+                    {
+                      "due": "2026-04-10",
+                      "name": "Root cause for defect #1024",
+                      "owner": "A. Patel",
+                      "status": "overdue"
+                    },
+                    {
+                      "due": "2026-04-15",
+                      "name": "Calibrate CMM machine",
+                      "owner": "J. Smith",
+                      "status": "pending"
+                    }
+                  ],
+                  "kpi": "FPY dropped to 93.8% (Target: 95%)",
+                  "title": "Quality",
+                  "topCause": "Labeling Error"
+                },
+                "viewPath": "SQCDP/Card"
+              },
+              "Safety": {
+                "params": {
+                  "actions": [
+                    {
+                      "due": "2026-04-12",
+                      "name": "Update PPE training",
+                      "owner": "M. Chen",
+                      "status": "overdue"
+                    },
+                    {
+                      "due": "2026-04-12",
+                      "name": "Fix ventilation in Zone B",
+                      "owner": "A. Patel",
+                      "status": "overdue"
+                    }
+                  ],
+                  "title": "Safety"
+                },
+                "viewPath": "SQCDP/Card"
+              }
+            }
+          ],
+          "dragOrderable": false,
+          "enableHeader": false,
+          "enableHeaderGroups": true,
+          "headerGroups": [
+            [
+              {
+                "align": "center",
+                "justify": "left",
+                "span": 1,
+                "style": {
+                  "classes": ""
+                },
+                "title": "Immediate Action Required"
+              }
+            ]
+          ],
+          "pager": {
+            "bottom": false
+          },
+          "style": {
+            "classes": "widgets/spacing"
+          },
+          "virtualized": false
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "params": {},
+                "view": "SQDCP1/View"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignContent": "flex-start",
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#D5D5D54D",
+        "classes": "widgets/spacing"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

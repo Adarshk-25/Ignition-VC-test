@@ -1,0 +1,373 @@
+{
+  "custom": {
+    "tagV": null,
+    "v": null
+  },
+  "params": {
+    "label": "KPI",
+    "tagPath": "",
+    "value": null,
+    "unit": "",
+    "decimals": 1,
+    "target": null,
+    "higherIsBetter": true,
+    "sub": "",
+    "status": "normal",
+    "simulated": false
+  },
+  "props": {
+    "defaultSize": {
+      "width": 220,
+      "height": 112
+    }
+  },
+  "root": {
+    "type": "ia.container.flex",
+    "meta": {
+      "name": "root"
+    },
+    "position": {},
+    "props": {
+      "direction": "column",
+      "wrap": "nowrap",
+      "justify": "flex-start",
+      "alignItems": "stretch",
+      "alignContent": "flex-start"
+    },
+    "children": [
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Row_Label"
+        },
+        "position": {
+          "basis": "22px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start",
+          "style": {
+            "gap": "6px"
+          }
+        },
+        "children": [
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 1
+            },
+            "props": {
+              "text": "KPI",
+              "style": {
+                "classes": "HPHMI/KPI/Label"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.label"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "SimChip",
+              "tooltip": {
+                "enabled": true,
+                "text": "Simulated value (memory tag under [default]_Sim). Not live plant data."
+              }
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "SIM",
+              "style": {
+                "classes": "HPHMI/Chip/Sim"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.simulated"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.icon",
+            "meta": {
+              "name": "StatusIcon"
+            },
+            "position": {
+              "basis": "20px",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "path": "material/warning",
+              "color": "#1F2328",
+              "style": {
+                "minWidth": "20px",
+                "height": "20px"
+              }
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "{view.params.status} != \"normal\""
+                  }
+                }
+              },
+              "props.path": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "case({view.params.status}, \"Critical\",\"material/report\", \"Warning\",\"material/warning\", \"Advisory\",\"material/info\", \"Attention\",\"material/visibility\", \"material/info\")"
+                  }
+                }
+              },
+              "props.color": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "case({view.params.status}, \"Critical\",\"#C8102E\", \"Warning\",\"#E07B00\", \"Advisory\",\"#B89500\", \"Attention\",\"#1F5FA8\", \"#555C64\")"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ia.container.flex",
+        "meta": {
+          "name": "Row_Value"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 1
+        },
+        "props": {
+          "direction": "row",
+          "wrap": "nowrap",
+          "justify": "flex-start",
+          "alignItems": "center",
+          "alignContent": "flex-start"
+        },
+        "children": [
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Value",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "—",
+              "style": {
+                "classes": "HPHMI/KPI/Value"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if(isNull({view.custom.v}), \"?\", numberFormat({view.custom.v}, case({view.params.decimals}, 0,\"#,##0\", 2,\"#,##0.00\", \"#,##0.0\")))"
+                  }
+                }
+              },
+              "props.style.classes": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if(isNull({view.custom.v}), \"HPHMI/KPI/Value/Bad\", \"HPHMI/KPI/Value\")"
+                  }
+                }
+              },
+              "meta.tooltip.text": {
+                "binding": {
+                  "type": "expr",
+                  "config": {
+                    "expression": "if(isNull({view.custom.v}), \"No value: tag missing, bad or stale quality — \" + {view.params.tagPath}, \"\")"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "ia.display.label",
+            "meta": {
+              "name": "Unit"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 0,
+              "shrink": 0
+            },
+            "props": {
+              "text": "%",
+              "style": {
+                "classes": "HPHMI/KPI/Unit"
+              }
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "type": "property",
+                  "config": {
+                    "path": "view.params.unit"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ia.display.label",
+        "meta": {
+          "name": "Sub"
+        },
+        "position": {
+          "basis": "20px",
+          "grow": 0,
+          "shrink": 0
+        },
+        "props": {
+          "text": "",
+          "style": {
+            "classes": "HPHMI/KPI/Sub"
+          }
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.sub} != \"\", {view.params.sub},\n if(isNull({view.params.target}), \"\",\n  \"Target \" + numberFormat({view.params.target}, case({view.params.decimals}, 0,\"#,##0\", 2,\"#,##0.00\", \"#,##0.0\")) + \" \" + {view.params.unit} +\n  if(isNull({view.custom.v}), \"\", if((!isNull({view.custom.v}) && !isNull({view.params.target}) && if({view.params.higherIsBetter}, {view.custom.v} < {view.params.target}, {view.custom.v} > {view.params.target})), \"   ▼ \", \"   ▲ \") + numberFormat(abs({view.custom.v} - {view.params.target}), case({view.params.decimals}, 0,\"#,##0\", 2,\"#,##0.00\", \"#,##0.0\")))))"
+              }
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "type": "expr",
+              "config": {
+                "expression": "if({view.params.sub} = \"\" && (!isNull({view.custom.v}) && !isNull({view.params.target}) && if({view.params.higherIsBetter}, {view.custom.v} < {view.params.target}, {view.custom.v} > {view.params.target})), \"HPHMI/Text/Warning\", \"HPHMI/KPI/Sub\")"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "propConfig": {
+      "props.style.classes": {
+        "binding": {
+          "type": "expr",
+          "config": {
+            "expression": "\"HPHMI/KPI/Tile\" + if({view.params.status} != \"normal\", \" HPHMI/KPI/Tile/\" + {view.params.status}, \"\")"
+          }
+        }
+      }
+    }
+  },
+  "propConfig": {
+    "custom.tagV": {
+      "binding": {
+        "type": "tag",
+        "config": {
+          "mode": "indirect",
+          "tagPath": "{p}",
+          "references": {
+            "p": "{view.params.tagPath}"
+          },
+          "fallbackDelay": 2.5
+        },
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "if(isGood({value}) && !isNull({value}), toFloat({value}), null)"
+          }
+        ]
+      }
+    },
+    "custom.v": {
+      "binding": {
+        "type": "expr",
+        "config": {
+          "expression": "if({view.params.tagPath} != \"\", {view.custom.tagV}, {view.params.value})"
+        }
+      }
+    },
+    "params.label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.value": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.unit": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.decimals": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.target": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.higherIsBetter": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.sub": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.status": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.simulated": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  }
+}

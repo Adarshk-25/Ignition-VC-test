@@ -1,0 +1,134 @@
+{
+  "custom": {},
+  "params": {
+    "tabValue": "value"
+  },
+  "propConfig": {
+    "params.tabValue": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Outfeeder1_Anode"
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Outfeeder1_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Transport_Anode"
+        },
+        "position": {
+          "tabIndex": 2
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Transport_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Outfeeder2_Anode"
+        },
+        "position": {
+          "tabIndex": 1
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Outfeeder2_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "UnwinderScreen_Anode"
+        },
+        "position": {
+          "tabIndex": 3
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/UnwinderScreen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ThicknessGaugeScreen_Anode"
+        },
+        "position": {
+          "tabIndex": 5
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/ThicknessGaugeScreen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RewinderScreen_Anode"
+        },
+        "position": {
+          "tabIndex": 4
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/RewinderScreen_Anode"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Press_Screen_Anode"
+        },
+        "position": {
+          "tabIndex": 6
+        },
+        "props": {
+          "path": "Page/Calendering_Templates/Press_Screen_Anode"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.currentTabIndex": {
+        "binding": {
+          "config": {
+            "path": "view.params.tabValue"
+          },
+          "type": "property"
+        },
+        "onChange": {
+          "enabled": null,
+          "script": "\tif currentValue !\u003d previousValue :\n        \tself.session.custom.nav.currentPath \u003d self.props.tabs[self.props.currentTabIndex]"
+        }
+      }
+    },
+    "props": {
+      "tabSize": {
+        "width": 150
+      },
+      "tabs": [
+        "Outfeeder I",
+        "Outfeeder II",
+        "Transport",
+        "Unwinder",
+        "Rewinder",
+        "Thickness Gauge",
+        "Press"
+      ]
+    },
+    "type": "ia.container.tab"
+  }
+}
